@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://batch.photo/schemas/id-photo-catalog.json",
+  "type": "object",
+  "required": ["schemaVersion", "catalogVersion", "defaultLocale", "defaultRuleVersion", "defaultReviewedAt", "defaultRuleProfileId", "ruleProfiles", "documents"],
+  "properties": {
+    "schemaVersion": {"type": "integer", "minimum": 1},
+    "catalogVersion": {"type": "integer", "minimum": 1},
+    "defaultLocale": {"type": "string", "minLength": 2},
+    "defaultRuleVersion": {"type": "string", "minLength": 1},
+    "defaultReviewedAt": {"type": "string", "format": "date"},
+    "defaultRuleProfileId": {"type": "string", "minLength": 1},
+    "ruleProfiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "faceHeightRatio", "faceTopRatio", "faceHeightTolerance", "topMarginTolerance", "eyeLineTolerance", "minFaceWidthRatio", "maxHeadPoseDegrees"],
+        "properties": {
+          "faceHeightConstraint": {"enum": ["hard", "soft"]},
+          "topMarginConstraint": {"enum": ["hard", "soft"]},
+          "eyeLineConstraint": {"enum": ["hard", "soft"]},
+          "faceCenterConstraint": {"enum": ["hard", "soft"]},
+          "shoulderLineConstraint": {"enum": ["hard", "soft"]},
+          "faceCenterXTolerance": {"type": "number", "minimum": 0, "maximum": 0.25},
+          "shoulderLineRatio": {"type": "number", "minimum": 0.5, "maximum": 1},
+          "shoulderLineTolerance": {"type": "number", "minimum": 0, "maximum": 0.25},
+          "maxUpscaleRatio": {"type": "number", "minimum": 1, "maximum": 4}
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "regionCode", "regionNameKey", "documentType", "displayNameKey", "variants"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+          "regionCode": {"type": "string", "pattern": "^[A-Z]+$"},
+          "regionNameKey": {"type": "string", "pattern": "^region\\."},
+          "documentType": {"enum": ["passport", "visa", "national_id", "driver_license", "general"]},
+          "displayNameKey": {"type": "string", "pattern": "^document\\."},
+          "variants": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "displayNameKey", "delivery", "output", "status", "editPolicy"],
+              "properties": {
+                "delivery": {"enum": ["digital", "print"]},
+                "status": {"enum": ["verified", "channel_verified", "official_reported", "reference", "deprecated"]},
+                "ruleVersion": {"type": "string", "minLength": 1},
+                "reviewedAt": {"type": "string", "format": "date"},
+                "effectiveFrom": {"type": "string", "format": "date"},
+                "effectiveTo": {"type": "string", "format": "date"},
+                "editPolicy": {"enum": ["allowed", "restricted", "prohibited"]},
+                "capturePolicy": {"enum": ["self_capture_allowed", "assisted_capture_recommended", "commercial_photographer_required", "authorized_provider_required"]},
+                "sourceImagePolicies": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {"enum": ["generated_file_allowed", "original_camera_file_required", "scanned_print_allowed"]}
+                },
+                "applicationChannels": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {"enum": ["online", "mobile_app", "mail", "in_person", "kiosk", "photo_tool"]}
+                },
+                "requirementKeys": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {"type": "string", "pattern": "^requirement\\."}
+                },
+                "sourceId": {"type": "string", "minLength": 1},
+                "sourceIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+                "composition": {
+                  "type": "object",
+                  "properties": {
+                    "faceHeightConstraint": {"enum": ["hard", "soft"]},
+                    "topMarginConstraint": {"enum": ["hard", "soft"]},
+                    "eyeLineConstraint": {"enum": ["hard", "soft"]},
+                    "shoulderLineConstraint": {"enum": ["hard", "soft"]},
+                    "shoulderLineRatio": {"type": "number", "minimum": 0.5, "maximum": 1},
+                    "shoulderLineTolerance": {"type": "number", "minimum": 0, "maximum": 0.25},
+                    "maxUpscaleRatio": {"type": "number", "minimum": 1, "maximum": 4}
+                  }
+                },
+                "output": {
+                  "type": "object",
+                  "required": ["width", "height", "unit", "dimensionMode", "dpi", "formats"],
+                  "properties": {
+                    "unit": {"enum": ["mm", "inch", "px"]},
+                    "dimensionMode": {"enum": ["exact", "minimum", "range"]},
+                    "dpi": {"type": "integer", "minimum": 72, "maximum": 1200},
+                    "minBytes": {"type": "integer", "minimum": 1},
+                    "maxBytes": {"type": "integer", "minimum": 1},
+                    "formats": {"type": "array", "minItems": 1, "items": {"enum": ["jpeg", "png"]}}
+                  }
+                }
+              },
+              "oneOf": [
+                {"required": ["sourceId"], "not": {"required": ["sourceIds"]}},
+                {"required": ["sourceIds"], "not": {"required": ["sourceId"]}}
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

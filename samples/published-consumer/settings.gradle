@@ -1,0 +1,14 @@
+pluginManagement {
+ repositories {
+  maven { url = uri('../../build/repo') }
+  google(); mavenCentral(); gradlePluginPortal()
+ }
+}
+dependencyResolutionManagement {
+ repositories {
+  maven { url = uri('../../build/repo') }
+  google(); mavenCentral()
+  maven { url = uri('https://jitpack.io') }
+ }
+}
+rootProject.name = 'DevLibPublishedConsumer'

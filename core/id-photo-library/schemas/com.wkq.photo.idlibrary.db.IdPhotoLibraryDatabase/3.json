@@ -1,0 +1,3582 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "9e32a9825d1d65a95fb39f7732394f7c",
+    "entities": [
+      {
+        "tableName": "catalog_release",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `schema_version` INTEGER NOT NULL, `data_version` INTEGER NOT NULL, `published_at` TEXT NOT NULL, `imported_at` TEXT NOT NULL, `status` TEXT NOT NULL, `content_sha256` TEXT NOT NULL, `signature_key_id` TEXT NOT NULL, PRIMARY KEY(`release_id`))",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schemaVersion",
+            "columnName": "schema_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dataVersion",
+            "columnName": "data_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publishedAt",
+            "columnName": "published_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "importedAt",
+            "columnName": "imported_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentSha256",
+            "columnName": "content_sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "signatureKeyId",
+            "columnName": "signature_key_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id"
+          ]
+        }
+      },
+      {
+        "tableName": "catalog_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`singleton_id` INTEGER NOT NULL, `active_release_id` TEXT NOT NULL, PRIMARY KEY(`singleton_id`), FOREIGN KEY(`active_release_id`) REFERENCES `catalog_release`(`release_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "singletonId",
+            "columnName": "singleton_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeReleaseId",
+            "columnName": "active_release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "singleton_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_catalog_state_active_release_id",
+            "unique": false,
+            "columnNames": [
+              "active_release_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_catalog_state_active_release_id` ON `${TABLE_NAME}` (`active_release_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "catalog_release",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "active_release_id"
+            ],
+            "referencedColumns": [
+              "release_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "locale_pack",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `pack_version` INTEGER NOT NULL, `status` TEXT NOT NULL, `published_at` TEXT NOT NULL, `content_sha256` TEXT NOT NULL, `signature_key_id` TEXT NOT NULL, PRIMARY KEY(`release_id`, `locale_tag`), FOREIGN KEY(`release_id`) REFERENCES `catalog_release`(`release_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "packVersion",
+            "columnName": "pack_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publishedAt",
+            "columnName": "published_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentSha256",
+            "columnName": "content_sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "signatureKeyId",
+            "columnName": "signature_key_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_locale_pack_release_id",
+            "unique": false,
+            "columnNames": [
+              "release_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_locale_pack_release_id` ON `${TABLE_NAME}` (`release_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "catalog_release",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id"
+            ],
+            "referencedColumns": [
+              "release_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "jurisdiction",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `code` TEXT NOT NULL, `kind` TEXT NOT NULL, `alpha3_code` TEXT, `numeric_code` TEXT, `is_active` INTEGER NOT NULL, PRIMARY KEY(`release_id`, `code`), FOREIGN KEY(`release_id`) REFERENCES `catalog_release`(`release_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "alpha3Code",
+            "columnName": "alpha3_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "numericCode",
+            "columnName": "numeric_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "is_active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "code"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_jurisdiction_release_id",
+            "unique": false,
+            "columnNames": [
+              "release_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_release_id` ON `${TABLE_NAME}` (`release_id`)"
+          },
+          {
+            "name": "index_jurisdiction_release_id_kind",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "kind"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_release_id_kind` ON `${TABLE_NAME}` (`release_id`, `kind`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "catalog_release",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id"
+            ],
+            "referencedColumns": [
+              "release_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "jurisdiction_name",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `jurisdiction_code` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `jurisdiction_code`, `locale_tag`), FOREIGN KEY(`release_id`, `jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jurisdictionCode",
+            "columnName": "jurisdiction_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "jurisdiction_code",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_jurisdiction_name_release_id_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_name_release_id_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`)"
+          },
+          {
+            "name": "index_jurisdiction_name_release_id_locale_tag",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "locale_tag"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_name_release_id_locale_tag` ON `${TABLE_NAME}` (`release_id`, `locale_tag`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "jurisdiction_membership",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `group_code` TEXT NOT NULL, `member_code` TEXT NOT NULL, PRIMARY KEY(`release_id`, `group_code`, `member_code`), FOREIGN KEY(`release_id`, `group_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `member_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupCode",
+            "columnName": "group_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memberCode",
+            "columnName": "member_code",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "group_code",
+            "member_code"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_jurisdiction_membership_release_id_group_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "group_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_membership_release_id_group_code` ON `${TABLE_NAME}` (`release_id`, `group_code`)"
+          },
+          {
+            "name": "index_jurisdiction_membership_release_id_member_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "member_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_membership_release_id_member_code` ON `${TABLE_NAME}` (`release_id`, `member_code`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "group_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          },
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "member_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "jurisdiction_relation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `parent_code` TEXT NOT NULL, `child_code` TEXT NOT NULL, `relation_type` TEXT NOT NULL, PRIMARY KEY(`release_id`, `parent_code`, `child_code`, `relation_type`), FOREIGN KEY(`release_id`, `parent_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `child_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "parentCode",
+            "columnName": "parent_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "childCode",
+            "columnName": "child_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relationType",
+            "columnName": "relation_type",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "parent_code",
+            "child_code",
+            "relation_type"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_jurisdiction_relation_release_id_parent_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "parent_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_relation_release_id_parent_code` ON `${TABLE_NAME}` (`release_id`, `parent_code`)"
+          },
+          {
+            "name": "index_jurisdiction_relation_release_id_child_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "child_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_jurisdiction_relation_release_id_child_code` ON `${TABLE_NAME}` (`release_id`, `child_code`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "parent_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          },
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "child_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "coverage_status",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `jurisdiction_code` TEXT NOT NULL, `document_type` TEXT NOT NULL, `status` TEXT NOT NULL, `reason_code` TEXT, `reviewed_at` TEXT, PRIMARY KEY(`release_id`, `jurisdiction_code`, `document_type`), FOREIGN KEY(`release_id`, `jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jurisdictionCode",
+            "columnName": "jurisdiction_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentType",
+            "columnName": "document_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reasonCode",
+            "columnName": "reason_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "reviewedAt",
+            "columnName": "reviewed_at",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "jurisdiction_code",
+            "document_type"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_coverage_status_release_id_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_coverage_status_release_id_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "issuing_authority",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `authority_id` TEXT NOT NULL, `authority_code` TEXT NOT NULL, `jurisdiction_code` TEXT, `kind` TEXT NOT NULL, `status` TEXT NOT NULL, `official_website` TEXT, PRIMARY KEY(`release_id`, `authority_id`), FOREIGN KEY(`release_id`) REFERENCES `catalog_release`(`release_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authorityId",
+            "columnName": "authority_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authorityCode",
+            "columnName": "authority_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jurisdictionCode",
+            "columnName": "jurisdiction_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officialWebsite",
+            "columnName": "official_website",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "authority_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_issuing_authority_release_id",
+            "unique": false,
+            "columnNames": [
+              "release_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_issuing_authority_release_id` ON `${TABLE_NAME}` (`release_id`)"
+          },
+          {
+            "name": "index_issuing_authority_release_id_authority_code",
+            "unique": true,
+            "columnNames": [
+              "release_id",
+              "authority_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_issuing_authority_release_id_authority_code` ON `${TABLE_NAME}` (`release_id`, `authority_code`)"
+          },
+          {
+            "name": "index_issuing_authority_release_id_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_issuing_authority_release_id_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "catalog_release",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id"
+            ],
+            "referencedColumns": [
+              "release_id"
+            ]
+          },
+          {
+            "table": "jurisdiction",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "issuing_authority_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `authority_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `authority_id`, `locale_tag`), FOREIGN KEY(`release_id`, `authority_id`) REFERENCES `issuing_authority`(`release_id`, `authority_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authorityId",
+            "columnName": "authority_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "authority_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_issuing_authority_text_release_id_authority_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "authority_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_issuing_authority_text_release_id_authority_id` ON `${TABLE_NAME}` (`release_id`, `authority_id`)"
+          },
+          {
+            "name": "index_issuing_authority_text_release_id_locale_tag",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "locale_tag"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_issuing_authority_text_release_id_locale_tag` ON `${TABLE_NAME}` (`release_id`, `locale_tag`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "issuing_authority",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "authority_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "authority_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "document_program",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `program_id` TEXT NOT NULL, `jurisdiction_code` TEXT NOT NULL, `document_type` TEXT NOT NULL, `program_code` TEXT NOT NULL, `issuing_authority_code` TEXT, `status` TEXT NOT NULL, `effective_from` TEXT, `effective_to` TEXT, PRIMARY KEY(`release_id`, `program_id`), FOREIGN KEY(`release_id`, `jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programId",
+            "columnName": "program_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jurisdictionCode",
+            "columnName": "jurisdiction_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentType",
+            "columnName": "document_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programCode",
+            "columnName": "program_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issuingAuthorityCode",
+            "columnName": "issuing_authority_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectiveFrom",
+            "columnName": "effective_from",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "effectiveTo",
+            "columnName": "effective_to",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "program_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_document_program_release_id_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_document_program_release_id_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`)"
+          },
+          {
+            "name": "index_document_program_release_id_jurisdiction_code_document_type",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code",
+              "document_type"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_document_program_release_id_jurisdiction_code_document_type` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`, `document_type`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "jurisdiction",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "document_program_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `program_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `program_id`, `locale_tag`), FOREIGN KEY(`release_id`, `program_id`) REFERENCES `document_program`(`release_id`, `program_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programId",
+            "columnName": "program_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "program_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_document_program_text_release_id_program_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "program_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_document_program_text_release_id_program_id` ON `${TABLE_NAME}` (`release_id`, `program_id`)"
+          },
+          {
+            "name": "index_document_program_text_release_id_locale_tag",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "locale_tag"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_document_program_text_release_id_locale_tag` ON `${TABLE_NAME}` (`release_id`, `locale_tag`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "document_program",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "program_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "program_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "application_channel",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `channel_id` TEXT NOT NULL, `program_id` TEXT NOT NULL, `channel_type` TEXT NOT NULL, `submission_url` TEXT, `is_official` INTEGER NOT NULL, `status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `channel_id`), FOREIGN KEY(`release_id`, `program_id`) REFERENCES `document_program`(`release_id`, `program_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelId",
+            "columnName": "channel_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programId",
+            "columnName": "program_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelType",
+            "columnName": "channel_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "submissionUrl",
+            "columnName": "submission_url",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "isOfficial",
+            "columnName": "is_official",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "channel_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_application_channel_release_id_program_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "program_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_application_channel_release_id_program_id` ON `${TABLE_NAME}` (`release_id`, `program_id`)"
+          },
+          {
+            "name": "index_application_channel_release_id_program_id_channel_type",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "program_id",
+              "channel_type"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_application_channel_release_id_program_id_channel_type` ON `${TABLE_NAME}` (`release_id`, `program_id`, `channel_type`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "document_program",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "program_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "program_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "application_channel_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `channel_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `instructions` TEXT, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `channel_id`, `locale_tag`), FOREIGN KEY(`release_id`, `channel_id`) REFERENCES `application_channel`(`release_id`, `channel_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelId",
+            "columnName": "channel_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "instructions",
+            "columnName": "instructions",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "channel_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_application_channel_text_release_id_channel_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "channel_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_application_channel_text_release_id_channel_id` ON `${TABLE_NAME}` (`release_id`, `channel_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "application_channel",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "channel_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "channel_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "submission_artifact",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `artifact_id` TEXT NOT NULL, `channel_id` TEXT NOT NULL, `artifact_type` TEXT NOT NULL, `transport_method` TEXT NOT NULL, `is_required` INTEGER NOT NULL, `accepts_user_generated_file` INTEGER, `status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `artifact_id`), FOREIGN KEY(`release_id`, `channel_id`) REFERENCES `application_channel`(`release_id`, `channel_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artifactId",
+            "columnName": "artifact_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelId",
+            "columnName": "channel_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artifactType",
+            "columnName": "artifact_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transportMethod",
+            "columnName": "transport_method",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isRequired",
+            "columnName": "is_required",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acceptsUserGeneratedFile",
+            "columnName": "accepts_user_generated_file",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "artifact_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_submission_artifact_release_id_channel_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "channel_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_submission_artifact_release_id_channel_id` ON `${TABLE_NAME}` (`release_id`, `channel_id`)"
+          },
+          {
+            "name": "index_submission_artifact_release_id_artifact_type",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "artifact_type"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_submission_artifact_release_id_artifact_type` ON `${TABLE_NAME}` (`release_id`, `artifact_type`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "application_channel",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "channel_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "channel_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "photo_rule",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `program_id` TEXT NOT NULL, `channel_id` TEXT, `status` TEXT NOT NULL, `rule_version` TEXT NOT NULL, `reviewed_at` TEXT NOT NULL, `effective_from` TEXT, `effective_to` TEXT, `capture_policy` TEXT NOT NULL, `edit_policy` TEXT NOT NULL, PRIMARY KEY(`release_id`, `rule_id`), FOREIGN KEY(`release_id`, `program_id`) REFERENCES `document_program`(`release_id`, `program_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `channel_id`) REFERENCES `application_channel`(`release_id`, `channel_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programId",
+            "columnName": "program_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelId",
+            "columnName": "channel_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleVersion",
+            "columnName": "rule_version",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reviewedAt",
+            "columnName": "reviewed_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectiveFrom",
+            "columnName": "effective_from",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "effectiveTo",
+            "columnName": "effective_to",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "capturePolicy",
+            "columnName": "capture_policy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "editPolicy",
+            "columnName": "edit_policy",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "rule_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_photo_rule_release_id_program_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "program_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_photo_rule_release_id_program_id` ON `${TABLE_NAME}` (`release_id`, `program_id`)"
+          },
+          {
+            "name": "index_photo_rule_release_id_channel_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "channel_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_photo_rule_release_id_channel_id` ON `${TABLE_NAME}` (`release_id`, `channel_id`)"
+          },
+          {
+            "name": "index_photo_rule_release_id_status",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_photo_rule_release_id_status` ON `${TABLE_NAME}` (`release_id`, `status`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "document_program",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "program_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "program_id"
+            ]
+          },
+          {
+            "table": "application_channel",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "channel_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "channel_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "rule_scope",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `scope_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `applicant_type` TEXT NOT NULL, `application_action` TEXT NOT NULL, `residency_status` TEXT, `min_age_months` INTEGER, `max_age_months` INTEGER, `applicant_jurisdiction_code` TEXT, `submission_jurisdiction_code` TEXT, `mission_authority_id` TEXT, PRIMARY KEY(`release_id`, `scope_id`), FOREIGN KEY(`release_id`, `rule_id`) REFERENCES `photo_rule`(`release_id`, `rule_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `applicant_jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`release_id`, `submission_jurisdiction_code`) REFERENCES `jurisdiction`(`release_id`, `code`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`release_id`, `mission_authority_id`) REFERENCES `issuing_authority`(`release_id`, `authority_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scopeId",
+            "columnName": "scope_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applicantType",
+            "columnName": "applicant_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applicationAction",
+            "columnName": "application_action",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "residencyStatus",
+            "columnName": "residency_status",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "minAgeMonths",
+            "columnName": "min_age_months",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "maxAgeMonths",
+            "columnName": "max_age_months",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "applicantJurisdictionCode",
+            "columnName": "applicant_jurisdiction_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "submissionJurisdictionCode",
+            "columnName": "submission_jurisdiction_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "missionAuthorityId",
+            "columnName": "mission_authority_id",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "scope_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_rule_scope_release_id_rule_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "rule_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_scope_release_id_rule_id` ON `${TABLE_NAME}` (`release_id`, `rule_id`)"
+          },
+          {
+            "name": "index_rule_scope_release_id_applicant_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "applicant_jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_scope_release_id_applicant_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `applicant_jurisdiction_code`)"
+          },
+          {
+            "name": "index_rule_scope_release_id_submission_jurisdiction_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "submission_jurisdiction_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_scope_release_id_submission_jurisdiction_code` ON `${TABLE_NAME}` (`release_id`, `submission_jurisdiction_code`)"
+          },
+          {
+            "name": "index_rule_scope_release_id_mission_authority_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "mission_authority_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_scope_release_id_mission_authority_id` ON `${TABLE_NAME}` (`release_id`, `mission_authority_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "photo_rule",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "rule_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "rule_id"
+            ]
+          },
+          {
+            "table": "jurisdiction",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "applicant_jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          },
+          {
+            "table": "jurisdiction",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "submission_jurisdiction_code"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "code"
+            ]
+          },
+          {
+            "table": "issuing_authority",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "mission_authority_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "authority_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "output_variant",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `delivery` TEXT NOT NULL, `width` TEXT NOT NULL, `height` TEXT NOT NULL, `unit` TEXT NOT NULL, `dimension_mode` TEXT NOT NULL, `min_width` TEXT, `min_height` TEXT, `max_width` TEXT, `max_height` TEXT, `dpi` INTEGER NOT NULL, `min_bytes` INTEGER, `max_bytes` INTEGER, `color_space` TEXT NOT NULL, PRIMARY KEY(`release_id`, `variant_id`), FOREIGN KEY(`release_id`, `rule_id`) REFERENCES `photo_rule`(`release_id`, `rule_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "delivery",
+            "columnName": "delivery",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "width",
+            "columnName": "width",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "height",
+            "columnName": "height",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dimensionMode",
+            "columnName": "dimension_mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minWidth",
+            "columnName": "min_width",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "minHeight",
+            "columnName": "min_height",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "maxWidth",
+            "columnName": "max_width",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "maxHeight",
+            "columnName": "max_height",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dpi",
+            "columnName": "dpi",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "minBytes",
+            "columnName": "min_bytes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "maxBytes",
+            "columnName": "max_bytes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "colorSpace",
+            "columnName": "color_space",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_output_variant_release_id_rule_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "rule_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_output_variant_release_id_rule_id` ON `${TABLE_NAME}` (`release_id`, `rule_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "photo_rule",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "rule_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "rule_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "output_variant_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `name` TEXT NOT NULL, `description` TEXT, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `variant_id`, `locale_tag`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_output_variant_text_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_output_variant_text_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "variant_capability",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `availability_mode` TEXT NOT NULL, `reason_code` TEXT, PRIMARY KEY(`release_id`, `variant_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "availabilityMode",
+            "columnName": "availability_mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reasonCode",
+            "columnName": "reason_code",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_variant_capability_release_id_availability_mode",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "availability_mode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_variant_capability_release_id_availability_mode` ON `${TABLE_NAME}` (`release_id`, `availability_mode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "output_format",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `format` TEXT NOT NULL, PRIMARY KEY(`release_id`, `variant_id`, `format`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "format",
+            "columnName": "format",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id",
+            "format"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_output_format_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_output_format_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "output_encoding",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `format` TEXT NOT NULL, `mime_type` TEXT, `color_mode` TEXT, `bit_depth` INTEGER, `min_dpi` INTEGER, `max_dpi` INTEGER, `compression_policy` TEXT, PRIMARY KEY(`release_id`, `variant_id`, `format`), FOREIGN KEY(`release_id`, `variant_id`, `format`) REFERENCES `output_format`(`release_id`, `variant_id`, `format`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "format",
+            "columnName": "format",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mime_type",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "colorMode",
+            "columnName": "color_mode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "bitDepth",
+            "columnName": "bit_depth",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "minDpi",
+            "columnName": "min_dpi",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "maxDpi",
+            "columnName": "max_dpi",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "compressionPolicy",
+            "columnName": "compression_policy",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id",
+            "format"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_output_encoding_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_output_encoding_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_format",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id",
+              "format"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id",
+              "format"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "allowed_background",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `color_hex` TEXT NOT NULL, `is_preferred` INTEGER NOT NULL, PRIMARY KEY(`release_id`, `variant_id`, `color_hex`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "color_hex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isPreferred",
+            "columnName": "is_preferred",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id",
+            "color_hex"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_allowed_background_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_allowed_background_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "composition_rule",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `head_measurement` TEXT NOT NULL, `face_height_ratio` REAL NOT NULL, `face_height_min_ratio` REAL NOT NULL, `face_height_max_ratio` REAL NOT NULL, `face_height_constraint` TEXT NOT NULL, `face_top_ratio` REAL NOT NULL, `face_top_min_ratio` REAL NOT NULL, `face_top_max_ratio` REAL NOT NULL, `face_top_constraint` TEXT NOT NULL, `top_policy` TEXT, `eye_line_ratio` REAL, `eye_line_tolerance` REAL, `eye_line_constraint` TEXT, `face_center_x_ratio` REAL NOT NULL, `face_center_x_tolerance` REAL NOT NULL, `face_center_constraint` TEXT NOT NULL, `shoulder_line_ratio` REAL, `shoulder_line_tolerance` REAL, `shoulder_line_constraint` TEXT, `min_face_width_ratio` REAL, `max_head_pose_degrees` REAL, `min_eye_open_probability` REAL, `portrait_bottom_ratio` REAL NOT NULL, `max_portrait_width_ratio` REAL NOT NULL, `bottom_policy` TEXT NOT NULL, `max_upscale_ratio` REAL NOT NULL, `strict_composition` INTEGER NOT NULL, PRIMARY KEY(`release_id`, `variant_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "headMeasurement",
+            "columnName": "head_measurement",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceHeightRatio",
+            "columnName": "face_height_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceHeightMinRatio",
+            "columnName": "face_height_min_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceHeightMaxRatio",
+            "columnName": "face_height_max_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceHeightConstraint",
+            "columnName": "face_height_constraint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceTopRatio",
+            "columnName": "face_top_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceTopMinRatio",
+            "columnName": "face_top_min_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceTopMaxRatio",
+            "columnName": "face_top_max_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceTopConstraint",
+            "columnName": "face_top_constraint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "topPolicy",
+            "columnName": "top_policy",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "eyeLineRatio",
+            "columnName": "eye_line_ratio",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "eyeLineTolerance",
+            "columnName": "eye_line_tolerance",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "eyeLineConstraint",
+            "columnName": "eye_line_constraint",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "faceCenterXRatio",
+            "columnName": "face_center_x_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceCenterXTolerance",
+            "columnName": "face_center_x_tolerance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "faceCenterConstraint",
+            "columnName": "face_center_constraint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shoulderLineRatio",
+            "columnName": "shoulder_line_ratio",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "shoulderLineTolerance",
+            "columnName": "shoulder_line_tolerance",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "shoulderLineConstraint",
+            "columnName": "shoulder_line_constraint",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "minFaceWidthRatio",
+            "columnName": "min_face_width_ratio",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "maxHeadPoseDegrees",
+            "columnName": "max_head_pose_degrees",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "minEyeOpenProbability",
+            "columnName": "min_eye_open_probability",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "portraitBottomRatio",
+            "columnName": "portrait_bottom_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxPortraitWidthRatio",
+            "columnName": "max_portrait_width_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bottomPolicy",
+            "columnName": "bottom_policy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxUpscaleRatio",
+            "columnName": "max_upscale_ratio",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strictComposition",
+            "columnName": "strict_composition",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_composition_rule_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_composition_rule_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "composition_constraint",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `constraint_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `measurement` TEXT NOT NULL, `from_landmark` TEXT, `to_landmark` TEXT, `reference_frame` TEXT NOT NULL, `subject_scope` TEXT NOT NULL, `target_value` TEXT, `min_value` TEXT, `max_value` TEXT, `unit` TEXT NOT NULL, `constraint_level` TEXT NOT NULL, PRIMARY KEY(`release_id`, `constraint_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintId",
+            "columnName": "constraint_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measurement",
+            "columnName": "measurement",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fromLandmark",
+            "columnName": "from_landmark",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "toLandmark",
+            "columnName": "to_landmark",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "referenceFrame",
+            "columnName": "reference_frame",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subjectScope",
+            "columnName": "subject_scope",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "targetValue",
+            "columnName": "target_value",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "minValue",
+            "columnName": "min_value",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "maxValue",
+            "columnName": "max_value",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintLevel",
+            "columnName": "constraint_level",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "constraint_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_composition_constraint_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_composition_constraint_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          },
+          {
+            "name": "index_composition_constraint_release_id_variant_id_measurement",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id",
+              "measurement"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_composition_constraint_release_id_variant_id_measurement` ON `${TABLE_NAME}` (`release_id`, `variant_id`, `measurement`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "background_constraint",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `constraint_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `policy` TEXT NOT NULL, `constraint_mode` TEXT NOT NULL, `semantic_code` TEXT, `exact_value` TEXT, `color_space` TEXT, `component_1_min` TEXT, `component_1_max` TEXT, `component_2_min` TEXT, `component_2_max` TEXT, `component_3_min` TEXT, `component_3_max` TEXT, `is_preferred` INTEGER NOT NULL, PRIMARY KEY(`release_id`, `constraint_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintId",
+            "columnName": "constraint_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "policy",
+            "columnName": "policy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintMode",
+            "columnName": "constraint_mode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "semanticCode",
+            "columnName": "semantic_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "exactValue",
+            "columnName": "exact_value",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "colorSpace",
+            "columnName": "color_space",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component1Min",
+            "columnName": "component_1_min",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component1Max",
+            "columnName": "component_1_max",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component2Min",
+            "columnName": "component_2_min",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component2Max",
+            "columnName": "component_2_max",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component3Min",
+            "columnName": "component_3_min",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "component3Max",
+            "columnName": "component_3_max",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "isPreferred",
+            "columnName": "is_preferred",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "constraint_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_background_constraint_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_background_constraint_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "artifact_constraint",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `constraint_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `attribute` TEXT NOT NULL, `operator` TEXT NOT NULL, `value` TEXT NOT NULL, `secondary_value` TEXT, `unit` TEXT, `subject_scope` TEXT NOT NULL, `constraint_level` TEXT NOT NULL, PRIMARY KEY(`release_id`, `constraint_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintId",
+            "columnName": "constraint_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attribute",
+            "columnName": "attribute",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "operator",
+            "columnName": "operator",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "secondaryValue",
+            "columnName": "secondary_value",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "subjectScope",
+            "columnName": "subject_scope",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "constraintLevel",
+            "columnName": "constraint_level",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "constraint_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_artifact_constraint_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_artifact_constraint_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          },
+          {
+            "name": "index_artifact_constraint_release_id_variant_id_attribute",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id",
+              "attribute"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_artifact_constraint_release_id_variant_id_attribute` ON `${TABLE_NAME}` (`release_id`, `variant_id`, `attribute`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "source_image_policy",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `policy` TEXT NOT NULL, PRIMARY KEY(`release_id`, `rule_id`, `policy`), FOREIGN KEY(`release_id`, `rule_id`) REFERENCES `photo_rule`(`release_id`, `rule_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "policy",
+            "columnName": "policy",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "rule_id",
+            "policy"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_source_image_policy_release_id_rule_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "rule_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_image_policy_release_id_rule_id` ON `${TABLE_NAME}` (`release_id`, `rule_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "photo_rule",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "rule_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "rule_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "transform_policy",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `operation` TEXT NOT NULL, `policy` TEXT NOT NULL, `condition_code` TEXT, PRIMARY KEY(`release_id`, `rule_id`, `operation`), FOREIGN KEY(`release_id`, `rule_id`) REFERENCES `photo_rule`(`release_id`, `rule_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "operation",
+            "columnName": "operation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "policy",
+            "columnName": "policy",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "conditionCode",
+            "columnName": "condition_code",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "rule_id",
+            "operation"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_transform_policy_release_id_rule_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "rule_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_transform_policy_release_id_rule_id` ON `${TABLE_NAME}` (`release_id`, `rule_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "photo_rule",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "rule_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "rule_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "requirement",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `requirement_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `category` TEXT NOT NULL, `severity` TEXT NOT NULL, `sort_order` INTEGER NOT NULL, PRIMARY KEY(`release_id`, `requirement_id`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requirementId",
+            "columnName": "requirement_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "severity",
+            "columnName": "severity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sort_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "requirement_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_requirement_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_requirement_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "requirement_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `requirement_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `text` TEXT NOT NULL, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `requirement_id`, `locale_tag`), FOREIGN KEY(`release_id`, `requirement_id`) REFERENCES `requirement`(`release_id`, `requirement_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requirementId",
+            "columnName": "requirement_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "text",
+            "columnName": "text",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "requirement_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_requirement_text_release_id_requirement_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "requirement_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_requirement_text_release_id_requirement_id` ON `${TABLE_NAME}` (`release_id`, `requirement_id`)"
+          },
+          {
+            "name": "index_requirement_text_release_id_locale_tag",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "locale_tag"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_requirement_text_release_id_locale_tag` ON `${TABLE_NAME}` (`release_id`, `locale_tag`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "requirement",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "requirement_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "requirement_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "source_evidence",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `authority_code` TEXT NOT NULL, `source_language` TEXT NOT NULL, `original_title` TEXT NOT NULL, `original_quote` TEXT, `url` TEXT NOT NULL, `document_reference` TEXT, `published_at` TEXT, `effective_from` TEXT, `effective_to` TEXT, `retrieved_at` TEXT NOT NULL, `verified_at` TEXT, `content_sha256` TEXT, PRIMARY KEY(`release_id`, `evidence_id`), FOREIGN KEY(`release_id`) REFERENCES `catalog_release`(`release_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authorityCode",
+            "columnName": "authority_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceLanguage",
+            "columnName": "source_language",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originalTitle",
+            "columnName": "original_title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originalQuote",
+            "columnName": "original_quote",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentReference",
+            "columnName": "document_reference",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "publishedAt",
+            "columnName": "published_at",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "effectiveFrom",
+            "columnName": "effective_from",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "effectiveTo",
+            "columnName": "effective_to",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "retrievedAt",
+            "columnName": "retrieved_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verifiedAt",
+            "columnName": "verified_at",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "contentSha256",
+            "columnName": "content_sha256",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "evidence_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_source_evidence_release_id",
+            "unique": false,
+            "columnNames": [
+              "release_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_evidence_release_id` ON `${TABLE_NAME}` (`release_id`)"
+          },
+          {
+            "name": "index_source_evidence_release_id_authority_code",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "authority_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_evidence_release_id_authority_code` ON `${TABLE_NAME}` (`release_id`, `authority_code`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "catalog_release",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id"
+            ],
+            "referencedColumns": [
+              "release_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "source_evidence_translation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `locale_tag` TEXT NOT NULL, `translated_title` TEXT, `translated_summary` TEXT NOT NULL, `translation_status` TEXT NOT NULL, PRIMARY KEY(`release_id`, `evidence_id`, `locale_tag`), FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localeTag",
+            "columnName": "locale_tag",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "translatedTitle",
+            "columnName": "translated_title",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "translatedSummary",
+            "columnName": "translated_summary",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "translationStatus",
+            "columnName": "translation_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "evidence_id",
+            "locale_tag"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_source_evidence_translation_release_id_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_evidence_translation_release_id_evidence_id` ON `${TABLE_NAME}` (`release_id`, `evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "source_evidence_assessment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `source_tier` TEXT NOT NULL, `verification_status` TEXT NOT NULL, `retrieval_method` TEXT NOT NULL, `http_status` INTEGER, `archive_reference` TEXT, `checked_at` TEXT NOT NULL, PRIMARY KEY(`release_id`, `evidence_id`), FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceTier",
+            "columnName": "source_tier",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "verificationStatus",
+            "columnName": "verification_status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retrievalMethod",
+            "columnName": "retrieval_method",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "httpStatus",
+            "columnName": "http_status",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "archiveReference",
+            "columnName": "archive_reference",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "checkedAt",
+            "columnName": "checked_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "evidence_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_source_evidence_assessment_release_id_verification_status",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "verification_status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_source_evidence_assessment_release_id_verification_status` ON `${TABLE_NAME}` (`release_id`, `verification_status`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "program_source_link",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `program_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `field_path` TEXT NOT NULL, `source_section` TEXT, `source_quote` TEXT, PRIMARY KEY(`release_id`, `program_id`, `evidence_id`, `field_path`), FOREIGN KEY(`release_id`, `program_id`) REFERENCES `document_program`(`release_id`, `program_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "programId",
+            "columnName": "program_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldPath",
+            "columnName": "field_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceSection",
+            "columnName": "source_section",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceQuote",
+            "columnName": "source_quote",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "program_id",
+            "evidence_id",
+            "field_path"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_program_source_link_release_id_program_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "program_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_program_source_link_release_id_program_id` ON `${TABLE_NAME}` (`release_id`, `program_id`)"
+          },
+          {
+            "name": "index_program_source_link_release_id_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_program_source_link_release_id_evidence_id` ON `${TABLE_NAME}` (`release_id`, `evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "document_program",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "program_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "program_id"
+            ]
+          },
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "rule_source_link",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `rule_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `field_path` TEXT NOT NULL, `source_section` TEXT, `source_quote` TEXT, PRIMARY KEY(`release_id`, `rule_id`, `evidence_id`, `field_path`), FOREIGN KEY(`release_id`, `rule_id`) REFERENCES `photo_rule`(`release_id`, `rule_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ruleId",
+            "columnName": "rule_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldPath",
+            "columnName": "field_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceSection",
+            "columnName": "source_section",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceQuote",
+            "columnName": "source_quote",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "rule_id",
+            "evidence_id",
+            "field_path"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_rule_source_link_release_id_rule_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "rule_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_source_link_release_id_rule_id` ON `${TABLE_NAME}` (`release_id`, `rule_id`)"
+          },
+          {
+            "name": "index_rule_source_link_release_id_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_rule_source_link_release_id_evidence_id` ON `${TABLE_NAME}` (`release_id`, `evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "photo_rule",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "rule_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "rule_id"
+            ]
+          },
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "coverage_source_link",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `jurisdiction_code` TEXT NOT NULL, `document_type` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `field_path` TEXT NOT NULL, `source_section` TEXT, `source_quote` TEXT, PRIMARY KEY(`release_id`, `jurisdiction_code`, `document_type`, `evidence_id`, `field_path`), FOREIGN KEY(`release_id`, `jurisdiction_code`, `document_type`) REFERENCES `coverage_status`(`release_id`, `jurisdiction_code`, `document_type`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jurisdictionCode",
+            "columnName": "jurisdiction_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentType",
+            "columnName": "document_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldPath",
+            "columnName": "field_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceSection",
+            "columnName": "source_section",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceQuote",
+            "columnName": "source_quote",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "jurisdiction_code",
+            "document_type",
+            "evidence_id",
+            "field_path"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_coverage_source_link_release_id_jurisdiction_code_document_type",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "jurisdiction_code",
+              "document_type"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_coverage_source_link_release_id_jurisdiction_code_document_type` ON `${TABLE_NAME}` (`release_id`, `jurisdiction_code`, `document_type`)"
+          },
+          {
+            "name": "index_coverage_source_link_release_id_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_coverage_source_link_release_id_evidence_id` ON `${TABLE_NAME}` (`release_id`, `evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "coverage_status",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "jurisdiction_code",
+              "document_type"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "jurisdiction_code",
+              "document_type"
+            ]
+          },
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "variant_source_link",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`release_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `evidence_id` TEXT NOT NULL, `field_path` TEXT NOT NULL, `source_section` TEXT, `source_quote` TEXT, PRIMARY KEY(`release_id`, `variant_id`, `evidence_id`, `field_path`), FOREIGN KEY(`release_id`, `variant_id`) REFERENCES `output_variant`(`release_id`, `variant_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`release_id`, `evidence_id`) REFERENCES `source_evidence`(`release_id`, `evidence_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "releaseId",
+            "columnName": "release_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldPath",
+            "columnName": "field_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceSection",
+            "columnName": "source_section",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceQuote",
+            "columnName": "source_quote",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "release_id",
+            "variant_id",
+            "evidence_id",
+            "field_path"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_variant_source_link_release_id_variant_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "variant_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_variant_source_link_release_id_variant_id` ON `${TABLE_NAME}` (`release_id`, `variant_id`)"
+          },
+          {
+            "name": "index_variant_source_link_release_id_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "release_id",
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_variant_source_link_release_id_evidence_id` ON `${TABLE_NAME}` (`release_id`, `evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "output_variant",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "variant_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "variant_id"
+            ]
+          },
+          {
+            "table": "source_evidence",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "release_id",
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "release_id",
+              "evidence_id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9e32a9825d1d65a95fb39f7732394f7c')"
+    ]
+  }
+}

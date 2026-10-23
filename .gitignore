@@ -1,0 +1,27 @@
+# Python 工具缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Android / IDE / 本地构建
+.gradle/
+.kotlin/
+**/build/
+.idea/
+*.iml
+local.properties
+.externalNativeBuild/
+.cxx/
+
+# 签名与本地秘密
+*.jks
+*.keystore
+keystore.properties
+.env
+.env.*
+
+# 任务中间产物；正式验收报告放 doc/testing/ 并纳入版本管理
+.ai-work/
+.playwright-mcp/
+hs_err_pid*.log
+replay_pid*.log

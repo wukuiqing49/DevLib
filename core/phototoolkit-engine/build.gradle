@@ -1,0 +1,62 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+def modulePrebuilt = file('prebuilt')
+def moduleJniLibs = file('src/main/jniLibs')
+def supportedAbis = ['armeabi-v7a', 'arm64-v8a']
+def requestedTestAbi = providers.gradleProperty('phototoolkitTestAbi').orNull
+if (requestedTestAbi != null && !supportedAbis.contains(requestedTestAbi)) {
+    throw new GradleException("Unsupported phototoolkitTestAbi: ${requestedTestAbi}")
+}
+
+android {
+    namespace = 'com.phototoolkit.engine'
+    compileSdk = photoLibs.versions.compileSdk.get().toInteger()
+    ndkVersion = photoLibs.versions.ndk.get()
+
+    defaultConfig {
+        minSdk = photoLibs.versions.minSdk.get().toInteger()
+        targetSdk = photoLibs.versions.targetSdk.get().toInteger()
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+        consumerProguardFiles 'consumer-rules.pro'
+        ndk { abiFilters(*(requestedTestAbi == null ? supportedAbis : [requestedTestAbi])) }
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++17'
+                arguments "-DVIPSSDK_ROOT=${modulePrebuilt.absolutePath.replace('\\', '/')}",
+                        "-DENGINE_JNI_ROOT=${moduleJniLibs.absolutePath.replace('\\', '/')}"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake { path file('src/main/cpp/CMakeLists.txt') }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions { jvmTarget = '17' }
+    aaptOptions { noCompress 'tflite' }
+    testOptions { unitTests.includeAndroidResources = true }
+}
+
+dependencies {
+    api project(':core:lib_operations')
+    implementation photoLibs.androidx.exifinterface
+    api photoLibs.litert
+    implementation photoLibs.play.asset.delivery
+    implementation photoLibs.mlkit.face.detection
+    implementation photoLibs.mlkit.face.mesh.detection
+    implementation photoLibs.mlkit.pose.detection.accurate
+    testImplementation photoLibs.junit
+    testImplementation photoLibs.robolectric
+    androidTestImplementation photoLibs.androidx.test.ext.junit
+    androidTestImplementation photoLibs.androidx.test.runner
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

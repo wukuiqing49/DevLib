@@ -1,0 +1,29 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+android {
+    testOptions {
+        unitTests.all {
+            systemProperty 'droplan.web.root', file('src/main/assets/droplan_web').absolutePath
+            inputs.dir(file('src/main/assets/droplan_web'))
+        }
+    }
+    namespace = 'com.wkq.droplan.html'
+    compileSdk = dropLibs.versions.compileSdk.get().toInteger()
+    defaultConfig {
+        minSdk = dropLibs.versions.minSdk.get().toInteger()
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+    testImplementation dropLibs.junit
+    testImplementation dropLibs.json.test
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

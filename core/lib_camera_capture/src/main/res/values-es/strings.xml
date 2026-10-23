@@ -1,0 +1,16 @@
+<resources>
+    <string name="camera_capture_title">Captura SiteReport</string>
+    <string name="camera_location_loading">Obteniendo ubicación…</string>
+    <string name="camera_location_unavailable">Ubicación no disponible</string>
+    <string name="camera_location_coordinates">Latitud %1$.5f, longitud %2$.5f</string>
+    <string name="camera_capture_in_progress">Capturando…</string>
+    <string name="camera_capture_saved_to_gallery">Foto guardada en la galería</string>
+    <string name="camera_capture_saved_to_gallery_with_location">Foto guardada en la galería, Lat %1$.5f, Lng %2$.5f</string>
+    <string name="camera_capture_failed_with_reason">Error al capturar: %1$s</string>
+    <string name="camera_capture_save_failed_with_reason">No se pudo guardar la foto: %1$s</string>
+    <string name="camera_start_failed_with_reason">No se pudo iniciar la cámara: %1$s</string>
+    <string name="camera_permission_required">Se requieren permisos de cámara y ubicación</string>
+    <string name="camera_preview_content_desc">Vista previa de cámara</string>
+    <string name="camera_capture_button_desc">Tomar foto</string>
+    <string name="camera_back">Atrás</string>
+</resources>

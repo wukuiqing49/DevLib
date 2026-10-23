@@ -1,0 +1,105 @@
+schemaVersion: 1
+project:
+  name: DevLib
+  description: Android 多模块独立功能库与演示工程，统一维护基础框架、文件、图片、商业化及媒体能力
+  kind: development-library
+  lifecycle: initialized
+  phase: integration-validation
+android:
+  applicationId: com.wkq.dev
+  namespace: com.wkq.dev
+  versionName: 0.1.0
+  minSdk: 26
+  compileSdk: 36
+  targetSdk: 36
+  jvmTarget: 17
+  language: kotlin
+  uiToolkit: xml
+  viewBinding: true
+modules:
+  app: app
+  coreBase: core/core_base
+  coreUtils: core/core_utils
+  featureApp: feature/feature_app
+  featureRes: feature/feature_res
+  libraries:
+  - core/core_archive
+  - core/core_base
+  - core/core_image_render
+  - core/core_media_store
+  - core/core_network
+  - core/core_pdf
+  - core/core_qr_transfer
+  - core/core_qrcode
+  - core/core_router_annotation
+  - core/core_router_api
+  - core/core_router_gradle_plugin
+  - core/core_router_processor
+  - core/core_share
+  - core/core_utils
+  - core/id-photo-library
+  - core/lib_agora
+  - core/lib_auth_credentials
+  - core/lib_auth_firebase
+  - core/lib_auth_google
+  - core/lib_beauty
+  - core/lib_beauty_mediapipe
+  - core/lib_beauty_rfb
+  - core/lib_billing_play
+  - core/lib_camera
+  - core/lib_camera_capture
+  - core/lib_crash
+  - core/lib_devhub
+  - core/lib_document
+  - core/lib_drop
+  - core/lib_entitlement
+  - core/lib_html
+  - core/lib_live_api
+  - core/lib_live_beauty
+  - core/lib_location
+  - core/lib_metadata
+  - core/lib_operations
+  - core/lib_push_fcm
+  - core/lib_report_pdf
+  - core/lib_tencent_beauty_kit
+  - core/lib_transfer
+  - core/lib_upload
+  - core/lib_xpopup
+  - core/phototoolkit-engine
+  - core/phototoolkit-raw
+  - core/portrait-model-assets
+sourceOfTruth:
+  agentEntry: AGENTS.md
+  capabilityIndex: .agents/INDEX.md
+  dependencyVersions: gradle/libs.versions.toml
+  gradleWrapper: gradle/wrapper/gradle-wrapper.properties
+  moduleGraph: settings.gradle
+  moduleBuildFiles: '**/build.gradle'
+  importManifest: docs/import-manifest.json
+validation:
+  agentStructure: python -B .agents/scripts/validate_agent_structure.py --project-root
+    .
+  agentConfiguration: python -B .agents/scripts/validate_android_workflows.py --project-root
+    . --config-only
+  agentTests: python -B .agents/scripts/tests/test_validate_agent_structure.py -v
+  debugBuild: .\gradlew.bat :app:assembleDebug
+  libraryBuild: .\gradlew.bat assembleLibraries
+  libraryTests: .\gradlew.bat testLibraries
+agentFiles:
+  rules:
+  - droplan.md
+  workflows:
+  - audit-droplan.md
+  prompts:
+  - audit-droplan.md
+capabilities:
+  available:
+  - android-workflows
+  - android-scaffold
+  - figma-android
+  - zeplin-android
+  - google-play-assets
+  extensionPolicy: 按实际需求新增技术方向，不声明未实现的能力
+examples:
+  androidScaffold: .agents/config/project-scaffold.yml
+  status: 当前 DevLib 演示工程基线；独立库保留迁入 API 包名，由中央依赖快照和模块构建文件维护

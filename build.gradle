@@ -1,0 +1,44 @@
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.android.asset.pack) apply false
+}
+
+// Demo 应用与独立库共享工具链，公开包名沿用迁入库的 API。
+ext.appConfig = [compileSdk: 36, targetSdk: 36, minSdk: 26,
+ jvmTarget: org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17]
+ext.compileSdkVersion = 36
+ext.targetSdkVersion = 36
+ext.minSdkVersion = 26
+ext.devlibVersion = '0.1.0-SNAPSHOT'
+
+subprojects {
+ group = 'com.wkq.dev'
+ version = rootProject.ext.devlibVersion
+}
+
+tasks.register('clean', Delete) { delete rootProject.layout.buildDirectory }
+
+// 聚合任务只对实际库执行，不把 app 或 asset pack 误当作 AAR。
+gradle.projectsEvaluated {
+ def libraries = subprojects.findAll { it.path.startsWith(':core:') &&
+     (it.plugins.hasPlugin('com.android.library') || it.plugins.hasPlugin('org.jetbrains.kotlin.jvm')) }
+ tasks.register('assembleLibraries') {
+  group = 'build'
+  description = 'Build all standalone Android and JVM libraries.'
+  dependsOn libraries.collect { it.tasks.named(it.plugins.hasPlugin('com.android.library') ? 'assembleDebug' : 'jar') }
+ }
+ tasks.register('testLibraries') {
+  group = 'verification'
+  description = 'Run all imported library JVM unit tests.'
+  dependsOn libraries.collect { it.tasks.named(it.plugins.hasPlugin('com.android.library') ? 'testDebugUnitTest' : 'test') }
+ }
+ tasks.register('publishLibrariesToLocalRepository') {
+  group = 'publishing'
+  description = 'Publish each library with POM and sources to build/repo.'
+  dependsOn libraries.collect { it.tasks.named(it.plugins.hasPlugin('java-gradle-plugin') ? 'publishAllPublicationsToDevLibLocalRepository' : 'publishReleasePublicationToDevLibLocalRepository') }
+ }
+}

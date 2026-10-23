@@ -1,0 +1,54 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace = 'com.wkq.location'
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk 23
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = appConfig.jvmTarget
+        freeCompilerArgs.addAll(["-Xskip-metadata-version-check"])
+    }
+}
+
+dependencies {
+    implementation siteLibs.androidx.core.ktx
+    implementation siteLibs.androidx.appcompat
+    debugImplementation siteLibs.amap.location
+    implementation siteLibs.play.services.location
+    implementation siteLibs.androidx.room.runtime
+    implementation siteLibs.androidx.room.ktx
+    ksp siteLibs.androidx.room.compiler
+    
+    // 单元测试与测试数据库生成所需
+    testImplementation siteLibs.sqlite.jdbc
+    testImplementation siteLibs.junit
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

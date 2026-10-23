@@ -1,0 +1,14 @@
+{
+  "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+  "sourceInputCount": 2473,
+  "modules": 45,
+  "libraries": 44,
+  "tests": 785,
+  "failures": 0,
+  "skipped": 1,
+  "apk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "bytes": 9323359,
+    "sha256": "4353b73eef535e6d3e67605406a3dd316e22f7c08dc4e35fa09764799e98c88b"
+  }
+}

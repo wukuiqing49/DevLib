@@ -1,0 +1,12 @@
+Run: 2026-10-23T13:17:46+08:00
+All commands listed below completed with exit code 0.
+Structure: passed. Build validator: 0 warnings. Architecture: passed, 2 advisory warnings (standalone consumer intentionally outside root settings; CoreUtils.init textual matches include library comments).
+assembleLibraries :app:assembleDebug: BUILD SUCCESSFUL in 8s; 1135 actionable tasks.
+testLibraries plus updated publications: BUILD SUCCESSFUL in 1m 10s; 741 actionable tasks.
+Full local publication: BUILD SUCCESSFUL in 4m 2s; 2302 actionable tasks.
+Final plugin-only publication: BUILD SUCCESSFUL in 5s; 10 actionable tasks; pluginMaven + marker (no duplicate release publication).
+Published consumer (with refreshed dependencies): BUILD SUCCESSFUL in 2m 38s; kspDebugKotlin and compileDebugKotlin executed.
+44 library directories verified to contain POM, sources JAR and AAR/JAR. Plugin marker POM points to com.wkq.dev:core-router-gradle-plugin:0.1.0-SNAPSHOT.
+Generated consumer files: RouteInit_DevLibPublishedConsumer.kt, RouterPaths_DevLibPublishedConsumer.kt, RouteGroup_DevLibPublishedConsumer_consumer.kt.
+JVM XML: tests=785, failures=0, skipped=1; passed=784. No device tests executed.
+Earlier runs with dependency download stalls, missing AndroidX flag, migrated fixture paths, and headless notification failures were superseded by successful final runs.

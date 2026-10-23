@@ -1,0 +1,47 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace = "com.wkq.iptc.upload"
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk appConfig.minSdk
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = appConfig.jvmTarget
+        freeCompilerArgs.addAll(["-Xskip-metadata-version-check"])
+    }
+}
+
+dependencies {
+    implementation pressLibs.androidx.core.ktx
+    implementation pressLibs.kotlinx.coroutines.core
+    implementation pressLibs.kotlinx.coroutines.android
+    implementation pressLibs.mmkv
+    implementation pressLibs.retrofit
+    implementation pressLibs.retrofit.converter.gson
+    implementation pressLibs.okhttp
+    implementation pressLibs.okhttp.logging
+    implementation pressLibs.gson
+    implementation pressLibs.jcifs.ng
+    implementation(pressLibs.sshj) {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
+        exclude group: 'org.bouncycastle', module: 'bcpkix-jdk18on'
+        exclude group: 'org.bouncycastle', module: 'bcutil-jdk18on'
+    }
+    implementation pressLibs.commons.net
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

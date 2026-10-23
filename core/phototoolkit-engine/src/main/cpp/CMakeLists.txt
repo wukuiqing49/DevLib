@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(phototoolkit_engine LANGUAGES CXX)
+
+if(NOT DEFINED VIPSSDK_ROOT)
+    message(FATAL_ERROR "VIPSSDK_ROOT was not supplied")
+endif()
+if(NOT DEFINED ENGINE_JNI_ROOT)
+    message(FATAL_ERROR "ENGINE_JNI_ROOT was not supplied")
+endif()
+
+set(VIPS_INCLUDE_ROOT "${VIPSSDK_ROOT}/include")
+set(VIPS_LIBRARY "${ENGINE_JNI_ROOT}/${CMAKE_ANDROID_ARCH_ABI}/libvips.so")
+if(NOT EXISTS "${VIPS_INCLUDE_ROOT}/vips/vips.h")
+    message(FATAL_ERROR "libvips headers not found: ${VIPS_INCLUDE_ROOT}/vips/vips.h")
+endif()
+if(NOT EXISTS "${VIPS_LIBRARY}")
+    message(FATAL_ERROR "libvips library not found: ${VIPS_LIBRARY}")
+endif()
+
+add_library(vips SHARED IMPORTED)
+set_target_properties(vips PROPERTIES IMPORTED_LOCATION "${VIPS_LIBRARY}")
+
+# libvips exposes GObject types in its public API, so JNI code that releases
+# images must link against the matching runtime libraries explicitly.
+foreach(VIPS_RUNTIME_NAME IN ITEMS glib-2.0 gobject-2.0)
+    set(VIPS_RUNTIME_LIBRARY "${ENGINE_JNI_ROOT}/${CMAKE_ANDROID_ARCH_ABI}/lib${VIPS_RUNTIME_NAME}.so")
+    if(NOT EXISTS "${VIPS_RUNTIME_LIBRARY}")
+        message(FATAL_ERROR "Runtime library not found: ${VIPS_RUNTIME_LIBRARY}")
+    endif()
+    add_library("vips_${VIPS_RUNTIME_NAME}" SHARED IMPORTED)
+    set_target_properties("vips_${VIPS_RUNTIME_NAME}" PROPERTIES IMPORTED_LOCATION "${VIPS_RUNTIME_LIBRARY}")
+endforeach()
+
+add_library(vips_smoke SHARED native_vips_smoke.cpp)
+target_link_options(vips_smoke PRIVATE "-Wl,-z,max-page-size=16384")
+target_include_directories(vips_smoke PRIVATE "${VIPS_INCLUDE_ROOT}")
+file(GLOB_RECURSE PUBLIC_HEADERS "${VIPS_INCLUDE_ROOT}/*.h")
+foreach(HEADER IN LISTS PUBLIC_HEADERS)
+    get_filename_component(HEADER_DIR "${HEADER}" DIRECTORY)
+    target_include_directories(vips_smoke PRIVATE "${HEADER_DIR}")
+endforeach()
+target_link_libraries(vips_smoke PRIVATE vips vips_gobject-2.0 vips_glib-2.0 log)

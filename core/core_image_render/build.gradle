@@ -1,0 +1,34 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace = 'com.wkq.photo.imagerender'
+    compileSdk = photoLibs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk = photoLibs.versions.minSdk.get().toInteger()
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    api project(':core:lib_operations')
+    implementation photoLibs.androidx.core.ktx
+    implementation photoLibs.androidx.exifinterface
+
+    testImplementation photoLibs.junit
+    testImplementation photoLibs.robolectric
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

@@ -1,0 +1,31 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+plugins {
+    alias(libs.plugins.kotlin.jvm)
+    id 'maven-publish'
+}
+
+ext.POM_ARTIFACT_ID = "core_router_annotation"
+ext.POM_NAME = "core_router_annotation"
+ext.POM_DESCRIPTION = "Router annotations and generated bootstrap interfaces."
+
+dependencies {
+    implementation routerLibs.kotlin.stdlib
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+}
+
+
+
+
+apply from: rootProject.file("gradle/library-publish.gradle")

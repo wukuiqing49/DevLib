@@ -1,0 +1,41 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace = 'com.wkq.photo.mediastore'
+    compileSdk = photoLibs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk = photoLibs.versions.minSdk.get().toInteger()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    api project(':core:lib_operations')
+    implementation photoLibs.androidx.core.ktx
+    implementation photoLibs.androidx.room.runtime
+    implementation photoLibs.androidx.room.ktx
+    ksp photoLibs.androidx.room.compiler
+
+    testImplementation photoLibs.junit
+    testImplementation photoLibs.robolectric
+    androidTestImplementation photoLibs.androidx.test.ext.junit
+    androidTestImplementation photoLibs.androidx.test.runner
+    androidTestImplementation photoLibs.androidx.exifinterface
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

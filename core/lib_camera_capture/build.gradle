@@ -1,0 +1,43 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace = "com.wkq.camera"
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk appConfig.minSdk
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = appConfig.jvmTarget
+        freeCompilerArgs.add("-Xskip-metadata-version-check")
+    }
+}
+
+dependencies {
+    implementation project(":core:core_utils")
+    api project(":core:lib_location")
+    implementation siteLibs.androidx.core.ktx
+    implementation siteLibs.androidx.camera.camera2
+    implementation siteLibs.androidx.camera.lifecycle
+    implementation siteLibs.androidx.camera.view
+    implementation siteLibs.androidx.exifinterface
+    implementation siteLibs.kotlinx.coroutines.android
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

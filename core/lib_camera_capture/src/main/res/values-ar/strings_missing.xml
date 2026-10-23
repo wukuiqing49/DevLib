@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="camera_capture_title">التقاط تقرير الموقع</string>
+  <string name="camera_location_loading">تحديد موقع…</string>
+  <string name="camera_location_unavailable">الموقع غير متاح</string>
+  <string name="camera_location_coordinates">خط العرض %1$.5f، خط الطول %2$.5f</string>
+  <string name="camera_capture_in_progress">جارٍ الالتقاط…</string>
+  <string name="camera_capture_saved_to_gallery">تم حفظ الصورة في المعرض</string>
+  <string name="camera_capture_saved_to_gallery_with_location">تم حفظ الصورة في المعرض، Lat %1$.5f، Lng %2$.5f</string>
+  <string name="camera_capture_failed_with_reason">فشل الالتقاط: %1$s</string>
+  <string name="camera_capture_save_failed_with_reason">فشل حفظ الصورة: %1$s</string>
+  <string name="camera_start_failed_with_reason">فشل تشغيل الكاميرا: %1$s</string>
+  <string name="camera_permission_required">مطلوب أذونات الكاميرا والموقع</string>
+  <string name="camera_preview_content_desc">معاينة الكاميرا</string>
+  <string name="camera_capture_button_desc">التقط صورة</string>
+  <string name="camera_back">العودة</string>
+</resources>

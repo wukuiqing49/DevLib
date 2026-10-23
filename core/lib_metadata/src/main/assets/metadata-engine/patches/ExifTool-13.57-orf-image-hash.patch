@@ -1,0 +1,9 @@
+--- ExifTool-13.57/lib/Image/ExifTool/Exif.pm
++++ PressIPTC/lib/Image/ExifTool/Exif.pm
+@@ -2,1 +2,2 @@
+ # File:         Exif.pm
++# Modified by PressIPTC on 2026-10-14: enable existing TIFF image hashing for ORF.
+@@ -6309,2 +6310,2 @@
+-    $doHash = 1 if $$et{ImageDataHash} and (($$et{FILE_TYPE} eq 'TIFF' and not $base and not $inMakerNotes) or
++    $doHash = 1 if $$et{ImageDataHash} and (($$et{FILE_TYPE} =~ /^(TIFF|ORF)$/ and not $base and not $inMakerNotes) or
+         ($$et{FILE_TYPE} eq 'RAF' and $dirName eq 'FujiIFD'));

@@ -1,0 +1,51 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    id 'maven-publish'
+}
+
+ext.POM_ARTIFACT_ID = "core_router_api"
+ext.POM_NAME = "core_router_api"
+ext.POM_DESCRIPTION = "Android router runtime API."
+
+android {
+    namespace = "com.wkq.router.api"
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk 23
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    
+
+    kotlin {
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+        }
+    }
+}
+
+dependencies {
+    api project(":core:core_router_annotation")
+    
+    implementation routerLibs.kotlinx.coroutines.core
+    implementation routerLibs.kotlin.stdlib
+    
+    implementation routerLibs.androidx.core.ktx
+    implementation routerLibs.androidx.appcompat
+    api routerLibs.androidx.fragment.ktx
+    api routerLibs.androidx.activity.ktx
+    implementation routerLibs.androidx.lifecycle.runtime.ktx
+    implementation routerLibs.androidx.lifecycle.viewmodel.ktx
+}
+
+
+
+
+apply from: rootProject.file("gradle/library-publish.gradle")

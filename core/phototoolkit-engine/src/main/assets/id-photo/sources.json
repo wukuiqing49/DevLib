@@ -1,0 +1,167 @@
+{
+  "sourceVersion": 6,
+  "reviewPolicy": "VERIFIED and CHANNEL_VERIFIED rules require an issuing-authority HTTPS URL and a verification date. OFFICIAL_REPORTED rules cite secondary material that reports an official rule but has not been directly verified against the issuing authority. REFERENCE presets are not represented as application guarantees.",
+  "sources": [
+    {
+      "id": "gov.uk.passport_photos",
+      "authority": "Government of the United Kingdom",
+      "title": "Get a passport photo",
+      "url": "https://www.gov.uk/photos-for-passports",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "gov.uk.passport_photo_requirements",
+      "authority": "Government of the United Kingdom",
+      "title": "Passport photo requirements",
+      "url": "https://www.gov.uk/photos-for-passports/photo-requirements",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "canada.ca.passport_photos",
+      "authority": "Immigration, Refugees and Citizenship Canada",
+      "title": "Passport photos",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "service-public.fr.identity_photos",
+      "authority": "French Administration - Directorate for Legal and Administrative Information",
+      "title": "Which photo to provide for an identity document (passport, identity card...)?",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F10619?lang=en",
+      "verifiedAt": "2026-08-06"
+    },
+    {
+      "id": "state.gov.ds11",
+      "authority": "U.S. Department of State",
+      "title": "DS-11 Application for a U.S. Passport",
+      "url": "https://eforms.state.gov/Forms/ds11_pdf.PDF",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "state.gov.photo_tool",
+      "authority": "U.S. Department of State",
+      "title": "Passport Photo Tool",
+      "url": "https://tsg.phototool.state.gov/photo",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "passport.go.kr.photo",
+      "authority": "Ministry of Foreign Affairs, Republic of Korea",
+      "title": "Passport photograph requirements",
+      "url": "https://www.passport.go.kr/home/kor/contents.do?menuPos=32",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "passport.go.kr.online",
+      "authority": "Ministry of Foreign Affairs, Republic of Korea",
+      "title": "Online passport reissuance photo requirements",
+      "url": "https://www.passport.go.kr/home/kor/contents.do?menuPos=12",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "ica.gov.sg.photo_guidelines",
+      "authority": "Immigration and Checkpoints Authority, Singapore",
+      "title": "Photo guidelines",
+      "url": "https://www.ica.gov.sg/photo-guidelines",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "australia.embassy.passport_photos",
+      "authority": "Australian Government, Department of Foreign Affairs and Trade",
+      "title": "Passport photo requirements",
+      "url": "https://china.embassy.gov.au/bjng/Consular2_3.html",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "australia.embassy.camera_operator",
+      "authority": "Australian Government, Department of Foreign Affairs and Trade",
+      "title": "Camera operator guidelines",
+      "url": "https://japan.embassy.gov.au/files/tkyo/CameraOperatorGuideSep2021ENG.pdf",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "immd.gov.hk.photo_requirements",
+      "authority": "Hong Kong Immigration Department",
+      "title": "Photo requirements for travel document",
+      "url": "https://www.immd.gov.hk/eng/residents/immigration/traveldoc/photorequirements.html",
+      "verifiedAt": "2026-08-04"
+    },
+    {
+      "id": "product.common_sizes",
+      "authority": "Batch Photo",
+      "title": "Common-size reference preset",
+      "url": null,
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.jp.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Japan passport photo guidance reported by Passlens",
+      "url": "https://passlens.com/blog/japan-passport-photo-guide",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.de.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Germany passport photo guidance reported by VisaFoto",
+      "url": "https://visafoto.com/de-passport-photo",
+      "verifiedAt": null
+    },
+    {
+      "id": "auswaertiges-amt.de.biometric_passport_photos",
+      "authority": "Federal Foreign Office of Germany",
+      "title": "Biometric passport photos",
+      "url": "https://www.auswaertiges-amt.de/resource/blob/207816/3c2f7c8b4cc5a6c1b7b4c0f13a5c0f5a/biometrische-passbilder-data.pdf",
+      "verifiedAt": "2026-08-12"
+    },
+    {
+      "id": "reported.cn.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "China passport photo guidance reported by Passport Photo Online",
+      "url": "https://passport-photo.online/chinese-passport-photo",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.schengen.visa_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Schengen visa photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/schengen-visa-photo/",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.th.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Thailand passport photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/thailand-passport-photo/",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.vn.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Vietnam passport photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/vietnam-passport-photo/",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.tw.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "Taiwan passport photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/taiwan-passport-photo/",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.nz.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "New Zealand passport photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/en-nz/new-zealand-passport-photo",
+      "verifiedAt": null
+    },
+    {
+      "id": "reported.ae.passport_photo",
+      "authority": "Official standard reported by secondary source; not directly verified",
+      "title": "UAE passport photo guidance reported by Passport Photo Online",
+      "url": "https://www.passport-photo.online/united-arab-emirates-passport-photo/",
+      "verifiedAt": null
+    }
+  ]
+}

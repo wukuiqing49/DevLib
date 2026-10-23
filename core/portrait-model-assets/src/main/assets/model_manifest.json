@@ -1,0 +1,7 @@
+{
+  "name": "MODNet",
+  "file": "modnet.tflite",
+  "version": "1.0.0",
+  "input": "float32 NCHW 1x3x512x512",
+  "sha256": "f7d1e9eca9562abddb60e4b0a3ed0c29441ef09cd621954978f1613914cc64bc"
+}

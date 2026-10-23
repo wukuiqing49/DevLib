@@ -1,0 +1,50 @@
+// 每个库独立发布，POM 保留 project 依赖；只配置本地文件仓库。
+apply plugin: 'maven-publish'
+group = 'com.wkq.dev'
+version = rootProject.ext.devlibVersion
+
+def configurePom = { publication ->
+ publication.groupId = project.group.toString()
+ publication.artifactId = project.name.replace('_', '-')
+ publication.version = project.version.toString()
+ publication.pom { name = project.name; description = "DevLib reusable module: ${project.name}" }
+}
+plugins.withId('com.android.library') {
+ android.publishing { singleVariant('release') { withSourcesJar() } }
+ afterEvaluate {
+  publishing.publications {
+   release(MavenPublication) { from components.release; configurePom(delegate) }
+  }
+ }
+}
+plugins.withId('java-library') {
+ if (!plugins.hasPlugin('java-gradle-plugin')) {
+  java { withSourcesJar() }
+  afterEvaluate {
+   publishing.publications {
+    release(MavenPublication) { from components.java; configurePom(delegate) }
+   }
+  }
+ }
+}
+// Kotlin/JVM modules apply java, not necessarily java-library.
+plugins.withId('org.jetbrains.kotlin.jvm') {
+ if (!plugins.hasPlugin('java-library') && !plugins.hasPlugin('java-gradle-plugin')) {
+  java { withSourcesJar() }
+  afterEvaluate {
+   publishing.publications {
+    release(MavenPublication) { from components.java; configurePom(delegate) }
+   }
+  }
+ }
+}
+publishing.repositories {
+ maven { name = 'DevLibLocal'; url = rootProject.layout.buildDirectory.dir('repo') }
+}
+
+plugins.withId('java-gradle-plugin') {
+ java { withSourcesJar() }
+ afterEvaluate {
+  publishing.publications.named('pluginMaven', MavenPublication) { configurePom(delegate) }
+ }
+}

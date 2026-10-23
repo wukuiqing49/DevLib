@@ -1,0 +1,16 @@
+<resources>
+    <string name="camera_capture_title">SiteReport 촬영</string>
+    <string name="camera_location_loading">위치 확인 중…</string>
+    <string name="camera_location_unavailable">위치를 사용할 수 없습니다</string>
+    <string name="camera_location_coordinates">위도 %1$.5f, 경도 %2$.5f</string>
+    <string name="camera_capture_in_progress">촬영 중…</string>
+    <string name="camera_capture_saved_to_gallery">사진이 갤러리에 저장되었습니다</string>
+    <string name="camera_capture_saved_to_gallery_with_location">사진이 갤러리에 저장되었습니다. 위도 %1$.5f, 경도 %2$.5f</string>
+    <string name="camera_capture_failed_with_reason">촬영 실패: %1$s</string>
+    <string name="camera_capture_save_failed_with_reason">사진 저장 실패: %1$s</string>
+    <string name="camera_start_failed_with_reason">카메라 시작 실패: %1$s</string>
+    <string name="camera_permission_required">카메라 및 위치 권한이 필요합니다</string>
+    <string name="camera_preview_content_desc">카메라 미리보기</string>
+    <string name="camera_capture_button_desc">사진 촬영</string>
+    <string name="camera_back">뒤로</string>
+</resources>

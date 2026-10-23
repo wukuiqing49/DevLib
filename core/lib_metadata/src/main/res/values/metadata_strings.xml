@@ -1,0 +1,4 @@
+<resources>
+    <string name="metadata_processing_title">Processing photo metadata</string>
+    <string name="metadata_processing_message">Writing or verifying photo metadata.</string>
+</resources>

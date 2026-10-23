@@ -1,0 +1,16 @@
+<resources>
+    <string name="camera_capture_title">SiteReport撮影</string>
+    <string name="camera_location_loading">位置情報を取得中…</string>
+    <string name="camera_location_unavailable">位置情報を取得できません</string>
+    <string name="camera_location_coordinates">緯度 %1$.5f、経度 %2$.5f</string>
+    <string name="camera_capture_in_progress">撮影中…</string>
+    <string name="camera_capture_saved_to_gallery">写真をギャラリーに保存しました</string>
+    <string name="camera_capture_saved_to_gallery_with_location">写真をギャラリーに保存しました。緯度 %1$.5f、経度 %2$.5f</string>
+    <string name="camera_capture_failed_with_reason">撮影に失敗しました: %1$s</string>
+    <string name="camera_capture_save_failed_with_reason">写真を保存できませんでした: %1$s</string>
+    <string name="camera_start_failed_with_reason">カメラを起動できませんでした: %1$s</string>
+    <string name="camera_permission_required">カメラと位置情報の権限が必要です</string>
+    <string name="camera_preview_content_desc">カメラプレビュー</string>
+    <string name="camera_capture_button_desc">写真を撮影</string>
+    <string name="camera_back">戻る</string>
+</resources>

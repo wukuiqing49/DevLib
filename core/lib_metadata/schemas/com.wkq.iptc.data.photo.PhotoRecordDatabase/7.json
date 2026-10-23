@@ -1,0 +1,389 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 7,
+    "identityHash": "045d7ddcdbbb0310c4b2623da65b38f2",
+    "entities": [
+      {
+        "tableName": "photo_record",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uri` TEXT NOT NULL, `account_id` TEXT NOT NULL, `source_uri` TEXT NOT NULL, `source_key` TEXT NOT NULL, `process_type` TEXT NOT NULL, `output_path` TEXT NOT NULL, `output_mime_type` TEXT NOT NULL, `updated_at` INTEGER NOT NULL, `sync_status` TEXT NOT NULL, `file_name` TEXT NOT NULL, `template_id` TEXT NOT NULL, `template_name` TEXT NOT NULL, `headline` TEXT NOT NULL, `caption` TEXT NOT NULL, `title` TEXT NOT NULL, `subtitle` TEXT NOT NULL, `keywords` TEXT NOT NULL, `custom_fields` TEXT NOT NULL, `creator` TEXT NOT NULL, `artist` TEXT NOT NULL, `job_title` TEXT NOT NULL, `email` TEXT NOT NULL, `iptc_author` TEXT NOT NULL, `writer` TEXT NOT NULL, `category` TEXT NOT NULL, `state` TEXT NOT NULL, `iso_country_code` TEXT NOT NULL, `credit` TEXT NOT NULL, `source` TEXT NOT NULL, `copyright_status` TEXT NOT NULL, `rights_usage_terms` TEXT NOT NULL, `copyright` TEXT NOT NULL, `country` TEXT NOT NULL, `city` TEXT NOT NULL, `location` TEXT NOT NULL, `latitude` REAL, `longitude` REAL, `altitude` REAL, `bearing` REAL, `captured_at` INTEGER NOT NULL, `processed_at` INTEGER, `exif_verified` INTEGER NOT NULL, `iptc_verified` INTEGER NOT NULL, `xmp_verified` INTEGER NOT NULL, `metadata_error` TEXT, `anti_tamper_signed` INTEGER NOT NULL, `upload_status` TEXT NOT NULL, `upload_remote_path` TEXT, `upload_retry_count` INTEGER NOT NULL, `upload_last_attempt_at` INTEGER, `upload_error` TEXT, `upload_resume_offset` INTEGER NOT NULL, `local_file_available` INTEGER NOT NULL, `photo_source` TEXT NOT NULL, `delivery_mode` TEXT NOT NULL DEFAULT 'embedded', `sidecar_path` TEXT NOT NULL DEFAULT '', `processing_token` TEXT NOT NULL DEFAULT '')",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uri",
+            "columnName": "uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accountId",
+            "columnName": "account_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceUri",
+            "columnName": "source_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceKey",
+            "columnName": "source_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "processType",
+            "columnName": "process_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputPath",
+            "columnName": "output_path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputMimeType",
+            "columnName": "output_mime_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncStatus",
+            "columnName": "sync_status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fileName",
+            "columnName": "file_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateId",
+            "columnName": "template_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateName",
+            "columnName": "template_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "headline",
+            "columnName": "headline",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "caption",
+            "columnName": "caption",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subtitle",
+            "columnName": "subtitle",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keywords",
+            "columnName": "keywords",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customFields",
+            "columnName": "custom_fields",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "creator",
+            "columnName": "creator",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "artist",
+            "columnName": "artist",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "jobTitle",
+            "columnName": "job_title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iptcAuthor",
+            "columnName": "iptc_author",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "writer",
+            "columnName": "writer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "state",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isoCountryCode",
+            "columnName": "iso_country_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "credit",
+            "columnName": "credit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "copyrightStatus",
+            "columnName": "copyright_status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rightsUsageTerms",
+            "columnName": "rights_usage_terms",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "copyright",
+            "columnName": "copyright",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "location",
+            "columnName": "location",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "altitude",
+            "columnName": "altitude",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "bearing",
+            "columnName": "bearing",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "capturedAt",
+            "columnName": "captured_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "processedAt",
+            "columnName": "processed_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "exifVerified",
+            "columnName": "exif_verified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "iptcVerified",
+            "columnName": "iptc_verified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "xmpVerified",
+            "columnName": "xmp_verified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metadataError",
+            "columnName": "metadata_error",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "antiTamperSigned",
+            "columnName": "anti_tamper_signed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uploadStatus",
+            "columnName": "upload_status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uploadRemotePath",
+            "columnName": "upload_remote_path",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "uploadRetryCount",
+            "columnName": "upload_retry_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uploadLastAttemptAt",
+            "columnName": "upload_last_attempt_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "uploadError",
+            "columnName": "upload_error",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "uploadResumeOffset",
+            "columnName": "upload_resume_offset",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localFileAvailable",
+            "columnName": "local_file_available",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "photoSource",
+            "columnName": "photo_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deliveryMode",
+            "columnName": "delivery_mode",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'embedded'"
+          },
+          {
+            "fieldPath": "sidecarPath",
+            "columnName": "sidecar_path",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "processingToken",
+            "columnName": "processing_token",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_photo_record_processing_token",
+            "unique": false,
+            "columnNames": [
+              "processing_token"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_photo_record_processing_token` ON `${TABLE_NAME}` (`processing_token`)"
+          },
+          {
+            "name": "index_photo_record_account_id_source_key_process_type",
+            "unique": true,
+            "columnNames": [
+              "account_id",
+              "source_key",
+              "process_type"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_photo_record_account_id_source_key_process_type` ON `${TABLE_NAME}` (`account_id`, `source_key`, `process_type`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '045d7ddcdbbb0310c4b2623da65b38f2')"
+    ]
+  }
+}

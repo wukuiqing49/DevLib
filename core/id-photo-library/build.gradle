@@ -1,0 +1,46 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace = 'com.wkq.photo.idlibrary'
+    compileSdk = photoLibs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk = photoLibs.versions.minSdk.get().toInteger()
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+ksp {
+    arg('room.schemaLocation', "$projectDir/schemas")
+    arg('room.incremental', 'true')
+    arg('room.generateKotlin', 'true')
+}
+
+dependencies {
+    implementation photoLibs.androidx.core.ktx
+    implementation photoLibs.androidx.room.runtime
+    implementation photoLibs.androidx.room.ktx
+    implementation photoLibs.kotlinx.coroutines.android
+    ksp photoLibs.androidx.room.compiler
+
+    testImplementation photoLibs.junit
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

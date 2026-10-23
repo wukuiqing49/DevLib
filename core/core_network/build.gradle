@@ -1,0 +1,58 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    id 'maven-publish'
+}
+
+android {
+    namespace = 'com.wkq.net'
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk 23
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
+dependencies {
+
+    api netLibs.kotlinx.coroutines.core
+    implementation netLibs.kotlinx.coroutines.android
+
+    api netLibs.retrofit
+    api netLibs.okhttp
+
+    implementation netLibs.retrofit.converter.gson
+    // Gson annotations are part of the supported DTO contract. Expose them so
+    // consumers can use @SerializedName without adding a duplicate dependency.
+    api netLibs.gson
+    
+    testImplementation netLibs.junit
+
+}
+
+
+apply from: rootProject.file("gradle/library-publish.gradle")

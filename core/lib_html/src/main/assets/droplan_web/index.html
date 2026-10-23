@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>DropLAN</title>
+<link rel="stylesheet" href="/assets/app.css"><script src="/assets/app.js" defer></script>
+</head>
+<body>
+<header><span class="brand">DropLAN</span><span id="connection-state" data-i18n="approved" hidden></span><select id="language" aria-label="Language"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="es">Español</option><option value="pt-BR">Português (Brasil)</option></select></header>
+<main>
+<section class="intro"><h1 data-i18n="pair"></h1><p data-i18n="subtitle"></p></section>
+<p id="notice" role="status" aria-live="polite"></p>
+<section id="pair-panel" class="card" hidden><p data-i18n="networkHelp"></p>
+<form id="pair-form"><label for="token" data-i18n="token"></label><input id="token" type="password" autocomplete="off" required maxlength="128">
+<button type="submit" data-i18n="connect"></button></form><p id="pair-state" aria-live="polite"></p></section>
+<div id="receiver" hidden>
+<section class="card"><div class="section-heading"><h2 data-i18n="files"></h2><button id="refresh" type="button" data-i18n="refresh"></button></div>
+<ul id="files" class="files"></ul><button id="more" type="button" data-i18n="more" hidden></button></section>
+
+</div>
+<footer><details id="help"><summary data-i18n="help"></summary><details class="card" id="save-help"><summary id="save-location-title" data-i18n="saveLocation"></summary>
+<p class="detail" data-i18n="saveLocationIntro"></p>
+<select id="save-platform" aria-labelledby="save-location-title"><option value="apple">iPhone / iPad</option><option value="android">Android</option><option value="desktop" data-i18n="saveLocationDesktopTitle"></option></select>
+<dl class="save-locations">
+<dt data-platform="apple">iPhone / iPad</dt><dd data-platform="apple" data-i18n="saveLocationApple"></dd>
+<dt data-platform="android">Android</dt><dd data-platform="android" data-i18n="saveLocationAndroid"></dd>
+<dt data-platform="desktop" data-i18n="saveLocationDesktopTitle"></dt><dd data-platform="desktop" data-i18n="saveLocationDesktop"></dd>
+</dl><p class="detail" data-i18n="saveLocationChoice"></p></details>
+<details class="card" id="connection-details"><summary data-i18n="connection"></summary><p id="recommendation" class="detail" aria-live="polite"></p><button id="apply-advice" type="button" data-i18n="applyAdvice" hidden></button><p class="detail" data-i18n="notCompared"></p><button id="probe" type="button" data-i18n="probe"></button><p id="speed" aria-live="polite"></p><p class="detail" data-i18n="estimateHelp"></p></details><details id="advanced-help"><summary data-i18n="advancedTransfer"></summary><ul id="advanced-files" class="files"></ul></details><p data-i18n="browserHelp"></p><p data-i18n="privacy"></p><p data-i18n="sentHelp"></p><p data-i18n="recommendedHelp"></p></details></footer>
+<noscript>Please enable JavaScript to pair and download. 请启用 JavaScript 以配对和下载。</noscript>
+</main>
+</body></html>

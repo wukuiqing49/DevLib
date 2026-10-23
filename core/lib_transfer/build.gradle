@@ -1,0 +1,49 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace = 'com.wkq.nas.transfer'
+    compileSdk = nasLibs.versions.compileSdk.get().toInteger()
+    defaultConfig {
+        minSdk = nasLibs.versions.minSdk.get().toInteger()
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = '17' }
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.all { systemProperty 'nas.schemaDir', file('schemas').absolutePath }
+    }
+}
+
+ksp { arg('room.schemaLocation', "$projectDir/schemas") }
+
+dependencies {
+
+    implementation nasLibs.androidx.core.ktx
+    implementation nasLibs.androidx.work.runtime
+    implementation nasLibs.androidx.room.runtime
+    implementation nasLibs.androidx.room.ktx
+    api nasLibs.kotlinx.coroutines.core
+    implementation nasLibs.okhttp
+    implementation nasLibs.jcifs.ng
+    implementation(nasLibs.sshj) {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
+        exclude group: 'org.bouncycastle', module: 'bcpkix-jdk18on'
+        exclude group: 'org.bouncycastle', module: 'bcutil-jdk18on'
+    }
+    ksp nasLibs.androidx.room.compiler
+    testImplementation nasLibs.junit
+    testImplementation nasLibs.kotlinx.coroutines.test
+    testImplementation nasLibs.robolectric
+    testImplementation nasLibs.androidx.work.testing
+    testImplementation nasLibs.okhttp.mockwebserver
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

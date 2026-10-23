@@ -1,0 +1,10 @@
+plugins {
+    alias(libs.plugins.android.asset.pack)
+}
+
+assetPack {
+    packName = 'portrait_model_assets'
+    dynamicDelivery {
+        deliveryType = 'on-demand'
+    }
+}

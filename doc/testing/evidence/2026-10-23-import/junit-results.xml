@@ -1,0 +1,1054 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites tests="785" failures="0" skipped="1">
+  <testsuite name="com.wkq.photo.archive.EncryptedArchiveOperationsTest" tests="4" skipped="0" failures="0" errors="0" time="0.174">
+    <testcase name="operationPreservesCustomEntryNameAndCallerPassword" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.143" />
+    <testcase name="rejectsPasswordShorterThanExtractorContract" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.002" />
+    <testcase name="extractorRejectsArchiveWithUnencryptedEntries" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.013" />
+    <testcase name="extractorRejectsEntryEscapingOutputDirectory" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.015" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.archive.ZipArchiveCreatorTest" tests="9" skipped="0" failures="0" errors="0" time="0.115">
+    <testcase name="supportsAes128AndRejectsWrongPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.024" />
+    <testcase name="rejectsOutputThatIsAlsoASource" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.006" />
+    <testcase name="supportsDirectoryEntriesCommentAndByteProgress" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.01" />
+    <testcase name="rejectsUnsafeEntryPath" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.002" />
+    <testcase name="rejectsEmptyEncryptionPasswordWithoutChangingOutput" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.002" />
+    <testcase name="cancellationDuringLargeFilePreservesExistingOutput" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.016" />
+    <testcase name="createsArchiveAndMakesDuplicateNamesUnique" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.012" />
+    <testcase name="encryptedCancellationPreservesExistingOutputAndPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.016" />
+    <testcase name="createsAes256ArchiveAndExtractsWithCorrectPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.027" />
+  </testsuite>
+  <testsuite name="com.wkq.base.reflect.GenericTypeResolverTest" tests="5" skipped="0" failures="0" errors="0" time="0.07">
+    <testcase name="resolvesDirectGenericArgument" classname="com.wkq.base.reflect.GenericTypeResolverTest" time="0.039" />
+    <testcase name="resolvesTypeVariableAcrossIntermediateGenericClass" classname="com.wkq.base.reflect.GenericTypeResolverTest" time="0.001" />
+    <testcase name="resolvesAcrossNonGenericIntermediateClass" classname="com.wkq.base.reflect.GenericTypeResolverTest" time="0.001" />
+    <testcase name="rejectsATypeOutsideExpectedHierarchy" classname="com.wkq.base.reflect.GenericTypeResolverTest" time="0.026" />
+    <testcase name="resolvesRawClassFromParameterizedArgument" classname="com.wkq.base.reflect.GenericTypeResolverTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.base.widget.EmptyViewTest" tests="2" skipped="0" failures="0" errors="0" time="0.009">
+    <testcase name="testCalculateInSampleSize" classname="com.wkq.base.widget.EmptyViewTest" time="0.008" />
+    <testcase name="testResolveTargetSize" classname="com.wkq.base.widget.EmptyViewTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.base.widget.MultiSpanTextViewTest" tests="3" skipped="0" failures="0" errors="0" time="0.018">
+    <testcase name="testBuildSpanRanges_multipleMatches" classname="com.wkq.base.widget.MultiSpanTextViewTest" time="0.017" />
+    <testcase name="testBuildSpanRanges_singleMatch" classname="com.wkq.base.widget.MultiSpanTextViewTest" time="0.0" />
+    <testcase name="testBuildSpanRanges_overlappingRanges" classname="com.wkq.base.widget.MultiSpanTextViewTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.base.widget.VerifyCodeInputViewTest" tests="2" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="testNormalizeInput_numericOnly" classname="com.wkq.base.widget.VerifyCodeInputViewTest" time="0.003" />
+    <testcase name="testNormalizeInput_alphanumeric" classname="com.wkq.base.widget.VerifyCodeInputViewTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.imagerender.AnnotationRendererTest" tests="2" skipped="0" failures="0" errors="0" time="4.433">
+    <testcase name="mosaicAndBlurChangeOnlySelectedRegions" classname="com.wkq.photo.imagerender.AnnotationRendererTest" time="4.39" />
+    <testcase name="historySupportsBoundedUndoAndRedo" classname="com.wkq.photo.imagerender.AnnotationRendererTest" time="0.043" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.imagerender.BitmapFileDecoderTest" tests="5" skipped="0" failures="0" errors="0" time="0.429">
+    <testcase name="appliesExifRotation" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.167" />
+    <testcase name="supportsParcelFileDescriptorWithoutTakingOwnership" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.049" />
+    <testcase name="samplesWhenOnlyWidthExceedsTarget" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.063" />
+    <testcase name="supportsAllExifOrientationsAndDimensions" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.13" />
+    <testcase name="rejectsDecodedPixelBudgetOverflow" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.019" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.imagerender.NewToolsRenderersTest" tests="5" skipped="0" failures="0" errors="0" time="0.393">
+    <testcase name="testPolaroidFrameRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.211" />
+    <testcase name="testDeviceMockupRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.085" />
+    <testcase name="testSignatureExtractorRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.062" />
+    <testcase name="signatureMaskRemovesPaperShadowAndKeepsInk" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.013" />
+    <testcase name="renderersHonorCancellationBeforeAllocatingOutput" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.022" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.imagerender.WatermarkRendererTest" tests="4" skipped="0" failures="0" errors="0" time="0.24">
+    <testcase name="supportsNinePositionsAndTiledRotatedWatermark" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.053" />
+    <testcase name="successfulRenderReplacesExistingOutputWithoutTemporaryFiles" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.101" />
+    <testcase name="rendersRequestedPngFormat" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.035" />
+    <testcase name="rendersImageWatermarkWithOpacity" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.049" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.mediastore.InternalArtifactStoreTest" tests="3" skipped="0" failures="0" errors="0" time="0.039">
+    <testcase name="retentionReturnsEmptySetForDisabledPolicy" classname="com.wkq.photo.mediastore.InternalArtifactStoreTest" time="0.01" />
+    <testcase name="retentionKeepsNewestArtifactEvenWhenItExceedsBudget" classname="com.wkq.photo.mediastore.InternalArtifactStoreTest" time="0.022" />
+    <testcase name="retentionLimitsCountAndTotalBytes" classname="com.wkq.photo.mediastore.InternalArtifactStoreTest" time="0.007" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.mediastore.MediaFileStoreTest" tests="4" skipped="0" failures="0" errors="0" time="1.739">
+    <testcase name="rejectsUriMaterializationAfterInputByteBudget" classname="com.wkq.photo.mediastore.MediaFileStoreTest" time="1.664" />
+    <testcase name="exactCopyRejectsTruncatedInput" classname="com.wkq.photo.mediastore.MediaFileStoreTest" time="0.014" />
+    <testcase name="materializesFileUriAndParcelFileDescriptorSources" classname="com.wkq.photo.mediastore.MediaFileStoreTest" time="0.039" />
+    <testcase name="createsWorkingFilesInDedicatedCacheDirectory" classname="com.wkq.photo.mediastore.MediaFileStoreTest" time="0.021" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.mediastore.MediaOutputVerifierTest" tests="7" skipped="0" failures="0" errors="0" time="1.739">
+    <testcase name="acceptsDecodableJpegAndPngOutputs" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="1.545" />
+    <testcase name="rejectsCorruptedAndEmptyImageOutputs" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.018" />
+    <testcase name="acceptsTransparentPngOutput" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.019" />
+    <testcase name="rejectsImageWithMismatchedMimeType" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.014" />
+    <testcase name="acceptsLargeBitmapWithoutDecodingPixelsIntoTheVerifier" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.115" />
+    <testcase name="validatesPdfZipAndTiffOutputEnvelopes" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.015" />
+    <testcase name="rejectsTruncatedPdfZipAndTiffOutputs" classname="com.wkq.photo.mediastore.MediaOutputVerifierTest" time="0.013" />
+  </testsuite>
+  <testsuite name="com.wkq.net.config.NetConfigTest" tests="2" skipped="0" failures="0" errors="0" time="0.016">
+    <testcase name="rejectsBlankDynamicBaseUrlKey" classname="com.wkq.net.config.NetConfigTest" time="0.014" />
+    <testcase name="rejectsNegativeTimeoutsDuringConfiguration" classname="com.wkq.net.config.NetConfigTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.net.core.DownloadRetrofitTest" tests="2" skipped="0" failures="0" errors="0" time="0.155">
+    <testcase name="downloadReplacesDestinationOnlyAfterSuccess" classname="com.wkq.net.core.DownloadRetrofitTest" time="0.141" />
+    <testcase name="failedDownloadKeepsExistingDestination" classname="com.wkq.net.core.DownloadRetrofitTest" time="0.014" />
+  </testsuite>
+  <testsuite name="com.wkq.net.interceptor.LoggingInterceptorTest" tests="2" skipped="0" failures="0" errors="0" time="0.057">
+    <testcase name="rejectsBaseUrlKeyAsGlobalHeader" classname="com.wkq.net.interceptor.LoggingInterceptorTest" time="0.005" />
+    <testcase name="redactsSensitiveFieldsInNestedJson" classname="com.wkq.net.interceptor.LoggingInterceptorTest" time="0.052" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.pdf.PdfImageExportRequestTest" tests="5" skipped="0" failures="0" errors="0" time="0.036">
+    <testcase name="supportsCommercialPageAndRenderingOptions" classname="com.wkq.photo.pdf.PdfImageExportRequestTest" time="0.018" />
+    <testcase name="modelsSingleAndGridDocumentsWithSharedPageDecoration" classname="com.wkq.photo.pdf.PdfImageExportRequestTest" time="0.015" />
+    <testcase name="rejectsExcessiveRasterScale" classname="com.wkq.photo.pdf.PdfImageExportRequestTest" time="0.0" />
+    <testcase name="rejectsMarginThatConsumesThePage" classname="com.wkq.photo.pdf.PdfImageExportRequestTest" time="0.002" />
+    <testcase name="keepsInputOrderAndAcceptsValidPageConfiguration" classname="com.wkq.photo.pdf.PdfImageExportRequestTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrtransfer.QrTransferCoordinatorTest" tests="2" skipped="0" failures="0" errors="0" time="2.232">
+    <testcase name="unrelatedDisconnect_doesNotFailActiveSession" classname="com.wkq.photo.qrtransfer.QrTransferCoordinatorTest" time="2.14" />
+    <testcase name="cancel_notifiesPeerBeforeStoppingTransport" classname="com.wkq.photo.qrtransfer.QrTransferCoordinatorTest" time="0.092" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrtransfer.QrTransferSecurityTest" tests="2" skipped="0" failures="0" errors="0" time="0.139">
+    <testcase name="connectionProof_isBoundToRoleAndNearbyDigits" classname="com.wkq.photo.qrtransfer.QrTransferSecurityTest" time="0.068" />
+    <testcase name="endpointCredential_roundTripsAndRejectsTampering" classname="com.wkq.photo.qrtransfer.QrTransferSecurityTest" time="0.071" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrtransfer.TransferFileIOTest" tests="2" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="verifyAndCopy_acceptsMatchingFileAndRejectsWrongHash" classname="com.wkq.photo.qrtransfer.TransferFileIOTest" time="0.004" />
+    <testcase name="sanitizeFileName_removesRemotePathAndTraversalCharacters" classname="com.wkq.photo.qrtransfer.TransferFileIOTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrtransfer.TransferProtocolTest" tests="4" skipped="0" failures="0" errors="0" time="0.052">
+    <testcase name="manifestValidator_rejectsOversizedOrInconsistentManifest" classname="com.wkq.photo.qrtransfer.TransferProtocolTest" time="0.002" />
+    <testcase name="manifestValidator_rejectsInvalidFileMetadata" classname="com.wkq.photo.qrtransfer.TransferProtocolTest" time="0.0" />
+    <testcase name="transferProgress_doesNotOverflowForLargeValues" classname="com.wkq.photo.qrtransfer.TransferProtocolTest" time="0.0" />
+    <testcase name="manifestChunker_keepsHundredFilesBelowSafeBytes" classname="com.wkq.photo.qrtransfer.TransferProtocolTest" time="0.049" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrcode.QRCodeGeneratorTest" tests="8" skipped="0" failures="0" errors="0" time="2.504">
+    <testcase name="function_mask_separates_finders_from_data_modules" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="2.101" />
+    <testcase name="generator_rejects_low_contrast_colors" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.07" />
+    <testcase name="generator_returns_cancelled_result_before_allocating_bitmap" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.012" />
+    <testcase name="renderer_supports_rounded_gradient_without_changing_output_size" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.152" />
+    <testcase name="generator_creates_scannable_hd_bitmap_with_statistics" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.14" />
+    <testcase name="contact_payload_encodes_vcard_3" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.009" />
+    <testcase name="wifi_payload_escapes_reserved_characters" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.01" />
+    <testcase name="url_payload_rejects_non_web_scheme" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.009" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.qrcode.QrCodeKitTest" tests="5" skipped="0" failures="0" errors="0" time="0.161">
+    <testcase name="recognize_all_returns_multiple_qr_codes" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.077" />
+    <testcase name="renderer_keeps_white_quiet_zone" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.012" />
+    <testcase name="create_custom_colored_qr_code_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.023" />
+    <testcase name="create_qr_code_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.018" />
+    <testcase name="create_code128_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.031" />
+  </testsuite>
+  <testsuite name="com.wkq.router.gradle.RouterGradlePluginTest" tests="1" skipped="0" failures="0" errors="0" time="8.592">
+    <testcase name="pluginCanBeResolvedByGradleTestKit" classname="com.wkq.router.gradle.RouterGradlePluginTest" time="8.592" />
+  </testsuite>
+  <testsuite name="com.wkq.router.processor.RouteProcessorTest" tests="3" skipped="0" failures="0" errors="0" time="8.329">
+    <testcase name="generatesRouteBootstrapFiles" classname="com.wkq.router.processor.RouteProcessorTest" time="7.52" />
+    <testcase name="reportsDuplicateRoutePath" classname="com.wkq.router.processor.RouteProcessorTest" time="0.432" />
+    <testcase name="reportsMissingModuleName" classname="com.wkq.router.processor.RouteProcessorTest" time="0.377" />
+  </testsuite>
+  <testsuite name="com.wkq.util.coil.CacheManagerConfigTest" tests="2" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="validateConfiguration_rejectsOutOfRangeValues" classname="com.wkq.util.coil.CacheManagerConfigTest" time="0.001" />
+    <testcase name="validateConfiguration_acceptsValidValues" classname="com.wkq.util.coil.CacheManagerConfigTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.util.CoreUtilsConfigTest" tests="2" skipped="0" failures="0" errors="0" time="0.047">
+    <testcase name="validate_acceptsDefaultConfiguration" classname="com.wkq.util.CoreUtilsConfigTest" time="0.046" />
+    <testcase name="validate_rejectsInvalidLogConfiguration" classname="com.wkq.util.CoreUtilsConfigTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.util.FormatUtilTest" tests="7" skipped="0" failures="0" errors="0" time="0.026">
+    <testcase name="formatDecimal_roundsHalfUpAndTrimsTrailingZeros" classname="com.wkq.util.FormatUtilTest" time="0.002" />
+    <testcase name="emptyHelpers_returnExpectedFallbacks" classname="com.wkq.util.FormatUtilTest" time="0.0" />
+    <testcase name="formatDuration_outputsMinuteOrHourText" classname="com.wkq.util.FormatUtilTest" time="0.0" />
+    <testcase name="formatPercent_usesLocaleAndFractionLimit" classname="com.wkq.util.FormatUtilTest" time="0.002" />
+    <testcase name="maskEmailAndDigitHelpers_cleanInput" classname="com.wkq.util.FormatUtilTest" time="0.004" />
+    <testcase name="formatFileSize_handlesCommonUnits" classname="com.wkq.util.FormatUtilTest" time="0.017" />
+    <testcase name="maskPhone_keepsShortInputUnchanged" classname="com.wkq.util.FormatUtilTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.util.jump.SmartJumpEngineTest" tests="1" skipped="0" failures="0" errors="0" time="0.009">
+    <testcase name="registerAndReadHandlers_concurrentlyKeepsAConsistentSnapshot" classname="com.wkq.util.jump.SmartJumpEngineTest" time="0.009" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" tests="7" skipped="0" failures="0" errors="0" time="0.046">
+    <testcase name="rejects document programs with an unknown authority" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.033" />
+    <testcase name="拒绝跨 release 数据" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.001" />
+    <testcase name="接受 release 一致且语言标签有效的规则包" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.002" />
+    <testcase name="rejects composition constraints with an inverted range" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.007" />
+    <testcase name="拒绝 Android 资源目录式语言标签" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.0" />
+    <testcase name="接受官方直接证据和多单位构图约束" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.003" />
+    <testcase name="rejects proxy evidence marked as verified" classname="com.wkq.photo.idlibrary.CatalogPackageValidatorTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" tests="5" skipped="0" failures="0" errors="0" time="0.006">
+    <testcase name="只接受 BCP-47 风格标签" classname="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" time="0.0" />
+    <testcase name="简体中文地区会回退到 zh-Hans" classname="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" time="0.004" />
+    <testcase name="没有任何翻译时使用稳定代码" classname="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" time="0.0" />
+    <testcase name="优先使用 script 翻译而不是英文" classname="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" time="0.001" />
+    <testcase name="繁体中文地区会回退到 zh-Hant" classname="com.wkq.photo.idlibrary.i18n.LocaleFallbackTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.beautysdk.BeautyPipelineTest" tests="9" skipped="0" failures="0" errors="0" time="0.114">
+    <testcase name="rotationAndMirrorMapPixelCentersBackForEveryOrientation" classname="com.beautysdk.BeautyPipelineTest" time="0.024" />
+    <testcase name="schedulerDropsBusyFramesAndRejectsLateResultsAfterReset" classname="com.beautysdk.BeautyPipelineTest" time="0.008" />
+    <testcase name="missingPreciseLipDoesNotInventMoustache" classname="com.beautysdk.BeautyPipelineTest" time="0.003" />
+    <testcase name="analysisSamplingAndTextureGeometryShareOneTimeline" classname="com.beautysdk.BeautyPipelineTest" time="0.005" />
+    <testcase name="sessionResetsTimeAndReportsRendererErrorsWithBypass" classname="com.beautysdk.BeautyPipelineTest" time="0.0" />
+    <testcase name="resultExpiryAndGeometryAreChecked" classname="com.beautysdk.BeautyPipelineTest" time="0.001" />
+    <testcase name="hatTracksEveryOrientationAndMirrorAndHidesWithoutEyes" classname="com.beautysdk.BeautyPipelineTest" time="0.07" />
+    <testcase name="cpuBeautyPreservesAlphaMetadataAndInput" classname="com.beautysdk.BeautyPipelineTest" time="0.0" />
+    <testcase name="copyHandlesBufferPositionAndStride" classname="com.beautysdk.BeautyPipelineTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.beautysdk.BeautyProcessorTest" tests="6" skipped="0" failures="0" errors="0" time="0.004">
+    <testcase name="rgbaSliceRespectsPositionPaddingAndReadOnlyOwnership" classname="com.beautysdk.BeautyProcessorTest" time="0.0" />
+    <testcase name="rejectsUndersizedAndOverflowSizedBuffers" classname="com.beautysdk.BeautyProcessorTest" time="0.001" />
+    <testcase name="wrongThreadCannotProcessOrCloseOwnerSession" classname="com.beautysdk.BeautyProcessorTest" time="0.001" />
+    <testcase name="textureTransformCannotBeMutatedThroughCallerArrays" classname="com.beautysdk.BeautyProcessorTest" time="0.001" />
+    <testcase name="lifecycleAndRestartPreserveOriginalFrame" classname="com.beautysdk.BeautyProcessorTest" time="0.0" />
+    <testcase name="duplicateAndBackwardsTimestampsDoNotAdvanceSession" classname="com.beautysdk.BeautyProcessorTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.beautysdk.ImageStickerTest" tests="3" skipped="0" failures="0" errors="0" time="0.133">
+    <testcase name="asymmetricImageKeepsDisplayOrientationForEveryRotationAndMirror" classname="com.beautysdk.ImageStickerTest" time="0.13" />
+    <testcase name="straightAlphaCompositesLayersAndMissingAnchorsHideImages" classname="com.beautysdk.ImageStickerTest" time="0.001" />
+    <testcase name="imageAndPackDefensivelyCopyMutableInput" classname="com.beautysdk.ImageStickerTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.beautysdk.JavaApiTest" tests="1" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="javaHostCanUseFrameAndLifecycleWithoutKotlinHelpers" classname="com.beautysdk.JavaApiTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.beautysdk.rfb.AnalyzerLifetimeTest" tests="2" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="closeIsIdempotentAndPreventsInference" classname="com.beautysdk.rfb.AnalyzerLifetimeTest" time="0.002" />
+    <testcase name="foreignThreadCannotCloseOwnedSession" classname="com.beautysdk.rfb.AnalyzerLifetimeTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.beautysdk.rfb.RfbPostprocessorTest" tests="2" skipped="0" failures="0" errors="0" time="0.025">
+    <testcase name="selectsBestValidBoxAndClamps" classname="com.beautysdk.rfb.RfbPostprocessorTest" time="0.025" />
+    <testcase name="rejectsNoFaceAndNan" classname="com.beautysdk.rfb.RfbPostprocessorTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" tests="8" skipped="0" failures="0" errors="0" time="0.023">
+    <testcase name="cacheExpiresWhileAQueryIsRunning" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.021" />
+    <testcase name="knownFreeEntitlementCanBeCachedForTheSameAccount" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="anotherAccountAndSignedOutCannotUseCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="gracePeriodDoesNotExtendIndefinitely" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="unknownEntitlementIsNeverReusable" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="corruptNegativeTimestampCannotOverflowIntoValidCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="sameAccountCanUseRecentEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="clockBeforeVerificationRejectsCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingEntitlementTest" tests="4" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="noPurchaseWithPartialFailureIsUnknown" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+    <testcase name="validLifetimeSurvivesSubscriptionQueryFailure" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+    <testcase name="lifetimeSurvivesExpiredSubscription" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+    <testcase name="bothEmptySuccessfulQueriesRevokeEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingPersistenceTest" tests="5" skipped="0" failures="0" errors="0" time="3.145">
+    <testcase name="anonymousScopePersistsWithoutAnAppAccountAndNeverUsesEmail" classname="com.wkq.google.billing.GoogleBillingPersistenceTest" time="3.032" />
+    <testcase name="accountRequiredModeKeepsStrictAccountIsolation" classname="com.wkq.google.billing.GoogleBillingPersistenceTest" time="0.027" />
+    <testcase name="persistenceDoesNotExtendVerificationTimeAndSuccessfulFreeRevokesPro" classname="com.wkq.google.billing.GoogleBillingPersistenceTest" time="0.043" />
+    <testcase name="damagedCacheCannotGrantPro" classname="com.wkq.google.billing.GoogleBillingPersistenceTest" time="0.021" />
+    <testcase name="reinstallScopeCannotReuseOldEntitlement" classname="com.wkq.google.billing.GoogleBillingPersistenceTest" time="0.022" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingPolicyTest" tests="6" skipped="0" failures="0" errors="0" time="0.038">
+    <testcase name="anonymousPlayModeDoesNotRequireAppAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.018" />
+    <testcase name="currentAccountFilter_rejectsAllPurchasesWithoutLoggedInAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+    <testcase name="currentAccountFilter_acceptsLegacyAndCommercialIdsDuringMigration" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.014" />
+    <testcase name="purchasedFilter_doesNotGrantPendingOrUnknownPurchases" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+    <testcase name="obfuscatedAccountId_isStableAndDoesNotExposeRawId" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.005" />
+    <testcase name="currentAccountFilter_acceptsMatchingAndLegacyPurchasesOnly" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingQueriesTest" tests="3" skipped="0" failures="0" errors="0" time="0.082">
+    <testcase name="hungSubscriptionCannotDiscardAvailableLifetime" classname="com.wkq.google.billing.GoogleBillingQueriesTest" time="0.076" />
+    <testcase name="unexpectedSdkErrorDoesNotCancelOtherProductType" classname="com.wkq.google.billing.GoogleBillingQueriesTest" time="0.003" />
+    <testcase name="parentCancellationStillPropagates" classname="com.wkq.google.billing.GoogleBillingQueriesTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.OfflineCachePolicyTest" tests="1" skipped="0" failures="0" errors="0" time="0.0">
+    <testcase name="hostCanDisableOrShortenOfflineAuthorization" classname="com.wkq.google.billing.OfflineCachePolicyTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.beautysdk.camera.RgbaPackingTest" tests="5" skipped="0" failures="0" errors="0" time="0.012">
+    <testcase name="rejectsCropOutsideStrideAndOverflowSizes" classname="com.beautysdk.camera.RgbaPackingTest" time="0.006" />
+    <testcase name="copiesRgbaChannelsWithoutArgbReordering" classname="com.beautysdk.camera.RgbaPackingTest" time="0.002" />
+    <testcase name="rejectsTruncatedPlane" classname="com.beautysdk.camera.RgbaPackingTest" time="0.001" />
+    <testcase name="rejectsInvalidConfiguration" classname="com.beautysdk.camera.RgbaPackingTest" time="0.002" />
+    <testcase name="copiesCropWithPositionRowPaddingAndPixelStride" classname="com.beautysdk.camera.RgbaPackingTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.crash.CrashScenariosTest" tests="2" skipped="0" failures="0" errors="0" time="0.024">
+    <testcase name="blankRunIdIsRejectedBeforeScheduling" classname="com.wkq.crash.CrashScenariosTest" time="0.008" />
+    <testcase name="eachScenarioProducesItsExpectedException" classname="com.wkq.crash.CrashScenariosTest" time="0.016" />
+  </testsuite>
+  <testsuite name="com.wkq.crash.CrashUtilsTest" tests="3" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="typesMapToAllIndependentScenarios" classname="com.wkq.crash.CrashUtilsTest" time="0.001" />
+    <testcase name="javaStaticOverloadsAreAvailable" classname="com.wkq.crash.CrashUtilsTest" time="0.004" />
+    <testcase name="unifiedEntryRejectsBlankIdForEveryTypeAndThread" classname="com.wkq.crash.CrashUtilsTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.crash.NativeCrashTypesTest" tests="3" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="allManagedCasesHaveNativeCounterpartsAndSignals" classname="com.wkq.crash.NativeCrashTypesTest" time="0.005" />
+    <testcase name="nativeEntryHasJavaStaticOverloads" classname="com.wkq.crash.NativeCrashTypesTest" time="0.0" />
+    <testcase name="blankIdsFailWithoutLoadingSoOrSchedulingNativeFaults" classname="com.wkq.crash.NativeCrashTypesTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.devhub.sdk.CampaignCacheTest" tests="30" skipped="0" failures="0" errors="0" time="6.204">
+    <testcase name="cachedExpiredCampaignsAreFilteredAndReturnedValuesAreIsolated[23]" classname="com.devhub.sdk.CampaignCacheTest" time="1.534" />
+    <testcase name="cachedExpiredCampaignsAreFilteredAndReturnedValuesAreIsolated[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.973" />
+    <testcase name="cachedExpiredCampaignsAreFilteredAndReturnedValuesAreIsolated" classname="com.devhub.sdk.CampaignCacheTest" time="2.97" />
+    <testcase name="absentCacheAndOfflineRequestsDoNotHammerTheServer[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.037" />
+    <testcase name="absentCacheAndOfflineRequestsDoNotHammerTheServer[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.023" />
+    <testcase name="absentCacheAndOfflineRequestsDoNotHammerTheServer" classname="com.devhub.sdk.CampaignCacheTest" time="0.024" />
+    <testcase name="disablingStaleFallbackReturnsErrorsAndDoesNotExtendFreshness[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.028" />
+    <testcase name="disablingStaleFallbackReturnsErrorsAndDoesNotExtendFreshness[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.032" />
+    <testcase name="disablingStaleFallbackReturnsErrorsAndDoesNotExtendFreshness" classname="com.devhub.sdk.CampaignCacheTest" time="0.037" />
+    <testcase name="failedRefreshUsesStaleCacheAndPersistsCooldown[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.028" />
+    <testcase name="failedRefreshUsesStaleCacheAndPersistsCooldown[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.03" />
+    <testcase name="failedRefreshUsesStaleCacheAndPersistsCooldown" classname="com.devhub.sdk.CampaignCacheTest" time="0.034" />
+    <testcase name="realtimeFetchesEveryCallWithoutReadingOrReplacingStoredCache[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.023" />
+    <testcase name="realtimeFetchesEveryCallWithoutReadingOrReplacingStoredCache[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.029" />
+    <testcase name="realtimeFetchesEveryCallWithoutReadingOrReplacingStoredCache" classname="com.devhub.sdk.CampaignCacheTest" time="0.029" />
+    <testcase name="weekOldCacheIsNotShownAfterRefreshFailure[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.029" />
+    <testcase name="weekOldCacheIsNotShownAfterRefreshFailure[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.027" />
+    <testcase name="weekOldCacheIsNotShownAfterRefreshFailure" classname="com.devhub.sdk.CampaignCacheTest" time="0.026" />
+    <testcase name="emptyListsAreCachedAcrossInstancesAndExpireAfterThreeDays[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.026" />
+    <testcase name="emptyListsAreCachedAcrossInstancesAndExpireAfterThreeDays[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.023" />
+    <testcase name="emptyListsAreCachedAcrossInstancesAndExpireAfterThreeDays" classname="com.devhub.sdk.CampaignCacheTest" time="0.024" />
+    <testcase name="customTtlRefreshesAtExpiryAndStartsAgainAfterSuccess[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.022" />
+    <testcase name="customTtlRefreshesAtExpiryAndStartsAgainAfterSuccess[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.026" />
+    <testcase name="customTtlRefreshesAtExpiryAndStartsAgainAfterSuccess" classname="com.devhub.sdk.CampaignCacheTest" time="0.026" />
+    <testcase name="authorizationFailureDoesNotReturnPreviouslyCachedCampaigns[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.024" />
+    <testcase name="authorizationFailureDoesNotReturnPreviouslyCachedCampaigns[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.021" />
+    <testcase name="authorizationFailureDoesNotReturnPreviouslyCachedCampaigns" classname="com.devhub.sdk.CampaignCacheTest" time="0.029" />
+    <testcase name="forcedRefreshHasAMinimumInterval[23]" classname="com.devhub.sdk.CampaignCacheTest" time="0.022" />
+    <testcase name="forcedRefreshHasAMinimumInterval[28]" classname="com.devhub.sdk.CampaignCacheTest" time="0.021" />
+    <testcase name="forcedRefreshHasAMinimumInterval" classname="com.devhub.sdk.CampaignCacheTest" time="0.025" />
+  </testsuite>
+  <testsuite name="com.devhub.sdk.DevHubTest" tests="19" skipped="0" failures="0" errors="0" time="1.515">
+    <testcase name="invalidAsyncArgumentsCompleteOnceOnMainThread" classname="com.devhub.sdk.DevHubTest" time="0.278" />
+    <testcase name="malformedResponseCompletesExactlyOnce" classname="com.devhub.sdk.DevHubTest" time="0.137" />
+    <testcase name="htmlErrorResponsePreservesHttpStatus" classname="com.devhub.sdk.DevHubTest" time="0.065" />
+    <testcase name="concurrentAppendsRespectCapacity" classname="com.devhub.sdk.DevHubTest" time="0.07" />
+    <testcase name="throwingErrorHandlerDoesNotPreventCompletion" classname="com.devhub.sdk.DevHubTest" time="0.038" />
+    <testcase name="coreModeKeepsFirstReportStartedButDropsCustomEvents" classname="com.devhub.sdk.DevHubTest" time="0.096" />
+    <testcase name="callbackExceptionsAreReportedWithoutBreakingLaterCallbacks" classname="com.devhub.sdk.DevHubTest" time="0.109" />
+    <testcase name="legacyImportIsTransactionalAndIdempotent" classname="com.devhub.sdk.DevHubTest" time="0.033" />
+    <testcase name="closedSdkCompletesCallbacksWithError" classname="com.devhub.sdk.DevHubTest" time="0.027" />
+    <testcase name="missingEntitlementsIsNotSuccessfulEmptyData" classname="com.devhub.sdk.DevHubTest" time="0.08" />
+    <testcase name="synchronousTrackReturnsFalseForInvalidInputAndClosedSdk" classname="com.devhub.sdk.DevHubTest" time="0.046" />
+    <testcase name="serverBusinessErrorIsPreserved" classname="com.devhub.sdk.DevHubTest" time="0.064" />
+    <testcase name="malformedCampaignItemCompletesWithErrorExactlyOnce" classname="com.devhub.sdk.DevHubTest" time="0.08" />
+    <testcase name="campaignImageIsReusedWithoutAnotherRequest" classname="com.devhub.sdk.DevHubTest" time="0.076" />
+    <testcase name="persistenceFailureIsNotReportedAsQueueFull" classname="com.devhub.sdk.DevHubTest" time="0.078" />
+    <testcase name="rotatingKeyKeepsInstallationIdentity" classname="com.devhub.sdk.DevHubTest" time="0.058" />
+    <testcase name="trackPersistsWhileNetworkIsBlocked" classname="com.devhub.sdk.DevHubTest" time="0.059" />
+    <testcase name="eventStoreSurvivesReopenAndRejectsOverflow" classname="com.devhub.sdk.DevHubTest" time="0.048" />
+    <testcase name="asyncReceiptMeansPersistedAndRunsOnMain" classname="com.devhub.sdk.DevHubTest" time="0.071" />
+  </testsuite>
+  <testsuite name="com.devhub.sdk.SdkStabilityTest" tests="69" skipped="0" failures="0" errors="0" time="8.479">
+    <testcase name="interactiveOperationsDoNotWaitForBlockedEventUpload[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.256" />
+    <testcase name="interactiveOperationsDoNotWaitForBlockedEventUpload[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.14" />
+    <testcase name="interactiveOperationsDoNotWaitForBlockedEventUpload" classname="com.devhub.sdk.SdkStabilityTest" time="0.317" />
+    <testcase name="backendInstallationErrorsPreserveStatusAndRequestId[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.059" />
+    <testcase name="backendInstallationErrorsPreserveStatusAndRequestId[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.063" />
+    <testcase name="backendInstallationErrorsPreserveStatusAndRequestId" classname="com.devhub.sdk.SdkStabilityTest" time="0.079" />
+    <testcase name="businessOnlyModeStillRequiresExplicitMasterEnablement[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.091" />
+    <testcase name="businessOnlyModeStillRequiresExplicitMasterEnablement[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.094" />
+    <testcase name="businessOnlyModeStillRequiresExplicitMasterEnablement" classname="com.devhub.sdk.SdkStabilityTest" time="0.093" />
+    <testcase name="previouslyQueuedUnapprovedPropertiesAreNotUploaded[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.094" />
+    <testcase name="previouslyQueuedUnapprovedPropertiesAreNotUploaded[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.08" />
+    <testcase name="previouslyQueuedUnapprovedPropertiesAreNotUploaded" classname="com.devhub.sdk.SdkStabilityTest" time="0.123" />
+    <testcase name="failedSingleEventIsRetriedWithoutWaitingForBatchThreshold[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.134" />
+    <testcase name="failedSingleEventIsRetriedWithoutWaitingForBatchThreshold[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.126" />
+    <testcase name="failedSingleEventIsRetriedWithoutWaitingForBatchThreshold" classname="com.devhub.sdk.SdkStabilityTest" time="0.119" />
+    <testcase name="repeatedCampaignReadsAndSdkRestartUseThePersistedEmptyList[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.229" />
+    <testcase name="repeatedCampaignReadsAndSdkRestartUseThePersistedEmptyList[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.219" />
+    <testcase name="repeatedCampaignReadsAndSdkRestartUseThePersistedEmptyList" classname="com.devhub.sdk.SdkStabilityTest" time="0.253" />
+    <testcase name="disabledDeviceInformationIsNotAddedToRegistration[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.077" />
+    <testcase name="disabledDeviceInformationIsNotAddedToRegistration[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.078" />
+    <testcase name="disabledDeviceInformationIsNotAddedToRegistration" classname="com.devhub.sdk.SdkStabilityTest" time="0.077" />
+    <testcase name="revocationClearsQueuedEventsAndBlocksNewRequests[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.126" />
+    <testcase name="revocationClearsQueuedEventsAndBlocksNewRequests[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.124" />
+    <testcase name="revocationClearsQueuedEventsAndBlocksNewRequests" classname="com.devhub.sdk.SdkStabilityTest" time="0.128" />
+    <testcase name="closeReleasesDatabaseOpenedByDisabledPurge[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.076" />
+    <testcase name="closeReleasesDatabaseOpenedByDisabledPurge[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.077" />
+    <testcase name="closeReleasesDatabaseOpenedByDisabledPurge" classname="com.devhub.sdk.SdkStabilityTest" time="0.064" />
+    <testcase name="storageFailureDoesNotEscapeIntoApplication[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.045" />
+    <testcase name="storageFailureDoesNotEscapeIntoApplication[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.048" />
+    <testcase name="storageFailureDoesNotEscapeIntoApplication" classname="com.devhub.sdk.SdkStabilityTest" time="0.047" />
+    <testcase name="saturatedStorageQueueRejectsWithExplicitError[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.097" />
+    <testcase name="saturatedStorageQueueRejectsWithExplicitError[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.092" />
+    <testcase name="saturatedStorageQueueRejectsWithExplicitError" classname="com.devhub.sdk.SdkStabilityTest" time="0.094" />
+    <testcase name="retryIntentSurvivesReinitialization[23]" classname="com.devhub.sdk.SdkStabilityTest" time="1.13" />
+    <testcase name="retryIntentSurvivesReinitialization[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.141" />
+    <testcase name="retryIntentSurvivesReinitialization" classname="com.devhub.sdk.SdkStabilityTest" time="0.141" />
+    <testcase name="invalidConfigurationReturnsAnInertInstanceWithoutThrowing[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.028" />
+    <testcase name="invalidConfigurationReturnsAnInertInstanceWithoutThrowing[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.031" />
+    <testcase name="invalidConfigurationReturnsAnInertInstanceWithoutThrowing" classname="com.devhub.sdk.SdkStabilityTest" time="0.031" />
+    <testcase name="realtimeCampaignConfigurationFetchesOnEachExplicitCall[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.141" />
+    <testcase name="realtimeCampaignConfigurationFetchesOnEachExplicitCall[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.126" />
+    <testcase name="realtimeCampaignConfigurationFetchesOnEachExplicitCall" classname="com.devhub.sdk.SdkStabilityTest" time="0.14" />
+    <testcase name="defaultConfigurationDoesNotCollectOrSendUntilEnabled[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.09" />
+    <testcase name="defaultConfigurationDoesNotCollectOrSendUntilEnabled[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.092" />
+    <testcase name="defaultConfigurationDoesNotCollectOrSendUntilEnabled" classname="com.devhub.sdk.SdkStabilityTest" time="0.093" />
+    <testcase name="screenshotUploadsRequireExplicitConfiguration[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.078" />
+    <testcase name="screenshotUploadsRequireExplicitConfiguration[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.097" />
+    <testcase name="screenshotUploadsRequireExplicitConfiguration" classname="com.devhub.sdk.SdkStabilityTest" time="0.094" />
+    <testcase name="queuedRequestsAreNotResurrectedAfterConsentIsWithdrawnAndGrantedAgain[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.137" />
+    <testcase name="queuedRequestsAreNotResurrectedAfterConsentIsWithdrawnAndGrantedAgain[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.141" />
+    <testcase name="queuedRequestsAreNotResurrectedAfterConsentIsWithdrawnAndGrantedAgain" classname="com.devhub.sdk.SdkStabilityTest" time="0.141" />
+    <testcase name="propertyAllowlistRejectsUnexpectedAndNonPrimitiveValues[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.034" />
+    <testcase name="propertyAllowlistRejectsUnexpectedAndNonPrimitiveValues[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.039" />
+    <testcase name="propertyAllowlistRejectsUnexpectedAndNonPrimitiveValues" classname="com.devhub.sdk.SdkStabilityTest" time="0.042" />
+    <testcase name="missingPackageMetadataUsesSafeFallback[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.073" />
+    <testcase name="missingPackageMetadataUsesSafeFallback[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.079" />
+    <testcase name="missingPackageMetadataUsesSafeFallback" classname="com.devhub.sdk.SdkStabilityTest" time="0.078" />
+    <testcase name="corruptQueueRecordDoesNotBlockValidEvent[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.093" />
+    <testcase name="corruptQueueRecordDoesNotBlockValidEvent[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.096" />
+    <testcase name="corruptQueueRecordDoesNotBlockValidEvent" classname="com.devhub.sdk.SdkStabilityTest" time="0.093" />
+    <testcase name="businessOnlyModeDoesNotStartTelemetryAndKeepsInteractiveRequestsAvailable[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.153" />
+    <testcase name="businessOnlyModeDoesNotStartTelemetryAndKeepsInteractiveRequestsAvailable[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.155" />
+    <testcase name="businessOnlyModeDoesNotStartTelemetryAndKeepsInteractiveRequestsAvailable" classname="com.devhub.sdk.SdkStabilityTest" time="0.154" />
+    <testcase name="switchingToBusinessOnlyPurgesQueuedAnalyticsWithoutChangingPurchaseIdentity[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.112" />
+    <testcase name="switchingToBusinessOnlyPurgesQueuedAnalyticsWithoutChangingPurchaseIdentity[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.127" />
+    <testcase name="switchingToBusinessOnlyPurgesQueuedAnalyticsWithoutChangingPurchaseIdentity" classname="com.devhub.sdk.SdkStabilityTest" time="0.125" />
+    <testcase name="revocationDoesNotDeliverAnInFlightSuccess[23]" classname="com.devhub.sdk.SdkStabilityTest" time="0.107" />
+    <testcase name="revocationDoesNotDeliverAnInFlightSuccess[28]" classname="com.devhub.sdk.SdkStabilityTest" time="0.109" />
+    <testcase name="revocationDoesNotDeliverAnInFlightSuccess" classname="com.devhub.sdk.SdkStabilityTest" time="0.109" />
+  </testsuite>
+  <testsuite name="com.devhub.sdk.SdkTransportTest" tests="27" skipped="0" failures="0" errors="0" time="0.988">
+    <testcase name="malformedJsonIsNotConfusedWithNetworkFailure[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.011" />
+    <testcase name="malformedJsonIsNotConfusedWithNetworkFailure[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.012" />
+    <testcase name="malformedJsonIsNotConfusedWithNetworkFailure" classname="com.devhub.sdk.SdkTransportTest" time="0.015" />
+    <testcase name="permissionFailureDoesNotEscape[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="permissionFailureDoesNotEscape[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.011" />
+    <testcase name="permissionFailureDoesNotEscape" classname="com.devhub.sdk.SdkTransportTest" time="0.011" />
+    <testcase name="redirectDoesNotForwardCredentialsToAnotherHost[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="redirectDoesNotForwardCredentialsToAnotherHost[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="redirectDoesNotForwardCredentialsToAnotherHost" classname="com.devhub.sdk.SdkTransportTest" time="0.013" />
+    <testcase name="validJsonIsReadOnSupportedAndroidVersions[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="validJsonIsReadOnSupportedAndroidVersions[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="validJsonIsReadOnSupportedAndroidVersions" classname="com.devhub.sdk.SdkTransportTest" time="0.012" />
+    <testcase name="rateLimitPreservesRetryAdviceAndDoesNotRetryPostAutomatically[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="rateLimitPreservesRetryAdviceAndDoesNotRetryPostAutomatically[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.011" />
+    <testcase name="rateLimitPreservesRetryAdviceAndDoesNotRetryPostAutomatically" classname="com.devhub.sdk.SdkTransportTest" time="0.013" />
+    <testcase name="disabledCollectionNeverOpensAConnection[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.008" />
+    <testcase name="disabledCollectionNeverOpensAConnection[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.008" />
+    <testcase name="disabledCollectionNeverOpensAConnection" classname="com.devhub.sdk.SdkTransportTest" time="0.012" />
+    <testcase name="oversizedResponseIsRejectedWithoutParsingIt[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.009" />
+    <testcase name="oversizedResponseIsRejectedWithoutParsingIt[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.01" />
+    <testcase name="oversizedResponseIsRejectedWithoutParsingIt" classname="com.devhub.sdk.SdkTransportTest" time="0.015" />
+    <testcase name="disconnectedNetworkReturnsError[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.034" />
+    <testcase name="disconnectedNetworkReturnsError[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.031" />
+    <testcase name="disconnectedNetworkReturnsError" classname="com.devhub.sdk.SdkTransportTest" time="0.03" />
+    <testcase name="stalledServerReturnsTimeout[23]" classname="com.devhub.sdk.SdkTransportTest" time="0.219" />
+    <testcase name="stalledServerReturnsTimeout[28]" classname="com.devhub.sdk.SdkTransportTest" time="0.217" />
+    <testcase name="stalledServerReturnsTimeout" classname="com.devhub.sdk.SdkTransportTest" time="0.222" />
+  </testsuite>
+  <testsuite name="com.wkq.roof.export.OfficeWriterTest" tests="6" skipped="0" failures="0" errors="0" time="0.226">
+    <testcase name="longTableHeadersRepeatAndMoneyRemainsNumericForPrinting" classname="com.wkq.roof.export.OfficeWriterTest" time="0.18" />
+    <testcase name="invalidNumericCellsDoNotOverwriteExistingExport" classname="com.wkq.roof.export.OfficeWriterTest" time="0.003" />
+    <testcase name="xlsxContainsNumericCellsAndRoofQuoteMetadata" classname="com.wkq.roof.export.OfficeWriterTest" time="0.005" />
+    <testcase name="manualPhotoPageBreaksAreSerializedAndValidated" classname="com.wkq.roof.export.OfficeWriterTest" time="0.006" />
+    <testcase name="docxEscapesUnicodeAndProducesRequiredParts" classname="com.wkq.roof.export.OfficeWriterTest" time="0.005" />
+    <testcase name="pastedControlCharactersDoNotCorruptOfficeDocuments" classname="com.wkq.roof.export.OfficeWriterTest" time="0.025" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.drop.DropServerTest" tests="17" skipped="0" failures="0" errors="0" time="2.108">
+    <testcase name="restoredTaskListIsAuthorizedOwnerScopedAndDoesNotRestartTransfers" classname="com.wkq.droplan.drop.DropServerTest" time="0.126" />
+    <testcase name="revocationCancelsOnlyUnfinishedTasksAndPreservesTerminalHistory" classname="com.wkq.droplan.drop.DropServerTest" time="0.005" />
+    <testcase name="attachmentNamesKeepAsciiFallbackAndEncodeUnicodeWithoutHeaderInjection" classname="com.wkq.droplan.drop.DropServerTest" time="0.056" />
+    <testcase name="realHttpApprovalAuthorizationAndOwnership" classname="com.wkq.droplan.drop.DropServerTest" time="0.029" />
+    <testcase name="boundedProbeAndBusyRejection" classname="com.wkq.droplan.drop.DropServerTest" time="0.524" />
+    <testcase name="fiveGiBMetadataLargeOffsetRangeAndIfRange" classname="com.wkq.droplan.drop.DropServerTest" time="0.079" />
+    <testcase name="unknownLengthStreamingAndSequentialRangeFallback" classname="com.wkq.droplan.drop.DropServerTest" time="0.035" />
+    <testcase name="pendingPairingExpiryBodyLimitCsrfAndUnknownStaticHead" classname="com.wkq.droplan.drop.DropServerTest" time="0.028" />
+    <testcase name="unknownLengthAdviceDoesNotInventDurationOrCompareDuplicatePaths" classname="com.wkq.droplan.drop.DropServerTest" time="0.001" />
+    <testcase name="realConcurrentDownloadsCannotBypassSlotsAndRevocationClosesStreams" classname="com.wkq.droplan.drop.DropServerTest" time="0.047" />
+    <testcase name="configuredSingleDownloadLimitIsAdvertisedAndEnforced" classname="com.wkq.droplan.drop.DropServerTest" time="0.033" />
+    <testcase name="receiverAdviceRequiresAuthorizationAndOnlyComparesDistinctObservedTransports" classname="com.wkq.droplan.drop.DropServerTest" time="0.032" />
+    <testcase name="sseGlobalLimitAndDisconnectLeaveDownloadsAvailable" classname="com.wkq.droplan.drop.DropServerTest" time="0.043" />
+    <testcase name="totalTimeRecommendationDoesNotInventFastestOrSwitchActiveTransfer" classname="com.wkq.droplan.drop.DropServerTest" time="0.0" />
+    <testcase name="schedulerLimitsDuplicateClaimsExpiryCancelAndPause" classname="com.wkq.droplan.drop.DropServerTest" time="0.003" />
+    <testcase name="preparedZipUsesTheSameAuthorizationQueueAndRangeProtocol" classname="com.wkq.droplan.drop.DropServerTest" time="0.039" />
+    <testcase name="sseIsAuthorizedOwnerScopedLimitedAndDoesNotConsumeDownloadSlots" classname="com.wkq.droplan.drop.DropServerTest" time="1.028" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.drop.HttpByteRangeTest" tests="2" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="invalidAndUnsatisfiable" classname="com.wkq.droplan.drop.HttpByteRangeTest" time="0.0" />
+    <testcase name="largeFileAndSuffix" classname="com.wkq.droplan.drop.HttpByteRangeTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.drop.HttpsTest" tests="2" skipped="0" failures="0" errors="0" time="1.154">
+    <testcase name="oversizedIdentityIsRejectedAndPasswordCleared" classname="com.wkq.droplan.drop.HttpsTest" time="0.003" />
+    <testcase name="tlsCertificateTrustPairingRangeAndSecureCookie" classname="com.wkq.droplan.drop.HttpsTest" time="1.151" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.drop.SnapshotZipArchiveTest" tests="4" skipped="0" failures="0" errors="0" time="6.81">
+    <testcase name="folderPathsKeepHierarchyAndCannotEscapeArchiveRoot" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.019" />
+    <testcase name="cancellationQuotaAndChangingSourceNeverPublishPartialArchive" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.008" />
+    <testcase name="actualZip64EntryOverFourGiBIsGeneratedAndFullyValidatedWithBoundedReads" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="6.778" />
+    <testcase name="storeAndDeflateRoundTripSafeNamesStableHashAndRange" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.005" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.drop.WebSocketTest" tests="2" skipped="0" failures="0" errors="0" time="0.067">
+    <testcase name="actualWebSocketBoundedTransferHashAuthorizationAndSharedQueue" classname="com.wkq.droplan.drop.WebSocketTest" time="0.052" />
+    <testcase name="oversizedClientFrameIsRejectedBeforeAllocation" classname="com.wkq.droplan.drop.WebSocketTest" time="0.015" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.entitlement.EntitlementPolicyTest" tests="2" skipped="0" failures="0" errors="0" time="0.049">
+    <testcase name="unknownDeniedAndMissingNeverGrant" classname="com.wkq.dev.entitlement.EntitlementPolicyTest" time="0.048" />
+    <testcase name="grantsOnlyTheMatchingCapabilityWithinValidity" classname="com.wkq.dev.entitlement.EntitlementPolicyTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.droplan.html.WebAssetCatalogTest" tests="2" skipped="0" failures="0" errors="0" time="0.05">
+    <testcase name="allowsOnlyBundledResources" classname="com.wkq.droplan.html.WebAssetCatalogTest" time="0.013" />
+    <testcase name="bundledPageHasOfflineResourcesAndMatchingTranslations" classname="com.wkq.droplan.html.WebAssetCatalogTest" time="0.037" />
+  </testsuite>
+  <testsuite name="com.wkq.util.location.geo.OfflineGeoCoderTest" tests="7" skipped="0" failures="0" errors="0" time="0.696">
+    <testcase name="testHaversineDistance" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.199" />
+    <testcase name="testReverseGeocodeTokyoInJa" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.125" />
+    <testcase name="testReverseGeocodeTokyoInZh" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.081" />
+    <testcase name="testReverseGeocodeParisInJa" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.071" />
+    <testcase name="testIllegalCoordinates" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.072" />
+    <testcase name="testReverseGeocodeZhengzhouInEn" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.072" />
+    <testcase name="testReverseGeocodeZhengzhouInZh" classname="com.wkq.util.location.geo.OfflineGeoCoderTest" time="0.075" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" tests="3" skipped="0" failures="0" errors="0" time="0.016">
+    <testcase name="directProcessWithoutRequiredPerPhotoFieldCanRemainDirect" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.015" />
+    <testcase name="versionTwoKeepsExplicitlyEmptyRuntimeFields" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.001" />
+    <testcase name="directProcessWithRequiredPerPhotoFieldStillOpensWorkbench" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.CrwMetadataFieldsTest" tests="1" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="onlyCiffZeroTimestampIsAnonymous" classname="com.wkq.iptc.feature.press.metadata.CrwMetadataFieldsTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" tests="8" skipped="0" failures="0" errors="0" time="0.246">
+    <testcase name="questionMarkPlaceholdersAreNotWrittenAsPeopleMetadata" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.047" />
+    <testcase name="standardFieldsFallbackWhenLegacyTemplateFieldsAreBlank" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.005" />
+    <testcase name="writesExpandedIptcExtensionAndPlusFields" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.007" />
+    <testcase name="replacementPreservesUnsupportedIptcExtensionProperties" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.146" />
+    <testcase name="writesStructuredImageRegion" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.027" />
+    <testcase name="exposesFieldCapabilityMatrixForPresetAndProcessingChoices" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.001" />
+    <testcase name="keepsDisabledIptcDocumentFieldsOutOfTheXmpPacket" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.005" />
+    <testcase name="copyrightNoticeAndUsageTermsAreWrittenToSeparateProperties" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.005" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" tests="16" skipped="0" failures="0" errors="0" time="0.385">
+    <testcase name="testVerificationErrorListsFailedMetadataSections" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.111" />
+    <testcase name="testVerificationIgnoresQuestionMarkPlaceholderNotWrittenToIptc" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.07" />
+    <testcase name="testVerificationAcceptsStructuredXmpListValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.016" />
+    <testcase name="testXmpPreservesUnknownPropertiesAndWritesProfessionalRights" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.02" />
+    <testcase name="testDcRightsUsesCopyrightInsteadOfUsageTerms" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.01" />
+    <testcase name="testWriteOnlyQuickMetadata" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.042" />
+    <testcase name="testMetadataScrubbing" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.011" />
+    <testcase name="testWriteOnlyTemplate" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.009" />
+    <testcase name="testVerifyNestedCreatorContactAddress" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.009" />
+    <testcase name="testReplaceManagedFieldsRemovesLegacyValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.008" />
+    <testcase name="testSingleValueFieldsAreNotDuplicated" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.008" />
+    <testcase name="testWriteTemplateWithQuickOverrides" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.006" />
+    <testcase name="testCreatorPlaceholderFallsBackToIptcAuthor" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.03" />
+    <testcase name="testCommonCreatorAndCopyrightOverrideConflictingAdvancedValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.007" />
+    <testcase name="testXmpReplacementDropsManagedLegacyPropertiesOnly" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.011" />
+    <testcase name="testUnmodifiedIptcFieldsArePreserved" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.011" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" tests="5" skipped="0" failures="0" errors="0" time="4.957">
+    <testcase name="metadataWritePreservesHighResolutionCompressedDataAndColorProfile" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="4.523" />
+    <testcase name="integrityRejectsChangedImageData" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.023" />
+    <testcase name="privacyScrubAndMetadataWritePreserveCompressedDataAndOrientation" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.35" />
+    <testcase name="integrityRejectsChangedIccSegment" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.026" />
+    <testcase name="integrityRejectsChangedOrientation" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.035" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.MetadataDeliveryStatusTest" tests="2" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="onlyStructuredWarningsAllowPartialDelivery" classname="com.wkq.iptc.feature.press.metadata.MetadataDeliveryStatusTest" time="0.004" />
+    <testcase name="warningsNeverIncludeUntrustedNamesAndCanBeMerged" classname="com.wkq.iptc.feature.press.metadata.MetadataDeliveryStatusTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" tests="6" skipped="0" failures="0" errors="0" time="1.604">
+    <testcase name="rejectsWarningsWithoutExposingMetadata" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.147" />
+    <testcase name="rejectsOversizeOutput" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.109" />
+    <testcase name="cancellationDoesNotWaitForBlockedOutput" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.314" />
+    <testcase name="readsSuccessfulOutputAndRemovesTemporaryFiles" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.144" />
+    <testcase name="stopsHangingProcessWithinDeadline" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.544" />
+    <testcase name="readWarningsRequireExplicitPolicyAndSuccessfulExit" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.346" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest" tests="3" skipped="0" failures="0" errors="0" time="0.003">
+    <testcase name="invalidDateFallsBackToKnownTime" classname="com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest" time="0.002" />
+    <testcase name="rejectsInvalidCalendarDatesAndTrailingText" classname="com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest" time="0.001" />
+    <testcase name="preservesValidCameraDateIncludingLeapDay" classname="com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" tests="6" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="explicitXmpValueHasPriority" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.001" />
+    <testcase name="legacyFieldsMapToEnabledXmpFields" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+    <testcase name="unsupportedLegacyStructureIsNotSilentlyDropped" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+    <testcase name="emptyBylineContactDoesNotBlockOtherwiseSupportedXmp" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+    <testcase name="unsupportedDocumentStructureIsNotMistakenForEmptyText" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+    <testcase name="disabledLegacyFieldIsNotReenabled" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.NativeWriteValidationTest" tests="2" skipped="0" failures="0" errors="0" time="0.042">
+    <testcase name="unsupportedIimFailsBeforeRuntimeAndPreservesSource" classname="com.wkq.iptc.feature.press.metadata.NativeWriteValidationTest" time="0.019" />
+    <testcase name="invalidGpsFailsBeforeRuntimeAndPreservesSource" classname="com.wkq.iptc.feature.press.metadata.NativeWriteValidationTest" time="0.023" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" tests="6" skipped="0" failures="0" errors="0" time="2.066">
+    <testcase name="validJpegWithoutMetadataIsKnownEmpty" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="1.942" />
+    <testcase name="malformedPhotoshopIptcFailsStrictReadButKeepsLegacyImportFallback" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.023" />
+    <testcase name="validWrittenMetadataMatchesLegacyImport" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.038" />
+    <testcase name="malformedXmpCannotBecomeAnEmptyOriginal" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.024" />
+    <testcase name="historicalExifTag700IsStillRead" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.025" />
+    <testcase name="truncatedJpegDoesNotBecomeKnownEmpty" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.014" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.UploadMetadataCopierTest" tests="2" skipped="0" failures="0" errors="0" time="0.063">
+    <testcase name="missingExifIsOptionalAndDoesNotInventCaptureTime" classname="com.wkq.iptc.feature.press.metadata.UploadMetadataCopierTest" time="0.042" />
+    <testcase name="preservesFinalPhotoMetadataAndNormalizesCompressedGeometry" classname="com.wkq.iptc.feature.press.metadata.UploadMetadataCopierTest" time="0.021" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" tests="2" skipped="0" failures="0" errors="0" time="0.008">
+    <testcase name="unicodeContentAndUnknownAttributesSurviveAsciiSerialization" classname="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" time="0.005" />
+    <testcase name="malformedPacketCannotBeSerializedAsSuccess" classname="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.XmpMetadataReaderTest" tests="2" skipped="0" failures="0" errors="0" time="0.004">
+    <testcase name="readsXDefaultFromMultilingualAlternativeValues" classname="com.wkq.iptc.feature.press.metadata.XmpMetadataReaderTest" time="0.003" />
+    <testcase name="fallsBackToFirstAlternativeValueWhenDefaultIsAbsent" classname="com.wkq.iptc.feature.press.metadata.XmpMetadataReaderTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest" tests="4" skipped="0" failures="0" errors="0" time="0.103">
+    <testcase name="retainsUnknownPropertiesAndCaptureDateWhileUpdatingManagedFields" classname="com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest" time="0.036" />
+    <testcase name="rejectsPathTraversalBeforeCreatingOutput" classname="com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest" time="0.016" />
+    <testcase name="invalidExistingPacketFailsAndCleansPartialOutput" classname="com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest" time="0.025" />
+    <testcase name="createsVerifiedSidecarWithoutChangingOpaqueCameraFile" classname="com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest" time="0.025" />
+  </testsuite>
+  <testsuite name="com.wkq.util.exif.MetadataPrivacyRulesTest" tests="4" skipped="0" failures="0" errors="0" time="0.007">
+    <testcase name="rejectsEntitiesButCanDiscardFullySelectedMalformedXmp" classname="com.wkq.util.exif.MetadataPrivacyRulesTest" time="0.001" />
+    <testcase name="removesLocationUnderAnyPrefixAndKeepsUnselectedTitle" classname="com.wkq.util.exif.MetadataPrivacyRulesTest" time="0.004" />
+    <testcase name="selectedLegacyIptcIncludesIdentityAndLocationButKeepsHeadline" classname="com.wkq.util.exif.MetadataPrivacyRulesTest" time="0.0" />
+    <testcase name="attributesIdentityAndPhysicalCopiesAreHandled" classname="com.wkq.util.exif.MetadataPrivacyRulesTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.util.exif.MetadataScrubberTest" tests="1" skipped="1" failures="0" errors="0" time="0.0">
+    <testcase name="testScrubMetadataKeepOrientation" classname="com.wkq.util.exif.MetadataScrubberTest" time="0.0">
+      <skipped />
+    </testcase>
+  </testsuite>
+  <testsuite name="com.wkq.util.exif.PhotoFormatPolicyTest" tests="12" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="conversionChangesOnlyExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="unknownOutputIsNotLabelledJpeg" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="missingNameUsesFallbackAndAddsExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="extensionMustMatchActualOutput" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="shortOrEmptyInputIsNotAcceptedAsJpeg" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="partialReadsAreHandled" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.001" />
+    <testcase name="capabilityDoesNotConfuseReadingWithWriting" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="pngSignature" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="jpegUsesBytesNotExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.001" />
+    <testcase name="webpRequiresBothRiffAndWebp" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="preservesOriginalJpegNameAndCase" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+    <testcase name="pathCharactersCannotEscapeOutputDirectory" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.util.exif.RasterMetadataChunksTest" tests="7" skipped="0" failures="0" errors="0" time="0.36">
+    <testcase name="writesLargeNativePngXmpWithoutJpegSegmentLimit" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.268" />
+    <testcase name="webpAnimationAndFramesRemainUnchanged" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.017" />
+    <testcase name="writesNativeAnimatedWebpXmpWithoutChangingFrames" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.016" />
+    <testcase name="pngAlphaAndColourRemainUnchanged" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.012" />
+    <testcase name="truncatedWebpIsRejectedWithoutChangingInput" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.01" />
+    <testcase name="protectedDigestDetectsPayloadChanges" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.004" />
+    <testcase name="pngNativeXmpRemovalPreservesProtectedChunks" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.031" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.core.operation.OperationContractsTest" tests="3" skipped="0" failures="0" errors="0" time="0.032">
+    <testcase name="mapsCancellationToStableErrorCode" classname="com.wkq.photo.core.operation.OperationContractsTest" time="0.021" />
+    <testcase name="rejectsDimensionsAndTotalPixelsBeyondBudget" classname="com.wkq.photo.core.operation.OperationContractsTest" time="0.008" />
+    <testcase name="validatesEncodeOptions" classname="com.wkq.photo.core.operation.OperationContractsTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.core.operation.OutputPathRegistryTest" tests="1" skipped="0" failures="0" errors="0" time="0.003">
+    <testcase name="rejectsConcurrentLeaseAndAllowsReuseAfterClose" classname="com.wkq.photo.core.operation.OutputPathRegistryTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.core.utils.AtomicFileOutputTest" tests="5" skipped="0" failures="0" errors="0" time="0.154">
+    <testcase name="replacesExistingFileAfterSuccessfulWrite" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.033" />
+    <testcase name="serializesWritersForTheSameCanonicalPath" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.11" />
+    <testcase name="temporaryFileRetainsTargetExtensionForFormatBasedEncoders" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.003" />
+    <testcase name="preservesExistingFileWhenWriterFails" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.003" />
+    <testcase name="recoversBackupLeftByInterruptedReplacement" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.photo.core.utils.TemporaryFileCleanerTest" tests="3" skipped="0" failures="0" errors="0" time="0.022">
+    <testcase name="deletesOnlyExpiredFilesAndEmptyDirectories" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.01" />
+    <testcase name="preservesProtectedDirectoryAndItsChildren" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.003" />
+    <testcase name="stopsAtConfiguredTraversalLimit" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.008" />
+  </testsuite>
+  <testsuite name="com.starxen.lib.google.push.GooglePushMessageParserTest" tests="4" skipped="0" failures="0" errors="0" time="0.027">
+    <testcase name="parsesDataPayloadAndPreservesBusinessFields" classname="com.starxen.lib.google.push.GooglePushMessageParserTest" time="0.013" />
+    <testcase name="allowsPayloadWithoutEventType" classname="com.starxen.lib.google.push.GooglePushMessageParserTest" time="0.0" />
+    <testcase name="generatedMessageIdIsStableAcrossMapOrder" classname="com.starxen.lib.google.push.GooglePushMessageParserTest" time="0.014" />
+    <testcase name="usesFirebaseFallbackFields" classname="com.starxen.lib.google.push.GooglePushMessageParserTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.starxen.lib.google.push.internal.MessageDeduplicatorTest" tests="4" skipped="0" failures="0" errors="0" time="0.044">
+    <testcase name="evictsOldestMessageWhenCapacityIsReached" classname="com.starxen.lib.google.push.internal.MessageDeduplicatorTest" time="0.042" />
+    <testcase name="acceptsMessageAgainAfterRetentionWindow" classname="com.starxen.lib.google.push.internal.MessageDeduplicatorTest" time="0.001" />
+    <testcase name="rejectsDuplicateInsideRetentionWindow" classname="com.starxen.lib.google.push.internal.MessageDeduplicatorTest" time="0.0" />
+    <testcase name="rejectsBlankMessageId" classname="com.starxen.lib.google.push.internal.MessageDeduplicatorTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.starxen.lib.google.push.internal.PendingPushStoreTest" tests="4" skipped="0" failures="0" errors="0" time="0.017">
+    <testcase name="consumesMessagesInFirstInFirstOutOrder" classname="com.starxen.lib.google.push.internal.PendingPushStoreTest" time="0.012" />
+    <testcase name="dropsOldestMessageBeyondCapacity" classname="com.starxen.lib.google.push.internal.PendingPushStoreTest" time="0.001" />
+    <testcase name="corruptedStorageIsRecoveredOnNextEnqueue" classname="com.starxen.lib.google.push.internal.PendingPushStoreTest" time="0.002" />
+    <testcase name="duplicateMessageReplacesOldCopyAndMovesToEnd" classname="com.starxen.lib.google.push.internal.PendingPushStoreTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.nativepdf.model.NativeReportContractTest" tests="4" skipped="0" failures="0" errors="0" time="0.006">
+    <testcase name="默认章节顺序覆盖完整报告链路" classname="com.wkq.nativepdf.model.NativeReportContractTest" time="0.001" />
+    <testcase name="报告数据默认集合为空且页码格式保留占位符" classname="com.wkq.nativepdf.model.NativeReportContractTest" time="0.004" />
+    <testcase name="国际签名资料保留完整长姓名职位和公司名称" classname="com.wkq.nativepdf.model.NativeReportContractTest" time="0.0" />
+    <testcase name="简洁归档模板保留问题汇总" classname="com.wkq.nativepdf.model.NativeReportContractTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.nativepdf.PdfImageSamplingTest" tests="2" skipped="0" failures="0" errors="0" time="0.014">
+    <testcase name="normalPhotosKeepExistingResolution" classname="com.wkq.nativepdf.PdfImageSamplingTest" time="0.002" />
+    <testcase name="panoramicAndExtremeDimensionsStayWithinMemoryBudget" classname="com.wkq.nativepdf.PdfImageSamplingTest" time="0.012" />
+  </testsuite>
+  <testsuite name="com.wkq.nativepdf.PdfOutputFileTest" tests="6" skipped="0" failures="0" errors="0" time="0.04">
+    <testcase name="concurrentWritersDoNotDeleteEachOthersTemporaryFiles" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.024" />
+    <testcase name="emptyOutputDoesNotReplacePreviousReport" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.004" />
+    <testcase name="replacementPublishesCompleteOutputOrPreservesPreviousReport" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.004" />
+    <testcase name="failedReplacementLeavesExistingDestinationUntouched" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.003" />
+    <testcase name="cancellationBeforePublicationKeepsPreviousReport" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.002" />
+    <testcase name="writeFailurePreservesPreviousReportAndRemovesTemporaryFile" classname="com.wkq.nativepdf.PdfOutputFileTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.nativepdf.section.NativeEvidencePresentationTest" tests="5" skipped="0" failures="0" errors="0" time="0.018">
+    <testcase name="blankCaptionsDoNotReserveSpaceAndMultiplePhotosKeepTheirSequence" classname="com.wkq.nativepdf.section.NativeEvidencePresentationTest" time="0.016" />
+    <testcase name="beforeAfterGroupingUsesEvidenceTypeRatherThanTranslatedLabel" classname="com.wkq.nativepdf.section.NativeEvidencePresentationTest" time="0.001" />
+    <testcase name="captionsKeepLongLocalizedEvidenceAndDeduplicateMetadata" classname="com.wkq.nativepdf.section.NativeEvidencePresentationTest" time="0.0" />
+    <testcase name="captionsOmitGenericPhotoLabelsAndRepeatedItemTitles" classname="com.wkq.nativepdf.section.NativeEvidencePresentationTest" time="0.001" />
+    <testcase name="comparisonCaptionsRetainLocationAndTimeWithoutDuplicates" classname="com.wkq.nativepdf.section.NativeEvidencePresentationTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.DirectoryListingCacheTest" tests="2" skipped="0" failures="0" errors="0" time="0.022">
+    <testcase name="oversizedMetadataIsNotCachedEvenWhenCountFits" classname="com.wkq.nas.transfer.DirectoryListingCacheTest" time="0.02" />
+    <testcase name="isolatesIdentityExpiresAndRejectsLateWritesAfterInvalidation" classname="com.wkq.nas.transfer.DirectoryListingCacheTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.FileClientTest" tests="26" skipped="0" failures="0" errors="0" time="6.344">
+    <testcase name="hiddenRecordsDoNotConsumeVisiblePaginationWindow" classname="com.wkq.nas.transfer.FileClientTest" time="2.373" />
+    <testcase name="hiddenRecordCanBeRestoredWithoutRunningTaskOrChangingBackup" classname="com.wkq.nas.transfer.FileClientTest" time="0.137" />
+    <testcase name="completionSignalIncludesOldTaskOutsideDisplayWindowAndGroupQueriesAreScoped" classname="com.wkq.nas.transfer.FileClientTest" time="0.107" />
+    <testcase name="connectionRemovalWaitsForCanceledArtifactCleanup" classname="com.wkq.nas.transfer.FileClientTest" time="0.117" />
+    <testcase name="listAndAnalyzeExcludePrivateIncompleteTransfers" classname="com.wkq.nas.transfer.FileClientTest" time="0.088" />
+    <testcase name="renameAndOrganizeRecordResultsAndPreserveContents" classname="com.wkq.nas.transfer.FileClientTest" time="0.095" />
+    <testcase name="draftConnectionTestDoesNotPersistOrReplaceExistingConnection" classname="com.wkq.nas.transfer.FileClientTest" time="0.068" />
+    <testcase name="pickerSearchAndMoreReuseBoundedSnapshotButRefreshAndMutationSeeNewFiles" classname="com.wkq.nas.transfer.FileClientTest" time="0.644" />
+    <testcase name="changedSourceInvalidatesPreviewAndPreservesFiles" classname="com.wkq.nas.transfer.FileClientTest" time="0.057" />
+    <testcase name="recursiveDeleteChecksFullPreviewAndDeletesEmptyParentsOnly" classname="com.wkq.nas.transfer.FileClientTest" time="0.072" />
+    <testcase name="listingSearchAndTypeFiltersHaveSameResultsFromCacheAndFreshEnumeration" classname="com.wkq.nas.transfer.FileClientTest" time="0.079" />
+    <testcase name="browserStatAndPagedListingExposeTypedConnectionFailure" classname="com.wkq.nas.transfer.FileClientTest" time="0.25" />
+    <testcase name="batchCancelKeepsCommittingAndCompletedFilesAndOneParent" classname="com.wkq.nas.transfer.FileClientTest" time="0.418" />
+    <testcase name="boundedListingKeepsDirectoryPriorityAndStableOrderingAcrossSortModes" classname="com.wkq.nas.transfer.FileClientTest" time="0.124" />
+    <testcase name="previewRejectsCollisionWithoutModifyingEitherFile" classname="com.wkq.nas.transfer.FileClientTest" time="0.06" />
+    <testcase name="boundedHistoryCandidatesDoNotLetAdvancedOrHiddenBatchesStarveVisibleRows" classname="com.wkq.nas.transfer.FileClientTest" time="0.119" />
+    <testcase name="rootAndUnsafeDirectoryOperationsAreDenied" classname="com.wkq.nas.transfer.FileClientTest" time="0.053" />
+    <testcase name="metadataReadsPreserveBrowsingSnapshotsButMutationAndExplicitRefreshInvalidateThem" classname="com.wkq.nas.transfer.FileClientTest" time="0.069" />
+    <testcase name="removingV2RecordDoesNotRemoveProfileOrBaseline" classname="com.wkq.nas.transfer.FileClientTest" time="0.095" />
+    <testcase name="interruptedMutationIsReportedWithoutRepeatingDestructiveOperations" classname="com.wkq.nas.transfer.FileClientTest" time="0.059" />
+    <testcase name="clearingHistoryPreservesUnverifiedCleanupAndRecoveryBackups" classname="com.wkq.nas.transfer.FileClientTest" time="0.081" />
+    <testcase name="wrappedConnectionRefusalIsNetworkErrorRatherThanGenericFailure" classname="com.wkq.nas.transfer.FileClientTest" time="0.052" />
+    <testcase name="historyRemovalChecksWholeBatchesAndPreservesAtomicRejection" classname="com.wkq.nas.transfer.FileClientTest" time="0.406" />
+    <testcase name="batchOutcomeCountsAllStatesRegardlessOfFailurePagination" classname="com.wkq.nas.transfer.FileClientTest" time="0.186" />
+    <testcase name="removingRecordsKeepsBackupAndRejectsActiveBatchAtomically" classname="com.wkq.nas.transfer.FileClientTest" time="0.089" />
+    <testcase name="browserCacheReusesDirectoryButFreshReadsAndMutationsBypassIt" classname="com.wkq.nas.transfer.FileClientTest" time="0.446" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.FileContentCacheTest" tests="17" skipped="0" failures="0" errors="0" time="1.278">
+    <testcase name="foldersAndTraversalAreRejectedWithoutPublishingCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.059" />
+    <testcase name="duplicateNamesAndZeroByteFilesAreIsolatedAndSourcesRemainUntouched" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.05" />
+    <testcase name="startupPruningSkipsActivePreparationWithoutWaitingForNetwork" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.046" />
+    <testcase name="exactLimitAndEmptyPreviewRemainSupportedAndCompletionTimeIsFresh" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.048" />
+    <testcase name="mediaAndDocumentFiltersIncludeSupportedPreviewFormats" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.05" />
+    <testcase name="independentPreviewDoesNotWaitForAnotherDownloadAndCleanupProtectsBoth" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.047" />
+    <testcase name="canceledPreparationDeletesItsPartialCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.039" />
+    <testcase name="interruptedProcessCacheIsCleanedBeforeNextPreparation" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.037" />
+    <testcase name="knownOversizedPreviewIsRejectedWithoutLeavingCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.032" />
+    <testcase name="isolatedWriteTestVerifiesAndCleansUpOnlyItsOwnFile" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.041" />
+    <testcase name="startupPruningDoesNotCreateAnUnusedCacheDirectory" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.034" />
+    <testcase name="sourceChangeRejectsCacheRatherThanSharingIncompleteContent" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.048" />
+    <testcase name="startupPruningRemovesExpiredAndInterruptedCopiesButPreservesFreshCopiesAndSources" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.05" />
+    <testcase name="unknownSizePreviewStopsAtLimitAndNeverPublishesPartialFile" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.123" />
+    <testcase name="cacheFileNamesPreserveExtensionAndUtf8ByteLimit" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.041" />
+    <testcase name="fullDirectorySelectionSourceIncludesAllFilteredPages" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.48" />
+    <testcase name="deviceGroupsKeepConnectionsIndependentAndPersistRenames" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.051" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.FilePreviewFormatsTest" tests="4" skipped="0" failures="0" errors="0" time="0.008">
+    <testcase name="textPreviewRemainsBounded" classname="com.wkq.nas.transfer.FilePreviewFormatsTest" time="0.003" />
+    <testcase name="utfBomAndExplicitLegacyEncodingDecodeWithoutGuessing" classname="com.wkq.nas.transfer.FilePreviewFormatsTest" time="0.003" />
+    <testcase name="malformedUtf8IsNotSilentlyReplaced" classname="com.wkq.nas.transfer.FilePreviewFormatsTest" time="0.001" />
+    <testcase name="typeRecognitionIsCaseInsensitiveAndUnknownFilesRemainExternal" classname="com.wkq.nas.transfer.FilePreviewFormatsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.LocalScanBenchmarkTest" tests="1" skipped="0" failures="0" errors="0" time="0.95">
+    <testcase name="measureFullAndSelectedDirectoryScan" classname="com.wkq.nas.transfer.LocalScanBenchmarkTest" time="0.95" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.PaidModeAccessTest" tests="4" skipped="0" failures="0" errors="0" time="0.299">
+    <testcase name="verifiedProCanSaveMirrorSync" classname="com.wkq.nas.transfer.PaidModeAccessTest" time="0.079" />
+    <testcase name="freeUserCanSaveManualIncrementalSync" classname="com.wkq.nas.transfer.PaidModeAccessTest" time="0.058" />
+    <testcase name="existingAutomaticProfileCannotExecuteWithoutEntitlement" classname="com.wkq.nas.transfer.PaidModeAccessTest" time="0.115" />
+    <testcase name="freeUserCannotSaveAdvancedModesOrAutomaticConditions" classname="com.wkq.nas.transfer.PaidModeAccessTest" time="0.047" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.ProviderFailureTest" tests="6" skipped="0" failures="0" errors="0" time="0.097">
+    <testcase name="cancellationAndInvalidParametersAreNotConvertedToRetryableFailures" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.021" />
+    <testcase name="explicitBusinessErrorsTakePrecedenceWhileTlsUsesActualCause" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.022" />
+    <testcase name="tlsDisconnectIsRetryableButUnverifiedPeerNeverBecomesNetworkOrTrusted" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.012" />
+    <testcase name="unknownIoIsNotMisrepresentedAsNetworkOrPermission" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.01" />
+    <testcase name="wrappedTransportAndPermissionErrorsRemainActionable" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.015" />
+    <testcase name="providerBoundaryConvertsNetworkFailureAndRetainsCause" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.017" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.ReliabilityTest" tests="17" skipped="0" failures="0" errors="0" time="1.173">
+    <testcase name="replacementRetainsOldUntilNewContentIsVerified" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.031" />
+    <testcase name="batchConflictResolutionPreservesExistingTargets" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.043" />
+    <testcase name="strictHashDetectsSameSizeCorruptTemporaryContent" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.019" />
+    <testcase name="corruptBackupCopyDoesNotRemoveOldTarget" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.023" />
+    <testcase name="changedConflictTargetInvalidatesSyncConfirmation" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.043" />
+    <testcase name="taskWindowIsBoundedWhileTotalsCoverAllHistoryAndClearPreservesFailures" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.13" />
+    <testcase name="corruptMutationPlanFailsWithoutBlockingTheNextOperation" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.14" />
+    <testcase name="corruptFinalContentKeepsOldBackup" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.034" />
+    <testcase name="persistedMutationExecutesAndInterruptedMutationIsNotReplayed" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.069" />
+    <testcase name="changedTargetInvalidatesReplacementPreview" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.022" />
+    <testcase name="committedReplacementIsRecoveredByDigestAndOldBackupRemoved" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.023" />
+    <testcase name="boundedListingFiltersBeforeSelectingPage" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.427" />
+    <testcase name="insufficientSpaceFailsBeforeWriting" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.014" />
+    <testcase name="savedSyncProfilesPersistWithoutStartingTransfers" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.049" />
+    <testcase name="manualRestoreRejectsSameSizeCorruptBackup" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.033" />
+    <testcase name="failedCommitRestoresOldTarget" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.026" />
+    <testcase name="strictSyncDetectsSameSizeAndTimestampWithDifferentContents" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.047" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.RenamePlannerTest" tests="3" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="directoriesAndDotFilesAreNotSplitAsExtensions" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.005" />
+    <testcase name="invalidNamesAndOverflowAreRejected" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.0" />
+    <testcase name="rulesPreserveExtensionsAndUseStableNumbering" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SelectionDraftStoreTest" tests="5" skipped="0" failures="0" errors="0" time="0.325">
+    <testcase name="interruptedAtomicWriteRestoresCommittedSelection" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.02" />
+    <testcase name="largeSelectionSurvivesNewStoreButCannotBeReadByAnotherOwner" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.07" />
+    <testcase name="corruptionTruncationAndExpiryNeverRestorePartialSelection" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.029" />
+    <testcase name="failedSaveDoesNotEvictExistingRecoverableDrafts" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.19" />
+    <testcase name="invalidPathsDuplicatesAndOversizeCannotLeaveUsableDraft" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.016" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SmbPathTest" tests="3" skipped="0" failures="0" errors="0" time="0.059">
+    <testcase name="smbPrefersSigningAndNeverNegotiatesSmb1" classname="com.wkq.nas.transfer.SmbPathTest" time="0.045" />
+    <testcase name="percentEncodedNamesRemainLiteralUrlSegments" classname="com.wkq.nas.transfer.SmbPathTest" time="0.013" />
+    <testcase name="urlDelimitersAreRejectedBeforeNetworkAccess" classname="com.wkq.nas.transfer.SmbPathTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.StartupRecoveryTest" tests="2" skipped="0" failures="0" errors="0" time="0.029">
+    <testcase name="failedFamilyDoesNotPreventOtherQueuesFromRecovering" classname="com.wkq.nas.transfer.StartupRecoveryTest" time="0.026" />
+    <testcase name="cancellationStopsRecoveryAndIsNotReportedAsFailure" classname="com.wkq.nas.transfer.StartupRecoveryTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.StorageIdentityTest" tests="3" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="sftpDefaultPortMatchesButPathsRemainCaseSensitive" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.002" />
+    <testcase name="webdavDefaultPortMatchesAndSiblingIsAllowed" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.0" />
+    <testcase name="defaultPortsAndSmbCaseCannotBypassNestedTargetGuard" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SyncDiagnosticsTest" tests="4" skipped="0" failures="0" errors="0" time="0.29">
+    <testcase name="exportRedactsValuesAndRetainsCrossInstanceSequenceAndReferences" classname="com.wkq.nas.transfer.SyncDiagnosticsTest" time="0.125" />
+    <testcase name="retentionReportsTruncationAndWriteFailureDoesNotThrow" classname="com.wkq.nas.transfer.SyncDiagnosticsTest" time="0.042" />
+    <testcase name="exportDoesNotTrustUnknownFieldsOrMalformedReferenceValues" classname="com.wkq.nas.transfer.SyncDiagnosticsTest" time="0.015" />
+    <testcase name="runExportDoesNotIncludeOtherRunsAndDetailedEventsRequireOptIn" classname="com.wkq.nas.transfer.SyncDiagnosticsTest" time="0.108" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SyncPlannerTest" tests="4" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="emptySourceDirectoryIsPlanned" classname="com.wkq.nas.transfer.SyncPlannerTest" time="0.001" />
+    <testcase name="unknownTimestampsCannotProveEquality" classname="com.wkq.nas.transfer.SyncPlannerTest" time="0.0" />
+    <testcase name="planPreservesExtraTargetsAndSeparatesConflicts" classname="com.wkq.nas.transfer.SyncPlannerTest" time="0.001" />
+    <testcase name="invalidRelativePathsAreRejected" classname="com.wkq.nas.transfer.SyncPlannerTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SyncScopeScannerTest" tests="6" skipped="0" failures="0" errors="0" time="0.302">
+    <testcase name="traversalSelectionIsRejectedBeforeProviderAccess" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.002" />
+    <testcase name="emptySelectionScansAllPublicDescendants" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.007" />
+    <testcase name="cancellationStopsWithinTheCurrentStreamedDirectory" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.011" />
+    <testcase name="oversizedStreamStopsAtLimitAndNeverReturnsATruncatedSuccessfulPlan" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.277" />
+    <testcase name="selectedFileKeepsAncestorsWithoutVisitingSiblingDirectories" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.004" />
+    <testcase name="selectedDirectorySkipsUnrelatedSubtreesAndKeepsDescendants" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.SyncSelectionTest" tests="2" skipped="0" failures="0" errors="0" time="0.04">
+    <testcase name="indexedSelectionMatchesExistingBoundarySemantics" classname="com.wkq.nas.transfer.SyncSelectionTest" time="0.001" />
+    <testcase name="tenThousandSelectedFilesDoNotIncludeUnrelatedSiblings" classname="com.wkq.nas.transfer.SyncSelectionTest" time="0.039" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TaskNotificationRouteTest" tests="2" skipped="0" failures="0" errors="0" time="0.022">
+    <testcase name="headlessHostCanRunTransfersWithoutNotificationClickRoute" classname="com.wkq.nas.transfer.TaskNotificationRouteTest" time="0.01" />
+    <testcase name="notificationHasExplicitImmutableApplicationRouteWithoutBusinessData" classname="com.wkq.nas.transfer.TaskNotificationRouteTest" time="0.012" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferConnectivityTest" tests="3" skipped="0" failures="0" errors="0" time="0.0">
+    <testcase name="meteredNetworkRequiresOptIn" classname="com.wkq.nas.transfer.TransferConnectivityTest" time="0.0" />
+    <testcase name="offlineDoesNotStartEvenWhenMeteredIsAllowed" classname="com.wkq.nas.transfer.TransferConnectivityTest" time="0.0" />
+    <testcase name="localNetworkDoesNotNeedInternetValidation" classname="com.wkq.nas.transfer.TransferConnectivityTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferDaoTest" tests="17" skipped="0" failures="0" errors="0" time="0.984">
+    <testcase name="parentJobHidesItsTransferChildren" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.032" />
+    <testcase name="queuedMutationWithoutFileResultsStillHasUsableAggregate" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.027" />
+    <testcase name="systemDeferralPreservesCommitDigestsAndPriorFailures" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.025" />
+    <testcase name="mutationAndItsFileRecordsAppearOnce" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.023" />
+    <testcase name="commitBoundaryCannotBePausedOrCanceled" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.022" />
+    <testcase name="syncBatchSummaryRemainsFullWhileChildrenAreHiddenFromTopLevel" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.153" />
+    <testcase name="queuedMutationAppearsBeforeItCreatesFileRecords" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.021" />
+    <testcase name="onlyOneWorkerCanClaimTask" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.02" />
+    <testcase name="systemDeferralCannotResumePausedCanceledOrCompletedTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.026" />
+    <testcase name="pauseAndCancelCannotBeOverwrittenByFailure" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.023" />
+    <testcase name="retryWaitDoesNotBlockReadyTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.024" />
+    <testcase name="failedBatchFilterRunsBeforePaginationAndSummaryKeepsEndpoints" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.077" />
+    <testcase name="localAndNetworkTasksUseSeparateConstraints" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.022" />
+    <testcase name="failedOperationFilterIncludesFailuresBeyondFirstPage" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.055" />
+    <testcase name="recoveryRetainsCheckpointsAndDoesNotResumePausedTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.029" />
+    <testcase name="operationTotalsAreNotLimitedToTheVisibleWindow" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.135" />
+    <testcase name="userGroupsCountAllFilesBeforeApplyingWindow" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.269" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferExecutorTest" tests="9" skipped="0" failures="0" errors="0" time="0.229">
+    <testcase name="emptyFileSucceeds" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.071" />
+    <testcase name="copyCommitsVerifiedFileAndRemovesTemporaryFile" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.025" />
+    <testcase name="corruptTemporaryWriteCannotBeCompleted" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.016" />
+    <testcase name="symlinkCannotEscapeLocalRoot" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.013" />
+    <testcase name="keepBothUsesAnotherName" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.027" />
+    <testcase name="cancellationDuringCopyDoesNotCreateFinalFile" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.023" />
+    <testcase name="conflictNeverDeletesExistingTarget" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.018" />
+    <testcase name="interruptedCommitRequiresMatchingHash" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.023" />
+    <testcase name="changedSourceDoesNotUpload" classname="com.wkq.nas.transfer.TransferExecutorTest" time="0.013" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferMigrationTest" tests="3" skipped="0" failures="0" errors="0" time="0.157">
+    <testcase name="versionTwoCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.057" />
+    <testcase name="versionThreeCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.047" />
+    <testcase name="versionOneCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.053" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferQueueSignalsTest" tests="2" skipped="0" failures="0" errors="0" time="0.014">
+    <testcase name="producerLifetimeWakesIdleConsumerAndOnlyRegistersUsedQueues" classname="com.wkq.nas.transfer.TransferQueueSignalsTest" time="0.014" />
+    <testcase name="runningConsumerCoalescesSignalsAndExitHandshakeCannotLoseLastEnqueue" classname="com.wkq.nas.transfer.TransferQueueSignalsTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.TransferQueueWorkerTest" tests="14" skipped="0" failures="0" errors="0" time="1.544">
+    <testcase name="localWorkerDoesNotConsumeNetworkQueue" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.14" />
+    <testcase name="interruptedStorageReturnsItsAttemptAndCannotOverwriteCanceledTask" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.043" />
+    <testcase name="silentDeleteFailureCannotBeMarkedDone" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.038" />
+    <testcase name="cleanupRetainsRecordWhenStorageUnavailableAndHonorsQueueNetworkPartition" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.098" />
+    <testcase name="cleanupRefusesDirectoriesAndRotatesFailuresWithoutStarvingLaterTasks" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.144" />
+    <testcase name="repeatedSystemInterruptionsDoNotExhaustFailureBudget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.143" />
+    <testcase name="revokedExternalStorageWaitsWithoutConsumingAttemptsOrBlockingOtherFiles" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.151" />
+    <testcase name="replacementPersistsOldAndNewDigestsBeforeCompleting" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.121" />
+    <testcase name="interruptedCleanupRemainsPendingAndRetryIsIdempotent" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.108" />
+    <testcase name="cleanupRemovesOnlyCanceledPartAndPreservesDestinationBackupAndPausedPart" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.097" />
+    <testcase name="failedFileDoesNotBlockNextFile" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.127" />
+    <testcase name="committedFileRecoveryVerifiesDigestWithoutReplacingExistingTarget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.113" />
+    <testcase name="canceledCopyIsNotRecoveredAndPreservesExistingTarget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.097" />
+    <testcase name="recoveringWorkerSkipsPausedAndAlreadyCompletedFiles" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.122" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.V2PayloadsTest" tests="7" skipped="0" failures="0" errors="0" time="3.435">
+    <testcase name="overwriteDeleteAndRollbackKeepMainRecordAndChunksAtomic" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.302" />
+    <testcase name="tenThousandItemPlanRoundTripsWithoutOversizedRows" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.436" />
+    <testcase name="largeMutationPlansAndLegacyPayloadsRemainReadableAndCleanable" classname="com.wkq.nas.transfer.V2PayloadsTest" time="1.212" />
+    <testcase name="failureDuringChunkWriteRollsBackToThePreviousCompletePlan" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.174" />
+    <testcase name="surrogateBoundaryAndMarkerTextArePreserved" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.024" />
+    <testcase name="missingOrModifiedChunkIsNeverReturnedAsValidPlan" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.146" />
+    <testcase name="legacyLargeUnicodeRecordReadsInBoundedSlices" classname="com.wkq.nas.transfer.V2PayloadsTest" time="1.14" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.V2Test" tests="54" skipped="0" failures="0" errors="0" time="9.698">
+    <testcase name="canceledQueuedJobCannotMutateFiles" classname="com.wkq.nas.transfer.V2Test" time="0.188" />
+    <testcase name="submissionReportsRealRecheckProgressAndStillDeduplicatesWithoutCopying" classname="com.wkq.nas.transfer.V2Test" time="0.161" />
+    <testcase name="importAddsNewIdsWithoutReplacingCredentials" classname="com.wkq.nas.transfer.V2Test" time="0.046" />
+    <testcase name="bulkCleanupKeepsOneCopyInEveryGroupAndRejectsForeignPaths" classname="com.wkq.nas.transfer.V2Test" time="0.046" />
+    <testcase name="changedSourceInvalidatesConfirmedSync" classname="com.wkq.nas.transfer.V2Test" time="0.132" />
+    <testcase name="automaticArchiveVerifiesDestinationBeforeRecyclingOriginal" classname="com.wkq.nas.transfer.V2Test" time="0.324" />
+    <testcase name="connectionExchangeExcludesLocalAndRejectsSecretsAndTraversal" classname="com.wkq.nas.transfer.V2Test" time="0.104" />
+    <testcase name="cleanupRetainsVerifiedRecoveryAndRestoreNeverOverwrites" classname="com.wkq.nas.transfer.V2Test" time="0.17" />
+    <testcase name="cleanupRequiresOneSurvivingCopyPerGroup" classname="com.wkq.nas.transfer.V2Test" time="0.051" />
+    <testcase name="duplicateAnalysisUsesContentAndExcludesRecoveryArea" classname="com.wkq.nas.transfer.V2Test" time="0.065" />
+    <testcase name="firstSyncCopiesBothDirectionsWithoutGuessingConflicts" classname="com.wkq.nas.transfer.V2Test" time="0.045" />
+    <testcase name="transferWaitReceivesCompletionAndParentCancellationWithoutPolling" classname="com.wkq.nas.transfer.V2Test" time="0.382" />
+    <testcase name="favoritesPersistAndInvalidPathsAreRejected" classname="com.wkq.nas.transfer.V2Test" time="0.178" />
+    <testcase name="legacyMigrationIsIdempotentAndKeepsOriginal" classname="com.wkq.nas.transfer.V2Test" time="0.058" />
+    <testcase name="sameSizeDifferentContentsAreNotDuplicates" classname="com.wkq.nas.transfer.V2Test" time="0.046" />
+    <testcase name="duplicateSyncReusesQueuedRunAndKeepsProfileAssociationAfterCompletion" classname="com.wkq.nas.transfer.V2Test" time="0.449" />
+    <testcase name="queuedUnsavedSyncProtectsBothConnectionsUntilCanceled" classname="com.wkq.nas.transfer.V2Test" time="0.157" />
+    <testcase name="mirrorRecyclesExtrasWhileIncrementalKeepsThem" classname="com.wkq.nas.transfer.V2Test" time="0.041" />
+    <testcase name="incrementalKeepTargetNeverUploadsTargetBackToSource" classname="com.wkq.nas.transfer.V2Test" time="0.218" />
+    <testcase name="safeSyncSubmissionRetainsOneJobAndReportsLocalScanTiming" classname="com.wkq.nas.transfer.V2Test" time="0.668" />
+    <testcase name="analysisKeepsFilesBeyondFirstPageAndUsesStableSizeOrder" classname="com.wkq.nas.transfer.V2Test" time="0.167" />
+    <testcase name="cleanupChecksTheRetainedCopyBeforeMutating" classname="com.wkq.nas.transfer.V2Test" time="0.15" />
+    <testcase name="incrementalProtectsLocalEditsAndKeepsUserConflictDecision" classname="com.wkq.nas.transfer.V2Test" time="0.038" />
+    <testcase name="baselineDeletionPropagatesOnlyAfterNewPreviewConfirmation" classname="com.wkq.nas.transfer.V2Test" time="0.336" />
+    <testcase name="malformedProfileDoesNotBlockOtherScheduleRecovery" classname="com.wkq.nas.transfer.V2Test" time="0.083" />
+    <testcase name="previewHasBoundedSizeAndRejectsPrivateArea" classname="com.wkq.nas.transfer.V2Test" time="0.057" />
+    <testcase name="corruptRecoveryCannotBeRestoredOrPurged" classname="com.wkq.nas.transfer.V2Test" time="0.167" />
+    <testcase name="oldProfileCodecHasSafeDefaults" classname="com.wkq.nas.transfer.V2Test" time="0.041" />
+    <testcase name="confirmedMirrorRecyclesExtraFilesAndEmptyDirectories" classname="com.wkq.nas.transfer.V2Test" time="0.211" />
+    <testcase name="directorySnapshotsAccumulateAcrossSyncChildEnqueues" classname="com.wkq.nas.transfer.V2Test" time="0.151" />
+    <testcase name="selectionSurvivesCodecAndExcludesUnselectedFiles" classname="com.wkq.nas.transfer.V2Test" time="0.346" />
+    <testcase name="archiveRuleRespectsExtensionsAgeAndDestinationBoundary" classname="com.wkq.nas.transfer.V2Test" time="0.159" />
+    <testcase name="syncRunSnapshotSurvivesCancellationWithoutDependingOnCurrentProfile" classname="com.wkq.nas.transfer.V2Test" time="0.155" />
+    <testcase name="deleteVersusEditRemainsConflict" classname="com.wkq.nas.transfer.V2Test" time="0.039" />
+    <testcase name="interruptedDestructiveJobIsNotReplayed" classname="com.wkq.nas.transfer.V2Test" time="0.11" />
+    <testcase name="connectionExchangeHasSymmetricCountAndEmptyBoundaries" classname="com.wkq.nas.transfer.V2Test" time="0.066" />
+    <testcase name="scanProgressIdentifiesBothSidesAndContentVerificationWithoutPaths" classname="com.wkq.nas.transfer.V2Test" time="0.195" />
+    <testcase name="baselineDistinguishesDeletionFromNewFiles" classname="com.wkq.nas.transfer.V2Test" time="0.039" />
+    <testcase name="unchangedScanIsSavedWithoutReadingTheTreesAgain" classname="com.wkq.nas.transfer.V2Test" time="0.111" />
+    <testcase name="cancelDoesNotNeedToLoadACorruptedLargePlan" classname="com.wkq.nas.transfer.V2Test" time="0.158" />
+    <testcase name="progressSubmissionStillRejectsChangedTargetAndCancellationBeforeQueueing" classname="com.wkq.nas.transfer.V2Test" time="0.138" />
+    <testcase name="periodicWaitsForOtherJobAndUnchangedRecoveryClearsWaiting" classname="com.wkq.nas.transfer.V2Test" time="0.143" />
+    <testcase name="safeSyncRejectsNewDestinationBetweenScanAndSubmission" classname="com.wkq.nas.transfer.V2Test" time="0.126" />
+    <testcase name="selectedConflictWinnerPreservesLosingVersion" classname="com.wkq.nas.transfer.V2Test" time="0.356" />
+    <testcase name="localAvailabilityRequiresActualRoot" classname="com.wkq.nas.transfer.V2Test" time="0.16" />
+    <testcase name="corruptQueuedPlanFailsSafelyAndDoesNotBlockANewSync" classname="com.wkq.nas.transfer.V2Test" time="0.374" />
+    <testcase name="parentCancelDuringRecycleCopyStopsBeforeDeletingSource" classname="com.wkq.nas.transfer.V2Test" time="0.121" />
+    <testcase name="sourceMissingDoesNotBecomeMirrorDeletionPlan" classname="com.wkq.nas.transfer.V2Test" time="0.099" />
+    <testcase name="selectedPathDisappearanceIsNotEmptySource" classname="com.wkq.nas.transfer.V2Test" time="0.114" />
+    <testcase name="scheduleWithDeletionsWaitsForManualConfirmation" classname="com.wkq.nas.transfer.V2Test" time="0.128" />
+    <testcase name="emptyDirectoryDeletionUsesBaseline" classname="com.wkq.nas.transfer.V2Test" time="0.043" />
+    <testcase name="singleSideEditPropagatesAndBothEditsConflict" classname="com.wkq.nas.transfer.V2Test" time="0.036" />
+    <testcase name="smallFilesCompleteThroughRealQueueAndKeepContentChecks" classname="com.wkq.nas.transfer.V2Test" time="1.182" />
+    <testcase name="twoWayExecutesBothDirectionsAndCommitsBaselineAfterVerification" classname="com.wkq.nas.transfer.V2Test" time="0.369" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.V2WorkerTest" tests="2" skipped="0" failures="0" errors="0" time="0.217">
+    <testcase name="offlineNasRemainsRetryableAndRecordsNetworkWaiting" classname="com.wkq.nas.transfer.V2WorkerTest" time="0.116" />
+    <testcase name="deletedSourceFolderStopsAutomaticRetryAndPersistsRepairReason" classname="com.wkq.nas.transfer.V2WorkerTest" time="0.101" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.WebDavCertificatesTest" tests="7" skipped="0" failures="0" errors="0" time="0.367">
+    <testcase name="expiredPinnedCertificateIsStillRejected" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.155" />
+    <testcase name="differentCertificateIsBlockedBeforeCredentialsAreSent" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.039" />
+    <testcase name="defaultRejectsPrivateCertificateBeforeCredentialsAreSent" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.045" />
+    <testcase name="inspectionOnlyObservesCertificateAndSendsNoHttp" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.039" />
+    <testcase name="pinsCannotEnablePlainHttp" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.015" />
+    <testcase name="malformedPinsAreRejected" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.014" />
+    <testcase name="confirmedCertificateAllowsIpMismatchButKeepsAuthentication" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.059" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.WebDavProviderTest" tests="7" skipped="0" failures="0" errors="0" time="0.133">
+    <testcase name="authenticationFailuresAreNotRetryable" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.016" />
+    <testcase name="redirectsDoNotLeakCredentials" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.016" />
+    <testcase name="unavailableOptionalPropertiesDoNotDiscardValidSize" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.017" />
+    <testcase name="uploadAndCommitCannotOverwriteExistingTargets" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.021" />
+    <testcase name="parsesNamespacedMetadataAndEncodedFileNames" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.023" />
+    <testcase name="listingCannotEscapeConfiguredRoot" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.016" />
+    <testcase name="visitsStreamEntriesWithoutRetainingDuplicateResponsesAndRejectsLateInvalidPaths" classname="com.wkq.nas.transfer.WebDavProviderTest" time="0.024" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" tests="10" skipped="0" failures="0" errors="0" time="0.271">
+    <testcase name="fullRemoteStorageDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.033" />
+    <testcase name="authenticationFailureDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.026" />
+    <testcase name="verifiedReplacementDeletesBackupOnlyAfterSuccess" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.04" />
+    <testcase name="disconnectedUploadDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.018" />
+    <testcase name="concurrentTargetIsNeverOverwrittenByRollback" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.026" />
+    <testcase name="failedHttpRollbackRetainsRecoverableOriginalBackup" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.026" />
+    <testcase name="failedHttpCommitRestoresOriginalContent" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.026" />
+    <testcase name="corruptedUploadIsRejectedBeforeOriginalIsMoved" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.018" />
+    <testcase name="retryAfterFailedCommitFinishesWithExactContentAndNoOrphanBackup" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.042" />
+    <testcase name="permissionFailureDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.016" />
+  </testsuite>
+  <testsuite name="com.wkq.nas.transfer.WorkerProvidersTest" tests="4" skipped="0" failures="0" errors="0" time="0.163">
+    <testcase name="sameEndpointPairDoesNotLockItselfAndBusyCapacityFallsBack" classname="com.wkq.nas.transfer.WorkerProvidersTest" time="0.01" />
+    <testcase name="invalidatesChangedIdentityAndFailures" classname="com.wkq.nas.transfer.WorkerProvidersTest" time="0.003" />
+    <testcase name="cancelReleasesSessionAndSerializesConcurrentUseOfSameEndpoint" classname="com.wkq.nas.transfer.WorkerProvidersTest" time="0.139" />
+    <testcase name="reusesOneSessionAndClosesAtScopeEndIncludingNullableResults" classname="com.wkq.nas.transfer.WorkerProvidersTest" time="0.011" />
+  </testsuite>
+  <testsuite name="com.lxj.xpopup.core.PopupInsetCalculatorTest" tests="5" skipped="0" failures="0" errors="0" time="0.007">
+    <testcase name="repeatedDispatchUsesInitialPaddingWithoutAccumulationAndKeepsPhysicalRtlSides" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.003" />
+    <testcase name="autoKeepsLegacyImmersiveTypesAndProtectsForcedEdgeToEdgeHosts" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.004" />
+    <testcase name="safeAreaUsesLargestSystemBarAndCutoutOnEverySide" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.0" />
+    <testcase name="imeTemporarilyRemovesBottomSafePaddingAndRestoresItWhenHidden" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.0" />
+    <testcase name="edgeToEdgeNeverAddsAutomaticPadding" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.BundledIdPhotoCatalogTest" tests="5" skipped="0" failures="0" errors="0" time="3.185">
+    <testcase name="bundledJurisdictionRegistryExposesGlobalCoverageWithoutInventingRules" classname="com.phototoolkit.engine.BundledIdPhotoCatalogTest" time="3.001" />
+    <testcase name="officialVariantGenerationRequiresCurrentSourcesAndEffectiveDates" classname="com.phototoolkit.engine.BundledIdPhotoCatalogTest" time="0.065" />
+    <testcase name="bundledCatalogSeparatesVerifiedRulesFromReferencePresets" classname="com.phototoolkit.engine.BundledIdPhotoCatalogTest" time="0.053" />
+    <testcase name="officialSourceFreshnessExpiresAfterProductReviewWindow" classname="com.phototoolkit.engine.BundledIdPhotoCatalogTest" time="0.019" />
+    <testcase name="bundledCatalogLocalizesCommercialRequirements" classname="com.phototoolkit.engine.BundledIdPhotoCatalogTest" time="0.047" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.GeneratedIdPhotoContractTest" tests="2" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="standardGeneratedResultMatchesExpectedContract" classname="com.phototoolkit.engine.GeneratedIdPhotoContractTest" time="0.005" />
+    <testcase name="generatedResultWithWrongDimensionsOrFormatIsBlocked" classname="com.phototoolkit.engine.GeneratedIdPhotoContractTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" tests="5" skipped="0" failures="0" errors="0" time="0.005">
+    <testcase name="planUsesEyeLineWithoutLeavingAllowedTopRange" classname="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" time="0.001" />
+    <testcase name="onlyHardCompositionViolationBlocksExport" classname="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" time="0.0" />
+    <testcase name="softEyeLineDoesNotPushPortraitTowardTop" classname="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" time="0.0" />
+    <testcase name="shoulderLineUsesAllowedRangeToReduceExcessBody" classname="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" time="0.004" />
+    <testcase name="planKeepsRequestedHeadAndTopWhenSpecHasNoEyeRule" classname="com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.IdPhotoOutputFormatTest" tests="1" skipped="0" failures="0" errors="0" time="0.0">
+    <testcase name="usesStableFileExtensionsForExportAndDiagnostics" classname="com.phototoolkit.engine.IdPhotoOutputFormatTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.IdPhotoPrintSheetPlannerTest" tests="3" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="keepsHongKongPortraitOrientationInsteadOfPlanningRotatedRows" classname="com.phototoolkit.engine.IdPhotoPrintSheetPlannerTest" time="0.0" />
+    <testcase name="keepsLargePortraitWithinFourBySixBounds" classname="com.phototoolkit.engine.IdPhotoPrintSheetPlannerTest" time="0.001" />
+    <testcase name="rejectsPhotoThatCannotFitAtOriginalPixelSize" classname="com.phototoolkit.engine.IdPhotoPrintSheetPlannerTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.IdPhotoSourceQualityGateTest" tests="2" skipped="0" failures="0" errors="0" time="0.0">
+    <testcase name="acceptsHeadWithEnoughSourcePixels" classname="com.phototoolkit.engine.IdPhotoSourceQualityGateTest" time="0.0" />
+    <testcase name="blocksHeadThatRequiresExcessiveUpscaling" classname="com.phototoolkit.engine.IdPhotoSourceQualityGateTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.PortraitHeadGeometryEstimatorTest" tests="2" skipped="0" failures="0" errors="0" time="0.029">
+    <testcase name="keepsNearbyCrownFromPortraitMask" classname="com.phototoolkit.engine.PortraitHeadGeometryEstimatorTest" time="0.015" />
+    <testcase name="fallsBackToFaceBoxWhenMaskFindsCrownFarAboveFace" classname="com.phototoolkit.engine.PortraitHeadGeometryEstimatorTest" time="0.014" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.PortraitMattingMaskQualityTest" tests="3" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="accepts a mask with foreground and background" classname="com.phototoolkit.engine.PortraitMattingMaskQualityTest" time="0.001" />
+    <testcase name="rejects transparent model result" classname="com.phototoolkit.engine.PortraitMattingMaskQualityTest" time="0.001" />
+    <testcase name="rejects opaque model result" classname="com.phototoolkit.engine.PortraitMattingMaskQualityTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.engine.PortraitRoiPlannerTest" tests="2" skipped="0" failures="0" errors="0" time="0.001">
+    <testcase name="roiAlwaysStaysInsideImageAtEdges" classname="com.phototoolkit.engine.PortraitRoiPlannerTest" time="0.001" />
+    <testcase name="decodedRoiCoordinatesMapBackToOriginalPixels" classname="com.phototoolkit.engine.PortraitRoiPlannerTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.phototoolkit.raw.RawDevelopOptionsTest" tests="3" skipped="0" failures="0" errors="0" time="0.022">
+    <testcase name="modelsInspectPreviewDevelopAndVipsPostPipeline" classname="com.phototoolkit.raw.RawDevelopOptionsTest" time="0.021" />
+    <testcase name="acceptsSixteenBitTiff" classname="com.phototoolkit.raw.RawDevelopOptionsTest" time="0.0" />
+    <testcase name="rejectsSixteenBitJpeg" classname="com.phototoolkit.raw.RawDevelopOptionsTest" time="0.0" />
+  </testsuite>
+</testsuites>

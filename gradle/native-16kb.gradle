@@ -1,0 +1,63 @@
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+
+// 对打包副本规范化 RELRO 尾部填充；不改动依赖缓存、源文件或真实可写数据。
+tasks.matching { it.name.startsWith('merge') && it.name.endsWith('NativeLibs') }.configureEach { mergeTask ->
+    inputs.file(rootProject.file('gradle/native-16kb.gradle'))
+    doLast {
+        mergeTask.outputs.files.asFileTree.matching { include '**/arm64-v8a/*.so', '**/x86_64/*.so' }.each { library ->
+            byte[] bytes = library.bytes
+            def buffer = ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN)
+            if (buffer.getInt(0) != 0x464c457f || buffer.get(4) != 2 || buffer.get(5) != 1) {
+                throw new GradleException("Invalid ELF64: ${library.name}")
+            }
+            long table = buffer.getLong(32)
+            int size = Short.toUnsignedInt(buffer.getShort(54))
+            int count = Short.toUnsignedInt(buffer.getShort(56))
+            def headers = (0..<count).collect { i ->
+                int p = Math.toIntExact(table + i * size)
+                [type: buffer.getInt(p), address: buffer.getLong(p + 16),
+                 fileSize: buffer.getLong(p + 32), memSize: buffer.getLong(p + 40),
+                 align: buffer.getLong(p + 48), position: p]
+            }
+            def loads = headers.findAll { it.type == 1 }
+            if (loads.isEmpty() || loads.any { it.align < 16384 }) {
+                throw new GradleException("16KB LOAD alignment required: ${library.name}")
+            }
+            boolean changed = false
+            headers.findAll { it.type == 0x6474e552 }.each { relro ->
+                long end = relro.address + relro.memSize
+                if ((end % 16384) != 0) {
+                    long rounded = ((end + 16383).intdiv(16384)) * 16384
+                    def containing = loads.findAll {
+                        it.address <= relro.address && it.address + it.fileSize == relro.address + relro.fileSize &&
+                        it.address + it.memSize <= relro.address + relro.memSize
+                    }
+                    if (containing.size() != 1 || rounded > ((containing[0].address + containing[0].memSize + 16383).intdiv(16384)) * 16384) {
+                        throw new GradleException("Unsafe RELRO padding: ${library.name}")
+                    }
+                    if (loads.any { other ->
+                        other.position != containing[0].position &&
+                        other.address.intdiv(16384) * 16384 < rounded &&
+                        (other.address + other.memSize + 16383).intdiv(16384) * 16384 > end
+                    }) {
+                        throw new GradleException("RELRO overlaps writable LOAD: ${library.name}")
+                    }
+                    buffer.putLong(relro.position + 40, rounded - relro.address)
+                    buffer.putLong(containing[0].position + 40, rounded - containing[0].address)
+                    changed = true
+                }
+            }
+            if (changed) {
+                def temporary = java.nio.file.Files.createTempFile(library.parentFile.toPath(), 'relro-', '.tmp')
+                try {
+                    java.nio.file.Files.write(temporary, bytes)
+                    java.nio.file.Files.move(temporary, library.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+                } finally {
+                    java.nio.file.Files.deleteIfExists(temporary)
+                }
+                logger.lifecycle("16KB RELRO padding normalized: ${library.name}")
+            }
+        }
+    }
+}

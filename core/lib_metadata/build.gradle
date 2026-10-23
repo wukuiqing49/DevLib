@@ -1,0 +1,71 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+
+apply from: rootProject.file('gradle/native-16kb.gradle')
+
+android {
+    packagingOptions { jniLibs { useLegacyPackaging true } }
+    namespace = 'com.wkq.exif'
+    compileSdk appConfig.compileSdk
+
+    defaultConfig {
+        minSdk 23
+        // 独立设备测试包使用项目目标版本，避免被系统当作旧版应用拦截。
+        targetSdk appConfig.targetSdk
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.all {
+            systemProperty 'file.encoding', 'UTF-8'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = appConfig.jvmTarget
+        freeCompilerArgs.addAll(["-Xskip-metadata-version-check"])
+    }
+}
+
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
+dependencies {
+    implementation pressLibs.androidx.core.ktx
+    implementation pressLibs.androidx.appcompat
+    implementation pressLibs.androidx.room.runtime
+    implementation pressLibs.androidx.room.ktx
+    implementation pressLibs.kotlinx.coroutines.android
+    ksp pressLibs.androidx.room.compiler
+    
+    // 暴露给其他引入core_exif的业务模块，避免重复依赖
+    api pressLibs.androidx.exifinterface
+    api pressLibs.commons.imaging
+    implementation pressLibs.metadata.extractor
+
+    testImplementation pressLibs.sqlite.jdbc
+    testImplementation pressLibs.junit
+    testImplementation pressLibs.robolectric
+    androidTestImplementation pressLibs.androidx.junit
+    androidTestImplementation pressLibs.androidx.test.runner
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

@@ -1,0 +1,16 @@
+<resources>
+    <string name="camera_capture_title">SiteReport 拍摄</string>
+    <string name="camera_location_loading">正在定位…</string>
+    <string name="camera_location_unavailable">无法获取位置</string>
+    <string name="camera_location_coordinates">纬度 %1$.5f，经度 %2$.5f</string>
+    <string name="camera_capture_in_progress">正在拍摄…</string>
+    <string name="camera_capture_saved_to_gallery">照片已保存到相册</string>
+    <string name="camera_capture_saved_to_gallery_with_location">照片已保存到相册，纬度 %1$.5f，经度 %2$.5f</string>
+    <string name="camera_capture_failed_with_reason">拍摄失败：%1$s</string>
+    <string name="camera_capture_save_failed_with_reason">保存照片失败：%1$s</string>
+    <string name="camera_start_failed_with_reason">启动相机失败：%1$s</string>
+    <string name="camera_permission_required">需要相机和位置权限</string>
+    <string name="camera_preview_content_desc">相机预览</string>
+    <string name="camera_capture_button_desc">拍照</string>
+    <string name="camera_back">返回</string>
+</resources>

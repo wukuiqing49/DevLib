@@ -1,0 +1,962 @@
+[
+  {
+    "path": "arm64-v8a/libperl_xs_attributes.so",
+    "originalSha256": "02f2d1b1835ed45ed721895fbfe07337880cb905512a96c2b94759a87f4d2488",
+    "sha256": "b59077263c9400a5035ac400a048b4cf13fdc9aef2dbd62282255ffcc165ef6d"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_B.so",
+    "originalSha256": "2eca4b60733ff341e47b65853f35c52868b8fc3d82be88eb20ea4c062ac014e8",
+    "sha256": "b3337f2e68b8cc8dbbea2200ddd17a7740be26aea3a068ce5e3bf0cbdbb616c5"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Compress__Raw__Bzip2.so",
+    "originalSha256": "0e1b46cbca7d93e22d7c2bbe04393de211c90fd4456c45f432ed3c2c0acc2317",
+    "sha256": "449ac9789da18f305d5eed0b90e1bc4716bd630a6cfa71f3f2facafe2780bc03"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Compress__Raw__Zlib.so",
+    "originalSha256": "b192064061f13ca30eeba2fda6793d5467d6e3dafcb74aa2abd3fa0608e4f025",
+    "sha256": "c5049a94299d54c06be816661ec082a5ca81bd318046679e1425601afdfbf58d"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Cwd.so",
+    "originalSha256": "eb3363efa7a8bb489c8731bf143a9eb460a654d670f5c367044bfe7fa6960076",
+    "sha256": "43dd4f87e643b5341734c58d1245a91bda64f07bef944182c6a35e4f8bf5ff30"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Data__Dumper.so",
+    "originalSha256": "620eccdeb6395bce1a3bc74da4af2eae835954bfff3394c783b668b1e1760e6d",
+    "sha256": "857c5128e8a828697f51f4ed48335b92a8f878080db99150beb176086f196af0"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Devel__Peek.so",
+    "originalSha256": "456f970d1878ea12c1e096178e15f386276341f548fd0aea5515d323fafec6af",
+    "sha256": "456f970d1878ea12c1e096178e15f386276341f548fd0aea5515d323fafec6af"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Digest__MD5.so",
+    "originalSha256": "071762182c66d802765e5251cff4542d0a872fd06d9c0e7f51189407cd233587",
+    "sha256": "071762182c66d802765e5251cff4542d0a872fd06d9c0e7f51189407cd233587"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Digest__SHA.so",
+    "originalSha256": "202bb9b0f9977586b855bccecba46d19d884d4151f5dd3033ef1cc47204fe647",
+    "sha256": "202bb9b0f9977586b855bccecba46d19d884d4151f5dd3033ef1cc47204fe647"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__Byte.so",
+    "originalSha256": "3f8bb5be4f5c7147f57d8b39606052253dc9af8a5dde639732b0d18549bd9c69",
+    "sha256": "4316fa52701fe38c27f82738f2c685ba4e5aa5809567fbdd204fd1240da441db"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__CN.so",
+    "originalSha256": "13a5206dc83eceadeabf1bdc7eaf7977b25f6bba19e0719c5453f1f59b2e69e6",
+    "sha256": "b52183fe2f10e2ba07f32924469f5da870b2f92124482b715b9117a3f9647e10"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__EBCDIC.so",
+    "originalSha256": "2c8c463c27d9c030c6994b3ec07a3cdaa454069b933ad92ec7ccea503c5b5b75",
+    "sha256": "aaaaffd54820152eb6916a2a5a46c439aa73162076014908d47b13d9e41403a6"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__JP.so",
+    "originalSha256": "7b2c61f9e60ebae82e9b4845e417c0640249ffa2a696a9f3cccac530d14385b6",
+    "sha256": "d166644f6857cfe5539f522492a21a18f4bd7990efab875488fbee7ef912322e"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__KR.so",
+    "originalSha256": "6682b54888205206454de0e8d67163f93c432fa466164b65caae91c98fed6df7",
+    "sha256": "952f470228de43323780d8705fc8ef53c959363d5769812ba4e0dbbf6aa51434"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__Symbol.so",
+    "originalSha256": "749de896a9a6df8248445e124769f78705aab57ddd147d07e3ef9ed7526f667e",
+    "sha256": "749de896a9a6df8248445e124769f78705aab57ddd147d07e3ef9ed7526f667e"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__TW.so",
+    "originalSha256": "0b67a15193cce3395ed6a57200bbafbcff026b30bca6059495dc6590f168568b",
+    "sha256": "0b67a15193cce3395ed6a57200bbafbcff026b30bca6059495dc6590f168568b"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode__Unicode.so",
+    "originalSha256": "d712360216fa012e3ec8ff09705c469a041d9fa2f718625133917f06a5a44d63",
+    "sha256": "d712360216fa012e3ec8ff09705c469a041d9fa2f718625133917f06a5a44d63"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Encode.so",
+    "originalSha256": "486bb2e73c1fed3b0dc746b72a64a3aa5bc444952dfe7d0fa63bc0d563c81953",
+    "sha256": "cc2ecf21838c58888e97001bb24e04b9bab72ade33749228595b0af6faa7ff73"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Fcntl.so",
+    "originalSha256": "22bcced68e226ab983a30918e0c8c206b601b662832fa2a2fb2272ba8dcfdebc",
+    "sha256": "63ba0242e8fe40d6ded049da7ae46e74c5cbff2311ed869362cbc0e92a1448c2"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_File__DosGlob.so",
+    "originalSha256": "16db6447ad2f4ac468f6bc85268e7cba4a826f7691db393989b2a8dc17949ef9",
+    "sha256": "aaffe6d400c1cee626e9eacb4b2776a53c228b6341623a21eedda430160e598a"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_File__Glob.so",
+    "originalSha256": "7cb3256a08948eb20bd14220f9900b2f7af04382620dec0dabe84a197b71300a",
+    "sha256": "31f0d5afa2c064ac59c8c943021e10f22898eb4e4bb4b4417e7b832e37ac67f2"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Filter__Util__Call.so",
+    "originalSha256": "237a525eff2d4b59b1a45f7735d9911ac387f07c5b8cb1e4507f563c6794e721",
+    "sha256": "688cc234127674457752cb230524433ed3d3449a33a8a1ccf33284228e0f3de6"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Hash__Util__FieldHash.so",
+    "originalSha256": "304ae97c4c4feab9b32fd61c9816acddb3307887c8a34271f2ea3b18fb81b30f",
+    "sha256": "304ae97c4c4feab9b32fd61c9816acddb3307887c8a34271f2ea3b18fb81b30f"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Hash__Util.so",
+    "originalSha256": "32c49787ed55879854e6d3943b421de7b79cdfceabc0aff1d8066b810c6797f1",
+    "sha256": "32c49787ed55879854e6d3943b421de7b79cdfceabc0aff1d8066b810c6797f1"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_IO.so",
+    "originalSha256": "baf9c97da4cf696aee427fdd581bfd1fcc2c48136c08acf85aaa4d593f018cee",
+    "sha256": "baf9c97da4cf696aee427fdd581bfd1fcc2c48136c08acf85aaa4d593f018cee"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_List__Util.so",
+    "originalSha256": "78132bdb4a471cb83e809457a25d7ba68b85639915b9a2dd8dd52e3a4f8e14ce",
+    "sha256": "78132bdb4a471cb83e809457a25d7ba68b85639915b9a2dd8dd52e3a4f8e14ce"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Math__BigInt__FastCalc.so",
+    "originalSha256": "b305438fc49c92efedc4122a568e0e8d2d3a545847b44c68174fd0958082b577",
+    "sha256": "6fb3261594364177689fbef11c5e73138166185ee16013975ea60fb4ce5c9458"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_MIME__Base64.so",
+    "originalSha256": "4eb336722cd2174fb1ea9e328542dbe3dfc7defd3e5872373ff0adf6495411b5",
+    "sha256": "e8fad458dc9a3f13cf498309922f593386366f4202ad6e4f02e942eae921f707"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_mro.so",
+    "originalSha256": "ff7be6767190d6e69ad2dfce3c62538bbf9506666bfdab66339b9fb238e04ffb",
+    "sha256": "ff7be6767190d6e69ad2dfce3c62538bbf9506666bfdab66339b9fb238e04ffb"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Opcode.so",
+    "originalSha256": "4cb83ca9742391645736cf3e854f8ba1b38798632d8c1abb5565b7a414487e5c",
+    "sha256": "2aa8f1c289937e1fa119539769cc4d9df12199f8c8b5383b262232f5e9061dbf"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_PerlIO__encoding.so",
+    "originalSha256": "6cbf77aa3fe93949ce9492c9a5dfcd31faccc9a942e7398ea9d89bf46d6c508c",
+    "sha256": "938fc5b8dc3cd2dfa453581af36728cf01fa11986beaf7ec1dd211a7398d0994"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_PerlIO__mmap.so",
+    "originalSha256": "01073fc5ef365937cda9fbca7fd9fbd40787deefdb92ad1cb5b682ba05a09556",
+    "sha256": "38ae700b48075bca081c9c799d564cb1752efac6f509a10d20409026892982d4"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_PerlIO__scalar.so",
+    "originalSha256": "c4d75ff3df623aeb23cd904b60f9bb695d55f41c2a85b000f68070ed1a0b62e1",
+    "sha256": "8ace9a7fac0ec0c1af59ddf97a20a314cd0548073c3817225eba9b924f91e3e4"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_PerlIO__via.so",
+    "originalSha256": "22ce1b1cde3117dc6d6acbb9caebbb82d49413ea525606a59b84eef925f809d1",
+    "sha256": "ba715cb6dd129d6c0884f9b3b1c2ec5ab8a316bb6dc7dc57a360fd1b4d62e464"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_POSIX.so",
+    "originalSha256": "3273fb3802cb6f5ea71d71e1436e4fee146740781147c239aacc5ddba7b5e945",
+    "sha256": "926d6d9ace53add4a088fad80bf0f27116bde92ae828e14d47fe3f886a75bf15"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_re.so",
+    "originalSha256": "16b611bb85422247f38185e44c09281be10f25a712fb208ec3f11ca036afd4b4",
+    "sha256": "16b611bb85422247f38185e44c09281be10f25a712fb208ec3f11ca036afd4b4"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_SDBM_File.so",
+    "originalSha256": "a286fe395c3a9728670f7989173f6703d1cb07af400029dbcb9bbd032b0fc89d",
+    "sha256": "8d642c5c3d30cd2774b5cbecf9af112ab1ddf68eb4e2763777025b84a8a032d0"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Socket.so",
+    "originalSha256": "daa2ceef428bd366cd2ca6b4348d8ec46724061b5199d886a91f6c4427d7a4ee",
+    "sha256": "536f9b966141cd26c306ad7ac91ed17a7ac88af7c7cb6344800187f54f4e78a1"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Storable.so",
+    "originalSha256": "e749033fa722e8505f3be5164db39d78184a8c15c2f548ce6f81267f6662462c",
+    "sha256": "e749033fa722e8505f3be5164db39d78184a8c15c2f548ce6f81267f6662462c"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Sys__Hostname.so",
+    "originalSha256": "603f35cac4a1469328e14bf372724171b7716b35aa471a03dd568e6616d6440c",
+    "sha256": "36e16b6bcf9074b26f950e1f7a990dc9edee528b5134bca5fde3e63a8c717152"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Sys__Syslog.so",
+    "originalSha256": "e0055ee5f0a02808dff7da6ab3ccc06bbeafc97e187976c0973945ac42bcd159",
+    "sha256": "a13607859010c9d50a0119623ae9c51646c9af9fbb5f338ed1e326024d54f630"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_threads__shared.so",
+    "originalSha256": "90d091ddd15b1c8760ee9aceb0d0758237cf603f5fd828ac483a4e7105d99cdd",
+    "sha256": "32bd0bd378652fd18b4bce85315e8ff4947be874a1edaa5ba4f88aca3515554b"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_threads.so",
+    "originalSha256": "590ebecb43a820c458d7dd349e4454436130743bffd4737fc6ff5d69d8d10b1a",
+    "sha256": "deb5d2a5cf41a5e50d6017890061ca6d69702e4e252055010665de4a6c9ad34b"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Time__HiRes.so",
+    "originalSha256": "d754ca39ec61be102ab5e5b568609310495c73e122f2b375e2ddc9a6705812a8",
+    "sha256": "72f3d40f666fcb47ac82597c7c0d028f874f4860d05bef49edd559f6987fc5f1"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Time__Piece.so",
+    "originalSha256": "0b6ab54ec0ccd87586bacb502335c28899c3fec48087275e0c2d75e4a186f2c2",
+    "sha256": "4bd22ab3ef0294dd1272774f795e88f6baf3a3a6289fa1e5107649e5234125ce"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Unicode__Collate.so",
+    "originalSha256": "80697861b345ff9b7dab82f9ebfb5d0dfdac3ba1a3bbdc836f2b23ac84850570",
+    "sha256": "44d6ba1c553f61c4a94e1e07a3255ab81f5580dd69408c9cba08ff2539c3bd14"
+  },
+  {
+    "path": "arm64-v8a/libperl_xs_Unicode__Normalize.so",
+    "originalSha256": "5d8545a7666b357f8aa12ff4059f51431afa5595bdcda72de3e8615fb28daedc",
+    "sha256": "b757b6c8580c914973dbbed967976db32d5ab04dd2593b12a4fc5202b4c9d7ae"
+  },
+  {
+    "path": "arm64-v8a/libperl.so",
+    "originalSha256": "91bd8f069dc7fd11c43cd3a1f681edaefa13d4c1af6f246a5137edb2f44444be",
+    "sha256": "1f307e35df6a56629950b31a0cf1cf8f019fef09f7434616ee4ff1ed71282e2b"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_attributes.so",
+    "originalSha256": "30a28b2f432b44d95dda574b27d864d00dd795238f2e62912e7b92581a8a5142",
+    "sha256": "53a1408d347fa72fa11b3b0ad14eada6ed49f6f0910fa622f664828f688bb0ad"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_B.so",
+    "originalSha256": "17bd49d595db1d36630db4e62fba2acbb86fe2efefcf7e0576b1903b3cec07de",
+    "sha256": "07ca519e12ddf68203cae5d22107eccfc599cc9d6ab7b6c11ee13c8916b41f7c"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Compress__Raw__Bzip2.so",
+    "originalSha256": "4f02437c5db049d86e55039bfa9df55f54c3ac35e0338b0e5217a1b18424f9c6",
+    "sha256": "f0c51961b524ca38e39651de531c28560aadde6d67a731c1ed3de462e29739dc"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Compress__Raw__Zlib.so",
+    "originalSha256": "2a44331599752c2731fa5e8f397936894691fa02986ea26726d8209a8c7017d6",
+    "sha256": "0b528ba9b676d4b3b1d5d323a063fddc235da176000774cbc5c9916b6033e618"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Cwd.so",
+    "originalSha256": "da0a1806166bd234ad364c2f8340e58836096d59ef1a64982b870dc31a7030cf",
+    "sha256": "8291e0464e0dc3c9d8715dfd1eebc962ab3fc8a08e40a91ac184d186a67f24da"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Data__Dumper.so",
+    "originalSha256": "516514c8d78bd5d0a837e5ff6b7a3294c0ce1ba6fe4c398e7d4d8efa281d282e",
+    "sha256": "ac17047c0e7ed88c5e88289e0a68d4d796658517e90c696b45684271abce808a"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Devel__Peek.so",
+    "originalSha256": "0eca3a2df8d4d6ba016a9684fd92e677cd3309c9d8952a01ee2d1104d0329e89",
+    "sha256": "9a833e095bc34c83cce37f031c9916e04005a61579c6fde3c70de763fe459c21"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Digest__MD5.so",
+    "originalSha256": "c35f4d47e955416e696371ab559ae5a1d318126caa317c5b13bb98610d61fbe1",
+    "sha256": "eb80634352a5763f2a558fa40633db810926ce3144d70f202b94efedfd586d60"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Digest__SHA.so",
+    "originalSha256": "368885d69ca1341044133048de911b9f855c68b16c9a85ca025f9633d8a947bd",
+    "sha256": "368885d69ca1341044133048de911b9f855c68b16c9a85ca025f9633d8a947bd"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__Byte.so",
+    "originalSha256": "d5a2ac0819613365db932133984871e92cd129cafa376afa1ed802b5c76184e3",
+    "sha256": "6a6a1ebb58da75eb311a44823e7886511710ac0afa006a69c3d56777b3a7728c"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__CN.so",
+    "originalSha256": "404fdf7190118a70f1e3c4e8ff544d7af4ca6faf73c6eb9d717ac88b7acfd8bb",
+    "sha256": "3749c1df61b9d0c76c60a04ccccbf07ea1081327f6b8c27b939649f65ee426da"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__EBCDIC.so",
+    "originalSha256": "46fb6c345540c7b7bfd902ef6b3ac26ccc512e392877034b13d272b951382ae6",
+    "sha256": "d2dfb53af39275af2f213fc0e5f872b8af25b57718e1a3bda05a7e41e6bb40e5"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__JP.so",
+    "originalSha256": "cec2fb5b77f4062450c885f6867328a874a5f510ce3b54bdf01f91b5d14e0568",
+    "sha256": "b311bd56d671218668bcbdae384fac9b65c46ada63055f610ce21c99acd6e7d8"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__KR.so",
+    "originalSha256": "3fdb2c0be7f63ce9538fadef64dcbb885ceb440583a7e0f3046523f0f5c23fb1",
+    "sha256": "801f08a56a3b1cfd4e572d768ec6cc82b24abfa0df8cc48e8901df6985885cf6"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__Symbol.so",
+    "originalSha256": "afc200c284a2fe13d467da44f0b25a01b7bb0cfc06068a5e738de1fa1d9be953",
+    "sha256": "dc0bef479ce955a0c559299f9eea89d8a6c916fa823888280cca1111c3a707d7"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__TW.so",
+    "originalSha256": "ccad5620f50be1d951dca9e0f1256c0aa280065b3dcd85d5d9b992b5690e135c",
+    "sha256": "3554fdf76e3ee01a0cb4cd7a42ecd4ed9296af67651ed0fab08a766f531d3279"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode__Unicode.so",
+    "originalSha256": "ce2ba777e462b428bcba8f2e3a452fe8b08662e2aa7618c020012ce702d2c2f9",
+    "sha256": "94cd9db4585219e7b3e281ba1f9a85ca947c0a6b1448be1a3289e9fe8c355cef"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Encode.so",
+    "originalSha256": "7c486b6c1f24c28e5a05c321f31744c72a551b046dfe05d51559e00587696826",
+    "sha256": "7c486b6c1f24c28e5a05c321f31744c72a551b046dfe05d51559e00587696826"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Fcntl.so",
+    "originalSha256": "fdbc918a5d4b02eafcbcbcaa3382482ded3ed0ee6120122fe974115ffff802bb",
+    "sha256": "dadcc753d324aacb2f0c9b24b17250e718f159533adfe0b0556f946a10c5ac2d"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_File__DosGlob.so",
+    "originalSha256": "03ff03b28f7d3db4a19ba72e58d7afc3bc397b02fd0f1e505a4a77c76d46c0c4",
+    "sha256": "4c7349f34437a1a59ccd333b322ba910d7c66f9b0d828a81d44af697fcde1aec"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_File__Glob.so",
+    "originalSha256": "fb731712b8004d1d93de6759cb9e4b0015a45fc110d300210b42c5f5d3423881",
+    "sha256": "206237dc502c274b4f37e89957b014fa7ec6665b253fe9c92ec9656deb1896e9"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Filter__Util__Call.so",
+    "originalSha256": "8b7b1ebde1af119a8c4d56626bd54c4d8bc79e2a3cb52f18bae07f39058214eb",
+    "sha256": "f3cd01428f788900baee96f6a0fe754a3d9926f94a7da101859172460cd912ff"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Hash__Util__FieldHash.so",
+    "originalSha256": "87f788d2c694580c2ce8848fe12758820f3bfac3d973b58d5efcdd1f84144f7f",
+    "sha256": "0dd2004efe16b67cde5ef8574bcfc2b2f7d1cb94cf54689ab754ad24129a2626"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Hash__Util.so",
+    "originalSha256": "90fca501510b9e8d2a99fcda0f8e1356a8b8bb5ecf8c27b25b1b6976763967fe",
+    "sha256": "90fca501510b9e8d2a99fcda0f8e1356a8b8bb5ecf8c27b25b1b6976763967fe"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_IO.so",
+    "originalSha256": "833a8c6825044d67d1e17f2369a95035cb15ab797bad2716e87910ace537a5c4",
+    "sha256": "6fd02a6f205bef203439fc311f89726a446041e79df43e5d6886130090e827b6"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_List__Util.so",
+    "originalSha256": "88df50906e431d0aaf326ebf29f644664d2e4f8078a5fb3e02b1c44b4d87a1f6",
+    "sha256": "399e77ab3cba13490df5cc1a7cbd743b46ccce0797c3620bd8d6904145a502d3"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Math__BigInt__FastCalc.so",
+    "originalSha256": "7b1b85aeae4434b37ed01eb14ad535f11d247ce3000e71756b2b4a553926167e",
+    "sha256": "9d4e804f0e489ef1f384a8cc79a11d43e04c995cd59be872bf144cc4a3b0d2b9"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_MIME__Base64.so",
+    "originalSha256": "a9c67351a7e2fb442927a28060efbecfc77d9e9bf16d7ff99aafe327e5497786",
+    "sha256": "6b3a81037d76b045a0d76449518b9bc2cc239fcdb2982f9763aca92b8f367377"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_mro.so",
+    "originalSha256": "d9f55539542b7d4bc4b22e7eb440a193658f903b94da0a185589e0778e138763",
+    "sha256": "d9f55539542b7d4bc4b22e7eb440a193658f903b94da0a185589e0778e138763"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Opcode.so",
+    "originalSha256": "3da6c4ec2c4f344849ebde6cb558cce74f6475549c7e3982dbc790c497c9b730",
+    "sha256": "3da6c4ec2c4f344849ebde6cb558cce74f6475549c7e3982dbc790c497c9b730"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_PerlIO__encoding.so",
+    "originalSha256": "a909ead626e36f34122a02cfb1848e83d98ff09fa22167432a3228f8f26d855d",
+    "sha256": "a909ead626e36f34122a02cfb1848e83d98ff09fa22167432a3228f8f26d855d"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_PerlIO__mmap.so",
+    "originalSha256": "73c6b36609923a155407882d15ca7d1b81e913dcd6626fdb40f56ec0d411f266",
+    "sha256": "4a18b12ee9e0d844bb861cc6ad6f294f34f55702d7034a01bda8320cffed41f9"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_PerlIO__scalar.so",
+    "originalSha256": "0db5b5c23a68ea1176e4e6ed29320b06f8e2368603632cd76c85c4a582d8214c",
+    "sha256": "cc44ecd124359f3427b6babffbbfb203d6d515d0ad65e6312b43d53e31466d0e"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_PerlIO__via.so",
+    "originalSha256": "89fc7ac27d35e2563f661ed12a892c5e9f843eb441684b99dd910f6f8c3e2891",
+    "sha256": "89fc7ac27d35e2563f661ed12a892c5e9f843eb441684b99dd910f6f8c3e2891"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_POSIX.so",
+    "originalSha256": "d09f671d95cd86138419e3531100ff5f3a9f1f2bcb50f45af510ef8b98c184b3",
+    "sha256": "ab9f39341b45e206026efd71fbc2237509e7fdf129fdea9cfe0a0324de0921b6"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_re.so",
+    "originalSha256": "65f99e6fb20e31ed4719a7fbbb3b7e0cac3bbaa16f715f3deeeeb57e3294f259",
+    "sha256": "65f99e6fb20e31ed4719a7fbbb3b7e0cac3bbaa16f715f3deeeeb57e3294f259"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_SDBM_File.so",
+    "originalSha256": "eadfa2cab6dae02bc70b6e8e99dc660223ff2282c68ad7dc4df12133f48c1515",
+    "sha256": "0f6d720a189486eeca198a05e8f331a9efcc912b820bad8090a9fb30886e28d0"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Socket.so",
+    "originalSha256": "43678c78e71cf3aede78fb951af96dcbcda74334885e0219b8712290f59eec19",
+    "sha256": "dfc5f3a890e1ae5916a0f7626c19095494a087544e6a88cbdd0ddf90a7c2d85c"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Storable.so",
+    "originalSha256": "f016f5559d3f4857998fb3b2641378631a9af1c95a64a2ec81ed9ab8ae92e0e2",
+    "sha256": "af57cb8f450e438ab2560279c1e6011d24bda1db81205336786fc996cfefd66b"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Sys__Hostname.so",
+    "originalSha256": "cda658d51b40acc176001d4518cd50af7c411862f624297c8dde97883c69d0e6",
+    "sha256": "c7aa62f6be76046977a149af1b0ed0d35a93244078b2a509f26474352eb5c757"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Sys__Syslog.so",
+    "originalSha256": "d1fc66573cd084a79110b950cffe17b9ed860542da2ce3563b2d3d702870c309",
+    "sha256": "677c290369f6a396fc98a76cf6c451c365dde1f86c01aadc3324d43c40391ca6"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_threads__shared.so",
+    "originalSha256": "3b33fb97555ce1300c61116dc513fb7e7ded8ca85da3f7bcbab9d7b06920237a",
+    "sha256": "7243142207a0e0df3a60d3633df7699255ebca937acf8301134489e9228c9abf"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_threads.so",
+    "originalSha256": "cf489f287dfa87e31c6f5f7cf25cd42e2833a072cdd8b4741ba26787db003526",
+    "sha256": "fdd5c94811c2eaf9f0a0bbe07ffec78b6952160484cca23fcfd15d662b025bf2"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Time__HiRes.so",
+    "originalSha256": "9f8365476a020e1034e8faf4e53884b6a989f5ff22bc73ac2ede279238796095",
+    "sha256": "9f8365476a020e1034e8faf4e53884b6a989f5ff22bc73ac2ede279238796095"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Time__Piece.so",
+    "originalSha256": "e674a815528cc2c098910dfce089d028cda1a6d7ff598407aa54e8f23819f952",
+    "sha256": "e674a815528cc2c098910dfce089d028cda1a6d7ff598407aa54e8f23819f952"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Unicode__Collate.so",
+    "originalSha256": "e1f6c5469e3b5ab73155525c983fe4f76da5f51283c9b032a948cfe94a8d5c60",
+    "sha256": "f67bfc1d1c5d34c4062d34b421bf4f77f6109836154a7a483fd31d56bb29122d"
+  },
+  {
+    "path": "armeabi-v7a/libperl_xs_Unicode__Normalize.so",
+    "originalSha256": "77316317d7904decf791c334cd86413cb1ab9240aad6547d80d2f0225e0ea8ff",
+    "sha256": "9524bae091f1518e077deb54361f9ae1e8fccfaaa4affd47347f134ebf8b75c5"
+  },
+  {
+    "path": "armeabi-v7a/libperl.so",
+    "originalSha256": "cb2f474e27532dc8e9b5829786fc6b178650ed74bcddeabed862e2bda23f76f6",
+    "sha256": "cb2f474e27532dc8e9b5829786fc6b178650ed74bcddeabed862e2bda23f76f6"
+  },
+  {
+    "path": "x86_64/libperl_xs_attributes.so",
+    "originalSha256": "edaa25d46e9006fb1300dd50d8a3804f834076a2806f5693f8eeb991b017e317",
+    "sha256": "0224a80c85563b046d5e36ff21ca185f5f7bf5ee2a55c2e7942c037bcd82ebdc"
+  },
+  {
+    "path": "x86_64/libperl_xs_B.so",
+    "originalSha256": "d5d2e03c02cf1830c5404784fde28e6322397fcef42f306751b96cbdd9ee2c27",
+    "sha256": "6712aab6c99e3c5087064d3917d0a2824825b9a2a339ef998f9eab42fae9f8b5"
+  },
+  {
+    "path": "x86_64/libperl_xs_Compress__Raw__Bzip2.so",
+    "originalSha256": "47fb21e3c2e720ede610e3d8597c4117bed31de4dfa0e938039271f5bddb668b",
+    "sha256": "19a39ebd29cc3bf68bd55b441b2c2d8451d21974ad3b27104fbd42bee8d15026"
+  },
+  {
+    "path": "x86_64/libperl_xs_Compress__Raw__Zlib.so",
+    "originalSha256": "78a6ec21d778bfcd15e7534bcc3f71a43b5cedca6a299d5b4fbd6b7c4eb624c6",
+    "sha256": "08dd0746b7613c54d79a75de014a566118a7a2ca5b2d36f8ab2eee01c9dcb955"
+  },
+  {
+    "path": "x86_64/libperl_xs_Cwd.so",
+    "originalSha256": "917a545dcec06a7cf9bcf177f6d2af11ce07bdb9e711a6c577f28942bd54cf2f",
+    "sha256": "72e1fa2f423ef7aa11f725fec4251ed9e332065bce38a4fcab129ae236c1ac6a"
+  },
+  {
+    "path": "x86_64/libperl_xs_Data__Dumper.so",
+    "originalSha256": "4965acdf302fc9396b5d5e0ded616bf4e7d23450b5b4b6193959e25fb51373e8",
+    "sha256": "249a4e39359050185fcf053057c72da82054ecbc9f6a6bbc99a6adde5bc40713"
+  },
+  {
+    "path": "x86_64/libperl_xs_Devel__Peek.so",
+    "originalSha256": "ac80209e6c567d71499b2fe4d2449f4ac6e64cf1cd3c97af5c0c586db5ead171",
+    "sha256": "ac80209e6c567d71499b2fe4d2449f4ac6e64cf1cd3c97af5c0c586db5ead171"
+  },
+  {
+    "path": "x86_64/libperl_xs_Digest__MD5.so",
+    "originalSha256": "18f22f8980fba78640243fc31b8acf8814b309ed62763a00137a24e8b1a0cbc4",
+    "sha256": "18f22f8980fba78640243fc31b8acf8814b309ed62763a00137a24e8b1a0cbc4"
+  },
+  {
+    "path": "x86_64/libperl_xs_Digest__SHA.so",
+    "originalSha256": "466d58b2955d21f1cf5b20ad8e62e083e179f204bc1c562551611585793b532f",
+    "sha256": "ae7bf28a9a14bfe1c0d811cd6eda6f8d5f8c2b87c04129ea417c9c4c7dbf0cb1"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__Byte.so",
+    "originalSha256": "8fe4401331594527ae2c3231daceafb66607018f3673abce6efa7851cd871ecc",
+    "sha256": "9a3cf536e8fedc7800e6c4b302f05f077fee2dfd56bc1bd82d143176bd0d1128"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__CN.so",
+    "originalSha256": "1a8e2be4bee4915be9e999aba4dad34705f91c0d97aa6b30bb61a2362e24d76c",
+    "sha256": "1b72cbd1449b3f85a06b7f54a4b24d95624e3d47a3175b451da5ec8f57a60e94"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__EBCDIC.so",
+    "originalSha256": "5f0c9823f69936158b822dc05037b1e15b7a12d2e02c8ef22466eaf2505fc1c5",
+    "sha256": "32d071243f2683a451fc3f7bec28777156007e6ab69a4bb20111630e16468141"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__JP.so",
+    "originalSha256": "98932c9d85f4343e4d09fb4fbe6130213d530183711c8a28c2ae64cbeac62226",
+    "sha256": "98932c9d85f4343e4d09fb4fbe6130213d530183711c8a28c2ae64cbeac62226"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__KR.so",
+    "originalSha256": "62f598a71d8389006ef04d99eb78de0a9a1b8194e5046e8a6072d0debfae09d0",
+    "sha256": "62f598a71d8389006ef04d99eb78de0a9a1b8194e5046e8a6072d0debfae09d0"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__Symbol.so",
+    "originalSha256": "0823c43b320a223b5edd5ad6ba74998a309ebd60d94537dfce89daa3e89d3213",
+    "sha256": "64380fd727cf43c81ae478576c33c883f06bc2926d79120d964edb8637fa55c2"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__TW.so",
+    "originalSha256": "ddd68a144d5238bbed92ecb92a952af0cb50bb2ccfd0fb4d948ec463f7bc055c",
+    "sha256": "695b5c118f5296c0313ae4b9292041b08de896c23d625bc189cecfc52e9cff39"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode__Unicode.so",
+    "originalSha256": "4bcba4dc67b0216cfefc64c3e352b7ba1affa0abee25656778c00b41aa62f0fd",
+    "sha256": "4bcba4dc67b0216cfefc64c3e352b7ba1affa0abee25656778c00b41aa62f0fd"
+  },
+  {
+    "path": "x86_64/libperl_xs_Encode.so",
+    "originalSha256": "3d4cc55d09c1362e2fdf7df4b3c63d0cfde71795b4e3c6ebfa49cef444e7db9c",
+    "sha256": "e6962a96abe747d9e76d586438ac33fc567b7f0a1e4a7900306fc4d6abd8851b"
+  },
+  {
+    "path": "x86_64/libperl_xs_Fcntl.so",
+    "originalSha256": "7fb3d7e852dae2fb13e7d02690de21e1d80b912c654b7223255e130b4812cddd",
+    "sha256": "7fb3d7e852dae2fb13e7d02690de21e1d80b912c654b7223255e130b4812cddd"
+  },
+  {
+    "path": "x86_64/libperl_xs_File__DosGlob.so",
+    "originalSha256": "315badb5020188701db2f0428b79f84c29b62a79f57a353ca2de7fa303ba1074",
+    "sha256": "f790c4952ed493b0ecd490c31e00c35b47244560fd0f3c170d7d5e08e698b349"
+  },
+  {
+    "path": "x86_64/libperl_xs_File__Glob.so",
+    "originalSha256": "49cfee3af39c77eda3fa360f718fa7cb4dafbb704f4c987c5818f0e5bc0b00db",
+    "sha256": "318050d18b27354b2b03b6a3d84f9a86617d00ee3cc1b4d0132933b5e57db626"
+  },
+  {
+    "path": "x86_64/libperl_xs_Filter__Util__Call.so",
+    "originalSha256": "e7d4b83ab704b09b707f3683692335e7757431ee459775530136de2570898a41",
+    "sha256": "d2340ed2179fd3413ca862fbc953d8bd5c8b7dc04a39910dc2cc965f7e07630b"
+  },
+  {
+    "path": "x86_64/libperl_xs_Hash__Util__FieldHash.so",
+    "originalSha256": "c94db71ba344eb225832b78d6601f25050baabb9e0f37c9f57a83b1686617f94",
+    "sha256": "c94db71ba344eb225832b78d6601f25050baabb9e0f37c9f57a83b1686617f94"
+  },
+  {
+    "path": "x86_64/libperl_xs_Hash__Util.so",
+    "originalSha256": "c0d7483e50d7488de434178c93e9456263c7a7680fbaa18ec1c63c0521e1a83b",
+    "sha256": "c0d7483e50d7488de434178c93e9456263c7a7680fbaa18ec1c63c0521e1a83b"
+  },
+  {
+    "path": "x86_64/libperl_xs_IO.so",
+    "originalSha256": "cbcfc315aa9cdde38988bb4d4a42907d70c767524549e7cf9c3fe20d9562392c",
+    "sha256": "cbcfc315aa9cdde38988bb4d4a42907d70c767524549e7cf9c3fe20d9562392c"
+  },
+  {
+    "path": "x86_64/libperl_xs_List__Util.so",
+    "originalSha256": "badf8ff4aa0824be3312659e5b7b0c3f5f1c3a71f2689b870fa5a510850e9634",
+    "sha256": "badf8ff4aa0824be3312659e5b7b0c3f5f1c3a71f2689b870fa5a510850e9634"
+  },
+  {
+    "path": "x86_64/libperl_xs_Math__BigInt__FastCalc.so",
+    "originalSha256": "80ecd81dc09b994510f2edb505801c6b3be711eb130dfee3da2d4124ed96123d",
+    "sha256": "029c80616f1545e9a9d6ad7e697a7885e68bcac5e217c7a1bddb4518cba55067"
+  },
+  {
+    "path": "x86_64/libperl_xs_MIME__Base64.so",
+    "originalSha256": "fc49d3870b527579dd61d5196ff1d6934923f5f7b856f536b4b81fd1a0e86d11",
+    "sha256": "2c069416686faf4bbe2d25a088efa2997d57f3c9f446583e9c48bda1e6c01eef"
+  },
+  {
+    "path": "x86_64/libperl_xs_mro.so",
+    "originalSha256": "16e4a5952ce63d89850d702055a3eb4ed7e32dcf198cee5589c5e138026a6e3f",
+    "sha256": "16e4a5952ce63d89850d702055a3eb4ed7e32dcf198cee5589c5e138026a6e3f"
+  },
+  {
+    "path": "x86_64/libperl_xs_Opcode.so",
+    "originalSha256": "fe8b45e5997a21922309ca408a3504d01142660f8564e0e8c166616e9174e20c",
+    "sha256": "2d59bd218c179f77cbe09634df206e1a8f29bf75d52ee6e927bce49ec8e2cd46"
+  },
+  {
+    "path": "x86_64/libperl_xs_PerlIO__encoding.so",
+    "originalSha256": "f91b67e509cce76477ec3f969e0ff0b8aba0bfd2a7f7c174ebd9aef778ddb44d",
+    "sha256": "e4e974e38ef6e580d6f31343f493b29ea113a672761d7bbdc2d6b31c412fc0bf"
+  },
+  {
+    "path": "x86_64/libperl_xs_PerlIO__mmap.so",
+    "originalSha256": "049f37667b94fbe99785c2711ded2248f16525c022462c2710c8ef2a3b5a9469",
+    "sha256": "dc8d2f854db3055eee66866022a70c045ab0172d12a6d52ddb9ad555ad99b982"
+  },
+  {
+    "path": "x86_64/libperl_xs_PerlIO__scalar.so",
+    "originalSha256": "935f046fe957d9bfa2c5523b2e89d6c7c6c30290fcb94204d3aae391775d8df8",
+    "sha256": "5f037b4d31fb9652460d091d9636f7b8d8d54988962ff040a6f011c184cd83e5"
+  },
+  {
+    "path": "x86_64/libperl_xs_PerlIO__via.so",
+    "originalSha256": "3e6904285ea0ecc396f8b931b9d97c5cb42eae70055946ee6207a056bd99a5f0",
+    "sha256": "3e6904285ea0ecc396f8b931b9d97c5cb42eae70055946ee6207a056bd99a5f0"
+  },
+  {
+    "path": "x86_64/libperl_xs_POSIX.so",
+    "originalSha256": "5a9d393d94935eaf31ae579e2ee46c06fc1320fde53c8e0d46bef64229f274be",
+    "sha256": "edefe8ab4d82a7b6d289588e7d7838c518ff02e911d96d7d4422f80d7d94a5fd"
+  },
+  {
+    "path": "x86_64/libperl_xs_re.so",
+    "originalSha256": "b5fa348170b0fffd8c16ab544a7515bc7f630fc9ac2aa39770cba86a71a02250",
+    "sha256": "16ad90ca07af1b3637570aaa24ef6eee816c1ae4af85402c2bccaf3c9e153bc6"
+  },
+  {
+    "path": "x86_64/libperl_xs_SDBM_File.so",
+    "originalSha256": "8fead2404a5a7d96c94b46c05515249a582f7eb453f0b8e6a070958cf1f94cd2",
+    "sha256": "55bbda3e5c44fe91ae2774678d10c37bc747532618d3f4f1ecb1b60a905cc54b"
+  },
+  {
+    "path": "x86_64/libperl_xs_Socket.so",
+    "originalSha256": "30faa1e43d85ed9354c39cb9127c0b330d3e73f4f8df37862dca72abbe996610",
+    "sha256": "80956fa5ebba967809e044ee9b880a978ab039aa49e72a5ee0eaaa72ca2d8e3a"
+  },
+  {
+    "path": "x86_64/libperl_xs_Storable.so",
+    "originalSha256": "69504588b853c56c417c98fbe338405e2ded9a745761d3559fade5bb3b539f71",
+    "sha256": "ae95b3143c31cfd70bc04a53207723845bb83c290a01fe7daf7bf3a6e06d1310"
+  },
+  {
+    "path": "x86_64/libperl_xs_Sys__Hostname.so",
+    "originalSha256": "5b5ac26526ec69fc71394a6744879e36d0bae7db03f233e5872ec6df265aa933",
+    "sha256": "676b3b1d46916a9fac079031dae026ec5bd741a22498f73fcea9ea0b0bd65b8e"
+  },
+  {
+    "path": "x86_64/libperl_xs_Sys__Syslog.so",
+    "originalSha256": "d76953659e1b0fe24d2046d0f43bf5de5cc9255b0106e5bbda55bb07f82509d1",
+    "sha256": "78da755c514ea5e124bc5b7d247fa613114a5767a46702e3499ba54b9ead5683"
+  },
+  {
+    "path": "x86_64/libperl_xs_threads__shared.so",
+    "originalSha256": "9a348f0f46568dbc68a990067614923cdff58ec73dd8710b6f2e1db7624c9122",
+    "sha256": "f94c2c1edf06ecd3ceeff317c0285d7288e78c441428931c845353b6f92d4df8"
+  },
+  {
+    "path": "x86_64/libperl_xs_threads.so",
+    "originalSha256": "f2e33967790a12ca3bf874a6d18e9aed37b4bee26c1e530db27ab57f23ca45b2",
+    "sha256": "90f23b9d5cc2e79086b8130d113aa355236a275ff6494d10672419f607c1ccc3"
+  },
+  {
+    "path": "x86_64/libperl_xs_Time__HiRes.so",
+    "originalSha256": "90c70a36249599d75ec795942592f93e6880696b65caedaf6315a45cd36bcef7",
+    "sha256": "aab945d0e8d5087f0cffceee36f1bda74b1fe562e2c2464469402f32cf650c0d"
+  },
+  {
+    "path": "x86_64/libperl_xs_Time__Piece.so",
+    "originalSha256": "26d9e5c2a51d38f9d8039044839b6a3a83ec0e7641d83a28be72355c8d53603e",
+    "sha256": "062f9db0d3136ed53d9fa84cce10fd7063151668a71898f97da94502180466d3"
+  },
+  {
+    "path": "x86_64/libperl_xs_Unicode__Collate.so",
+    "originalSha256": "b125f8b83c3f459bfd31f888d004d33822b229fdc5b0d708c0266a5436c9b095",
+    "sha256": "91c9d031f3d24f0d749728eff824eccb8bc94a5c3bc82abe34ab3a4f9360f406"
+  },
+  {
+    "path": "x86_64/libperl_xs_Unicode__Normalize.so",
+    "originalSha256": "be3fdf0650ee29dd8d818a60eef726a5c29d6473f7837fdd99bfb432d0c68244",
+    "sha256": "bd445c2f12b5212b1191a4207f776e724c2a7badc54c2a0cf56ac4976f5043a6"
+  },
+  {
+    "path": "x86_64/libperl.so",
+    "originalSha256": "5008b5807be0ed6a29e1191d0954cd4a3f4757c7d69fa8a72eac84b5ece4d5f1",
+    "sha256": "864735abef4e9d302c1e39e350734a02d90e34edeeb2aeb5cb9b33b4578db618"
+  },
+  {
+    "path": "x86/libperl_xs_attributes.so",
+    "originalSha256": "ad649cd50c2633b99af239b0282618e79d2854342a7cd20e5070f4c1f32d9687",
+    "sha256": "c3e57a8c7e64187ecd82d7023f84efa1815644fa9c174da174dcbde24953b6ee"
+  },
+  {
+    "path": "x86/libperl_xs_B.so",
+    "originalSha256": "450929974938bccc6b61cc7150a05a15c97e0a6ff875acf00de3f9c0289a0b37",
+    "sha256": "d696b16a4f653205b65166c65c0146cdb35ed2ea644c3fc936d954c786c058e2"
+  },
+  {
+    "path": "x86/libperl_xs_Compress__Raw__Bzip2.so",
+    "originalSha256": "2f4079c80a5e5f26231e8391f71402592287618b677f7aa7d7ded9c814eff1d1",
+    "sha256": "f779f98f15d2f13aa314925a99d234f30f5c8592d8757cf46bcbed6efce113bb"
+  },
+  {
+    "path": "x86/libperl_xs_Compress__Raw__Zlib.so",
+    "originalSha256": "0950031a2976329b84b774735d728dd32397aa3aa63f6288a2bb3fdc39a396e1",
+    "sha256": "d211a8175fc005491b9f901f2f7bc3c143a5aa68b26cc1cc0e3181008c685896"
+  },
+  {
+    "path": "x86/libperl_xs_Cwd.so",
+    "originalSha256": "22f4d3a099239d3fd136827536c2f22d2acfc2a6759014fcad6d88fb32787970",
+    "sha256": "ad400bdcca2e1baa1565be2c9654f5a453a79e3e14923099a5a22d9d16686631"
+  },
+  {
+    "path": "x86/libperl_xs_Data__Dumper.so",
+    "originalSha256": "28a221665f465a1f39eb5c873c2370960884902d0732c81e9d50bf03f8acd3dd",
+    "sha256": "28a221665f465a1f39eb5c873c2370960884902d0732c81e9d50bf03f8acd3dd"
+  },
+  {
+    "path": "x86/libperl_xs_Devel__Peek.so",
+    "originalSha256": "6d52fdd5144ff23bf005fa9995a2f49d9d7951d884ec66f9b4089b34ed1759a5",
+    "sha256": "6d52fdd5144ff23bf005fa9995a2f49d9d7951d884ec66f9b4089b34ed1759a5"
+  },
+  {
+    "path": "x86/libperl_xs_Digest__MD5.so",
+    "originalSha256": "a715884f49e364f8910ae2e9a0929f3596f3c0fec280238ee889b5507a5fab90",
+    "sha256": "a53f80209ea7dcb1b8171f9928f7680cc4c2fc483a52b76b4cdc215abcf3266a"
+  },
+  {
+    "path": "x86/libperl_xs_Digest__SHA.so",
+    "originalSha256": "43f7d8f90b4df235c68348de00bf00836b3c450154de9842c2101c771404982e",
+    "sha256": "b40e3222329859e469243191654baa013345f70c7f0395543c1b05488569f61d"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__Byte.so",
+    "originalSha256": "4d36083190722d5898f9d0a4a9c97743356ad1ebd2272678782f525596df62d2",
+    "sha256": "3bfeb1d44fd2468259fd1f087ccdfb3f5e00dacd6f31a0e151713ac77709c737"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__CN.so",
+    "originalSha256": "786e918bbeba230aec1a82367749e042303063baa084c412d639ef49ab039931",
+    "sha256": "8282257c342aadbf7cde4cebbb6e9bf72bfa9a996075e46b677b708e3a62a39f"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__EBCDIC.so",
+    "originalSha256": "41c4f70ea37e8beb9bac215cb8190651ab0c1a5fca8a8a9fce72f1efd5eb2633",
+    "sha256": "a2a6e842e617401126b7e3b19dfc6a691e0c377a9b4530c00176871f34487af1"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__JP.so",
+    "originalSha256": "0ba7c24879251697cf798c082b47ad72b0ada97a26457602df809ed5a6757518",
+    "sha256": "b1f1602e9b28c752ee8d6cff29aebef11bf78ce5cc1136768dc5dc69db128c71"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__KR.so",
+    "originalSha256": "d41f46b2a31a50a7217abc9148c7d557e64c34ba93a8445946f483f0ff30efd0",
+    "sha256": "14efd642efc4f062b6e61dff2d5c479347950361c64f04aed77c51cedd2f3f82"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__Symbol.so",
+    "originalSha256": "cc979db1555e8758bd254cf637c34d21ea6e11fa15d85d25468368abf650ff1f",
+    "sha256": "7fc18c8bc5f1e6008a9d8d7af441ca8998d65d60f68bd8503926bed4e16f701b"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__TW.so",
+    "originalSha256": "9d6036157dbdbc77a0ab2940d8cb88f4b38ecc98d5a8e030130b1500cfde7109",
+    "sha256": "b2e5ac04bbaca983e38a0ab2cf1eac64d94760bdb8c59bf3219aa801cfee4a7e"
+  },
+  {
+    "path": "x86/libperl_xs_Encode__Unicode.so",
+    "originalSha256": "db53a2ff06f48c9033d15a6228a7c3558775cf5a18e44d8f68e8f10046648dfb",
+    "sha256": "945564146d1b2f40b20f2ed2fd8b047d3a0a73acbbc40b2529a0c877b0ecd4ff"
+  },
+  {
+    "path": "x86/libperl_xs_Encode.so",
+    "originalSha256": "8676c60ec1bccf59c725b63d3c6157e197d4f532ca89eebc23a68d997c76ce34",
+    "sha256": "8676c60ec1bccf59c725b63d3c6157e197d4f532ca89eebc23a68d997c76ce34"
+  },
+  {
+    "path": "x86/libperl_xs_Fcntl.so",
+    "originalSha256": "4ef8ce22329d31f13a100284ed979a6b3b7dd611f668d12c1c0624ab4e849996",
+    "sha256": "ee62da5a9820b97931f363033f9879fa7d609e1552befc184a6ebc3733ea92df"
+  },
+  {
+    "path": "x86/libperl_xs_File__DosGlob.so",
+    "originalSha256": "250ab64ee04947cf9225df2ed59f1d3885720ede92d6e48e8548866e823b67d3",
+    "sha256": "627f1642c071b5537b3cd5e85e925d230b321bb9b46bb1e2d0a93169cc0bbc34"
+  },
+  {
+    "path": "x86/libperl_xs_File__Glob.so",
+    "originalSha256": "27601a2354ed696dc44ec79ea67622bbc4700a041cf8b9f400af5c732c3fc87a",
+    "sha256": "cb9ea3532712c9dafdf88ec41f77b0dd9fba5f0a7fa9b867d37733e4ab3bf2d5"
+  },
+  {
+    "path": "x86/libperl_xs_Filter__Util__Call.so",
+    "originalSha256": "71032c2d2ed67900a1f30c35124c23b871501b10d4b76433f3a000bb28e1ad41",
+    "sha256": "4f447b88a4f49e0a53fa3a12fdb7f9dfcc3f79e77fc5074ef01023ce90b4eb32"
+  },
+  {
+    "path": "x86/libperl_xs_Hash__Util__FieldHash.so",
+    "originalSha256": "d8920351b5c915877e7d7493675cfbb6bef5402d3e508658c5c682294e548758",
+    "sha256": "98169aaeb0a2a1117c42cec7ec124ec5927cded6115c3d7a323f6e842e9b2bdf"
+  },
+  {
+    "path": "x86/libperl_xs_Hash__Util.so",
+    "originalSha256": "baa6f0c6c52e7912f91af9aa6ee75eaf524fea6548ae7d2d78482102c8512540",
+    "sha256": "baa6f0c6c52e7912f91af9aa6ee75eaf524fea6548ae7d2d78482102c8512540"
+  },
+  {
+    "path": "x86/libperl_xs_IO.so",
+    "originalSha256": "9a71e0283997a6ed425dd3c4281a1f286d327789aaca8a4ad6ebff9df010ecaa",
+    "sha256": "9a71e0283997a6ed425dd3c4281a1f286d327789aaca8a4ad6ebff9df010ecaa"
+  },
+  {
+    "path": "x86/libperl_xs_List__Util.so",
+    "originalSha256": "4cbbe299c527097a02e56e42d7f2e3a535556daaa08c2252e109899fcdce2b1a",
+    "sha256": "35e1e8bf95f8fec4042b2624bc4f5f4ecd499f8da32ff9ea48334dafc4569881"
+  },
+  {
+    "path": "x86/libperl_xs_Math__BigInt__FastCalc.so",
+    "originalSha256": "69f61c4a96637298c9c49599284b5a1ec83b1eee1f1d5eb7cfd07eded1e8a510",
+    "sha256": "0aa5ad83af4243c3ea2d495317f19c08bca8a3f1d6078028566c60e85d118f0c"
+  },
+  {
+    "path": "x86/libperl_xs_MIME__Base64.so",
+    "originalSha256": "861d1079de98857a86f4c4208838b99810aed7d64294c6ca183c65e80288d030",
+    "sha256": "cae962eda12c8a64c7b339b779e313151ca744f6e4db1a1c797fa841baaae3ab"
+  },
+  {
+    "path": "x86/libperl_xs_mro.so",
+    "originalSha256": "b9950c5967a301ccf9d904268f3532c71835fe846436fb796b3de444b14e4559",
+    "sha256": "b9950c5967a301ccf9d904268f3532c71835fe846436fb796b3de444b14e4559"
+  },
+  {
+    "path": "x86/libperl_xs_Opcode.so",
+    "originalSha256": "81f9d903363a01fb6839acbf9b458b2f463882fda6db4758a481a59cb358288f",
+    "sha256": "81f9d903363a01fb6839acbf9b458b2f463882fda6db4758a481a59cb358288f"
+  },
+  {
+    "path": "x86/libperl_xs_PerlIO__encoding.so",
+    "originalSha256": "e09815809081d6a550c507c7f83171e31e0d02cb607517b742136b542a419768",
+    "sha256": "387d42560a78487055dee536bf8c9c4e93b90aa0e0d0de80dbdb2c5cc2bda4ac"
+  },
+  {
+    "path": "x86/libperl_xs_PerlIO__mmap.so",
+    "originalSha256": "3c5467e1ff019f30854a1a76e9b336622dd6edd9deb4cd4590d60594c1f82569",
+    "sha256": "72149fed725a4f0c0f5fda12cf86e999e2c71c821b695c786a92bc59d098e832"
+  },
+  {
+    "path": "x86/libperl_xs_PerlIO__scalar.so",
+    "originalSha256": "441df231f81815f8d21058f3a8e6307989082ddfbe0358809b96902be044ad80",
+    "sha256": "8f176b2a9b1fe214cb63b6b7ffbc1db8f38684a4a30c1d31f424cc861f4e1bc5"
+  },
+  {
+    "path": "x86/libperl_xs_PerlIO__via.so",
+    "originalSha256": "94038050f5251795acb73dd110f09483240e7d027128c27d3c10efc3dadaf575",
+    "sha256": "94038050f5251795acb73dd110f09483240e7d027128c27d3c10efc3dadaf575"
+  },
+  {
+    "path": "x86/libperl_xs_POSIX.so",
+    "originalSha256": "96911b75f25c2ecbed63de51c1e4014597daa208e81310c93e65500f8ac160e8",
+    "sha256": "96911b75f25c2ecbed63de51c1e4014597daa208e81310c93e65500f8ac160e8"
+  },
+  {
+    "path": "x86/libperl_xs_re.so",
+    "originalSha256": "eda8b94d4acdf9aebac1cfc18afaaf7e244a1f4865f5b3e507a55a01bf8fa741",
+    "sha256": "d878007d846f2943e75b1d25c966876b5e6991bd9741b394f04077190e7217d3"
+  },
+  {
+    "path": "x86/libperl_xs_SDBM_File.so",
+    "originalSha256": "e5de1ad52b6d2e5b8ab550aa88e243861241e28dcf55e8ff4f3885074017e4ac",
+    "sha256": "aeec7509979cb63bb14ab3800f138039ac0d49e70a837f5f23649d871e567af4"
+  },
+  {
+    "path": "x86/libperl_xs_Socket.so",
+    "originalSha256": "78c2cd6626c35792f5dd775ec0ee2025e51069eb85c8e5da4cfa712099ff97bd",
+    "sha256": "78c2cd6626c35792f5dd775ec0ee2025e51069eb85c8e5da4cfa712099ff97bd"
+  },
+  {
+    "path": "x86/libperl_xs_Storable.so",
+    "originalSha256": "176ea2cff1a28ef069f8c0e4ceba4885d55033a61e6936df776bfca8c9a51c65",
+    "sha256": "176ea2cff1a28ef069f8c0e4ceba4885d55033a61e6936df776bfca8c9a51c65"
+  },
+  {
+    "path": "x86/libperl_xs_Sys__Hostname.so",
+    "originalSha256": "75dc42e0eeb9ab58e0d15ab1268a427d799f25c201337ed87ee5f0714fad5840",
+    "sha256": "8722f444b37c5dda3d5522aa669d62b7f5c1fe255b23e8999aaa2f22a886ff08"
+  },
+  {
+    "path": "x86/libperl_xs_Sys__Syslog.so",
+    "originalSha256": "691f01dc67c2732263081480a7ba4649fe75a48aa6b51cab1d0a7af163537af5",
+    "sha256": "a42f8131c58a5c9cb979304b754d1c797294b3a8fba6477733dad985693b49a2"
+  },
+  {
+    "path": "x86/libperl_xs_threads__shared.so",
+    "originalSha256": "b8d88bca24cb9c3341110ae067a203b6e5bdc758fcc836572de9c9170aa57248",
+    "sha256": "832314b535548653280f517ba00df3bc8163def49ff1a73ad317bcb71ee959a6"
+  },
+  {
+    "path": "x86/libperl_xs_threads.so",
+    "originalSha256": "f97a67b6d685b053098971e00691d6b75ae2cc985cd1680f584b140f1ec2f2ca",
+    "sha256": "74957a28e777429cf88e4df714c2fc9c6877fa386de15c4b0616b4d2e99e43b4"
+  },
+  {
+    "path": "x86/libperl_xs_Time__HiRes.so",
+    "originalSha256": "f894e2d8c470bd5528a05da4636e81b2a90e9dd2574a68310bd2d43fceae52f6",
+    "sha256": "653d1707891732c75df7783e66ce4213cbe7e90e9ff9dbac614ed38e459063b2"
+  },
+  {
+    "path": "x86/libperl_xs_Time__Piece.so",
+    "originalSha256": "406af85066f614f28b38dacac11df3c82438bf7def159b72a1ab096f47751023",
+    "sha256": "406af85066f614f28b38dacac11df3c82438bf7def159b72a1ab096f47751023"
+  },
+  {
+    "path": "x86/libperl_xs_Unicode__Collate.so",
+    "originalSha256": "00e56a38fbc62244a5c6439f76ef827c34a363f55e16ae0a420ca69f59847935",
+    "sha256": "a12d46ef9412207a28ea35503355cbe15aff4efd0f2058c1fc0b000466211cf8"
+  },
+  {
+    "path": "x86/libperl_xs_Unicode__Normalize.so",
+    "originalSha256": "b6237cba0809be6c6ea56ab20704fb5d555c259b197ae11dafcdf93c4af2c08c",
+    "sha256": "b6237cba0809be6c6ea56ab20704fb5d555c259b197ae11dafcdf93c4af2c08c"
+  },
+  {
+    "path": "x86/libperl.so",
+    "originalSha256": "b7e44bfa1a09088d84ec7e57a34b1dd845184f72a4106ed4a4d1b15f6946dae2",
+    "sha256": "b7e44bfa1a09088d84ec7e57a34b1dd845184f72a4106ed4a4d1b15f6946dae2"
+  }
+]

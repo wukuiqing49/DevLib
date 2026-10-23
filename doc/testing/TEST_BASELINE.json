@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "cases": {
+    "STRUCTURE": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "Agent structure / build / architecture Python validators",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "BUILD-CORE": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat assembleLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "BUILD-APP": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat :app:assembleDebug",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-FOUNDATION": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-COMMERCIAL": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-FILES": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-IMAGES": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-DOCUMENT": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "TEST-MEDIA": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat testLibraries",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "PUBLISH": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat publishLibrariesToLocalRepository; republish changed lib_transfer / router plugin",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    },
+    "CONSUMER": {
+      "commit": null,
+      "sourceFingerprint": "72a560f0a6b017b57818ff358f356d6182531b5b2c5bd06179c1f25429bb8764",
+      "testedAt": "2026-10-23T13:17:46+08:00",
+      "variant": "debug JVM tests / release publications",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device run",
+      "commandOrSteps": "gradlew.bat -p samples/published-consumer compileDebugKotlin --refresh-dependencies",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-import/summary.json",
+        "doc/testing/evidence/2026-10-23-import/module-results.json",
+        "doc/testing/evidence/2026-10-23-import/junit-results.xml",
+        "doc/testing/evidence/2026-10-23-import/commands.txt"
+      ]
+    }
+  }
+}

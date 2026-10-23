@@ -1,0 +1,2383 @@
+[
+  {
+    "module": "core_archive",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.archive.EncryptedArchiveOperationsTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.174"
+      },
+      {
+        "name": "com.wkq.photo.archive.ZipArchiveCreatorTest",
+        "tests": "9",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.115"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-archive/0.1.0-SNAPSHOT/core-archive-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 7498,
+        "sha256": "5f2ce84d8c552181e8c13888fad4b10e797d016c3d778062524e9a426480c83a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-archive/0.1.0-SNAPSHOT/core-archive-0.1.0-20261023.045812-1.aar",
+        "bytes": 47090,
+        "sha256": "040cf2c25b28cfc73aa754fe0b4f88b2d18af92916a6a12364fbfe2d6048f6fa"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-archive/0.1.0-SNAPSHOT/core-archive-0.1.0-20261023.045812-1.module",
+        "bytes": 3803,
+        "sha256": "319edfb39cb6498aee04626c9224e10c5dbc0b2f676af784fefe24e9fdad2585"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-archive/0.1.0-SNAPSHOT/core-archive-0.1.0-20261023.045812-1.pom",
+        "bytes": 1688,
+        "sha256": "731334baf0f68d097c5e0e2e1f0ddc41d9340cff31a487d80e2c179d7c975b03"
+      }
+    ]
+  },
+  {
+    "module": "core_base",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.base.reflect.GenericTypeResolverTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.07"
+      },
+      {
+        "name": "com.wkq.base.widget.EmptyViewTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.009"
+      },
+      {
+        "name": "com.wkq.base.widget.MultiSpanTextViewTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.018"
+      },
+      {
+        "name": "com.wkq.base.widget.VerifyCodeInputViewTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-base/0.1.0-SNAPSHOT/core-base-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 59343,
+        "sha256": "5cce31efe70bfc8edc8ed1e7b753d77a6494548e1ac5407a743daa43b1f0b893"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-base/0.1.0-SNAPSHOT/core-base-0.1.0-20261023.045812-1.aar",
+        "bytes": 262143,
+        "sha256": "3d94b2002269dd2d740e04daf503a2ccb586edb647499f175cd5ba5319255dd1"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-base/0.1.0-SNAPSHOT/core-base-0.1.0-20261023.045812-1.module",
+        "bytes": 7334,
+        "sha256": "bb32675fa8f010397a63c70412d406540016e62406324b17782fad22e0b52577"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-base/0.1.0-SNAPSHOT/core-base-0.1.0-20261023.045812-1.pom",
+        "bytes": 3627,
+        "sha256": "ab0c891015d8406479e44cd63aae9b9e16fef291d71dd6b0c7b50d8cc13bdfda"
+      }
+    ]
+  },
+  {
+    "module": "core_image_render",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.imagerender.AnnotationRendererTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "4.433"
+      },
+      {
+        "name": "com.wkq.photo.imagerender.BitmapFileDecoderTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.429"
+      },
+      {
+        "name": "com.wkq.photo.imagerender.NewToolsRenderersTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.393"
+      },
+      {
+        "name": "com.wkq.photo.imagerender.WatermarkRendererTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.24"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-image-render/0.1.0-SNAPSHOT/core-image-render-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 18254,
+        "sha256": "e0d1a243d51ad94efaadf5e2344dbc9090b52b0814f32b65fb3a9759cbf24cd1"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-image-render/0.1.0-SNAPSHOT/core-image-render-0.1.0-20261023.045812-1.aar",
+        "bytes": 105719,
+        "sha256": "3798802a75711ab0e257036296e3f52fff3ddb820928a937a754f3561ad177e5"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-image-render/0.1.0-SNAPSHOT/core-image-render-0.1.0-20261023.045812-1.module",
+        "bytes": 3853,
+        "sha256": "7c406db6bf2f52bc43378607325a9f3ac2b9f0927353251fba7a66fca8d095ae"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-image-render/0.1.0-SNAPSHOT/core-image-render-0.1.0-20261023.045812-1.pom",
+        "bytes": 1715,
+        "sha256": "a38a5fb54958bc93bf10a6ba0f8383f75b3e8b7e298daa524570714ed4c4784a"
+      }
+    ]
+  },
+  {
+    "module": "core_media_store",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.mediastore.InternalArtifactStoreTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.039"
+      },
+      {
+        "name": "com.wkq.photo.mediastore.MediaFileStoreTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.739"
+      },
+      {
+        "name": "com.wkq.photo.mediastore.MediaOutputVerifierTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.739"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-media-store/0.1.0-SNAPSHOT/core-media-store-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 11798,
+        "sha256": "cf2544546ff2d2a12d79ef3ed3b48e126b170e17b4871220ebabbfe656f53cac"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-media-store/0.1.0-SNAPSHOT/core-media-store-0.1.0-20261023.045812-1.aar",
+        "bytes": 68124,
+        "sha256": "d4a5eac30abfef951651a379739868f393865b871e9ab631a74de8d88431169a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-media-store/0.1.0-SNAPSHOT/core-media-store-0.1.0-20261023.045812-1.module",
+        "bytes": 3990,
+        "sha256": "c42f3341c5eca1f94a770c07a78324c8b3062aa1eedf4161a9d4fa6521a1f7a3"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-media-store/0.1.0-SNAPSHOT/core-media-store-0.1.0-20261023.045812-1.pom",
+        "bytes": 1882,
+        "sha256": "2128dae8384284f26e23c42cbef9d76aa547ea9e47c1185747332c7650eb532d"
+      }
+    ]
+  },
+  {
+    "module": "core_network",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.net.config.NetConfigTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.016"
+      },
+      {
+        "name": "com.wkq.net.core.DownloadRetrofitTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.155"
+      },
+      {
+        "name": "com.wkq.net.interceptor.LoggingInterceptorTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.057"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-network/0.1.0-SNAPSHOT/core-network-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 24850,
+        "sha256": "87fa5ef4e0470b90d10563647155d5f08c343c2e68e8c00ba177fecaa75eea43"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-network/0.1.0-SNAPSHOT/core-network-0.1.0-20261023.045812-1.aar",
+        "bytes": 121920,
+        "sha256": "a97bf801b356f63ff67cc6e781e80a9a32a9326a64cb5562dc99e0940084f418"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-network/0.1.0-SNAPSHOT/core-network-0.1.0-20261023.045812-1.module",
+        "bytes": 5178,
+        "sha256": "33e4557740fba8df8da3aac4719dc54ef899350eece78d080c0dc17f2843b5e8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-network/0.1.0-SNAPSHOT/core-network-0.1.0-20261023.045812-1.pom",
+        "bytes": 2490,
+        "sha256": "b9113b0af2043e255b8ea60e0b0a9c14b014081fc97af8b55fcfddb3c6f376f7"
+      }
+    ]
+  },
+  {
+    "module": "core_pdf",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.pdf.PdfImageExportRequestTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.036"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-pdf/0.1.0-SNAPSHOT/core-pdf-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 6045,
+        "sha256": "51f66681beddc2f65f1afc9a7b82b541c8be0bc5c96adb9e3daa8acd41e7e381"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-pdf/0.1.0-SNAPSHOT/core-pdf-0.1.0-20261023.045812-1.aar",
+        "bytes": 52250,
+        "sha256": "2c0aefaccbc2fedd8d99385b992ba9d8c5acd083091932dead1146aca2d1a6b6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-pdf/0.1.0-SNAPSHOT/core-pdf-0.1.0-20261023.045812-1.module",
+        "bytes": 3789,
+        "sha256": "571075b98c98f7034e60c670405b2ed07d6e3668bf845060e2675c050177160c"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-pdf/0.1.0-SNAPSHOT/core-pdf-0.1.0-20261023.045812-1.pom",
+        "bytes": 1690,
+        "sha256": "ce87105b61e6db91d49e3ba827caf6aee7acd83dcf34df0fe4d5f5b78a315faf"
+      }
+    ]
+  },
+  {
+    "module": "core_qr_transfer",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.qrtransfer.QrTransferCoordinatorTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "2.232"
+      },
+      {
+        "name": "com.wkq.photo.qrtransfer.QrTransferSecurityTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.139"
+      },
+      {
+        "name": "com.wkq.photo.qrtransfer.TransferFileIOTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.wkq.photo.qrtransfer.TransferProtocolTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.052"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-qr-transfer/0.1.0-SNAPSHOT/core-qr-transfer-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 16883,
+        "sha256": "e4fb2107c8ceb1b483efe61fe7a24ee072dcb3b967684a908f726ce5dc61ab94"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qr-transfer/0.1.0-SNAPSHOT/core-qr-transfer-0.1.0-20261023.045812-1.aar",
+        "bytes": 148869,
+        "sha256": "77d7f02f9d6bf997311ee0ff46de155c6c54e2b4d36722ed6f0e8cfb6699ebdb"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qr-transfer/0.1.0-SNAPSHOT/core-qr-transfer-0.1.0-20261023.045812-1.module",
+        "bytes": 4197,
+        "sha256": "7196caef4cda88f04ff3a195fcbebb2fc4c5d0cd276075f8c29a588582eef47f"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qr-transfer/0.1.0-SNAPSHOT/core-qr-transfer-0.1.0-20261023.045812-1.pom",
+        "bytes": 2111,
+        "sha256": "b295626bd17539afcb65af315df0b389291d82f35f77ffb8737dba684fa20f59"
+      }
+    ]
+  },
+  {
+    "module": "core_qrcode",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.qrcode.QRCodeGeneratorTest",
+        "tests": "8",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "2.504"
+      },
+      {
+        "name": "com.wkq.photo.qrcode.QrCodeKitTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.161"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-qrcode/0.1.0-SNAPSHOT/core-qrcode-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 11122,
+        "sha256": "49596bf4b93a2ba4ab00e012a4bd384d4d595d0e6ff55736a0e49aaf90289853"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qrcode/0.1.0-SNAPSHOT/core-qrcode-0.1.0-20261023.045812-1.aar",
+        "bytes": 61318,
+        "sha256": "9c96d1f0fbe5ec2f4d32e8f1a79875dd5e6899e99a625fadd54889c05650f3f6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qrcode/0.1.0-SNAPSHOT/core-qrcode-0.1.0-20261023.045812-1.module",
+        "bytes": 3809,
+        "sha256": "1eafc8b17b836afff55d8d78e287496a04adc7f0cba7ce8451137a34f644481e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-qrcode/0.1.0-SNAPSHOT/core-qrcode-0.1.0-20261023.045812-1.pom",
+        "bytes": 1697,
+        "sha256": "cb2c6a5424c06f31d22f639046f3aaa8d2b3a6756c7ee12e74aa115b963196d2"
+      }
+    ]
+  },
+  {
+    "module": "core_router_annotation",
+    "kind": "jar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-router-annotation/0.1.0-SNAPSHOT/core-router-annotation-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 3295,
+        "sha256": "db38f2d4f9c1a851eec73f14d34f07172d63e6f1dfb25d24021ad86efab3c9ab"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-annotation/0.1.0-SNAPSHOT/core-router-annotation-0.1.0-20261023.045812-1.jar",
+        "bytes": 6125,
+        "sha256": "25e71734b49640a039474f6211b53cb903852279fda1bdf837d0de85a1683745"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-annotation/0.1.0-SNAPSHOT/core-router-annotation-0.1.0-20261023.045812-1.module",
+        "bytes": 3236,
+        "sha256": "1997eac5f26cb7dea72f96fe90d3efe6c3f50e1e3a7d4e54681d11c45d14fa30"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-annotation/0.1.0-SNAPSHOT/core-router-annotation-0.1.0-20261023.045812-1.pom",
+        "bytes": 1127,
+        "sha256": "fc68cb3cbc0d926c8bbf539c94b9eb6a9349b5d41289b91ab644a34f19b49e18"
+      }
+    ]
+  },
+  {
+    "module": "core_router_api",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-router-api/0.1.0-SNAPSHOT/core-router-api-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 9365,
+        "sha256": "9480fa59e70c058ad58628814c2d765be3b7c7de1f4b899ef931c2593658bc2b"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-api/0.1.0-SNAPSHOT/core-router-api-0.1.0-20261023.045812-1.aar",
+        "bytes": 42447,
+        "sha256": "78c1da661208a29761cb3e3fb004d3ad8ab9922fe6f909c8f0891f7e31d6c5ac"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-api/0.1.0-SNAPSHOT/core-router-api-0.1.0-20261023.045812-1.module",
+        "bytes": 4865,
+        "sha256": "1044d036c189cbbdd00b701771f2a9261310d02c8f9e785b46bb3142dd81e10e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-api/0.1.0-SNAPSHOT/core-router-api-0.1.0-20261023.045812-1.pom",
+        "bytes": 2690,
+        "sha256": "fb6088f8079df47467a12cf6816a3cfd8e39c6e7641bee4659b86f8ad42c65d8"
+      }
+    ]
+  },
+  {
+    "module": "core_router_gradle_plugin",
+    "kind": "jar",
+    "suites": [
+      {
+        "name": "com.wkq.router.gradle.RouterGradlePluginTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "8.592"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 1835,
+        "sha256": "5beda79f576dad459e5560d13567d41dfe24a52410be6d998cc1f6fe44c463f6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-1.jar",
+        "bytes": 6493,
+        "sha256": "195a6a1b26164f14a99ac1a606c1a299e63c2177cbe053d448fbf58d0cd7bb4e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-1.module",
+        "bytes": 3635,
+        "sha256": "571cb5ee757410654585348d0a8e92f85996daa52308551fe141bdf1cda470a8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-1.pom",
+        "bytes": 1562,
+        "sha256": "9a644db94cdec20649c73a79f0b52727fd99ab28156c0999b39949cca4739b05"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-2-sources.jar",
+        "bytes": 1835,
+        "sha256": "5beda79f576dad459e5560d13567d41dfe24a52410be6d998cc1f6fe44c463f6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-2.jar",
+        "bytes": 6493,
+        "sha256": "195a6a1b26164f14a99ac1a606c1a299e63c2177cbe053d448fbf58d0cd7bb4e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-2.module",
+        "bytes": 3635,
+        "sha256": "571cb5ee757410654585348d0a8e92f85996daa52308551fe141bdf1cda470a8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.045812-2.pom",
+        "bytes": 1562,
+        "sha256": "9a644db94cdec20649c73a79f0b52727fd99ab28156c0999b39949cca4739b05"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-3-sources.jar",
+        "bytes": 2016,
+        "sha256": "adfe5994f57632e7ddfa42b7035f25fbc99a66c4d6c0da325526938c1549f7dd"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-3.jar",
+        "bytes": 7015,
+        "sha256": "86787c3cab28d7ed2b80b943c6056915ae69fc9e0d7ee9fbb5eb09901319820e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-3.module",
+        "bytes": 3635,
+        "sha256": "b652680cfa8347ad1c4d2db660d366366bfc3ee9f68229a178f98a372d237a47"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-3.pom",
+        "bytes": 1562,
+        "sha256": "9a644db94cdec20649c73a79f0b52727fd99ab28156c0999b39949cca4739b05"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-4-sources.jar",
+        "bytes": 2016,
+        "sha256": "adfe5994f57632e7ddfa42b7035f25fbc99a66c4d6c0da325526938c1549f7dd"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-4.jar",
+        "bytes": 7015,
+        "sha256": "86787c3cab28d7ed2b80b943c6056915ae69fc9e0d7ee9fbb5eb09901319820e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-4.module",
+        "bytes": 3635,
+        "sha256": "b652680cfa8347ad1c4d2db660d366366bfc3ee9f68229a178f98a372d237a47"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051126-4.pom",
+        "bytes": 1562,
+        "sha256": "9a644db94cdec20649c73a79f0b52727fd99ab28156c0999b39949cca4739b05"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051339-5-sources.jar",
+        "bytes": 2016,
+        "sha256": "adfe5994f57632e7ddfa42b7035f25fbc99a66c4d6c0da325526938c1549f7dd"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051339-5.jar",
+        "bytes": 7015,
+        "sha256": "86787c3cab28d7ed2b80b943c6056915ae69fc9e0d7ee9fbb5eb09901319820e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051339-5.module",
+        "bytes": 3635,
+        "sha256": "b652680cfa8347ad1c4d2db660d366366bfc3ee9f68229a178f98a372d237a47"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-gradle-plugin/0.1.0-SNAPSHOT/core-router-gradle-plugin-0.1.0-20261023.051339-5.pom",
+        "bytes": 1562,
+        "sha256": "9a644db94cdec20649c73a79f0b52727fd99ab28156c0999b39949cca4739b05"
+      }
+    ]
+  },
+  {
+    "module": "core_router_processor",
+    "kind": "jar",
+    "suites": [
+      {
+        "name": "com.wkq.router.processor.RouteProcessorTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "8.329"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-router-processor/0.1.0-SNAPSHOT/core-router-processor-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 6208,
+        "sha256": "a1ab4b7261b2d8a6e677e68744060d9c96fa22bb492cae322cbaa082c9b5986a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-processor/0.1.0-SNAPSHOT/core-router-processor-0.1.0-20261023.045812-1.jar",
+        "bytes": 23855,
+        "sha256": "f97d4220d5da1b01d5ae8efb4b09504872b6f397d3a80e8d6b7c14c241b79270"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-processor/0.1.0-SNAPSHOT/core-router-processor-0.1.0-20261023.045812-1.module",
+        "bytes": 4113,
+        "sha256": "feb2ff19d64b83af8332ec1b1c4f69924a509eedf2a9abe75a7fe4f2532cd9e4"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-router-processor/0.1.0-SNAPSHOT/core-router-processor-0.1.0-20261023.045812-1.pom",
+        "bytes": 1905,
+        "sha256": "117758b5684b648dc0aeee3e30a4ceda57824c01369aa78ea1f970a199d6cebf"
+      }
+    ]
+  },
+  {
+    "module": "core_share",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-share/0.1.0-SNAPSHOT/core-share-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 1555,
+        "sha256": "c83c53383e3da8a09eccf65a16f0f0c42f5a4fb755fa6fa81d4f6fee68f0c6d1"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-share/0.1.0-SNAPSHOT/core-share-0.1.0-20261023.045812-1.aar",
+        "bytes": 6669,
+        "sha256": "4f0e9f51227c9ea6bf1d25e8a532aa435a5f3d429a9df794ba7c39eb6b40304e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-share/0.1.0-SNAPSHOT/core-share-0.1.0-20261023.045812-1.module",
+        "bytes": 3291,
+        "sha256": "f7ec585fa73c9e38bf0f6d316663c968a06535261f939c5e142ae9b3e9df9529"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-share/0.1.0-SNAPSHOT/core-share-0.1.0-20261023.045812-1.pom",
+        "bytes": 1307,
+        "sha256": "850d576393745eaf153d8c4ca5a2df69161c1dc3ad9fd1d966b69de93a091e96"
+      }
+    ]
+  },
+  {
+    "module": "core_utils",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.util.coil.CacheManagerConfigTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      },
+      {
+        "name": "com.wkq.util.CoreUtilsConfigTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.047"
+      },
+      {
+        "name": "com.wkq.util.FormatUtilTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.026"
+      },
+      {
+        "name": "com.wkq.util.jump.SmartJumpEngineTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.009"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/core-utils/0.1.0-SNAPSHOT/core-utils-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 68672,
+        "sha256": "efc801abc624613891655222a65361ae07bd532ccda0da08c5f0169b36d5a358"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-utils/0.1.0-SNAPSHOT/core-utils-0.1.0-20261023.045812-1.aar",
+        "bytes": 226800,
+        "sha256": "ed921fdd87307a9defe04d9ee31cd1e889ade5ada34c2431d23df8e22e725fc8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-utils/0.1.0-SNAPSHOT/core-utils-0.1.0-20261023.045812-1.module",
+        "bytes": 5405,
+        "sha256": "b1db55c606090a5b65dd7e59ba74435a0d87196263abe203b552797cc9fc8d62"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/core-utils/0.1.0-SNAPSHOT/core-utils-0.1.0-20261023.045812-1.pom",
+        "bytes": 3183,
+        "sha256": "4a7c4fb354ad609d472b8193d4739b2e62975ff3b70ab88e93ef436fe16bd20b"
+      }
+    ]
+  },
+  {
+    "module": "id-photo-library",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.idlibrary.CatalogPackageValidatorTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.046"
+      },
+      {
+        "name": "com.wkq.photo.idlibrary.i18n.LocaleFallbackTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.006"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/id-photo-library/0.1.0-SNAPSHOT/id-photo-library-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 20777,
+        "sha256": "ddac782797960da4e4abb9f15c5afe6495526070020ee23dcd645b0ebdb71c4f"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/id-photo-library/0.1.0-SNAPSHOT/id-photo-library-0.1.0-20261023.045812-1.aar",
+        "bytes": 309421,
+        "sha256": "563acda7a3d350046ff704969f3c289a224de8f14aa550c34e3680e564197cfb"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/id-photo-library/0.1.0-SNAPSHOT/id-photo-library-0.1.0-20261023.045812-1.module",
+        "bytes": 3837,
+        "sha256": "1173d26ebfd765471448194c9d383de470828be5b518b139957b8e75a64bbaf7"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/id-photo-library/0.1.0-SNAPSHOT/id-photo-library-0.1.0-20261023.045812-1.pom",
+        "bytes": 1896,
+        "sha256": "ed66fbef303a34164e7e142c7bbe278dc97dd91c97f6fcbb69eb58fea8e40ba1"
+      }
+    ]
+  },
+  {
+    "module": "lib_agora",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-agora/0.1.0-SNAPSHOT/lib-agora-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 16934,
+        "sha256": "327a92f94b36c27f71df0d404feeb729fe0efc2bb23f21b20069cc5498aced03"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-agora/0.1.0-SNAPSHOT/lib-agora-0.1.0-20261023.045812-1.aar",
+        "bytes": 110103,
+        "sha256": "f7b05b4b8cfe0d3206d1e0327ba7368e6d965d5031f22a527626e4a43b3a4868"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-agora/0.1.0-SNAPSHOT/lib-agora-0.1.0-20261023.045812-1.module",
+        "bytes": 3776,
+        "sha256": "2bf787cc30e187950ed421962ad20b2b5c0f5b451a31224f120a20b015e671a3"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-agora/0.1.0-SNAPSHOT/lib-agora-0.1.0-20261023.045812-1.pom",
+        "bytes": 1493,
+        "sha256": "06bb03b448e0a5f042a376a374db5839598d8089c52a0697949a8ac0c5f81362"
+      }
+    ]
+  },
+  {
+    "module": "lib_auth_credentials",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-credentials/0.1.0-SNAPSHOT/lib-auth-credentials-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 3863,
+        "sha256": "d815690005f3c6fbd09cc3d3b9cb6490fbd3fb81a76e2d8ee222f04bd44590ea"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-credentials/0.1.0-SNAPSHOT/lib-auth-credentials-0.1.0-20261023.045812-1.aar",
+        "bytes": 14662,
+        "sha256": "67080c975d6efdfbbc27898ab2984671f398ea6345b03a6a34ae4d16f0966925"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-credentials/0.1.0-SNAPSHOT/lib-auth-credentials-0.1.0-20261023.045812-1.module",
+        "bytes": 4252,
+        "sha256": "88c9ad57424cfa57638393d7608c3b36c10558d48884b5009038c0225560be22"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-credentials/0.1.0-SNAPSHOT/lib-auth-credentials-0.1.0-20261023.045812-1.pom",
+        "bytes": 2156,
+        "sha256": "e52ff6f002eaa30ee7b78f5122a6f93d8ba6ff42cb74c796d55127031068cbcf"
+      }
+    ]
+  },
+  {
+    "module": "lib_auth_firebase",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-firebase/0.1.0-SNAPSHOT/lib-auth-firebase-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 1303,
+        "sha256": "01a9962335e54fb4f0bf19a3bb33f5e06ec137dc489c8c9b378a3783a4795cf8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-firebase/0.1.0-SNAPSHOT/lib-auth-firebase-0.1.0-20261023.045812-1.aar",
+        "bytes": 5161,
+        "sha256": "7aa99f8d18966d0db5a6dd52e6bb87d0cca847abcf0b01645ce970234c199e89"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-firebase/0.1.0-SNAPSHOT/lib-auth-firebase-0.1.0-20261023.045812-1.module",
+        "bytes": 4424,
+        "sha256": "f7fd873512136e635507bd8fe5a02a5e6bdeaaec8d5083e5e23d8153f23fdd59"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-firebase/0.1.0-SNAPSHOT/lib-auth-firebase-0.1.0-20261023.045812-1.pom",
+        "bytes": 2040,
+        "sha256": "e54812dc0951a7ea60733f36068e6764e8a1dfa2ddee6ffa4aaa5f458b12f5df"
+      }
+    ]
+  },
+  {
+    "module": "lib_auth_google",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-google/0.1.0-SNAPSHOT/lib-auth-google-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 5559,
+        "sha256": "e318185413c04592285a29169cc17db11ed8526b7446cc441818ed66d151f331"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-google/0.1.0-SNAPSHOT/lib-auth-google-0.1.0-20261023.045812-1.aar",
+        "bytes": 26345,
+        "sha256": "51ecb8bba8d9cf43e0b3dac90218e7435f54feddbf422c14b0757db730fa03db"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-google/0.1.0-SNAPSHOT/lib-auth-google-0.1.0-20261023.045812-1.module",
+        "bytes": 3504,
+        "sha256": "e0f8400b2af04c3d8c722334a62a5674509d6565901dced1c68ba69157a0defa"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-auth-google/0.1.0-SNAPSHOT/lib-auth-google-0.1.0-20261023.045812-1.pom",
+        "bytes": 1522,
+        "sha256": "1797ea0d7aaac0f3b7eb858c54876ff42ba006593a584aec500c0e8cd2300d60"
+      }
+    ]
+  },
+  {
+    "module": "lib_beauty",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.beautysdk.BeautyPipelineTest",
+        "tests": "9",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.114"
+      },
+      {
+        "name": "com.beautysdk.BeautyProcessorTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.004"
+      },
+      {
+        "name": "com.beautysdk.ImageStickerTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.133"
+      },
+      {
+        "name": "com.beautysdk.JavaApiTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty/0.1.0-SNAPSHOT/lib-beauty-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 19857,
+        "sha256": "dbc5e5c08c7be6eb9addd16eb6c0161c46097d0650c8d0518ef92efc5d80ab22"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty/0.1.0-SNAPSHOT/lib-beauty-0.1.0-20261023.045812-1.aar",
+        "bytes": 79078,
+        "sha256": "3199bc183f087c4afbafb9e9ea9a6e46cd991176e9ff93f62e9d58d3cb9a0d30"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty/0.1.0-SNAPSHOT/lib-beauty-0.1.0-20261023.045812-1.module",
+        "bytes": 3137,
+        "sha256": "24f22874cd06de81a3ab9108856479e8d1e80b7a5ff3d9e462884e5e10fb57a5"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty/0.1.0-SNAPSHOT/lib-beauty-0.1.0-20261023.045812-1.pom",
+        "bytes": 1126,
+        "sha256": "8638e5d148b2ec1702fd621dd9819261fe0ee67d9d32742558b02275df631e3c"
+      }
+    ]
+  },
+  {
+    "module": "lib_beauty_mediapipe",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-mediapipe/0.1.0-SNAPSHOT/lib-beauty-mediapipe-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 2267,
+        "sha256": "936f49ef47d096bf097a88d3ffc045bf11ad2b75ff8750a62d69d0a1e2096f72"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-mediapipe/0.1.0-SNAPSHOT/lib-beauty-mediapipe-0.1.0-20261023.045812-1.aar",
+        "bytes": 3348457,
+        "sha256": "a539ccd7a071fe5c86a293721febdf81a5350412bdbe73ad28cc89c8fdc44915"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-mediapipe/0.1.0-SNAPSHOT/lib-beauty-mediapipe-0.1.0-20261023.045812-1.module",
+        "bytes": 3709,
+        "sha256": "3a072c756c6dd12441c8dad938fc67c6ddca8eb0501d620311d008b89887177c"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-mediapipe/0.1.0-SNAPSHOT/lib-beauty-mediapipe-0.1.0-20261023.045812-1.pom",
+        "bytes": 1538,
+        "sha256": "abf69c17c9c38f2fee79677c198edf9f111436a2833b5568fd89381c183a45f2"
+      }
+    ]
+  },
+  {
+    "module": "lib_beauty_rfb",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.beautysdk.rfb.AnalyzerLifetimeTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.beautysdk.rfb.RfbPostprocessorTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.025"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-rfb/0.1.0-SNAPSHOT/lib-beauty-rfb-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 6513,
+        "sha256": "17979c8340518654be95b4eb273e6a9de3d5688efcf07ac254eb05ed5de7a2a6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-rfb/0.1.0-SNAPSHOT/lib-beauty-rfb-0.1.0-20261023.045812-1.aar",
+        "bytes": 1092839,
+        "sha256": "2551db7569fccfcc903e005b4a9194628bdfd05e300d62dce2dc2c40662f2d92"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-rfb/0.1.0-SNAPSHOT/lib-beauty-rfb-0.1.0-20261023.045812-1.module",
+        "bytes": 3678,
+        "sha256": "207a2d7678307e95e064cbe99f92ed18614c5e541885da4a2bcf1ad2a94b553a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-beauty-rfb/0.1.0-SNAPSHOT/lib-beauty-rfb-0.1.0-20261023.045812-1.pom",
+        "bytes": 1531,
+        "sha256": "321e6a4067111f856d454a5e3b6e49dd91a1cd48e75a9e81d09cd6db9642ccb7"
+      }
+    ]
+  },
+  {
+    "module": "lib_billing_play",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.google.billing.GoogleBillingEntitlementCacheTest",
+        "tests": "8",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.023"
+      },
+      {
+        "name": "com.wkq.google.billing.GoogleBillingEntitlementTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      },
+      {
+        "name": "com.wkq.google.billing.GoogleBillingPersistenceTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.145"
+      },
+      {
+        "name": "com.wkq.google.billing.GoogleBillingPolicyTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.038"
+      },
+      {
+        "name": "com.wkq.google.billing.GoogleBillingQueriesTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.082"
+      },
+      {
+        "name": "com.wkq.google.billing.OfflineCachePolicyTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.0"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-billing-play/0.1.0-SNAPSHOT/lib-billing-play-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 15696,
+        "sha256": "55cad7d1a4bb0a0764e0bde265694880bd39fecb4a12ad7fe2242de0039c4f5b"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-billing-play/0.1.0-SNAPSHOT/lib-billing-play-0.1.0-20261023.045812-1.aar",
+        "bytes": 138646,
+        "sha256": "3717921750418c7290c3c823ce60792503912e7a7d4c2c7600a061715e3244cc"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-billing-play/0.1.0-SNAPSHOT/lib-billing-play-0.1.0-20261023.045812-1.module",
+        "bytes": 3695,
+        "sha256": "db01d850d9d7f3e1fa35b8beb972d0966a4a046cb087c6f50c703d1de192891e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-billing-play/0.1.0-SNAPSHOT/lib-billing-play-0.1.0-20261023.045812-1.pom",
+        "bytes": 1539,
+        "sha256": "f43d5ed6754a26f667ed5de6e8a8b98d8fab1c28744c0ea905ce8e080aa7ac64"
+      }
+    ]
+  },
+  {
+    "module": "lib_camera",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.beautysdk.camera.RgbaPackingTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.012"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera/0.1.0-SNAPSHOT/lib-camera-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 5245,
+        "sha256": "75e131fe2ac5abd3fc1e41a58ba68b61b45ebab8fff20a0c2908269587aa2089"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera/0.1.0-SNAPSHOT/lib-camera-0.1.0-20261023.045812-1.aar",
+        "bytes": 19725,
+        "sha256": "b356bb71bc94fd490cac4581c9da084587c4302d67b49a44df5635def2a18737"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera/0.1.0-SNAPSHOT/lib-camera-0.1.0-20261023.045812-1.module",
+        "bytes": 4456,
+        "sha256": "77622b479e81d20d625e8c63a3738dd429503e533875f553714dec1ffbf79a4a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera/0.1.0-SNAPSHOT/lib-camera-0.1.0-20261023.045812-1.pom",
+        "bytes": 2254,
+        "sha256": "ed4971fe2c622706850f0dea3d3c85d42be21ee8b7f4a4c4860d909b9add212b"
+      }
+    ]
+  },
+  {
+    "module": "lib_camera_capture",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera-capture/0.1.0-SNAPSHOT/lib-camera-capture-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 11147,
+        "sha256": "28cbd346d38f70df1f67e45e250eb7a9d130821cb318efbf000e0bfda13d5bb6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera-capture/0.1.0-SNAPSHOT/lib-camera-capture-0.1.0-20261023.045812-1.aar",
+        "bytes": 37215,
+        "sha256": "e28d3d82c0103a6896f5bbc70f51418bef50c0fa322edd13a52d42b6dd9e3f63"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera-capture/0.1.0-SNAPSHOT/lib-camera-capture-0.1.0-20261023.045812-1.module",
+        "bytes": 5027,
+        "sha256": "23a0637830edcc91abc536490e90c4ad6abd405bb3b8d07d9ac6d3bb86ed4fce"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-camera-capture/0.1.0-SNAPSHOT/lib-camera-capture-0.1.0-20261023.045812-1.pom",
+        "bytes": 2866,
+        "sha256": "f07caa4de5b947652eac37c381ff2f721f2d1b8f9240f828e41f97544c6aace5"
+      }
+    ]
+  },
+  {
+    "module": "lib_crash",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.crash.CrashScenariosTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.024"
+      },
+      {
+        "name": "com.wkq.crash.CrashUtilsTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.wkq.crash.NativeCrashTypesTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-crash/0.1.0-SNAPSHOT/lib-crash-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 12424,
+        "sha256": "f6068581fe13b035ea0969b1603f29b41bfc9fea0f0954e3a64fc449e69548b2"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-crash/0.1.0-SNAPSHOT/lib-crash-0.1.0-20261023.045812-1.aar",
+        "bytes": 239281,
+        "sha256": "ebfac33230fa1045b91624de56abccf86ed3f0722dcffc82697a57c8f5af8cc4"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-crash/0.1.0-SNAPSHOT/lib-crash-0.1.0-20261023.045812-1.module",
+        "bytes": 3132,
+        "sha256": "24714fb714273579294ada4005dd428dc765a1490d93648993452047370e0e02"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-crash/0.1.0-SNAPSHOT/lib-crash-0.1.0-20261023.045812-1.pom",
+        "bytes": 1123,
+        "sha256": "4b26368f2402cad58d19a51f2854d67e55fe96cbee0d3b718d8b331db8ad1602"
+      }
+    ]
+  },
+  {
+    "module": "lib_devhub",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.devhub.sdk.CampaignCacheTest",
+        "tests": "30",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "6.204"
+      },
+      {
+        "name": "com.devhub.sdk.DevHubTest",
+        "tests": "19",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.515"
+      },
+      {
+        "name": "com.devhub.sdk.SdkStabilityTest",
+        "tests": "69",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "8.479"
+      },
+      {
+        "name": "com.devhub.sdk.SdkTransportTest",
+        "tests": "27",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.988"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-devhub/0.1.0-SNAPSHOT/lib-devhub-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 19756,
+        "sha256": "12a4b0e20088a4210c92190f1539dd7fa91536751d4e062d8cd635cbf274e834"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-devhub/0.1.0-SNAPSHOT/lib-devhub-0.1.0-20261023.045812-1.aar",
+        "bytes": 96242,
+        "sha256": "f422a2bfc21e811745fa09b93b76c1d643b7cd84c20889b0eec557f00d651003"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-devhub/0.1.0-SNAPSHOT/lib-devhub-0.1.0-20261023.045812-1.module",
+        "bytes": 3304,
+        "sha256": "c6d40736a5edc4033a64ce9d25e5cd4a4ea6c117feb2bf6ab4838c44bff79e33"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-devhub/0.1.0-SNAPSHOT/lib-devhub-0.1.0-20261023.045812-1.pom",
+        "bytes": 1317,
+        "sha256": "d85fafaaa97c3dc94b27c2ccee79a7fb2e2b26046305bf7e0249190d466ea50a"
+      }
+    ]
+  },
+  {
+    "module": "lib_document",
+    "kind": "jar",
+    "suites": [
+      {
+        "name": "com.wkq.roof.export.OfficeWriterTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.226"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-document/0.1.0-SNAPSHOT/lib-document-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 18295,
+        "sha256": "1a079f02edbe8e3058238b34d67c5e200908b1464b73e46908a3d674184cf1da"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-document/0.1.0-SNAPSHOT/lib-document-0.1.0-20261023.045812-1.jar",
+        "bytes": 87741,
+        "sha256": "6efe82c7bb6582ae4829620ad0f9b3034648b5c53066161e068c3468522112d4"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-document/0.1.0-SNAPSHOT/lib-document-0.1.0-20261023.045812-1.module",
+        "bytes": 3370,
+        "sha256": "6be63bf8dfcba5bf578c735306fb336716674cdd284f3cf63860e63b711352fc"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-document/0.1.0-SNAPSHOT/lib-document-0.1.0-20261023.045812-1.pom",
+        "bytes": 1097,
+        "sha256": "bbfcc295867191bb73e48e010c77cc8641a18b52d9da38825d3c85e5854ec699"
+      }
+    ]
+  },
+  {
+    "module": "lib_drop",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.droplan.drop.DropServerTest",
+        "tests": "17",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "2.108"
+      },
+      {
+        "name": "com.wkq.droplan.drop.HttpByteRangeTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      },
+      {
+        "name": "com.wkq.droplan.drop.HttpsTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.154"
+      },
+      {
+        "name": "com.wkq.droplan.drop.SnapshotZipArchiveTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "6.81"
+      },
+      {
+        "name": "com.wkq.droplan.drop.WebSocketTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.067"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-drop/0.1.0-SNAPSHOT/lib-drop-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 30423,
+        "sha256": "8302cefca53ca679e7d63fc16a868256b690ff7c5d8cb55f8290bd521f29e7f7"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-drop/0.1.0-SNAPSHOT/lib-drop-0.1.0-20261023.045812-1.aar",
+        "bytes": 167874,
+        "sha256": "0cc4b3506f3815155ea501e1ca8d1cbfc2d9e7a8bc321812e24da15d98002780"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-drop/0.1.0-SNAPSHOT/lib-drop-0.1.0-20261023.045812-1.module",
+        "bytes": 3282,
+        "sha256": "fac820b13d3648d806f3b07458b478ba0f6571f6fe72b5e6f12cc6d469f48ec7"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-drop/0.1.0-SNAPSHOT/lib-drop-0.1.0-20261023.045812-1.pom",
+        "bytes": 1301,
+        "sha256": "cb006466124ee4bdcc664f21ec1befe6ff60a21573c3025e8d155bdd92c7cb9e"
+      }
+    ]
+  },
+  {
+    "module": "lib_entitlement",
+    "kind": "jar",
+    "suites": [
+      {
+        "name": "com.wkq.dev.entitlement.EntitlementPolicyTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.049"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-entitlement/0.1.0-SNAPSHOT/lib-entitlement-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 1306,
+        "sha256": "3d0ba45fdcfaac01ff3accf4cb06429e203b2a27768d436e9340bab326eee938"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-entitlement/0.1.0-SNAPSHOT/lib-entitlement-0.1.0-20261023.045812-1.jar",
+        "bytes": 5405,
+        "sha256": "c6b2459da560f21f24f7986231f54f33cdd874e93dc24fe804b500fe87477fe0"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-entitlement/0.1.0-SNAPSHOT/lib-entitlement-0.1.0-20261023.045812-1.module",
+        "bytes": 3388,
+        "sha256": "8aff3087cc84a5645e547961f792a5474f1aa2160b76ac0576ec19443a5db7fb"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-entitlement/0.1.0-SNAPSHOT/lib-entitlement-0.1.0-20261023.045812-1.pom",
+        "bytes": 1106,
+        "sha256": "8c679029965cce68cc936be2ee00626e178a9943c28462f52e377b485250830f"
+      }
+    ]
+  },
+  {
+    "module": "lib_html",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.droplan.html.WebAssetCatalogTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.05"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-html/0.1.0-SNAPSHOT/lib-html-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 1442,
+        "sha256": "011f6742d98fb58d623b8f550db79bf8c72abcdd37e70664d2dd59458ec210bd"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-html/0.1.0-SNAPSHOT/lib-html-0.1.0-20261023.045812-1.aar",
+        "bytes": 40908,
+        "sha256": "317e1d53e1410cef29e314325d119c2caf4e704bfe27d19041e1b81d29b014a5"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-html/0.1.0-SNAPSHOT/lib-html-0.1.0-20261023.045812-1.module",
+        "bytes": 3122,
+        "sha256": "66d3e6b1df7a3e5ecccb0e97830730d43ac36c0ea38c9bf43817c82c590ac515"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-html/0.1.0-SNAPSHOT/lib-html-0.1.0-20261023.045812-1.pom",
+        "bytes": 1120,
+        "sha256": "eb73e969f52d5dbf982c6b4afc1d37ec6f329464e901b0ac58c6c2ae9e91d9ac"
+      }
+    ]
+  },
+  {
+    "module": "lib_live_api",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-api/0.1.0-SNAPSHOT/lib-live-api-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 3649,
+        "sha256": "d65bf4fdae4bd48a475a0a7a64d942d0e56c85ebd3e63584004fd4f2fdd4bda7"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-api/0.1.0-SNAPSHOT/lib-live-api-0.1.0-20261023.045812-1.aar",
+        "bytes": 42189,
+        "sha256": "a3d54a65222ab4298bae2199c098f7bb7a917bd26e29ba7395a39690cfe1c81c"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-api/0.1.0-SNAPSHOT/lib-live-api-0.1.0-20261023.045812-1.module",
+        "bytes": 3150,
+        "sha256": "56ca2e0f6bdfdd4762e591944f8642d0c23c05944d6dd5b26b3fdd7032783eda"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-api/0.1.0-SNAPSHOT/lib-live-api-0.1.0-20261023.045812-1.pom",
+        "bytes": 1132,
+        "sha256": "930deb92969e8cfb64bc766f9ed475daa28602b0dc7444b5b5e6b9d8f81b4896"
+      }
+    ]
+  },
+  {
+    "module": "lib_live_beauty",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-beauty/0.1.0-SNAPSHOT/lib-live-beauty-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 5534,
+        "sha256": "3383adc839586af0eae293ef6123c8bbbbc59a635c4a3ae97cdc93ba9e405513"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-beauty/0.1.0-SNAPSHOT/lib-live-beauty-0.1.0-20261023.045812-1.aar",
+        "bytes": 15855,
+        "sha256": "16c9663291d4872ea515114ee8ccd34b17e156f92810ea00cbf4ddbf48760a42"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-beauty/0.1.0-SNAPSHOT/lib-live-beauty-0.1.0-20261023.045812-1.module",
+        "bytes": 3859,
+        "sha256": "2bbcad76270a6b72f01fa876501fe31c3a02a0dd3fdecef3d7d039a65b75dca7"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-live-beauty/0.1.0-SNAPSHOT/lib-live-beauty-0.1.0-20261023.045812-1.pom",
+        "bytes": 1533,
+        "sha256": "723706542f5f778af6a8c6d37ddd9c2330abbb6f7db25d686e0b948f25ce0f2c"
+      }
+    ]
+  },
+  {
+    "module": "lib_location",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.util.location.geo.OfflineGeoCoderTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.696"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-location/0.1.0-SNAPSHOT/lib-location-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 16697,
+        "sha256": "195f0b73c10f3b2eb8085b2119adc9da13c642eadef12fa83932f94a5568b29a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-location/0.1.0-SNAPSHOT/lib-location-0.1.0-20261023.045812-1.aar",
+        "bytes": 88547,
+        "sha256": "93e2b370173e0d431846985380f65cc65abff9a7bd88a994087726e3bd5dc989"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-location/0.1.0-SNAPSHOT/lib-location-0.1.0-20261023.045812-1.module",
+        "bytes": 4300,
+        "sha256": "9c5e585f0320c13ce69bc241c98960656473b3275c68be88678f57b7a96ab0b8"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-location/0.1.0-SNAPSHOT/lib-location-0.1.0-20261023.045812-1.pom",
+        "bytes": 2258,
+        "sha256": "13e021dc275a4fee58b9116f186dbb78a00b7af58ffb0b4e056d44c64c608894"
+      }
+    ]
+  },
+  {
+    "module": "lib_metadata",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.016"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.CrwMetadataFieldsTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest",
+        "tests": "8",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.246"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest",
+        "tests": "16",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.385"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "4.957"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.MetadataDeliveryStatusTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.604"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.003"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.NativeWriteValidationTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.042"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "2.066"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.UploadMetadataCopierTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.063"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.008"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.XmpMetadataReaderTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.004"
+      },
+      {
+        "name": "com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.103"
+      },
+      {
+        "name": "com.wkq.util.exif.MetadataPrivacyRulesTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.007"
+      },
+      {
+        "name": "com.wkq.util.exif.MetadataScrubberTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "1",
+        "time": "0.0"
+      },
+      {
+        "name": "com.wkq.util.exif.PhotoFormatPolicyTest",
+        "tests": "12",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.wkq.util.exif.RasterMetadataChunksTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.36"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-metadata/0.1.0-SNAPSHOT/lib-metadata-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 90460,
+        "sha256": "a107e5c4524ef78ab8bc4e2c1f9ff7236894f385d9d4f13be3f3be278535dd78"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-metadata/0.1.0-SNAPSHOT/lib-metadata-0.1.0-20261023.045812-1.aar",
+        "bytes": 30626650,
+        "sha256": "c83e42e0a8669b4f3baf934593926a745f19076ffb00a567f27c6110c1a0476f"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-metadata/0.1.0-SNAPSHOT/lib-metadata-0.1.0-20261023.045812-1.module",
+        "bytes": 4833,
+        "sha256": "2d46454ca8851a0ee03c7265b027a6785bda0ca4982508ed7052fca5d6b57cd1"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-metadata/0.1.0-SNAPSHOT/lib-metadata-0.1.0-20261023.045812-1.pom",
+        "bytes": 2655,
+        "sha256": "4c0459330808547d5b053470dd5a575165f1b5b19c73b466afc5161746be482f"
+      }
+    ]
+  },
+  {
+    "module": "lib_operations",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.photo.core.operation.OperationContractsTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.032"
+      },
+      {
+        "name": "com.wkq.photo.core.operation.OutputPathRegistryTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.003"
+      },
+      {
+        "name": "com.wkq.photo.core.utils.AtomicFileOutputTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.154"
+      },
+      {
+        "name": "com.wkq.photo.core.utils.TemporaryFileCleanerTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.022"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-operations/0.1.0-SNAPSHOT/lib-operations-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 6999,
+        "sha256": "3326a249bec4385ee31359ecbf9f1581976a2e6ef19f2b00d7bb7b55c8b99b9d"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-operations/0.1.0-SNAPSHOT/lib-operations-0.1.0-20261023.045812-1.aar",
+        "bytes": 46603,
+        "sha256": "82b15ef7035dc3db96483d8401d387324f4c9734625a8c178c45bdd2d0b53d88"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-operations/0.1.0-SNAPSHOT/lib-operations-0.1.0-20261023.045812-1.module",
+        "bytes": 3164,
+        "sha256": "18896328e986d6bedee4f9f9456a65131e3081cb45a00edd777b1936eb43c481"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-operations/0.1.0-SNAPSHOT/lib-operations-0.1.0-20261023.045812-1.pom",
+        "bytes": 1138,
+        "sha256": "aed575e3e1511d257488f2bbc343c0a8971b80e02c3fad452f12653078b4c1a6"
+      }
+    ]
+  },
+  {
+    "module": "lib_push_fcm",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.starxen.lib.google.push.GooglePushMessageParserTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.027"
+      },
+      {
+        "name": "com.starxen.lib.google.push.internal.MessageDeduplicatorTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.044"
+      },
+      {
+        "name": "com.starxen.lib.google.push.internal.PendingPushStoreTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.017"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-push-fcm/0.1.0-SNAPSHOT/lib-push-fcm-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 13963,
+        "sha256": "5ed9dbbb156c4482f88aea8511663ae67b6eee33a313daaeff567f7bca1b3893"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-push-fcm/0.1.0-SNAPSHOT/lib-push-fcm-0.1.0-20261023.045812-1.aar",
+        "bytes": 66499,
+        "sha256": "8b3b1e2a55878f0530ce1a9de25456013960e2735a4e867b12f9fc0a95fd24de"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-push-fcm/0.1.0-SNAPSHOT/lib-push-fcm-0.1.0-20261023.045812-1.module",
+        "bytes": 3641,
+        "sha256": "37eabdf3d23e22b9dd0184c59d747c3349656a6d22fc4fd0ab5f6e144ce8e1bf"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-push-fcm/0.1.0-SNAPSHOT/lib-push-fcm-0.1.0-20261023.045812-1.pom",
+        "bytes": 1694,
+        "sha256": "2fcd98bea36d0c3f3136e3c018d92bf154162a6555734de0a350a2c1a639cab7"
+      }
+    ]
+  },
+  {
+    "module": "lib_report_pdf",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.nativepdf.model.NativeReportContractTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.006"
+      },
+      {
+        "name": "com.wkq.nativepdf.PdfImageSamplingTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.014"
+      },
+      {
+        "name": "com.wkq.nativepdf.PdfOutputFileTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.04"
+      },
+      {
+        "name": "com.wkq.nativepdf.section.NativeEvidencePresentationTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.018"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-report-pdf/0.1.0-SNAPSHOT/lib-report-pdf-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 34545,
+        "sha256": "ae3027c9a697074d5d584f3bef758367eb330e29f5357d9eefa726700bb60304"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-report-pdf/0.1.0-SNAPSHOT/lib-report-pdf-0.1.0-20261023.045812-1.aar",
+        "bytes": 166451,
+        "sha256": "896c490d7e4505bbeded9b99d2094702d13b48dc839cb3754d2ec18919b976be"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-report-pdf/0.1.0-SNAPSHOT/lib-report-pdf-0.1.0-20261023.045812-1.module",
+        "bytes": 3677,
+        "sha256": "8d405cd0fa2ef1278d7993e52953eea0fc9ffe37ed9de4b40601d1273c7de611"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-report-pdf/0.1.0-SNAPSHOT/lib-report-pdf-0.1.0-20261023.045812-1.pom",
+        "bytes": 1720,
+        "sha256": "67db04e1698793627171682050a953b6b445ccefa0013191e1ddba97c3fead51"
+      }
+    ]
+  },
+  {
+    "module": "lib_tencent_beauty_kit",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-tencent-beauty-kit/0.1.0-SNAPSHOT/lib-tencent-beauty-kit-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 83561,
+        "sha256": "0570708d6565036befad682d61f3c2c4d9d8827e035e3e302ef3ae5ad09adcb6"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-tencent-beauty-kit/0.1.0-SNAPSHOT/lib-tencent-beauty-kit-0.1.0-20261023.045812-1.aar",
+        "bytes": 29236589,
+        "sha256": "64ea813fb1175141d8266455594f2964aff8d9b340feff9d97604be1b4e5627e"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-tencent-beauty-kit/0.1.0-SNAPSHOT/lib-tencent-beauty-kit-0.1.0-20261023.045812-1.module",
+        "bytes": 4585,
+        "sha256": "21a1bc587a6ced5bc231f4ea11dd7196d9acf317ec20e8d377732d3d0a825149"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-tencent-beauty-kit/0.1.0-SNAPSHOT/lib-tencent-beauty-kit-0.1.0-20261023.045812-1.pom",
+        "bytes": 2702,
+        "sha256": "89da2968b459bad07033b7069f2c100a6ff223be8356c5434175fcffca902dba"
+      }
+    ]
+  },
+  {
+    "module": "lib_transfer",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.wkq.nas.transfer.DirectoryListingCacheTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.022"
+      },
+      {
+        "name": "com.wkq.nas.transfer.FileClientTest",
+        "tests": "26",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "6.344"
+      },
+      {
+        "name": "com.wkq.nas.transfer.FileContentCacheTest",
+        "tests": "17",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.278"
+      },
+      {
+        "name": "com.wkq.nas.transfer.FilePreviewFormatsTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.008"
+      },
+      {
+        "name": "com.wkq.nas.transfer.LocalScanBenchmarkTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.95"
+      },
+      {
+        "name": "com.wkq.nas.transfer.PaidModeAccessTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.299"
+      },
+      {
+        "name": "com.wkq.nas.transfer.ProviderFailureTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.097"
+      },
+      {
+        "name": "com.wkq.nas.transfer.ReliabilityTest",
+        "tests": "17",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.173"
+      },
+      {
+        "name": "com.wkq.nas.transfer.RenamePlannerTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SelectionDraftStoreTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.325"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SmbPathTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.059"
+      },
+      {
+        "name": "com.wkq.nas.transfer.StartupRecoveryTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.029"
+      },
+      {
+        "name": "com.wkq.nas.transfer.StorageIdentityTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SyncDiagnosticsTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.29"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SyncPlannerTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SyncScopeScannerTest",
+        "tests": "6",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.302"
+      },
+      {
+        "name": "com.wkq.nas.transfer.SyncSelectionTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.04"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TaskNotificationRouteTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.022"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferConnectivityTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.0"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferDaoTest",
+        "tests": "17",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.984"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferExecutorTest",
+        "tests": "9",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.229"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferMigrationTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.157"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferQueueSignalsTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.014"
+      },
+      {
+        "name": "com.wkq.nas.transfer.TransferQueueWorkerTest",
+        "tests": "14",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "1.544"
+      },
+      {
+        "name": "com.wkq.nas.transfer.V2PayloadsTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.435"
+      },
+      {
+        "name": "com.wkq.nas.transfer.V2Test",
+        "tests": "54",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "9.698"
+      },
+      {
+        "name": "com.wkq.nas.transfer.V2WorkerTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.217"
+      },
+      {
+        "name": "com.wkq.nas.transfer.WebDavCertificatesTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.367"
+      },
+      {
+        "name": "com.wkq.nas.transfer.WebDavProviderTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.133"
+      },
+      {
+        "name": "com.wkq.nas.transfer.WebDavReplacementRecoveryTest",
+        "tests": "10",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.271"
+      },
+      {
+        "name": "com.wkq.nas.transfer.WorkerProvidersTest",
+        "tests": "4",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.163"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 94355,
+        "sha256": "d8aedca30b9ae3edc83d78ade26eb128df5377eebc2a62ee575562bf24259007"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.045812-1.aar",
+        "bytes": 1065173,
+        "sha256": "c1655b078b2d916fe0a2eb19542a7865da61af0f72556811de960d78285529fd"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.045812-1.module",
+        "bytes": 4997,
+        "sha256": "89a9ded1d4600bafd6ae28cd2d56976278790ebfa9944d88d0c90b3feee0cfee"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.045812-1.pom",
+        "bytes": 3075,
+        "sha256": "f160943a5b40bb8c84fd97048e6614f5deafc024d00099dae669b5398f94bc1f"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.051126-2-sources.jar",
+        "bytes": 94345,
+        "sha256": "8be00f4e2b8ab4cbcca113e4eab27409bcd3c6c65be504b2e4980f69db078310"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.051126-2.aar",
+        "bytes": 1064842,
+        "sha256": "f5539d49875d5cc898e2d685ee0e8d3cacc655223a6f42d55b1658df19b3680a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.051126-2.module",
+        "bytes": 4997,
+        "sha256": "685357c4f1a180c12b9813815aa40eca66bf41099918e080a65b02a6cbbb62b1"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-transfer/0.1.0-SNAPSHOT/lib-transfer-0.1.0-20261023.051126-2.pom",
+        "bytes": 3075,
+        "sha256": "f160943a5b40bb8c84fd97048e6614f5deafc024d00099dae669b5398f94bc1f"
+      }
+    ]
+  },
+  {
+    "module": "lib_upload",
+    "kind": "aar",
+    "suites": [],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-upload/0.1.0-SNAPSHOT/lib-upload-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 42765,
+        "sha256": "339000840cec6280afa71dd885c93e88406d3fe9543da1f96178027cca43a578"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-upload/0.1.0-SNAPSHOT/lib-upload-0.1.0-20261023.045812-1.aar",
+        "bytes": 182182,
+        "sha256": "9523b351518818197395cb229e1e813084c6ceed118bf0f6105b99e3715c37da"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-upload/0.1.0-SNAPSHOT/lib-upload-0.1.0-20261023.045812-1.module",
+        "bytes": 5485,
+        "sha256": "5dec8e2c9aa80ee5ea89fc67427fef6300f4d5719f0fe8cf33e1150cfb13f07a"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-upload/0.1.0-SNAPSHOT/lib-upload-0.1.0-20261023.045812-1.pom",
+        "bytes": 3849,
+        "sha256": "4b518654002aad3c538679e7e4af5cc2e65f5c3ce2bf1e79dfd5884e5d186ee5"
+      }
+    ]
+  },
+  {
+    "module": "lib_xpopup",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.lxj.xpopup.core.PopupInsetCalculatorTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.007"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/lib-xpopup/0.1.0-SNAPSHOT/lib-xpopup-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 126262,
+        "sha256": "9166ca75d05636540f7e1ac734a4df2b7337b540a5a9bcfcb04c936241435f01"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-xpopup/0.1.0-SNAPSHOT/lib-xpopup-0.1.0-20261023.045812-1.aar",
+        "bytes": 373828,
+        "sha256": "3f0a4b736161dd4a64ca738e2dd9b5953980d4495c7b87b8702e2697633e07b4"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-xpopup/0.1.0-SNAPSHOT/lib-xpopup-0.1.0-20261023.045812-1.module",
+        "bytes": 4121,
+        "sha256": "91469b8202357ed2f159ac787cf4c3a33aacddf77917b321c896bb1bfbc6108b"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/lib-xpopup/0.1.0-SNAPSHOT/lib-xpopup-0.1.0-20261023.045812-1.pom",
+        "bytes": 2251,
+        "sha256": "9e2ba362137217bbae76d1e823848130f08e5537014287039994f3a49cef9724"
+      }
+    ]
+  },
+  {
+    "module": "phototoolkit-engine",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.phototoolkit.engine.BundledIdPhotoCatalogTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.185"
+      },
+      {
+        "name": "com.phototoolkit.engine.GeneratedIdPhotoContractTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.phototoolkit.engine.IdPhotoComplianceEvaluatorTest",
+        "tests": "5",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.005"
+      },
+      {
+        "name": "com.phototoolkit.engine.IdPhotoOutputFormatTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.0"
+      },
+      {
+        "name": "com.phototoolkit.engine.IdPhotoPrintSheetPlannerTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      },
+      {
+        "name": "com.phototoolkit.engine.IdPhotoSourceQualityGateTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.0"
+      },
+      {
+        "name": "com.phototoolkit.engine.PortraitHeadGeometryEstimatorTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.029"
+      },
+      {
+        "name": "com.phototoolkit.engine.PortraitMattingMaskQualityTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.002"
+      },
+      {
+        "name": "com.phototoolkit.engine.PortraitRoiPlannerTest",
+        "tests": "2",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.001"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-engine/0.1.0-SNAPSHOT/phototoolkit-engine-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 46882,
+        "sha256": "2fca9a0b58dc59a837939b4c22b82eafd2951fcbf27cf862293a6803b575ddd3"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-engine/0.1.0-SNAPSHOT/phototoolkit-engine-0.1.0-20261023.045812-1.aar",
+        "bytes": 14953554,
+        "sha256": "e667f01ddcdb08cd96422e873f60855dfaf83e401f846ec730ea260292619d3b"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-engine/0.1.0-SNAPSHOT/phototoolkit-engine-0.1.0-20261023.045812-1.module",
+        "bytes": 4742,
+        "sha256": "c2cb629f31945e194759251181b3c8382b897e53cc886067f8943e5fc4f97297"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-engine/0.1.0-SNAPSHOT/phototoolkit-engine-0.1.0-20261023.045812-1.pom",
+        "bytes": 2522,
+        "sha256": "1fb2ca512ed03dd3de520d1e8b68c8b0eb25e4919da4ed64f64b352f17c170d2"
+      }
+    ]
+  },
+  {
+    "module": "phototoolkit-raw",
+    "kind": "aar",
+    "suites": [
+      {
+        "name": "com.phototoolkit.raw.RawDevelopOptionsTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "0.022"
+      }
+    ],
+    "published": [
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-raw/0.1.0-SNAPSHOT/phototoolkit-raw-0.1.0-20261023.045812-1-sources.jar",
+        "bytes": 4677,
+        "sha256": "10dac24d1f5f08b547cd02e310e856ab78150c18499a9becbb734531c044eae0"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-raw/0.1.0-SNAPSHOT/phototoolkit-raw-0.1.0-20261023.045812-1.aar",
+        "bytes": 5041859,
+        "sha256": "e959c1d12bc6a2d61fbdca62a12f0096bbf76dd38fff782d8ee69bb1c72b9065"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-raw/0.1.0-SNAPSHOT/phototoolkit-raw-0.1.0-20261023.045812-1.module",
+        "bytes": 3868,
+        "sha256": "ff7137892328aa45ad6086fd8e6cbcd3cd774daaed0b905ac821be23e2ca3611"
+      },
+      {
+        "path": "build/repo/com/wkq/dev/phototoolkit-raw/0.1.0-SNAPSHOT/phototoolkit-raw-0.1.0-20261023.045812-1.pom",
+        "bytes": 1535,
+        "sha256": "32402e64d2d81b834604fcc662f05d1624f72b5d899da5a4e8c6deab84657ab3"
+      }
+    ]
+  },
+  {
+    "module": "portrait-model-assets",
+    "kind": "asset-pack",
+    "suites": [],
+    "published": []
+  }
+]

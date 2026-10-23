@@ -1,0 +1,19 @@
+plugins {
+ id 'com.android.library' version '8.13.2'
+ id 'org.jetbrains.kotlin.android' version '2.1.21'
+ id 'com.wkq.router' version '0.1.0-SNAPSHOT'
+}
+android {
+ namespace = 'com.wkq.dev.consumer'; compileSdk = 36
+ buildFeatures { viewBinding = true }
+ defaultConfig { minSdk = 26 }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+ kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+ implementation 'com.wkq.dev:core-base:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:core-network:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-drop:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-entitlement:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-document:0.1.0-SNAPSHOT'
+}

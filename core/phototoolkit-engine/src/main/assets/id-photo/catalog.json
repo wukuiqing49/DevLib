@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 5,
+  "catalogVersion": 13,
+  "defaultLocale": "en",
+  "defaultRuleVersion": "catalog-13",
+  "defaultReviewedAt": "2026-08-06",
+  "defaultRuleProfileId": "reference.standard",
+  "ruleProfiles": [
+    {
+      "id": "reference.standard",
+      "faceHeightRatio": 0.55,
+      "faceTopRatio": 0.10,
+      "faceHeightTolerance": 0.05,
+      "topMarginTolerance": 0.04,
+      "faceHeightConstraint": "soft",
+      "topMarginConstraint": "soft",
+      "eyeLineRatio": 0.43,
+      "eyeLineTolerance": 0.04,
+      "eyeLineConstraint": "soft",
+      "minFaceWidthRatio": 0.02,
+      "maxHeadPoseDegrees": 15,
+      "minEyeOpenProbability": 0.45,
+      "headMeasurement": "crown_to_chin",
+      "faceCenterXRatio": 0.5,
+      "faceCenterXTolerance": 0.035,
+      "faceCenterConstraint": "soft",
+      "shoulderLineRatio": 0.88,
+      "shoulderLineTolerance": 0.055,
+      "shoulderLineConstraint": "soft",
+      "maxUpscaleRatio": 1.35,
+      "portraitBottomRatio": 1.0,
+      "maxPortraitWidthRatio": 1.0,
+      "bottomPolicy": "preserve_composition",
+      "strictComposition": false
+    },
+    {
+      "id": "reference.common_portrait",
+      "faceHeightRatio": 0.68,
+      "faceTopRatio": 0.08,
+      "faceHeightTolerance": 0.04,
+      "topMarginTolerance": 0.04,
+      "faceHeightConstraint": "soft",
+      "topMarginConstraint": "soft",
+      "eyeLineTolerance": 0.04,
+      "eyeLineConstraint": "soft",
+      "minFaceWidthRatio": 0.02,
+      "maxHeadPoseDegrees": 15,
+      "minEyeOpenProbability": 0.45,
+      "headMeasurement": "crown_to_chin",
+      "faceCenterXRatio": 0.5,
+      "faceCenterXTolerance": 0.035,
+      "faceCenterConstraint": "soft",
+      "shoulderLineRatio": 0.93,
+      "shoulderLineTolerance": 0.055,
+      "shoulderLineConstraint": "soft",
+      "maxUpscaleRatio": 1.35,
+      "portraitBottomRatio": 1.0,
+      "maxPortraitWidthRatio": 1.0,
+      "bottomPolicy": "preserve_composition",
+      "strictComposition": false
+    },
+    {
+      "id": "reference.square",
+      "faceHeightRatio": 0.60,
+      "faceTopRatio": 0.10,
+      "faceHeightTolerance": 0.05,
+      "topMarginTolerance": 0.04,
+      "faceHeightConstraint": "soft",
+      "topMarginConstraint": "soft",
+      "eyeLineRatio": 0.43,
+      "eyeLineTolerance": 0.04,
+      "eyeLineConstraint": "soft",
+      "minFaceWidthRatio": 0.02,
+      "maxHeadPoseDegrees": 15,
+      "minEyeOpenProbability": 0.45,
+      "headMeasurement": "crown_to_chin",
+      "faceCenterXRatio": 0.5,
+      "faceCenterXTolerance": 0.035,
+      "faceCenterConstraint": "soft",
+      "shoulderLineRatio": 0.90,
+      "shoulderLineTolerance": 0.055,
+      "shoulderLineConstraint": "soft",
+      "maxUpscaleRatio": 1.35,
+      "portraitBottomRatio": 1.0,
+      "maxPortraitWidthRatio": 1.0,
+      "bottomPolicy": "preserve_composition",
+      "strictComposition": false
+    },
+    {
+      "id": "official.unmodified",
+      "faceHeightRatio": 0.55,
+      "faceTopRatio": 0.10,
+      "faceHeightTolerance": 0.08,
+      "topMarginTolerance": 0.06,
+      "faceHeightConstraint": "soft",
+      "topMarginConstraint": "soft",
+      "eyeLineRatio": 0.43,
+      "eyeLineTolerance": 0.06,
+      "eyeLineConstraint": "soft",
+      "minFaceWidthRatio": 0.02,
+      "maxHeadPoseDegrees": 15,
+      "minEyeOpenProbability": 0.45,
+      "headMeasurement": "crown_to_chin",
+      "faceCenterXRatio": 0.5,
+      "faceCenterXTolerance": 0.035,
+      "faceCenterConstraint": "soft",
+      "shoulderLineRatio": 0.90,
+      "shoulderLineTolerance": 0.065,
+      "shoulderLineConstraint": "soft",
+      "maxUpscaleRatio": 1.15,
+      "portraitBottomRatio": 1.0,
+      "maxPortraitWidthRatio": 1.25,
+      "bottomPolicy": "preserve_composition",
+      "strictComposition": false
+    },
+    {
+      "id": "official.restricted",
+      "faceHeightRatio": 0.55,
+      "faceTopRatio": 0.10,
+      "faceHeightTolerance": 0.08,
+      "topMarginTolerance": 0.06,
+      "faceHeightConstraint": "soft",
+      "topMarginConstraint": "soft",
+      "eyeLineRatio": 0.43,
+      "eyeLineTolerance": 0.06,
+      "eyeLineConstraint": "soft",
+      "minFaceWidthRatio": 0.02,
+      "maxHeadPoseDegrees": 15,
+      "minEyeOpenProbability": 0.45,
+      "headMeasurement": "crown_to_chin",
+      "faceCenterXRatio": 0.5,
+      "faceCenterXTolerance": 0.035,
+      "faceCenterConstraint": "soft",
+      "shoulderLineRatio": 0.90,
+      "shoulderLineTolerance": 0.065,
+      "shoulderLineConstraint": "soft",
+      "maxUpscaleRatio": 1.35,
+      "portraitBottomRatio": 1.0,
+      "maxPortraitWidthRatio": 1.25,
+      "bottomPolicy": "preserve_composition",
+      "strictComposition": false
+    }
+  ],
+  "documents": [
+    {
+      "id": "common_print_25x35",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_25x35",
+      "variants": [
+        {"id":"common_print_25x35_print","displayNameKey":"variant.print_300dpi","delivery":"print","ruleProfileId":"reference.common_portrait","output":{"width":"25","height":"35","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "common_print_35x45",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_35x45",
+      "variants": [
+        {"id":"common_print_35x45_print","displayNameKey":"variant.print_300dpi","delivery":"print","ruleProfileId":"reference.common_portrait","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "common_print_33x48",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_33x48",
+      "variants": [
+        {"id":"common_print_33x48_print","displayNameKey":"variant.print_300dpi","delivery":"print","ruleProfileId":"reference.common_portrait","output":{"width":"33","height":"48","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "common_print_2x2",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_2x2",
+      "variants": [
+        {"id":"common_print_2x2_print","displayNameKey":"variant.print_300dpi","delivery":"print","ruleProfileId":"reference.square","output":{"width":"2","height":"2","unit":"inch","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "common_print_50x70",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_50x70",
+      "variants": [
+        {"id":"common_print_50x70_print","displayNameKey":"variant.print_300dpi","delivery":"print","ruleProfileId":"reference.common_portrait","output":{"width":"50","height":"70","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "common_digital",
+      "regionCode": "COMMON",
+      "documentType": "general",
+      "regionNameKey": "region.common",
+      "displayNameKey": "document.common_digital",
+      "variants": [
+        {"id":"common_digital_square","displayNameKey":"variant.digital_600x600","delivery":"digital","ruleProfileId":"reference.square","output":{"width":"600","height":"600","unit":"px","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"},
+        {"id":"common_digital_portrait","displayNameKey":"variant.digital_600x750","delivery":"digital","ruleProfileId":"reference.common_portrait","output":{"width":"600","height":"750","unit":"px","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id": "gb_passport",
+      "regionCode": "GB",
+      "documentType": "passport",
+      "regionNameKey": "region.gb",
+      "displayNameKey": "document.gb_passport",
+      "variants": [
+        {"id":"gb_passport_digital","displayNameKey":"variant.digital","delivery":"digital","ruleProfileId":"official.unmodified","output":{"width":"600","height":"750","unit":"px","dimensionMode":"minimum","dpi":300,"minBytes":50000,"maxBytes":10000000,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#F2F2F2","allowedColors":["#F2F2F2","#FFFFFF"]},"composition":{"faceHeightRatio":0.7,"faceHeightRange":{"min":0.644444,"max":0.755556},"faceHeightConstraint":"hard"},"sourceIds":["gov.uk.passport_photos","gov.uk.passport_photo_requirements"],"status":"verified","editPolicy":"prohibited","capturePolicy":"self_capture_allowed","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["online"],"requirementKeys":["requirement.uk_recent_unmodified"]},
+        {"id":"gb_passport_print","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"official.unmodified","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#F2F2F2","allowedColors":["#F2F2F2","#FFFFFF"]},"composition":{"faceHeightRatio":0.7,"faceHeightRange":{"min":0.644444,"max":0.755556},"faceHeightConstraint":"hard"},"sourceIds":["gov.uk.passport_photos","gov.uk.passport_photo_requirements"],"status":"verified","editPolicy":"prohibited","capturePolicy":"self_capture_allowed","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.uk_print_professional_unmodified"]}
+      ]
+    },
+    {
+      "id": "us_passport",
+      "regionCode": "US",
+      "documentType": "passport",
+      "regionNameKey": "region.us",
+      "displayNameKey": "document.us_passport",
+      "variants": [
+        {"id":"us_passport_digital_reference","displayNameKey":"variant.digital_600x600","delivery":"digital","ruleProfileId":"reference.square","output":{"width":"600","height":"600","unit":"px","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"},
+        {"id":"us_passport_print","displayNameKey":"variant.print_2x2","delivery":"print","ruleProfileId":"official.restricted","output":{"width":"2","height":"2","unit":"inch","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF","allowedColors":["#FFFFFF","#F2F2F2"]},"composition":{"faceHeightRatio":0.59375,"faceHeightRange":{"min":0.5,"max":0.6875},"faceHeightConstraint":"hard"},"sourceIds":["state.gov.ds11","state.gov.photo_tool"],"status":"verified","editPolicy":"restricted","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["mail","in_person","photo_tool"],"requirementKeys":["requirement.us_print_only_photo_tool"]}
+      ]
+    },
+    {
+      "id": "canada_passport",
+      "regionCode": "CA",
+      "documentType": "passport",
+      "regionNameKey": "region.ca",
+      "displayNameKey": "document.ca_passport",
+      "variants": [
+        {"id":"canada_passport_digital","displayNameKey":"variant.digital_online_renewal","delivery":"digital","ruleProfileId":"official.unmodified","output":{"width":"1200","height":"1800","unit":"px","dimensionMode":"range","dpi":300,"minWidth":"1200","minHeight":"1800","maxWidth":"3000","maxHeight":"4500","minBytes":200000,"maxBytes":5000000,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF","allowedColors":["#FFFFFF","#F2F2F2"]},"composition":{"faceHeightRatio":0.475,"faceHeightRange":{"min":0.45,"max":0.5},"faceHeightConstraint":"hard"},"sourceId":"canada.ca.passport_photos","status":"verified","editPolicy":"prohibited","capturePolicy":"commercial_photographer_required","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["online"],"requirementKeys":["requirement.canada_digital_original"]},
+        {"id":"canada_passport_print","displayNameKey":"variant.print_50x70","delivery":"print","ruleProfileId":"official.unmodified","output":{"width":"50","height":"70","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF","allowedColors":["#FFFFFF","#F2F2F2"]},"composition":{"faceHeightRatio":0.478571,"faceHeightRange":{"min":0.442857,"max":0.514286},"faceHeightConstraint":"hard"},"sourceId":"canada.ca.passport_photos","status":"verified","editPolicy":"prohibited","capturePolicy":"commercial_photographer_required","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.canada_print_professional"]}
+      ]
+    },
+    {
+      "id": "schengen_visa",
+      "regionCode": "SCHENGEN",
+      "documentType": "visa",
+      "regionNameKey": "region.schengen",
+      "displayNameKey": "document.schengen_visa",
+      "variants": [
+        {"id":"schengen_visa_print_reported","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.schengen.visa_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.schengen_reported_composition"]}
+      ]
+    },
+    {
+      "id": "china_passport",
+      "regionCode": "CN",
+      "documentType": "passport",
+      "regionNameKey": "region.cn",
+      "displayNameKey": "document.cn_passport",
+      "variants": [
+        {"id":"china_passport_print_reported","displayNameKey":"variant.print_33x48","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"33","height":"48","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.635417,"faceHeightRange":{"min":0.583333,"max":0.6875},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.cn.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.cn_reported_composition"]}
+      ]
+    },
+    {
+      "id":"japan_passport","regionCode":"JP","documentType":"passport","regionNameKey":"region.jp","displayNameKey":"document.jp_passport",
+      "variants":[{"id":"japan_passport_print_reported","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"soft","topMarginRatio":0.088889,"topMarginRange":{"min":0.044444,"max":0.133333},"topMarginConstraint":"soft"},"sourceId":"reported.jp.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.jp_reported_composition"]}]
+    },
+    {
+      "id":"korea_passport","regionCode":"KR","documentType":"passport","regionNameKey":"region.kr","displayNameKey":"document.kr_passport",
+      "variants":[
+        {"id":"korea_passport_digital","displayNameKey":"variant.digital_online_renewal","delivery":"digital","ruleProfileId":"official.restricted","output":{"width":"413","height":"531","unit":"px","dimensionMode":"range","dpi":300,"minWidth":"395","minHeight":"507","maxWidth":"431","maxHeight":"550","maxBytes":500000,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard"},"sourceId":"passport.go.kr.online","status":"verified","editPolicy":"restricted","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["online"],"requirementKeys":["requirement.korea_no_background_edit"]},
+        {"id":"korea_passport_print","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"official.restricted","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard"},"sourceId":"passport.go.kr.photo","status":"verified","editPolicy":"restricted","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.korea_no_background_edit"]}
+      ]
+    },
+    {
+      "id":"india_passport","regionCode":"IN","documentType":"passport","regionNameKey":"region.in","displayNameKey":"document.in_passport",
+      "variants":[{"id":"india_passport_print_reference","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}]
+    },
+    {
+      "id":"australia_passport","regionCode":"AU","documentType":"passport","regionNameKey":"region.au","displayNameKey":"document.au_passport",
+      "variants":[{"id":"australia_passport_print","displayNameKey":"variant.print_official_range","delivery":"print","ruleProfileId":"official.restricted","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"range","dpi":300,"minWidth":"35","minHeight":"45","maxWidth":"40","maxHeight":"50","formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#F2F2F2","allowedColors":["#F2F2F2","#FFFFFF"]},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard"},"sourceIds":["australia.embassy.passport_photos","australia.embassy.camera_operator"],"status":"verified","editPolicy":"restricted","capturePolicy":"assisted_capture_recommended","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.australia_limited_adjustment"]}]
+    },
+    {
+      "id":"new_zealand_passport","regionCode":"NZ","documentType":"passport","regionNameKey":"region.nz","displayNameKey":"document.nz_passport",
+      "variants":[
+        {"id":"new_zealand_passport_digital_reported","displayNameKey":"variant.digital_online_renewal","delivery":"digital","ruleProfileId":"reference.standard","output":{"width":"900","height":"1200","unit":"px","dimensionMode":"range","dpi":300,"minWidth":"900","minHeight":"1200","maxWidth":"4500","maxHeight":"6000","minBytes":250000,"maxBytes":5000000,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#F2F2F2","allowedColors":["#F2F2F2","#FFFFFF"]},"composition":{"faceHeightRatio":0.70,"faceHeightRange":{"min":0.65,"max":0.80},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.nz.passport_photo","status":"official_reported","editPolicy":"allowed","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["online"],"requirementKeys":["requirement.nz_reported_composition"]},
+        {"id":"new_zealand_passport_print_reported","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.70,"faceHeightRange":{"min":0.65,"max":0.80},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.nz.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.nz_reported_composition"]}
+      ]
+    },
+    {
+      "id":"singapore_passport","regionCode":"SG","documentType":"passport","regionNameKey":"region.sg","displayNameKey":"document.sg_passport",
+      "variants":[
+        {"id":"singapore_passport_digital","displayNameKey":"variant.digital_eservice","delivery":"digital","ruleProfileId":"official.restricted","output":{"width":"400","height":"514","unit":"px","dimensionMode":"exact","dpi":300,"maxBytes":8000000,"formats":["jpeg","png"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"ica.gov.sg.photo_guidelines","status":"channel_verified","editPolicy":"restricted","capturePolicy":"assisted_capture_recommended","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["online","mobile_app"],"requirementKeys":["requirement.singapore_resize_only"]},
+        {"id":"singapore_passport_print_reference","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}
+      ]
+    },
+    {
+      "id":"malaysia_passport","regionCode":"MY","documentType":"passport","regionNameKey":"region.my","displayNameKey":"document.my_passport",
+      "variants":[{"id":"malaysia_passport_print_reference","displayNameKey":"variant.print_35x50","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"50","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}]
+    },
+    {
+      "id":"germany_passport","regionCode":"DE","documentType":"passport","regionNameKey":"region.de","displayNameKey":"document.de_passport",
+      "variants":[{"id":"germany_passport_print","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"background":{"color":"#FFFFFF"},"sourceId":"auswaertiges-amt.de.biometric_passport_photos","status":"verified","editPolicy":"prohibited","capturePolicy":"commercial_photographer_required","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.de_official_composition"]}]
+    },
+    {
+      "id":"france_passport","regionCode":"FR","documentType":"passport","regionNameKey":"region.fr","displayNameKey":"document.fr_passport",
+      "variants":[{"id":"france_passport_print","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"official.unmodified","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#D9D9D9","allowedColors":["#D9D9D9","#D9E6F2"]},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard"},"sourceId":"service-public.fr.identity_photos","status":"verified","editPolicy":"prohibited","capturePolicy":"authorized_provider_required","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["mail","in_person"],"requirementKeys":["requirement.france_authorized_no_white"]}]
+    },
+    {
+      "id":"france_national_id","regionCode":"FR","documentType":"national_id","regionNameKey":"region.fr","displayNameKey":"document.fr_national_id",
+      "variants":[{"id":"france_national_id_print","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"official.unmodified","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#D9D9D9","allowedColors":["#D9D9D9","#D9E6F2"]},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"hard"},"sourceId":"service-public.fr.identity_photos","status":"verified","editPolicy":"prohibited","capturePolicy":"authorized_provider_required","sourceImagePolicies":["original_camera_file_required"],"applicationChannels":["in_person"],"requirementKeys":["requirement.france_authorized_no_white"]}]
+    },
+    {
+      "id":"thailand_passport","regionCode":"TH","documentType":"passport","regionNameKey":"region.th","displayNameKey":"document.th_passport",
+      "variants":[{"id":"thailand_passport_print_reported","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.733333,"max":0.777778},"faceHeightConstraint":"soft","topMarginRatio":0.066667,"topMarginRange":{"min":0.044444,"max":0.088889},"topMarginConstraint":"soft"},"sourceId":"reported.th.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.th_reported_composition"]}]
+    },
+    {
+      "id":"vietnam_passport","regionCode":"VN","documentType":"passport","regionNameKey":"region.vn","displayNameKey":"document.vn_passport",
+      "variants":[{"id":"vietnam_passport_print_reported","displayNameKey":"variant.print_40x60","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"40","height":"60","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.65,"faceHeightRange":{"min":0.6,"max":0.7},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.vn.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.vn_reported_composition"]}]
+    },
+    {
+      "id":"indonesia_passport","regionCode":"ID","documentType":"passport","regionNameKey":"region.id","displayNameKey":"document.id_passport",
+      "variants":[{"id":"indonesia_passport_print_reference","displayNameKey":"variant.print_40x60","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"40","height":"60","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}]
+    },
+    {
+      "id":"philippines_passport","regionCode":"PH","documentType":"passport","regionNameKey":"region.ph","displayNameKey":"document.ph_passport",
+      "variants":[{"id":"philippines_passport_print_reference","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"sourceId":"product.common_sizes","status":"reference","editPolicy":"allowed"}]
+    },
+    {
+      "id":"uae_passport","regionCode":"AE","documentType":"passport","regionNameKey":"region.ae","displayNameKey":"document.ae_passport",
+      "variants":[{"id":"uae_passport_print_reported","displayNameKey":"variant.print_40x60","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"40","height":"60","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.633333,"faceHeightRange":{"min":0.55,"max":0.70},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.ae.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.ae_reported_composition"]}]
+    },
+    {
+      "id":"hong_kong_passport","regionCode":"HK","documentType":"passport","regionNameKey":"region.hk","displayNameKey":"document.hk_passport",
+      "variants":[
+        {"id":"hong_kong_passport_digital_camera","displayNameKey":"variant.digital_camera","delivery":"digital","ruleProfileId":"official.restricted","output":{"width":"1200","height":"1600","unit":"px","dimensionMode":"minimum","dpi":300,"maxBytes":5000000,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.68,"faceHeightRange":{"min":0.64,"max":0.72},"faceHeightConstraint":"hard"},"sourceId":"immd.gov.hk.photo_requirements","status":"verified","editPolicy":"restricted","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed"],"applicationChannels":["online","mobile_app"],"requirementKeys":["requirement.hk_camera_minimum"]},
+        {"id":"hong_kong_passport_print","displayNameKey":"variant.print_40x50","delivery":"print","ruleProfileId":"official.restricted","output":{"width":"40","height":"50","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.68,"faceHeightRange":{"min":0.64,"max":0.72},"faceHeightConstraint":"hard"},"sourceId":"immd.gov.hk.photo_requirements","status":"verified","editPolicy":"restricted","capturePolicy":"self_capture_allowed","sourceImagePolicies":["generated_file_allowed","scanned_print_allowed"],"applicationChannels":["mail","in_person","kiosk"],"requirementKeys":["requirement.hk_print_original_quality"]}
+      ]
+    },
+    {
+      "id":"taiwan_passport","regionCode":"TW","documentType":"passport","regionNameKey":"region.tw","displayNameKey":"document.tw_passport",
+      "variants":[{"id":"taiwan_passport_print_reported","displayNameKey":"variant.print_35x45","delivery":"print","ruleProfileId":"reference.standard","output":{"width":"35","height":"45","unit":"mm","dimensionMode":"exact","dpi":300,"formats":["jpeg"],"colorSpace":"sRGB"},"background":{"color":"#FFFFFF"},"composition":{"faceHeightRatio":0.755556,"faceHeightRange":{"min":0.711111,"max":0.8},"faceHeightConstraint":"soft","topMarginRange":{"min":0.0,"max":0.89},"topMarginConstraint":"soft"},"sourceId":"reported.tw.passport_photo","status":"official_reported","editPolicy":"allowed","requirementKeys":["requirement.tw_reported_composition"]}]
+    }
+  ]
+}

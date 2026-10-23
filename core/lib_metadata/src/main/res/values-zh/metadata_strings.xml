@@ -1,0 +1,4 @@
+<resources>
+    <string name="metadata_processing_title">正在处理照片元数据</string>
+    <string name="metadata_processing_message">正在写入或校验照片元数据。</string>
+</resources>

@@ -1,0 +1,33 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace = 'com.beautysdk.camera'
+    compileSdk = beautyLibs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk = beautyLibs.versions.minSdk.get().toInteger()
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+kotlin { jvmToolchain(17) }
+
+dependencies {
+    api beautyLibs.camera.view
+    api beautyLibs.androidx.lifecycle.runtime.ktx
+    implementation beautyLibs.camera.core
+    implementation beautyLibs.camera.camera2
+    implementation beautyLibs.camera.lifecycle
+    implementation beautyLibs.androidx.core.ktx
+    testImplementation beautyLibs.junit
+}
+
+apply from: rootProject.file("gradle/library-publish.gradle")

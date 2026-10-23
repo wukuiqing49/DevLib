@@ -1,0 +1,29 @@
+Metadata engine distribution
+
+ExifTool 13.57, Copyright Phil Harvey. Distributed under the Perl Artistic License.
+Perl 5.38.4, Copyright Larry Wall and contributors. Distributed under the Perl Artistic License.
+Original source: https://exiftool.org/ and https://www.cpan.org/src/5.0/
+Android build packaging: https://github.com/bestvibes/exiftoolwrapper-android
+Source revision: 8418351f47227324d6308ab2097873575b6c40a2
+Android packaging copyright: Vaibhav Aggarwal, MIT License.
+License texts are included in metadata-engine/licenses/.
+
+PressIPTC converts the upstream perl5.tar archive to runtime.zip.
+Modified ExifTool 13.57: Exif.pm enables its existing TIFF image-data hashing for ORF.
+The exact source change is included in patches/ExifTool-13.57-orf-image-hash.patch.
+Native interpreter and XS modules are taken from the above repository revision.
+PressIPTC modifies GNU_RELRO padding and its containing LOAD zero-padding size to end on 16KB boundaries.
+Reproducible modification: scripts/normalize-native-relro.ps1 in the PressIPTC source distribution.
+The script refuses changes overlapping actual writable data or another LOAD segment.
+Original executables remain available at the upstream revision above.
+Runtime ZIP SHA256: 962ad002e6bd38ebfac7566ce9323afcba0720b73e6a042d4a39b666efa47062
+This interpreter is executed only from the installed APK native library directory.
+No executable, script, plug-in, or configuration is downloaded at runtime.
+
+The APK packaging step also normalizes RELRO zero-padding in native libraries from
+AndroidX DataStore and CameraX (Copyright The Android Open Source Project, Apache 2.0),
+and MMKV (Copyright THL A29 Limited, BSD 3-Clause).
+Original source: https://android.googlesource.com/platform/frameworks/support/
+and https://github.com/Tencent/MMKV/tree/v1.3.16
+Modification source: gradle/native-16kb.gradle in the PressIPTC source distribution.
+Their executable instructions and existing file data are unchanged.
