@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity android:name="com.wkq.dev.demo.foundation.BaseActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.UtilsActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.PopupActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.NetworkActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.RouterActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.AnnotationActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.ProcessorActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.PluginActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.foundation.RouteTargetActivity" android:exported="false" />
+    </application>
+</manifest>

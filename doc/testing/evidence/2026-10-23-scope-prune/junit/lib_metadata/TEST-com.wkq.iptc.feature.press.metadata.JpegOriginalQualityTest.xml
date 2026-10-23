@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:35.204Z" hostname="WIN-MMJSWULHUCA" time="4.736">
+  <testcase name="metadataWritePreservesHighResolutionCompressedDataAndColorProfile" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="4.0" />
+  <testcase name="integrityRejectsChangedImageData" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.073" />
+  <testcase name="privacyScrubAndMetadataWritePreserveCompressedDataAndOrientation" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.581" />
+  <testcase name="integrityRejectsChangedIccSegment" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.038" />
+  <testcase name="integrityRejectsChangedOrientation" classname="com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest" time="0.043" />
+  </testsuite>

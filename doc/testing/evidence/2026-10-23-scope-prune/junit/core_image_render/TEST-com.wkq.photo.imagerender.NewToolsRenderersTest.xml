@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.imagerender.NewToolsRenderersTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:35.153Z" hostname="WIN-MMJSWULHUCA" time="0.62">
+  <testcase name="testPolaroidFrameRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.149" />
+  <testcase name="testDeviceMockupRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.191" />
+  <testcase name="testSignatureExtractorRenderer" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.185" />
+  <testcase name="signatureMaskRemovesPaperShadowAndKeepsInk" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.022" />
+  <testcase name="renderersHonorCancellationBeforeAllocatingOutput" classname="com.wkq.photo.imagerender.NewToolsRenderersTest" time="0.073" />
+  </testsuite>

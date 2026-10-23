@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:34.025Z" hostname="WIN-MMJSWULHUCA" time="0.05">
+  <testcase name="directProcessWithoutRequiredPerPhotoFieldCanRemainDirect" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.048" />
+  <testcase name="versionTwoKeepsExplicitlyEmptyRuntimeFields" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.001" />
+  <testcase name="directProcessWithRequiredPerPhotoFieldStillOpensWorkbench" classname="com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest" time="0.0" />
+  </testsuite>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_upload_title">多协议上传</string>
+    <string name="demo_upload_intro">FTP、FTPS、HTTP 上传；SMB、SFTP、WebDAV 请使用文件传输页面。选择协议与服务器，先测试连接，再显式上传所选文件。凭据只保留在当前页面，不保存、不输出到日志。</string>
+    <string name="demo_upload_input">01 选择与配置</string>
+    <string name="demo_upload_execute">02 执行流程</string>
+    <string name="demo_upload_success">执行完成，结果如下</string>
+    <string name="demo_upload_protocol">FTP / FTPS / HTTP</string>
+    <string name="demo_upload_protocol_value">FTPS</string>
+    <string name="demo_upload_host">主机或 HTTPS URL</string>
+    <string name="demo_upload_host_value" />
+    <string name="demo_upload_port">端口</string>
+    <string name="demo_upload_port_value">21</string>
+    <string name="demo_upload_user">用户名</string>
+    <string name="demo_upload_user_value" />
+    <string name="demo_upload_password">密码</string>
+    <string name="demo_upload_password_value" />
+    <string name="demo_upload_directory">远端目录或接口路径</string>
+    <string name="demo_upload_directory_value">/upload</string>
+    <string name="demo_upload_test">测试连接</string>
+    <string name="demo_upload_upload">确认上传</string>
+</resources>

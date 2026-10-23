@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity android:name="com.wkq.dev.demo.files.ArchiveActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.files.UploadActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.files.TransferActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.files.DropActivity" android:exported="false" />
+    </application>
+</manifest>

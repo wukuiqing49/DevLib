@@ -1,4 +1,0 @@
-plugins { alias(libs.plugins.kotlin.jvm) }
-kotlin { jvmToolchain(17) }
-dependencies { testImplementation integrationLibs.junit }
-apply from: rootProject.file('gradle/library-publish.gradle')

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_utils_title">文件与 URI 工具</string>
+    <string name="demo_utils_intro">使用基础库选择器导入文件，查看文件摘要与可访问性。文件保留原始内容，输出可复制核对。</string>
+    <string name="demo_utils_input">01 选择与配置</string>
+    <string name="demo_utils_execute">02 执行流程</string>
+    <string name="demo_utils_success">执行完成，结果如下</string>
+    <string name="demo_utils_digest">计算 SHA-256 与文件信息</string>
+    <string name="demo_utils_share">分享所选文件</string>
+</resources>

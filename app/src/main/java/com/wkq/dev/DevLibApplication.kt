@@ -8,6 +8,7 @@ class DevLibApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        com.wkq.router.api.Router.init(this)
         CoreUtils.init(
             context = this,
             config = CoreUtilsConfig(

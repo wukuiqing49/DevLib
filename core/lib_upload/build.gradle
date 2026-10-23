@@ -26,6 +26,7 @@ kotlin {
 }
 
 dependencies {
+    testImplementation utilLibs.junit
     implementation pressLibs.androidx.core.ktx
     implementation pressLibs.kotlinx.coroutines.core
     implementation pressLibs.kotlinx.coroutines.android
@@ -35,12 +36,6 @@ dependencies {
     implementation pressLibs.okhttp
     implementation pressLibs.okhttp.logging
     implementation pressLibs.gson
-    implementation pressLibs.jcifs.ng
-    implementation(pressLibs.sshj) {
-        exclude group: 'org.bouncycastle', module: 'bcprov-jdk18on'
-        exclude group: 'org.bouncycastle', module: 'bcpkix-jdk18on'
-        exclude group: 'org.bouncycastle', module: 'bcutil-jdk18on'
-    }
     implementation pressLibs.commons.net
 }
 

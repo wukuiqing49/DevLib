@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.ProviderFailureTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:56.988Z" hostname="WIN-MMJSWULHUCA" time="0.116">
+  <testcase name="cancellationAndInvalidParametersAreNotConvertedToRetryableFailures" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.014" />
+  <testcase name="explicitBusinessErrorsTakePrecedenceWhileTlsUsesActualCause" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.011" />
+  <testcase name="tlsDisconnectIsRetryableButUnverifiedPeerNeverBecomesNetworkOrTrusted" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.011" />
+  <testcase name="unknownIoIsNotMisrepresentedAsNetworkOrPermission" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.02" />
+  <testcase name="wrappedTransportAndPermissionErrorsRemainActionable" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.033" />
+  <testcase name="providerBoundaryConvertsNetworkFailureAndRetainsCause" classname="com.wkq.nas.transfer.ProviderFailureTest" time="0.027" />
+  </testsuite>

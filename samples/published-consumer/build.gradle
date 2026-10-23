@@ -11,9 +11,11 @@ android {
  kotlinOptions { jvmTarget = '17' }
 }
 dependencies {
+ implementation 'com.wkq.dev:core-google:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:core-base:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:core-network:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:lib-drop:0.1.0-SNAPSHOT'
- implementation 'com.wkq.dev:lib-entitlement:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:lib-document:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:core-pdf:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:core-qrcode:0.1.0-SNAPSHOT'
 }

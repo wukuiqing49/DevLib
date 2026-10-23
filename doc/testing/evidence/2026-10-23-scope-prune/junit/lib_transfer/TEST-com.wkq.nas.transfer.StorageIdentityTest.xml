@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.StorageIdentityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:58.767Z" hostname="WIN-MMJSWULHUCA" time="0.005">
+  <testcase name="sftpDefaultPortMatchesButPathsRemainCaseSensitive" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.004" />
+  <testcase name="webdavDefaultPortMatchesAndSiblingIsAllowed" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.001" />
+  <testcase name="defaultPortsAndSmbCaseCannotBypassNestedTargetGuard" classname="com.wkq.nas.transfer.StorageIdentityTest" time="0.0" />
+  </testsuite>

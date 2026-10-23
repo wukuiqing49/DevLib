@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.RenamePlannerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:58.351Z" hostname="WIN-MMJSWULHUCA" time="0.005">
+  <testcase name="directoriesAndDotFilesAreNotSplitAsExtensions" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.004" />
+  <testcase name="invalidNamesAndOverflowAreRejected" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.0" />
+  <testcase name="rulesPreserveExtensionsAndUseStableNumbering" classname="com.wkq.nas.transfer.RenamePlannerTest" time="0.0" />
+  </testsuite>

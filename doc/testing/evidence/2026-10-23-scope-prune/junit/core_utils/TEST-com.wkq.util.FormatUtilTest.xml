@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.FormatUtilTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:03.099Z" hostname="WIN-MMJSWULHUCA" time="0.048">
+  <testcase name="formatDecimal_roundsHalfUpAndTrimsTrailingZeros" classname="com.wkq.util.FormatUtilTest" time="0.005" />
+  <testcase name="emptyHelpers_returnExpectedFallbacks" classname="com.wkq.util.FormatUtilTest" time="0.0" />
+  <testcase name="formatDuration_outputsMinuteOrHourText" classname="com.wkq.util.FormatUtilTest" time="0.001" />
+  <testcase name="formatPercent_usesLocaleAndFractionLimit" classname="com.wkq.util.FormatUtilTest" time="0.002" />
+  <testcase name="maskEmailAndDigitHelpers_cleanInput" classname="com.wkq.util.FormatUtilTest" time="0.009" />
+  <testcase name="formatFileSize_handlesCommonUnits" classname="com.wkq.util.FormatUtilTest" time="0.03" />
+  <testcase name="maskPhone_keepsShortInputUnchanged" classname="com.wkq.util.FormatUtilTest" time="0.0" />
+  </testsuite>

@@ -9,10 +9,9 @@ object AtomicUploadPolicy {
         val supported = when (profile.protocol) {
             UploadProtocolType.FTP, UploadProtocolType.FTPS -> false
             UploadProtocolType.HTTP -> (profile.config as? HttpConfig)?.extraParams?.get("__create_only_put__") == "true"
-            else -> true
         }
         return if (supported) null else failure(UploadErrorCode.ATOMIC_CREATE_UNSUPPORTED,
-            "This destination cannot guarantee create-only upload. Use SFTP, SMB, WebDAV or a conditional HTTP PUT endpoint")
+            "This destination cannot guarantee create-only upload. Use lib_transfer for SFTP/SMB/WebDAV, or a conditional HTTP PUT endpoint")
     }
 
     fun temporaryName(fileName: String, createOnly: Boolean, transferId: String): String {

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.imagerender.BitmapFileDecoderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:34.557Z" hostname="WIN-MMJSWULHUCA" time="0.576">
+  <testcase name="appliesExifRotation" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.169" />
+  <testcase name="supportsParcelFileDescriptorWithoutTakingOwnership" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.104" />
+  <testcase name="samplesWhenOnlyWidthExceedsTarget" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.123" />
+  <testcase name="supportsAllExifOrientationsAndDimensions" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.153" />
+  <testcase name="rejectsDecodedPixelBudgetOverflow" classname="com.wkq.photo.imagerender.BitmapFileDecoderTest" time="0.027" />
+  </testsuite>

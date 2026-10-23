@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_popup_title">弹窗标题</string>
+    <string name="demo_popup_intro">编辑弹窗标题和内容，分别体验通用 DialogKit、确认回调和 XPopup 底部选择。</string>
+    <string name="demo_popup_input">01 选择与配置</string>
+    <string name="demo_popup_execute">02 执行流程</string>
+    <string name="demo_popup_success">执行完成，结果如下</string>
+    <string name="demo_popup_title_value">操作确认</string>
+    <string name="demo_popup_message">弹窗内容</string>
+    <string name="demo_popup_message_value">请确认当前操作</string>
+    <string name="demo_popup_common">通用提示</string>
+    <string name="demo_popup_confirm">确认与取消</string>
+    <string name="demo_popup_bottom">底部操作选择</string>
+</resources>

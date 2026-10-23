@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_processor_title">KSP 生成验证</string>
+    <string name="demo_processor_intro">本模块编译时运行真实 KSP。查看生成类及路由注册，再打开生成的路由目标验证。</string>
+    <string name="demo_processor_input">01 选择与配置</string>
+    <string name="demo_processor_execute">02 执行流程</string>
+    <string name="demo_processor_success">执行完成，结果如下</string>
+    <string name="demo_processor_path">路由路径</string>
+    <string name="demo_processor_path_value">/foundation/route_target</string>
+    <string name="demo_processor_value">传递参数</string>
+    <string name="demo_processor_value_value">DevLib route</string>
+    <string name="demo_processor_inspect">检查路由与生成类</string>
+    <string name="demo_processor_navigate">打开目标页面</string>
+</resources>

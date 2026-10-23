@@ -1,0 +1,2 @@
+gradlew.bat projects assembleLibraries :app:assembleDebug testLibraries --offline --console=plain
+gradlew.bat "-Pdevlib.enableBeauty=true" projects --offline --console=plain

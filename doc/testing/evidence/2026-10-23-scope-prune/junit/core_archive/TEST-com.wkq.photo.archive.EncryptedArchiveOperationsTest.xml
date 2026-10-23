@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.archive.EncryptedArchiveOperationsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:26.824Z" hostname="WIN-MMJSWULHUCA" time="0.344">
+  <testcase name="operationPreservesCustomEntryNameAndCallerPassword" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.276" />
+  <testcase name="rejectsPasswordShorterThanExtractorContract" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.004" />
+  <testcase name="extractorRejectsArchiveWithUnencryptedEntries" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.025" />
+  <testcase name="extractorRejectsEntryEscapingOutputDirectory" classname="com.wkq.photo.archive.EncryptedArchiveOperationsTest" time="0.037" />
+  </testsuite>

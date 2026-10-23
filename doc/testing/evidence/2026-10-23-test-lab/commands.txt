@@ -1,0 +1,5 @@
+gradlew.bat :app:assembleDebug :core:core_pdf:testDebugUnitTest :core:core_qrcode:testDebugUnitTest :core:core_qr_transfer:testDebugUnitTest :core:lib_camera_capture:assembleRelease :core:lib_location:testDebugUnitTest --offline --console=plain
+gradlew.bat :feature:feature_app:assembleDebugAndroidTest :core:core_pdf:publishReleasePublicationToDevLibLocalRepository :core:core_qrcode:publishReleasePublicationToDevLibLocalRepository :core:core_qr_transfer:publishReleasePublicationToDevLibLocalRepository :core:lib_camera_capture:publishReleasePublicationToDevLibLocalRepository :core:lib_location:publishReleasePublicationToDevLibLocalRepository --offline --console=plain
+gradlew.bat -p samples/published-consumer assembleDebug --offline --console=plain
+gradlew.bat :app:assembleDebug :feature:feature_app:assembleDebugAndroidTest :core:lib_camera_capture:assembleDebug --offline --console=plain
+gradlew.bat "-Pdevlib.enableAmapDebug=true" projects --offline --console=plain (expected configuration failure without key)

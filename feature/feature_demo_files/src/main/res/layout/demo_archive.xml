@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none" android:clipToPadding="false">
+    <LinearLayout style="@style/Demo.Page">
+        <TextView style="@style/Demo.Label" android:text="@string/demo_archive_intro" />
+        <TextView style="@style/Demo.Heading" android:text="@string/demo_archive_input" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_archive_password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" style="@style/Demo.Input" android:inputType="textPassword" android:text="@string/demo_archive_password_value" android:saveEnabled="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Demo.Heading" android:text="@string/demo_archive_execute" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/compress" style="@style/Demo.Button" android:text="@string/demo_archive_compress" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/extract" style="@style/Demo.Button" android:text="@string/demo_archive_extract" />
+        <include android:id="@+id/result" layout="@layout/demo_output" />
+    </LinearLayout>
+</ScrollView>

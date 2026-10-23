@@ -1,0 +1,18 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none" android:clipToPadding="false"><LinearLayout style="@style/Demo.Page">
+<TextView style="@style/Demo.Label" android:text="@string/demo_google_intro" />
+<TextView style="@style/Demo.Heading" android:text="@string/google_auth" />
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/google_client"><com.google.android.material.textfield.TextInputEditText android:id="@+id/client" style="@style/Demo.Input" android:inputType="textNoSuggestions" android:saveEnabled="false" /></com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.button.MaterialButton android:id="@+id/signin" style="@style/Demo.Button" android:text="@string/google_signin" />
+<com.google.android.material.button.MaterialButton android:id="@+id/firebase" style="@style/Demo.Button" android:text="@string/google_firebase" />
+<com.google.android.material.button.MaterialButton android:id="@+id/session" style="@style/Demo.Button" android:text="@string/google_session" />
+<com.google.android.material.button.MaterialButton android:id="@+id/signout" style="@style/Demo.Button" android:text="@string/google_signout" />
+<TextView style="@style/Demo.Heading" android:text="@string/google_billing" />
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/google_product"><com.google.android.material.textfield.TextInputEditText android:id="@+id/product" style="@style/Demo.Input" android:inputType="textNoSuggestions" /></com.google.android.material.textfield.TextInputLayout>
+<com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/subscription" style="@style/Demo.Input" android:text="@string/google_subscription" />
+<com.google.android.material.button.MaterialButton android:id="@+id/query" style="@style/Demo.Button" android:text="@string/google_query" />
+<TextView style="@style/Demo.Label" android:text="@string/google_offer" />
+<Spinner android:id="@+id/offers" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
+<com.google.android.material.button.MaterialButton android:id="@+id/purchase" style="@style/Demo.Button" android:text="@string/google_purchase" />
+<com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Demo.Button" android:text="@string/google_restore" />
+<include android:id="@+id/result" layout="@layout/demo_output" />
+</LinearLayout></ScrollView>

@@ -1,0 +1,30 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
+}
+android {
+    namespace = 'com.wkq.dev.demo.foundation'
+    compileSdk = libs.versions.compileSdk.get().toInteger()
+    defaultConfig { minSdk = 26 }
+    buildFeatures { viewBinding = true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+    implementation project(':feature:feature_res')
+    implementation project(':core:core_base')
+    implementation project(':core:core_utils')
+    implementation project(':core:core_router_api')
+    implementation project(':core:core_network')
+    implementation project(':core:core_router_api')
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.activity.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.recyclerview
+    implementation libs.material
+    implementation project(':feature:feature_demo_common')
+    ksp project(':core:core_router_processor')
+}
+ksp { arg("moduleName", "DevDemoFoundation") }

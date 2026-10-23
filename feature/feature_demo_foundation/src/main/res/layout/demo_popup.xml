@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none" android:clipToPadding="false">
+    <LinearLayout style="@style/Demo.Page">
+        <TextView style="@style/Demo.Label" android:text="@string/demo_popup_intro" />
+        <TextView style="@style/Demo.Heading" android:text="@string/demo_popup_input" />
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_popup_title">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/title" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_popup_title_value" android:saveEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_popup_message">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/message" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_popup_message_value" android:saveEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Demo.Heading" android:text="@string/demo_popup_execute" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/common" style="@style/Demo.Button" android:text="@string/demo_popup_common" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/confirm" style="@style/Demo.Button" android:text="@string/demo_popup_confirm" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/bottom" style="@style/Demo.Button" android:text="@string/demo_popup_bottom" />
+        <include android:id="@+id/result" layout="@layout/demo_output" />
+    </LinearLayout>
+</ScrollView>

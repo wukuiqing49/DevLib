@@ -26,7 +26,7 @@ android {
 dependencies {
     api project(':core:lib_operations')
     implementation photoLibs.androidx.appcompat
-    implementation photoLibs.zxing.lite
+    api photoLibs.zxing.lite
 
     testImplementation photoLibs.junit
     testImplementation photoLibs.robolectric

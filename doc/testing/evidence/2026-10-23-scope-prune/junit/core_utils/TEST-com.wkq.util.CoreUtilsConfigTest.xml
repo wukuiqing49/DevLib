@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.CoreUtilsConfigTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:03.031Z" hostname="WIN-MMJSWULHUCA" time="0.064">
+  <testcase name="validate_acceptsDefaultConfiguration" classname="com.wkq.util.CoreUtilsConfigTest" time="0.062" />
+  <testcase name="validate_rejectsInvalidLogConfiguration" classname="com.wkq.util.CoreUtilsConfigTest" time="0.002" />
+  </testsuite>

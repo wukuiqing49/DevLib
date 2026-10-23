@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.core.utils.AtomicFileOutputTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:14.936Z" hostname="WIN-MMJSWULHUCA" time="0.173">
+  <testcase name="replacesExistingFileAfterSuccessfulWrite" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.037" />
+  <testcase name="serializesWritersForTheSameCanonicalPath" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.121" />
+  <testcase name="temporaryFileRetainsTargetExtensionForFormatBasedEncoders" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.004" />
+  <testcase name="preservesExistingFileWhenWriterFails" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.004" />
+  <testcase name="recoversBackupLeftByInterruptedReplacement" classname="com.wkq.photo.core.utils.AtomicFileOutputTest" time="0.004" />
+  </testsuite>

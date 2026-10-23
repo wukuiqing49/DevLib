@@ -6,7 +6,6 @@ plugins {
 apply from: rootProject.file('gradle/app-conventions.gradle')
 
 android {
-    assetPacks = [':core:portrait-model-assets']
     compileSdk = libs.versions.compileSdk.get().toInteger()
 
     defaultConfig {
@@ -34,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation project(':core:core_router_api')
     implementation project(':core:core_base')
     implementation project(':core:core_utils')
     implementation project(':feature:feature_app')

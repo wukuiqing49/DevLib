@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.TransferDaoTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:59.491Z" hostname="WIN-MMJSWULHUCA" time="1.123">
+  <testcase name="parentJobHidesItsTransferChildren" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.035" />
+  <testcase name="queuedMutationWithoutFileResultsStillHasUsableAggregate" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.03" />
+  <testcase name="systemDeferralPreservesCommitDigestsAndPriorFailures" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.027" />
+  <testcase name="mutationAndItsFileRecordsAppearOnce" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.04" />
+  <testcase name="commitBoundaryCannotBePausedOrCanceled" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.021" />
+  <testcase name="syncBatchSummaryRemainsFullWhileChildrenAreHiddenFromTopLevel" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.149" />
+  <testcase name="queuedMutationAppearsBeforeItCreatesFileRecords" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.021" />
+  <testcase name="onlyOneWorkerCanClaimTask" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.02" />
+  <testcase name="systemDeferralCannotResumePausedCanceledOrCompletedTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.026" />
+  <testcase name="pauseAndCancelCannotBeOverwrittenByFailure" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.021" />
+  <testcase name="retryWaitDoesNotBlockReadyTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.023" />
+  <testcase name="failedBatchFilterRunsBeforePaginationAndSummaryKeepsEndpoints" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.075" />
+  <testcase name="localAndNetworkTasksUseSeparateConstraints" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.02" />
+  <testcase name="failedOperationFilterIncludesFailuresBeyondFirstPage" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.082" />
+  <testcase name="recoveryRetainsCheckpointsAndDoesNotResumePausedTasks" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.037" />
+  <testcase name="operationTotalsAreNotLimitedToTheVisibleWindow" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.148" />
+  <testcase name="userGroupsCountAllFilesBeforeApplyingWindow" classname="com.wkq.nas.transfer.TransferDaoTest" time="0.347" />
+  </testsuite>

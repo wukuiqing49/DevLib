@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.core.operation.OutputPathRegistryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:14.927Z" hostname="WIN-MMJSWULHUCA" time="0.003">
+  <testcase name="rejectsConcurrentLeaseAndAllowsReuseAfterClose" classname="com.wkq.photo.core.operation.OutputPathRegistryTest" time="0.003" />
+  </testsuite>

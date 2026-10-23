@@ -18,10 +18,8 @@ dependencyResolutionManagement {
         pressLibs { from(files('gradle/catalogs/pressLibs.versions.toml')) }
         roofLibs { from(files('gradle/catalogs/roofLibs.versions.toml')) }
         nasLibs { from(files('gradle/catalogs/nasLibs.versions.toml')) }
+        googleLibs { from(files('gradle/catalogs/googleLibs.versions.toml')) }
         photoLibs { from(files('gradle/catalogs/photoLibs.versions.toml')) }
-        siteLibs { from(files('gradle/catalogs/siteLibs.versions.toml')) }
-        beautyLibs { from(files('gradle/catalogs/beautyLibs.versions.toml')) }
-        crashLibs { from(files('gradle/catalogs/crashLibs.versions.toml')) }
     }
     repositories {
         google()
@@ -42,45 +40,28 @@ include ':feature:feature_res'
 
 include ':core:core_archive'
 include ':core:core_image_render'
-include ':core:core_media_store'
 include ':core:core_network'
 include ':core:core_pdf'
-include ':core:core_qr_transfer'
 include ':core:core_qrcode'
 include ':core:core_router_annotation'
 include ':core:core_router_api'
 include ':core:core_router_gradle_plugin'
 include ':core:core_router_processor'
-include ':core:core_share'
-include ':core:id-photo-library'
-include ':core:lib_agora'
-include ':core:lib_auth_google'
-include ':core:lib_beauty'
-include ':core:lib_beauty_mediapipe'
-include ':core:lib_beauty_rfb'
-include ':core:lib_billing_play'
-include ':core:lib_camera'
-include ':core:lib_camera_capture'
-include ':core:lib_crash'
-include ':core:lib_devhub'
 include ':core:lib_document'
 include ':core:lib_drop'
-include ':core:lib_entitlement'
-include ':core:lib_html'
-include ':core:lib_live_api'
-include ':core:lib_location'
 include ':core:lib_metadata'
 include ':core:lib_operations'
-include ':core:lib_push_fcm'
-include ':core:lib_report_pdf'
 include ':core:lib_transfer'
 include ':core:lib_upload'
 include ':core:lib_xpopup'
-include ':core:phototoolkit-engine'
-include ':core:phototoolkit-raw'
-include ':core:portrait-model-assets'
 
-include ':core:lib_auth_credentials'
-include ':core:lib_auth_firebase'
-include ':core:lib_live_beauty'
-include ':core:lib_tencent_beauty_kit'
+
+
+include ':feature:feature_demo_common'
+include ':feature:feature_demo_foundation'
+include ':feature:feature_demo_files'
+include ':feature:feature_demo_image'
+include ':feature:feature_demo_document'
+
+include ':core:core_google'
+include ':feature:feature_demo_google'

@@ -13,6 +13,7 @@ implementation project(':core:core_pdf')
 ## 宿主责任与边界
 
 保留操作预算与取消边界。
+公开请求使用的 `ImageSource` 由 `api` 传递 core_image_render；宿主无需为了构造请求额外补该模块。
 
 ## 验证状态
 

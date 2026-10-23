@@ -1,0 +1,64 @@
+{
+  "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+  "sourceFiles": 1976,
+  "method": "SHA-256 of sorted tracked and non-ignored untracked file names and contents; missing/deleted files omitted; doc/ and .ai-work/ excluded",
+  "head": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+  "testedAt": "2026-10-23T16:28:26+08:00",
+  "scope": {
+    "coreModules": 34,
+    "foundationModules": 8,
+    "functionalModules": 26,
+    "removedSourceModules": 10
+  },
+  "catalog": {
+    "activeModules": 34,
+    "independentPages": 34,
+    "routeGroups": [
+      "account",
+      "document",
+      "files",
+      "foundation",
+      "image",
+      "media"
+    ],
+    "apkInitializers": [
+      "com.wkq.router.generated.RouteInit_DevDemoMedia",
+      "com.wkq.router.generated.RouteInit_DevDemoAccount",
+      "com.wkq.router.generated.RouteInit_DevDemoDocument",
+      "com.wkq.router.generated.RouteInit_DevDemoImage",
+      "com.wkq.router.generated.RouteInit_DevDemoFiles",
+      "com.wkq.router.generated.RouteInit_DevDemoFoundation"
+    ],
+    "deviceTesting": "not run"
+  },
+  "jvm": {
+    "tests": 600,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "modulesWithTestResults": 26,
+  "librariesWithoutJvmTests": [
+    "core_router_annotation",
+    "core_router_api",
+    "core_share",
+    "lib_auth_credentials",
+    "lib_auth_firebase",
+    "lib_camera_capture",
+    "lib_upload"
+  ],
+  "resultReuse": "testLibraries completed; incremental results may be reused; see build log",
+  "deviceTesting": "not run, per user instruction",
+  "apk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "sha256": "81ef47701c6e8e3ae2fef4994a12fd32d6f3a151f081913858d39ddec1ba3c65",
+    "bytes": 154104433
+  },
+  "staticChecks": {
+    "agent": "passed",
+    "architecture": "passed, 2 rule warnings",
+    "build": "passed, 0 warnings",
+    "ui": "passed, 1 heuristic warning; Base owns Insets"
+  },
+  "instrumentation": "8 test methods compiled only; not executed"
+}

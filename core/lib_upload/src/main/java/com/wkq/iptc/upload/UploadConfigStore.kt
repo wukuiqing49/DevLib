@@ -21,10 +21,7 @@ object UploadConfigStore {
                 val type = when (src) {
                     is FtpConfig -> UploadProtocolType.FTP.name
                     is FtpsConfig -> UploadProtocolType.FTPS.name
-                    is SftpConfig -> UploadProtocolType.SFTP.name
                     is HttpConfig -> UploadProtocolType.HTTP.name
-                    is SmbConfig -> UploadProtocolType.SMB.name
-                    is WebDavConfig -> UploadProtocolType.WEBDAV.name
                 }
                 json.addProperty("configType", type)
                 json
@@ -37,10 +34,7 @@ object UploadConfigStore {
                 when (UploadProtocolType.fromValue(jsonObject.get("configType")?.asString)) {
                     UploadProtocolType.FTP -> context.deserialize(json, FtpConfig::class.java)
                     UploadProtocolType.FTPS -> context.deserialize(json, FtpsConfig::class.java)
-                    UploadProtocolType.SFTP -> context.deserialize(json, SftpConfig::class.java)
                     UploadProtocolType.HTTP -> context.deserialize(json, HttpConfig::class.java)
-                    UploadProtocolType.SMB -> context.deserialize(json, SmbConfig::class.java)
-                    UploadProtocolType.WEBDAV -> context.deserialize(json, WebDavConfig::class.java)
                 }
             }
         )
@@ -51,7 +45,7 @@ object UploadConfigStore {
         if (selected != null) {
             return selected
         }
-        val json = UploadPreferenceStore.getString(KEY_PROFILE_JSON)
+        val json = UploadPreferenceStore.getString(KEY_PROFILE_JSON).also(::validateStoredUploadProtocols)
         if (json.isBlank()) {
             return UploadServerProfile()
         }
@@ -70,7 +64,7 @@ object UploadConfigStore {
     }
 
     fun getProfiles(): List<UploadServerProfile> {
-        val raw = UploadPreferenceStore.getString(KEY_PROFILES_JSON)
+        val raw = UploadPreferenceStore.getString(KEY_PROFILES_JSON).also(::validateStoredUploadProtocols)
         val profiles = if (raw.isBlank()) {
             emptyList()
         } else {
@@ -102,6 +96,7 @@ object UploadConfigStore {
 
     /** 在修改任何本地配置前验证备份中的服务器配置和选中项。 */
     fun validateProfilesBackup(json: String, selectedProfileId: String?) {
+        validateStoredUploadProtocols(json)
         val imported = parseProfilesBackup(json)
         val ids = imported.map(UploadServerProfile::id)
         require(ids.all(String::isNotBlank) && ids.distinct().size == ids.size) {
@@ -116,6 +111,7 @@ object UploadConfigStore {
     /** 导入服务器配置时合并，不删除本机其他配置；同 ID 的本机密码予以保留。 */
     fun importProfilesFromBackup(json: String, selectedProfileId: String?) {
         validateProfilesBackup(json, selectedProfileId)
+        validateStoredUploadProtocols(json)
         val imported = parseProfilesBackup(json)
         imported.forEach { profile ->
             val local = getProfile(profile.id)
@@ -215,7 +211,7 @@ object UploadConfigStore {
     }
 
     private fun getProfilesWithoutLegacyFallback(): List<UploadServerProfile> {
-        val raw = UploadPreferenceStore.getString(KEY_PROFILES_JSON)
+        val raw = UploadPreferenceStore.getString(KEY_PROFILES_JSON).also(::validateStoredUploadProtocols)
         if (raw.isBlank()) return emptyList()
         return runCatching {
             gson.fromJson<List<UploadServerProfile>>(
@@ -226,7 +222,7 @@ object UploadConfigStore {
     }
 
     private fun loadLegacyProfile(): UploadServerProfile {
-        val json = UploadPreferenceStore.getString(KEY_PROFILE_JSON)
+        val json = UploadPreferenceStore.getString(KEY_PROFILE_JSON).also(::validateStoredUploadProtocols)
         if (json.isBlank()) {
             return UploadServerProfile()
         }
@@ -256,10 +252,7 @@ object UploadConfigStore {
         return when (this) {
             is FtpConfig -> password
             is FtpsConfig -> password
-            is SftpConfig -> password
             is HttpConfig -> password
-            is SmbConfig -> password
-            is WebDavConfig -> password
         }
     }
 
@@ -267,10 +260,7 @@ object UploadConfigStore {
         return when (this) {
             is FtpConfig -> copy(password = password)
             is FtpsConfig -> copy(password = password)
-            is SftpConfig -> copy(password = password)
             is HttpConfig -> copy(password = password)
-            is SmbConfig -> copy(password = password)
-            is WebDavConfig -> copy(password = password)
         }
     }
 }

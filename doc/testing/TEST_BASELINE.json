@@ -154,6 +154,156 @@
         "doc/testing/evidence/2026-10-23-import/junit-results.xml",
         "doc/testing/evidence/2026-10-23-import/commands.txt"
       ]
+    },
+    "LAB-BUILD": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "API-UNIT": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "API-PUBLISH": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "API-CONSUMER": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "AMAP-GUARD": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "STATIC": {
+      "commit": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "dirty": true,
+      "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+      "testedAt": "2026-10-23T15:18:06.528710+08:00",
+      "variant": "debug / release publication",
+      "environment": "Windows; JDK 17; Gradle 8.13; AGP 8.13.2; Kotlin 2.1.21; SDK 36; no device feature tests",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-test-lab/summary.json",
+        "doc/testing/evidence/2026-10-23-test-lab/commands.txt"
+      ]
+    },
+    "DEMO-APP": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": ":app:assembleDebug",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
+    },
+    "DEMO-ROUTES": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": "verify_demo_catalog.py --apk; 34 pages; excluded packages absent",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
+    },
+    "DEMO-TEST-COMPILE": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": ":feature:feature_app:assembleDebugAndroidTest (compiled, not run)",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
+    },
+    "CURRENT-LIBRARIES-JVM": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": "testLibraries; 599 passed, 1 skipped, cache reuse allowed",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
+    },
+    "CAPTURE-RELEASE": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": ":core:lib_camera_capture:assembleRelease",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
+    },
+    "CURRENT-STRUCTURE": {
+      "commit": null,
+      "headAtTest": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+      "sourceFingerprint": "ee84b07f9759a9f772e29ed980162e2ac8bf7f07e909dc6e5963b5ce945e8335",
+      "testedAt": "2026-10-23T16:28:26+08:00",
+      "variant": "debug / capture release",
+      "environment": "Windows, JDK 17, Gradle 8.13, AGP 8.13.2, SDK 36; no device",
+      "commandOrSteps": "Agent / architecture / build / UI validators",
+      "evidence": [
+        "doc/testing/evidence/2026-10-23-demo-redesign/summary.json",
+        "doc/testing/evidence/2026-10-23-demo-redesign/build-result.txt"
+      ]
     }
   }
 }

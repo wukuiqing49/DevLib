@@ -1,0 +1,131 @@
+{
+  "updatedAt": "2026-10-23",
+  "excludedSources": [
+    "Starxen",
+    "BeautySDK",
+    "DevHub"
+  ],
+  "modules": [
+    {
+      "module": "core_archive",
+      "category": "functional",
+      "sourceRepository": "PhotoKit",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_base",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreBase",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_image_render",
+      "category": "functional",
+      "sourceRepository": "PhotoKit",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_network",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreNetwork",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_pdf",
+      "category": "functional",
+      "sourceRepository": "PhotoKit",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_qrcode",
+      "category": "functional",
+      "sourceRepository": "PhotoKit",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_router_annotation",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreRouters",
+      "artifactType": "jvm"
+    },
+    {
+      "module": "core_router_api",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreRouters",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_router_gradle_plugin",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreRouters",
+      "artifactType": "jvm"
+    },
+    {
+      "module": "core_router_processor",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreRouters",
+      "artifactType": "jvm"
+    },
+    {
+      "module": "core_utils",
+      "category": "foundation",
+      "sourceRepository": "AndroidCoreUtils",
+      "artifactType": "aar"
+    },
+    {
+      "module": "lib_document",
+      "category": "functional",
+      "sourceRepository": "RoofQuote",
+      "artifactType": "jvm"
+    },
+    {
+      "module": "lib_drop",
+      "category": "functional",
+      "sourceRepository": "DropLAN",
+      "artifactType": "aar"
+    },
+    {
+      "module": "lib_metadata",
+      "category": "functional",
+      "sourceRepository": "PressIPTC",
+      "artifactType": "aar"
+    },
+    {
+      "module": "lib_operations",
+      "category": "functional",
+      "sourceRepository": "PhotoKit",
+      "artifactType": "jvm",
+      "role": "support",
+      "demoCoveredBy": [
+        "core_archive",
+        "core_image_render",
+        "core_pdf",
+        "core_qrcode"
+      ]
+    },
+    {
+      "module": "lib_transfer",
+      "category": "functional",
+      "sourceRepository": "NASFileManager",
+      "artifactType": "aar"
+    },
+    {
+      "module": "lib_upload",
+      "category": "functional",
+      "sourceRepository": "PressIPTC",
+      "artifactType": "aar"
+    },
+    {
+      "module": "lib_xpopup",
+      "category": "foundation",
+      "sourceRepository": "XPopup",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_google",
+      "category": "functional",
+      "sourceRepository": "DropLAN",
+      "artifactType": "aar"
+    }
+  ]
+}

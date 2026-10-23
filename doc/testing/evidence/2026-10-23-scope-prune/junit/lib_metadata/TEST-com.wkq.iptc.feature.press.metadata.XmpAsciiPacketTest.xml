@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:44.202Z" hostname="WIN-MMJSWULHUCA" time="0.006">
+  <testcase name="unicodeContentAndUnknownAttributesSurviveAsciiSerialization" classname="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" time="0.003" />
+  <testcase name="malformedPacketCannotBeSerializedAsSuccess" classname="com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest" time="0.003" />
+  </testsuite>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_watermark_title">图片水印编辑</string>
+    <string name="demo_watermark_intro">选择原图，编辑水印文本、大小和透明度，预览导出副本；原图保持不变。</string>
+    <string name="demo_watermark_input">01 选择与配置</string>
+    <string name="demo_watermark_execute">02 执行流程</string>
+    <string name="demo_watermark_success">执行完成，结果如下</string>
+    <string name="demo_watermark_text">水印文字</string>
+    <string name="demo_watermark_text_value">DevLib</string>
+    <string name="demo_watermark_size">相对尺寸（0.01–0.5）</string>
+    <string name="demo_watermark_size_value">0.12</string>
+    <string name="demo_watermark_alpha">透明度（0–255）</string>
+    <string name="demo_watermark_alpha_value">220</string>
+    <string name="demo_watermark_render">渲染并预览</string>
+</resources>

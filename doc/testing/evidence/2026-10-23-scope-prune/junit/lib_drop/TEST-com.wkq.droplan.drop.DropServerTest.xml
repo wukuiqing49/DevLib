@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.droplan.drop.DropServerTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:18.523Z" hostname="WIN-MMJSWULHUCA" time="2.546">
+  <testcase name="restoredTaskListIsAuthorizedOwnerScopedAndDoesNotRestartTransfers" classname="com.wkq.droplan.drop.DropServerTest" time="0.254" />
+  <testcase name="revocationCancelsOnlyUnfinishedTasksAndPreservesTerminalHistory" classname="com.wkq.droplan.drop.DropServerTest" time="0.012" />
+  <testcase name="attachmentNamesKeepAsciiFallbackAndEncodeUnicodeWithoutHeaderInjection" classname="com.wkq.droplan.drop.DropServerTest" time="0.093" />
+  <testcase name="realHttpApprovalAuthorizationAndOwnership" classname="com.wkq.droplan.drop.DropServerTest" time="0.072" />
+  <testcase name="boundedProbeAndBusyRejection" classname="com.wkq.droplan.drop.DropServerTest" time="0.378" />
+  <testcase name="fiveGiBMetadataLargeOffsetRangeAndIfRange" classname="com.wkq.droplan.drop.DropServerTest" time="0.129" />
+  <testcase name="unknownLengthStreamingAndSequentialRangeFallback" classname="com.wkq.droplan.drop.DropServerTest" time="0.051" />
+  <testcase name="pendingPairingExpiryBodyLimitCsrfAndUnknownStaticHead" classname="com.wkq.droplan.drop.DropServerTest" time="0.039" />
+  <testcase name="unknownLengthAdviceDoesNotInventDurationOrCompareDuplicatePaths" classname="com.wkq.droplan.drop.DropServerTest" time="0.004" />
+  <testcase name="realConcurrentDownloadsCannotBypassSlotsAndRevocationClosesStreams" classname="com.wkq.droplan.drop.DropServerTest" time="0.101" />
+  <testcase name="configuredSingleDownloadLimitIsAdvertisedAndEnforced" classname="com.wkq.droplan.drop.DropServerTest" time="0.054" />
+  <testcase name="receiverAdviceRequiresAuthorizationAndOnlyComparesDistinctObservedTransports" classname="com.wkq.droplan.drop.DropServerTest" time="0.068" />
+  <testcase name="sseGlobalLimitAndDisconnectLeaveDownloadsAvailable" classname="com.wkq.droplan.drop.DropServerTest" time="0.085" />
+  <testcase name="totalTimeRecommendationDoesNotInventFastestOrSwitchActiveTransfer" classname="com.wkq.droplan.drop.DropServerTest" time="0.001" />
+  <testcase name="schedulerLimitsDuplicateClaimsExpiryCancelAndPause" classname="com.wkq.droplan.drop.DropServerTest" time="0.006" />
+  <testcase name="preparedZipUsesTheSameAuthorizationQueueAndRangeProtocol" classname="com.wkq.droplan.drop.DropServerTest" time="0.109" />
+  <testcase name="sseIsAuthorizedOwnerScopedLimitedAndDoesNotConsumeDownloadSlots" classname="com.wkq.droplan.drop.DropServerTest" time="1.084" />
+  </testsuite>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.TransferMigrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:01.529Z" hostname="WIN-MMJSWULHUCA" time="0.43">
+  <testcase name="versionTwoCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.198" />
+  <testcase name="versionThreeCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.12" />
+  <testcase name="versionOneCredentialsAndTaskCheckpointsSurviveMigration" classname="com.wkq.nas.transfer.TransferMigrationTest" time="0.112" />
+  </testsuite>

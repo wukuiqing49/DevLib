@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:42.148Z" hostname="WIN-MMJSWULHUCA" time="1.96">
+  <testcase name="validJpegWithoutMetadataIsKnownEmpty" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="1.854" />
+  <testcase name="malformedPhotoshopIptcFailsStrictReadButKeepsLegacyImportFallback" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.017" />
+  <testcase name="validWrittenMetadataMatchesLegacyImport" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.033" />
+  <testcase name="malformedXmpCannotBecomeAnEmptyOriginal" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.02" />
+  <testcase name="historicalExifTag700IsStillRead" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.022" />
+  <testcase name="truncatedJpegDoesNotBecomeKnownEmpty" classname="com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest" time="0.013" />
+  </testsuite>

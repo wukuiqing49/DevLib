@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_qr_title">二维码生成与识别</string>
+    <string name="demo_qr_intro">编辑内容、颜色及尺寸生成二维码；也可选择图片识别。生成后回读验证，再提供导出。</string>
+    <string name="demo_qr_input">01 选择与配置</string>
+    <string name="demo_qr_execute">02 执行流程</string>
+    <string name="demo_qr_success">执行完成，结果如下</string>
+    <string name="demo_qr_content">二维码内容</string>
+    <string name="demo_qr_content_value">DevLib</string>
+    <string name="demo_qr_size">尺寸 128–2048</string>
+    <string name="demo_qr_size_value">600</string>
+    <string name="demo_qr_color">前景色 HEX</string>
+    <string name="demo_qr_color_value">#145FB2</string>
+    <string name="demo_qr_generate">生成并验证</string>
+    <string name="demo_qr_recognize">识别选中的图片</string>
+</resources>

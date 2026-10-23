@@ -9,6 +9,7 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInteger()
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
         consumerProguardFiles 'consumer-rules.pro'
     }
 
@@ -27,6 +28,12 @@ android {
 }
 
 dependencies {
+    implementation project(':core:core_router_api')
+    implementation project(':feature:feature_demo_document')
+    implementation project(':feature:feature_demo_image')
+    implementation project(':feature:feature_demo_files')
+    implementation project(':feature:feature_demo_foundation')
+    implementation project(':feature:feature_demo_common')
     implementation project(':core:core_base')
     implementation project(':core:core_utils')
     implementation project(':feature:feature_res')
@@ -37,4 +44,16 @@ dependencies {
     implementation libs.androidx.lifecycle.viewmodel.ktx
     implementation libs.androidx.lifecycle.livedata.ktx
     implementation libs.androidx.recyclerview
+    implementation libs.androidx.activity.ktx
+    implementation libs.material
+    androidTestImplementation project(':core:core_pdf')
+    androidTestImplementation project(':core:core_qrcode')
+    androidTestImplementation project(':core:core_archive')
+    androidTestImplementation project(':core:lib_document')
+    androidTestImplementation project(':core:lib_metadata')
+    androidTestImplementation project(':core:lib_drop')
+    androidTestImplementation photoLibs.androidx.test.ext.junit
+    androidTestImplementation photoLibs.androidx.test.runner
 }
+
+dependencies { implementation project(':feature:feature_demo_google') }

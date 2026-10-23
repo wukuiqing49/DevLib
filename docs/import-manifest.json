@@ -425,36 +425,6 @@
       }
     },
     {
-      "module": ":core:lib_html",
-      "sourceRepository": "DropLAN",
-      "sourcePath": "core/lib_html",
-      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "80ecf1d0f2383511513f4fe5a5504c77d7069342d1527d18f0e863f22d72d621",
-        "consumer-rules.pro": "5b5c17b9b310c3a19b62628d35804409f5c8548178f7c47d068c3807ebe36d71",
-        "README.md": "26760efea2fc3ccf80ac4c23f0fcfa2ed71149bcaaa49305319c818faccd2b58",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/assets/droplan_web/app.css": "a2334f6843ac778617dd98d216147361e5c04a4a43eef3ccba4d422a71bd71ed",
-        "src/main/assets/droplan_web/app.js": "700d65bd3227343813b1bee4aa8d750e5ddedcc01ece6579c0a0b828d3f70204",
-        "src/main/assets/droplan_web/de.json": "9653c66876afd37b27a360c28a9e6ffb43240c2aea70328a4f9a85cbc60639ef",
-        "src/main/assets/droplan_web/en.json": "c1844a869d61f90c2c894189be8db4ba24bfc5eba1587ded78334b19b4161a13",
-        "src/main/assets/droplan_web/es.json": "578d556dcddd0dbc3b578bd4cf0c8f305b47fcf94207c9e133e0fa3c08df2d4a",
-        "src/main/assets/droplan_web/fr.json": "b04db360576f1fae5d7e6b5fec3e54bca37780c0ddf8b957aab189dd0b31a179",
-        "src/main/assets/droplan_web/index.html": "4b47dfa90d5f584aaf310ca66f4d9158396743fb13b637dcd4cf6311c6bb99e8",
-        "src/main/assets/droplan_web/ja.json": "4aa52351ed18d2adba7b25181ee37c292fbf1102da6e0ad478adbdbf0bcd6c66",
-        "src/main/assets/droplan_web/ko.json": "5f22ec660d73d06b918d74b0aeca606c68d913fdf0c452ab35345601300b6b9f",
-        "src/main/assets/droplan_web/pt-BR.json": "06c97964705dd85095f2c45d58cd205c4c94934b250181f14a8ef84e322320ff",
-        "src/main/assets/droplan_web/zh.json": "4f3c5f49c32dce17a849bf018874f3e1e218b9d6ecf90377023b0afd7d69921d",
-        "src/main/java/com/wkq/droplan/html/OfflineWebAssets.kt": "581211634d5eef1158992f7118df95789620411819712e6d40765df1ad824253",
-        "src/test/browser/connection-advice.cjs": "43a0a12618486828ad36f3882f7b0ebb5662ffdfeccecc9345b882c1e9c6fa50",
-        "src/test/browser/languages.cjs": "f2b928693158d23b7b78b9a67f059deb37a3551da91ec9d5cf7ff2056b1a4115",
-        "src/test/browser/native-download.cjs": "e39272a0db2c14f9ae90608d6abcf297a4e26aa78ae86efd87e43bcd52a324c7",
-        "src/test/browser/README.md": "01871c4105f065d913ef1a6676aabf42e0e20f6d4be4e1268d99d64b84c7054f",
-        "src/test/java/com/wkq/droplan/html/WebAssetCatalogTest.kt": "7a2469e4db8d213a213816b79caec378acc2e69bd71f0fd491a8f39bc89dc70c"
-      }
-    },
-    {
       "module": ":core:lib_upload",
       "sourceRepository": "PressIPTC",
       "sourcePath": "core/core_upload",
@@ -976,6 +946,389 @@
       }
     },
     {
+      "module": ":core:core_image_render",
+      "sourceRepository": "PhotoKit",
+      "sourcePath": "core/core_image_render",
+      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "c0d014cb01b23090d00a94f38e18e1b85c768480b489cd53769fecaea936614d",
+        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
+        "hs_err_pid15488.log": "06fed9d9148db4703f45ea9c26346c767123d2f326e4f602ef19035d5c5206f0",
+        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
+        "src/main/java/com/wkq/photo/imagerender/AnnotationRenderer.kt": "2d384f72e176dc452157372a3b377b4ec7b67dd1cf2bb80cb8aedfe7b45931bc",
+        "src/main/java/com/wkq/photo/imagerender/BitmapFileDecoder.kt": "7273fd770ccc076dd24c51a57f6db8d98903e9afd0f097a6b6cd951b369fda7e",
+        "src/main/java/com/wkq/photo/imagerender/DeviceMockupRenderer.kt": "9615573310fc5b2da42df955f2964b2fcf9117f31e053a394c853edf333deed1",
+        "src/main/java/com/wkq/photo/imagerender/ImageSource.kt": "dd15276bb3945d2ff9514bbd16a17cd4a033d0797f9adf0eafeaf8f720614c7f",
+        "src/main/java/com/wkq/photo/imagerender/PolaroidFrameRenderer.kt": "e11f874ca8ad6e591290677cd07c91b288fe782be805fbfa24a6fa2bf4456179",
+        "src/main/java/com/wkq/photo/imagerender/SignatureExtractorRenderer.kt": "1fa3723f213ec9391fbbb07ab7b31ca958235613903d12b402d4e4311bb03ee1",
+        "src/main/java/com/wkq/photo/imagerender/WatermarkRenderer.kt": "513a32398edbe6bd54c93568fa56b52595d1daa03bc2b6e5e020a11e0dccb920",
+        "src/test/java/com/wkq/photo/imagerender/AnnotationRendererTest.kt": "792fb9d6aaa6dfb1d33e88cc3ab5b142f88dee5b30e327f09ad988592cfd556f",
+        "src/test/java/com/wkq/photo/imagerender/BitmapFileDecoderTest.kt": "9d439183d5e6e648ed7c42b9a489fcb846b04d733c627019d8fe921ec10879ae",
+        "src/test/java/com/wkq/photo/imagerender/NewToolsRenderersTest.kt": "4b5b2dd9426d2e2ee9ec2ccf4bdf464bb0e9da357354e6f19033728ee1339114",
+        "src/test/java/com/wkq/photo/imagerender/WatermarkRendererTest.kt": "65913edaec557089305fb5fa2a6067904e620ad264bc186b768321b469586419"
+      }
+    },
+    {
+      "module": ":core:core_pdf",
+      "sourceRepository": "PhotoKit",
+      "sourcePath": "core/core_pdf",
+      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "95cc1b7a51f6a17789b019d62a1e0ebf911e50e25b65de6f40b0941f23687154",
+        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
+        "src/androidTest/java/com/wkq/photo/pdf/PdfImageExporterInstrumentedTest.kt": "37c4432dfa48b0467c98353af249223c1a4285c66480da51d605b8394c83b24e",
+        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
+        "src/main/java/com/wkq/photo/pdf/PdfImageExporter.kt": "824f1a7c13f91145ef6a9f082f205424941315556d6ffbfc3c35ce4313c093cf",
+        "src/test/java/com/wkq/photo/pdf/PdfImageExportRequestTest.kt": "0b1c3bfd8b86774060a4b8c9141e3dc9feae59c09c750d4db3b1546227cd8725"
+      }
+    },
+    {
+      "module": ":core:core_qrcode",
+      "sourceRepository": "PhotoKit",
+      "sourcePath": "core/core_qrcode",
+      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "0b701fe705007deb05ef40a93fd67159d708d6b0b8b418be206f43630fe2f3f1",
+        "consumer-rules.pro": "45437fd8d4e0725ce8600d084fb6f1560854d3db28fe372ec40e9c8ecba0d9cb",
+        "src/main/AndroidManifest.xml": "04b1342d29a8fc1f80cfbd54785a90d230a32a010bc56aa483f7050dc42bcde2",
+        "src/main/java/com/wkq/photo/qrcode/QRBackgroundProcessor.kt": "849bbafd752fb01906bc8af3f72047c954ab6d9422b35db06d03c439690f94de",
+        "src/main/java/com/wkq/photo/qrcode/QRCodeGenerator.kt": "c52416bab4c43312632f99cf6a0d0899edbe2994158f53bd78cc8bd0f3ea071b",
+        "src/main/java/com/wkq/photo/qrcode/QrCodeKit.kt": "bcce2b7c89674213e18fc841a2310583b169adf5ec45cbf0740d542b25558b21",
+        "src/main/java/com/wkq/photo/qrcode/QRCodeRenderer.kt": "c5d47a5017f2082ba1cfadb112f006b65f160ad549da2415ff555ac236cd93d1",
+        "src/main/java/com/wkq/photo/qrcode/QrLiveScanActivity.kt": "c1ca5fd3ee8a4b0409684f34387f65065d9cfd97da0bcdd7524d9db5f1ffffa9",
+        "src/main/java/com/wkq/photo/qrcode/QRLogoProcessor.kt": "130b0a851c52f6db8933bd88395eaa95c606607db0408db4ab9b31bcfdb51e97",
+        "src/main/java/com/wkq/photo/qrcode/QRStyle.kt": "f8c606c0995aa557291db94f64c2c39b9343b35c1097c5133ee5dc409124b7db",
+        "src/test/java/com/wkq/photo/qrcode/QRCodeGeneratorTest.kt": "340100ca6624ed173cc62742a3625acab34eba854f14cc9e4da8ab1e35acbe59",
+        "src/test/java/com/wkq/photo/qrcode/QrCodeKitTest.kt": "0f866d9c36a39e86bd14688f360524541e85063c50c83d6a7dd7e4d3a1f8515f"
+      }
+    },
+    {
+      "module": ":core:core_archive",
+      "sourceRepository": "PhotoKit",
+      "sourcePath": "core/core_archive",
+      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "94beac677064d17fd3890a1db51d7f05e305401b86e8141fda37090e093ea5ce",
+        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
+        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
+        "src/main/java/com/wkq/photo/archive/EncryptedArchiveExtractor.kt": "c04858bac290d952360e8f0c4d081c385ffd99b996bdc84ecfea563faa798cbb",
+        "src/main/java/com/wkq/photo/archive/ZipArchiveCreator.kt": "9f145f6e8a427b788bea5adcee0a4a70c3db169bbbefc23d3f3ab529d0a2f5a6",
+        "src/main/java/com/wkq/photo/archive/ZipArchiveOperations.kt": "148afb501d5b672175893df957f13f546758fb79b6cec1bbf7943e62cc4dbcf6",
+        "src/test/java/com/wkq/photo/archive/EncryptedArchiveOperationsTest.kt": "881775cacc4a841c029961bf41ccdc6521b101bbdf39d1dd569189e5c41798c1",
+        "src/test/java/com/wkq/photo/archive/ZipArchiveCreatorTest.kt": "e074bbe11afa9c0ccebc5374b918cb294436b041ca7f62931bf693ed1eadb84a"
+      }
+    },
+    {
+      "module": ":core:core_google",
+      "sourceRepository": "DropLAN",
+      "sourcePath": "core/core_google",
+      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92",
+      "workingTreeChanges": "",
+      "selection": "Only upstream active auth/billing Kotlin sources and three compiled unit test files. No ads, Analytics, DevHub, original UI/resources or host product configuration.",
+      "importedFiles": {
+        "src/main/java/com/wkq/google/auth/GoogleSignInCoordinator.kt": "bcddacd09b46d84241dbe1fe5d5db5f3951f5a7225e5e88df8f046e92087d750",
+        "src/main/java/com/wkq/google/auth/DropGoogleAccount.kt": "bfc119e20591c6c370f37a53c02fb90e0826f482eb1dd645d48f733f22f129d0",
+        "src/main/java/com/wkq/google/model/GoogleAccountPayload.kt": "68bdb662547131d46e390e3e44195c7a1614a299ba7836558e7f92652a99c067",
+        "src/main/java/com/wkq/google/model/GoogleIdTokenClaims.kt": "5d761029ab87fec166be9866988c98eb020e53ec1da9f7b3c707bf5545c100a4",
+        "src/main/java/com/wkq/google/model/SubscriptionStatus.kt": "689c48e71d8ed2c743cbbeac6bf738c762a664d60559020a2a3fc53b4efc59aa",
+        "src/main/java/com/wkq/google/billing/ui/GoogleBillingPlanConfig.kt": "820d44868cfa081024f5a60ecb107636b208db9c522874f2166fd941a4c523ed",
+        "src/main/java/com/wkq/google/billing/GoogleBillingEntitlement.kt": "1decabf9a004eab49ed1a7747b20b10318131d9926056dac3669f4753fa6b28d",
+        "src/main/java/com/wkq/google/billing/GoogleBillingEntitlementCache.kt": "9412de5856936045e50433af2dad2f97d0615e2413b6a7e0143189a075c40c7e",
+        "src/main/java/com/wkq/google/billing/GoogleBillingGateway.kt": "8210114d00519f14f929c099f0071e54084470ad0b00b981c480907e91ed0ecf",
+        "src/main/java/com/wkq/google/billing/GoogleBillingManager.kt": "4da14a6e4c9f29ea4dbb1437589ffb151fd15ed596d026c51f9a5ee7632f3065",
+        "src/main/java/com/wkq/google/billing/GoogleBillingModels.kt": "33704638e6fafeface5774856ff4859f50ac29a191b99e3ff9b70f1b677c63fd",
+        "src/main/java/com/wkq/google/billing/GoogleBillingRuntime.kt": "d476e0fc8a5ab2aa9e114b1e74905620411868a9e0b8cdc68df085826ece8c8b",
+        "src/main/java/com/wkq/google/billing/GoogleProductType.kt": "0d3bdf154bfbbf900f21678994eb1de545ee2aa317a5958746d34a3336514092",
+        "src/main/java/com/wkq/google/billing/NoOpGoogleBillingGateway.kt": "91bc4118b8ce6278094c802db96b777ae583f862150d7963e20be18b45922e74",
+        "src/test/java/com/wkq/google/billing/GoogleBillingPolicyTest.kt": "7c3887a53b4c2f5f1c966a31d4cf3b1cce66dd735ed02dcf2c696c7654628b7e",
+        "src/test/java/com/wkq/google/billing/GoogleBillingEntitlementCacheTest.kt": "fd125f0980ab1e66f0f2e796a7ca318126e3dfc171a1f85785bf182839ec0df8",
+        "src/test/java/com/wkq/google/billing/GoogleBillingEntitlementTest.kt": "0c6c765510bbe640a02bc01c54d5693e49ace4dc3e2b412054c5190530d8ba8a",
+        "src/billing/AndroidManifest.xml": "df4bb599b5fd635bb027dfb553d169a87756f602a0b05b4b98068b905f3fe08a"
+      }
+    }
+  ],
+  "billingCopies": [
+    {
+      "repository": "DropLAN",
+      "sha256": "4da14a6e4c9f29ea4dbb1437589ffb151fd15ed596d026c51f9a5ee7632f3065"
+    },
+    {
+      "repository": "NASFileManager",
+      "sha256": "9ea28b2fa223862d9a19726c67a3d6e58b515d174c3ae29b953cc75e994e7827"
+    },
+    {
+      "repository": "PressIPTC",
+      "sha256": "3bf16836c59fb5abf3ee0c928e81882744089f41ba74b6082909114643f1f5c3"
+    },
+    {
+      "repository": "PhotoKit",
+      "sha256": "67895d735437fe238931cc59b3b2fd85bfab6a8adc985b0c7624088ee3521457"
+    },
+    {
+      "repository": "SiteReport",
+      "sha256": "0c5e72ea0762dd276c7ae7e963c11e2138e826ddc4f74e0786d497973c0763b0"
+    },
+    {
+      "repository": "RoofQuote",
+      "sha256": "3bd47bfb30d2974669cf4d44c978636fdab1a894264b96dfec8046d6dc75eca8"
+    },
+    {
+      "repository": "OfflineSignage",
+      "sha256": "b3186201cbf83bc8bb3343d930d385b8a4ca7daf9f9d53d6d41b9a9a0296d58c"
+    }
+  ],
+  "integrationAdjustments": [
+    "All core modules use local source dependencies and centralized toolchain.",
+    "Agora source dependency 4.7.0 unavailable on Maven Central; integrated published 4.6.4.",
+    "Metadata DTO/model packages decoupled from photo database; business DAO/repository/schema migration tests stay in source App.",
+    "NAS advanced gate and notification routing are host configured.",
+    "Auth, FCM, Credential Manager, Firebase and billing are separate optional modules.",
+    "Billing offline duration is host configurable; seven divergent copies not claimed merged.",
+    "Roof-specific report-template policy omitted from generic OpenXML writer.",
+    "Router Gradle plugin registers lazy dependencies before KSP evaluation; published consumer compiles generated route tables.",
+    "Metadata raster tests use migrated fixture paths; headless transfer notifications omit click actions instead of failing workers; advanced access tests inject host policy."
+  ],
+  "removedModules": [
+    {
+      "module": ":core:lib_devhub",
+      "sourceRepository": "DevHub",
+      "sourcePath": "sdk/android/devhub-sdk",
+      "sourceCommit": "d15e2c0fa0c0357f1e4cc40defdf314a2c56e8c6",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle.kts": "f9e6b0639b96465d222b43d819b7056a365bcda6f3a982607b3b3abcce038894",
+        "src/main/AndroidManifest.xml": "610af1e51d5d091f23f026bb6001a1f1f57dbd3e732621decdb29a5b9d8ec396",
+        "src/main/kotlin/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "src/main/kotlin/CampaignCache.kt": "24ff00eee7fce1c88fb02344fcb73a07e1a4a660e98a2677bcc43cd410643fa4",
+        "src/main/kotlin/CampaignsActivity.kt": "ab7055c87d33d7ee47f59107be4f8867bef49267919d00b9e9ddd429b93aa94b",
+        "src/main/kotlin/DevHub.kt": "b89f90ead19016ec9556cc9840ba11904957fa77dad1f796bfad678a334c4cd1",
+        "src/main/kotlin/EventStore.kt": "e9275781de09c7c8bd350fddd4868da86b8661ed2ba863d761e6041e08f07e13",
+        "src/main/kotlin/SdkTransport.kt": "b2ff121883c8b44b6b79bc33a41df1a993fda46fdb7d54c6eb797244da3d0836",
+        "src/main/resources/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "src/test/kotlin/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "src/test/kotlin/CampaignCacheTest.kt": "eee35b24d29d6e814bc27d0a00dfbc411fc5f637c3794176decf77e00b7e9ff1",
+        "src/test/kotlin/DevHubTest.kt": "da89d43944faeadcda856d26145f1e7c3ace9de260c9071807c7733edcefb9d2",
+        "src/test/kotlin/SdkStabilityTest.kt": "89d7fc9b2a485f1556a1296467e57f33c8a62337491f3815b74e31029f95caba",
+        "src/test/kotlin/SdkTransportTest.kt": "ecb8fcfe85e59a14d425cc0c0be0b9919c99c91be23de83c265fba5499ce98a7"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "DevHub is maintained in its independent repository; user excluded it from DevLib."
+    },
+    {
+      "module": ":core:lib_beauty",
+      "sourceRepository": "BeautySDK",
+      "sourcePath": "core/lib_beauty",
+      "sourceCommit": null,
+      "workingTreeChanges": "?? core/lib_beauty/",
+      "importedFiles": {
+        "build.gradle": "9e4e93a7549df5d49ec11ac30631bb6d4cfe8c230dab03569a09ed9bfd74fef6",
+        "consumer-rules.pro": "68efa8bad3b30d82e0e03841c0dcf3838f3bf289f1273d14700f04291066d20a",
+        "README.md": "f9a973bb17f81a5614f901c3b1710333b1649a70da9c88bfb34f09a9846b7c9d",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/java/com/beautysdk/AnalysisOrientation.kt": "5e13abbe8d964d9260725b3494110c86b5e8c62d158f5a0942299a35c15d9323",
+        "src/main/java/com/beautysdk/AsyncFaceAnalysis.kt": "92ddcadfb4bd2e39a3750c2cc06de222348c3f8c95fc94f70508ab370abf973f",
+        "src/main/java/com/beautysdk/BeautyEffects.kt": "84d2d9649611fe0c3062f14a7eeeac6b478489162db2072669c45a6085dba2f9",
+        "src/main/java/com/beautysdk/BeautyProcessor.kt": "27e9a52ed600310d90debbaa1e32277b5d110c9e6fa9c5d541e324ffa94fd15a",
+        "src/main/java/com/beautysdk/BeautySession.kt": "278ec2a01523b53b1ce760d80b7fd88ef45a041fe664e0df609bb51c4ae73e73",
+        "src/main/java/com/beautysdk/FaceAnalysis.kt": "a9fa5f5e61ddb4a70af4be880559a8e29b44cf1ff5ae09c4f3ab62d9e6618096",
+        "src/main/java/com/beautysdk/GlBeautyRenderer.kt": "90852dcab9c1ef356823e56d3eb52d728b673266aebc697b9d7adf43680b99ba",
+        "src/main/java/com/beautysdk/ImageSticker.kt": "ac489aeec224f75501cf4bd163ff1c67f9d32bc3be91fd1bc25ab53ef3971c51",
+        "src/main/java/com/beautysdk/RgbaBeautyRenderer.kt": "ae93dfd48d09ada5df0546fce82b42d181ebc869c6e5fcd2232dd1a11004326c",
+        "src/main/java/com/beautysdk/VideoFrame.kt": "a812b8e8023ea75ff02d27745a331865adb77806cd64accb91509e2f13f3ea99",
+        "src/test/java/com/beautysdk/BeautyPipelineTest.kt": "11a1565d9eccf79da54f5aebcac2c210b3fec5baf100c34e8d18c8dd7d6e8528",
+        "src/test/java/com/beautysdk/BeautyProcessorTest.kt": "5570f1c78a72984a82c336dbd178d7a2b9f383da567962453d348dbd0213f174",
+        "src/test/java/com/beautysdk/ImageStickerTest.kt": "22d6e25f2972d1669dd560c4dc847d84f2cc2c4e6604ea3e4b4b4a620baeb65b",
+        "src/test/java/com/beautysdk/JavaApiTest.java": "3ed0de3fbca95bb765966ec0b1523652f61e2a6536341f14d756b5456751c943"
+      },
+      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded.",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_beauty_rfb",
+      "sourceRepository": "BeautySDK",
+      "sourcePath": "core/lib_beauty_rfb",
+      "sourceCommit": null,
+      "workingTreeChanges": "?? core/lib_beauty_rfb/",
+      "importedFiles": {
+        "build.gradle": "96ef1d2871a232fbe5e86f1c7756c8ab852b7f44349f722188dd58ad1ad40492",
+        "consumer-rules.pro": "2a2a264748feba06927f669a26a11dcb6f1ed4ee69ced02c39a792ec60b5db46",
+        "README.md": "f1a6c3fd8fe49449960b58644e91e2343762687a5c2ccc66f1743a7da6e6e587",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/assets/version-RFB-320.onnx": "34cd7e60aeff28744c657de7a3dc64e872d506741de66987f3426f2b79f88017",
+        "src/main/assets/beautysdk_rfb/LICENSE": "21f0df2b54c9fef1b4f4061dd0b153bc72f071b5ce9fc04234f13ebfd093b44c",
+        "src/main/java/com/beautysdk/rfb/AnalyzerLifetime.kt": "289119e7de4ee9739e17d4dd3bbbac584ed110dc04c97aadcd3db56176c5555e",
+        "src/main/java/com/beautysdk/rfb/OnnxFivePointRefiner.kt": "3938cf9200d7cbf7e77dc20aab25b4abfc283e0f21386761b3697afa25a42388",
+        "src/main/java/com/beautysdk/rfb/RfbBeauty.kt": "c63f2d6244462e53fe772131adc02a3a94ad6ab72cc97e80aa83e11c30bbc372",
+        "src/main/java/com/beautysdk/rfb/RfbFaceAnalyzer.kt": "d7dfebe0a886f0e98085d7cb61fb9096dd02f4100228b1b03e93b5d501d4b09d",
+        "src/test/java/com/beautysdk/rfb/AnalyzerLifetimeTest.kt": "cf7218e82f935e6468579550aeca7472b025aaf7172e1ce8880fe9700267bd64",
+        "src/test/java/com/beautysdk/rfb/RfbPostprocessorTest.kt": "6ba55c981231811b4a00679eed1e969a09af1e63c161c942fdb0ef83a91f3e72"
+      },
+      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded.",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_beauty_mediapipe",
+      "sourceRepository": "BeautySDK",
+      "sourcePath": "core/lib_beauty_mediapipe",
+      "sourceCommit": null,
+      "workingTreeChanges": "?? core/lib_beauty_mediapipe/",
+      "importedFiles": {
+        "build.gradle": "7dc437a857636891698e644f6ed090d3df3d898d18224940a565e4fc6c0d39d4",
+        "consumer-rules.pro": "4a4be541deb28c0a7d5276c9fc0f5ad2ef628f467a47f8f98d15445d97dbe9ae",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/assets/face_landmarker.task": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "src/main/assets/beautysdk_mediapipe/MODEL_SOURCE.txt": "bbcf950883a0332f11397c0180d715cd846b5cc564af1d990411c4c437e0e6de",
+        "src/main/assets/beautysdk_mediapipe/SOURCE_LICENSE": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
+        "src/main/java/com/beautysdk/mediapipe/MediaPipeFaceAnalyzer.kt": "799107beee698552956495860f8dbb24593002fa3819f5d9303d28db4c158435"
+      },
+      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded.",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_camera",
+      "sourceRepository": "BeautySDK",
+      "sourcePath": "core/lib_camera",
+      "sourceCommit": null,
+      "workingTreeChanges": "?? core/lib_camera/",
+      "importedFiles": {
+        "build.gradle": "334e91c426975259251f0187f98b19b8bc00bddae91c4dae8cf0fe8606df6f67",
+        "consumer-rules.pro": "c0ea4eb49414772c3ffa6f6e922f300ad35d9f8209e88b627c0441d2c963aef9",
+        "README.md": "46fb8ad45c578c7275ca8c42d52354270834ba52b00cf3ec6330dbe8cf22346a",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/java/com/beautysdk/camera/CameraFrame.kt": "1a3a6d9ea8f65246c53c7f3ed8ecc8096865cbbff06fe71c73c7b84882b345a2",
+        "src/main/java/com/beautysdk/camera/CustomCameraController.kt": "a8530ff534c3143fa6dee0ca31593581615676856c541322d09e0864e70fa76a",
+        "src/test/java/com/beautysdk/camera/RgbaPackingTest.kt": "84776fbf21f43128ecd50ffbcab401ace8f5d28af2026ea4c1605526ad7b8864"
+      },
+      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded.",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_live_api",
+      "sourceRepository": "Starxen",
+      "sourcePath": "lib_live_api",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "workingTreeChanges": "M lib_live_api/src/main/java/com/starxen/live/media/LiveMediaEngine.kt",
+      "importedFiles": {
+        ".gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
+        "build.gradle": "a22932161efdcf11e544050ea9283f5445c66b96a95bee45cb474d37a1c9827b",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/java/com/starxen/live/media/LiveMediaEngine.kt": "7afc83b4606740bb12baaa51d3c6472bb2706cfbf0a9e810dfde5ee55a99a7e3",
+        "src/main/java/com/starxen/live/media/MediaUid.kt": "ca94cc4a8b36f79591e6cd1dccd5080b030bda669412ab0ecaf435933a1aaf06",
+        "src/main/java/com/starxen/live/media/TextureBeautyProcessor.kt": "270e0c31acbcca1ac0dae1ecb3e84916a0ddf50356bd96254d46a2cd05b344a7"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_agora",
+      "sourceRepository": "Starxen",
+      "sourcePath": "lib_agora",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "workingTreeChanges": "M lib_agora/src/main/java/com/starxen/live/agora/AgoraLiveEngine.kt\n M lib_agora/src/main/java/com/starxen/live/agora/AgoraMediaAdapter.kt",
+      "importedFiles": {
+        ".gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
+        "AGENTS.md": "bf0f2cba908f77a9cf3d78f5d9f62f12194a053f0b451a3514f3380e8c937c33",
+        "build.gradle": "7452deaea51c4e7c98b143543ab04423b20a1c4d6def657183f5fc9a792dddad",
+        "consumer-rules.pro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "README.md": "012fbeff010e7a3d26a60e8255364b4ded950b3498aec999cfaee7038f75e7b8",
+        "src/main/AndroidManifest.xml": "a3ae1b61a5683202198948517882c2e824006e5bb353a88118360e58db6d7678",
+        "src/main/java/com/starxen/live/agora/AgoraCdnPlayer.kt": "8e035c6be3a63255e4048af5e6c9efd6d4e34a66c58e7d3ac1d5ca3bc1efec14",
+        "src/main/java/com/starxen/live/agora/AgoraLiveEngine.kt": "ec2db5bfd0117673d747cd848ce768286a582a02bc15b07b79fd460512e3502e",
+        "src/main/java/com/starxen/live/agora/AgoraLiveSession.kt": "24de62a7e6dd01de053304d067a1ae22a2d36fec11a77a90974b06e36f7a044e",
+        "src/main/java/com/starxen/live/agora/AgoraMediaAdapter.kt": "0b28727bf6acb0001a7eba7c492aeffd65a619a4b1943d42207738eceae355b5",
+        "src/main/java/com/starxen/live/agora/AgoraVideoFrameProcessor.kt": "8e3e5902ece1e1f83fc799240803aecc9c8b2a0a99e5357b60fe591c17fcffb1"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_auth_google",
+      "sourceRepository": "Starxen",
+      "sourcePath": "lib_google/auth",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_push_fcm",
+      "sourceRepository": "Starxen",
+      "sourcePath": "lib_google/push",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_live_beauty",
+      "sourceRepository": "Starxen",
+      "sourcePath": "lib_live_beauty",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:lib_tencent_beauty_kit",
+      "sourceRepository": "Starxen",
+      "sourcePath": "tebeautykit",
+      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
+      "removedAt": "2026-10-23",
+      "removalReason": "User excluded all Starxen and BeautySDK source modules from DevLib."
+    },
+    {
+      "module": ":core:core_share",
+      "sourceRepository": "PhotoKit",
+      "sourcePath": "core/core_share",
+      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "14913dc948430a5ac4aff6a1dcabc15aadff087ff33f6e0461456218d5848668",
+        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
+        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
+        "src/main/java/com/wkq/photo/share/ShareLauncher.kt": "d396ea19857d2e075e3cf18e30c345ca9e0b546d87f15a2cb4937de1518f29b7"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "Duplicate system sharing consolidated into core_utils.ShareUtil; no compatibility facade retained"
+    },
+    {
+      "module": ":core:lib_html",
+      "sourceRepository": "DropLAN",
+      "sourcePath": "core/lib_html",
+      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92",
+      "workingTreeChanges": "",
+      "importedFiles": {
+        "build.gradle": "80ecf1d0f2383511513f4fe5a5504c77d7069342d1527d18f0e863f22d72d621",
+        "consumer-rules.pro": "5b5c17b9b310c3a19b62628d35804409f5c8548178f7c47d068c3807ebe36d71",
+        "README.md": "26760efea2fc3ccf80ac4c23f0fcfa2ed71149bcaaa49305319c818faccd2b58",
+        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
+        "src/main/assets/droplan_web/app.css": "a2334f6843ac778617dd98d216147361e5c04a4a43eef3ccba4d422a71bd71ed",
+        "src/main/assets/droplan_web/app.js": "700d65bd3227343813b1bee4aa8d750e5ddedcc01ece6579c0a0b828d3f70204",
+        "src/main/assets/droplan_web/de.json": "9653c66876afd37b27a360c28a9e6ffb43240c2aea70328a4f9a85cbc60639ef",
+        "src/main/assets/droplan_web/en.json": "c1844a869d61f90c2c894189be8db4ba24bfc5eba1587ded78334b19b4161a13",
+        "src/main/assets/droplan_web/es.json": "578d556dcddd0dbc3b578bd4cf0c8f305b47fcf94207c9e133e0fa3c08df2d4a",
+        "src/main/assets/droplan_web/fr.json": "b04db360576f1fae5d7e6b5fec3e54bca37780c0ddf8b957aab189dd0b31a179",
+        "src/main/assets/droplan_web/index.html": "4b47dfa90d5f584aaf310ca66f4d9158396743fb13b637dcd4cf6311c6bb99e8",
+        "src/main/assets/droplan_web/ja.json": "4aa52351ed18d2adba7b25181ee37c292fbf1102da6e0ad478adbdbf0bcd6c66",
+        "src/main/assets/droplan_web/ko.json": "5f22ec660d73d06b918d74b0aeca606c68d913fdf0c452ab35345601300b6b9f",
+        "src/main/assets/droplan_web/pt-BR.json": "06c97964705dd85095f2c45d58cd205c4c94934b250181f14a8ef84e322320ff",
+        "src/main/assets/droplan_web/zh.json": "4f3c5f49c32dce17a849bf018874f3e1e218b9d6ecf90377023b0afd7d69921d",
+        "src/main/java/com/wkq/droplan/html/OfflineWebAssets.kt": "581211634d5eef1158992f7118df95789620411819712e6d40765df1ad824253",
+        "src/test/browser/connection-advice.cjs": "43a0a12618486828ad36f3882f7b0ebb5662ffdfeccecc9345b882c1e9c6fa50",
+        "src/test/browser/languages.cjs": "f2b928693158d23b7b78b9a67f059deb37a3551da91ec9d5cf7ff2056b1a4115",
+        "src/test/browser/native-download.cjs": "e39272a0db2c14f9ae90608d6abcf297a4e26aa78ae86efd87e43bcd52a324c7",
+        "src/test/browser/README.md": "01871c4105f065d913ef1a6676aabf42e0e20f6d4be4e1268d99d64b84c7054f",
+        "src/test/java/com/wkq/droplan/html/WebAssetCatalogTest.kt": "7a2469e4db8d213a213816b79caec378acc2e69bd71f0fd491a8f39bc89dc70c"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
+    },
+    {
       "module": ":core:phototoolkit-engine",
       "sourceRepository": "PhotoKit",
       "sourcePath": "core/phototoolkit-engine",
@@ -1492,7 +1845,9 @@
         "src/test/java/com/phototoolkit/engine/PortraitHeadGeometryEstimatorTest.kt": "ca44e4a033f536f23049938aae68f8ec5987b8432ed388e87c2e896867689143",
         "src/test/java/com/phototoolkit/engine/PortraitMattingMaskQualityTest.kt": "9105521ecd271c89073ce547a950e839a678ed82e41eb3894fc8346a06b99ea6",
         "src/test/java/com/phototoolkit/engine/PortraitRoiPlannerTest.kt": "a3e9ad77fd7b6e6ed9d1bc19a1db01790b3c2907008326b1e385bee94ecd5861"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:phototoolkit-raw",
@@ -1518,7 +1873,9 @@
         "src/main/jniLibs/arm64-v8a/libraw.so": "27ade954e1eefc2e6c07ce90141090061876a64e2e5299c6921c862e9b7a5ce7",
         "src/main/jniLibs/armeabi-v7a/libraw.so": "8fae87a02cace13efd9ce18f9da4e8e5fc31c62e769dcb177cd09ed7717c51fd",
         "src/test/java/com/phototoolkit/raw/RawDevelopOptionsTest.kt": "b3c4208a4e49baed2ed974f0013cbc12bbc380cd4ac5adb52b9eec7ff43d1622"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:id-photo-library",
@@ -1552,97 +1909,9 @@
         "src/main/java/com/wkq/photo/idlibrary/i18n/LocaleFallback.kt": "d4b4f1e2f2f37590630c8a3e659d059798c34e35b4f06ea147cc7fd0703dc832",
         "src/test/java/com/wkq/photo/idlibrary/CatalogPackageValidatorTest.kt": "411ebc1807bd5c40bd7eaeabfa269f97cea0d31f0c3416a10dfd078d790eefb0",
         "src/test/java/com/wkq/photo/idlibrary/i18n/LocaleFallbackTest.kt": "88b7fab1c7303adb9782a65fcfbf02e8861086e3e3ccaf04d739691600de3d7d"
-      }
-    },
-    {
-      "module": ":core:core_image_render",
-      "sourceRepository": "PhotoKit",
-      "sourcePath": "core/core_image_render",
-      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "c0d014cb01b23090d00a94f38e18e1b85c768480b489cd53769fecaea936614d",
-        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
-        "hs_err_pid15488.log": "06fed9d9148db4703f45ea9c26346c767123d2f326e4f602ef19035d5c5206f0",
-        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
-        "src/main/java/com/wkq/photo/imagerender/AnnotationRenderer.kt": "2d384f72e176dc452157372a3b377b4ec7b67dd1cf2bb80cb8aedfe7b45931bc",
-        "src/main/java/com/wkq/photo/imagerender/BitmapFileDecoder.kt": "7273fd770ccc076dd24c51a57f6db8d98903e9afd0f097a6b6cd951b369fda7e",
-        "src/main/java/com/wkq/photo/imagerender/DeviceMockupRenderer.kt": "9615573310fc5b2da42df955f2964b2fcf9117f31e053a394c853edf333deed1",
-        "src/main/java/com/wkq/photo/imagerender/ImageSource.kt": "dd15276bb3945d2ff9514bbd16a17cd4a033d0797f9adf0eafeaf8f720614c7f",
-        "src/main/java/com/wkq/photo/imagerender/PolaroidFrameRenderer.kt": "e11f874ca8ad6e591290677cd07c91b288fe782be805fbfa24a6fa2bf4456179",
-        "src/main/java/com/wkq/photo/imagerender/SignatureExtractorRenderer.kt": "1fa3723f213ec9391fbbb07ab7b31ca958235613903d12b402d4e4311bb03ee1",
-        "src/main/java/com/wkq/photo/imagerender/WatermarkRenderer.kt": "513a32398edbe6bd54c93568fa56b52595d1daa03bc2b6e5e020a11e0dccb920",
-        "src/test/java/com/wkq/photo/imagerender/AnnotationRendererTest.kt": "792fb9d6aaa6dfb1d33e88cc3ab5b142f88dee5b30e327f09ad988592cfd556f",
-        "src/test/java/com/wkq/photo/imagerender/BitmapFileDecoderTest.kt": "9d439183d5e6e648ed7c42b9a489fcb846b04d733c627019d8fe921ec10879ae",
-        "src/test/java/com/wkq/photo/imagerender/NewToolsRenderersTest.kt": "4b5b2dd9426d2e2ee9ec2ccf4bdf464bb0e9da357354e6f19033728ee1339114",
-        "src/test/java/com/wkq/photo/imagerender/WatermarkRendererTest.kt": "65913edaec557089305fb5fa2a6067904e620ad264bc186b768321b469586419"
-      }
-    },
-    {
-      "module": ":core:core_pdf",
-      "sourceRepository": "PhotoKit",
-      "sourcePath": "core/core_pdf",
-      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "95cc1b7a51f6a17789b019d62a1e0ebf911e50e25b65de6f40b0941f23687154",
-        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
-        "src/androidTest/java/com/wkq/photo/pdf/PdfImageExporterInstrumentedTest.kt": "37c4432dfa48b0467c98353af249223c1a4285c66480da51d605b8394c83b24e",
-        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
-        "src/main/java/com/wkq/photo/pdf/PdfImageExporter.kt": "824f1a7c13f91145ef6a9f082f205424941315556d6ffbfc3c35ce4313c093cf",
-        "src/test/java/com/wkq/photo/pdf/PdfImageExportRequestTest.kt": "0b1c3bfd8b86774060a4b8c9141e3dc9feae59c09c750d4db3b1546227cd8725"
-      }
-    },
-    {
-      "module": ":core:core_qrcode",
-      "sourceRepository": "PhotoKit",
-      "sourcePath": "core/core_qrcode",
-      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "0b701fe705007deb05ef40a93fd67159d708d6b0b8b418be206f43630fe2f3f1",
-        "consumer-rules.pro": "45437fd8d4e0725ce8600d084fb6f1560854d3db28fe372ec40e9c8ecba0d9cb",
-        "src/main/AndroidManifest.xml": "04b1342d29a8fc1f80cfbd54785a90d230a32a010bc56aa483f7050dc42bcde2",
-        "src/main/java/com/wkq/photo/qrcode/QRBackgroundProcessor.kt": "849bbafd752fb01906bc8af3f72047c954ab6d9422b35db06d03c439690f94de",
-        "src/main/java/com/wkq/photo/qrcode/QRCodeGenerator.kt": "c52416bab4c43312632f99cf6a0d0899edbe2994158f53bd78cc8bd0f3ea071b",
-        "src/main/java/com/wkq/photo/qrcode/QrCodeKit.kt": "bcce2b7c89674213e18fc841a2310583b169adf5ec45cbf0740d542b25558b21",
-        "src/main/java/com/wkq/photo/qrcode/QRCodeRenderer.kt": "c5d47a5017f2082ba1cfadb112f006b65f160ad549da2415ff555ac236cd93d1",
-        "src/main/java/com/wkq/photo/qrcode/QrLiveScanActivity.kt": "c1ca5fd3ee8a4b0409684f34387f65065d9cfd97da0bcdd7524d9db5f1ffffa9",
-        "src/main/java/com/wkq/photo/qrcode/QRLogoProcessor.kt": "130b0a851c52f6db8933bd88395eaa95c606607db0408db4ab9b31bcfdb51e97",
-        "src/main/java/com/wkq/photo/qrcode/QRStyle.kt": "f8c606c0995aa557291db94f64c2c39b9343b35c1097c5133ee5dc409124b7db",
-        "src/test/java/com/wkq/photo/qrcode/QRCodeGeneratorTest.kt": "340100ca6624ed173cc62742a3625acab34eba854f14cc9e4da8ab1e35acbe59",
-        "src/test/java/com/wkq/photo/qrcode/QrCodeKitTest.kt": "0f866d9c36a39e86bd14688f360524541e85063c50c83d6a7dd7e4d3a1f8515f"
-      }
-    },
-    {
-      "module": ":core:core_share",
-      "sourceRepository": "PhotoKit",
-      "sourcePath": "core/core_share",
-      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "14913dc948430a5ac4aff6a1dcabc15aadff087ff33f6e0461456218d5848668",
-        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
-        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
-        "src/main/java/com/wkq/photo/share/ShareLauncher.kt": "d396ea19857d2e075e3cf18e30c345ca9e0b546d87f15a2cb4937de1518f29b7"
-      }
-    },
-    {
-      "module": ":core:core_archive",
-      "sourceRepository": "PhotoKit",
-      "sourcePath": "core/core_archive",
-      "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle": "94beac677064d17fd3890a1db51d7f05e305401b86e8141fda37090e093ea5ce",
-        "consumer-rules.pro": "fc05bdd66c0da1abce2af4eb18e97f8138e80125ba82ff394c347a2f8e8015d2",
-        "src/main/AndroidManifest.xml": "c8fe08b06e479efc7e3d00476fffe693a3e943e2b874b3c6a1ba5156fc180751",
-        "src/main/java/com/wkq/photo/archive/EncryptedArchiveExtractor.kt": "c04858bac290d952360e8f0c4d081c385ffd99b996bdc84ecfea563faa798cbb",
-        "src/main/java/com/wkq/photo/archive/ZipArchiveCreator.kt": "9f145f6e8a427b788bea5adcee0a4a70c3db169bbbefc23d3f3ab529d0a2f5a6",
-        "src/main/java/com/wkq/photo/archive/ZipArchiveOperations.kt": "148afb501d5b672175893df957f13f546758fb79b6cec1bbf7943e62cc4dbcf6",
-        "src/test/java/com/wkq/photo/archive/EncryptedArchiveOperationsTest.kt": "881775cacc4a841c029961bf41ccdc6521b101bbdf39d1dd569189e5c41798c1",
-        "src/test/java/com/wkq/photo/archive/ZipArchiveCreatorTest.kt": "e074bbe11afa9c0ccebc5374b918cb294436b041ca7f62931bf693ed1eadb84a"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:core_media_store",
@@ -1666,7 +1935,9 @@
         "src/test/java/com/wkq/photo/mediastore/InternalArtifactStoreTest.kt": "03ee5df4055b8604be70f2cba8d0c59abd3b2675bf0fb2a6109d39594d6610fd",
         "src/test/java/com/wkq/photo/mediastore/MediaFileStoreTest.kt": "8ed022076ed1acf9ff5ecd1a675d5cf1a584b16b07c2035c613297d9b440e93f",
         "src/test/java/com/wkq/photo/mediastore/MediaOutputVerifierTest.kt": "8a72c0d359d76fb1cf95ac986f136878eecb3c52a3e6f21bc3e31143366dba2e"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:core_qr_transfer",
@@ -1691,7 +1962,9 @@
         "src/test/java/com/wkq/photo/qrtransfer/QrTransferSecurityTest.kt": "429ad71ca22617841373a2520aa1ffd88b081ea06252b7d7110234bce4d06d08",
         "src/test/java/com/wkq/photo/qrtransfer/TransferFileIOTest.kt": "9197569f8b1d46858c0c80fafacc7bbc97bdd06e17aeab9bdda11ad87943b021",
         "src/test/java/com/wkq/photo/qrtransfer/TransferProtocolTest.kt": "a799c59f3ead5180969b4ba6edddaabcc5e60521935b4eef8b5f0eefa0c28096"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:portrait-model-assets",
@@ -1705,7 +1978,9 @@
         "src/main/assets/MODEL_LICENSES.md": "ce09722eff82f3a04ac723e7722592d009e4e9852f50bb967956ff7af215f832",
         "src/main/assets/model_manifest.json": "c5cf68843b3cab7b2bffa5bd414437537fe3762c4ccbf5745aaa52c7b19cae05",
         "src/main/assets/modnet.tflite": "f7d1e9eca9562abddb60e4b0a3ed0c29441ef09cd621954978f1613914cc64bc"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_report_pdf",
@@ -1739,7 +2014,9 @@
         "src/test/java/com/wkq/nativepdf/PdfOutputFileTest.kt": "8be652b599668fb563214aabf1d6ca2abe3c7d44456286152932cd97385b68e0",
         "src/test/java/com/wkq/nativepdf/model/NativeReportContractTest.kt": "a3b9774926a3a573596231799554a4e4eeebbfe718800181a290dbe89f6ad284",
         "src/test/java/com/wkq/nativepdf/section/NativeEvidencePresentationTest.kt": "301f07ae430f102c66df5a6f20c81deb43c89b45f7c24e03c42c1acbb27ff832"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_location",
@@ -1774,7 +2051,9 @@
         "src/main/java/com/wkq/util/location/geo/util/GeoDistanceUtils.kt": "1ffde5b405d0cab650df87a4fe227e293c97ea19022821f560d921d78ea9d0e4",
         "src/release/java/com/wkq/util/location/AppLocationProviderFactory.kt": "fbbf284971b5a940600ddd5ec3a5450349945b3ab2aa9dff8a66d7a4937e14fc",
         "src/test/java/com/wkq/util/location/geo/OfflineGeoCoderTest.kt": "975f984a489edc600cf98c79d03ff2ca7aac2954e02adb46179436a27ac52269"
-      }
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_camera_capture",
@@ -1804,126 +2083,9 @@
         "src/main/res/values-ko/strings.xml": "484dc8c9bbef3a316ba346dc156630c12f4e78389727f30151a52e92b5cf292d",
         "src/main/res/values-pt/strings.xml": "8f5a96b21b2de005d773fab0fecb47d4f63f618f290cc6dfbc79ce87cc50b62d",
         "src/main/res/values-zh-rCN/strings.xml": "3c5930ab1337e3979e742890d748c81a0cf897c706f0dfff03307dbf609ece7f"
-      }
-    },
-    {
-      "module": ":core:lib_beauty",
-      "sourceRepository": "BeautySDK",
-      "sourcePath": "core/lib_beauty",
-      "sourceCommit": null,
-      "workingTreeChanges": "?? core/lib_beauty/",
-      "importedFiles": {
-        "build.gradle": "9e4e93a7549df5d49ec11ac30631bb6d4cfe8c230dab03569a09ed9bfd74fef6",
-        "consumer-rules.pro": "68efa8bad3b30d82e0e03841c0dcf3838f3bf289f1273d14700f04291066d20a",
-        "README.md": "f9a973bb17f81a5614f901c3b1710333b1649a70da9c88bfb34f09a9846b7c9d",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/java/com/beautysdk/AnalysisOrientation.kt": "5e13abbe8d964d9260725b3494110c86b5e8c62d158f5a0942299a35c15d9323",
-        "src/main/java/com/beautysdk/AsyncFaceAnalysis.kt": "92ddcadfb4bd2e39a3750c2cc06de222348c3f8c95fc94f70508ab370abf973f",
-        "src/main/java/com/beautysdk/BeautyEffects.kt": "84d2d9649611fe0c3062f14a7eeeac6b478489162db2072669c45a6085dba2f9",
-        "src/main/java/com/beautysdk/BeautyProcessor.kt": "27e9a52ed600310d90debbaa1e32277b5d110c9e6fa9c5d541e324ffa94fd15a",
-        "src/main/java/com/beautysdk/BeautySession.kt": "278ec2a01523b53b1ce760d80b7fd88ef45a041fe664e0df609bb51c4ae73e73",
-        "src/main/java/com/beautysdk/FaceAnalysis.kt": "a9fa5f5e61ddb4a70af4be880559a8e29b44cf1ff5ae09c4f3ab62d9e6618096",
-        "src/main/java/com/beautysdk/GlBeautyRenderer.kt": "90852dcab9c1ef356823e56d3eb52d728b673266aebc697b9d7adf43680b99ba",
-        "src/main/java/com/beautysdk/ImageSticker.kt": "ac489aeec224f75501cf4bd163ff1c67f9d32bc3be91fd1bc25ab53ef3971c51",
-        "src/main/java/com/beautysdk/RgbaBeautyRenderer.kt": "ae93dfd48d09ada5df0546fce82b42d181ebc869c6e5fcd2232dd1a11004326c",
-        "src/main/java/com/beautysdk/VideoFrame.kt": "a812b8e8023ea75ff02d27745a331865adb77806cd64accb91509e2f13f3ea99",
-        "src/test/java/com/beautysdk/BeautyPipelineTest.kt": "11a1565d9eccf79da54f5aebcac2c210b3fec5baf100c34e8d18c8dd7d6e8528",
-        "src/test/java/com/beautysdk/BeautyProcessorTest.kt": "5570f1c78a72984a82c336dbd178d7a2b9f383da567962453d348dbd0213f174",
-        "src/test/java/com/beautysdk/ImageStickerTest.kt": "22d6e25f2972d1669dd560c4dc847d84f2cc2c4e6604ea3e4b4b4a620baeb65b",
-        "src/test/java/com/beautysdk/JavaApiTest.java": "3ed0de3fbca95bb765966ec0b1523652f61e2a6536341f14d756b5456751c943"
       },
-      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded."
-    },
-    {
-      "module": ":core:lib_beauty_rfb",
-      "sourceRepository": "BeautySDK",
-      "sourcePath": "core/lib_beauty_rfb",
-      "sourceCommit": null,
-      "workingTreeChanges": "?? core/lib_beauty_rfb/",
-      "importedFiles": {
-        "build.gradle": "96ef1d2871a232fbe5e86f1c7756c8ab852b7f44349f722188dd58ad1ad40492",
-        "consumer-rules.pro": "2a2a264748feba06927f669a26a11dcb6f1ed4ee69ced02c39a792ec60b5db46",
-        "README.md": "f1a6c3fd8fe49449960b58644e91e2343762687a5c2ccc66f1743a7da6e6e587",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/assets/version-RFB-320.onnx": "34cd7e60aeff28744c657de7a3dc64e872d506741de66987f3426f2b79f88017",
-        "src/main/assets/beautysdk_rfb/LICENSE": "21f0df2b54c9fef1b4f4061dd0b153bc72f071b5ce9fc04234f13ebfd093b44c",
-        "src/main/java/com/beautysdk/rfb/AnalyzerLifetime.kt": "289119e7de4ee9739e17d4dd3bbbac584ed110dc04c97aadcd3db56176c5555e",
-        "src/main/java/com/beautysdk/rfb/OnnxFivePointRefiner.kt": "3938cf9200d7cbf7e77dc20aab25b4abfc283e0f21386761b3697afa25a42388",
-        "src/main/java/com/beautysdk/rfb/RfbBeauty.kt": "c63f2d6244462e53fe772131adc02a3a94ad6ab72cc97e80aa83e11c30bbc372",
-        "src/main/java/com/beautysdk/rfb/RfbFaceAnalyzer.kt": "d7dfebe0a886f0e98085d7cb61fb9096dd02f4100228b1b03e93b5d501d4b09d",
-        "src/test/java/com/beautysdk/rfb/AnalyzerLifetimeTest.kt": "cf7218e82f935e6468579550aeca7472b025aaf7172e1ce8880fe9700267bd64",
-        "src/test/java/com/beautysdk/rfb/RfbPostprocessorTest.kt": "6ba55c981231811b4a00679eed1e969a09af1e63c161c942fdb0ef83a91f3e72"
-      },
-      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded."
-    },
-    {
-      "module": ":core:lib_beauty_mediapipe",
-      "sourceRepository": "BeautySDK",
-      "sourcePath": "core/lib_beauty_mediapipe",
-      "sourceCommit": null,
-      "workingTreeChanges": "?? core/lib_beauty_mediapipe/",
-      "importedFiles": {
-        "build.gradle": "7dc437a857636891698e644f6ed090d3df3d898d18224940a565e4fc6c0d39d4",
-        "consumer-rules.pro": "4a4be541deb28c0a7d5276c9fc0f5ad2ef628f467a47f8f98d15445d97dbe9ae",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/assets/face_landmarker.task": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
-        "src/main/assets/beautysdk_mediapipe/MODEL_SOURCE.txt": "bbcf950883a0332f11397c0180d715cd846b5cc564af1d990411c4c437e0e6de",
-        "src/main/assets/beautysdk_mediapipe/SOURCE_LICENSE": "8707eef0533987efc5b155d64761eeb6e20793f50b9bd1a68dad1cf4719d0ed8",
-        "src/main/java/com/beautysdk/mediapipe/MediaPipeFaceAnalyzer.kt": "799107beee698552956495860f8dbb24593002fa3819f5d9303d28db4c158435"
-      },
-      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded."
-    },
-    {
-      "module": ":core:lib_camera",
-      "sourceRepository": "BeautySDK",
-      "sourcePath": "core/lib_camera",
-      "sourceCommit": null,
-      "workingTreeChanges": "?? core/lib_camera/",
-      "importedFiles": {
-        "build.gradle": "334e91c426975259251f0187f98b19b8bc00bddae91c4dae8cf0fe8606df6f67",
-        "consumer-rules.pro": "c0ea4eb49414772c3ffa6f6e922f300ad35d9f8209e88b627c0441d2c963aef9",
-        "README.md": "46fb8ad45c578c7275ca8c42d52354270834ba52b00cf3ec6330dbe8cf22346a",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/java/com/beautysdk/camera/CameraFrame.kt": "1a3a6d9ea8f65246c53c7f3ed8ecc8096865cbbff06fe71c73c7b84882b345a2",
-        "src/main/java/com/beautysdk/camera/CustomCameraController.kt": "a8530ff534c3143fa6dee0ca31593581615676856c541322d09e0864e70fa76a",
-        "src/test/java/com/beautysdk/camera/RgbaPackingTest.kt": "84776fbf21f43128ecd50ffbcab401ace8f5d28af2026ea4c1605526ad7b8864"
-      },
-      "sourceNote": "Repository has no usable commit; working-tree snapshot recorded."
-    },
-    {
-      "module": ":core:lib_live_api",
-      "sourceRepository": "Starxen",
-      "sourcePath": "lib_live_api",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
-      "workingTreeChanges": "M lib_live_api/src/main/java/com/starxen/live/media/LiveMediaEngine.kt",
-      "importedFiles": {
-        ".gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
-        "build.gradle": "a22932161efdcf11e544050ea9283f5445c66b96a95bee45cb474d37a1c9827b",
-        "src/main/AndroidManifest.xml": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f",
-        "src/main/java/com/starxen/live/media/LiveMediaEngine.kt": "7afc83b4606740bb12baaa51d3c6472bb2706cfbf0a9e810dfde5ee55a99a7e3",
-        "src/main/java/com/starxen/live/media/MediaUid.kt": "ca94cc4a8b36f79591e6cd1dccd5080b030bda669412ab0ecaf435933a1aaf06",
-        "src/main/java/com/starxen/live/media/TextureBeautyProcessor.kt": "270e0c31acbcca1ac0dae1ecb3e84916a0ddf50356bd96254d46a2cd05b344a7"
-      }
-    },
-    {
-      "module": ":core:lib_agora",
-      "sourceRepository": "Starxen",
-      "sourcePath": "lib_agora",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322",
-      "workingTreeChanges": "M lib_agora/src/main/java/com/starxen/live/agora/AgoraLiveEngine.kt\n M lib_agora/src/main/java/com/starxen/live/agora/AgoraMediaAdapter.kt",
-      "importedFiles": {
-        ".gitignore": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf",
-        "AGENTS.md": "bf0f2cba908f77a9cf3d78f5d9f62f12194a053f0b451a3514f3380e8c937c33",
-        "build.gradle": "7452deaea51c4e7c98b143543ab04423b20a1c4d6def657183f5fc9a792dddad",
-        "consumer-rules.pro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "README.md": "012fbeff010e7a3d26a60e8255364b4ded950b3498aec999cfaee7038f75e7b8",
-        "src/main/AndroidManifest.xml": "a3ae1b61a5683202198948517882c2e824006e5bb353a88118360e58db6d7678",
-        "src/main/java/com/starxen/live/agora/AgoraCdnPlayer.kt": "8e035c6be3a63255e4048af5e6c9efd6d4e34a66c58e7d3ac1d5ca3bc1efec14",
-        "src/main/java/com/starxen/live/agora/AgoraLiveEngine.kt": "ec2db5bfd0117673d747cd848ce768286a582a02bc15b07b79fd460512e3502e",
-        "src/main/java/com/starxen/live/agora/AgoraLiveSession.kt": "24de62a7e6dd01de053304d067a1ae22a2d36fec11a77a90974b06e36f7a044e",
-        "src/main/java/com/starxen/live/agora/AgoraMediaAdapter.kt": "0b28727bf6acb0001a7eba7c492aeffd65a619a4b1943d42207738eceae355b5",
-        "src/main/java/com/starxen/live/agora/AgoraVideoFrameProcessor.kt": "8e3e5902ece1e1f83fc799240803aecc9c8b2a0a99e5357b60fe591c17fcffb1"
-      }
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_crash",
@@ -1987,119 +2149,41 @@
         "src/test/java/com/wkq/crash/CrashScenariosTest.kt": "ebf21ac7c5aae6393bd7a04b7a2457f82f6fed331ed5b594e27c705657894a63",
         "src/test/java/com/wkq/crash/CrashUtilsTest.kt": "40110cdee6b99579715dfd72bed9b32ae8175f49b505a544352352e9af6d24b4",
         "src/test/java/com/wkq/crash/NativeCrashTypesTest.kt": "7ab573cc650d9153d33db3191f19da53a047c05bd7fd70ed30923010e6a84336"
-      }
-    },
-    {
-      "module": ":core:lib_devhub",
-      "sourceRepository": "DevHub",
-      "sourcePath": "sdk/android/devhub-sdk",
-      "sourceCommit": "d15e2c0fa0c0357f1e4cc40defdf314a2c56e8c6",
-      "workingTreeChanges": "",
-      "importedFiles": {
-        "build.gradle.kts": "f9e6b0639b96465d222b43d819b7056a365bcda6f3a982607b3b3abcce038894",
-        "src/main/AndroidManifest.xml": "610af1e51d5d091f23f026bb6001a1f1f57dbd3e732621decdb29a5b9d8ec396",
-        "src/main/kotlin/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
-        "src/main/kotlin/CampaignCache.kt": "24ff00eee7fce1c88fb02344fcb73a07e1a4a660e98a2677bcc43cd410643fa4",
-        "src/main/kotlin/CampaignsActivity.kt": "ab7055c87d33d7ee47f59107be4f8867bef49267919d00b9e9ddd429b93aa94b",
-        "src/main/kotlin/DevHub.kt": "b89f90ead19016ec9556cc9840ba11904957fa77dad1f796bfad678a334c4cd1",
-        "src/main/kotlin/EventStore.kt": "e9275781de09c7c8bd350fddd4868da86b8661ed2ba863d761e6041e08f07e13",
-        "src/main/kotlin/SdkTransport.kt": "b2ff121883c8b44b6b79bc33a41df1a993fda46fdb7d54c6eb797244da3d0836",
-        "src/main/resources/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
-        "src/test/kotlin/.gitkeep": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
-        "src/test/kotlin/CampaignCacheTest.kt": "eee35b24d29d6e814bc27d0a00dfbc411fc5f637c3794176decf77e00b7e9ff1",
-        "src/test/kotlin/DevHubTest.kt": "da89d43944faeadcda856d26145f1e7c3ace9de260c9071807c7733edcefb9d2",
-        "src/test/kotlin/SdkStabilityTest.kt": "89d7fc9b2a485f1556a1296467e57f33c8a62337491f3815b74e31029f95caba",
-        "src/test/kotlin/SdkTransportTest.kt": "ecb8fcfe85e59a14d425cc0c0be0b9919c99c91be23de83c265fba5499ce98a7"
-      }
-    },
-    {
-      "module": ":core:lib_auth_google",
-      "sourceRepository": "Starxen",
-      "sourcePath": "lib_google/auth",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322"
-    },
-    {
-      "module": ":core:lib_push_fcm",
-      "sourceRepository": "Starxen",
-      "sourcePath": "lib_google/push",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322"
+      },
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_billing_play",
       "sourceRepository": "NASFileManager",
       "sourcePath": "core/core_google",
-      "baseline": "Billing core only; excluded UI/status adapters; other copies compared by hash, not silently merged"
+      "baseline": "Billing core only; excluded UI/status adapters; other copies compared by hash, not silently merged",
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_entitlement",
       "sourceRepository": "DevLib",
       "sourcePath": "new",
-      "baseline": "Host-driven pure JVM entitlement policy"
+      "baseline": "Host-driven pure JVM entitlement policy",
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_auth_credentials",
       "sourceRepository": "DropLAN",
       "sourcePath": "core/core_google",
-      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92"
+      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92",
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     },
     {
       "module": ":core:lib_auth_firebase",
       "sourceRepository": "DropLAN",
       "sourcePath": "core/core_google",
-      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92"
-    },
-    {
-      "module": ":core:lib_live_beauty",
-      "sourceRepository": "Starxen",
-      "sourcePath": "lib_live_beauty",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322"
-    },
-    {
-      "module": ":core:lib_tencent_beauty_kit",
-      "sourceRepository": "Starxen",
-      "sourcePath": "tebeautykit",
-      "sourceCommit": "db6951b066dfd5435b0856ad5e3ed139751f2322"
+      "sourceCommit": "6e4d473eeb662285594c26c92a10338467479a92",
+      "removedAt": "2026-10-23",
+      "removalReason": "User-approved DevLib scope reduction; no current need for product-specific or heavy SDK capabilities"
     }
-  ],
-  "billingCopies": [
-    {
-      "repository": "DropLAN",
-      "sha256": "4da14a6e4c9f29ea4dbb1437589ffb151fd15ed596d026c51f9a5ee7632f3065"
-    },
-    {
-      "repository": "NASFileManager",
-      "sha256": "9ea28b2fa223862d9a19726c67a3d6e58b515d174c3ae29b953cc75e994e7827"
-    },
-    {
-      "repository": "PressIPTC",
-      "sha256": "3bf16836c59fb5abf3ee0c928e81882744089f41ba74b6082909114643f1f5c3"
-    },
-    {
-      "repository": "PhotoKit",
-      "sha256": "67895d735437fe238931cc59b3b2fd85bfab6a8adc985b0c7624088ee3521457"
-    },
-    {
-      "repository": "SiteReport",
-      "sha256": "0c5e72ea0762dd276c7ae7e963c11e2138e826ddc4f74e0786d497973c0763b0"
-    },
-    {
-      "repository": "RoofQuote",
-      "sha256": "3bd47bfb30d2974669cf4d44c978636fdab1a894264b96dfec8046d6dc75eca8"
-    },
-    {
-      "repository": "OfflineSignage",
-      "sha256": "b3186201cbf83bc8bb3343d930d385b8a4ca7daf9f9d53d6d41b9a9a0296d58c"
-    }
-  ],
-  "integrationAdjustments": [
-    "All core modules use local source dependencies and centralized toolchain.",
-    "Agora source dependency 4.7.0 unavailable on Maven Central; integrated published 4.6.4.",
-    "Metadata DTO/model packages decoupled from photo database; business DAO/repository/schema migration tests stay in source App.",
-    "NAS advanced gate and notification routing are host configured.",
-    "Auth, FCM, Credential Manager, Firebase and billing are separate optional modules.",
-    "Billing offline duration is host configurable; seven divergent copies not claimed merged.",
-    "Roof-specific report-template policy omitted from generic OpenXML writer.",
-    "Router Gradle plugin registers lazy dependencies before KSP evaluation; published consumer compiles generated route tables.",
-    "Metadata raster tests use migrated fixture paths; headless transfer notifications omit click actions instead of failing workers; advanced access tests inject host policy."
   ]
 }

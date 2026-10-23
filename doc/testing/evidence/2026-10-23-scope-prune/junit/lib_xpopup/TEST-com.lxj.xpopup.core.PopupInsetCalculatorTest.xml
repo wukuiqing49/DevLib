@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.lxj.xpopup.core.PopupInsetCalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:31.811Z" hostname="WIN-MMJSWULHUCA" time="0.022">
+  <testcase name="repeatedDispatchUsesInitialPaddingWithoutAccumulationAndKeepsPhysicalRtlSides" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.011" />
+  <testcase name="autoKeepsLegacyImmersiveTypesAndProtectsForcedEdgeToEdgeHosts" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.009" />
+  <testcase name="safeAreaUsesLargestSystemBarAndCutoutOnEverySide" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.0" />
+  <testcase name="imeTemporarilyRemovesBottomSafePaddingAndRestoresItWhenHidden" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.001" />
+  <testcase name="edgeToEdgeNeverAddsAutomaticPadding" classname="com.lxj.xpopup.core.PopupInsetCalculatorTest" time="0.0" />
+  </testsuite>

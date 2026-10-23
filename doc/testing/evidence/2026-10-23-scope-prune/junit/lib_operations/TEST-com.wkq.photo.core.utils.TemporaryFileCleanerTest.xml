@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.core.utils.TemporaryFileCleanerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:15.110Z" hostname="WIN-MMJSWULHUCA" time="0.023">
+  <testcase name="deletesOnlyExpiredFilesAndEmptyDirectories" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.009" />
+  <testcase name="preservesProtectedDirectoryAndItsChildren" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.007" />
+  <testcase name="stopsAtConfiguredTraversalLimit" classname="com.wkq.photo.core.utils.TemporaryFileCleanerTest" time="0.007" />
+  </testsuite>

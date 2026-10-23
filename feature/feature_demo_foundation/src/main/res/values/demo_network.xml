@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_network_title">HTTPS 请求与响应</string>
+    <string name="demo_network_intro">配置自己的 HTTPS JSON 接口，使用 Network 库初始化和统一响应封装；失败可以修改地址重试。</string>
+    <string name="demo_network_input">01 选择与配置</string>
+    <string name="demo_network_execute">02 执行流程</string>
+    <string name="demo_network_success">执行完成，结果如下</string>
+    <string name="demo_network_url">HTTPS URL</string>
+    <string name="demo_network_url_value">https://example.com/</string>
+    <string name="demo_network_request">发送 GET 请求</string>
+</resources>

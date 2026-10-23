@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:42.016Z" hostname="WIN-MMJSWULHUCA" time="0.003">
+  <testcase name="explicitXmpValueHasPriority" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.001" />
+  <testcase name="legacyFieldsMapToEnabledXmpFields" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+  <testcase name="unsupportedLegacyStructureIsNotSilentlyDropped" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.001" />
+  <testcase name="emptyBylineContactDoesNotBlockOtherwiseSupportedXmp" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+  <testcase name="unsupportedDocumentStructureIsNotMistakenForEmptyText" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+  <testcase name="disabledLegacyFieldIsNotReenabled" classname="com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest" time="0.0" />
+  </testsuite>

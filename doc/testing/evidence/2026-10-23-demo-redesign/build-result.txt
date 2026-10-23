@@ -1,0 +1,15 @@
+> Task :core:lib_camera_capture:mergeReleaseJavaResource
+> Task :core:lib_camera_capture:syncReleaseLibJars
+> Task :core:lib_camera_capture:bundleReleaseAar
+> Task :core:lib_camera_capture:assembleRelease
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 9m 23s
+1116 actionable tasks: 848 executed, 268 up-to-date

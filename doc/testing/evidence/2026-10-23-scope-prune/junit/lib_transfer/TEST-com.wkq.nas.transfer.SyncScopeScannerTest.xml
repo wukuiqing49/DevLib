@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.SyncScopeScannerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:59.065Z" hostname="WIN-MMJSWULHUCA" time="0.34">
+  <testcase name="traversalSelectionIsRejectedBeforeProviderAccess" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.003" />
+  <testcase name="emptySelectionScansAllPublicDescendants" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.006" />
+  <testcase name="cancellationStopsWithinTheCurrentStreamedDirectory" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.014" />
+  <testcase name="oversizedStreamStopsAtLimitAndNeverReturnsATruncatedSuccessfulPlan" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.315" />
+  <testcase name="selectedFileKeepsAncestorsWithoutVisitingSiblingDirectories" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.001" />
+  <testcase name="selectedDirectorySkipsUnrelatedSubtreesAndKeepsDescendants" classname="com.wkq.nas.transfer.SyncScopeScannerTest" time="0.001" />
+  </testsuite>

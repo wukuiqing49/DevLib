@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.droplan.drop.WebSocketTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:32.072Z" hostname="WIN-MMJSWULHUCA" time="0.091">
+  <testcase name="actualWebSocketBoundedTransferHashAuthorizationAndSharedQueue" classname="com.wkq.droplan.drop.WebSocketTest" time="0.072" />
+  <testcase name="oversizedClientFrameIsRejectedBeforeAllocation" classname="com.wkq.droplan.drop.WebSocketTest" time="0.019" />
+  </testsuite>

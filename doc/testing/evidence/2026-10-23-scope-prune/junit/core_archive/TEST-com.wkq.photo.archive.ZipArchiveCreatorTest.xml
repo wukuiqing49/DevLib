@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.archive.ZipArchiveCreatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:27.180Z" hostname="WIN-MMJSWULHUCA" time="0.181">
+  <testcase name="supportsAes128AndRejectsWrongPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.039" />
+  <testcase name="rejectsOutputThatIsAlsoASource" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.016" />
+  <testcase name="supportsDirectoryEntriesCommentAndByteProgress" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.027" />
+  <testcase name="rejectsUnsafeEntryPath" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.002" />
+  <testcase name="rejectsEmptyEncryptionPasswordWithoutChangingOutput" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.002" />
+  <testcase name="cancellationDuringLargeFilePreservesExistingOutput" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.02" />
+  <testcase name="createsArchiveAndMakesDuplicateNamesUnique" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.018" />
+  <testcase name="encryptedCancellationPreservesExistingOutputAndPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.015" />
+  <testcase name="createsAes256ArchiveAndExtractsWithCorrectPassword" classname="com.wkq.photo.archive.ZipArchiveCreatorTest" time="0.038" />
+  </testsuite>

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.router.gradle.RouterGradlePluginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T05:11:35.195Z" hostname="WIN-MMJSWULHUCA" time="8.592">
+  <testcase name="pluginCanBeResolvedByGradleTestKit" classname="com.wkq.router.gradle.RouterGradlePluginTest" time="8.592" />
+  </testsuite>

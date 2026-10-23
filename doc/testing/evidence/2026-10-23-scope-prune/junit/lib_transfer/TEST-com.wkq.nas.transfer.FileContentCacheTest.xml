@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.FileContentCacheTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:53.759Z" hostname="WIN-MMJSWULHUCA" time="1.693">
+  <testcase name="foldersAndTraversalAreRejectedWithoutPublishingCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.045" />
+  <testcase name="duplicateNamesAndZeroByteFilesAreIsolatedAndSourcesRemainUntouched" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.06" />
+  <testcase name="startupPruningSkipsActivePreparationWithoutWaitingForNetwork" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.055" />
+  <testcase name="exactLimitAndEmptyPreviewRemainSupportedAndCompletionTimeIsFresh" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.113" />
+  <testcase name="mediaAndDocumentFiltersIncludeSupportedPreviewFormats" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.085" />
+  <testcase name="independentPreviewDoesNotWaitForAnotherDownloadAndCleanupProtectsBoth" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.076" />
+  <testcase name="canceledPreparationDeletesItsPartialCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.061" />
+  <testcase name="interruptedProcessCacheIsCleanedBeforeNextPreparation" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.042" />
+  <testcase name="knownOversizedPreviewIsRejectedWithoutLeavingCache" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.032" />
+  <testcase name="isolatedWriteTestVerifiesAndCleansUpOnlyItsOwnFile" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.041" />
+  <testcase name="startupPruningDoesNotCreateAnUnusedCacheDirectory" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.032" />
+  <testcase name="sourceChangeRejectsCacheRatherThanSharingIncompleteContent" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.064" />
+  <testcase name="startupPruningRemovesExpiredAndInterruptedCopiesButPreservesFreshCopiesAndSources" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.094" />
+  <testcase name="unknownSizePreviewStopsAtLimitAndNeverPublishesPartialFile" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.183" />
+  <testcase name="cacheFileNamesPreserveExtensionAndUtf8ByteLimit" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.052" />
+  <testcase name="fullDirectorySelectionSourceIncludesAllFilteredPages" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.572" />
+  <testcase name="deviceGroupsKeepConnectionsIndependentAndPersistRenames" classname="com.wkq.nas.transfer.FileContentCacheTest" time="0.086" />
+  </testsuite>

@@ -25,7 +25,7 @@ android {
 
 dependencies {
     api project(':core:lib_operations')
-    implementation project(':core:core_image_render')
+    api project(':core:core_image_render')
     implementation photoLibs.androidx.core.ktx
 
     testImplementation photoLibs.junit

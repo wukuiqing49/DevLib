@@ -1,0 +1,46 @@
+{
+  "activeModules": 19,
+  "independentPages": 18,
+  "supportModules": [
+    "lib_operations"
+  ],
+  "routeGroups": [
+    "document",
+    "files",
+    "foundation",
+    "google",
+    "image"
+  ],
+  "apkInitializers": [
+    "com.wkq.router.generated.RouteInit_DevDemoDocument",
+    "com.wkq.router.generated.RouteInit_DevDemoImage",
+    "com.wkq.router.generated.RouteInit_DevDemoFiles",
+    "com.wkq.router.generated.RouteInit_DevDemoFoundation",
+    "com.wkq.router.generated.RouteInit_DevDemoGoogle"
+  ],
+  "deviceTesting": "not run per user instruction",
+  "date": "2026-10-23",
+  "jvm": {
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "apkSha256": "402339773c7ce1124d367a7396cd2c5ae1a43b7f745f2ab3fbe810913667bf45",
+  "builds": {
+    "googleReleaseAndTests": "passed",
+    "appDebug": "passed",
+    "appAndroidTestApk": "passed (compile only)",
+    "localGooglePublication": "passed",
+    "independentPublishedConsumer": "passed"
+  },
+  "staticChecks": {
+    "agentStructure": "passed",
+    "agentConfiguration": "passed",
+    "architecture": "passed; 2 existing heuristic warnings",
+    "build": "passed; 0 warnings",
+    "googleUi": "passed; 0 warnings",
+    "catalogPolicy": "4 passed"
+  },
+  "baselineAdvanced": false
+}

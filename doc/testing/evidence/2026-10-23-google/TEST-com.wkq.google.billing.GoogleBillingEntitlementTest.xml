@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.google.billing.GoogleBillingEntitlementTest" tests="4" skipped="0" failures="0" errors="0" time="0.002"><testcase name="noPurchaseWithPartialFailureIsUnknown" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.001" />
+  <testcase name="validLifetimeSurvivesSubscriptionQueryFailure" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+  <testcase name="lifetimeSurvivesExpiredSubscription" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.001" />
+  <testcase name="bothEmptySuccessfulQueriesRevokeEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+  </testsuite>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.qrcode.QrCodeKitTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:51.512Z" hostname="WIN-MMJSWULHUCA" time="0.202">
+  <testcase name="recognize_all_returns_multiple_qr_codes" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.103" />
+  <testcase name="renderer_keeps_white_quiet_zone" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.019" />
+  <testcase name="create_custom_colored_qr_code_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.024" />
+  <testcase name="create_qr_code_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.022" />
+  <testcase name="create_code128_then_recognize_returns_original_content" classname="com.wkq.photo.qrcode.QrCodeKitTest" time="0.033" />
+  </testsuite>

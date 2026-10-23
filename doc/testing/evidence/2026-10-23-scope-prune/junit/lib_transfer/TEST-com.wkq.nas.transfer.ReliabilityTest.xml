@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.ReliabilityTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:57.145Z" hostname="WIN-MMJSWULHUCA" time="1.205">
+  <testcase name="replacementRetainsOldUntilNewContentIsVerified" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.055" />
+  <testcase name="batchConflictResolutionPreservesExistingTargets" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.061" />
+  <testcase name="strictHashDetectsSameSizeCorruptTemporaryContent" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.022" />
+  <testcase name="corruptBackupCopyDoesNotRemoveOldTarget" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.03" />
+  <testcase name="changedConflictTargetInvalidatesSyncConfirmation" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.053" />
+  <testcase name="taskWindowIsBoundedWhileTotalsCoverAllHistoryAndClearPreservesFailures" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.131" />
+  <testcase name="corruptMutationPlanFailsWithoutBlockingTheNextOperation" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.14" />
+  <testcase name="corruptFinalContentKeepsOldBackup" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.047" />
+  <testcase name="persistedMutationExecutesAndInterruptedMutationIsNotReplayed" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.063" />
+  <testcase name="changedTargetInvalidatesReplacementPreview" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.018" />
+  <testcase name="committedReplacementIsRecoveredByDigestAndOldBackupRemoved" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.019" />
+  <testcase name="boundedListingFiltersBeforeSelectingPage" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.402" />
+  <testcase name="insufficientSpaceFailsBeforeWriting" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.013" />
+  <testcase name="savedSyncProfilesPersistWithoutStartingTransfers" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.038" />
+  <testcase name="manualRestoreRejectsSameSizeCorruptBackup" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.033" />
+  <testcase name="failedCommitRestoresOldTarget" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.027" />
+  <testcase name="strictSyncDetectsSameSizeAndTimestampWithDifferentContents" classname="com.wkq.nas.transfer.ReliabilityTest" time="0.053" />
+  </testsuite>

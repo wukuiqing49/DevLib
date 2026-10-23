@@ -1,0 +1,37 @@
+<resources>
+    <string name="demo_google_title">Google 登录与支付</string>
+    <string name="demo_google_intro">统一 Google 能力入口：登录与 Play 购买相互独立。需配置自己的 OAuth / Firebase 项目与 Play 测试商品；不会自动登录或购买。</string>
+    <string name="google_auth">1. 登录与会话</string>
+    <string name="google_client">Web Client ID（宿主配置）</string>
+    <string name="google_signin">Google 登录（Credential Manager）</string>
+    <string name="google_firebase">Google 登录并验证 Firebase 会话</string>
+    <string name="google_session">查看 Firebase 会话</string>
+    <string name="google_signout">退出登录</string>
+    <string name="google_billing">2. 商品与购买</string>
+    <string name="google_product">Play 商品 ID（只填写一个）</string>
+    <string name="google_subscription">订阅商品（关闭为一次性商品）</string>
+    <string name="google_query">连接 Play 并查询报价</string>
+    <string name="google_offer">选择实际报价</string>
+    <string name="google_purchase">确认购买所选报价</string>
+    <string name="google_restore">恢复 / 查询当前购买</string>
+    <string name="google_config_missing">请先填写 Web Client ID。</string>
+    <string name="google_firebase_missing">尚未配置 Firebase。请按接入文档配置宿主资源；普通 Google 登录可独立使用。</string>
+    <string name="google_no_session">当前没有 Firebase 登录会话。</string>
+    <string name="google_session_result">Firebase 用户：%1$s</string>
+    <string name="google_login_result">Google 账号：%1$s
+仅供展示；ID token 需要交给 Firebase 或服务端验证。</string>
+    <string name="google_signed_out">已退出登录并清除 Credential Manager 状态。</string>
+    <string name="google_product_missing">请填写一个 Play 商品 ID。</string>
+    <string name="google_empty">没有可用报价，请检查 Play 测试渠道、包名、签名、账号与商品配置。</string>
+    <string name="google_quotes">获取 %1$d 个实际报价，请选择后购买。</string>
+    <string name="google_query_first">请先查询当前商品并选择报价。</string>
+    <string name="google_confirm">将打开 Google Play 购买确认页：%1$s
+价格：%2$s</string>
+    <string name="google_launch">Play 返回代码：%1$d；成功表示请求已提交，购买结果以 Play 回调和恢复查询为准。</string>
+    <string name="google_updated">购买回调代码：%1$d；待补偿确认：%2$s。请恢复查询查看当前状态。</string>
+    <string name="google_restored">购买状态：%1$s
+订阅：%2$s
+一次性购买：%3$s
+待处理订单：%4$s</string>
+    <string name="google_restore_first">请先查询商品，建立本次演示的商品范围。</string>
+</resources>

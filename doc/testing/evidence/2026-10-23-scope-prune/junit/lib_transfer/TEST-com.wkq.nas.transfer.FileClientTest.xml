@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.FileClientTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:45.325Z" hostname="WIN-MMJSWULHUCA" time="8.414">
+  <testcase name="hiddenRecordsDoNotConsumeVisiblePaginationWindow" classname="com.wkq.nas.transfer.FileClientTest" time="3.368" />
+  <testcase name="hiddenRecordCanBeRestoredWithoutRunningTaskOrChangingBackup" classname="com.wkq.nas.transfer.FileClientTest" time="0.317" />
+  <testcase name="completionSignalIncludesOldTaskOutsideDisplayWindowAndGroupQueriesAreScoped" classname="com.wkq.nas.transfer.FileClientTest" time="0.224" />
+  <testcase name="connectionRemovalWaitsForCanceledArtifactCleanup" classname="com.wkq.nas.transfer.FileClientTest" time="0.219" />
+  <testcase name="listAndAnalyzeExcludePrivateIncompleteTransfers" classname="com.wkq.nas.transfer.FileClientTest" time="0.096" />
+  <testcase name="renameAndOrganizeRecordResultsAndPreserveContents" classname="com.wkq.nas.transfer.FileClientTest" time="0.147" />
+  <testcase name="draftConnectionTestDoesNotPersistOrReplaceExistingConnection" classname="com.wkq.nas.transfer.FileClientTest" time="0.096" />
+  <testcase name="pickerSearchAndMoreReuseBoundedSnapshotButRefreshAndMutationSeeNewFiles" classname="com.wkq.nas.transfer.FileClientTest" time="0.722" />
+  <testcase name="changedSourceInvalidatesPreviewAndPreservesFiles" classname="com.wkq.nas.transfer.FileClientTest" time="0.064" />
+  <testcase name="recursiveDeleteChecksFullPreviewAndDeletesEmptyParentsOnly" classname="com.wkq.nas.transfer.FileClientTest" time="0.081" />
+  <testcase name="listingSearchAndTypeFiltersHaveSameResultsFromCacheAndFreshEnumeration" classname="com.wkq.nas.transfer.FileClientTest" time="0.1" />
+  <testcase name="browserStatAndPagedListingExposeTypedConnectionFailure" classname="com.wkq.nas.transfer.FileClientTest" time="0.298" />
+  <testcase name="batchCancelKeepsCommittingAndCompletedFilesAndOneParent" classname="com.wkq.nas.transfer.FileClientTest" time="0.467" />
+  <testcase name="boundedListingKeepsDirectoryPriorityAndStableOrderingAcrossSortModes" classname="com.wkq.nas.transfer.FileClientTest" time="0.117" />
+  <testcase name="previewRejectsCollisionWithoutModifyingEitherFile" classname="com.wkq.nas.transfer.FileClientTest" time="0.065" />
+  <testcase name="boundedHistoryCandidatesDoNotLetAdvancedOrHiddenBatchesStarveVisibleRows" classname="com.wkq.nas.transfer.FileClientTest" time="0.136" />
+  <testcase name="rootAndUnsafeDirectoryOperationsAreDenied" classname="com.wkq.nas.transfer.FileClientTest" time="0.051" />
+  <testcase name="metadataReadsPreserveBrowsingSnapshotsButMutationAndExplicitRefreshInvalidateThem" classname="com.wkq.nas.transfer.FileClientTest" time="0.067" />
+  <testcase name="removingV2RecordDoesNotRemoveProfileOrBaseline" classname="com.wkq.nas.transfer.FileClientTest" time="0.187" />
+  <testcase name="interruptedMutationIsReportedWithoutRepeatingDestructiveOperations" classname="com.wkq.nas.transfer.FileClientTest" time="0.086" />
+  <testcase name="clearingHistoryPreservesUnverifiedCleanupAndRecoveryBackups" classname="com.wkq.nas.transfer.FileClientTest" time="0.084" />
+  <testcase name="wrappedConnectionRefusalIsNetworkErrorRatherThanGenericFailure" classname="com.wkq.nas.transfer.FileClientTest" time="0.075" />
+  <testcase name="historyRemovalChecksWholeBatchesAndPreservesAtomicRejection" classname="com.wkq.nas.transfer.FileClientTest" time="0.471" />
+  <testcase name="batchOutcomeCountsAllStatesRegardlessOfFailurePagination" classname="com.wkq.nas.transfer.FileClientTest" time="0.261" />
+  <testcase name="removingRecordsKeepsBackupAndRejectsActiveBatchAtomically" classname="com.wkq.nas.transfer.FileClientTest" time="0.128" />
+  <testcase name="browserCacheReusesDirectoryButFreshReadsAndMutationsBypassIt" classname="com.wkq.nas.transfer.FileClientTest" time="0.482" />
+  </testsuite>

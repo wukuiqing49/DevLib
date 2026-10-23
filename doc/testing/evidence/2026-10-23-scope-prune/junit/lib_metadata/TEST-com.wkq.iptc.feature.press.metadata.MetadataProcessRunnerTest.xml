@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:39.953Z" hostname="WIN-MMJSWULHUCA" time="2.054">
+  <testcase name="rejectsWarningsWithoutExposingMetadata" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.215" />
+  <testcase name="rejectsOversizeOutput" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.15" />
+  <testcase name="cancellationDoesNotWaitForBlockedOutput" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.348" />
+  <testcase name="readsSuccessfulOutputAndRemovesTemporaryFiles" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.207" />
+  <testcase name="stopsHangingProcessWithinDeadline" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.53" />
+  <testcase name="readWarningsRequireExplicitPolicyAndSuccessfulExit" classname="com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest" time="0.601" />
+  </testsuite>

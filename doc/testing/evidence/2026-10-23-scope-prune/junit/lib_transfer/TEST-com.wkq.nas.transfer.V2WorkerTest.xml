@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.V2WorkerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:19.372Z" hostname="WIN-MMJSWULHUCA" time="0.329">
+  <testcase name="offlineNasRemainsRetryableAndRecordsNetworkWaiting" classname="com.wkq.nas.transfer.V2WorkerTest" time="0.194" />
+  <testcase name="deletedSourceFolderStopsAutomaticRetryAndPersistsRepairReason" classname="com.wkq.nas.transfer.V2WorkerTest" time="0.135" />
+  </testsuite>

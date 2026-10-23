@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.net.core.DownloadRetrofitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:47.299Z" hostname="WIN-MMJSWULHUCA" time="0.124">
+  <testcase name="downloadReplacesDestinationOnlyAfterSuccess" classname="com.wkq.net.core.DownloadRetrofitTest" time="0.108" />
+  <testcase name="failedDownloadKeepsExistingDestination" classname="com.wkq.net.core.DownloadRetrofitTest" time="0.016" />
+  </testsuite>

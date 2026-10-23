@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_plugin_title">Gradle 插件接入</string>
+    <string name="demo_plugin_intro">Gradle 插件在构建阶段执行。此页展示独立消费工程接入方式与当前路由生成结果，不在手机上伪造编译。</string>
+    <string name="demo_plugin_input">01 选择与配置</string>
+    <string name="demo_plugin_execute">02 执行流程</string>
+    <string name="demo_plugin_success">执行完成，结果如下</string>
+    <string name="demo_plugin_path">路由路径</string>
+    <string name="demo_plugin_path_value">/foundation/route_target</string>
+    <string name="demo_plugin_value">传递参数</string>
+    <string name="demo_plugin_value_value">DevLib route</string>
+    <string name="demo_plugin_inspect">检查路由与生成类</string>
+    <string name="demo_plugin_navigate">打开目标页面</string>
+</resources>

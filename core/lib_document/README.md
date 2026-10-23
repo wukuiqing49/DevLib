@@ -1,6 +1,6 @@
 # lib_document
 
-轻量 DOCX/XLSX OpenXML 写入。来源：RoofQuote。类型：JVM JAR / Gradle plugin。
+轻量 DOCX/XLSX OpenXML 写入。来源：RoofQuote。类型：Kotlin/JVM JAR。
 
 ## 接入
 

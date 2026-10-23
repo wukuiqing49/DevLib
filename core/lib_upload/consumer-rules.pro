@@ -5,14 +5,6 @@
 -dontwarn org.codehaus.mojo.animal_sniffer.**
 -dontwarn sun.security.x509.X509Key
 
-# SSH / SMB / crypto libraries used by upload protocols.
--keep class org.bouncycastle.** { *; }
--dontwarn org.bouncycastle.**
--keep class jcifs.** { *; }
--dontwarn jcifs.**
--keep class net.schmizz.** { *; }
--dontwarn net.schmizz.**
-
 # Retrofit / OkHttp service declarations.
 -keep,allowshrinking,allowoptimization interface * {
     @retrofit2.http.* <methods>;
@@ -34,9 +26,6 @@
 -keep class com.wkq.iptc.upload.UploadResult$* { *; }
 -keep class com.wkq.iptc.upload.FtpConfig { *; }
 -keep class com.wkq.iptc.upload.FtpsConfig { *; }
--keep class com.wkq.iptc.upload.SftpConfig { *; }
 -keep class com.wkq.iptc.upload.HttpConfig { *; }
--keep class com.wkq.iptc.upload.SmbConfig { *; }
--keep class com.wkq.iptc.upload.WebDavConfig { *; }
 -keep class com.wkq.iptc.upload.FtpsSecurityMode { *; }
 

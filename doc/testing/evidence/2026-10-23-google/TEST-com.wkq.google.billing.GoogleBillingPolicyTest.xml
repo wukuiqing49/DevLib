@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.google.billing.GoogleBillingPolicyTest" tests="10" skipped="0" failures="0" errors="0" time="0.065"><testcase name="bothCatalogFailuresAreNotAnEmptySuccessfulCatalog" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.004" />
+  <testcase name="anonymousPlayModeDoesNotRequireAppAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.031" />
+  <testcase name="currentAccountFilter_rejectsAllPurchasesWithoutLoggedInAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.001" />
+  <testcase name="currentAccountFilter_acceptsLegacyAndCommercialIdsDuringMigration" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.012" />
+  <testcase name="purchasedFilter_doesNotGrantPendingOrUnknownPurchases" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+  <testcase name="pendingPaymentDoesNotGrantPro" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.001" />
+  <testcase name="obfuscatedAccountId_isStableAndDoesNotExposeRawId" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.009" />
+  <testcase name="catalogKeepsSubscriptionsWhenLifetimeQueryFails" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.002" />
+  <testcase name="currentAccountFilter_acceptsMatchingAndLegacyPurchasesOnly" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.002" />
+  <testcase name="catalogKeepsLifetimeWhenSubscriptionQueryFails" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+  </testsuite>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.exif.PhotoFormatPolicyTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:44.342Z" hostname="WIN-MMJSWULHUCA" time="0.002">
+  <testcase name="conversionChangesOnlyExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.001" />
+  <testcase name="unknownOutputIsNotLabelledJpeg" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="missingNameUsesFallbackAndAddsExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="extensionMustMatchActualOutput" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="shortOrEmptyInputIsNotAcceptedAsJpeg" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="partialReadsAreHandled" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="capabilityDoesNotConfuseReadingWithWriting" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.001" />
+  <testcase name="pngSignature" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="jpegUsesBytesNotExtension" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="webpRequiresBothRiffAndWebp" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="preservesOriginalJpegNameAndCase" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  <testcase name="pathCharactersCannotEscapeOutputDirectory" classname="com.wkq.util.exif.PhotoFormatPolicyTest" time="0.0" />
+  </testsuite>

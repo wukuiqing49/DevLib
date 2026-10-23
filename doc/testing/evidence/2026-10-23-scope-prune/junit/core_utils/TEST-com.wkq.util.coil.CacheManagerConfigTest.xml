@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.coil.CacheManagerConfigTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:03.150Z" hostname="WIN-MMJSWULHUCA" time="0.001">
+  <testcase name="validateConfiguration_rejectsOutOfRangeValues" classname="com.wkq.util.coil.CacheManagerConfigTest" time="0.001" />
+  <testcase name="validateConfiguration_acceptsValidValues" classname="com.wkq.util.coil.CacheManagerConfigTest" time="0.0" />
+  </testsuite>

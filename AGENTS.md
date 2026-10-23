@@ -2,7 +2,7 @@
 
 ## 项目定位与事实
 
-DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/`，演示 App 包名为 `com.wkq.dev`。库包含基础框架、登录支付、文件传输、元数据、图片、文档及媒体适配能力；迁入不等于设备或生产验收通过。
+DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/`，演示 App 包名为 `com.wkq.dev`。库包含基础框架、文件传输、元数据、轻量图片与文档导出能力；迁入不等于设备或生产验收通过。
 `app/` 与 `feature/` 承载演示和宿主适配，业务产品页面、商品 ID、计费门禁和账号体系由消费项目维护。
 项目事实见 `.agents/config/project-profile.yml`，来源见 `docs/import-manifest.json`，模块目录见 `README.md`。
 
@@ -44,7 +44,15 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 ## 独立库边界
 
 - core 不依赖 app/feature；每个正式库独立声明依赖、consumer rules、来源与接入说明。
+- 不引入 Starxen、BeautySDK 或 DevHub 来源模块；来源排除记录只用于历史追溯。
+- 基础库为 AndroidCoreBase、AndroidCoreUtils、AndroidCoreNetwork、AndroidCoreRouters（四个模块）及 XPopup；其他模块按功能能力或 SDK 适配分类，不能仅凭 core_ 前缀认定为基础库。
 - 保留迁入库公开包名，避免无意义的全量 API 改名；演示应用使用 com.wkq.dev。
 - 优先使用本仓库源码模块，不同时依赖相同库的旧 Maven AAR。库产物坐标为 com.wkq.dev:<模块名中下划线替换为连字符>:<版本>。
 - 迁入快照以来源清单为准，原仓库保持原样；未完成宿主回接的能力不得标记为迁移闭环完成。
 - 付费策略、凭据、品牌、后台地址和权限 UI 由宿主提供。不得把原 App 的 Pro 判断写入底层引擎。
+
+## 已确认的功能范围
+
+当前为 8 个基础模块、10 个功能库、1 个内部支撑库，共 19 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
+
+Google 登录、Firebase Auth 与 Play Billing 经用户确认统一使用 core_google；旧 Credentials/Firebase/Billing/Entitlement 分散库保持移出，不再并行维护。core_google 不包含广告、Analytics、DevHub 或宿主商品及 Pro 策略。

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.TransferQueueWorkerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:02.043Z" hostname="WIN-MMJSWULHUCA" time="3.441">
+  <testcase name="localWorkerDoesNotConsumeNetworkQueue" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.356" />
+  <testcase name="interruptedStorageReturnsItsAttemptAndCannotOverwriteCanceledTask" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.148" />
+  <testcase name="silentDeleteFailureCannotBeMarkedDone" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.112" />
+  <testcase name="cleanupRetainsRecordWhenStorageUnavailableAndHonorsQueueNetworkPartition" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.285" />
+  <testcase name="cleanupRefusesDirectoriesAndRotatesFailuresWithoutStarvingLaterTasks" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.421" />
+  <testcase name="repeatedSystemInterruptionsDoNotExhaustFailureBudget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.436" />
+  <testcase name="revokedExternalStorageWaitsWithoutConsumingAttemptsOrBlockingOtherFiles" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.384" />
+  <testcase name="replacementPersistsOldAndNewDigestsBeforeCompleting" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.207" />
+  <testcase name="interruptedCleanupRemainsPendingAndRetryIsIdempotent" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.193" />
+  <testcase name="cleanupRemovesOnlyCanceledPartAndPreservesDestinationBackupAndPausedPart" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.149" />
+  <testcase name="failedFileDoesNotBlockNextFile" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.199" />
+  <testcase name="committedFileRecoveryVerifiesDigestWithoutReplacingExistingTarget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.176" />
+  <testcase name="canceledCopyIsNotRecoveredAndPreservesExistingTarget" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.183" />
+  <testcase name="recoveringWorkerSkipsPausedAndAlreadyCompletedFiles" classname="com.wkq.nas.transfer.TransferQueueWorkerTest" time="0.189" />
+  </testsuite>

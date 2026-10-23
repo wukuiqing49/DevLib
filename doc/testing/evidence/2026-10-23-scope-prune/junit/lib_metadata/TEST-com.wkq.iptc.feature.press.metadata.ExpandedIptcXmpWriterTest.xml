@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:34.088Z" hostname="WIN-MMJSWULHUCA" time="0.256">
+  <testcase name="questionMarkPlaceholdersAreNotWrittenAsPeopleMetadata" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.099" />
+  <testcase name="standardFieldsFallbackWhenLegacyTemplateFieldsAreBlank" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.005" />
+  <testcase name="writesExpandedIptcExtensionAndPlusFields" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.006" />
+  <testcase name="replacementPreservesUnsupportedIptcExtensionProperties" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.107" />
+  <testcase name="writesStructuredImageRegion" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.026" />
+  <testcase name="exposesFieldCapabilityMatrixForPresetAndProcessingChoices" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.001" />
+  <testcase name="keepsDisabledIptcDocumentFieldsOutOfTheXmpPacket" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.006" />
+  <testcase name="copyrightNoticeAndUsageTermsAreWrittenToSeparateProperties" classname="com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest" time="0.005" />
+  </testsuite>

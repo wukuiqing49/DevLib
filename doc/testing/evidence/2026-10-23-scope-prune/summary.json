@@ -1,0 +1,175 @@
+{
+  "total": {
+    "tests": 476,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "modules": [
+    {
+      "module": "core_archive",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_base",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_image_render",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_network",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_pdf",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_qrcode",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_router_annotation",
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_router_api",
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_router_gradle_plugin",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_router_processor",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_utils",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_document",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_drop",
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_metadata",
+      "tests": 92,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    {
+      "module": "lib_operations",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_transfer",
+      "tests": 250,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_upload",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_xpopup",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "activeModules": 18,
+  "foundationModules": 8,
+  "functionalLibraries": 9,
+  "supportModules": [
+    "lib_operations"
+  ],
+  "demoPages": 17,
+  "routeGroups": [
+    "foundation",
+    "files",
+    "image",
+    "document"
+  ],
+  "nodeTests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "catalogPolicyTests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "deviceTests": "not executed by user request",
+  "baselineAdvanced": false,
+  "permissions": [
+    "android.permission.INTERNET",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.WAKE_LOCK",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+    "android.permission.CAMERA",
+    "android.permission.VIBRATE",
+    "android.permission.FLASHLIGHT",
+    "android.permission.POST_NOTIFICATIONS",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "com.wkq.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+    "android.permission.ACCESS_WIFI_STATE"
+  ],
+  "apkSha256": "dffb3719273f351af7ea41a7dc484b1223ee5d3740cc6e977a35465a91a8dbbc",
+  "finalCatalogBuild": "passed after stopping Windows daemon holding a JAR"
+}

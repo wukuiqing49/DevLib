@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.qrcode.QRCodeGeneratorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:49.230Z" hostname="WIN-MMJSWULHUCA" time="2.27">
+  <testcase name="function_mask_separates_finders_from_data_modules" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="1.836" />
+  <testcase name="generator_rejects_low_contrast_colors" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.064" />
+  <testcase name="generator_returns_cancelled_result_before_allocating_bitmap" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.017" />
+  <testcase name="renderer_supports_rounded_gradient_without_changing_output_size" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.17" />
+  <testcase name="generator_creates_scannable_hd_bitmap_with_statistics" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.15" />
+  <testcase name="contact_payload_encodes_vcard_3" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.009" />
+  <testcase name="wifi_payload_escapes_reserved_characters" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.013" />
+  <testcase name="url_payload_rejects_non_web_scheme" classname="com.wkq.photo.qrcode.QRCodeGeneratorTest" time="0.009" />
+  </testsuite>

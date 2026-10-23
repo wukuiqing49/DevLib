@@ -1,0 +1,47 @@
+{
+  "testedAt": "2026-10-23T15:18:06.528710+08:00",
+  "head": "76725ecb17891007db8c57815ae39b0973cc5b2d",
+  "dirty": true,
+  "sourceFingerprint": "813e931e58bcd0ee142fd202e58353172ad80c9696010460b31644f45f15fdb9",
+  "inputFiles": 2365,
+  "apkSha256": "ecf369d61495203fb2531b31f80dfba36d8e80b04a148a37b1af9882248b6eaf",
+  "modules": [
+    {
+      "module": "core_pdf",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_qrcode",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core_qr_transfer",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "lib_location",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "unitTests": 35,
+  "failures": 0,
+  "instrumentationTestsCompiled": 7,
+  "instrumentationTestsExecuted": 0,
+  "consumer": "PASS",
+  "appBuild": "PASS",
+  "cameraDebugBuild": "PASS",
+  "amapMissingKeyGuard": "PASS (expected failure)",
+  "deviceScope": "User requested no physical device testing. Earlier APK install/start succeeded; no feature/UI/device cases executed."
+}

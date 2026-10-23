@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_transfer_title">持久文件复制任务</string>
+    <string name="demo_transfer_intro">选择文件导入 Demo 输入区，再由 TransferClient 创建持久复制任务。目标限定应用私有目录；可查看、暂停、恢复和取消当前任务。</string>
+    <string name="demo_transfer_input">01 选择与配置</string>
+    <string name="demo_transfer_execute">02 执行流程</string>
+    <string name="demo_transfer_success">执行完成，结果如下</string>
+    <string name="demo_transfer_name">目标文件名（无目录）</string>
+    <string name="demo_transfer_name_value">copy.jpg</string>
+    <string name="demo_transfer_enqueue">创建复制任务</string>
+    <string name="demo_transfer_refresh">刷新任务状态</string>
+    <string name="demo_transfer_pause">暂停当前任务</string>
+    <string name="demo_transfer_resume">恢复当前任务</string>
+    <string name="demo_transfer_canceljob">取消当前任务</string>
+</resources>

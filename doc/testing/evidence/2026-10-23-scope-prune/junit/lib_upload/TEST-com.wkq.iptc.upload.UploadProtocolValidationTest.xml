@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.upload.UploadProtocolValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:21.740Z" hostname="WIN-MMJSWULHUCA" time="0.079">
+  <testcase name="unknownProtocolsNeverBecomeFtpUploads" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.02" />
+  <testcase name="supportedProfilesRemainReadable" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.056" />
+  <testcase name="retiredProfilesCannotFallBackToAnotherProtocol" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.003" />
+  </testsuite>

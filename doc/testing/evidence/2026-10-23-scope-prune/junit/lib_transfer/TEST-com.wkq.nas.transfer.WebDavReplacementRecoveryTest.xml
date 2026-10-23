@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:20.347Z" hostname="WIN-MMJSWULHUCA" time="0.336">
+  <testcase name="fullRemoteStorageDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.05" />
+  <testcase name="authenticationFailureDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.025" />
+  <testcase name="verifiedReplacementDeletesBackupOnlyAfterSuccess" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.033" />
+  <testcase name="disconnectedUploadDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.024" />
+  <testcase name="concurrentTargetIsNeverOverwrittenByRollback" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.027" />
+  <testcase name="failedHttpRollbackRetainsRecoverableOriginalBackup" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.033" />
+  <testcase name="failedHttpCommitRestoresOriginalContent" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.035" />
+  <testcase name="corruptedUploadIsRejectedBeforeOriginalIsMoved" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.037" />
+  <testcase name="retryAfterFailedCommitFinishesWithExactContentAndNoOrphanBackup" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.048" />
+  <testcase name="permissionFailureDoesNotTouchOriginalTarget" classname="com.wkq.nas.transfer.WebDavReplacementRecoveryTest" time="0.023" />
+  </testsuite>

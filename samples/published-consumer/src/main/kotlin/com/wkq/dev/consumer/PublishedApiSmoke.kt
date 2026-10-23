@@ -3,7 +3,6 @@ package com.wkq.dev.consumer
 import com.lxj.xpopup.XPopup
 import com.wkq.router.api.Router
 import com.wkq.droplan.drop.ShareEngine
-import com.wkq.dev.entitlement.EntitlementPolicy
 import com.wkq.roof.export.excel.SimpleXlsxWriter
 import retrofit2.Retrofit
 
@@ -13,7 +12,6 @@ class PublishedApiSmoke(
  val retrofit: Retrofit,
 ) {
  val router = Router
- val entitlementPolicy = EntitlementPolicy
  val documentWriter = SimpleXlsxWriter
  val generatedRoutes = com.wkq.router.generated.RouterPaths_DevLibPublishedConsumer
  fun popup(context: android.content.Context) = XPopup.Builder(context)

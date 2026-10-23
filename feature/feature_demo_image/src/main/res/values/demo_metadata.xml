@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_metadata_title">照片元数据</string>
+    <string name="demo_metadata_intro">先查看 EXIF/IPTC/XMP 字段分组，再把编辑写入副本并回读。只处理副本，不改用户原图。</string>
+    <string name="demo_metadata_input">01 选择与配置</string>
+    <string name="demo_metadata_execute">02 执行流程</string>
+    <string name="demo_metadata_success">执行完成，结果如下</string>
+    <string name="demo_metadata_artist">作者（EXIF Artist）</string>
+    <string name="demo_metadata_artist_value">DevLib</string>
+    <string name="demo_metadata_description">图片说明（EXIF ImageDescription）</string>
+    <string name="demo_metadata_description_value" />
+    <string name="demo_metadata_inspect">读取分组与字段</string>
+    <string name="demo_metadata_write">写入副本并回读</string>
+</resources>

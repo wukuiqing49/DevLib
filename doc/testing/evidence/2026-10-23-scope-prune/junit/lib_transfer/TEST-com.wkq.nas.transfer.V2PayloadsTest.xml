@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.V2PayloadsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:05.497Z" hostname="WIN-MMJSWULHUCA" time="4.541">
+  <testcase name="overwriteDeleteAndRollbackKeepMainRecordAndChunksAtomic" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.353" />
+  <testcase name="tenThousandItemPlanRoundTripsWithoutOversizedRows" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.702" />
+  <testcase name="largeMutationPlansAndLegacyPayloadsRemainReadableAndCleanable" classname="com.wkq.nas.transfer.V2PayloadsTest" time="1.841" />
+  <testcase name="failureDuringChunkWriteRollsBackToThePreviousCompletePlan" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.189" />
+  <testcase name="surrogateBoundaryAndMarkerTextArePreserved" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.029" />
+  <testcase name="missingOrModifiedChunkIsNeverReturnedAsValidPlan" classname="com.wkq.nas.transfer.V2PayloadsTest" time="0.215" />
+  <testcase name="legacyLargeUnicodeRecordReadsInBoundedSlices" classname="com.wkq.nas.transfer.V2PayloadsTest" time="1.212" />
+  </testsuite>

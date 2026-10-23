@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_office_title">报告标题</string>
+    <string name="demo_office_intro">编辑标题、正文和表格。分别生成 DOCX 与 XLSX，使用外部阅读器检查版式。</string>
+    <string name="demo_office_input">01 选择与配置</string>
+    <string name="demo_office_execute">02 执行流程</string>
+    <string name="demo_office_success">执行完成，结果如下</string>
+    <string name="demo_office_title_value">DevLib 报告</string>
+    <string name="demo_office_body">正文或备注</string>
+    <string name="demo_office_body_value">请填写报告内容</string>
+    <string name="demo_office_rows">表格数据（每行一条，逗号分列）</string>
+    <string name="demo_office_rows_value">项目,结果\n示例,通过</string>
+    <string name="demo_office_word">导出 DOCX</string>
+    <string name="demo_office_excel">导出 XLSX</string>
+</resources>

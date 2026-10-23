@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_base_title">基础页面与状态</string>
+    <string name="demo_base_intro">本页直接继承 BaseVMTitleActivity。演示 BaseViewModel 的加载、空态、错误、恢复和一次性确认事件。</string>
+    <string name="demo_base_input">01 选择与配置</string>
+    <string name="demo_base_execute">02 执行流程</string>
+    <string name="demo_base_success">执行完成，结果如下</string>
+    <string name="demo_base_loading">演示加载后恢复</string>
+    <string name="demo_base_empty">显示空状态</string>
+    <string name="demo_base_error">显示错误与重试</string>
+    <string name="demo_base_restore">恢复内容</string>
+    <string name="demo_base_dialog">Base 确认事件</string>
+</resources>

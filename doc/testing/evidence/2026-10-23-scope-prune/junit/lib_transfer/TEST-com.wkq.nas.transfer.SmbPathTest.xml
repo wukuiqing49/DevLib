@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.SmbPathTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:58.699Z" hostname="WIN-MMJSWULHUCA" time="0.042">
+  <testcase name="smbPrefersSigningAndNeverNegotiatesSmb1" classname="com.wkq.nas.transfer.SmbPathTest" time="0.032" />
+  <testcase name="percentEncodedNamesRemainLiteralUrlSegments" classname="com.wkq.nas.transfer.SmbPathTest" time="0.009" />
+  <testcase name="urlDelimitersAreRejectedBeforeNetworkAccess" classname="com.wkq.nas.transfer.SmbPathTest" time="0.001" />
+  </testsuite>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_router_title">路由跳转与参数</string>
+    <string name="demo_router_intro">输入已注册路径和参数，使用 Router 打开目标页。可以尝试不存在的路径检查降级。</string>
+    <string name="demo_router_input">01 选择与配置</string>
+    <string name="demo_router_execute">02 执行流程</string>
+    <string name="demo_router_success">执行完成，结果如下</string>
+    <string name="demo_router_path">路由路径</string>
+    <string name="demo_router_path_value">/foundation/route_target</string>
+    <string name="demo_router_value">传递参数</string>
+    <string name="demo_router_value_value">DevLib route</string>
+    <string name="demo_router_inspect">检查路由与生成类</string>
+    <string name="demo_router_navigate">打开目标页面</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_route_target_title">路由接收结果</string>
+    <string name="demo_route_target_intro">此页由路由注解注册，通过生成代码注入 value 参数。</string>
+    <string name="demo_route_target_input">01 选择与配置</string>
+    <string name="demo_route_target_execute">02 执行流程</string>
+    <string name="demo_route_target_success">执行完成，结果如下</string>
+    <string name="demo_route_target_finish">返回上一页</string>
+</resources>

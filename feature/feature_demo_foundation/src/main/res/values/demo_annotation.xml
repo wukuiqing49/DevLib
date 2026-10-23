@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_annotation_title">注解与参数注入</string>
+    <string name="demo_annotation_intro">查看 Route / Param 实际作用：编辑参数，打开已注解的目标页，确认生成注入器读取结果。</string>
+    <string name="demo_annotation_input">01 选择与配置</string>
+    <string name="demo_annotation_execute">02 执行流程</string>
+    <string name="demo_annotation_success">执行完成，结果如下</string>
+    <string name="demo_annotation_path">路由路径</string>
+    <string name="demo_annotation_path_value">/foundation/route_target</string>
+    <string name="demo_annotation_value">传递参数</string>
+    <string name="demo_annotation_value_value">DevLib route</string>
+    <string name="demo_annotation_inspect">检查路由与生成类</string>
+    <string name="demo_annotation_navigate">打开目标页面</string>
+</resources>

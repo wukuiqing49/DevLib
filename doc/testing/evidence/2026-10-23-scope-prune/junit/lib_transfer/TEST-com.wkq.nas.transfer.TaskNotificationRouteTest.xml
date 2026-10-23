@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.TaskNotificationRouteTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:59.443Z" hostname="WIN-MMJSWULHUCA" time="0.021">
+  <testcase name="headlessHostCanRunTransfersWithoutNotificationClickRoute" classname="com.wkq.nas.transfer.TaskNotificationRouteTest" time="0.01" />
+  <testcase name="notificationHasExplicitImmutableApplicationRouteWithoutBusinessData" classname="com.wkq.nas.transfer.TaskNotificationRouteTest" time="0.011" />
+  </testsuite>

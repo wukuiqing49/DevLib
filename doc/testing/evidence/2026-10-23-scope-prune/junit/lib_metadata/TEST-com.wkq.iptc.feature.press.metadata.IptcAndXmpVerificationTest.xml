@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:34.363Z" hostname="WIN-MMJSWULHUCA" time="0.401">
+  <testcase name="testVerificationErrorListsFailedMetadataSections" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.105" />
+  <testcase name="testVerificationIgnoresQuestionMarkPlaceholderNotWrittenToIptc" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.048" />
+  <testcase name="testVerificationAcceptsStructuredXmpListValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.013" />
+  <testcase name="testXmpPreservesUnknownPropertiesAndWritesProfessionalRights" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.02" />
+  <testcase name="testDcRightsUsesCopyrightInsteadOfUsageTerms" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.013" />
+  <testcase name="testWriteOnlyQuickMetadata" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.049" />
+  <testcase name="testMetadataScrubbing" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.011" />
+  <testcase name="testWriteOnlyTemplate" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.008" />
+  <testcase name="testVerifyNestedCreatorContactAddress" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.007" />
+  <testcase name="testReplaceManagedFieldsRemovesLegacyValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.01" />
+  <testcase name="testSingleValueFieldsAreNotDuplicated" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.01" />
+  <testcase name="testWriteTemplateWithQuickOverrides" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.012" />
+  <testcase name="testCreatorPlaceholderFallsBackToIptcAuthor" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.044" />
+  <testcase name="testCommonCreatorAndCopyrightOverrideConflictingAdvancedValues" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.01" />
+  <testcase name="testXmpReplacementDropsManagedLegacyPropertiesOnly" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.015" />
+  <testcase name="testUnmodifiedIptcFieldsArePreserved" classname="com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest" time="0.019" />
+  </testsuite>

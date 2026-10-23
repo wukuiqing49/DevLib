@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_drop_title">浏览器文件发送</string>
+    <string name="demo_drop_intro">选择本次分享文件，选择明确的局域网监听地址。浏览器接入后在这里批准配对，查看会话进度并停止。离开页面关闭会话。</string>
+    <string name="demo_drop_input">01 选择与配置</string>
+    <string name="demo_drop_execute">02 执行流程</string>
+    <string name="demo_drop_success">执行完成，结果如下</string>
+    <string name="demo_drop_start">选择地址并开启</string>
+    <string name="demo_drop_approve">批准待处理配对</string>
+    <string name="demo_drop_stop">停止分享</string>
+</resources>

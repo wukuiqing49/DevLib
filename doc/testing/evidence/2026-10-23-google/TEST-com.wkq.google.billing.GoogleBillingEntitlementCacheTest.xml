@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" tests="11" skipped="0" failures="0" errors="0" time="0.067"><testcase name="cacheExpiresWhileAQueryIsRunning" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.063" />
+  <testcase name="freshFreeResultDoesNotInheritLifetimeRetention" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.001" />
+  <testcase name="subscriptionHasAnExplicitSevenDayOfflineBoundary" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="knownFreeEntitlementCanBeCachedForTheSameAccount" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="retainedLifetimeSurvivesGraceButNeverCrossesCacheScope" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="anotherAccountAndSignedOutCannotUseCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="gracePeriodDoesNotExtendIndefinitely" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="unknownEntitlementIsNeverReusable" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="corruptNegativeTimestampCannotOverflowIntoValidCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="sameAccountCanUseRecentEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  <testcase name="clockBeforeVerificationRejectsCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  </testsuite>

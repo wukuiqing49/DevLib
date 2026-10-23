@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_archive_title">压缩与加密归档</string>
+    <string name="demo_archive_intro">选择多个文件创建 ZIP，可设置密码；选择加密 ZIP 后输入密码解压，展示实际条目与校验结果。</string>
+    <string name="demo_archive_input">01 选择与配置</string>
+    <string name="demo_archive_execute">02 执行流程</string>
+    <string name="demo_archive_success">执行完成，结果如下</string>
+    <string name="demo_archive_password">密码（可留空，解压仅支持加密 ZIP）</string>
+    <string name="demo_archive_password_value" />
+    <string name="demo_archive_compress">创建 ZIP</string>
+    <string name="demo_archive_extract">解密并列出文件</string>
+</resources>

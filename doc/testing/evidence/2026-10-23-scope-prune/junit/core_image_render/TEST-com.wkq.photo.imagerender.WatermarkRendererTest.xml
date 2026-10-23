@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.imagerender.WatermarkRendererTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:35.788Z" hostname="WIN-MMJSWULHUCA" time="0.31">
+  <testcase name="supportsNinePositionsAndTiledRotatedWatermark" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.104" />
+  <testcase name="successfulRenderReplacesExistingOutputWithoutTemporaryFiles" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.089" />
+  <testcase name="rendersRequestedPngFormat" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.066" />
+  <testcase name="rendersImageWatermarkWithOpacity" classname="com.wkq.photo.imagerender.WatermarkRendererTest" time="0.051" />
+  </testsuite>

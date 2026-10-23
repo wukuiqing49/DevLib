@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.WebDavCertificatesTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:35:19.703Z" hostname="WIN-MMJSWULHUCA" time="0.388">
+  <testcase name="expiredPinnedCertificateIsStillRejected" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.167" />
+  <testcase name="differentCertificateIsBlockedBeforeCredentialsAreSent" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.038" />
+  <testcase name="defaultRejectsPrivateCertificateBeforeCredentialsAreSent" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.045" />
+  <testcase name="inspectionOnlyObservesCertificateAndSendsNoHttp" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.041" />
+  <testcase name="pinsCannotEnablePlainHttp" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.016" />
+  <testcase name="malformedPinsAreRejected" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.016" />
+  <testcase name="confirmedCertificateAllowsIpMismatchButKeepsAuthentication" classname="com.wkq.nas.transfer.WebDavCertificatesTest" time="0.065" />
+  </testsuite>

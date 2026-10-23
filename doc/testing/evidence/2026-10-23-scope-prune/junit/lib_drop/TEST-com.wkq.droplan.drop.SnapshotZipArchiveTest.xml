@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.droplan.drop.SnapshotZipArchiveTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:22.648Z" hostname="WIN-MMJSWULHUCA" time="9.422">
+  <testcase name="folderPathsKeepHierarchyAndCannotEscapeArchiveRoot" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.039" />
+  <testcase name="cancellationQuotaAndChangingSourceNeverPublishPartialArchive" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.014" />
+  <testcase name="actualZip64EntryOverFourGiBIsGeneratedAndFullyValidatedWithBoundedReads" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="9.355" />
+  <testcase name="storeAndDeflateRoundTripSafeNamesStableHashAndRange" classname="com.wkq.droplan.drop.SnapshotZipArchiveTest" time="0.013" />
+  </testsuite>

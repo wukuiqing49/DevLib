@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.droplan.drop.HttpByteRangeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:21.072Z" hostname="WIN-MMJSWULHUCA" time="0.001">
+  <testcase name="invalidAndUnsatisfiable" classname="com.wkq.droplan.drop.HttpByteRangeTest" time="0.0" />
+  <testcase name="largeFileAndSuffix" classname="com.wkq.droplan.drop.HttpByteRangeTest" time="0.001" />
+  </testsuite>

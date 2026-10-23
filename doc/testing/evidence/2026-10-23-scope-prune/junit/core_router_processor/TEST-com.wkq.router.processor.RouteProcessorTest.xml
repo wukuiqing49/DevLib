@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.router.processor.RouteProcessorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T05:07:30.460Z" hostname="WIN-MMJSWULHUCA" time="8.329">
+  <testcase name="generatesRouteBootstrapFiles" classname="com.wkq.router.processor.RouteProcessorTest" time="7.52" />
+  <testcase name="reportsDuplicateRoutePath" classname="com.wkq.router.processor.RouteProcessorTest" time="0.432" />
+  <testcase name="reportsMissingModuleName" classname="com.wkq.router.processor.RouteProcessorTest" time="0.377" />
+  </testsuite>

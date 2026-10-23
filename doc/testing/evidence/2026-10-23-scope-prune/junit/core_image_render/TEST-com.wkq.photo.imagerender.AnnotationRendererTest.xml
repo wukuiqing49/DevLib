@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.photo.imagerender.AnnotationRendererTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:33:30.229Z" hostname="WIN-MMJSWULHUCA" time="4.287">
+  <testcase name="mosaicAndBlurChangeOnlySelectedRegions" classname="com.wkq.photo.imagerender.AnnotationRendererTest" time="4.227" />
+  <testcase name="historySupportsBoundedUndoAndRedo" classname="com.wkq.photo.imagerender.AnnotationRendererTest" time="0.06" />
+  </testsuite>

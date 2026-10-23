@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.nas.transfer.SelectionDraftStoreTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:58.358Z" hostname="WIN-MMJSWULHUCA" time="0.34">
+  <testcase name="interruptedAtomicWriteRestoresCommittedSelection" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.026" />
+  <testcase name="largeSelectionSurvivesNewStoreButCannotBeReadByAnotherOwner" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.069" />
+  <testcase name="corruptionTruncationAndExpiryNeverRestorePartialSelection" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.028" />
+  <testcase name="failedSaveDoesNotEvictExistingRecoverableDrafts" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.2" />
+  <testcase name="invalidPathsDuplicatesAndOversizeCannotLeaveUsableDraft" classname="com.wkq.nas.transfer.SelectionDraftStoreTest" time="0.017" />
+  </testsuite>

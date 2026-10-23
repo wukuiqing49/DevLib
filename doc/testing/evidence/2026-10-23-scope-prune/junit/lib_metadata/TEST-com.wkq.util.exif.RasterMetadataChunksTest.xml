@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.exif.RasterMetadataChunksTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T09:34:44.345Z" hostname="WIN-MMJSWULHUCA" time="0.074">
+  <testcase name="writesLargeNativePngXmpWithoutJpegSegmentLimit" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.036" />
+  <testcase name="webpAnimationAndFramesRemainUnchanged" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.008" />
+  <testcase name="writesNativeAnimatedWebpXmpWithoutChangingFrames" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.006" />
+  <testcase name="pngAlphaAndColourRemainUnchanged" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.006" />
+  <testcase name="truncatedWebpIsRejectedWithoutChangingInput" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.001" />
+  <testcase name="protectedDigestDetectsPayloadChanges" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.002" />
+  <testcase name="pngNativeXmpRemovalPreservesProtectedChunks" classname="com.wkq.util.exif.RasterMetadataChunksTest" time="0.014" />
+  </testsuite>

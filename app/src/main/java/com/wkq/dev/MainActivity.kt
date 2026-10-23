@@ -1,15 +1,7 @@
 package com.wkq.dev
-
-import androidx.activity.enableEdgeToEdge
-
-import com.wkq.base.activity.BaseActivity
+import com.wkq.base.activity.BaseTitleActivity
 import com.wkq.dev.databinding.ActivityMainBinding
-
-class MainActivity : BaseActivity<ActivityMainBinding>() {
-
-    override fun initView() {
-        enableEdgeToEdge()
-    }
-
-    override fun initData() = Unit
+class MainActivity:BaseTitleActivity<ActivityMainBinding>(){
+ override fun initView(){setPageTitle(getString(com.wkq.dev.feature.app.R.string.catalog_title));setLeftVisible(false)}
+ override fun initData()=Unit
 }

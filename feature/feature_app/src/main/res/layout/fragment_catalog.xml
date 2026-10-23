@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingHorizontal="16dp">
+<TextView style="@style/Demo.Label" android:text="@string/catalog_intro"/>
+<com.google.android.material.chip.ChipGroup android:id="@+id/tiers" android:layout_width="match_parent" android:layout_height="wrap_content" app:singleSelection="true" app:selectionRequired="true"/>
+<com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/catalog_search"><com.google.android.material.textfield.TextInputEditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:maxLines="1"/></com.google.android.material.textfield.TextInputLayout>
+<HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none"><com.google.android.material.chip.ChipGroup android:id="@+id/categories" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleLine="true" app:singleSelection="true" app:selectionRequired="true"/></HorizontalScrollView>
+<TextView android:id="@+id/count" style="@style/Demo.Label"/>
+<TextView android:id="@+id/empty" style="@style/Demo.Label" android:text="@string/catalog_empty" android:visibility="gone"/>
+<androidx.recyclerview.widget.RecyclerView android:scrollbars="none" android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingBottom="24dp"/>
+</LinearLayout>

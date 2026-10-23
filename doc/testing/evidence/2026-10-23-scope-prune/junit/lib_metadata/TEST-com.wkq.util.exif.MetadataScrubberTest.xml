@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.wkq.util.exif.MetadataScrubberTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2026-10-23T09:34:44.341Z" hostname="WIN-MMJSWULHUCA" time="0.0">
+  <testcase name="testScrubMetadataKeepOrientation" classname="com.wkq.util.exif.MetadataScrubberTest" time="0.0">
+    <skipped />
+  </testcase>
+  </testsuite>
