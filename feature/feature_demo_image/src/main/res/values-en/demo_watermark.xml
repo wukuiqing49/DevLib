@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_watermark_title">Image processing workspace</string>
+    <string name="demo_watermark_intro">Choose an image and apply a watermark, instant-photo frame, device background, signature extraction, or text annotations. Preview and export a PNG copy; the original stays unchanged.</string>
+    <string name="demo_watermark_input">Input image</string>
+    <string name="demo_watermark_execute">Preview and export</string>
+    <string name="demo_watermark_success">Completed. Check the result.</string>
+    <string name="demo_watermark_text">Watermark / frame / annotation text</string>
+    <string name="demo_watermark_text_value">DevLib</string>
+    <string name="demo_watermark_size">Relative size (0.01–0.5)</string>
+    <string name="demo_watermark_size_value">0.12</string>
+    <string name="demo_watermark_alpha">Opacity (0–255)</string>
+    <string name="demo_watermark_alpha_value">220</string>
+    <string name="demo_watermark_render">Render and preview</string>
+    <string name="demo_image_mode">Processing mode and style</string>
+    <string name="demo_image_threshold">Signature threshold (0.1–1.0)</string>
+    <string name="demo_image_threshold_default">0.85</string>
+    <string name="demo_image_annotation_help">Text annotations use preset normalized positions. Undo or redo edits before rendering. This is not a freehand canvas. Up to 20 layers are supported.</string>
+    <string name="demo_image_layers">Annotation layers: %1$d</string>
+    <string name="demo_image_add_label">Add current text as annotation</string>
+    <string name="demo_image_undo">Undo annotation</string>
+    <string name="demo_image_redo">Redo annotation</string>
+    <string name="demo_image_clear">Clear annotations</string>
+    <string name="demo_image_label_required">Enter annotation text. No more than 20 layers are allowed.</string>
+    <string name="demo_image_watermark_invalid">Enter watermark text, a size between 0.01 and 0.5, and opacity between 0 and 255.</string>
+    <string name="demo_image_threshold_invalid">The signature threshold must be between 0.1 and 1.0.</string>
+    <string name="demo_image_add_first">Add at least one annotation layer first.</string>
+    <string name="demo_image_mode_required">Choose a processing mode first.</string>
+    <string-array name="demo_image_modes">
+        <item>Text watermark</item>
+        <item>Instant-photo frame</item>
+        <item>Device background</item>
+        <item>Signature extraction</item>
+        <item>Text annotations</item>
+    </string-array>
+    <string-array name="demo_image_frames">
+        <item>Classic white</item>
+        <item>Vintage black</item>
+        <item>Postcard frame</item>
+        <item>Warm paper</item>
+    </string-array>
+    <string-array name="demo_image_backgrounds">
+        <item>Light blue</item>
+        <item>Mist gray</item>
+        <item>Warm white</item>
+        <item>Transparent</item>
+    </string-array>
+    <string-array name="demo_image_inks">
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+    </string-array>
+    <string-array name="demo_image_default">
+        <item>Default</item>
+    </string-array>
+</resources>

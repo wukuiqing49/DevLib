@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_ready">Select input files and configure options before starting.</string>
+    <string name="demo_running">Processing, please wait…</string>
+    <string name="demo_cancelled">Operation cancelled</string>
+    <string name="demo_failed">Operation failed: %1$s. Check your input and settings, then try again.</string>
+    <string name="demo_native_unavailable">The native engine could not be loaded. Check the ARM ABI and installation package.</string>
+    <string name="demo_selected">Selected files: %1$d</string>
+    <string name="demo_sample_ready">The sample image is ready. Configure the options to continue.</string>
+    <string name="demo_input_summary">Input files: %1$d</string>
+    <string name="demo_notice">Notice</string>
+    <string name="demo_share">Share result</string>
+    <string name="demo_open">Open result</string>
+    <string name="demo_cancel">Cancel operation</string>
+    <string name="demo_no_reader">No compatible app is installed. You can save the file using Share.</string>
+    <string name="demo_output">Results</string>
+    <string name="demo_preview">Result preview</string>
+    <string name="demo_choose">Choose files</string>
+    <string name="demo_sample">Use sample image</string>
+    <string name="demo_done">Operation completed</string>
+    <string name="demo_empty_account">Not signed in</string>
+    <string name="demo_permission_granted">Permission granted</string>
+    <string name="demo_permission_denied">Permission denied. Grant access and try again.</string>
+    <string name="demo_no_orders">No purchases to restore</string>
+    <string name="demo_allowed">Allowed: the account, order, and validity requirements are met.</string>
+    <string name="demo_denied">Denied: check the account, status, order, and validity period.</string>
+    <string name="demo_stopped">Stopped</string>
+    <string name="demo_location_unavailable">Location is unavailable. Check location settings and system services.</string>
+    <string name="demo_error_input">Invalid input. Check the files and parameter ranges, then try again.</string>
+    <string name="demo_error_permission">Access denied. Grant file access again or check system permissions.</string>
+    <string name="demo_error_not_found">A file or resource is missing. Select the input again.</string>
+    <string name="demo_error_timeout">The operation timed out. Check the network or server and try again.</string>
+    <string name="demo_error_certificate">The server certificate could not be verified. Check the certificate and hostname.</string>
+    <string name="demo_error_network">Connection failed. Check the network, address, and server status.</string>
+    <string name="demo_error_unknown">The operation did not complete. Check the settings and try again.</string>
+    <string name="demo_local_network_reason">This operation connects to a device on your local network and needs nearby network device access. It will continue after permission is granted. Denying access cancels this operation.</string>
+    <string name="demo_local_network_denied">Local network permission was not granted. This operation was cancelled. Retry to grant access, or enable nearby network device access in app settings if no prompt appears.</string>
+    <string name="demo_local_network_retry">Local network access is granted. Tap the action again.</string>
+    <string name="demo_history_failed">The operation history could not be saved. You can still view or save the current result. Check available storage; do not submit the operation again solely because its history was not saved.</string>
+</resources>

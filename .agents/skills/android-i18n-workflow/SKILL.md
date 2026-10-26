@@ -33,3 +33,5 @@ python .agents/skills/android-i18n-workflow/scripts/validate_i18n_resources.py `
 ```
 
 门禁覆盖多语言 key、占位符、plurals quantity、BCP-47 目录和 raw HTML 内联脚本。无法提供可靠翻译时记录 fallback 和未验证语言。
+
+功能开发必须按国际化规则覆盖实际受影响的业务模块及动态提示，不只检查 app/shared 资源。涉及 Kotlin/Java 声明变更时同时遵守 `.agents/rules/android.md` 的中文注释要求。

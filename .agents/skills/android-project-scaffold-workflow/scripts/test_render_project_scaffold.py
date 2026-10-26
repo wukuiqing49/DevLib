@@ -48,6 +48,17 @@ class RenderProjectScaffoldTest(unittest.TestCase):
             self.fail("Generator unexpectedly succeeded")
         return result
 
+    def test_rejects_unsupported_android17_toolchain_before_writing(self):
+        for key, value in (("agp", "8.13.2"), ("gradle", "8.13"), ("kotlin", "2.1.21")):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temp:
+                config = yaml.safe_load(BASE_CONFIG.read_text(encoding="utf-8"))
+                config["versions"][key] = value
+                path = Path(temp) / "config.yml"
+                path.write_text(yaml.safe_dump(config, allow_unicode=True), encoding="utf-8")
+                target = Path(temp) / "project"
+                self.run_generator(path, target, expect_ok=False)
+                self.assertFalse((target / "settings.gradle").exists())
+
     def test_generates_complete_project_and_refuses_accidental_overwrite(self):
         with tempfile.TemporaryDirectory() as temp:
             target = Path(temp) / "project"

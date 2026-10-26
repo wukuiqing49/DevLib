@@ -6,6 +6,20 @@
     <string name="demo_drop_execute">02 执行流程</string>
     <string name="demo_drop_success">执行完成，结果如下</string>
     <string name="demo_drop_start">选择地址并开启</string>
-    <string name="demo_drop_approve">批准待处理配对</string>
+    <string name="demo_drop_approve">选择并批准一个配对</string>
     <string name="demo_drop_stop">停止分享</string>
+    <string name="demo_drop_reject">选择并拒绝一个配对</string>
+    <string name="demo_drop_choose_pairing">选择请求编号，与接收端核对</string>
+    <string name="demo_drop_pairing">请求 %1$s</string>
+    <string name="demo_drop_no_pending">没有待处理配对请求。</string>
+    <string name="demo_drop_confirm_approve">确认允许请求 %1$s 接收本次分享的文件？请先与接收端核对编号。</string>
+    <string name="demo_drop_confirm_reject">确认拒绝请求 %1$s？</string>
+    <string name="demo_drop_decided">已处理选中的请求；其他请求保持待确认。</string>
+    <string name="demo_drop_expired">请求已过期或会话已关闭，请刷新后重试。</string>
+    <string name="demo_drop_choose_first">请先选择本次分享的文件。</string>
+    <string name="demo_drop_no_address">未找到可用局域网地址，请检查网络连接。</string>
+    <string name="demo_drop_stopped">分享已停止。</string>
+    <string name="demo_drop_failed">无法开启分享，请检查局域网地址和文件权限。</string>
+    <string name="demo_drop_status">%1$s\n待配对：%2$d · 已连接：%3$d</string>
+    <string name="demo_drop_task">文件：%1$s · %2$s</string>
 </resources>

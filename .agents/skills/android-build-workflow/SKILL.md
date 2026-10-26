@@ -39,3 +39,13 @@ python .agents/skills/android-build-workflow/scripts/validate_build_output.py --
 ```
 
 优先运行受影响模块最小 compile/test。涉及 app 壳、manifest、签名、release 或 native 时按构建规则运行 app 级任务，并明确未执行的设备、凭据或产物检查。
+
+## Android 17 / API 37
+
+涉及 SDK 37、Android 17 迁移、局域网权限或大屏行为时，读取 [Android 17 兼容基线](references/android-17.md)。同步项目与生成配置，按能力选择检查；构建通过不能代替运行验证。
+
+维护 API 37 门禁脚本后执行：
+
+```powershell
+python -B .agents/skills/android-build-workflow/scripts/test_android17.py -v
+```

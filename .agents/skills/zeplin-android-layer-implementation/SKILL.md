@@ -26,7 +26,7 @@ description: 根据 Zeplin 页面或组件 URL、图层树、导出资源和设�
 
 ## 编码前分析
 
-除非用户明确要求立即编码，否则先输出以下简要方案并等待确认：
+用户仅要求分析时输出以下方案后结束分析；用户已要求实现时简要说明方案后直接执行，不重复请求实现授权。必要设计数据缺失时先完成可独立进行的检查：
 
 1. 页面层级与可复用组件。
 2. 仅在导航、状态或列表确有需要时，拆分 Activity/Fragment、UI State 和 Adapter。
@@ -37,6 +37,8 @@ description: 根据 Zeplin 页面或组件 URL、图层树、导出资源和设�
 分析与交付模板见 [references/zeplin-process.md](references/zeplin-process.md)。
 
 同一对话中已经存在用户确认的分析方案时，直接复用其中的 Zeplin URL、目标组件、图层映射、资源计划和业务约束开始实现。不要重复输出分析，也不要要求用户再次填写这些信息。仅在以下情况暂停确认：链接缺失、设计数据可能已变更、确认方案存在互相冲突的约束，或实现依赖缺少必要的外部配置。
+
+编码前读取目标项目 `.agents/rules/android.md`、`.agents/rules/ui.md`、`.agents/rules/architecture.md`、`.agents/rules/i18n.md`（存在时）；页面实现加载该项目 UI、架构、国际化 Skills。Base、中文注释与适配规则以目标项目为准。
 
 ## 实现规则
 

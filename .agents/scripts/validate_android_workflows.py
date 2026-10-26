@@ -57,8 +57,6 @@ def load_scaffold_modules(root: Path, tool_root: Path, config_override: str | No
         "featureRes": "feature/feature_res",
     }
     config = Path(config_override).resolve() if config_override else root / ".agents/config/project-scaffold.yml"
-    if not config.exists():
-        config = tool_root / "config/project-scaffold.yml"
     if yaml is None or not config.exists():
         return defaults
     loaded = yaml.safe_load(config.read_text(encoding="utf-8")) or {}
@@ -70,8 +68,42 @@ def load_scaffold_modules(root: Path, tool_root: Path, config_override: str | No
     }
 
 
+def required_host_locales(root: Path) -> list[str]:
+    """仅使用目标项目声明的必需语言，避免缺少整个语言目录时被误判为覆盖完整。"""
+    profile = root / ".agents/config/project-profile.yml"
+    if not profile.is_file() or yaml is None:
+        return []
+    data = yaml.safe_load(profile.read_text(encoding="utf-8")) or {}
+    return list((data.get("android") or {}).get("requiredHostLocales") or [])
+
+
 def source_dirs_for(module: str) -> list[str]:
     return [f"{module}/src/main/kotlin", f"{module}/src/main/java"]
+
+
+def discover_host_modules(root: Path, configured: dict[str, str]) -> list[str]:
+    """收集已注册的宿主及业务模块，避免遗漏新增 feature 或扫描历史目录。"""
+    settings = next((root / name for name in ("settings.gradle", "settings.gradle.kts")
+                     if (root / name).is_file()), None)
+    candidates = []
+    if settings is not None:
+        text = settings.read_text(encoding="utf-8")
+        text = re.sub(r"/\*[\s\S]*?\*/", "", text)
+        text = re.sub(r"(?m)^\s*//.*$", "", text)
+        registered = []
+        for match in re.finditer(r"(?m)^\s*include\s*(?:\(([^)]*)\)|([^\r\n]+))", text):
+            registered.extend(re.findall(r"['\"](:[^'\"]+)['\"]", (match[1] or match[2]).split("//", 1)[0]))
+        feature_root = Path(configured["featureApp"]).parent.as_posix()
+        for module in registered:
+            path = module.lstrip(":").replace(":", "/")
+            if path in configured.values() or path.startswith(feature_root + "/"):
+                candidates.append(path)
+    modules = []
+    for module in dict.fromkeys(candidates):
+        path = root / module
+        if any((path / name).is_file() for name in ("build.gradle", "build.gradle.kts")):
+            modules.append(module)
+    return modules
 
 
 def read_text(path: Path) -> str:
@@ -124,11 +156,6 @@ def report_requires_pager(report: Path) -> bool:
         "是否必须使用 ViewPager2：是",
         "是否已规划 FragmentStateAdapter：是",
         "页面类型：Tab + ViewPager2",
-        "主页容器",
-        "主导航页",
-        "底部主导航",
-        "顶部 Tab",
-        "同级页面切换",
     ]
     return any(marker in text for marker in positive_markers)
 
@@ -164,33 +191,38 @@ def main() -> int:
     py = sys.executable
     if args.config_only:
         return run_step("agent-configuration", [py, str(tool_root / "scripts/validate_agent_structure.py"),
-                        "--project-root", str(tool_root.parent), "--mode", "config"], root)
+                        "--project-root", str(root), "--mode", "config"], root)
     if not any((root / name).is_file() for name in ("settings.gradle", "settings.gradle.kts")):
         print("Android project is not initialized; use --config-only to validate Agent configuration.")
         return 1
     modules = load_scaffold_modules(root, tool_root, args.scaffold_config)
 
+    host_modules = discover_host_modules(root, modules)
+    print("Host validation modules: " + ", ".join(host_modules))
     src_args = existing_args(root, "--module-src", [
-        *source_dirs_for(modules["app"]),
-        *source_dirs_for(modules["featureApp"]),
+        path for module in host_modules for path in source_dirs_for(module)
     ])
-    res_args = existing_args(root, "--module-res", [
-        f"{modules['app']}/src/main/res",
-        f"{modules['featureApp']}/src/main/res",
-        f"{modules['featureRes']}/src/main/res",
-    ])
-    i18n_res_args = existing_args(root, "--res-dir", [
-        f"{modules['app']}/src/main/res",
-        f"{modules['featureRes']}/src/main/res",
-    ])
+    res_paths = [f"{module}/src/main/res" for module in host_modules]
+    res_args = existing_args(root, "--module-res", res_paths)
+    i18n_res_args = existing_args(root, "--res-dir", res_paths)
+    locale_args = [arg for locale in required_host_locales(root) for arg in ("--required-locale", locale)]
 
     steps: list[tuple[str, list[str]]] = [
-        ("agent-structure", [py, str(tool_root / "scripts/validate_agent_structure.py"), "--project-root", str(tool_root.parent)]),
+        ("tool-structure", [py, str(tool_root / "scripts/validate_agent_structure.py"), "--project-root", str(tool_root.parent), "--mode", "config"]),
         ("build", [py, str(tool_root / "skills/android-build-workflow/scripts/validate_build_output.py"), "--project-root", ".", "--app-module", modules["app"]]),
         ("architecture", [py, str(tool_root / "skills/android-project-architecture-workflow/scripts/validate_architecture.py"), "--project-root", "."]),
         ("ui", [py, str(tool_root / "skills/android-ui-workflow/scripts/validate_ui_output.py"), *src_args, *res_args]),
-        ("i18n", [py, str(tool_root / "skills/android-i18n-workflow/scripts/validate_i18n_resources.py"), *i18n_res_args, *(["--strict-missing"] if args.strict_i18n else [])]),
+        ("i18n", [py, str(tool_root / "skills/android-i18n-workflow/scripts/validate_i18n_resources.py"), *i18n_res_args, *locale_args, *(["--strict-missing"] if args.strict_i18n else [])]),
     ]
+
+    if (root / ".agents/config/project-profile.yml").is_file():
+        steps.insert(1, ("target-profile", [py, str(tool_root / "scripts/validate_agent_structure.py"),
+                     "--project-root", str(root), "--profile-only", "--mode", "project"]))
+    else:
+        print("Target profile unavailable; Gradle/source checks only, target facts NOT verified.")
+    if not host_modules:
+        print("No registered host modules resolved; provide target scaffold configuration and review settings.")
+        return 1
 
     figma_reports = find_figma_reports(root)
     if not args.skip_figma and figma_reports:
@@ -206,8 +238,6 @@ def main() -> int:
                 "--analysis-report",
                 str(figma_report.relative_to(root)),
                 "--require-screen-adaptation",
-                "--allow-standard-adapter",
-                "--allow-raw-fragment",
             ]
             if report_requires_pager(figma_report):
                 command.append("--require-pager-navigation")

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_drop_title">Local file sharing</string>
+    <string name="demo_drop_intro">Choose files and a local network address, then start sharing. Open the link in a browser, approve pairing, and monitor progress. Sharing stops when you leave the page.</string>
+    <string name="demo_drop_input">01 Select and configure</string>
+    <string name="demo_drop_execute">02 Run operation</string>
+    <string name="demo_drop_success">Completed. Check the result.</string>
+    <string name="demo_drop_start">Choose address and start</string>
+    <string name="demo_drop_approve">Select and approve a pairing request</string>
+    <string name="demo_drop_stop">Stop sharing</string>
+    <string name="demo_drop_reject">Select and reject a pairing request</string>
+    <string name="demo_drop_choose_pairing">Choose a request ID and verify it with the receiver</string>
+    <string name="demo_drop_pairing">Request %1$s</string>
+    <string name="demo_drop_no_pending">No pairing requests are pending.</string>
+    <string name="demo_drop_confirm_approve">Allow request %1$s to receive the shared files? Verify this ID with the receiver first.</string>
+    <string name="demo_drop_confirm_reject">Reject request %1$s?</string>
+    <string name="demo_drop_decided">The selected request has been handled. Other requests still await confirmation.</string>
+    <string name="demo_drop_expired">The request expired or the session closed. Refresh and try again.</string>
+    <string name="demo_drop_choose_first">Choose the files to share first.</string>
+    <string name="demo_drop_no_address">No local network address is available. Check your connection.</string>
+    <string name="demo_drop_stopped">Sharing stopped.</string>
+    <string name="demo_drop_failed">Sharing could not start. Check the network address and file permissions.</string>
+    <string name="demo_drop_status">%1$s\nPending: %2$d · Connected: %3$d</string>
+    <string name="demo_drop_task">File: %1$s · %2$s</string>
+</resources>

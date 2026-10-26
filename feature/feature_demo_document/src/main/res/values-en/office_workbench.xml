@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="office_table">Table editor</string>
+    <string name="office_table_status">%1$d rows × %2$d columns · Up to 30 rows and 8 columns</string>
+    <string name="office_add_row">Add row</string>
+    <string name="office_add_column">Add column</string>
+    <string name="office_remove_row">Delete this row</string>
+    <string name="office_remove_column">Delete last column</string>
+    <string name="office_cell">Row %1$d, column %2$d</string>
+    <string name="office_remove_confirm">Delete this row and its contents?</string>
+    <string name="office_column_confirm">Remove the last column and its contents?</string>
+    <string name="office_title_hint">Document title / worksheet name</string>
+</resources>

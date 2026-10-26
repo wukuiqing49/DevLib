@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_metadata_title">Photo metadata</string>
+    <string name="demo_metadata_intro">Inspect EXIF/IPTC/XMP field groups, then write edits to a copy and read them back. Changes apply only to the generated copy, leaving the original intact.</string>
+    <string name="demo_metadata_input">01 Select and configure</string>
+    <string name="demo_metadata_execute">02 Run operation</string>
+    <string name="demo_metadata_success">Completed. Check the result.</string>
+    <string name="demo_metadata_artist">Author (EXIF Artist)</string>
+    <string name="demo_metadata_artist_value">DevLib</string>
+    <string name="demo_metadata_description">Description (EXIF ImageDescription)</string>
+    <string name="demo_metadata_description_value" />
+    <string name="demo_metadata_inspect">Read and group fields</string>
+    <string name="demo_metadata_write">Write copy and verify</string>
+</resources>

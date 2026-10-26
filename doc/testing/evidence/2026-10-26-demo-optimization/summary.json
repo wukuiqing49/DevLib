@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "be55dc3",
+  "modules": 19,
+  "demoPages": 18,
+  "routeGroups": 5,
+  "artifacts": {
+    "aar": 15,
+    "jvm": 4
+  },
+  "junit": [
+    {
+      "module": "common",
+      "name": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": "7",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.01"
+    },
+    {
+      "module": "files",
+      "name": "com.wkq.dev.demo.files.TransferHistoryTest",
+      "tests": "5",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.115"
+    },
+    {
+      "module": "google",
+      "name": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+      "tests": "6",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.841"
+    }
+  ],
+  "pythonTests": 8,
+  "nodeTests": 5,
+  "appDebug": "passed",
+  "androidTestApk": "built, not run",
+  "localPublication": "passed (4m 25s, combined build)",
+  "publishedConsumer": "passed (26s)",
+  "apkSha256": "9c5a746ef9f46d61b2f96c59c74d060dfc8e1ea83a9fef77f1699220ffef1074",
+  "staticChecks": {
+    "agent": "passed",
+    "architecture": "passed with 2 existing heuristic warnings",
+    "build": "passed",
+    "ui": "passed with 1 Insets heuristic warning"
+  },
+  "remoteCI": "not configured; unauthorized new workflow withdrawn before commit/push",
+  "deviceTesting": "not run",
+  "realLoginPurchaseRemoteServer": "not run",
+  "baselineAdvanced": false,
+  "initialAttempt": "Gradle daemon stopped by stop command; retry successful"
+}

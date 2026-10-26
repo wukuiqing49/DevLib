@@ -212,7 +212,7 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 
 ### lib_operations
 
-来源：PhotoKit；产物：jvm。
+来源：PhotoKit；产物：aar。
 
 用途：图片/文件处理的公共契约：预算、进度、取消、错误、统计、输出路径互斥与临时文件清理。
 

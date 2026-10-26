@@ -19,4 +19,14 @@
     <string name="demo_upload_directory_value">/upload</string>
     <string name="demo_upload_test">测试连接</string>
     <string name="demo_upload_upload">确认上传</string>
+<string name="demo_upload_https_help">HTTP 适配器在本示例只使用 HTTPS；URL 中不要嵌入账号。用户名、密码可为空。</string>
+<string name="demo_upload_ftp_help">FTP/FTPS 填写纯主机名、端口和账号。FTPS 使用显式 TLS 并校验证书；FTP 不加密。</string>
+<string name="demo_upload_invalid_host">请填写有效的主机和端口（1–65535）。</string>
+<string name="demo_upload_invalid_https">请输入不带内嵌凭据、查询或片段的 HTTPS URL，显式 URL 端口需与端口字段一致。</string>
+<string name="demo_upload_invalid_ftp">FTP/FTPS 需要纯主机名、用户名和密码，主机不要包含协议或目录。</string>
+<string name="demo_upload_test_first">请先成功测试当前连接；配置变更后需要重新测试。</string>
+<string name="demo_upload_connected">当前配置连接测试成功，可以选择文件并确认上传。</string>
+<string name="demo_upload_confirm">确认将所选文件上传到当前配置的服务器？</string>
+<string name="demo_upload_failure">上传或连接未完成，错误代码：%1$s。请检查认证、权限、地址及网络后重试。</string>
+<string-array name="demo_upload_protocols"><item>FTPS · 显式 TLS</item><item>FTP</item><item>HTTPS · HTTP 上传接口</item></string-array>
 </resources>

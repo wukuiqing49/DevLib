@@ -21,6 +21,7 @@ TOOLS_LOCALE = "{http://schemas.android.com/tools}locale"
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate Android i18n resources.")
     parser.add_argument("--res-dir", action="append", default=[], help="res directory to scan.")
+    parser.add_argument("--required-locale", action="append", default=[], help="Require this locale even when its directory is absent; repeatable.")
     parser.add_argument("--strict-missing", action="store_true", help="Treat missing localized keys as errors.")
     return parser.parse_args()
 
@@ -52,7 +53,7 @@ def collect_values(values_dir: Path, errors: list[str]) -> dict[str, tuple[str, 
             name = item.attrib.get("name")
             if not name:
                 continue
-            if item.tag not in {"string", "plurals"} or item.attrib.get("translatable") == "false":
+            if item.tag not in {"string", "plurals", "string-array"} or item.attrib.get("translatable") == "false":
                 continue
             key = f"{item.tag}/{name}"
             if key in result:
@@ -63,6 +64,9 @@ def collect_values(values_dir: Path, errors: list[str]) -> dict[str, tuple[str, 
                 value = text_of(item)
                 item_placeholders = () if item.attrib.get("formatted") == "false" else placeholders(value)
                 result[f"string/{name}"] = (value, item_placeholders)
+            elif item.tag == "string-array":
+                entries = item.findall("item")
+                result[key] = ([text_of(e) for e in entries], tuple(placeholders(text_of(e)) for e in entries))
             elif item.tag == "plurals":
                 ph = {}
                 for quantity in item.findall("item"):
@@ -99,17 +103,21 @@ def is_locale_values_dir(path: Path) -> bool:
     return bool(re.fullmatch(r"[a-z]{2,3}", first))
 
 
-def validate_res_dir(res_dir: Path, errors: list[str], warnings: list[str], strict_missing: bool) -> None:
+def validate_res_dir(res_dir: Path, errors: list[str], warnings: list[str], strict_missing: bool, required_locales: list[str] | None = None) -> None:
     default_dir = res_dir / "values"
     if not default_dir.is_dir():
         warnings.append(f"WARN: {res_dir}: missing default values directory.")
         return
     default_values = collect_values(default_dir, errors)
     if not default_values:
-        warnings.append(f"WARN: {default_dir}: no string/plurals resources found.")
+        warnings.append(f"WARN: {default_dir}: no translatable string/plurals/array resources found.")
         return
     default_locale = declared_default_locale(default_dir)
     locale_dirs = sorted(path for path in res_dir.glob("values-*") if path.is_dir() and is_locale_values_dir(path))
+    available = {locale_of_values_dir(path) for path in locale_dirs}
+    for locale in required_locales or []:
+        if locale not in available and locale != default_locale:
+            errors.append(f"ERROR: {res_dir}: required locale {locale} is missing")
     for locale_dir in locale_dirs:
         localized = collect_values(locale_dir, errors)
         missing = sorted(set(default_values) - set(localized))
@@ -172,7 +180,7 @@ def main() -> int:
         res_dirs = [Path("app/src/main/res"), Path("feature/feature_res/src/main/res")]
     for res_dir in res_dirs:
         if res_dir.exists():
-            validate_res_dir(res_dir, errors, warnings, args.strict_missing)
+            validate_res_dir(res_dir, errors, warnings, args.strict_missing, args.required_locale)
             validate_raw_html(res_dir, errors, warnings)
     for item in warnings:
         print(item)

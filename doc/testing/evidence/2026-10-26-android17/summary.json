@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-26",
+  "toolchain": {
+    "compileSdk": 37,
+    "targetSdk": 37,
+    "minSdk": 26,
+    "agp": "9.1.1",
+    "gradle": "9.3.1",
+    "kotlin": "2.2.10",
+    "ksp": "2.2.10-2.0.2",
+    "jdk": 17
+  },
+  "apk": {
+    "applicationId": "com.wkq.dev",
+    "sha256": "5a18bc17ae2dcf95986c6ba9a0efa170ad38ef094e5192ef6180cc6cb36bab46",
+    "accessLocalNetworkDeclared": true
+  },
+  "builds": {
+    "appDebug": "passed",
+    "appDebugAndroidTest": "passed",
+    "testLibraries": "passed"
+  },
+  "jvm": {
+    "total": 531,
+    "passed": 530,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0
+  },
+  "python": {
+    "android17Gate": 7,
+    "scaffold": 8,
+    "agentStructure": 14,
+    "demoCatalog": 10
+  },
+  "static": {
+    "buildWarnings": 0,
+    "architectureWarnings": 2,
+    "uiWarnings": 0,
+    "i18nWarnings": 0
+  },
+  "apkCatalog": {
+    "modules": 19,
+    "pages": 18,
+    "routeInitializers": 5
+  },
+  "coreSourceChanged": false,
+  "ciChanged": false,
+  "committed": false,
+  "pushed": false,
+  "notRun": [
+    "device",
+    "emulator",
+    "visual",
+    "release/R8",
+    "published-consumer",
+    "real-auth-purchase-server-transactions"
+  ],
+  "baselineAdvanced": false
+}

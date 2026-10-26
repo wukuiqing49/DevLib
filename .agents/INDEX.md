@@ -38,6 +38,7 @@
 - `workflows/create-project.md`：创建或调整 Android 工程。
 - `workflows/audit-droplan.md`：审计实际状态，规划或实现 P0，分别验证跨端大文件、连接与速度推荐。
 - `workflows/change-architecture.md`：调整模块或共享能力。
+- `workflows/develop-feature.md`：共同开发基线和按影响加载，包含中文注释与增量源码检查。
 - `workflows/implement-page.md`：实现或修改 Android 页面。
 - `workflows/localize-content.md`：修改文案和多语言。
 - `workflows/change-build.md`：修改构建与发布配置。
@@ -47,6 +48,8 @@
 - `workflows/prepare-play-assets.md`：准备 Google Play 商店素材。
 
 ## Skills
+
+- `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
 
 - `skills/android-functional-test-workflow/`：跨项目的改动影响分析、增量/发布回归与固定测试报告，默认输出 `doc/testing/TEST_REPORT.md`。
 - `skills/android-project-scaffold-workflow/`：完整项目生成器、模板和生成测试。
@@ -94,3 +97,26 @@ python .agents/scripts/validate_android_workflows.py --project-root . --config-o
 python .agents/scripts/tests/test_validate_agent_structure.py -v
 python .agents/skills/android-project-scaffold-workflow/scripts/test_render_project_scaffold.py -v
 ```
+
+Android 17 兼容规则：`skills/android-build-workflow/references/android-17.md`，由构建、脚手架、架构、UI 和测试 Skills 按任务加载。
+
+Android 功能开发统一入口为 `workflows/develop-feature.md`：Base、UI、国际化、屏幕/系统适配及类/方法中文注释为必读要求，纯引擎任务按实际范围说明不适用项。中文注释规则统一维护在 `rules/android.md`，不要求重命名 API 或批量修改基础库。
+
+聚合验证从 settings 的字面量 include 收集实际 feature 模块，结合配置中的 app/featureApp/featureRes 扫描源码和资源；动态 settings 或自定义 projectDir 映射需显式核实并补充目标，不能声称覆盖未解析模块。新增模块收集逻辑后执行：
+
+```powershell
+python -B .agents/scripts/tests/test_validate_android_workflows.py -v
+```
+
+## 源码增量检查与工具边界
+
+功能任务运行 `python -B .agents/scripts/validate_android_source.py --project-root . --file <本次源码路径>`，多文件重复 `--file`。省略文件时按 `--base-ref HEAD` 收集 app/feature 中已修改及未跟踪的 main Kotlin/Java/XML；检查的是选中文件全文，不是仅新增行，必须区分历史欠账。
+
+检查 DOC001（常见类型/方法的中文 KDoc/JavaDoc）、BASE001（明显直接继承平台组件）、I18N001（常见可见文案硬编码）。这不是 Kotlin/Java 语义分析器：扩展/多行复杂声明、间接继承、Compose、Toast/动态拼接、翻译质量和屏幕适配仍需人工及专项验证。Java 重载、注解或复杂签名的误报需复核，不得机械改业务来通过检查。
+
+`--report <路径>` 输出 JSON 证据。`--exceptions <JSON路径>` 支持具体条目例外：数组内每项必须有 path、rule、line、reason、alternativeValidation、reviewAfter；path 为精确相对路径，禁止通配。保留例外报告，代码移动后重新核对，不能豁免整类规则。
+
+聚合检查分别输出 tool-structure 与 target-profile；外部目标没有 profile 时明确报告事实未验证，不借用 DevLib 配置充当目标事实。模块目录只来自目标配置及 settings 已注册的字面量 include；动态 settings/projectDir 映射仍需人工核实。Figma 不再默认放宽 Adapter/Fragment 约束，也不因底部导航自动要求 ViewPager2。
+
+
+宿主必需语言由目标 project-profile.yml 的 android.requiredHostLocales 声明（DevLib 为 en），聚合 i18n 检查会验证整个语言目录存在；独立命令可重复传入 `--required-locale en`。string-array 同样检查缺译、条目数量及逐项占位符，技术协议值和数组顺序不得因翻译改变。该约束只扫描宿主模块，不要求改写迁入基础库资源。

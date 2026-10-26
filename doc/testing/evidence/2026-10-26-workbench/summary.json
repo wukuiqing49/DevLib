@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "be55dc32c5a7822e474a23ee354a6aec08951bd5",
+  "junit": [
+    {
+      "module": "common",
+      "name": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": "7",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.014"
+    },
+    {
+      "module": "common",
+      "name": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+      "tests": "7",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.204"
+    },
+    {
+      "module": "document",
+      "name": "com.wkq.dev.demo.document.DocumentTableTest",
+      "tests": "5",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.049"
+    },
+    {
+      "module": "files",
+      "name": "com.wkq.dev.demo.files.TransferHistoryTest",
+      "tests": "5",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.053"
+    },
+    {
+      "module": "google",
+      "name": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+      "tests": "6",
+      "skipped": "0",
+      "failures": "0",
+      "errors": "0",
+      "time": "0.73"
+    }
+  ],
+  "junitTotal": 30,
+  "pythonCatalogTests": 10,
+  "sqliteSqlChecks": 4,
+  "sqliteEngine": "Python sqlite3, not Android runtime",
+  "appDebug": "built",
+  "androidTestApk": "built, not run",
+  "finalBuild": "BUILD SUCCESSFUL in 1m 51s; 596 tasks, 38 executed, 558 up-to-date",
+  "catalog": {
+    "modules": 19,
+    "pages": 18,
+    "routeGroups": 5,
+    "aar": 15,
+    "jvm": 4
+  },
+  "foundationDiff": false,
+  "apkSha256": "101ac558719ab35fe02e952d5a8dac06aed8243d7df6d41c0c457c9f8ac77f8b",
+  "deviceTests": "not run by user request",
+  "remoteServices": "not run",
+  "ci": "not created",
+  "baselineAdvanced": false,
+  "knownStaticWarnings": {
+    "architecture": 2,
+    "uiInsetsHeuristic": 0,
+    "build": 0
+  },
+  "limitations": [
+    "No device visual/rotation/process recreation/SAF/Android SQLite checks",
+    "File center displays newest 300 files and 100 operations",
+    "Image annotation uses preset positions",
+    "PDF entry exports images, not arbitrary PDF editing",
+    "Local transfer outputs are registered when the transfer page observes completion; legacy transfer files are not scanned",
+    "Old unindexed outputs are not automatically imported"
+  ],
+  "nodeReceiverTests": 5
+}

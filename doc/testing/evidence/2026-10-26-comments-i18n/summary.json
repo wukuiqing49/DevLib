@@ -1,0 +1,70 @@
+{
+  "build": {
+    "task": ":app:assembleDebug",
+    "result": "passed",
+    "duration": "1m 40s"
+  },
+  "jvmSuites": [
+    {
+      "module": "feature_demo_common",
+      "name": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-10-26T09:16:32.420Z"
+    },
+    {
+      "module": "feature_demo_common",
+      "name": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-10-26T09:16:32.441Z"
+    },
+    {
+      "module": "feature_demo_document",
+      "name": "com.wkq.dev.demo.document.DocumentTableTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-10-26T09:16:36.260Z"
+    },
+    {
+      "module": "feature_demo_files",
+      "name": "com.wkq.dev.demo.files.TransferHistoryTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-10-26T09:16:37.641Z"
+    },
+    {
+      "module": "feature_demo_google",
+      "name": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-10-26T09:16:38.994Z"
+    }
+  ],
+  "pythonTests": {
+    "commonScripts": 32,
+    "i18n": 5,
+    "result": "passed"
+  },
+  "sourceAudit": {
+    "files": 71,
+    "findings": 0
+  },
+  "i18n": {
+    "hostModules": 9,
+    "strictMissing": true,
+    "warnings": 0
+  },
+  "deviceValidation": "excluded",
+  "baselineUpdated": false
+}

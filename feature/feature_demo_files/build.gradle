@@ -12,6 +12,7 @@ android {
     kotlinOptions { jvmTarget = '17' }
 }
 dependencies {
+    testImplementation photoLibs.junit
     implementation project(':feature:feature_res')
     implementation project(':core:core_base')
     implementation project(':core:core_utils')

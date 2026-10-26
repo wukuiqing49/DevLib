@@ -1,0 +1,2002 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "app/src/main/AndroidManifest.xml",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt",
+    "feature/feature_app/src/main/res/drawable/ic_workspace_assets.xml",
+    "feature/feature_app/src/main/res/drawable/ic_workspace_developer.xml",
+    "feature/feature_app/src/main/res/drawable/ic_workspace_tools.xml",
+    "feature/feature_app/src/main/res/drawable/ic_workspace_workbench.xml",
+    "feature/feature_app/src/main/res/layout/fragment_catalog.xml",
+    "feature/feature_app/src/main/res/layout/item_demo_entry.xml",
+    "feature/feature_app/src/main/res/menu/workspace_navigation.xml",
+    "feature/feature_app/src/main/res/values/catalog.xml",
+    "feature/feature_app/src/main/res/values/workbench.xml",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoErrors.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceActions.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+    "feature/feature_demo_common/src/main/res/layout/demo_output.xml",
+    "feature/feature_demo_common/src/main/res/values/strings.xml",
+    "feature/feature_demo_common/src/main/res/values/workspace.xml",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+    "feature/feature_demo_document/src/main/res/layout/demo_office.xml",
+    "feature/feature_demo_document/src/main/res/layout/demo_pdf.xml",
+    "feature/feature_demo_document/src/main/res/layout/item_office_row.xml",
+    "feature/feature_demo_document/src/main/res/layout/item_pdf_page.xml",
+    "feature/feature_demo_document/src/main/res/values/demo_office.xml",
+    "feature/feature_demo_document/src/main/res/values/demo_pdf.xml",
+    "feature/feature_demo_document/src/main/res/values/office_workbench.xml",
+    "feature/feature_demo_document/src/main/res/values/pdf_workbench.xml",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DemoReceiverAssets.kt",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+    "feature/feature_demo_files/src/main/res/layout/demo_drop.xml",
+    "feature/feature_demo_files/src/main/res/layout/demo_transfer.xml",
+    "feature/feature_demo_files/src/main/res/layout/demo_upload.xml",
+    "feature/feature_demo_files/src/main/res/layout/item_transfer_task.xml",
+    "feature/feature_demo_files/src/main/res/values/demo_drop.xml",
+    "feature/feature_demo_files/src/main/res/values/demo_transfer.xml",
+    "feature/feature_demo_files/src/main/res/values/demo_upload.xml",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/AnnotationActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/DemoGetApi.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/NetworkActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PluginActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PopupActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/ProcessorActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouteTargetActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouterActivity.kt",
+    "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/UtilsActivity.kt",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+    "feature/feature_demo_google/src/main/res/layout/demo_google.xml",
+    "feature/feature_demo_google/src/main/res/values/google.xml",
+    "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+    "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+    "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+    "feature/feature_demo_image/src/main/res/layout/demo_metadata.xml",
+    "feature/feature_demo_image/src/main/res/layout/demo_watermark.xml",
+    "feature/feature_demo_image/src/main/res/values/demo_watermark.xml",
+    "feature/feature_demo_image/src/main/res/values/metadata_workbench.xml"
+  ],
+  "findings": [
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "WorkbenchRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 37,
+      "rule": "DOC001",
+      "symbol": "CatalogFragment",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 75,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 89,
+      "rule": "DOC001",
+      "symbol": "convert",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 230,
+      "rule": "DOC001",
+      "symbol": "onCreate",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 235,
+      "rule": "DOC001",
+      "symbol": "onSaveInstanceState",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 240,
+      "rule": "DOC001",
+      "symbol": "render",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 326,
+      "rule": "DOC001",
+      "symbol": "addTools",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 432,
+      "rule": "DOC001",
+      "symbol": "toolRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 440,
+      "rule": "DOC001",
+      "symbol": "assetRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 461,
+      "rule": "DOC001",
+      "symbol": "taskRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 480,
+      "rule": "DOC001",
+      "symbol": "open",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 485,
+      "rule": "DOC001",
+      "symbol": "details",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 512,
+      "rule": "DOC001",
+      "symbol": "assetActions",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 588,
+      "rule": "DOC001",
+      "symbol": "notice",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 592,
+      "rule": "DOC001",
+      "symbol": "initData",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+      "line": 594,
+      "rule": "DOC001",
+      "symbol": "onDestroyView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "CatalogFilter",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 17,
+      "rule": "DOC001",
+      "symbol": "CatalogViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 30,
+      "rule": "DOC001",
+      "symbol": "select",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 37,
+      "rule": "DOC001",
+      "symbol": "clearSelection",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 48,
+      "rule": "DOC001",
+      "symbol": "attach",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 69,
+      "rule": "DOC001",
+      "symbol": "search",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 74,
+      "rule": "DOC001",
+      "symbol": "category",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 79,
+      "rule": "DOC001",
+      "symbol": "tab",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 86,
+      "rule": "DOC001",
+      "symbol": "favorite",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 90,
+      "rule": "DOC001",
+      "symbol": "visit",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogViewModel.kt",
+      "line": 94,
+      "rule": "DOC001",
+      "symbol": "import",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "DemoEntry",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt",
+      "line": 20,
+      "rule": "DOC001",
+      "symbol": "DemoCatalog",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 27,
+      "rule": "DOC001",
+      "symbol": "DemoActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 39,
+      "rule": "DOC001",
+      "symbol": "withNetworkEndpointPermission",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 62,
+      "rule": "DOC001",
+      "symbol": "withLocalNetworkPermission",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 81,
+      "rule": "DOC001",
+      "symbol": "onCreate",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 86,
+      "rule": "DOC001",
+      "symbol": "onSaveInstanceState",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 118,
+      "rule": "DOC001",
+      "symbol": "bindDemo",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 219,
+      "rule": "DOC001",
+      "symbol": "pickImages",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 223,
+      "rule": "DOC001",
+      "symbol": "pickFiles",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 227,
+      "rule": "DOC001",
+      "symbol": "chooseSource",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 263,
+      "rule": "DOC001",
+      "symbol": "message",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 267,
+      "rule": "DOC001",
+      "symbol": "confirm",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 279,
+      "rule": "DOC001",
+      "symbol": "onBaseUiEvent",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 285,
+      "rule": "DOC001",
+      "symbol": "resultFiles",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 290,
+      "rule": "DOC001",
+      "symbol": "chooseResultFile",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 304,
+      "rule": "DOC001",
+      "symbol": "output",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 308,
+      "rule": "DOC001",
+      "symbol": "outputFile",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoActivity.kt",
+      "line": 335,
+      "rule": "DOC001",
+      "symbol": "initData",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoErrors.kt",
+      "line": 14,
+      "rule": "DOC001",
+      "symbol": "class",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+      "line": 14,
+      "rule": "DOC001",
+      "symbol": "DemoFiles",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+      "line": 15,
+      "rule": "DOC001",
+      "symbol": "output",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+      "line": 20,
+      "rule": "DOC001",
+      "symbol": "importFiles",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+      "line": 69,
+      "rule": "DOC001",
+      "symbol": "sample",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoFiles.kt",
+      "line": 89,
+      "rule": "DOC001",
+      "symbol": "pdfPreview",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 13,
+      "rule": "DOC001",
+      "symbol": "DemoResult",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 20,
+      "rule": "DOC001",
+      "symbol": "DemoState",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 38,
+      "rule": "DOC001",
+      "symbol": "configureWorkspace",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 43,
+      "rule": "DOC001",
+      "symbol": "selectWorkspaceAssets",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 48,
+      "rule": "DOC001",
+      "symbol": "receiveAssets",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 68,
+      "rule": "DOC001",
+      "symbol": "execute",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 156,
+      "rule": "DOC001",
+      "symbol": "complete",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 161,
+      "rule": "DOC001",
+      "symbol": "report",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 166,
+      "rule": "DOC001",
+      "symbol": "progress",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 170,
+      "rule": "DOC001",
+      "symbol": "cancel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 174,
+      "rule": "DOC001",
+      "symbol": "selected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 176,
+      "rule": "DOC001",
+      "symbol": "importFiles",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 187,
+      "rule": "DOC001",
+      "symbol": "sample",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 201,
+      "rule": "DOC001",
+      "symbol": "moveInput",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 212,
+      "rule": "DOC001",
+      "symbol": "removeInput",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 217,
+      "rule": "DOC001",
+      "symbol": "reverseInputs",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/DemoViewModel.kt",
+      "line": 221,
+      "rule": "DOC001",
+      "symbol": "input",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceActions.kt",
+      "line": 7,
+      "rule": "DOC001",
+      "symbol": "WorkspaceActions",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceActions.kt",
+      "line": 20,
+      "rule": "DOC001",
+      "symbol": "chooseTool",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "routeForActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+      "line": 33,
+      "rule": "DOC001",
+      "symbol": "importName",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+      "line": 46,
+      "rule": "DOC001",
+      "symbol": "isImage",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+      "line": 48,
+      "rule": "DOC001",
+      "symbol": "accepts",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+      "line": 61,
+      "rule": "DOC001",
+      "symbol": "managed",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "WorkspaceAsset",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 25,
+      "rule": "DOC001",
+      "symbol": "WorkspaceTask",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 36,
+      "rule": "DOC001",
+      "symbol": "WorkspaceSnapshot",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 52,
+      "rule": "DOC001",
+      "symbol": "onCreate",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 61,
+      "rule": "DOC001",
+      "symbol": "onUpgrade",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 69,
+      "rule": "DOC001",
+      "symbol": "changed",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 74,
+      "rule": "DOC001",
+      "symbol": "register",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 108,
+      "rule": "DOC001",
+      "symbol": "asset",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 120,
+      "rule": "DOC001",
+      "symbol": "find",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 127,
+      "rule": "DOC001",
+      "symbol": "findByFile",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 133,
+      "rule": "DOC001",
+      "symbol": "rename",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 146,
+      "rule": "DOC001",
+      "symbol": "start",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 168,
+      "rule": "DOC001",
+      "symbol": "finish",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 183,
+      "rule": "DOC001",
+      "symbol": "snapshot",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 223,
+      "rule": "DOC001",
+      "symbol": "visit",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 234,
+      "rule": "DOC001",
+      "symbol": "favorite",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspaceStore.kt",
+      "line": 244,
+      "rule": "DOC001",
+      "symbol": "get",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+      "line": 14,
+      "rule": "DOC001",
+      "symbol": "cell",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+      "line": 23,
+      "rule": "DOC001",
+      "symbol": "addRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+      "line": 26,
+      "rule": "DOC001",
+      "symbol": "addColumn",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "removeRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/DocumentTable.kt",
+      "line": 31,
+      "rule": "DOC001",
+      "symbol": "removeColumn",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "OfficeActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 13,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 31,
+      "rule": "DOC001",
+      "symbol": "convert",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 55,
+      "rule": "DOC001",
+      "symbol": "beforeTextChanged",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 62,
+      "rule": "DOC001",
+      "symbol": "onTextChanged",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 71,
+      "rule": "DOC001",
+      "symbol": "afterTextChanged",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 124,
+      "rule": "DOC001",
+      "symbol": "refreshTable",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 137,
+      "rule": "DOC001",
+      "symbol": "OfficeViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 145,
+      "rule": "DOC001",
+      "symbol": "update",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 150,
+      "rule": "DOC001",
+      "symbol": "cell",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 154,
+      "rule": "DOC001",
+      "symbol": "addRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 158,
+      "rule": "DOC001",
+      "symbol": "addColumn",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 162,
+      "rule": "DOC001",
+      "symbol": "removeRow",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 166,
+      "rule": "DOC001",
+      "symbol": "removeColumn",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+      "line": 170,
+      "rule": "DOC001",
+      "symbol": "export",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+      "line": 15,
+      "rule": "DOC001",
+      "symbol": "PdfActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+      "line": 16,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+      "line": 23,
+      "rule": "DOC001",
+      "symbol": "convert",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+      "line": 75,
+      "rule": "DOC001",
+      "symbol": "PdfViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/PdfActivity.kt",
+      "line": 76,
+      "rule": "DOC001",
+      "symbol": "export",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "ArchiveActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+      "line": 13,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+      "line": 33,
+      "rule": "DOC001",
+      "symbol": "ArchiveViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+      "line": 34,
+      "rule": "DOC001",
+      "symbol": "compress",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/ArchiveActivity.kt",
+      "line": 56,
+      "rule": "DOC001",
+      "symbol": "extract",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DemoReceiverAssets.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "provider",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 20,
+      "rule": "DOC001",
+      "symbol": "DropActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 21,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 47,
+      "rule": "DOC001",
+      "symbol": "choosePairing",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 77,
+      "rule": "DOC001",
+      "symbol": "startSharing",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 103,
+      "rule": "DOC001",
+      "symbol": "onStop",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 109,
+      "rule": "DOC001",
+      "symbol": "DropViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 115,
+      "rule": "DOC001",
+      "symbol": "start",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 178,
+      "rule": "DOC001",
+      "symbol": "pending",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 193,
+      "rule": "DOC001",
+      "symbol": "stop",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/DropActivity.kt",
+      "line": 197,
+      "rule": "DOC001",
+      "symbol": "onCleared",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 24,
+      "rule": "DOC001",
+      "symbol": "TransferActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 33,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 55,
+      "rule": "DOC001",
+      "symbol": "onNothingSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 57,
+      "rule": "DOC001",
+      "symbol": "onItemSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 95,
+      "rule": "DOC001",
+      "symbol": "convert",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 139,
+      "rule": "DOC001",
+      "symbol": "resumeSelectedTask",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 164,
+      "rule": "DOC001",
+      "symbol": "withEndpointPermission",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 169,
+      "rule": "DOC001",
+      "symbol": "endpoint",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 179,
+      "rule": "DOC001",
+      "symbol": "DemoTransferEndpoint",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 187,
+      "rule": "DOC001",
+      "symbol": "TransferScreen",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 192,
+      "rule": "DOC001",
+      "symbol": "TransferViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 198,
+      "rule": "DOC001",
+      "symbol": "observe",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 229,
+      "rule": "DOC001",
+      "symbol": "select",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 235,
+      "rule": "DOC001",
+      "symbol": "testConnection",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 243,
+      "rule": "DOC001",
+      "symbol": "enqueue",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 285,
+      "rule": "DOC001",
+      "symbol": "refresh",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 302,
+      "rule": "DOC001",
+      "symbol": "control",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 320,
+      "rule": "DOC001",
+      "symbol": "currentId",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 324,
+      "rule": "DOC001",
+      "symbol": "saveTarget",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/TransferActivity.kt",
+      "line": 355,
+      "rule": "DOC001",
+      "symbol": "preferences",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 17,
+      "rule": "DOC001",
+      "symbol": "UploadActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 21,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 32,
+      "rule": "DOC001",
+      "symbol": "onNothingSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 34,
+      "rule": "DOC001",
+      "symbol": "onItemSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 64,
+      "rule": "DOC001",
+      "symbol": "draft",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 75,
+      "rule": "DOC001",
+      "symbol": "UploadDraft",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 84,
+      "rule": "DOC001",
+      "symbol": "UploadViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/UploadActivity.kt",
+      "line": 87,
+      "rule": "DOC001",
+      "symbol": "submit",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/AnnotationActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "AnnotationActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/AnnotationActivity.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/AnnotationActivity.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "AnnotationViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/AnnotationActivity.kt",
+      "line": 29,
+      "rule": "DOC001",
+      "symbol": "inspect",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "BaseActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 40,
+      "rule": "DOC001",
+      "symbol": "BaseViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 41,
+      "rule": "DOC001",
+      "symbol": "loading",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 49,
+      "rule": "DOC001",
+      "symbol": "empty",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 54,
+      "rule": "DOC001",
+      "symbol": "failure",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/BaseActivity.kt",
+      "line": 59,
+      "rule": "DOC001",
+      "symbol": "confirmEvent",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/DemoGetApi.kt",
+      "line": 8,
+      "rule": "DOC001",
+      "symbol": "DemoGetApi",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/DemoGetApi.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "get",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/NetworkActivity.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "NetworkActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/NetworkActivity.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/NetworkActivity.kt",
+      "line": 24,
+      "rule": "DOC001",
+      "symbol": "NetworkViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/NetworkActivity.kt",
+      "line": 25,
+      "rule": "DOC001",
+      "symbol": "request",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PluginActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "PluginActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PluginActivity.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PluginActivity.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "PluginViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PluginActivity.kt",
+      "line": 29,
+      "rule": "DOC001",
+      "symbol": "inspect",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PopupActivity.kt",
+      "line": 8,
+      "rule": "DOC001",
+      "symbol": "PopupActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PopupActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/PopupActivity.kt",
+      "line": 39,
+      "rule": "DOC001",
+      "symbol": "PopupViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/ProcessorActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "ProcessorActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/ProcessorActivity.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/ProcessorActivity.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "ProcessorViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/ProcessorActivity.kt",
+      "line": 29,
+      "rule": "DOC001",
+      "symbol": "inspect",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouteTargetActivity.kt",
+      "line": 8,
+      "rule": "DOC001",
+      "symbol": "RouteTargetActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouteTargetActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouteTargetActivity.kt",
+      "line": 23,
+      "rule": "DOC001",
+      "symbol": "RouteTargetViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouterActivity.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "RouterActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouterActivity.kt",
+      "line": 10,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouterActivity.kt",
+      "line": 28,
+      "rule": "DOC001",
+      "symbol": "RouterViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/RouterActivity.kt",
+      "line": 29,
+      "rule": "DOC001",
+      "symbol": "inspect",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/UtilsActivity.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "UtilsActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/UtilsActivity.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/UtilsActivity.kt",
+      "line": 32,
+      "rule": "DOC001",
+      "symbol": "UtilsViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_foundation/src/main/java/com/wkq/dev/demo/foundation/UtilsActivity.kt",
+      "line": 33,
+      "rule": "DOC001",
+      "symbol": "digest",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 22,
+      "rule": "DOC001",
+      "symbol": "GoogleActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 25,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 125,
+      "rule": "DOC001",
+      "symbol": "firebaseReady",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 127,
+      "rule": "DOC001",
+      "symbol": "login",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 156,
+      "rule": "DOC001",
+      "symbol": "onStart",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 176,
+      "rule": "DOC001",
+      "symbol": "onStop",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 182,
+      "rule": "DOC001",
+      "symbol": "onDestroy",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 189,
+      "rule": "DOC001",
+      "symbol": "GoogleViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 198,
+      "rule": "DOC001",
+      "symbol": "matches",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 201,
+      "rule": "DOC001",
+      "symbol": "query",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+      "line": 235,
+      "rule": "DOC001",
+      "symbol": "restore",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 8,
+      "rule": "DOC001",
+      "symbol": "PurchaseRecoveryState",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 9,
+      "rule": "DOC001",
+      "symbol": "Idle",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 11,
+      "rule": "DOC001",
+      "symbol": "Loading",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 13,
+      "rule": "DOC001",
+      "symbol": "Ready",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 15,
+      "rule": "DOC001",
+      "symbol": "Failed",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 31,
+      "rule": "DOC001",
+      "symbol": "configure",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt",
+      "line": 37,
+      "rule": "DOC001",
+      "symbol": "refresh",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 17,
+      "rule": "DOC001",
+      "symbol": "MetadataActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 18,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 47,
+      "rule": "DOC001",
+      "symbol": "MetadataViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 51,
+      "rule": "DOC001",
+      "symbol": "details",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 97,
+      "rule": "DOC001",
+      "symbol": "inspect",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/MetadataActivity.kt",
+      "line": 107,
+      "rule": "DOC001",
+      "symbol": "write",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+      "line": 12,
+      "rule": "DOC001",
+      "symbol": "QrActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+      "line": 13,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+      "line": 34,
+      "rule": "DOC001",
+      "symbol": "QrViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+      "line": 35,
+      "rule": "DOC001",
+      "symbol": "generate",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/QrActivity.kt",
+      "line": 54,
+      "rule": "DOC001",
+      "symbol": "recognize",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 23,
+      "rule": "DOC001",
+      "symbol": "WatermarkActivity",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 24,
+      "rule": "DOC001",
+      "symbol": "initView",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 47,
+      "rule": "DOC001",
+      "symbol": "onNothingSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 49,
+      "rule": "DOC001",
+      "symbol": "onItemSelected",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 105,
+      "rule": "DOC001",
+      "symbol": "WatermarkViewModel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 110,
+      "rule": "DOC001",
+      "symbol": "addLabel",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 128,
+      "rule": "DOC001",
+      "symbol": "undo",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 135,
+      "rule": "DOC001",
+      "symbol": "redo",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 142,
+      "rule": "DOC001",
+      "symbol": "clear",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "feature/feature_demo_image/src/main/java/com/wkq/dev/demo/image/WatermarkActivity.kt",
+      "line": 149,
+      "rule": "DOC001",
+      "symbol": "render",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    }
+  ]
+}

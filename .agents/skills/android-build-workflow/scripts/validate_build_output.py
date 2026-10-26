@@ -183,6 +183,46 @@ def validate_edge_to_edge(root: Path, target_sdk: int | None, errors: list[str],
         add(warnings, "WARN", "resources", "fitsSystemWindows should not be used as a global Edge-to-edge fallback.")
 
 
+def validate_android17(root: Path, target_sdk: int | None, errors: list[str], warnings: list[str]) -> None:
+    """Validate known API 37 tool constraints; runtime capability checks stay explicit."""
+    catalog = root / "gradle/libs.versions.toml"
+    text = read_text(catalog) if catalog.is_file() else ""
+    def version(key: str) -> tuple[int, ...] | None:
+        match = re.search(r'^\s*' + key + r'\s*=\s*"([0-9.]+)"', text, re.M)
+        return tuple(map(int, match[1].split("."))) if match else None
+    compile_sdk = version("compileSdk")
+    if (target_sdk or 0) < 37 and (compile_sdk or (0,)) < (37,):
+        return
+    agp = version("agp")
+    if agp is None:
+        add(warnings, "WARN", catalog, "API 37: AGP version not resolved; verify official tool support manually.")
+    elif agp < (9, 1, 1):
+        add(errors, "ERROR", catalog, "API 37 requires AGP >= 9.1.1.")
+    kotlin = version("kotlin")
+    if agp and (9, 1, 1) <= agp < (9, 2) and kotlin and kotlin < (2, 2, 10):
+        add(errors, "ERROR", catalog, "AGP 9.1 baseline requires Kotlin >= 2.2.10.")
+    properties = root / "gradle.properties"
+    if agp and agp >= (9,) and properties.is_file():
+        flags = read_text(properties)
+        disabled = [bool(re.search(r"^\s*" + re.escape(key) + r"\s*=\s*false\s*$", flags, re.M))
+                    for key in ("android.builtInKotlin", "android.newDsl")]
+        if disabled[0] and not disabled[1]:
+            add(errors, "ERROR", properties, "Legacy Kotlin opt-out also requires android.newDsl=false on AGP 9.")
+    if compile_sdk and target_sdk and compile_sdk < (target_sdk,):
+        add(errors, "ERROR", catalog, "compileSdk must not be below targetSdk.")
+    wrapper = root / "gradle/wrapper/gradle-wrapper.properties"
+    match = re.search(r"gradle-([0-9.]+)-(?:bin|all)\.zip", read_text(wrapper)) if wrapper.is_file() else None
+    if agp and (9, 1, 1) <= agp < (9, 2):
+        if not match or tuple(map(int, match[1].split("."))) < (9, 3, 1):
+            add(errors, "ERROR", wrapper, "AGP 9.1.x requires Gradle >= 9.3.1.")
+    # Only app/feature declarations: preserve independent library manifests and report host overrides.
+    for parent in (root / "app", root / "feature"):
+        for manifest in parent.glob("**/src/main/AndroidManifest.xml"):
+            value = read_text(manifest)
+            if (target_sdk or 0) >= 37 and re.search(r'android:(?:screenOrientation|resizeableActivity)=\"(?:portrait|landscape|false)\"', value):
+                add(warnings, "WARN", manifest, "API 37 large screens: orientation/resizability restrictions cannot replace adaptive layouts.")
+
+
 def main() -> int:
     args = parse_args()
     root = Path(args.project_root)
@@ -195,6 +235,7 @@ def main() -> int:
         app_build = app / "build.gradle.kts"
     target_sdk = find_target_sdk(root, app_build)
 
+    validate_android17(root, target_sdk, errors, warnings)
     validate_settings(root, errors, warnings)
     validate_versions_and_signing(root, app_build, errors, warnings)
     validate_manifest(app / "src/main/AndroidManifest.xml", errors, warnings)

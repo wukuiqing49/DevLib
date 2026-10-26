@@ -5,7 +5,7 @@
 - `core/` 和 `feature/` 是目录容器，不直接注册为 Gradle module。
 - 实际模块使用 `:core:<module>` 和 `:feature:<module>`。
 - `app` 只负责应用壳、全局初始化和顶层导航，不承载大量业务页面。
-- `core` 子模块不得依赖 `app` 或功能 feature 模块；根据本项目资源集中约定，允许 implementation 依赖仅承载资源与生成 ViewBinding 的 `feature_res`。
+- `core` 子模块不得依赖 `app` 或任何 `feature` 模块，包括 `feature_res`。独立库自有资源留在本库，宿主共享资源放在 feature_res；不得为复用宿主资源破坏库的独立接入。
 - feature 模块不得形成循环依赖；`feature_res` 不依赖功能模块。
 - 跨功能逻辑放职责匹配的 core 子模块；跨功能资源放共享资源模块。
 - 功能专属 UI、状态和编排留在对应 feature 模块。

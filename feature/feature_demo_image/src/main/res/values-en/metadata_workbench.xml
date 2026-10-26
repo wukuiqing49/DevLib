@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="metadata_fields">Field details</string>
+    <string name="metadata_exif">EXIF · Capture and copyright fields</string>
+    <string name="metadata_iptc">IPTC / XMP · Content metadata</string>
+    <string name="metadata_not_read">Choose an image and read its fields. Editing writes only the author and description to a copy; other fields are read-only.</string>
+    <string name="metadata_partial">Content metadata could not be fully read. EXIF fields remain available.</string>
+    <string name="metadata_jpeg_only">Content metadata preview currently supports JPEG only. Other formats show EXIF fields here.</string>
+    <string name="metadata_confirm">Write the author and description to a new copy, leaving the original unchanged?</string>
+</resources>

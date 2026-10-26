@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/nav_home" android:title="@string/workbench_home" android:icon="@drawable/ic_workspace_workbench" />
+<item android:id="@+id/nav_tools" android:title="@string/workbench_tools" android:icon="@drawable/ic_workspace_tools" />
+<item android:id="@+id/nav_assets" android:title="@string/workbench_assets" android:icon="@drawable/ic_workspace_assets" />
+<item android:id="@+id/nav_developer" android:title="@string/workbench_developer" android:icon="@drawable/ic_workspace_developer" />
+</menu>

@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-26",
+  "jvm_suites": [
+    {
+      "name": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.common.DemoExecutionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.common.WorkspaceSelectionTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.document.DocumentTableTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.files.TransferHistoryTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "jvm_tests": 41,
+  "python_tests": 40,
+  "browser_tests": 7,
+  "debug_build": "passed",
+  "local_library_publication": "passed: 19 modules, build/repo only",
+  "independent_consumer_compile": "passed",
+  "app_release": "blocked: required release signing configuration unavailable",
+  "device_tests": "not run per user instruction",
+  "core_and_ci_changes": false,
+  "business_english": {
+    "files": 24,
+    "strings": 362,
+    "string_arrays": 7
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-26",
   "excludedSources": [
     "Starxen",
     "BeautySDK",
@@ -94,7 +94,7 @@
       "module": "lib_operations",
       "category": "functional",
       "sourceRepository": "PhotoKit",
-      "artifactType": "jvm",
+      "artifactType": "aar",
       "role": "support",
       "demoCoveredBy": [
         "core_archive",

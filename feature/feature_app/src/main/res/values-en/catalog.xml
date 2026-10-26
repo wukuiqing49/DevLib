@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="catalog_title">DevLib</string>
+    <string name="catalog_intro">8 foundation modules and 10 feature libraries, plus 1 internal support library without a separate page.</string>
+    <string name="catalog_search">Search features or module names</string>
+    <string name="catalog_all">All</string>
+    <string name="catalog_foundation">Foundation libraries</string>
+    <string name="catalog_files">Files and transfer</string>
+    <string name="catalog_image">Images and metadata</string>
+    <string name="catalog_document">Document export</string>
+    <string name="catalog_count">%1$d available tools</string>
+    <string name="catalog_empty">No matches. Try another keyword.</string>
+    <string name="catalog_item_meta">%1$s · %2$s · %3$s</string>
+    <string name="catalog_build_only">Build-time capability</string>
+    <string name="catalog_local">Local workflow</string>
+    <string name="catalog_external">Requires external configuration or permissions</string>
+    <string name="catalog_functional">Feature libraries</string>
+    <string name="catalog_tier">Library type</string>
+    <string name="catalog_google">Google services</string>
+</resources>

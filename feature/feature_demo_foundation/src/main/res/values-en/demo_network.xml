@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_network_title">HTTPS requests and responses</string>
+    <string name="demo_network_intro">Enter your HTTPS JSON endpoint to use the Network initialization and response wrapper. Edit the address and retry if the request fails.</string>
+    <string name="demo_network_input">01 Select and configure</string>
+    <string name="demo_network_execute">02 Run operation</string>
+    <string name="demo_network_success">Completed. Check the result.</string>
+    <string name="demo_network_url">HTTPS URL</string>
+    <string name="demo_network_url_value">https://example.com/</string>
+    <string name="demo_network_request">Send GET request</string>
+</resources>

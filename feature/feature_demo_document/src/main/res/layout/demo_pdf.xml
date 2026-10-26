@@ -5,6 +5,8 @@
         <TextView style="@style/Demo.Heading" android:text="@string/demo_pdf_input" />
         <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
         <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
+        <TextView style="@style/Demo.Heading" android:text="@string/pdf_page_order" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/pages" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:nestedScrollingEnabled="false" />
         <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_paper">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/paper" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_pdf_paper_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>

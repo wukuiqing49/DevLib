@@ -28,3 +28,5 @@ dependencies {
     ksp project(':core:core_router_processor')
 }
 ksp { arg("moduleName", "DevDemoDocument") }
+
+dependencies { testImplementation photoLibs.junit }

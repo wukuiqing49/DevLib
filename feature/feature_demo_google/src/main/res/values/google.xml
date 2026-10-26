@@ -34,4 +34,6 @@
 一次性购买：%3$s
 待处理订单：%4$s</string>
     <string name="google_restore_first">请先查询商品，建立本次演示的商品范围。</string>
+<string name="google_recovering">正在同步 Play 购买状态…</string>
+<string name="google_recovery_failed">购买状态暂时无法确认，请检查网络后恢复查询。</string>
 </resources>

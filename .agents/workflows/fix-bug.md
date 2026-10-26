@@ -7,6 +7,7 @@
 - `.agents/rules/execution.md`
 - `.agents/rules/android.md`
 - `.agents/config/project-profile.yml`
+- `.agents/workflows/develop-feature.md`（代码修改的共同基线）
 
 根据错误模块继续加载对应规则、Workflow 和 Skills：
 

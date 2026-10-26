@@ -34,3 +34,5 @@
 - 修改 theme、manifest 或系统栏配置时扩大验证到 Android 15+、导航模式、横竖屏和 cutout 风险。
 - native ABI 以启动及核心路径必需库的兼容交集为准。
 - 涉及 `.so`、release 或打包配置时检查 16KB page size 兼容并说明未验证风险。
+
+- Android 17 / API 37 任务读取 `.agents/skills/android-build-workflow/references/android-17.md`；当前工具基线 AGP 9.1.1 / Gradle 9.3.1 / JDK 17。区分所有应用与 target 37 行为变更。

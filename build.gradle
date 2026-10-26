@@ -8,10 +8,11 @@ plugins {
 }
 
 // Demo 应用与独立库共享工具链，公开包名沿用迁入库的 API。
-ext.appConfig = [compileSdk: 36, targetSdk: 36, minSdk: 26,
+ext.appConfig = [compileSdk: libs.versions.compileSdk.get().toInteger(),
+ targetSdk: libs.versions.targetSdk.get().toInteger(), minSdk: libs.versions.minSdk.get().toInteger(),
  jvmTarget: org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17]
-ext.compileSdkVersion = 36
-ext.targetSdkVersion = 36
+ext.compileSdkVersion = libs.versions.compileSdk.get().toInteger()
+ext.targetSdkVersion = libs.versions.targetSdk.get().toInteger()
 ext.minSdkVersion = 26
 ext.devlibVersion = '0.1.0-SNAPSHOT'
 

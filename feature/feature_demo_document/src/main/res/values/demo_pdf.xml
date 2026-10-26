@@ -2,8 +2,8 @@
 <resources>
     <string name="demo_pdf_title">图片 PDF 编排</string>
     <string name="demo_pdf_intro">按选择顺序组合多张图片，设置纸张、方向和网格。先配置再导出，结果显示 PDF 首页。</string>
-    <string name="demo_pdf_input">01 选择与配置</string>
-    <string name="demo_pdf_execute">02 执行流程</string>
+    <string name="demo_pdf_input">选择图片素材</string>
+    <string name="demo_pdf_execute">生成 PDF</string>
     <string name="demo_pdf_success">执行完成，结果如下</string>
     <string name="demo_pdf_paper">纸张 A3 / A4 / A5 / LETTER</string>
     <string name="demo_pdf_paper_value">A4</string>

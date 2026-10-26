@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_archive_title">Compression and encrypted archives</string>
+    <string name="demo_archive_intro">Select multiple files to create a ZIP, with an optional password. Select an encrypted ZIP and enter its password to extract and inspect the resulting files.</string>
+    <string name="demo_archive_input">01 Select and configure</string>
+    <string name="demo_archive_execute">02 Run operation</string>
+    <string name="demo_archive_success">Completed. Check the result.</string>
+    <string name="demo_archive_password">Password (optional; encrypted ZIP extraction supported)</string>
+    <string name="demo_archive_password_value" />
+    <string name="demo_archive_compress">Create ZIP</string>
+    <string name="demo_archive_extract">Decrypt and list files</string>
+</resources>

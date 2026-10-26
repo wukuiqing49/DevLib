@@ -26,4 +26,15 @@
     <string name="demo_denied">拒绝：请检查账号、状态、能力名或有效期</string>
     <string name="demo_stopped">已停止</string>
     <string name="demo_location_unavailable">暂时无法定位，请检查定位开关及系统服务</string>
+    <string name="demo_error_input">输入不完整或参数超出范围，请检查后重试。</string>
+    <string name="demo_error_permission">没有访问权限，请重新授权文件或检查服务器权限。</string>
+    <string name="demo_error_not_found">文件或资源不存在，请重新选择。</string>
+    <string name="demo_error_timeout">操作超时，请检查网络或服务器后重试。</string>
+    <string name="demo_error_certificate">无法验证服务器证书，请检查证书和主机配置。</string>
+    <string name="demo_error_network">连接失败，请检查网络、地址和服务器状态。</string>
+    <string name="demo_error_unknown">操作未完成，请检查配置后重试。</string>
+    <string name="demo_local_network_reason">此操作可能连接局域网设备，需要允许“附近的设备”权限。授权后继续，拒绝则取消操作。</string>
+    <string name="demo_local_network_denied">未获得局域网权限。操作已取消，可重试并授权；若系统不再询问，请在应用设置中开启附近设备权限。</string>
+    <string name="demo_local_network_retry">局域网权限已授予，请重新点击操作。</string>
+    <string name="demo_history_failed">操作记录未能保存，当前结果仍可查看或另存；请检查存储空间，不要仅因记录失败而重复提交操作。</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="metadata_fields">字段详情</string>
+    <string name="metadata_exif">EXIF · 常用拍摄与版权字段</string>
+    <string name="metadata_iptc">IPTC / XMP · 常用内容字段</string>
+    <string name="metadata_not_read">选好图片后读取字段。编辑区仅写入作者和图片说明，其他字段用于查看。</string>
+    <string name="metadata_partial">内容字段读取未完成，仍可查看 EXIF。</string>
+    <string name="metadata_jpeg_only">当前内容字段预览适用于 JPEG；其他格式此处仅展示 EXIF。</string>
+    <string name="metadata_confirm">将作者和图片说明写入新副本；原图保持不变。是否生成副本？</string>
+</resources>

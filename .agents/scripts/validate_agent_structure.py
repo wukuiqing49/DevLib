@@ -23,6 +23,7 @@ REQUIRED: dict[str, set[str]] = {
         "ui.md",
     },
     "workflows": {
+        "develop-feature.md",
         "change-architecture.md",
         "change-build.md",
         "create-project.md",
@@ -56,6 +57,7 @@ SCRIPT_REF_RE = re.compile(r"(?:\.agents/[A-Za-z0-9_./-]+/)?[A-Za-z0-9_-]+\.py")
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate Agent rules, workflows, prompts and skills.")
     parser.add_argument("--project-root", default=".", help="Project root.")
+    parser.add_argument("--profile-only", action="store_true", help="Validate target facts without requiring a copied tool bundle.")
     parser.add_argument("--mode", choices=("auto", "config", "project"), default="auto",
                         help="Validate configuration only, project facts, or select by lifecycle.")
     return parser.parse_args()
@@ -259,13 +261,14 @@ def main() -> int:
     root = Path(args.project_root).resolve()
     errors: list[str] = []
 
-    validate_required_files(root, errors)
     validate_profile(root, errors, args.mode)
-    validate_client_bridges(root, errors)
-    validate_prompts(root, errors)
-    skill_names = validate_skills(root, errors)
-    validate_workflows(root, skill_names, errors)
-    validate_static_agent_paths(root, errors)
+    if not args.profile_only:
+        validate_required_files(root, errors)
+        validate_client_bridges(root, errors)
+        validate_prompts(root, errors)
+        skill_names = validate_skills(root, errors)
+        validate_workflows(root, skill_names, errors)
+        validate_static_agent_paths(root, errors)
 
     if errors:
         for error in errors:

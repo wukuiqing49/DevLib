@@ -1,7 +1,7 @@
 schemaVersion: 1
 project:
   name: DevLib
-  description: Android 多模块独立功能库与演示工程，统一维护基础框架、文件传输、轻量图片、元数据与文档导出
+  description: Android 多模块独立功能库与开发者工作台，统一维护基础框架、文件传输、轻量图片、元数据与文档导出
   kind: development-library
   lifecycle: initialized
   phase: integration-validation
@@ -10,9 +10,10 @@ android:
   namespace: com.wkq.dev
   versionName: 0.1.0
   minSdk: 26
-  compileSdk: 36
-  targetSdk: 36
+  compileSdk: 37
+  targetSdk: 37
   jvmTarget: 17
+  requiredHostLocales: [en]
   language: kotlin
   uiToolkit: xml
   viewBinding: true
@@ -69,7 +70,13 @@ sourceOfTruth:
   moduleGraph: settings.gradle
   moduleBuildFiles: '**/build.gradle'
   importManifest: docs/import-manifest.json
+executionPolicy:
+  deviceCommands: excluded
+  deviceReason: 用户明确要求不做真机测试；执行 adb 前先检查本项，后续明确授权可覆盖
+  skillSource: project-local-first
 validation:
+  androidWorkflows: python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma
+  androidWorkflowTests: python -B .agents/scripts/tests/test_validate_android_workflows.py -v
   agentStructure: python -B .agents/scripts/validate_agent_structure.py --project-root
     .
   agentConfiguration: python -B .agents/scripts/validate_android_workflows.py --project-root

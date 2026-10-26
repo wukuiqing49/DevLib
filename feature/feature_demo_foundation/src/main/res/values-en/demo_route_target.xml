@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_route_target_title">Received route parameters</string>
+    <string name="demo_route_target_intro">This page is registered by a route annotation. Generated code injects the value parameter.</string>
+    <string name="demo_route_target_input">01 Select and configure</string>
+    <string name="demo_route_target_execute">02 Run operation</string>
+    <string name="demo_route_target_success">Completed. Check the result.</string>
+    <string name="demo_route_target_finish">Go back</string>
+</resources>

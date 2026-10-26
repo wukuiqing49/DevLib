@@ -1,0 +1,738 @@
+[
+  {
+    "module": "core/core_archive",
+    "suite": "com.wkq.photo.archive.EncryptedArchiveOperationsTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_archive",
+    "suite": "com.wkq.photo.archive.ZipArchiveCreatorTest",
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_base",
+    "suite": "com.wkq.base.reflect.GenericTypeResolverTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_base",
+    "suite": "com.wkq.base.widget.EmptyViewTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_base",
+    "suite": "com.wkq.base.widget.MultiSpanTextViewTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_base",
+    "suite": "com.wkq.base.widget.VerifyCodeInputViewTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_google",
+    "suite": "com.wkq.google.billing.GoogleBillingEntitlementCacheTest",
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_google",
+    "suite": "com.wkq.google.billing.GoogleBillingEntitlementTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_google",
+    "suite": "com.wkq.google.billing.GoogleBillingPolicyTest",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_image_render",
+    "suite": "com.wkq.photo.imagerender.AnnotationRendererTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_image_render",
+    "suite": "com.wkq.photo.imagerender.BitmapFileDecoderTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_image_render",
+    "suite": "com.wkq.photo.imagerender.NewToolsRenderersTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_image_render",
+    "suite": "com.wkq.photo.imagerender.WatermarkRendererTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_network",
+    "suite": "com.wkq.net.config.NetConfigTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_network",
+    "suite": "com.wkq.net.core.DownloadRetrofitTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_network",
+    "suite": "com.wkq.net.interceptor.LoggingInterceptorTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_pdf",
+    "suite": "com.wkq.photo.pdf.PdfImageExportRequestTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_qrcode",
+    "suite": "com.wkq.photo.qrcode.QRCodeGeneratorTest",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_qrcode",
+    "suite": "com.wkq.photo.qrcode.QrCodeKitTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_router_gradle_plugin",
+    "suite": "com.wkq.router.gradle.RouterGradlePluginTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_router_processor",
+    "suite": "com.wkq.router.processor.RouteProcessorTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_utils",
+    "suite": "com.wkq.util.coil.CacheManagerConfigTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_utils",
+    "suite": "com.wkq.util.CoreUtilsConfigTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_utils",
+    "suite": "com.wkq.util.FormatUtilTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/core_utils",
+    "suite": "com.wkq.util.jump.SmartJumpEngineTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_document",
+    "suite": "com.wkq.roof.export.OfficeWriterTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_drop",
+    "suite": "com.wkq.droplan.drop.DropServerTest",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_drop",
+    "suite": "com.wkq.droplan.drop.HttpByteRangeTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_drop",
+    "suite": "com.wkq.droplan.drop.HttpsTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_drop",
+    "suite": "com.wkq.droplan.drop.SnapshotZipArchiveTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_drop",
+    "suite": "com.wkq.droplan.drop.WebSocketTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.dev.metadata.model.MetadataTemplateWorkflowTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.CrwMetadataFieldsTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.ExpandedIptcXmpWriterTest",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.IptcAndXmpVerificationTest",
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.JpegOriginalQualityTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.MetadataDeliveryStatusTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.MetadataProcessRunnerTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.NativeCaptureDateTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.NativeIptcTemplateTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.NativeWriteValidationTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.PreviewMetadataReadTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.UploadMetadataCopierTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.XmpAsciiPacketTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.XmpMetadataReaderTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.iptc.feature.press.metadata.XmpSidecarStoreTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.util.exif.MetadataPrivacyRulesTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.util.exif.MetadataScrubberTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.util.exif.PhotoFormatPolicyTest",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_metadata",
+    "suite": "com.wkq.util.exif.RasterMetadataChunksTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_operations",
+    "suite": "com.wkq.photo.core.operation.OperationContractsTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_operations",
+    "suite": "com.wkq.photo.core.operation.OutputPathRegistryTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_operations",
+    "suite": "com.wkq.photo.core.utils.AtomicFileOutputTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_operations",
+    "suite": "com.wkq.photo.core.utils.TemporaryFileCleanerTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.DirectoryListingCacheTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.FileClientTest",
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.FileContentCacheTest",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.FilePreviewFormatsTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.LocalScanBenchmarkTest",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.PaidModeAccessTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.ProviderFailureTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.ReliabilityTest",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.RenamePlannerTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SelectionDraftStoreTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SmbPathTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.StartupRecoveryTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.StorageIdentityTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SyncDiagnosticsTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SyncPlannerTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SyncScopeScannerTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.SyncSelectionTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TaskNotificationRouteTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferConnectivityTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferDaoTest",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferExecutorTest",
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferMigrationTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferQueueSignalsTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.TransferQueueWorkerTest",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.V2PayloadsTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.V2Test",
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.V2WorkerTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.WebDavCertificatesTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.WebDavProviderTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.WebDavReplacementRecoveryTest",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_transfer",
+    "suite": "com.wkq.nas.transfer.WorkerProvidersTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_upload",
+    "suite": "com.wkq.iptc.upload.UploadProtocolValidationTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "core/lib_xpopup",
+    "suite": "com.lxj.xpopup.core.PopupInsetCalculatorTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "feature/feature_demo_common",
+    "suite": "com.wkq.dev.demo.common.DemoErrorsTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "feature/feature_demo_common",
+    "suite": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "feature/feature_demo_document",
+    "suite": "com.wkq.dev.demo.document.DocumentTableTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "feature/feature_demo_files",
+    "suite": "com.wkq.dev.demo.files.TransferHistoryTest",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "module": "feature/feature_demo_google",
+    "suite": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+]

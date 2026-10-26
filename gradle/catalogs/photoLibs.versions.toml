@@ -1,5 +1,5 @@
 [versions]
-compileSdk = "36"
+compileSdk = "37"
 minSdk = "24"
 androidx-core = "1.18.0"
 androidx-appcompat = "1.7.1"

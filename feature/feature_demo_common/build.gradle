@@ -22,4 +22,5 @@ dependencies {
     implementation libs.androidx.recyclerview
     implementation libs.material
     implementation project(':core:core_image_render')
+    testImplementation photoLibs.junit
 }

@@ -5,17 +5,29 @@
         <TextView style="@style/Demo.Heading" android:text="@string/demo_watermark_input" />
         <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
         <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_text">
+        <include android:id="@+id/result" layout="@layout/demo_output" />
+        <TextView style="@style/Demo.Heading" android:text="@string/demo_image_mode" />
+        <Spinner android:id="@+id/mode" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
+        <Spinner android:id="@+id/styleChoice" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/textInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_text">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/text" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_watermark_text_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_size">
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/sizeInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_size">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/size" style="@style/Demo.Input" android:inputType="numberDecimal" android:text="@string/demo_watermark_size_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_alpha">
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/alphaInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_watermark_alpha">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/alpha" style="@style/Demo.Input" android:inputType="number" android:text="@string/demo_watermark_alpha_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/thresholdInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_image_threshold" android:visibility="gone"><com.google.android.material.textfield.TextInputEditText android:id="@+id/threshold" style="@style/Demo.Input" android:inputType="numberDecimal" android:text="@string/demo_image_threshold_default" /></com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:id="@+id/annotations" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <TextView style="@style/Demo.Label" android:text="@string/demo_image_annotation_help" />
+        <TextView android:id="@+id/annotationStatus" style="@style/Demo.Label" />
+<com.google.android.material.button.MaterialButton android:id="@+id/addLabel" style="@style/Demo.Button" android:text="@string/demo_image_add_label" />
+<com.google.android.material.button.MaterialButton android:id="@+id/undo" style="@style/Demo.Button" android:text="@string/demo_image_undo" />
+<com.google.android.material.button.MaterialButton android:id="@+id/redo" style="@style/Demo.Button" android:text="@string/demo_image_redo" />
+<com.google.android.material.button.MaterialButton android:id="@+id/clear" style="@style/Demo.Button" android:text="@string/demo_image_clear" />
+</LinearLayout>
         <TextView style="@style/Demo.Heading" android:text="@string/demo_watermark_execute" />
         <com.google.android.material.button.MaterialButton android:id="@+id/render" style="@style/Demo.Button" android:text="@string/demo_watermark_render" />
-        <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

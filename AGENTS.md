@@ -2,8 +2,8 @@
 
 ## 项目定位与事实
 
-DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/`，演示 App 包名为 `com.wkq.dev`。库包含基础框架、文件传输、元数据、轻量图片与文档导出能力；迁入不等于设备或生产验收通过。
-`app/` 与 `feature/` 承载演示和宿主适配，业务产品页面、商品 ID、计费门禁和账号体系由消费项目维护。
+DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/`，开发者工作台 App 包名为 `com.wkq.dev`。库包含基础框架、文件传输、元数据、轻量图片与文档导出能力；迁入不等于设备或生产验收通过。
+`app/` 与 `feature/` 承载开发者工作台、能力体验和宿主适配，业务产品页面、商品 ID、计费门禁和账号体系由消费项目维护。
 项目事实见 `.agents/config/project-profile.yml`，来源见 `docs/import-manifest.json`，模块目录见 `README.md`。
 
 ## 加载与适用范围
@@ -13,15 +13,25 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 3. Android 任务才按下表读取对应工作流及其声明的规则和技能。XML、MVVM、WKQ 等约定仅用于匹配的 Android 目标，不作为所有项目的全局要求。
 4. 其他技术栈以目标项目的实际源码、构建配置和局部规范为准；没有对应工作流时按通用执行流程完成，不套用 Android 约束。
 5. DropLAN 相关文件是保留的历史专项参考，仅在用户明确要求 DropLAN 任务时加载，不代表 DevLib 的产品需求或当前模块。
-6. 用户明确要求优先于仓库默认约定；子目录规范限定在其目录内。索引负责导航，工作流组合规则，技能提供具体方法，避免重复维护冲突规则。
+6. 同名 Skill 优先读取当前项目 `.agents/skills/<name>/SKILL.md`，不要混用个人目录中的旧副本；缺失时再按任务寻找可用能力。
+7. 用户明确要求优先于仓库默认约定；子目录规范限定在其目录内。索引负责导航，工作流组合规则，技能提供具体方法，避免重复维护冲突规则。
+
+## Android 功能开发必读要求
+
+- 新增、修改或优化 Android 功能时，必须先读取 `.agents/workflows/develop-feature.md`；Base 复用、中文注释和适用性检查为共同基线，页面任务加载 UI/国际化 Skills，纯引擎任务按影响选择领域 Skills并说明不适用项。
+- Base 继承与组件复用、XML + ViewBinding + MVVM、国际化、屏幕和系统适配不得作为可选建议。具体规则以 `.agents/rules/architecture.md`、`ui.md`、`i18n.md`、`android.md` 为准；未经确认不另起一套基础封装。
+- 新增及修改的类、接口、具名对象和方法/函数必须有中文 KDoc/JavaDoc；名称保持规范英文，不改公开 API。既有基础库和未改动声明不因补注释而批量重写。
+- 完成时说明所用 Skills、Base/组件复用、文案与适配检查，以及未验证项。脚本通过不等于人工审查、设备或视觉验收完成。
 
 ## 任务路由
 
 | 任务 | 工作流或入口 |
 | --- | --- |
 | 开发库工具、文档、通用 Bug 修复 | `.agents/rules/execution.md` |
+| 根据项目代码与资源创建官网 | `.agents/skills/project-official-website/SKILL.md` |
 | Android 工程生成 | `.agents/workflows/create-project.md` |
 | Android 模块与共享能力 | `.agents/workflows/change-architecture.md` |
+| Android 功能开发与优化（统一入口） | `.agents/workflows/develop-feature.md` |
 | Android 页面 | `.agents/workflows/implement-page.md` |
 | Android 国际化 | `.agents/workflows/localize-content.md` |
 | Android 构建与发布 | `.agents/workflows/change-build.md` |
@@ -39,6 +49,8 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 - 不写入真实密钥、证书密码、令牌或本地机器路径；不把旧产品标识直接用于新项目。
 - 入口、配置、路由或引用变更后运行 `python -B .agents/scripts/validate_agent_structure.py --project-root .`。
 - 校验脚本变更后运行其对应测试；Android 构建和设备验证仅对实际 Android 目标执行。
+- 执行设备命令前先读取项目档案 executionPolicy 与测试计划的排除项；本项目按用户要求不执行真机/adb 操作，后续明确要求可以覆盖该偏好。
+- Skill 验证默认在本地执行；CI 创建授权、触发方式和可追溯业务例外遵循 `.agents/rules/execution.md` 的“Skill 验证与 CI 管理边界”。
 - 中文汇报修改内容、验证结果和未验证项；结构校验通过不等同于产品构建或功能通过。
 
 ## 独立库边界

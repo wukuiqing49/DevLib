@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_router_title">Navigation and parameters</string>
+    <string name="demo_router_intro">Enter a registered route and parameter, then open the destination with Router. Try an unknown route to inspect fallback behavior.</string>
+    <string name="demo_router_input">01 Select and configure</string>
+    <string name="demo_router_execute">02 Run operation</string>
+    <string name="demo_router_success">Completed. Check the result.</string>
+    <string name="demo_router_path">Route path</string>
+    <string name="demo_router_path_value">/foundation/route_target</string>
+    <string name="demo_router_value">Parameter value</string>
+    <string name="demo_router_value_value">DevLib route</string>
+    <string name="demo_router_inspect">Inspect generated routes</string>
+    <string name="demo_router_navigate">Open destination</string>
+</resources>

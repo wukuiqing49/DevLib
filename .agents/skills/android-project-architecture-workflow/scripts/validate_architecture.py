@@ -85,7 +85,7 @@ def validate_dependencies(modules: dict[str, Path], errors: list[str], warnings:
     for module, path in modules.items():
         deps = collect_project_dependencies(path)
         if module.startswith(":core:"):
-            bad = sorted(dep for dep in deps if dep == ":app" or (dep.startswith(":feature:") and dep != ":feature:feature_res"))
+            bad = sorted(dep for dep in deps if dep == ":app" or dep.startswith(":feature:"))
             if bad:
                 errors.append(f"ERROR: {path}: core module must not depend on app/feature modules: {', '.join(bad)}")
         if module == ":feature:feature_res":

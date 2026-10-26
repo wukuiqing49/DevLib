@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_popup_title">Interactive dialogs</string>
+    <string name="demo_popup_intro">Edit the dialog title and message, then try DialogKit messages, confirmation callbacks, and XPopup bottom lists.</string>
+    <string name="demo_popup_input">01 Select and configure</string>
+    <string name="demo_popup_execute">02 Run operation</string>
+    <string name="demo_popup_success">Completed. Check the result.</string>
+    <string name="demo_popup_title_value">Confirm operation</string>
+    <string name="demo_popup_message">Dialog message</string>
+    <string name="demo_popup_message_value">Please confirm the current operation</string>
+    <string name="demo_popup_common">Message dialog</string>
+    <string name="demo_popup_confirm">Confirm or cancel</string>
+    <string name="demo_popup_bottom">Bottom list</string>
+</resources>

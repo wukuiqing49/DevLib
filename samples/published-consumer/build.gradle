@@ -1,16 +1,22 @@
 plugins {
- id 'com.android.library' version '8.13.2'
- id 'org.jetbrains.kotlin.android' version '2.1.21'
+ id 'com.android.library' version '9.1.1'
+ id 'org.jetbrains.kotlin.android' version '2.2.10'
  id 'com.wkq.router' version '0.1.0-SNAPSHOT'
 }
 android {
- namespace = 'com.wkq.dev.consumer'; compileSdk = 36
+ namespace = 'com.wkq.dev.consumer'; compileSdk = 37
  buildFeatures { viewBinding = true }
  defaultConfig { minSdk = 26 }
  compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
  kotlinOptions { jvmTarget = '17' }
 }
 dependencies {
+ implementation 'com.wkq.dev:core-archive:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:core-image-render:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:core-utils:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-metadata:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-transfer:0.1.0-SNAPSHOT'
+ implementation 'com.wkq.dev:lib-upload:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:core-google:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:core-base:0.1.0-SNAPSHOT'
  implementation 'com.wkq.dev:core-network:0.1.0-SNAPSHOT'

@@ -1,6 +1,6 @@
 # DevLib
 
-Android 独立开发库与演示工程，包名 `com.wkq.dev`。当前保留 **19 个模块：8 个基础模块、10 个功能库、1 个内部支撑库**。演示首页提供 18 个入口。
+Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当前保留 **19 个模块：8 个基础模块、10 个功能库、1 个内部支撑库**。App 以四个一级入口组织使用流程，保留 18 个库能力入口。
 
 ## 基础体系
 
@@ -38,7 +38,7 @@ Google 登录、Firebase Auth 与 Play Billing 统一采用 `core_google`，旧�
 ## 目录与使用
 
 ```text
-app/                           应用初始化、平台声明与目录宿主
+app/                           应用初始化、平台声明与工作台宿主
 core/                          基础库、功能库与内部支撑
 feature/feature_app            分类、搜索与导航
 feature/feature_demo_common    现有 Base 页面、导入、状态与预览
@@ -52,6 +52,12 @@ docs/                          分类和来源事实
 ```
 
 局域网分享使用 Demo 自带的最小接收页，不再依赖独立网页库。远程上传和文件传输需要使用者配置服务器与凭据。库源码不依赖演示页面，凭据和产品策略由宿主维护。
+
+## 演示与本地验证
+
+演示已加入传输任务历史与远程目标、逐个配对审批、Google 前台购买状态同步，以及五种图片处理流程。完整操作和边界见 [Demo 说明](test-lab.md)。基础库保持原样。
+
+模块产物分类、App/AndroidTest APK 构建、JVM 测试、APK 路由、本地发布和独立消费编译均通过本地命令验证，具体命令与结果见 `testing/TEST_REPORT.md`。本次未经明确需求新增的 GitHub Actions 工作流已撤回，未提交、未推送、未在远端生效。后续仅在用户明确要求 CI 时配置。
 
 ## 构建
 
@@ -77,3 +83,13 @@ JDK 17，Gradle Wrapper 与 SDK 以当前配置为准：
 - [之前的去重分析](duplicate-capability-analysis.md)：历史背景，不作为当前保留清单。
 
 按用户要求不进行真机测试；构建与静态校验不代表服务器、浏览器、扫码或 Native 功能已验收。
+
+## 开发者工作台
+
+App 已接入统一素材与产物记录、收藏与最近使用、操作历史及跨工具流转。文档使用单元格编辑，PDF 支持素材排序，元数据页提供字段详情。见 [产品结构、流程与边界](developer-workbench.md)。
+
+Android 17 / API 37 构建基线、Skill 配置及未验证边界见 [Android 17 兼容说明](android17-compatibility.md)。
+
+- [Agent 与 Skills 整体分析及优化](agent-skill-review.md)：规则分层、校验边界及当前文档/国际化欠账。
+
+- [稳定性与业务英文覆盖](stability-and-i18n.md)：历史收尾、整批素材校验、英文资源与签名验证边界。

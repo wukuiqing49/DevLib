@@ -4,13 +4,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <title>DevLib 文件接收</title>
-<h1>接收共享文件</h1>
-<p>请在同一局域网打开手机显示的完整地址，再在手机上批准连接。</p>
-<p>普通 HTTP 不加密，请仅在可信网络中使用。</p>
+<h1 id="heading">接收共享文件</h1>
+<p id="intro">请在同一局域网打开手机显示的完整地址，再在手机上批准连接。</p>
+<p id="security">普通 HTTP 不加密，请仅在可信网络中使用。</p>
 <button id="pair">申请连接</button>
 <button id="refresh" disabled>刷新文件列表</button>
 <p id="status" role="status">等待申请连接</p>
 <ul id="files"></ul>
-<iframe name="download" title="文件下载" hidden></iframe>
+<iframe id="download-frame" name="download" title="文件下载" hidden></iframe>
 <script src="/receiver.js" defer></script>
 </html>

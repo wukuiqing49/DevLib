@@ -11,6 +11,8 @@
         <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_metadata_description">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/description" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_metadata_description_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Demo.Heading" android:text="@string/metadata_fields" />
+        <TextView android:id="@+id/fields" style="@style/Demo.Label" android:textIsSelectable="true" android:text="@string/metadata_not_read" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_metadata_execute" />
         <com.google.android.material.button.MaterialButton android:id="@+id/inspect" style="@style/Demo.Button" android:text="@string/demo_metadata_inspect" />
         <com.google.android.material.button.MaterialButton android:id="@+id/write" style="@style/Demo.Button" android:text="@string/demo_metadata_write" />

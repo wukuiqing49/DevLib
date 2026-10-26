@@ -38,6 +38,26 @@ class ResourceValidationTest(unittest.TestCase):
         self.assertTrue(any('duplicate resource' in error for error in self.validate('<string name="label">a</string><string name="label">b</string>', '<string name="label">label</string>')))
         self.assertTrue(any('invalid XML' in error for error in self.validate('<string name="label">broken')))
 
+    def test_missing_whole_required_locale_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'values').mkdir()
+            (root / 'values/strings.xml').write_text('<resources><string name="title">标题</string></resources>', encoding='utf-8')
+            errors = []
+            validate_res_dir(root, errors, [], True, ['en'])
+            self.assertTrue(any('required locale en is missing' in e for e in errors))
+            (root / 'values-en').mkdir()
+            (root / 'values-en/strings.xml').write_text('<resources><string name="title">Title</string></resources>', encoding='utf-8')
+            errors = []
+            validate_res_dir(root, errors, [], True, ['en'])
+            self.assertEqual(errors, [])
+
+    def test_array_count_and_placeholder_order(self):
+        base = '<string-array name="options"><item>%1$s</item><item>%1$d</item></string-array>'
+        self.assertEqual(self.validate(base, base), [])
+        self.assertTrue(self.validate('<string-array name="options"><item>%1$s</item></string-array>', base))
+        self.assertTrue(self.validate('<string-array name="options"><item>%1$d</item><item>%1$s</item></string-array>', base))
+
     def test_missing_translation_fails(self):
         self.assertTrue(any('missing' in error for error in self.validate('')))
 

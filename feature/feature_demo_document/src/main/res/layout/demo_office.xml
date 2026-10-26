@@ -3,15 +3,18 @@
     <LinearLayout style="@style/Demo.Page">
         <TextView style="@style/Demo.Label" android:text="@string/demo_office_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_office_input" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_office_title">
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/office_title_hint">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/title" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_office_title_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_office_body">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/body" style="@style/Demo.Input" android:inputType="textMultiLine" android:text="@string/demo_office_body_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_office_rows">
-            <com.google.android.material.textfield.TextInputEditText android:id="@+id/rows" style="@style/Demo.Input" android:inputType="textMultiLine" android:text="@string/demo_office_rows_value" android:saveEnabled="true" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Demo.Heading" android:text="@string/office_table" />
+        <TextView android:id="@+id/tableStatus" style="@style/Demo.Label" />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none"><androidx.recyclerview.widget.RecyclerView android:id="@+id/table" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollbars="none" android:nestedScrollingEnabled="false" /></HorizontalScrollView>
+        <com.google.android.material.button.MaterialButton android:id="@+id/addRow" style="@style/Demo.Button" android:text="@string/office_add_row" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/addColumn" style="@style/Demo.Button" android:text="@string/office_add_column" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/removeColumn" style="@style/Demo.Button" android:text="@string/office_remove_column" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_office_execute" />
         <com.google.android.material.button.MaterialButton android:id="@+id/word" style="@style/Demo.Button" android:text="@string/demo_office_word" />
         <com.google.android.material.button.MaterialButton android:id="@+id/excel" style="@style/Demo.Button" android:text="@string/demo_office_excel" />

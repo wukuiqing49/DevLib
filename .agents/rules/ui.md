@@ -35,3 +35,11 @@
 - 用户可见文案进入 string 资源；颜色、尺寸和 drawable 进入对应资源文件。
 - 不随意重命名 XML id、资源名、style 名或 drawable 名。
 - `setBackgroundColor()` 可能覆盖 shape drawable，修改背景前先检查现有实现。
+
+## 屏幕与系统适配必检
+
+- UI 实现必须复用 Base 的页面、ViewModel、Adapter 与弹窗能力，采用 XML + ViewBinding + MVVM；具体继承关系遵循架构规则。页面只编排 UI，业务状态与耗时任务放职责匹配的 ViewModel/引擎。
+- 按当前窗口尺寸布局，不把设计稿的整屏宽高硬编码为固定页面尺寸。检查小屏、横竖屏、平板/折叠屏、多窗口、长文案、字体缩放、RTL 和深浅主题。
+- 检查 Android 15+ Edge-to-edge、系统栏/刘海、IME 键盘与弹窗窗口 Insets；沿用唯一 owner，不能靠重复 padding、全局 fitsSystemWindows 或锁定方向规避适配。
+- 旋转、窗口缩放和页面重建要保留输入、选择及可恢复结果，避免重复提交任务；涉及 Android 17 时按构建 Skill 的 API 37 兼容基线检查大屏约束。
+- 逐项标明静态检查、构建、实际运行和视觉验证状态；用户排除设备测试时保留未验证项，不将其写成通过。

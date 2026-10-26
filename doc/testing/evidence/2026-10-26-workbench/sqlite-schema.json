@@ -1,0 +1,9 @@
+{
+  "engine": "Python sqlite3, not Android runtime",
+  "checks": {
+    "schemaV1ToV2MatchesFresh": true,
+    "existingHistoryRetained": true,
+    "assetPathUnique": true,
+    "interruptedTaskKeepsRelations": true
+  }
+}

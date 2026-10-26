@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_upload_title">Multi-protocol upload</string>
+    <string name="demo_upload_intro">Upload using FTP, FTPS, or HTTP. Use File transfer for SMB, SFTP, and WebDAV. Configure and test the connection before uploading. Credentials stay on this page and are not saved, restored, or logged.</string>
+    <string name="demo_upload_input">01 Select and configure</string>
+    <string name="demo_upload_execute">02 Run operation</string>
+    <string name="demo_upload_success">Completed. Check the result.</string>
+    <string name="demo_upload_protocol">FTP / FTPS / HTTP</string>
+    <string name="demo_upload_protocol_value">FTPS</string>
+    <string name="demo_upload_host">Hostname or HTTPS URL</string>
+    <string name="demo_upload_host_value" />
+    <string name="demo_upload_port">Port</string>
+    <string name="demo_upload_port_value">21</string>
+    <string name="demo_upload_user">Username</string>
+    <string name="demo_upload_user_value" />
+    <string name="demo_upload_password">Password</string>
+    <string name="demo_upload_password_value" />
+    <string name="demo_upload_directory">Remote directory or endpoint path</string>
+    <string name="demo_upload_directory_value">/upload</string>
+    <string name="demo_upload_test">Test connection</string>
+    <string name="demo_upload_upload">Confirm upload</string>
+    <string name="demo_upload_https_help">The HTTP adapter uses HTTPS only in this app. Do not embed credentials in the URL. Username and password may be empty.</string>
+    <string name="demo_upload_ftp_help">For FTP/FTPS, enter a hostname, port, and credentials. FTPS uses explicit TLS with certificate verification; FTP is unencrypted.</string>
+    <string name="demo_upload_invalid_host">Enter a valid hostname and port (1–65535).</string>
+    <string name="demo_upload_invalid_https">Enter an HTTPS URL without embedded credentials, a query, or a fragment. An explicit URL port must match the port field.</string>
+    <string name="demo_upload_invalid_ftp">FTP/FTPS requires a hostname, username, and password. Do not include a scheme or directory in the hostname.</string>
+    <string name="demo_upload_test_first">Test this connection successfully first. Changes to the configuration require another test.</string>
+    <string name="demo_upload_connected">Connection test passed. Choose a file and confirm the upload.</string>
+    <string name="demo_upload_confirm">Upload the selected file to the configured server?</string>
+    <string name="demo_upload_failure">Upload or connection did not complete (code: %1$s). Check the certificate, permissions, address, and network, then try again.</string>
+    <string-array name="demo_upload_protocols">
+        <item>FTPS · Explicit TLS</item>
+        <item>FTP</item>
+        <item>HTTPS · HTTP upload endpoint</item>
+    </string-array>
+</resources>

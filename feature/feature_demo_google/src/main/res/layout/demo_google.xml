@@ -14,5 +14,6 @@
 <Spinner android:id="@+id/offers" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
 <com.google.android.material.button.MaterialButton android:id="@+id/purchase" style="@style/Demo.Button" android:text="@string/google_purchase" />
 <com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Demo.Button" android:text="@string/google_restore" />
+<TextView android:id="@+id/billingStatus" style="@style/Demo.Label" android:accessibilityLiveRegion="polite" />
 <include android:id="@+id/result" layout="@layout/demo_output" />
 </LinearLayout></ScrollView>

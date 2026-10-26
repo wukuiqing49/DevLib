@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_pdf_title">Image PDF layout</string>
+    <string name="demo_pdf_intro">Combine images in the selected order. Configure paper size, orientation, margins, and columns, then export and preview the first PDF page.</string>
+    <string name="demo_pdf_input">Choose images</string>
+    <string name="demo_pdf_execute">Generate PDF</string>
+    <string name="demo_pdf_success">Completed. Check the result.</string>
+    <string name="demo_pdf_paper">Paper size: A3 / A4 / A5 / LETTER</string>
+    <string name="demo_pdf_paper_value">A4</string>
+    <string name="demo_pdf_margin">Margin (pt)</string>
+    <string name="demo_pdf_margin_value">24</string>
+    <string name="demo_pdf_columns">Images per row (1 for one image per page)</string>
+    <string name="demo_pdf_columns_value">1</string>
+    <string name="demo_pdf_landscape">Landscape orientation</string>
+    <string name="demo_pdf_reverse">Reverse image order</string>
+    <string name="demo_pdf_export">Export PDF</string>
+</resources>

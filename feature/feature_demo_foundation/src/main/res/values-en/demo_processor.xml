@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_processor_title">KSP output verification</string>
+    <string name="demo_processor_intro">This module runs KSP at build time. Inspect generated classes and registered routes, then open the generated destination to verify integration.</string>
+    <string name="demo_processor_input">01 Select and configure</string>
+    <string name="demo_processor_execute">02 Run operation</string>
+    <string name="demo_processor_success">Completed. Check the result.</string>
+    <string name="demo_processor_path">Route path</string>
+    <string name="demo_processor_path_value">/foundation/route_target</string>
+    <string name="demo_processor_value">Parameter value</string>
+    <string name="demo_processor_value_value">DevLib route</string>
+    <string name="demo_processor_inspect">Inspect generated routes</string>
+    <string name="demo_processor_navigate">Open destination</string>
+</resources>

@@ -11,6 +11,7 @@ description: "用于实现和验证 Android XML UI：Activity/Fragment、自定�
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/execution.md`
+- `.agents/rules/android.md`
 - `.agents/rules/ui.md`
 - 涉及文案时读取 `.agents/rules/i18n.md`
 - 涉及新依赖、theme 或 manifest 时读取 `.agents/rules/build.md`
@@ -41,3 +42,9 @@ python .agents/skills/android-ui-workflow/scripts/validate_ui_output.py `
 ```
 
 补充受影响模块编译。列表、分页、弹窗、Insets 或字体任务需要说明手动/设备场景的已验证与未验证范围。
+
+## Android 17 / API 37
+
+涉及 SDK 37、Android 17 迁移、局域网权限或大屏行为时，读取 [Android 17 兼容基线](../android-build-workflow/references/android-17.md)。同步项目与生成配置，按能力选择检查；构建通过不能代替运行验证。
+
+功能实现必须按已加载规则复用 Base；新增及修改的类型与方法写中文 KDoc/JavaDoc。页面同时执行 UI、国际化及屏幕/系统适配检查，完成时说明复用项和未验证项。

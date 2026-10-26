@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_utils_title">File and URI tools</string>
+    <string name="demo_utils_intro">Choose and import files with foundation helpers, inspect their digests, or share them. File contents are preserved so you can verify copies.</string>
+    <string name="demo_utils_input">01 Select and configure</string>
+    <string name="demo_utils_execute">02 Run operation</string>
+    <string name="demo_utils_success">Completed. Check the result.</string>
+    <string name="demo_utils_digest">Compute SHA-256 and file details</string>
+    <string name="demo_utils_share">Share selected files</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_annotation_title">Route annotations and parameter injection</string>
+    <string name="demo_annotation_intro">Inspect Route and Param integration. Edit a parameter and navigate to the registered target page to verify that generated injection code receives it.</string>
+    <string name="demo_annotation_input">01 Select and configure</string>
+    <string name="demo_annotation_execute">02 Run operation</string>
+    <string name="demo_annotation_success">Completed. Check the result.</string>
+    <string name="demo_annotation_path">Route path</string>
+    <string name="demo_annotation_path_value">/foundation/route_target</string>
+    <string name="demo_annotation_value">Parameter value</string>
+    <string name="demo_annotation_value_value">DevLib route</string>
+    <string name="demo_annotation_inspect">Inspect generated routes</string>
+    <string name="demo_annotation_navigate">Open destination</string>
+</resources>

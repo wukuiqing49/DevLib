@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_transfer_title">Persistent file transfer queue</string>
+    <string name="demo_transfer_intro">Choose a file and configure a destination to create a persistent transfer. Copy to app storage or use SMB, HTTPS WebDAV, or SFTP. History is restored automatically; select a task to view progress or control it.</string>
+    <string name="demo_transfer_input">01 Select and configure</string>
+    <string name="demo_transfer_execute">02 Run operation</string>
+    <string name="demo_transfer_success">Completed. Check the result.</string>
+    <string name="demo_transfer_name">Destination filename (no directories)</string>
+    <string name="demo_transfer_name_value">copy.jpg</string>
+    <string name="demo_transfer_enqueue">Create transfer task</string>
+    <string name="demo_transfer_refresh">Refresh task status</string>
+    <string name="demo_transfer_pause">Pause selected task</string>
+    <string name="demo_transfer_resume">Resume selected task</string>
+    <string name="demo_transfer_canceljob">Cancel selected task</string>
+    <string name="demo_transfer_destination">02 Destination connection</string>
+    <string name="demo_transfer_remote_notice">Test remote connections first. Connection settings are persisted, and the transfer library stores passwords encrypted for background execution and recovery. Use trusted servers only. SFTP requires a host fingerprint; WebDAV uses system certificate validation by default.</string>
+    <string name="demo_transfer_root">Root: smb://host/share, https://host/path, or sftp://host/path</string>
+    <string name="demo_transfer_user">Username</string>
+    <string name="demo_transfer_password">Password (stored encrypted for background tasks)</string>
+    <string name="demo_transfer_host_key">SFTP host fingerprint / optional WebDAV certificate SHA-256</string>
+    <string name="demo_transfer_test">Test destination (read-only)</string>
+    <string name="demo_transfer_history">03 Latest 50 demo tasks · Tap to select</string>
+    <string name="demo_transfer_confirm">Copy the selected file to the configured destination as %1$s? Existing files with the same name will be kept.</string>
+    <string name="demo_transfer_cancel_confirm">Cancel the selected task?</string>
+    <string name="demo_transfer_no_task">No task selected. Create one or choose a history entry.</string>
+    <string name="demo_transfer_row">%1$s · %2$s</string>
+    <string name="demo_transfer_row_detail">ID: %1$s\n%2$d / %3$d bytes</string>
+    <string name="demo_transfer_current">Selected task: %1$s\nStatus: %2$s\n%3$d / %4$d bytes\nError: %5$s</string>
+    <string name="demo_transfer_invalid_name">Enter a valid filename without directories, control characters, or relative path components.</string>
+    <string name="demo_transfer_test_first">The remote configuration changed. Test the connection first.</string>
+    <string name="demo_transfer_connected">Connection available. Directory preview returned %1$d entries.</string>
+    <string name="demo_transfer_enqueued">Task saved: %1$s. Select it in the history below to view progress.</string>
+    <string name="demo_transfer_controlled">The task command was applied. Status will update automatically.</string>
+    <string name="demo_transfer_unchanged">This operation is not available in the current task state. Nothing changed.</string>
+    <string-array name="demo_transfer_protocols">
+        <item>App storage</item>
+        <item>SMB</item>
+        <item>HTTPS WebDAV</item>
+        <item>SFTP</item>
+    </string-array>
+</resources>

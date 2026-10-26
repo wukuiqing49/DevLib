@@ -20,11 +20,11 @@ gradle:
   useKotlinDsl: false
 versions:
   policy: pinned-stable-baseline
-  agp: 8.13.2
-  gradle: 8.13
-  kotlin: 2.1.21
-  compileSdk: 36
-  targetSdk: 36
+  agp: 9.1.1
+  gradle: 9.3.1
+  kotlin: 2.2.10
+  compileSdk: 37
+  targetSdk: 37
   minSdk: 26
   androidxCore: 1.18.0
   androidxActivity: 1.13.0

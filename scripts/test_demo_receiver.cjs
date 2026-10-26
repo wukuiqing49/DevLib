@@ -5,14 +5,15 @@ const vm = require('node:vm');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../feature/feature_demo_files/src/main/assets/demo_receiver/receiver.js'), 'utf8');
 
-function harness(reply, hash = '#test-entry') {
+function harness(reply, hash = '#test-entry', language = 'zh-CN') {
   const node = () => ({ children: [], disabled: false, textContent: '', append(...items) { this.children.push(...items); }, replaceChildren() { this.children = []; } });
-  const nodes = Object.fromEntries(['status', 'pair', 'refresh', 'files'].map(id => [id, node()]));
+  const nodes = Object.fromEntries(['status', 'pair', 'refresh', 'files', 'heading', 'intro', 'security', 'download-frame'].map(id => [id, node()]));
   nodes.refresh.disabled = true; // 与 HTML 的初始 disabled 属性一致。
   const requests = [];
   const history = [];
   vm.runInNewContext(source, {
-    document: { getElementById: id => nodes[id], createElement: node, createTextNode: text => ({ textContent: text }) },
+    navigator: { language },
+    document: { documentElement: {}, getElementById: id => nodes[id], createElement: node, createTextNode: text => ({ textContent: text }) },
     location: { hash, pathname: '/' }, history: { replaceState: (...args) => history.push(args) },
     crypto: { getRandomValues: bytes => bytes.fill(7) },
     setTimeout: callback => callback(),
@@ -73,4 +74,38 @@ test('expired pairing leaves a visible error and permits retry', async () => {
   await h.nodes.pair.onclick();
   assert.match(h.nodes.status.textContent, /403/);
   assert.equal(h.nodes.pair.disabled, false);
+});
+
+
+test('pending pairing shows the same request id that the sender must approve', async () => {
+  let ui;
+  ui = harness(url => {
+    if (url === '/api/v1/pairings') return { id: 'request-visible-123', ticket: 'private-ticket' };
+    if (url.startsWith('/api/v1/pairings/')) {
+      assert.match(ui.nodes.status.textContent, /request-visible-123/);
+      assert.doesNotMatch(ui.nodes.status.textContent, /private-ticket/);
+      return { state: 'APPROVED' };
+    }
+    if (url.startsWith('/api/v1/manifest')) return { items: [], nextCursor: null };
+    throw new Error('unexpected URL: ' + url);
+  });
+  await ui.nodes.pair.onclick();
+  assert.equal(ui.nodes.refresh.disabled, false);
+});
+
+
+test('English receiver localizes controls and missing-link errors', async () => {
+  const h = harness(() => { throw Error('must not request'); }, '', 'en-US');
+  assert.equal(h.nodes.pair.textContent, 'Request connection');
+  assert.equal(h.nodes.refresh.textContent, 'Refresh file list');
+  await h.nodes.pair.onclick();
+  assert.equal(h.nodes.status.textContent, 'Reopen the complete sharing address shown on the phone.');
+  assert.equal(h.requests.length, 0);
+});
+
+test('unsupported browser language uses English without translating protocol values', async () => {
+  const h = harness(() => ({ status: 403 }), '#test-entry', 'fr-FR');
+  await h.nodes.pair.onclick();
+  assert.equal(h.nodes.status.textContent, 'Request failed (403)');
+  assert.equal(h.requests[0].options.headers['X-DropLAN'], '1');
 });

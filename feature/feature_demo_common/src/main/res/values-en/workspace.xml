@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="workspace_saved">Saved to the selected location</string>
+    <string name="workspace_save">Save to device</string>
+    <string name="workspace_continue">Use result in another tool</string>
+    <string name="workspace_original">Original image preview</string>
+    <string name="workspace_input_source">Choose an input source</string>
+    <string name="workspace_system_files">Import from device</string>
+    <string name="workspace_existing_files">Choose from workspace</string>
+    <string name="workspace_no_assets">No input files are available. Import files from your device first.</string>
+    <string name="workspace_image">Image tools</string>
+    <string name="workspace_metadata">Metadata editor</string>
+    <string name="workspace_qr">QR recognition</string>
+    <string name="workspace_pdf">Images to PDF</string>
+    <string name="workspace_archive">Compress and extract</string>
+    <string name="workspace_upload">Upload files</string>
+    <string name="workspace_transfer">File transfer</string>
+    <string name="workspace_drop">Local network sharing</string>
+    <string name="workspace_batch_limit">Process up to 20 files at a time. Select the results you need on the Files and tasks page.</string>
+</resources>

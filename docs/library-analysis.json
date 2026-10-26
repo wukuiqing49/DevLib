@@ -200,7 +200,7 @@
       "advice": "作为图片子系统共同底座；若未来需要桌面复用，再分离平台日志等 Android 依赖。",
       "dependencies": [],
       "sourceFiles": 5,
-      "kind": "jvm",
+      "kind": "aar",
       "tests": 12,
       "skipped": 0,
       "enabledByDefault": true,

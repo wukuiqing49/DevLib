@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="office_table">表格编辑</string>
+    <string name="office_table_status">%1$d 行 × %2$d 列 · 最多 30 行、8 列</string>
+    <string name="office_add_row">添加一行</string>
+    <string name="office_add_column">添加一列</string>
+    <string name="office_remove_row">删除此行</string>
+    <string name="office_remove_column">删除最后一列</string>
+    <string name="office_cell">第 %1$d 行，第 %2$d 列</string>
+    <string name="office_remove_confirm">删除后此行内容将被移除，是否继续？</string>
+    <string name="office_column_confirm">移除最后一列及其内容？</string>
+<string name="office_title_hint">文档标题 / 工作表名称</string></resources>

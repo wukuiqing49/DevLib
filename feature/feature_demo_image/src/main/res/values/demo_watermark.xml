@@ -1,15 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="demo_watermark_title">图片水印编辑</string>
-    <string name="demo_watermark_intro">选择原图，编辑水印文本、大小和透明度，预览导出副本；原图保持不变。</string>
-    <string name="demo_watermark_input">01 选择与配置</string>
-    <string name="demo_watermark_execute">02 执行流程</string>
+    <string name="demo_watermark_title">图片处理工作台</string>
+    <string name="demo_watermark_intro">选择图片后体验水印、拍立得相框、设备样机、签名提取或文字批注；配置后渲染预览，导出 PNG 副本，原图保持不变。</string>
+    <string name="demo_watermark_input">导入图片</string>
+    <string name="demo_watermark_execute">预览与导出</string>
     <string name="demo_watermark_success">执行完成，结果如下</string>
-    <string name="demo_watermark_text">水印文字</string>
+    <string name="demo_watermark_text">水印 / 相框标题 / 批注文字</string>
     <string name="demo_watermark_text_value">DevLib</string>
     <string name="demo_watermark_size">相对尺寸（0.01–0.5）</string>
     <string name="demo_watermark_size_value">0.12</string>
     <string name="demo_watermark_alpha">透明度（0–255）</string>
     <string name="demo_watermark_alpha_value">220</string>
     <string name="demo_watermark_render">渲染并预览</string>
+<string name="demo_image_mode">处理方式与样式</string>
+<string name="demo_image_threshold">签名阈值（0.1–1.0）</string>
+<string name="demo_image_threshold_default">0.85</string>
+<string name="demo_image_annotation_help">文字批注使用预设归一化位置；添加后可撤销、重做，再渲染预览。导出仅写副本，最多 20 层。</string>
+<string name="demo_image_layers">当前批注图层：%1$d</string>
+<string name="demo_image_add_label">添加当前文字批注</string>
+<string name="demo_image_undo">撤销批注</string>
+<string name="demo_image_redo">重做批注</string>
+<string name="demo_image_clear">清空批注</string>
+<string name="demo_image_label_required">请输入批注文字，且图层不能超过 20 层。</string>
+<string name="demo_image_watermark_invalid">请输入水印文字，尺寸范围 0.01–0.5，透明度范围 0–255。</string>
+<string name="demo_image_threshold_invalid">签名阈值范围为 0.1–1.0。</string>
+<string name="demo_image_add_first">请先添加至少一个批注图层。</string>
+<string name="demo_image_mode_required">请先选择处理方式。</string>
+<string-array name="demo_image_modes"><item>文字水印</item><item>拍立得相框</item><item>设备样机</item><item>签名提取</item><item>文字批注</item></string-array>
+<string-array name="demo_image_frames"><item>经典白框</item><item>复古黑框</item><item>胶片边框</item><item>暖色复古</item></string-array>
+<string-array name="demo_image_backgrounds"><item>晨光</item><item>岩灰</item><item>极光</item><item>透明</item></string-array>
+<string-array name="demo_image_inks"><item>黑色</item><item>蓝色</item><item>红色</item></string-array>
+<string-array name="demo_image_default"><item>默认</item></string-array>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="pdf_page_order">页面素材与顺序</string>
+    <string name="pdf_page_preview">页面素材预览</string>
+    <string name="pdf_page_item">%1$d · %2$s</string>
+    <string name="pdf_up">上移</string>
+    <string name="pdf_down">下移</string>
+    <string name="pdf_remove">移除</string>
+</resources>

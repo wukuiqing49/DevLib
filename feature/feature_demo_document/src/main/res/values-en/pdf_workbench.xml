@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="pdf_page_order">Page images and order</string>
+    <string name="pdf_page_preview">Page image preview</string>
+    <string name="pdf_page_item">%1$d · %2$s</string>
+    <string name="pdf_up">Move up</string>
+    <string name="pdf_down">Move down</string>
+    <string name="pdf_remove">Remove</string>
+</resources>

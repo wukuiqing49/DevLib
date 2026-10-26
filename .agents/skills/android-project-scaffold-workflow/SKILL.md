@@ -12,6 +12,7 @@ description: "用于创建或调整 Android 工程脚手架：从配置生成 ap
 - `.agents/config/project-profile.yml`
 - `.agents/config/project-scaffold.yml`
 - `.agents/rules/execution.md`
+- `.agents/rules/android.md`（生成模板的类与方法也必须有中文文档）
 - `.agents/rules/architecture.md`
 - `.agents/rules/build.md`
 
@@ -77,3 +78,7 @@ python .agents/scripts/validate_android_workflows.py --project-root C:\path\to\t
 后两条 Gradle 命令必须在目标 Android 项目根目录运行。聚合验证器从工作流仓库加载工具，从 `--project-root` 加载目标工程。
 
 涉及 release、签名、manifest、native 或 16KB page size 时，按 `.agents/rules/build.md` 扩大验证并说明凭据或设备限制。
+
+## Android 17 / API 37
+
+涉及 SDK 37、Android 17 迁移、局域网权限或大屏行为时，读取 [Android 17 兼容基线](../android-build-workflow/references/android-17.md)。同步项目与生成配置，按能力选择检查；构建通过不能代替运行验证。

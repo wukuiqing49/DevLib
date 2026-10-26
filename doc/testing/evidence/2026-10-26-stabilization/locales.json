@@ -1,0 +1,122 @@
+[
+  {
+    "file": "feature/feature_demo_common/src/main/res/values-en/strings.xml",
+    "strings": 37,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_common/src/main/res/values-en/workspace.xml",
+    "strings": 17,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_document/src/main/res/values-en/demo_office.xml",
+    "strings": 12,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_document/src/main/res/values-en/demo_pdf.xml",
+    "strings": 14,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_document/src/main/res/values-en/office_workbench.xml",
+    "strings": 10,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_document/src/main/res/values-en/pdf_workbench.xml",
+    "strings": 6,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_files/src/main/res/values-en/demo_archive.xml",
+    "strings": 9,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_files/src/main/res/values-en/demo_drop.xml",
+    "strings": 22,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_files/src/main/res/values-en/demo_transfer.xml",
+    "strings": 32,
+    "arrays": 1
+  },
+  {
+    "file": "feature/feature_demo_files/src/main/res/values-en/demo_upload.xml",
+    "strings": 28,
+    "arrays": 1
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_annotation.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_base.xml",
+    "strings": 10,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_network.xml",
+    "strings": 8,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_plugin.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_popup.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_processor.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_route_target.xml",
+    "strings": 6,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_router.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_foundation/src/main/res/values-en/demo_utils.xml",
+    "strings": 7,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_google/src/main/res/values-en/google.xml",
+    "strings": 32,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_image/src/main/res/values-en/demo_metadata.xml",
+    "strings": 11,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_image/src/main/res/values-en/demo_qr.xml",
+    "strings": 13,
+    "arrays": 0
+  },
+  {
+    "file": "feature/feature_demo_image/src/main/res/values-en/demo_watermark.xml",
+    "strings": 26,
+    "arrays": 5
+  },
+  {
+    "file": "feature/feature_demo_image/src/main/res/values-en/metadata_workbench.xml",
+    "strings": 7,
+    "arrays": 0
+  }
+]

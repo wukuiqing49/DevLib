@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_qr_title">QR generation and recognition</string>
+    <string name="demo_qr_intro">Configure content, color, and size to generate a QR code, or choose an image to recognize. Generated codes are read back for verification before export.</string>
+    <string name="demo_qr_input">01 Select and configure</string>
+    <string name="demo_qr_execute">02 Run operation</string>
+    <string name="demo_qr_success">Completed. Check the result.</string>
+    <string name="demo_qr_content">QR content</string>
+    <string name="demo_qr_content_value">DevLib</string>
+    <string name="demo_qr_size">Size: 128–2048</string>
+    <string name="demo_qr_size_value">600</string>
+    <string name="demo_qr_color">Foreground color (HEX)</string>
+    <string name="demo_qr_color_value">#145FB2</string>
+    <string name="demo_qr_generate">Generate and verify</string>
+    <string name="demo_qr_recognize">Recognize selected image</string>
+</resources>

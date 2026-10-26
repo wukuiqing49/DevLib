@@ -4,9 +4,9 @@
         <TextView style="@style/Demo.Label" android:text="@string/demo_upload_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_upload_input" />
         <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_upload_protocol">
-            <com.google.android.material.textfield.TextInputEditText android:id="@+id/protocol" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_upload_protocol_value" android:saveEnabled="true" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <TextView style="@style/Demo.Label" android:text="@string/demo_upload_protocol" />
+        <Spinner android:id="@+id/protocol" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
+        <TextView android:id="@+id/protocolHelp" style="@style/Demo.Label" />
         <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_upload_host">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/host" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_upload_host_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>

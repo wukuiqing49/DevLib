@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="workspace_saved">已保存到选择的位置</string>
+    <string name="workspace_save">另存到设备</string>
+    <string name="workspace_continue">继续处理此产物</string>
+    <string name="workspace_original">原始图片预览</string>
+    <string name="workspace_input_source">选择素材来源</string>
+    <string name="workspace_system_files">从设备导入</string>
+    <string name="workspace_existing_files">从工作区选择</string>
+    <string name="workspace_no_assets">暂无可用素材，请先从设备导入。</string>
+    <string name="workspace_image">图片工作台</string>
+    <string name="workspace_metadata">元数据编辑</string>
+    <string name="workspace_qr">二维码识别</string>
+    <string name="workspace_pdf">图片转 PDF</string>
+    <string name="workspace_archive">压缩与解压</string>
+    <string name="workspace_upload">上传文件</string>
+    <string name="workspace_transfer">文件传输</string>
+    <string name="workspace_drop">局域网分享</string>
+    <string name="workspace_batch_limit">一次最多处理 20 个文件，请到文件与任务页面选择需要的产物。</string>
+</resources>

@@ -11,6 +11,7 @@ description: "用于分析和实现 Android 项目架构与共享能力：模块
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/execution.md`
+- `.agents/rules/android.md`
 - `.agents/rules/architecture.md`
 - 涉及依赖时读取 `.agents/rules/build.md`
 
@@ -50,3 +51,9 @@ python .agents/skills/android-project-architecture-workflow/scripts/validate_arc
 ```
 
 新增依赖后补充依赖解析和受影响模块编译；涉及运行时网络、路由、文件或弹窗能力时补充对应 smoke check。
+
+## Android 17 / API 37
+
+涉及 SDK 37、Android 17 迁移、局域网权限或大屏行为时，读取 [Android 17 兼容基线](../android-build-workflow/references/android-17.md)。同步项目与生成配置，按能力选择检查；构建通过不能代替运行验证。
+
+功能实现必须按已加载规则复用 Base；新增及修改的类型与方法写中文 KDoc/JavaDoc。页面同时执行 UI、国际化及屏幕/系统适配检查，完成时说明复用项和未验证项。

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_base_title">Base pages and states</string>
+    <string name="demo_base_intro">This page uses BaseVMTitleActivity through the host wrapper to demonstrate BaseViewModel loading, empty, error, content, and one-off confirmation events.</string>
+    <string name="demo_base_input">01 Select and configure</string>
+    <string name="demo_base_execute">02 Run operation</string>
+    <string name="demo_base_success">Completed. Check the result.</string>
+    <string name="demo_base_loading">Show loading, then restore</string>
+    <string name="demo_base_empty">Show empty state</string>
+    <string name="demo_base_error">Show error and retry entry</string>
+    <string name="demo_base_restore">Restore content</string>
+    <string name="demo_base_dialog">Base confirmation event</string>
+</resources>

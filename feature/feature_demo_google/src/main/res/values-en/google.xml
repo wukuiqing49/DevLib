@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="demo_google_title">Google sign-in and billing</string>
+    <string name="demo_google_intro">A unified entry for independent Google sign-in and Play Billing capabilities. Supply your OAuth / Firebase project and Play test products. No automatic login gate is imposed.</string>
+    <string name="google_auth">1. Sign-in and session</string>
+    <string name="google_client">Web Client ID (host configuration)</string>
+    <string name="google_signin">Google sign-in (Credential Manager)</string>
+    <string name="google_firebase">Google sign-in with Firebase session</string>
+    <string name="google_session">View Firebase session</string>
+    <string name="google_signout">Sign out</string>
+    <string name="google_billing">2. Products and purchases</string>
+    <string name="google_product">Play product ID (one only)</string>
+    <string name="google_subscription">Subscription (turn off for a one-time product)</string>
+    <string name="google_query">Connect to Play and query offers</string>
+    <string name="google_offer">Select an available offer</string>
+    <string name="google_purchase">Confirm purchase of selected offer</string>
+    <string name="google_restore">Restore / query purchases</string>
+    <string name="google_config_missing">Enter a Web Client ID first.</string>
+    <string name="google_firebase_missing">Firebase is not configured. Add configuration resources as described in the module documentation. Google sign-in can be used independently.</string>
+    <string name="google_no_session">No Firebase session is active.</string>
+    <string name="google_session_result">Firebase user: %1$s</string>
+    <string name="google_login_result">Google account: %1$s\nEmail display only. The ID token must be verified by Firebase or your backend.</string>
+    <string name="google_signed_out">Signed out and cleared Credential Manager state.</string>
+    <string name="google_product_missing">Enter one Play product ID.</string>
+    <string name="google_empty">No offers available. Check the Play test track, installed signature, account, and product configuration.</string>
+    <string name="google_quotes">Available offers: %1$d. Select an offer to purchase.</string>
+    <string name="google_query_first">Query the current product and select an offer first.</string>
+    <string name="google_confirm">Open the Google Play purchase confirmation: %1$s\nPrice: %2$s</string>
+    <string name="google_launch">Play response code: %1$d. Success means the request was submitted; use Play callbacks and purchase recovery to determine the outcome.</string>
+    <string name="google_updated">Purchase callback code: %1$d. Further verification needed: %2$s. Restore purchases to check the current status.</string>
+    <string name="google_restored">Purchase status: %1$s\nSubscriptions: %2$s\nOne-time purchases: %3$s\nPending purchase: %4$s</string>
+    <string name="google_restore_first">Query a product first to configure the product scope for this session.</string>
+    <string name="google_recovering">Syncing Play purchase status…</string>
+    <string name="google_recovery_failed">Purchase status could not be verified. Check your network and restore purchases again.</string>
+</resources>

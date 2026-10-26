@@ -47,7 +47,7 @@
 12. 颜色放 colors.xml。
 13. 尺寸放 dimens.xml。
 14. 列表使用 RecyclerView。
-15. Tab / BottomNav / 同级页面切换必须使用 ViewPager2 + FragmentStateAdapter + 子 Fragment。
+15. 导航实现遵循项目 UI 规则和页面任务卡；需要滑动同级页时使用 ViewPager2 + FragmentStateAdapter，BottomNav 不自动等同于滑动分页。已存在的项目导航复用方案按任务卡说明。
 16. Adapter 不写业务逻辑。
 17. 如果项目基类来自 `core:core_base`、AAR 或外部依赖，必须按任务卡审计结果使用；不能只因当前 feature 模块源码搜不到就降级为 AndroidX 标准类。
 18. 实现入口必须严格落地任务卡中的 Launcher / Host / Feature 页面链路；新增 Splash 时 Launcher 必须是 Splash，Host 只承载页面，不混用职责。
