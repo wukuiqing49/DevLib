@@ -1,0 +1,10 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt",
+    "core/core_google/src/main/java/com/wkq/google/rate/GoogleRatePolicy.kt",
+    "core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt"
+  ],
+  "findings": []
+}

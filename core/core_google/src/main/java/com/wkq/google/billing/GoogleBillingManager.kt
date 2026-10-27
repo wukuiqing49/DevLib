@@ -520,14 +520,15 @@ object GoogleBillingManager : GoogleBillingGateway {
             .copy(hasPendingPurchase = pending)
     }
 
+    /** 只查询当前宿主账号的订阅；账号不匹配或状态未知时抛错，避免误撤销权益。 */
     override suspend fun querySubscriptionStatus(userId: String): SubscriptionStatus {
+        val account = GoogleBillingRuntime.currentConfig().billingAccountIdProvider().trim()
+        requireSubscriptionAccount(userId, account)
         val entitlement = queryEntitlement()
-        return SubscriptionStatus(
-            isActive = entitlement.isPro,
-            expireTimeMillis = 0L,
-            planId = entitlement.activePlanId,
-            source = entitlement.source
-        )
+        check(account == GoogleBillingRuntime.currentConfig().billingAccountIdProvider().trim()) {
+            "Billing account changed during subscription query"
+        }
+        return subscriptionStatus(entitlement)
     }
 
     fun endConnection() {

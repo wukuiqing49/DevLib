@@ -1,11 +1,39 @@
 <resources>
     <style name="Theme.DevLib" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimary">@color/dev_primary</item>
+        <item name="colorOnPrimary">@color/dev_on_primary</item>
+        <item name="colorPrimaryContainer">@color/dev_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/dev_on_primary_container</item>
+        <item name="colorSecondary">@color/dev_secondary</item>
+        <item name="colorOnSecondary">@color/dev_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/dev_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/dev_on_secondary_container</item>
+        <item name="colorTertiary">@color/dev_secondary</item>
+        <item name="colorOnTertiary">@color/dev_on_secondary</item>
+        <item name="colorTertiaryContainer">@color/dev_secondary_container</item>
+        <item name="colorOnTertiaryContainer">@color/dev_on_secondary_container</item>
+        <item name="android:colorBackground">@color/feature_res_surface</item>
+        <item name="android:windowBackground">@color/feature_res_surface</item>
+        <item name="colorOnBackground">@color/feature_res_on_surface</item>
+        <item name="colorSurface">@color/dev_surface_card</item>
+        <item name="colorOnSurface">@color/feature_res_on_surface</item>
+        <item name="colorSurfaceVariant">@color/dev_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/dev_on_surface_variant</item>
+        <item name="colorSurfaceContainer">@color/dev_surface_card</item>
+        <item name="colorSurfaceContainerLow">@color/dev_surface_card</item>
+        <item name="colorSurfaceContainerHigh">@color/dev_surface_variant</item>
+        <item name="colorOutline">@color/dev_outline</item>
+        <item name="colorOutlineVariant">@color/dev_outline_variant</item>
+        <item name="colorError">@color/dev_error</item>
+        <item name="colorOnError">@color/dev_on_error</item>
+        <item name="colorErrorContainer">@color/dev_error_container</item>
+        <item name="colorOnErrorContainer">@color/dev_on_error_container</item>
+        <item name="textInputStyle">@style/Demo.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Demo.Button.Primary</item>
+        <!-- 初始图标明暗跟随资源主题，运行期继续交由 Base 的 WindowInsetsController 统一处理。 -->
+        <item name="android:windowLightStatusBar">@bool/dev_light_system_bars</item>
+        <item name="android:windowLightNavigationBar">@bool/dev_light_system_bars</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar">true</item>
-        <item name="android:enforceNavigationBarContrast">false</item>
     </style>
 </resources>

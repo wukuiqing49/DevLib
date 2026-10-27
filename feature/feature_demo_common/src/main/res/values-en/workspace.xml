@@ -14,7 +14,8 @@
     <string name="workspace_pdf">Images to PDF</string>
     <string name="workspace_archive">Compress and extract</string>
     <string name="workspace_upload">Upload files</string>
-    <string name="workspace_transfer">File transfer</string>
+    <string name="workspace_nas">NAS files</string>
     <string name="workspace_drop">Local network sharing</string>
     <string name="workspace_batch_limit">Process up to 20 files at a time. Select the results you need on the Files and tasks page.</string>
+    <string name="workspace_usb">USB / SAF</string>
 </resources>

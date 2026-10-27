@@ -1,0 +1,10 @@
+gradlew.bat testLibraries :feature:feature_demo_common:testDebugUnitTest :feature:feature_demo_files:testDebugUnitTest :feature:feature_demo_document:testDebugUnitTest :feature:feature_demo_google:testDebugUnitTest :app:assembleDebug --max-workers=2 --console=plain
+gradlew.bat :core:lib_drop:testDebugUnitTest publishLibrariesToLocalRepository :app:assembleDebug --max-workers=2 --console=plain
+gradlew.bat -p samples/published-consumer compileDebugKotlin --max-workers=2 --console=plain
+python -B scripts/verify_demo_catalog.py --apk app/build/outputs/apk/debug/app-debug.apk
+python -B -m unittest discover -s scripts -p test_verify_demo_catalog.py
+node --test scripts/test_demo_receiver.cjs
+python -B .agents/scripts/validate_agent_structure.py --project-root .
+python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n
+python -B .agents/scripts/validate_android_source.py --project-root . --report .ai-work/library-optimization-host-audit.json
+git diff --check

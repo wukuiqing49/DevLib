@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 PLACEHOLDER_RE = re.compile(
-    r"(?<!%)%(?!%)(?:\d+\$)?[-#+ 0,(<]*\d*(?:\.\d+)?[bBhHsScCdoxXeEfgGaAtTn]"
+    r"%(?:(?P<index>\d+)\$)?(?P<flags>[-#+ 0,(<]*)\d*(?:\.\d+)?(?P<conversion>[tT][A-Za-z]|[bBhHsScCdoxXeEfgGaA%n])"
 )
 TOOLS_LOCALE = "{http://schemas.android.com/tools}locale"
 
@@ -35,7 +35,23 @@ def read_xml(path: Path) -> ET.Element | None:
 
 
 def placeholders(value: str) -> tuple[str, ...]:
-    return tuple(sorted(PLACEHOLDER_RE.findall(value or "")))
+    """按 Formatter 参数索引比较引用，允许编号重排，保留未编号参数顺序。"""
+    ordinary, previous = 0, None
+    result = []
+    for match in PLACEHOLDER_RE.finditer(value or ""):
+        conversion = match['conversion']
+        if conversion in ('%', 'n'):
+            continue
+        if '<' in match['flags']:
+            index = previous if previous is not None else 'INVALID_RELATIVE'
+        elif match['index']:
+            index = int(match['index'])
+        else:
+            ordinary += 1
+            index = ordinary
+        previous = index
+        result.append(f'{index}:{conversion}')
+    return tuple(sorted(result))
 
 
 def text_of(element: ET.Element) -> str:
@@ -88,19 +104,28 @@ def declared_default_locale(values_dir: Path) -> str | None:
     return None
 
 
+def resource_configuration(path: Path) -> tuple[str, tuple[str, ...]]:
+    """分离语言与设备限定符；不把 car 等 UI 模式识别为语言。"""
+    parts = path.name.removeprefix('values-').split('-')
+    for i, part in enumerate(parts):
+        if part.startswith('b+'):
+            return part[2:].replace('+', '-'), tuple(parts[:i] + parts[i+1:])
+        if re.fullmatch(r'[a-z]{2,3}', part) and part not in {'car', 'desk', 'land', 'port', 'night', 'watch', 'round', 'small', 'large', 'long', 'notlong', 'normal', 'television', 'appliance', 'vrheadset', 'notnight', 'notround'}:
+            end = i + 1
+            locale = part
+            if end < len(parts) and re.fullmatch(r'r(?:[A-Z]{2}|\d{3})', parts[end]):
+                locale += '-' + parts[end][1:]
+                end += 1
+            return locale, tuple(parts[:i] + parts[end:])
+    return '', tuple(parts)
+
+
 def locale_of_values_dir(path: Path) -> str:
-    qualifier = path.name.removeprefix("values-")
-    if qualifier.startswith("b+"):
-        return qualifier.removeprefix("b+").replace("+", "-")
-    return qualifier.replace("-r", "-")
+    return resource_configuration(path)[0]
 
 
 def is_locale_values_dir(path: Path) -> bool:
-    qualifier = path.name.removeprefix("values-")
-    if qualifier.startswith("b+"):
-        return True
-    first = qualifier.split("-")[0]
-    return bool(re.fullmatch(r"[a-z]{2,3}", first))
+    return bool(locale_of_values_dir(path))
 
 
 def validate_res_dir(res_dir: Path, errors: list[str], warnings: list[str], strict_missing: bool, required_locales: list[str] | None = None) -> None:
@@ -114,13 +139,22 @@ def validate_res_dir(res_dir: Path, errors: list[str], warnings: list[str], stri
         return
     default_locale = declared_default_locale(default_dir)
     locale_dirs = sorted(path for path in res_dir.glob("values-*") if path.is_dir() and is_locale_values_dir(path))
-    available = {locale_of_values_dir(path) for path in locale_dirs}
+    # 必需语言必须有不受夜间/宽度/API 等条件限制的基础覆盖。
+    available = {locale_of_values_dir(path) for path in locale_dirs if not resource_configuration(path)[1]}
+    resources = {path: collect_values(path, errors) for path in locale_dirs}
     for locale in required_locales or []:
         if locale not in available and locale != default_locale:
             errors.append(f"ERROR: {res_dir}: required locale {locale} is missing")
     for locale_dir in locale_dirs:
-        localized = collect_values(locale_dir, errors)
-        missing = sorted(set(default_values) - set(localized))
+        localized = resources[locale_dir]
+        locale, qualifiers = resource_configuration(locale_dir)
+        inherited = {}
+        for parent, values in resources.items():
+            parent_locale, parent_qualifiers = resource_configuration(parent)
+            if not parent_qualifiers and (parent_locale == locale or parent_locale == locale.split('-')[0]):
+                inherited.update(values)
+        effective = {**inherited, **localized}
+        missing = sorted(set(default_values) - set(effective))
         extra = sorted(set(localized) - set(default_values))
         is_default_locale_override = default_locale == locale_of_values_dir(locale_dir)
         if missing and not is_default_locale_override:
@@ -179,9 +213,11 @@ def main() -> int:
     if not res_dirs:
         res_dirs = [Path("app/src/main/res"), Path("feature/feature_res/src/main/res")]
     for res_dir in res_dirs:
-        if res_dir.exists():
+        if res_dir.is_dir():
             validate_res_dir(res_dir, errors, warnings, args.strict_missing, args.required_locale)
             validate_raw_html(res_dir, errors, warnings)
+        else:
+            errors.append(f"ERROR: {res_dir}: resource directory not found")
     for item in warnings:
         print(item)
     for item in errors:

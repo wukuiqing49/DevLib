@@ -123,6 +123,7 @@ open class DemoViewModel : BaseViewModel() {
                     }
                     throw cancelled
                 } catch (error: Exception) {
+                    if (demoErrorKind(error) == DemoErrorKind.CANCELLED) historyStatus = "cancelled"
                     val text =
                         if (error is DemoInputException) error.displayMessage
                         else
@@ -134,6 +135,11 @@ open class DemoViewModel : BaseViewModel() {
                                     DemoErrorKind.TIMEOUT -> R.string.demo_error_timeout
                                     DemoErrorKind.CERTIFICATE -> R.string.demo_error_certificate
                                     DemoErrorKind.NETWORK -> R.string.demo_error_network
+                                    DemoErrorKind.BUDGET -> R.string.demo_error_budget
+                                    DemoErrorKind.CONFLICT -> R.string.demo_error_conflict
+                                    DemoErrorKind.FORMAT -> R.string.demo_error_format
+                                    DemoErrorKind.CANCELLED -> R.string.demo_cancelled
+                                    DemoErrorKind.IO -> R.string.demo_error_io
                                     DemoErrorKind.UNKNOWN -> R.string.demo_error_unknown
                                 }
                             )

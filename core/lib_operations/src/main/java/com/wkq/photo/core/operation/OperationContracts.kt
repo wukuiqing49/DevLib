@@ -119,6 +119,7 @@ class OperationException(
     cause: Throwable? = null
 ) : RuntimeException(message, cause)
 
+/** 单次操作的预算、取消和进度上下文，不持有页面或宿主状态。 */
 class OperationContext internal constructor(
     val budget: OperationBudget,
     private val cancellation: OperationCancellation,
@@ -127,8 +128,9 @@ class OperationContext internal constructor(
 ) {
     private val timeoutNanos = budget.timeoutMillis.coerceAtMost(Long.MAX_VALUE / 1_000_000L) * 1_000_000L
 
+    /** 协作式取消标记或线程中断都映射为取消，不把已中断任务继续执行。 */
     fun checkActive() {
-        if (cancellation.isCancelled()) {
+        if (cancellation.isCancelled() || Thread.currentThread().isInterrupted) {
             throw OperationException(OperationErrorCode.CANCELLED, "Operation cancelled")
         }
         if (System.nanoTime() - startedNanos >= timeoutNanos) {
@@ -157,8 +159,9 @@ class OperationContext internal constructor(
         }
     }
 
+    /** 页数必须非负且不超过预算，阻止整数溢出后的负数绕过。 */
     fun checkPages(pageCount: Int) {
-        if (pageCount > budget.maxPages) {
+        if (pageCount < 0 || pageCount > budget.maxPages) {
             throw OperationException(
                 OperationErrorCode.BUDGET_EXCEEDED,
                 "Page budget exceeded: $pageCount > ${budget.maxPages}"
@@ -174,7 +177,9 @@ class OperationContext internal constructor(
     fun elapsedMillis(): Long = max(0L, (System.nanoTime() - startedNanos) / 1_000_000L)
 }
 
+/** 同步引擎执行入口；显式操作取消返回 CANCELLED，协程取消异常原样向上传播。 */
 object OperationRunner {
+    /** 执行操作并分类失败，取消异常不转成普通内部错误。 */
     fun <T> run(
         budget: OperationBudget = OperationBudget.DEFAULT,
         cancellation: OperationCancellation = OperationCancellation.NONE,
@@ -185,6 +190,8 @@ object OperationRunner {
         return try {
             context.checkActive()
             block(context)
+        } catch (error: java.util.concurrent.CancellationException) {
+            throw error
         } catch (error: OperationException) {
             logOperationFailure("operation failed: code=${error.code} message=${error.message.orEmpty()}", error)
             OperationResult.Failure(

@@ -22,6 +22,7 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 - Base 继承与组件复用、XML + ViewBinding + MVVM、国际化、屏幕和系统适配不得作为可选建议。具体规则以 `.agents/rules/architecture.md`、`ui.md`、`i18n.md`、`android.md` 为准；未经确认不另起一套基础封装。
 - 新增及修改的类、接口、具名对象和方法/函数必须有中文 KDoc/JavaDoc；名称保持规范英文，不改公开 API。既有基础库和未改动声明不因补注释而批量重写。
 - 完成时说明所用 Skills、Base/组件复用、文案与适配检查，以及未验证项。脚本通过不等于人工审查、设备或视觉验收完成。
+- 页面必须按 UI 规则落实 Android 17 下的边到边布局与适用场景的全屏沉浸式，明确系统栏、键盘、刘海及窗口状态恢复；复用现有 Base，兼容项目 minSdk。
 
 ## 任务路由
 
@@ -65,6 +66,6 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 
 ## 已确认的功能范围
 
-当前为 8 个基础模块、10 个功能库、1 个内部支撑库，共 19 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
+当前为 8 个基础模块、11 个功能库、1 个内部支撑库，共 20 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
 
-Google 登录、Firebase Auth 与 Play Billing 经用户确认统一使用 core_google；旧 Credentials/Firebase/Billing/Entitlement 分散库保持移出，不再并行维护。core_google 不包含广告、Analytics、DevHub 或宿主商品及 Pro 策略。
+Google 登录、Firebase Auth、Play Billing 与通用评分提示统一使用 core_google；旧 Credentials/Firebase/Billing/Entitlement 分散库保持移出，不再并行维护。core_google 不包含广告、Analytics、DevHub 或宿主商品及 Pro 策略。

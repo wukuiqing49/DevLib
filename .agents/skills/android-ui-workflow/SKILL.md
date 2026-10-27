@@ -1,13 +1,15 @@
 ---
 name: android-ui-workflow
-description: "用于实现和验证 Android XML UI：Activity/Fragment、自定义 View、ViewBinding、Tab/ViewPager2、RecyclerView、Adapter、Dialog/Popup/BottomSheet、文字布局、资源样式、Edge-to-edge 和 WindowInsets。"
+description: "用于实现和验证 Android XML UI：页面、列表、弹窗、资源样式、屏幕适配，以及 Android 17 下的 Edge-to-edge、全屏沉浸式和 WindowInsets。"
 ---
 
 # Android UI 实现能力
 
 ## 项目上下文
 
-在项目仓库中调用时读取：
+以下项目路径均相对目标工程；脚本和 references 相对本 Skill。跨项目调用读取目标规则与事实，缺失时从实际源码/构建核实并说明，不套用 DevLib 的包名、模块或执行策略。脚手架生成参数使用用户选定配置。
+
+在目标项目中读取适用且存在的文件：
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/execution.md`
@@ -20,7 +22,7 @@ description: "用于实现和验证 Android XML UI：Activity/Fragment、自定�
 
 1. 读取目标页面、相邻页面、Base 类型、已有组件和资源体系。
 2. 判断 Activity/Fragment、ViewModel、Adapter、列表、Tab 和弹窗职责。
-3. 明确根布局、弹性内容区、固定视觉区及唯一 Insets owner。
+3. 明确普通边到边或全屏沉浸式策略、根布局、弹性内容区、固定视觉区及唯一 Insets owner；页面实现读取 [Android 17 系统栏与沉浸式](references/system-bars-android17.md)，检查 Base 已有实现与窗口状态恢复。
 4. 复用现有 style、dimen、color、drawable、string 和项目 UI 封装。
 5. 使用 XML + ViewBinding 实现页面，保持资源名和外部调用稳定。
 6. 检查文字溢出、滚动冲突、字体缩放、小屏幕、系统栏和生命周期。

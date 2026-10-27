@@ -4,7 +4,7 @@
         <TextView style="@style/Demo.Label" android:text="@string/demo_base_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_base_input" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_base_execute" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/loading" style="@style/Demo.Button" android:text="@string/demo_base_loading" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/loading" style="@style/Demo.Button.Primary" android:text="@string/demo_base_loading" />
         <com.google.android.material.button.MaterialButton android:id="@+id/empty" style="@style/Demo.Button" android:text="@string/demo_base_empty" />
         <com.google.android.material.button.MaterialButton android:id="@+id/error" style="@style/Demo.Button" android:text="@string/demo_base_error" />
         <com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Demo.Button" android:text="@string/demo_base_restore" />

@@ -1,6 +1,6 @@
 <resources>
-    <string name="demo_google_title">Google 登录与支付</string>
-    <string name="demo_google_intro">统一 Google 能力入口：登录与 Play 购买相互独立。需配置自己的 OAuth / Firebase 项目与 Play 测试商品；不会自动登录或购买。</string>
+    <string name="demo_google_title">Google 登录、支付与评分</string>
+    <string name="demo_google_intro">统一 Google 能力入口：登录与 Play 购买相互独立。需配置自己的 OAuth / Firebase 项目与 Play 测试商品；不会自动登录或购买；评分与独立反馈见页面第三段。</string>
     <string name="google_auth">1. 登录与会话</string>
     <string name="google_client">Web Client ID（宿主配置）</string>
     <string name="google_signin">Google 登录（Credential Manager）</string>

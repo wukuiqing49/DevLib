@@ -29,4 +29,4 @@ Skill references：
 3. 分析 Activity/Fragment/ViewModel/Adapter、列表、Tab 和资源归属。
 4. 输出尺寸合同、Insets owner、区域预算和 Android 文件映射。
 5. 生成页面任务卡、规范化报告和页面级资源清单。
-6. 只汇报分析与阻塞项，等待用户确认，不修改 Android 代码。
+6. 本阶段不修改 Android 代码。仅分析任务交付分析后结束；已获实现授权且无阻塞时直接进入 figma-code，不重复确认。

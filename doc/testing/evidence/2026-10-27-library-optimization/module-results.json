@@ -1,0 +1,271 @@
+[
+  {
+    "module": "core/core_archive",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_archive:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_base",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_base:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_image_render",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_image_render:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_network",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_network:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_pdf",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_pdf:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "core/core_qrcode",
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_qrcode:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_router_annotation",
+    "tests": 0,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "NO-SOURCE",
+    "gradleTaskLines": [
+      "> Task :core:core_router_annotation:testClasses UP-TO-DATE",
+      "> Task :core:core_router_annotation:test NO-SOURCE"
+    ]
+  },
+  {
+    "module": "core/core_router_api",
+    "tests": 0,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "NO-SOURCE",
+    "gradleTaskLines": [
+      "> Task :core:core_router_api:testDebugUnitTest NO-SOURCE"
+    ]
+  },
+  {
+    "module": "core/core_router_gradle_plugin",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_router_gradle_plugin:testClasses UP-TO-DATE",
+      "> Task :core:core_router_gradle_plugin:test UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_router_processor",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_router_processor:testClasses UP-TO-DATE",
+      "> Task :core:core_router_processor:test UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_utils",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_utils:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/lib_document",
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:lib_document:testClasses UP-TO-DATE",
+      "> Task :core:lib_document:test UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/lib_drop",
+    "tests": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:lib_drop:testDebugUnitTest UP-TO-DATE",
+      "> Task :core:lib_drop:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "core/lib_metadata",
+    "tests": 94,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "result": "passed with existing skip",
+    "gradleTaskLines": [
+      "> Task :core:lib_metadata:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/lib_operations",
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:lib_operations:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/lib_upload",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:lib_upload:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "core/lib_xpopup",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:lib_xpopup:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "core/core_google",
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_google:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_nas",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_nas:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "core/core_usb",
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :core:core_usb:testDebugUnitTest UP-TO-DATE"
+    ]
+  },
+  {
+    "module": "feature/feature_demo_common",
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :feature:feature_demo_common:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "feature/feature_demo_files",
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :feature:feature_demo_files:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "feature/feature_demo_document",
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :feature:feature_demo_document:testDebugUnitTest"
+    ]
+  },
+  {
+    "module": "feature/feature_demo_google",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "passed",
+    "gradleTaskLines": [
+      "> Task :feature:feature_demo_google:testDebugUnitTest"
+    ]
+  }
+]

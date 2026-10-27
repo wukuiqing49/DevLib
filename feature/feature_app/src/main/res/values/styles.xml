@@ -1,0 +1,5 @@
+<resources>
+    <style name="Workbench.NavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/dev_primary_container</item>
+    </style>
+</resources>

@@ -14,7 +14,8 @@
     <string name="workspace_pdf">图片转 PDF</string>
     <string name="workspace_archive">压缩与解压</string>
     <string name="workspace_upload">上传文件</string>
-    <string name="workspace_transfer">文件传输</string>
+    <string name="workspace_nas">NAS 文件管理</string>
     <string name="workspace_drop">局域网分享</string>
     <string name="workspace_batch_limit">一次最多处理 20 个文件，请到文件与任务页面选择需要的产物。</string>
+    <string name="workspace_usb">USB / SAF</string>
 </resources>

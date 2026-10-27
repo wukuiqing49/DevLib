@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="demo_google_title">Google sign-in and billing</string>
-    <string name="demo_google_intro">A unified entry for independent Google sign-in and Play Billing capabilities. Supply your OAuth / Firebase project and Play test products. No automatic login gate is imposed.</string>
+    <string name="demo_google_title">Google sign-in, billing and reviews</string>
+    <string name="demo_google_intro">A unified entry for independent Google sign-in and Play Billing capabilities. Supply your OAuth / Firebase project and Play test products. No automatic login gate is imposed. Review prompts and independent feedback are in section 3.</string>
     <string name="google_auth">1. Sign-in and session</string>
     <string name="google_client">Web Client ID (host configuration)</string>
     <string name="google_signin">Google sign-in (Credential Manager)</string>

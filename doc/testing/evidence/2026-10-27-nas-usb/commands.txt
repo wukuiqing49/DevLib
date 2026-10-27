@@ -1,0 +1,10 @@
+gradlew.bat :core:core_nas:testDebugUnitTest :core:core_usb:testDebugUnitTest :feature:feature_demo_files:testDebugUnitTest :feature:feature_demo_common:testDebugUnitTest :app:assembleDebug
+gradlew.bat :feature:feature_demo_files:testDebugUnitTest :app:assembleDebug publishLibrariesToLocalRepository
+gradlew.bat :core:lib_upload:testDebugUnitTest :core:lib_upload:publishReleasePublicationToDevLibLocalRepository :feature:feature_demo_files:testDebugUnitTest :feature:feature_demo_common:testDebugUnitTest :app:assembleDebug --max-workers=2
+gradlew.bat -p samples/published-consumer compileDebugKotlin
+python -B scripts/verify_demo_catalog.py --apk app/build/outputs/apk/debug/app-debug.apk
+python -B scripts/test_verify_demo_catalog.py
+python -B .agents/scripts/validate_agent_structure.py --project-root .
+python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n
+python -B .agents/scripts/validate_android_source.py --project-root .
+git diff --check

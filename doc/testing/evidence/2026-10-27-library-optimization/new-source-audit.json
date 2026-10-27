@@ -1,0 +1,17 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleSubscriptionPolicy.kt",
+    "core/core_google/src/test/java/com/wkq/google/billing/GoogleSubscriptionPolicyTest.kt",
+    "core/core_nas/src/test/java/com/wkq/naslib/NasCancellationTest.kt",
+    "core/lib_document/src/main/kotlin/com/wkq/roof/export/OfficeOutput.kt",
+    "core/lib_document/src/test/kotlin/com/wkq/roof/export/OfficeReliabilityTest.kt",
+    "core/lib_drop/src/test/java/com/wkq/droplan/drop/ShareCloseTest.kt",
+    "core/lib_metadata/src/test/java/com/wkq/iptc/camera/metadata/ExifWriterTransactionTest.kt",
+    "core/lib_upload/src/main/java/com/wkq/iptc/upload/http/RetryInterceptor.kt",
+    "core/lib_upload/src/main/java/com/wkq/iptc/upload/http/UploadHttpCall.kt",
+    "core/lib_upload/src/test/java/com/wkq/iptc/upload/http/RetryInterceptorTest.kt",
+    "core/lib_upload/src/test/java/com/wkq/iptc/upload/http/UploadHttpCallTest.kt"
+  ],
+  "findings": []
+}

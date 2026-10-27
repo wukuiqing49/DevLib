@@ -1,4 +1,21 @@
 <resources>
-    <color name="feature_res_surface">#FFFFFF</color>
-    <color name="feature_res_on_surface">#1F1F1F</color>
+    <color name="feature_res_surface">#F5F7FC</color>
+    <color name="feature_res_on_surface">#192338</color>
+    <color name="dev_primary">#2458C6</color>
+    <color name="dev_on_primary">#FFFFFF</color>
+    <color name="dev_primary_container">#DFE8FF</color>
+    <color name="dev_on_primary_container">#163567</color>
+    <color name="dev_secondary">#146C70</color>
+    <color name="dev_on_secondary">#FFFFFF</color>
+    <color name="dev_secondary_container">#D8F1F0</color>
+    <color name="dev_on_secondary_container">#124F53</color>
+    <color name="dev_surface_card">#FFFFFF</color>
+    <color name="dev_surface_variant">#E9EDF5</color>
+    <color name="dev_on_surface_variant">#526078</color>
+    <color name="dev_outline">#738098</color>
+    <color name="dev_outline_variant">#D4DCE9</color>
+    <color name="dev_error">#B3261E</color>
+    <color name="dev_on_error">#FFFFFF</color>
+    <color name="dev_error_container">#FCE3DF</color>
+    <color name="dev_on_error_container">#761F19</color>
 </resources>

@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="demo_touch_target">48dp</dimen>
+    <dimen name="demo_title_size">18sp</dimen>
+</resources>

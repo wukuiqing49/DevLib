@@ -1,0 +1,22 @@
+{
+  "activeModules": 20,
+  "independentPages": 19,
+  "supportModules": [
+    "lib_operations"
+  ],
+  "routeGroups": [
+    "document",
+    "files",
+    "foundation",
+    "google",
+    "image"
+  ],
+  "apkInitializers": [
+    "com.wkq.router.generated.RouteInit_DevDemoDocument",
+    "com.wkq.router.generated.RouteInit_DevDemoImage",
+    "com.wkq.router.generated.RouteInit_DevDemoFiles",
+    "com.wkq.router.generated.RouteInit_DevDemoFoundation",
+    "com.wkq.router.generated.RouteInit_DevDemoGoogle"
+  ],
+  "deviceTesting": "not run"
+}

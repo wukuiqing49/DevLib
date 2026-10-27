@@ -1,0 +1,23 @@
+{
+  "verifiedSourceAndTestFiles": [
+    "core/core_nas/src/main/AndroidManifest.xml",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasClient.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasDiscovery.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasErrors.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasModels.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasPaths.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/NasStorage.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/ProtocolAliases.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/SftpProvider.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/SmbProvider.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/WebDavCertificates.kt",
+    "core/core_nas/src/main/java/com/wkq/naslib/WebDavProvider.kt",
+    "core/core_nas/src/test/java/com/wkq/naslib/NasClientTest.kt",
+    "core/core_nas/src/test/java/com/wkq/naslib/SmbPathTest.kt",
+    "core/core_usb/src/main/AndroidManifest.xml",
+    "core/core_usb/src/main/java/com/wkq/usb/UsbModels.kt",
+    "core/core_usb/src/main/java/com/wkq/usb/UsbStorage.kt",
+    "core/core_usb/src/test/java/com/wkq/usb/UsbStorageTest.kt"
+  ],
+  "sourceRepositoryWritten": false
+}

@@ -6,7 +6,7 @@
         <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
         <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_utils_execute" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/digest" style="@style/Demo.Button" android:text="@string/demo_utils_digest" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/digest" style="@style/Demo.Button.Primary" android:text="@string/demo_utils_digest" />
         <com.google.android.material.button.MaterialButton android:id="@+id/share" style="@style/Demo.Button" android:text="@string/demo_utils_share" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>

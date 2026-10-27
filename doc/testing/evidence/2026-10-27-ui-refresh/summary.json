@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-27",
+  "head": "bca8dffe897a465d6f9f55bcd23472f65f75303f",
+  "dirtyWorkspace": true,
+  "sourceFingerprint": "dc12b5d9ea34fc2f52d82d462e281c62a00d6d5ba0c6365d4ef92bbfe4d53af0",
+  "fingerprintAlgorithm": "SHA256(sorted path + NUL + file SHA256 + newline)",
+  "sourceFiles": 1198,
+  "apkSha256": "ac91fc2497c0b5e889fc114ffa9f2067743cb1da776275876705f0758f341c5e",
+  "taskFiles": 42,
+  "unitTests": {
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "device": {
+    "model": "Pixel 8",
+    "android": "16",
+    "api": 36,
+    "fontScaleTested": [
+      1.0,
+      1.3
+    ],
+    "orientation": [
+      "portrait",
+      "landscape"
+    ],
+    "nightMode": [
+      "light",
+      "dark"
+    ],
+    "restored": {
+      "night": "yes",
+      "font": 1.0,
+      "accelerometer_rotation": 1,
+      "user_rotation": 0
+    }
+  },
+  "passed": [
+    "Debug build",
+    "27 common JVM tests",
+    "9 host module build/UI/i18n/architecture gates",
+    "42 file source audit",
+    "12 text color contrast pairs >=4.5",
+    "APK 20 modules / 19 pages / 5 route groups",
+    "Pixel 8 install/start",
+    "PDF built-in sample generation / preview",
+    "Google / NAS form appearance",
+    "landscape tool list / navigation",
+    "130% font home appearance",
+    "PDF keyboard / focused field"
+  ],
+  "notVerified": [
+    "API 26 / 37 physical devices",
+    "tablet / foldable / multiwindow",
+    "3-button navigation",
+    "200% font / RTL / English visual review",
+    "19 complete business flows",
+    "real Google transactions / NAS / USB",
+    "release R8"
+  ],
+  "deviceCrashMarkers": 0,
+  "scopeNote": "Full PDF flow, keyboard, landscape, font and long-form checks completed before the final theme-only initial icon boolean addition; final APK reinstalled and light/dark home rechecked. Kotlin/business bytecode and shared layout unchanged by that final addition."
+}

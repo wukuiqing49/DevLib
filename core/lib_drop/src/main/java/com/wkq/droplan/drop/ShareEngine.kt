@@ -198,11 +198,21 @@ class ShareEngine(
     private fun ownedTask(owner: String, id: String) = queue.tasks[id]?.takeIf { it.owner == owner } ?: fail(404, "not_found")
     private fun ensureOpen() { if (closed) fail(503, "sharing_ended") }
 
+    /** 结束所有授权与传输；单个流关闭失败不阻止其余清理，最后抛出聚合错误。 */
     @Synchronized override fun close() {
         if (closed) return
-        closed = true; queue.tasks.values.forEach(queue::cancel)
-        probeCancel?.invoke(); probeCancel = null; probeOwner = null
+        closed = true
+        var failure: Exception? = null
+        queue.tasks.values.toList().forEach { task ->
+            try { queue.cancel(task) } catch (error: Exception) {
+                if (failure == null) failure = error else if (failure !== error) failure!!.addSuppressed(error)
+            }
+        }
+        try { probeCancel?.invoke() } catch (error: Exception) {
+            if (failure == null) failure = error else if (failure !== error) failure!!.addSuppressed(error)
+        } finally { probeCancel = null; probeOwner = null }
         receivers.clear(); pairings.clear(); queue.tasks.clear()
+        failure?.let { throw it }
     }
 
     companion object {

@@ -9,6 +9,18 @@ import java.nio.file.Files
 
 class PdfImageExportRequestTest {
 
+    /** 网格边距与间隔的极大值不能溢出成可绘制区域。 */
+    @org.junit.Test fun rejectsOverflowingGridParameters() {
+        org.junit.Assert.assertTrue(runCatching {
+            PdfGridOperationRequest(emptyList(), PdfOutputTarget.FileTarget(java.io.File("test.pdf")), marginPoints = Int.MAX_VALUE)
+        }.isFailure)
+        org.junit.Assert.assertTrue(runCatching {
+            PdfGridOperationRequest(emptyList(), PdfOutputTarget.FileTarget(java.io.File("test.pdf")), gapPoints = Int.MAX_VALUE)
+        }.isFailure)
+        org.junit.Assert.assertTrue(runCatching { PdfPageConfig(marginPoints = Int.MAX_VALUE) }.isFailure)
+    }
+
+
     @Test
     fun keepsInputOrderAndAcceptsValidPageConfiguration() {
         val root = Files.createTempDirectory("pdf-request-test").toFile()

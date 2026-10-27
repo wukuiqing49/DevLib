@@ -1,0 +1,63 @@
+{
+  "testedAt": "2026-10-27T11:56:40.138998+08:00",
+  "commit": null,
+  "testedHead": "bca8dffe897a465d6f9f55bcd23472f65f75303f",
+  "uncommittedWorkspace": true,
+  "sourceFingerprint": "469b10490870cf97f10a5bd522261714aad678ab6b866d48e9e8f9c89eb84ba0",
+  "fingerprintInputFiles": 1191,
+  "environment": "Windows; JDK 17; Gradle 9.3.1; AGP 9.1.1; compile/target 37; JVM/Robolectric; no device commands",
+  "jvmTotals": {
+    "tests": 361,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "jvmPassed": 360,
+  "newRegressionTests": 30,
+  "pythonTests": 10,
+  "nodeTests": 7,
+  "libraryPublicationCount": 20,
+  "appDebugBuild": "passed",
+  "mavenConsumerCompile": "passed",
+  "apkCatalog": {
+    "modules": 20,
+    "pages": 19,
+    "routeGroups": 5
+  },
+  "sourceAudit": {
+    "hostFiles": 32,
+    "newAndRewrittenFiles": 11,
+    "findings": 0,
+    "existingLibraryDeclarations": "manually reviewed changed declarations; no claim of a full historical-source audit"
+  },
+  "staticWarnings": {
+    "build": 0,
+    "ui": 0,
+    "i18n": 0,
+    "architecture": 2
+  },
+  "sourceRepositoriesWritten": false,
+  "baseSourceModified": false,
+  "ciModified": false,
+  "deviceTesting": "excluded by user",
+  "result": "passed within local runnable scope",
+  "commands": [
+    "gradlew.bat testLibraries :feature:feature_demo_common:testDebugUnitTest :feature:feature_demo_files:testDebugUnitTest :feature:feature_demo_document:testDebugUnitTest :feature:feature_demo_google:testDebugUnitTest :app:assembleDebug --max-workers=2 --console=plain",
+    "gradlew.bat :core:lib_drop:testDebugUnitTest publishLibrariesToLocalRepository :app:assembleDebug --max-workers=2 --console=plain",
+    "gradlew.bat -p samples/published-consumer compileDebugKotlin --max-workers=2 --console=plain",
+    "python -B scripts/verify_demo_catalog.py --apk app/build/outputs/apk/debug/app-debug.apk",
+    "python -B -m unittest discover -s scripts -p test_verify_demo_catalog.py",
+    "node --test scripts/test_demo_receiver.cjs",
+    "python -B .agents/scripts/validate_agent_structure.py --project-root .",
+    "python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n",
+    "python -B .agents/scripts/validate_android_source.py --project-root . --report .ai-work/library-optimization-host-audit.json",
+    "git diff --check"
+  ],
+  "notes": [
+    "Gradle UP-TO-DATE results reused when inputs unchanged; JUnit totals are not claimed as all freshly executed.",
+    "One pre-existing @Ignore: MetadataScrubberTest.testScrubMetadataKeepOrientation; device/integration case not advanced.",
+    "Windows compile JAR lock resolved by stopping Gradle daemons; test fixtures corrected without changing production dependency versions.",
+    "Real remote servers, USB devices, Google purchases/reviews, Android 17 runtime/visual behavior, App signed Release/R8 and native 16KB device acceptance not executed."
+  ],
+  "apkSha256": "3301041cfcda7d7c3ec799b13f22cb1f2a5338aff641bff95c80c539aedb2a4e"
+}

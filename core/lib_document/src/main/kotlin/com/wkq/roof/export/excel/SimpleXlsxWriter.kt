@@ -1,5 +1,7 @@
 ﻿package com.wkq.roof.export.excel
 
+import com.wkq.roof.export.checkOfficeActive
+import com.wkq.roof.export.commitOfficeOutput
 import java.io.File
 import com.wkq.roof.export.validXmlText
 import java.io.RandomAccessFile
@@ -8,7 +10,7 @@ import java.util.Locale
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
-/** 仅实现 RoofQuote 报价表需要的 OpenXML 子集。 */
+/** 轻量 Excel OpenXML 写入器，支持表格、图片、图表和打印布局。 */
 object SimpleXlsxWriter {
     data class WorkbookTheme(
         val primaryColor: String = "1F6FEB",
@@ -77,6 +79,7 @@ object SimpleXlsxWriter {
         val hidden: Boolean = false
     )
 
+    /** 写入隔离临时文件，校验后原子替换；失败或中断不删除旧文档。 */
     fun write(
         output: File,
         sheets: List<Sheet>,
@@ -138,7 +141,7 @@ object SimpleXlsxWriter {
             check(temporary.isFile && temporary.length() > 0L)
             RandomAccessFile(temporary, "rw").use { it.fd.sync() }
             // 同目录替换失败时保留旧报告，不能先删除正式文件。
-            check(temporary.renameTo(output))
+            commitOfficeOutput(temporary, output)
         } finally {
             temporary.delete()
         }
@@ -146,10 +149,16 @@ object SimpleXlsxWriter {
         return output
     }
 
+    /** 校验工作表和单元格容量，拒绝导出无法完整表达的数据。 */
     private fun validate(sheets: List<Sheet>) {
         require(sheets.any { !it.hidden }) { "Workbook needs a visible sheet" }
         val normalizedNames = mutableSetOf<String>()
         sheets.forEach { sheet ->
+            checkOfficeActive()
+            require(sheet.rows.size <= 1_048_576) { "Too many Excel rows" }
+            require(sheet.rows.all { it.size <= 16_384 }) { "Too many Excel columns" }
+            require(sheet.rows.all { row -> row.all { it.value.length <= 32_767 } }) { "Excel cell text is too long" }
+            require(sheet.name.validXmlText() == sheet.name) { "Invalid XML character in sheet name" }
             require(sheet.mergedRows.all { it in sheet.rows.indices && sheet.rows[it].drop(1).all { cell -> cell.value.isEmpty() } }) {
                 "Merged row must not discard cell values"
             }
@@ -530,15 +539,27 @@ object SimpleXlsxWriter {
 
     private fun String.relationshipTarget(): String = URI(null, null, replace('\\', '/'), null).toASCIIString()
 
+    /** 写入单个 XML 条目，写入前检查中断。 */
     private fun ZipOutputStream.text(path: String, value: String) {
+        checkOfficeActive()
         putNextEntry(ZipEntry(path))
         write(value.toByteArray(Charsets.UTF_8))
         closeEntry()
     }
 
+    /** 分块写入媒体条目，避免大图片复制期间无法响应中断。 */
     private fun ZipOutputStream.file(path: String, file: File) {
+        checkOfficeActive()
         putNextEntry(ZipEntry(path))
-        file.inputStream().buffered().use { it.copyTo(this) }
+        file.inputStream().buffered().use { input ->
+            val buffer = ByteArray(64 * 1024)
+            while (true) {
+                checkOfficeActive()
+                val count = input.read(buffer)
+                if (count < 0) break
+                write(buffer, 0, count)
+            }
+        }
         closeEntry()
     }
 

@@ -7,19 +7,19 @@
         <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
         <TextView style="@style/Demo.Heading" android:text="@string/pdf_page_order" />
         <androidx.recyclerview.widget.RecyclerView android:id="@+id/pages" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:nestedScrollingEnabled="false" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_paper">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_paper">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/paper" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_pdf_paper_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_margin">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_margin">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/margin" style="@style/Demo.Input" android:inputType="number" android:text="@string/demo_pdf_margin_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_columns">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_pdf_columns">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/columns" style="@style/Demo.Input" android:inputType="number" android:text="@string/demo_pdf_columns_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/landscape" style="@style/Demo.Input" android:text="@string/demo_pdf_landscape" android:checked="false" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_pdf_execute" />
         <com.google.android.material.button.MaterialButton android:id="@+id/reverse" style="@style/Demo.Button" android:text="@string/demo_pdf_reverse" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/export" style="@style/Demo.Button" android:text="@string/demo_pdf_export" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/export" style="@style/Demo.Button.Primary" android:text="@string/demo_pdf_export" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

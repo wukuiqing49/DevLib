@@ -7,7 +7,9 @@ description: "用于把 Figma 文件、Frame 或 node 转成可验证的 Android
 
 ## 项目上下文
 
-在项目仓库中调用时读取：
+以下项目路径均相对目标工程；脚本和 references 相对本 Skill。跨项目调用读取目标规则与事实，缺失时从实际源码/构建核实并说明，不套用 DevLib 的包名、模块或执行策略。脚手架生成参数使用用户选定配置。
+
+在目标项目中读取适用且存在的文件：
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/figma.md`
@@ -46,4 +48,4 @@ python .agents/skills/android-figma-workflow/scripts/validate_figma_output.py `
   --analysis-report .ai-work/figma/output/page_task_<page>.md
 ```
 
-实现阶段还必须运行 UI/i18n 门禁和受影响模块 Gradle 编译；主页、Tab 或主导航页面按任务卡增加 pager 导航强校验。
+实现阶段还必须运行 UI/i18n 门禁和受影响模块 Gradle 编译；仅任务卡明确要求 ViewPager2 分页时增加 pager 导航强校验；BottomNav 本身不触发分页要求。

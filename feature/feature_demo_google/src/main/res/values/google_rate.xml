@@ -1,0 +1,29 @@
+<resources>
+    <string name="google_rate_heading">3. 评分提示与反馈</string>
+    <string name="google_rate_intro">默认首次使用满 1 天、至少完成 1 次关键操作，两次请求间隔 30 天。测试入口记录模拟完成事件并遵守正式策略，不保证显示 Play 卡片。流程结束、商店跳转和邮件打开都不代表已评分或反馈已提交。</string>
+    <string name="google_rate_check">检查自动提示条件</string>
+    <string name="google_rate_record">模拟完成一次操作并检查评分请求</string>
+    <string name="google_rate_disable">关闭自动评分提示</string>
+    <string name="google_rate_enable">恢复自动评分提示</string>
+    <string name="google_rate_store">主动去商店评分</string>
+    <string name="google_rate_email">反馈邮箱（由宿主提供）</string>
+    <string name="google_rate_feedback">独立发送反馈邮件</string>
+    <string name="google_rate_feedback_subject">应用使用反馈</string>
+    <string name="google_rate_state">累计完成操作：%1$d；请求尝试：%2$d；当前条件：%3$s</string>
+    <string name="google_rate_suppressed">自动评分提示已关闭，手动评分和反馈仍可使用。</string>
+    <string name="google_rate_resumed">已恢复自动提示；使用时长和冷却限制仍然生效。</string>
+    <string name="google_rate_finished">评分流程已结束；无法判断卡片是否展示或用户是否提交。</string>
+    <string name="google_rate_unavailable">本次评分请求不可用，继续正常使用；不会自动跳转商店。</string>
+    <string name="google_rate_in_progress">已有评分流程进行中，请勿重复请求。</string>
+    <string name="google_rate_host_inactive">当前页面已离开，未继续打开评分窗口。</string>
+    <string name="google_rate_eligible">满足本地请求条件；Play 配额仍可能阻止展示。</string>
+    <string name="google_rate_clock_invalid">设备时间异常或发生回拨，暂不请求。</string>
+    <string name="google_rate_no_action">尚未完成要求的关键操作。</string>
+    <string name="google_rate_too_early">首次使用尚未满 1 天，暂不请求。</string>
+    <string name="google_rate_cooldown">距离上次请求尚未满 30 天，暂不请求。</string>
+    <string name="google_rate_store_opened">已发起商店跳转，不代表已提交评分。</string>
+    <string name="google_rate_store_missing">无法打开应用商店或网页。</string>
+    <string name="google_rate_email_invalid">请填写有效的宿主反馈邮箱。</string>
+    <string name="google_rate_email_opened">已打开邮件客户端，是否发送由用户决定。</string>
+    <string name="google_rate_email_missing">没有可用的邮件客户端。</string>
+</resources>

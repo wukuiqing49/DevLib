@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites>
+  <testsuite name="com.wkq.naslib.NasClientTest" tests="5" skipped="0" failures="0" errors="0" time="2.458">
+    <testcase name="invalidConfigurationIsRejectedAndCredentialsStayOutOfDiagnostics" classname="com.wkq.naslib.NasClientTest" time="2.183" />
+    <testcase name="publicClientMapsAuthenticationAndSpaceErrorsWithoutProtocolTypes" classname="com.wkq.naslib.NasClientTest" time="0.189" />
+    <testcase name="publicClientKeepsUnicodeFileIdentityAcrossBrowseReadMoveAndDelete" classname="com.wkq.naslib.NasClientTest" time="0.047" />
+    <testcase name="callerControlExceptionsKeepTheirIdentity" classname="com.wkq.naslib.NasClientTest" time="0.021" />
+    <testcase name="structuralPathChecksPreserveNamesAndRejectTraversal" classname="com.wkq.naslib.NasClientTest" time="0.017" />
+  </testsuite>
+  <testsuite name="com.wkq.naslib.SmbPathTest" tests="3" skipped="0" failures="0" errors="0" time="0.065">
+    <testcase name="smbPrefersSigningAndNeverNegotiatesSmb1" classname="com.wkq.naslib.SmbPathTest" time="0.049" />
+    <testcase name="percentEncodedNamesRemainLiteralUrlSegments" classname="com.wkq.naslib.SmbPathTest" time="0.014" />
+    <testcase name="urlDelimitersAreRejectedBeforeNetworkAccess" classname="com.wkq.naslib.SmbPathTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.usb.UsbStorageTest" tests="10" skipped="0" failures="0" errors="0" time="3.816">
+    <testcase name="directoryMetadataMatchesEnumeration" classname="com.wkq.usb.UsbStorageTest" time="3.635" />
+    <testcase name="existingPathsPreserveUnicodeIdentity" classname="com.wkq.usb.UsbStorageTest" time="0.016" />
+    <testcase name="traversalCannotEscapeGrantedTree" classname="com.wkq.usb.UsbStorageTest" time="0.016" />
+    <testcase name="fileCannotBeDeletedThroughDirectoryApi" classname="com.wkq.usb.UsbStorageTest" time="0.018" />
+    <testcase name="streamedWriteReadAndFileDelete" classname="com.wkq.usb.UsbStorageTest" time="0.044" />
+    <testcase name="failedEnumerationCannotBeTreatedAsEmpty" classname="com.wkq.usb.UsbStorageTest" time="0.02" />
+    <testcase name="emptyChildCanBeDeleted" classname="com.wkq.usb.UsbStorageTest" time="0.018" />
+    <testcase name="unpreviewedChildPreventsRecursiveDeletion" classname="com.wkq.usb.UsbStorageTest" time="0.012" />
+    <testcase name="authorizedRootCannotBeDeleted" classname="com.wkq.usb.UsbStorageTest" time="0.012" />
+    <testcase name="readOnlyDirectoryCannotBeDeleted" classname="com.wkq.usb.UsbStorageTest" time="0.012" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.files.StorageLabTest" tests="7" skipped="0" failures="0" errors="0" time="0.072">
+    <testcase name="roundTripKeepsExistingFiles" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.019" />
+    <testcase name="corruptReadBackCleansOwnedFile" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.002" />
+    <testcase name="oversizedDownloadRemovesPartialOutput" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.024" />
+    <testcase name="cancellationCleansOwnedFile" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.004" />
+    <testcase name="boundedReadRejectsOversizedData" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.001" />
+    <testcase name="cleanupFailureIsReported" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.002" />
+    <testcase name="rejectedWriteDoesNotDeleteExistingTarget" classname="com.wkq.dev.demo.files.StorageLabTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.common.DemoErrorsTest" tests="7" skipped="0" failures="0" errors="0" time="0.007">
+    <testcase name="wrappedNetworkFailureUsesCauseWithoutDisplayingCredentials" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.002" />
+    <testcase name="missingFileIsNotTreatedAsNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+    <testcase name="timeoutIsMoreSpecificThanNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+    <testcase name="permissionFailureIsActionable" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+    <testcase name="certificateFailureIsMoreSpecificThanNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.001" />
+    <testcase name="cyclicCausesCannotHangErrorReporting" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+    <testcase name="invalidInputIsActionable" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.common.DemoExecutionTest" tests="6" skipped="0" failures="0" errors="0" time="0.119">
+    <testcase name="cancelledTaskWithStorageFailureStaysCancelled" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.098" />
+    <testcase name="successResetsAfterPersist" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.003" />
+    <testcase name="cancelledTaskFinishesHistoryAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.007" />
+    <testcase name="persistenceFailureReportsAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.002" />
+    <testcase name="explicitCancellationPropagatesAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.005" />
+    <testcase name="reportingFailureStillResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.002" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.common.WorkspacePolicyTest" tests="7" skipped="0" failures="0" errors="0" time="0.023">
+    <testcase name="documentCannotBePassedToImageEngine" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.009" />
+    <testcase name="genericFileToolsAcceptDocuments" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.0" />
+    <testcase name="canonicalEscapeRejected" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.001" />
+    <testcase name="nestedOutputIsManaged" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.001" />
+    <testcase name="unsupportedRouteNotOffered" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.0" />
+    <testcase name="importedNameCannotEscapeDirectory" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.009" />
+    <testcase name="siblingPrefixIsNotManaged" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.common.WorkspaceSelectionTest" tests="5" skipped="0" failures="0" errors="0" time="0.033">
+    <testcase name="invalidSizeOrDuplicatesDoNotReadStore" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.011" />
+    <testcase name="validBatchKeepsRequestedOrder" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.007" />
+    <testcase name="missingAssetRejectsWholeBatchAndCanRetry" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.005" />
+    <testcase name="incompatibleAssetRejectsBatch" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.005" />
+    <testcase name="removedFileRejectsBatch" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.wkq.iptc.upload.UploadProtocolValidationTest" tests="3" skipped="0" failures="0" errors="0" time="0.045">
+    <testcase name="unknownProtocolsNeverBecomeFtpUploads" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.01" />
+    <testcase name="supportedProfilesRemainReadable" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.031" />
+    <testcase name="retiredProfilesCannotFallBackToAnotherProtocol" classname="com.wkq.iptc.upload.UploadProtocolValidationTest" time="0.001" />
+  </testsuite>
+</testsuites>

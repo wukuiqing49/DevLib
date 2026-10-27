@@ -1,3 +1,33 @@
+# Skill 与 AGENTS.md 优化复核（2026-10-27）
+
+本轮按前次分析统一规则、Skill 和深层 references，并保留用户要求的 Base、XML/ViewBinding/MVVM、国际化、适配及中文文档基线。
+
+## 已完成
+
+- 架构区分宿主共享编排与独立引擎，不再因“跨功能”直接要求进入 core；查询 WKQ tag 仅用于依赖接入/升级。
+- Figma 入口、分析、映射、生成和验收统一按任务卡决定分页；底部导航不自动要求 ViewPager2。已授权实现时分析后继续，局部修改不强制重建；补拉资源在现有授权内执行，改变设计才确认。
+- UI 系统栏规范增加 Android 17 下普通边到边、全屏沉浸式、桌面标题栏、独立弹窗及状态恢复，保持 Base 复用和 minSdk 兼容。
+- 国际化脚本按参数索引识别占位符，支持显式重排、相对引用、日期转换与百分号转义；区分语言与条件限定符，允许同语言基础资源继承，夜间资源不能代替全天候语言覆盖；指定目录不存在时失败。
+- 独立调用国际化 Skill 明确严格验收参数与真实扫描目录；其他 Android Skills 明确目标事实与工具位置分离。Zeplin 验收先检查设备排除策略。
+- 精简 Play Skill 的触发描述，保留 10 个英文 Seed、关键词研究交接和真实性协议。
+
+## 本轮验证
+
+- 公共脚本 33 项、国际化 12 项、Figma 4 项，共 49 项 Python 测试通过；损坏 XML 用例输出的 ERROR 为预期负例。
+- 10 个项目 Skill 格式验证通过；Windows 使用 Python UTF-8 模式读取中文文件。
+- 严格聚合校验覆盖 9 个宿主模块，build/UI/i18n 零警告；架构保留独立消费样例未注册主工程、初始化文本匹配两项已有警告。
+- Agent 结构与 git diff --check 通过。未改动 core、App/feature 源码及 CI；本轮是工具和规范维护，未重跑 Android 构建或设备/视觉验收。未提交、未推送。
+
+## 边界
+
+占位符检查不替代 Formatter 的完整格式语法验证；资源分析不模拟 Android 全部配置选择、复杂语言脚本匹配及 Gradle sourceSet 合并。中文注释语义、间接 Base 继承和视觉效果仍须人工复核。Figma/Zeplin 本轮检查的是规则一致性，未连接真实设计服务完成端到端还原。
+
+资源限定符和 fallback 依据：[Android 资源文档](https://developer.android.com/guide/topics/resources/providing-resources)。系统栏官方依据和核验范围见 `.agents/skills/android-ui-workflow/references/system-bars-android17.md`。
+
+以下保留前轮记录，其“未提交”和测试数量均指当时状态。
+
+---
+
 # Agent 与 Skills 整体分析及优化
 
 日期：2026-10-26。范围为当前 DevLib 的 AGENTS.md、.agents 规则、工作流、Skills、模板和本地验证工具；不是重新迁入功能库或改写基础库。

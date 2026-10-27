@@ -90,8 +90,10 @@ object QrCodeKit {
             )
         }
 
-    /** 返回图片中的全部可识别二维码和条形码。 */
+    /** 返回全部可识别码；像素副本限制为 1600 万像素，过大图片须由宿主先采样。 */
     fun recognizeAll(bitmap: Bitmap): List<RecognitionResult> {
+        require(!bitmap.isRecycled) { "Recognition bitmap has been recycled" }
+        require(bitmap.width.toLong() * bitmap.height <= 16_000_000L) { "Recognition image exceeds pixel budget; downsample first" }
         val pixels = IntArray(bitmap.width * bitmap.height)
         bitmap.getPixels(pixels, 0, bitmap.width, 0, 0, bitmap.width, bitmap.height)
         val binaryBitmap = BinaryBitmap(

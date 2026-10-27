@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf8'?>
+<testsuites><testsuite name="com.wkq.dev.demo.common.DemoErrorsTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-27T04:23:51.925Z" time="0.025">
+  <testcase name="engineFailuresHaveSpecificKinds" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.021" />
+  <testcase name="socketFailureRemainsNetworkError" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.001" />
+  <testcase name="missingFileIsNotTreatedAsNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="timeoutIsMoreSpecificThanNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="permissionFailureIsActionable" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="certificateFailureIsMoreSpecificThanNetwork" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="cyclicCausesCannotHangErrorReporting" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="invalidInputIsActionable" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  <testcase name="wrappedFileFailureUsesCauseWithoutDisplayingCredentials" classname="com.wkq.dev.demo.common.DemoErrorsTest" time="0.0" />
+  </testsuite><testsuite name="com.wkq.dev.demo.common.DemoExecutionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-27T04:23:51.953Z" time="0.101">
+  <testcase name="cancelledTaskWithStorageFailureStaysCancelled" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.083" />
+  <testcase name="successResetsAfterPersist" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.002" />
+  <testcase name="cancelledTaskFinishesHistoryAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.007" />
+  <testcase name="persistenceFailureReportsAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.003" />
+  <testcase name="explicitCancellationPropagatesAndResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.004" />
+  <testcase name="reportingFailureStillResets" classname="com.wkq.dev.demo.common.DemoExecutionTest" time="0.002" />
+  </testsuite><testsuite name="com.wkq.dev.demo.common.WorkspacePolicyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-27T04:23:52.056Z" time="0.021">
+  <testcase name="documentCannotBePassedToImageEngine" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.005" />
+  <testcase name="genericFileToolsAcceptDocuments" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.0" />
+  <testcase name="canonicalEscapeRejected" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.002" />
+  <testcase name="nestedOutputIsManaged" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.002" />
+  <testcase name="unsupportedRouteNotOffered" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.001" />
+  <testcase name="importedNameCannotEscapeDirectory" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.008" />
+  <testcase name="siblingPrefixIsNotManaged" classname="com.wkq.dev.demo.common.WorkspacePolicyTest" time="0.001" />
+  </testsuite><testsuite name="com.wkq.dev.demo.common.WorkspaceSelectionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-27T04:23:52.084Z" time="0.034">
+  <testcase name="invalidSizeOrDuplicatesDoNotReadStore" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.013" />
+  <testcase name="validBatchKeepsRequestedOrder" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.012" />
+  <testcase name="missingAssetRejectsWholeBatchAndCanRetry" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.003" />
+  <testcase name="incompatibleAssetRejectsBatch" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.002" />
+  <testcase name="removedFileRejectsBatch" classname="com.wkq.dev.demo.common.WorkspaceSelectionTest" time="0.002" />
+  </testsuite></testsuites>

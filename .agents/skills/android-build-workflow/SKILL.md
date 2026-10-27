@@ -7,7 +7,9 @@ description: "用于修改和验证 Android 构建系统：Gradle、版本目录
 
 ## 项目上下文
 
-在项目仓库中调用时读取：
+以下项目路径均相对目标工程；脚本和 references 相对本 Skill。跨项目调用读取目标规则与事实，缺失时从实际源码/构建核实并说明，不套用 DevLib 的包名、模块或执行策略。脚手架生成参数使用用户选定配置。
+
+在目标项目中读取适用且存在的文件：
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/execution.md`

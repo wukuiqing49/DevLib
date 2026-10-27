@@ -2,4 +2,5 @@
     <dimen name="app_spacing_small">8dp</dimen>
     <dimen name="app_spacing_medium">16dp</dimen>
     <dimen name="app_spacing_large">24dp</dimen>
+    <dimen name="app_toolbar_title_size">@dimen/demo_title_size</dimen>
 </resources>

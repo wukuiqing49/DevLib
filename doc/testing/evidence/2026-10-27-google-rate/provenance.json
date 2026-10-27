@@ -1,0 +1,26 @@
+[
+  {
+    "sourceRepository": "SiteReport",
+    "sourceCommit": "79e8a27a6971a79d4413ec365cb817cd4282e1ff",
+    "reviewedFiles": {
+      "core/core_google/src/main/java/com/wkq/google/rate/GooglePlayReviewLauncher.kt": "437749d210e19299fc75b36c0c37a6798c0ec561b6a03b98cabe593f19595be3",
+      "core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt": "d0dcc4c0ba66affc07e1a9e2cac3151937e4fe074ba1e7942b4f51ec9b6ec0a1",
+      "core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt": "f9aaa5c5304fa2cc6cbb7d65829234ba5b3fb9407c8809ea78b493b522793da9",
+      "core/core_google/src/main/java/com/wkq/google/rate/RateAppDialogHelper.kt": "1b6bc90623f5711d7c9528c6c394b6f0587afb01ec4042ffe072c697459fb0f7"
+    },
+    "importDate": "2026-10-27",
+    "mode": "Adapted rating policy and request flow; original repository unchanged"
+  },
+  {
+    "sourceRepository": "PressIPTC",
+    "sourceCommit": "e862c56d0e4c67b1214427fc20a570afc35f3104",
+    "reviewedFiles": {
+      "core/core_google/src/main/java/com/wkq/google/rate/GooglePlayReviewLauncher.kt": "437749d210e19299fc75b36c0c37a6798c0ec561b6a03b98cabe593f19595be3",
+      "core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt": "c0f7a7fd28abb17714e2edf1f0373bda03f552f7ccd1de9f516bab899d35a52c",
+      "core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt": "944c17b741cb95768580b6d15806b079b9bfee57cc7613f9029334fe2591e1c7",
+      "core/core_google/src/main/java/com/wkq/google/rate/RateAppDialogHelper.kt": "5eb7b40753630c0583f78bfcd392e5e1d49eb418c6076413ebc5a6fd30a74211"
+    },
+    "importDate": "2026-10-27",
+    "mode": "Adapted rating policy and request flow; original repository unchanged"
+  }
+]

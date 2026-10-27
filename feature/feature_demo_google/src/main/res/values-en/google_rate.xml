@@ -1,0 +1,29 @@
+<resources>
+    <string name="google_rate_heading">3. Review prompts and feedback</string>
+    <string name="google_rate_intro">By default: wait 1 day, complete at least 1 key action, and allow 30 days between requests. The test action records a simulated completion and obeys this policy. Play may not show a card. Flow completion or opening a store or email app does not confirm a submitted review or message.</string>
+    <string name="google_rate_check">Check automatic prompt eligibility</string>
+    <string name="google_rate_record">Simulate a completed action and check review request</string>
+    <string name="google_rate_disable">Disable automatic review prompts</string>
+    <string name="google_rate_enable">Enable automatic review prompts</string>
+    <string name="google_rate_store">Rate on the store</string>
+    <string name="google_rate_email">Feedback email (provided by host)</string>
+    <string name="google_rate_feedback">Open feedback email</string>
+    <string name="google_rate_feedback_subject">App feedback</string>
+    <string name="google_rate_state">Completed actions: %1$d; request attempts: %2$d; eligibility: %3$s</string>
+    <string name="google_rate_suppressed">Automatic prompts are disabled. Manual rating and feedback remain available.</string>
+    <string name="google_rate_resumed">Automatic prompts enabled. Usage and cooldown requirements still apply.</string>
+    <string name="google_rate_finished">Review flow finished. Card display and review submission cannot be determined.</string>
+    <string name="google_rate_unavailable">Review request unavailable. Continue normally; no automatic store redirect.</string>
+    <string name="google_rate_in_progress">A review flow is already in progress.</string>
+    <string name="google_rate_host_inactive">The page is no longer active; no further review window was opened.</string>
+    <string name="google_rate_eligible">Local requirements met; Play quotas may still prevent display.</string>
+    <string name="google_rate_clock_invalid">Device time is invalid or moved backward; no request.</string>
+    <string name="google_rate_no_action">The required key action has not been completed.</string>
+    <string name="google_rate_too_early">Less than 1 day since first use; no request.</string>
+    <string name="google_rate_cooldown">Less than 30 days since the last request; no request.</string>
+    <string name="google_rate_store_opened">Store navigation requested; this does not confirm a submitted review.</string>
+    <string name="google_rate_store_missing">Unable to open the store or web page.</string>
+    <string name="google_rate_email_invalid">Enter a valid host feedback email.</string>
+    <string name="google_rate_email_opened">Email app opened. The user decides whether to send.</string>
+    <string name="google_rate_email_missing">No email app is available.</string>
+</resources>

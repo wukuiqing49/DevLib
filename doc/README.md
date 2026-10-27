@@ -1,6 +1,6 @@
 # DevLib
 
-Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当前保留 **19 个模块：8 个基础模块、10 个功能库、1 个内部支撑库**。App 以四个一级入口组织使用流程，保留 18 个库能力入口。
+Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当前保留 **20 个模块：8 个基础模块、11 个功能库、1 个内部支撑库**。App 以四个一级入口组织使用流程，保留 19 个库能力入口。
 
 ## 基础体系
 
@@ -18,7 +18,7 @@ Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当�
 
 | 模块 | 来源 | 用途 |
 | --- | --- | --- |
-| `core_google` | DropLAN | Google 登录、Firebase Auth、Play Billing 统一 SDK 适配；[接入说明](../core/core_google/README.md)。 |
+| `core_google` | DropLAN | Google 登录、Firebase Auth、Play Billing 与评分提示统一 SDK 适配；[接入说明](../core/core_google/README.md)。 |
 | `core_archive` | PhotoKit | ZIP 创建与带密码归档解压，包含压缩等级、加密选项、预算、取消及原子输出。 |
 | `core_image_render` | PhotoKit | Bitmap 渲染：批注/撤销历史、水印、设备样机、拍立得相框和签名提取。 |
 | `core_pdf` | PhotoKit | 把图片输出为 PDF：页面尺寸/方向、缩放、网格、页眉页脚、页码与 File/Uri/PFD 输出。 |
@@ -26,8 +26,9 @@ Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当�
 | `lib_document` | RoofQuote | 轻量 OpenXML 写入：DOCX 段落/表格/主题与 XLSX 表格输出。 |
 | `lib_drop` | DropLAN | LAN 浏览器分享引擎：文件源、HTTP/HTTPS、Range、配对审批、下载队列、地址发现和连接建议。 |
 | `lib_metadata` | PressIPTC | EXIF/IPTC/XMP 读写、sidecar、隐私清理、格式策略、校验及模板模型；含原生容器处理保护服务。 |
-| `lib_transfer` | NASFileManager | 文件管理及持久任务引擎：本地/SAF/SMB/WebDAV/SFTP、复制移动、冲突、恢复、同步、归档/回收及存储变化。 |
-| `lib_upload` | PressIPTC | 上传客户端：FTP、FTPS、HTTP（SMB、SFTP、WebDAV 统一使用 lib_transfer），支持进度、连接检测、配置/凭据存储。 |
+| `core_nas` | NASFileManager | SMB、WebDAV、SFTP 独立会话及流式读写。 |
+| `core_usb` | NASFileManager | SAF 授权目录查询及读写，不提供 USB 驱动。 |
+| `lib_upload` | PressIPTC | 上传客户端：FTP、FTPS、HTTP（SMB、SFTP、WebDAV 统一使用 core_nas），支持进度、连接检测、配置/凭据存储。 |
 
 `lib_operations` 为功能内部支撑，提供预算、取消、进度、错误和原子输出契约，不单独作为业务功能展示。PhotoKit 来源只保留压缩、轻量图片、图片 PDF、二维码及此支撑库。
 
@@ -46,7 +47,7 @@ feature/feature_demo_foundation 基础体系示例
 feature/feature_demo_files     压缩、上传、传输与局域网分享
 feature/feature_demo_image     轻量图片、元数据与二维码
 feature/feature_demo_document  图片 PDF 与 Office 导出
-feature/feature_demo_google    Google 登录、Firebase 与 Play 购买
+feature/feature_demo_google    Google 登录、Firebase、Play 购买与评分
 doc/                           使用、范围与验证文档
 docs/                          分类和来源事实
 ```
@@ -55,7 +56,7 @@ docs/                          分类和来源事实
 
 ## 演示与本地验证
 
-演示已加入传输任务历史与远程目标、逐个配对审批、Google 前台购买状态同步，以及五种图片处理流程。完整操作和边界见 [Demo 说明](test-lab.md)。基础库保持原样。
+演示已加入操作记录与远程目录浏览、逐个配对审批、Google 前台购买状态同步，以及五种图片处理流程。完整操作和边界见 [Demo 说明](test-lab.md)。基础库保持原样。
 
 模块产物分类、App/AndroidTest APK 构建、JVM 测试、APK 路由、本地发布和独立消费编译均通过本地命令验证，具体命令与结果见 `testing/TEST_REPORT.md`。本次未经明确需求新增的 GitHub Actions 工作流已撤回，未提交、未推送、未在远端生效。后续仅在用户明确要求 CI 时配置。
 
@@ -93,3 +94,9 @@ Android 17 / API 37 构建基线、Skill 配置及未验证边界见 [Android 17
 - [Agent 与 Skills 整体分析及优化](agent-skill-review.md)：规则分层、校验边界及当前文档/国际化欠账。
 
 - [稳定性与业务英文覆盖](stability-and-i18n.md)：历史收尾、整批素材校验、英文资源与签名验证边界。
+
+- [NAS / USB 接入与测试](nas-usb-migration.md)：轻量独立库、宿主业务流程与退役队列边界。
+
+逐库可靠性优化与边界：[优化记录](library-optimization.md)。实际验证见固定测试报告。
+
+- [页面分析与视觉优化](ui-page-review.md)：工作台与 19 个能力入口的颜色、主次操作、表单、结果及窗口适配。

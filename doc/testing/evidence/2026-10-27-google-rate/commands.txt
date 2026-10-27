@@ -1,0 +1,10 @@
+gradlew.bat :core:core_google:testDebugUnitTest :feature:feature_demo_google:testDebugUnitTest :core:core_google:publishReleasePublicationToDevLibLocalRepository :app:assembleDebug --max-workers=2
+gradlew.bat :app:assembleDebug --max-workers=2
+gradlew.bat -p samples/published-consumer compileDebugKotlin
+python -B scripts/verify_demo_catalog.py --apk app/build/outputs/apk/debug/app-debug.apk
+python -B scripts/test_verify_demo_catalog.py
+python -B .agents/scripts/validate_agent_structure.py --project-root .
+python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n
+python -B .agents/scripts/validate_android_source.py --project-root . --file core/core_google/src/main/java/com/wkq/google/rate/GoogleRatePolicy.kt --file core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt --file core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt --file feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt
+python -B .agents/skills/android-i18n-workflow/scripts/validate_i18n_resources.py --res-dir feature/feature_demo_google/src/main/res --strict-missing --required-locale en
+git diff --check

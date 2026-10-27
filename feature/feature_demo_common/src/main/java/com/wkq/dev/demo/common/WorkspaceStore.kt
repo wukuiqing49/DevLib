@@ -43,7 +43,7 @@ data class WorkspaceSnapshot(
     val favorites: Set<String>,
 )
 
-/** 仅保存宿主资产和前台操作历史。传输引擎的队列仍由 lib_transfer 管理。调用方使用 IO。 */
+/** 仅保存宿主资产和前台操作历史。传输引擎的操作由独立能力库执行。调用方使用 IO。 */
 class WorkspaceStore private constructor(context: Context) :
     SQLiteOpenHelper(context, "devlib-workspace.db", null, 2) {
     private val root = File(context.filesDir, "shared/demo")

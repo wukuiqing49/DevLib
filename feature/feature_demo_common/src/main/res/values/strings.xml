@@ -37,4 +37,9 @@
     <string name="demo_local_network_denied">未获得局域网权限。操作已取消，可重试并授权；若系统不再询问，请在应用设置中开启附近设备权限。</string>
     <string name="demo_local_network_retry">局域网权限已授予，请重新点击操作。</string>
     <string name="demo_history_failed">操作记录未能保存，当前结果仍可查看或另存；请检查存储空间，不要仅因记录失败而重复提交操作。</string>
+    <string name="demo_error_budget">超出处理预算，请减少文件数量、图片尺寸或任务规模后重试。</string>
+    <string name="demo_error_conflict">输出目标正在使用或已存在，请选择其他名称后重试。</string>
+    <string name="demo_error_format">当前格式或生成参数不受支持，请调整输入后重试。</string>
+    <string name="demo_error_io">文件读写失败，请检查存储空间、访问授权及设备连接。</string>
+    <string name="demo_back">返回上一页</string>
 </resources>

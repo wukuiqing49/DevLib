@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites>
+  <testsuite name="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" tests="11" skipped="0" failures="0" errors="0" time="0.046">
+    <testcase name="cacheExpiresWhileAQueryIsRunning" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.034" />
+    <testcase name="freshFreeResultDoesNotInheritLifetimeRetention" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="subscriptionHasAnExplicitSevenDayOfflineBoundary" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="knownFreeEntitlementCanBeCachedForTheSameAccount" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.001" />
+    <testcase name="retainedLifetimeSurvivesGraceButNeverCrossesCacheScope" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="anotherAccountAndSignedOutCannotUseCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="gracePeriodDoesNotExtendIndefinitely" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="unknownEntitlementIsNeverReusable" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="corruptNegativeTimestampCannotOverflowIntoValidCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="sameAccountCanUseRecentEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+    <testcase name="clockBeforeVerificationRejectsCache" classname="com.wkq.google.billing.GoogleBillingEntitlementCacheTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingEntitlementTest" tests="4" skipped="0" failures="0" errors="0" time="0.002">
+    <testcase name="noPurchaseWithPartialFailureIsUnknown" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.001" />
+    <testcase name="validLifetimeSurvivesSubscriptionQueryFailure" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+    <testcase name="lifetimeSurvivesExpiredSubscription" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.001" />
+    <testcase name="bothEmptySuccessfulQueriesRevokeEntitlement" classname="com.wkq.google.billing.GoogleBillingEntitlementTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.google.billing.GoogleBillingPolicyTest" tests="10" skipped="0" failures="0" errors="0" time="0.054">
+    <testcase name="bothCatalogFailuresAreNotAnEmptySuccessfulCatalog" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.004" />
+    <testcase name="anonymousPlayModeDoesNotRequireAppAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.02" />
+    <testcase name="currentAccountFilter_rejectsAllPurchasesWithoutLoggedInAccount" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+    <testcase name="currentAccountFilter_acceptsLegacyAndCommercialIdsDuringMigration" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.011" />
+    <testcase name="purchasedFilter_doesNotGrantPendingOrUnknownPurchases" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+    <testcase name="pendingPaymentDoesNotGrantPro" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.0" />
+    <testcase name="obfuscatedAccountId_isStableAndDoesNotExposeRawId" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.01" />
+    <testcase name="catalogKeepsSubscriptionsWhenLifetimeQueryFails" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.002" />
+    <testcase name="currentAccountFilter_acceptsMatchingAndLegacyPurchasesOnly" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.003" />
+    <testcase name="catalogKeepsLifetimeWhenSubscriptionQueryFails" classname="com.wkq.google.billing.GoogleBillingPolicyTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.wkq.google.rate.GoogleRateManagerTest" tests="10" skipped="0" failures="0" errors="0" time="7.401">
+    <testcase name="finishingHostIsRejected" classname="com.wkq.google.rate.GoogleRateManagerTest" time="5.601" />
+    <testcase name="cancellationDuringFlowKeepsGateUntilPlayCompletes" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.265" />
+    <testcase name="stoppedHostDoesNotLaunchAfterRequestCompletes" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.163" />
+    <testcase name="ineligibleRequestDoesNotCreateClient" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.091" />
+    <testcase name="recentEventWindowIsBounded" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.814" />
+    <testcase name="fakeFlowFinishesWithoutClaimingRated" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.101" />
+    <testcase name="failureKeepsCooldown" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.096" />
+    <testcase name="suppressionAndResumeArePersisted" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.089" />
+    <testcase name="cancellationBeforeLaunchDoesNotOpenWindow" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.085" />
+    <testcase name="completionIsDeduplicatedAndPersisted" classname="com.wkq.google.rate.GoogleRateManagerTest" time="0.094" />
+  </testsuite>
+  <testsuite name="com.wkq.google.rate.GoogleRatePolicyTest" tests="9" skipped="0" failures="0" errors="0" time="0.003">
+    <testcase name="suppressionWins" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.001" />
+    <testcase name="epochRequestIsNotMissingRequest" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.001" />
+    <testcase name="explicitZeroThresholdIsSupported" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+    <testcase name="invalidConfigurationIsRejected" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.001" />
+    <testcase name="rejectsClockRollbackAndNegativeTime" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+    <testcase name="customThresholdRemainsIndependentOfBusinessTypes" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+    <testcase name="firstUseBoundaryIsExact" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+    <testcase name="cooldownBoundaryIsExact" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+    <testcase name="requiresCompletedAction" classname="com.wkq.google.rate.GoogleRatePolicyTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" tests="6" skipped="0" failures="0" errors="0" time="0.743">
+    <testcase name="reconfiguringProductsDiscardsEarlierResult" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.677" />
+    <testcase name="returningToForegroundRefreshesEvenWhenPurchaseCallbackWasMissed" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.009" />
+    <testcase name="unavailablePlayDoesNotBecomeFreeEntitlement" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.012" />
+    <testcase name="timeoutEndsLoadingAndAllowsRetry" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.016" />
+    <testcase name="noHostConfigurationDoesNotConnectToPlay" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.006" />
+    <testcase name="slowOldQueryCannotOverwriteNewerPurchaseState" classname="com.wkq.dev.demo.google.PurchaseStateRecoveryTest" time="0.007" />
+  </testsuite>
+</testsuites>

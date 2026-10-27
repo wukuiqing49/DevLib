@@ -30,20 +30,11 @@ object BrowserFixture {
         DropServer("127.0.0.1", 0, ShareEngine(listOf(source), autoApprove = true), StaticAssetProvider { path ->
             val name = when (path) {
                 "/", "/index.html" -> "index.html"
-                "/assets/app.css" -> "app.css"
-                "/assets/app.js" -> "app.js"
-                "/assets/zh.json" -> "zh.json"
-                "/assets/en.json" -> "en.json"
-                "/assets/ja.json" -> "ja.json"
-                "/assets/ko.json" -> "ko.json"
-                "/assets/de.json" -> "de.json"
-                "/assets/fr.json" -> "fr.json"
-                "/assets/es.json" -> "es.json"
-                "/assets/pt-BR.json" -> "pt-BR.json"
+                "/receiver.js" -> "receiver.js"
                 else -> null
             }
             name?.let {
-                val file = File(root, "core/lib_html/src/main/assets/droplan_web/$it")
+                val file = File(root, "feature/feature_demo_files/src/main/assets/demo_receiver/$it")
                 val mime = when (file.extension) { "html" -> "text/html"; "css" -> "text/css"; "js" -> "application/javascript"; else -> "application/json" }
                 StaticAsset("$mime; charset=utf-8", file.length()) { file.inputStream() }
             }

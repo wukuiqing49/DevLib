@@ -14,7 +14,8 @@ object WorkspaceActions {
             "/document/core_pdf" to R.string.workspace_pdf,
             "/files/core_archive" to R.string.workspace_archive,
             "/files/lib_upload" to R.string.workspace_upload,
-            "/files/lib_transfer" to R.string.workspace_transfer,
+            "/files/core_nas" to R.string.workspace_nas,
+            "/files/core_usb" to R.string.workspace_usb,
             "/files/lib_drop" to R.string.workspace_drop,
         )
 

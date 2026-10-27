@@ -8,6 +8,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
+import androidx.core.view.doOnLayout
 import com.lxj.xpopup.XPopup
 import com.wkq.base.BaseUiEvent
 import com.wkq.base.activity.BaseVMTitleActivity
@@ -81,11 +82,25 @@ abstract class DemoActivity<VB : ViewBinding, VM : DemoViewModel> : BaseVMTitleA
     private var displayedInput: String? = null
     private var displayedOutput: String? = null
 
-    /** 在基类初始化前恢复待另存资产 ID，支持系统文件创建流程跨页面重建。 */
+    /** 恢复待另存资产 ID 并沿用 Base 标题栏，以主题化返回图标和最小触摸区适配深浅主题。 */
     override fun onCreate(savedInstanceState: android.os.Bundle?) {
         pendingSaveId = savedInstanceState?.getString("workspace-save")
         super.onCreate(savedInstanceState)
+        // 基础 setPageTitleSize 的历史实现实际使用 SP；宿主直接按资源解析出的 PX 设置，避免重复缩放。
+        val titleView = binding.titleBar.findViewById<android.widget.TextView>(com.wkq.base.R.id.tv_center_title)
+        titleView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.demo_title_size))
+        binding.titleBar.doOnLayout { bar ->
+            titleView.maxWidth = (bar.width - resources.getDimensionPixelSize(R.dimen.demo_touch_target) * 2).coerceAtLeast(0)
+        }
+        setLeftIcon(R.drawable.demo_back)
+        binding.titleBar.findViewById<android.view.View>(com.wkq.base.R.id.ll_left_container).apply {
+            contentDescription = getString(R.string.demo_back)
+            minimumWidth = resources.getDimensionPixelSize(R.dimen.demo_touch_target)
+        }
     }
+
+    /** 输入页复用 Base 唯一底部 Insets owner，同时避让软键盘，不重复添加系统栏高度。 */
+    override fun shouldApplyImeInset(): Boolean = true
 
     /** 保存待另存资产 ID，交由系统恢复文件创建流程的后续回调。 */
     override fun onSaveInstanceState(outState: android.os.Bundle) {
@@ -193,6 +208,11 @@ abstract class DemoActivity<VB : ViewBinding, VM : DemoViewModel> : BaseVMTitleA
                             )
                     val hasFiles =
                         state.result?.let { it.file != null || it.files.isNotEmpty() } == true
+                    result.inputs.isVisible = state.inputs.isNotEmpty()
+                    result.open.isVisible = hasFiles
+                    result.share.isVisible = hasFiles
+                    result.save.isVisible = hasFiles
+                    result.continueWith.isVisible = hasFiles
                     result.save.isEnabled = !state.busy && hasFiles
                     result.continueWith.isEnabled = !state.busy && hasFiles
                     result.inputPreview.isVisible =

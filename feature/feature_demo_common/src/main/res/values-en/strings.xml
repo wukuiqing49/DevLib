@@ -37,4 +37,9 @@
     <string name="demo_local_network_denied">Local network permission was not granted. This operation was cancelled. Retry to grant access, or enable nearby network device access in app settings if no prompt appears.</string>
     <string name="demo_local_network_retry">Local network access is granted. Tap the action again.</string>
     <string name="demo_history_failed">The operation history could not be saved. You can still view or save the current result. Check available storage; do not submit the operation again solely because its history was not saved.</string>
+    <string name="demo_error_budget">Processing budget exceeded. Reduce the file count, image size or task size and retry.</string>
+    <string name="demo_error_conflict">The output is in use or already exists. Choose another name and retry.</string>
+    <string name="demo_error_format">The format or generation settings are unsupported. Adjust the input and retry.</string>
+    <string name="demo_error_io">File access failed. Check storage space, access permissions and the device connection.</string>
+    <string name="demo_back">Navigate back</string>
 </resources>

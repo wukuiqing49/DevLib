@@ -2,7 +2,9 @@ package com.wkq.iptc.upload
 
 import java.security.MessageDigest
 
+/** 检查宿主请求的独占上传保证，不把非原子协议冒充安全的新建目标。 */
 object AtomicUploadPolicy {
+    /** 验证目标协议是否支持当前独占上传策略，提示使用独立 NAS 会话库。 */
     fun validate(task: UploadTask, profile: UploadServerProfile): UploadResult.Failure? {
         if (!task.createOnly) return null
         if (task.transferId.isBlank()) return failure(UploadErrorCode.INVALID_CONFIG, "Missing persistent transfer identifier")
@@ -11,7 +13,7 @@ object AtomicUploadPolicy {
             UploadProtocolType.HTTP -> (profile.config as? HttpConfig)?.extraParams?.get("__create_only_put__") == "true"
         }
         return if (supported) null else failure(UploadErrorCode.ATOMIC_CREATE_UNSUPPORTED,
-            "This destination cannot guarantee create-only upload. Use lib_transfer for SFTP/SMB/WebDAV, or a conditional HTTP PUT endpoint")
+            "This destination cannot guarantee create-only upload. Use core_nas for SFTP/SMB/WebDAV, or a conditional HTTP PUT endpoint")
     }
 
     fun temporaryName(fileName: String, createOnly: Boolean, transferId: String): String {

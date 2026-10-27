@@ -1,6 +1,6 @@
 # DevLib 架构与范围
 
-当前保留 19 个模块：8 个基础模块、10 个独立功能库、1 个功能内部支撑库。共 15 个 Android AAR 和 4 个 JVM JAR，无模型 Asset Pack。
+当前保留 20 个模块：8 个基础模块、11 个独立功能库、1 个功能内部支撑库。共 16 个 Android AAR 和 4 个 JVM JAR，无模型 Asset Pack。
 
 基础体系为 Base、Utils、Network、Routers 四构件、XPopup；保持原有实现，不因功能筛选重写。上一轮误改的 ShareUtil 已按补丁撤回。
 

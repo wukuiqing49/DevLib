@@ -7,7 +7,9 @@ description: "用于分析和实现 Android 项目架构与共享能力：模块
 
 ## 项目上下文
 
-在项目仓库中调用时读取：
+以下项目路径均相对目标工程；脚本和 references 相对本 Skill。跨项目调用读取目标规则与事实，缺失时从实际源码/构建核实并说明，不套用 DevLib 的包名、模块或执行策略。脚手架生成参数使用用户选定配置。
+
+在目标项目中读取适用且存在的文件：
 
 - `.agents/config/project-profile.yml`
 - `.agents/rules/execution.md`
@@ -32,7 +34,7 @@ description: "用于分析和实现 Android 项目架构与共享能力：模块
 - AndroidCoreNetwork：Retrofit/OkHttp/Gson/协程、错误映射、动态 Header/BaseUrl 和上传下载。
 - XPopup：Center、Bottom、Attach、Drawer、ImageViewer、FullScreen、Position 等弹窗。
 
-新增或更新前查询对应仓库 tag：
+仅在接入或更新上游 WKQ 依赖版本时查询对应仓库 tag；普通功能开发与现有本地源码模块复用不要求查最新版本，也不自动切换为 Maven AAR：
 
 ```text
 https://github.com/wukuiqing49/AndroidCoreBase

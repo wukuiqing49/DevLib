@@ -1,0 +1,97 @@
+{
+  "testedAt": "2026-10-27T11:17:38.842337+08:00",
+  "commit": null,
+  "testedHead": "bca8dffe897a465d6f9f55bcd23472f65f75303f",
+  "uncommittedWorkspace": true,
+  "sourceFingerprint": "aeb07fb84a17fdf7cd1b8bb419954e05f48b38a141a876ae41f2dd7fc5852522",
+  "fingerprintInputFiles": 1179,
+  "environment": "Windows; JDK 17; Gradle 9.3.1; AGP 9.1.1; compile/target 37; Robolectric API 28; no device commands",
+  "jvmResults": [
+    {
+      "module": "core/core_google",
+      "suite": "com.wkq.google.billing.GoogleBillingEntitlementCacheTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_google",
+      "suite": "com.wkq.google.billing.GoogleBillingEntitlementTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_google",
+      "suite": "com.wkq.google.billing.GoogleBillingPolicyTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_google",
+      "suite": "com.wkq.google.rate.GoogleRateManagerTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_google",
+      "suite": "com.wkq.google.rate.GoogleRatePolicyTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_google",
+      "suite": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "jvmTotal": 50,
+  "newRatingTests": 19,
+  "pythonTests": 10,
+  "commands": [
+    "gradlew.bat :core:core_google:testDebugUnitTest :feature:feature_demo_google:testDebugUnitTest :core:core_google:publishReleasePublicationToDevLibLocalRepository :app:assembleDebug --max-workers=2",
+    "gradlew.bat :app:assembleDebug --max-workers=2",
+    "gradlew.bat -p samples/published-consumer compileDebugKotlin",
+    "python -B scripts/verify_demo_catalog.py --apk app/build/outputs/apk/debug/app-debug.apk",
+    "python -B scripts/test_verify_demo_catalog.py",
+    "python -B .agents/scripts/validate_agent_structure.py --project-root .",
+    "python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n",
+    "python -B .agents/scripts/validate_android_source.py --project-root . --file core/core_google/src/main/java/com/wkq/google/rate/GoogleRatePolicy.kt --file core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt --file core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt --file feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt",
+    "python -B .agents/skills/android-i18n-workflow/scripts/validate_i18n_resources.py --res-dir feature/feature_demo_google/src/main/res --strict-missing --required-locale en",
+    "git diff --check"
+  ],
+  "apkSha256": "51e159488f6905f76cae929c763835aa9927e17dbf9193e9d05ecdd18187e9c9",
+  "sourceRepositoriesWritten": false,
+  "baseSourceModified": false,
+  "ciModified": false,
+  "deviceTesting": "excluded by user",
+  "reviewSubmitted": false,
+  "emailSent": false,
+  "staticWarnings": {
+    "architecture": 2,
+    "ui": 0,
+    "build": 0,
+    "i18n": 0
+  },
+  "notes": [
+    "Windows compile jar lock resolved by stopping Gradle daemons and rerunning.",
+    "FakeReviewManager tests do not display a review UI or submit ratings.",
+    "Source rating logic adapted; not a byte-identical migration or legacy markRated API compatibility promise."
+  ],
+  "result": "passed within local scope",
+  "appDebugBuild": "passed",
+  "libraryPublication": "core_google passed",
+  "mavenConsumerCompile": "passed",
+  "apkGoogleReviewClasses": "present"
+}

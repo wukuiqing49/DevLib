@@ -1,6 +1,6 @@
 # core_router_annotation
 
-路由注解与生成契约。来源：AndroidCoreRouters。类型：JVM JAR / Gradle plugin。
+路由注解与生成契约。来源：AndroidCoreRouters。类型：JVM 注解契约 JAR。
 
 ## 接入
 

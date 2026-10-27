@@ -1,0 +1,35 @@
+<resources>
+    <string name="nas_title">NAS 文件管理</string>
+    <string name="nas_intro">连接 SMB、WebDAV 或 SFTP 后浏览目录。最多显示 200 项；点击文件下载到工作区，上限 8 MiB。密码不保存，SFTP 需可信主机指纹，WebDAV 推荐 HTTPS。</string>
+    <string name="nas_root">根地址（含共享目录）</string>
+    <string name="nas_username">用户名</string>
+    <string name="nas_password">密码（不保存）</string>
+    <string name="nas_fingerprint">SFTP SHA256 主机指纹</string>
+    <string name="nas_invalid_connection">请检查协议与地址，地址不能含账号、查询或片段。</string>
+    <string name="nas_discover">发现局域网服务</string>
+    <string name="nas_discovered">发现 %1$d 个广播服务（不会自动连接）</string>
+    <string name="usb_title">USB / SAF 文件管理</string>
+    <string name="usb_intro">通过系统选择器授权可用目录，包括系统提供的 USB 存储。不是 USB 驱动。最多显示 200 项；点击文件下载，上限 8 MiB。拔盘或授权失效后需重新授权。</string>
+    <string name="usb_authorize">选择并授权目录</string>
+    <string name="usb_grant_persisted">已保存系统目录授权，操作时重新检查权限。</string>
+    <string name="usb_grant_temporary">仅获得临时目录授权。</string>
+    <string name="usb_grant_recheck">目录身份已恢复，请浏览以检查实际授权。</string>
+    <string name="storage_path">相对目录（空白为根目录）</string>
+    <string name="storage_connect">连接并浏览</string>
+    <string name="storage_browse">浏览目录</string>
+    <string name="storage_up">上一级</string>
+    <string name="storage_directory">目录</string>
+    <string name="storage_file">文件 · %1$d 字节（-1 为未知）</string>
+    <string name="storage_filename">上传目标文件名</string>
+    <string name="storage_upload">上传所选单个文件</string>
+    <string name="storage_upload_confirm">将在当前已浏览目录新建文件，不覆盖同名文件。中断可能留下部分文件，需检查目标。是否继续？</string>
+    <string name="storage_probe">验证目录读写</string>
+    <string name="storage_probe_confirm">将创建唯一的 4 KiB 测试文件，读回校验并删除。失败可能留下测试文件，请根据结果检查。是否继续？</string>
+    <string name="storage_no_tree">请先选择可读取的目录。</string>
+    <string name="storage_listed">已显示 %1$d / %2$d 项。上传或测试前请先浏览目标目录。</string>
+    <string name="storage_downloaded">文件已下载到工作区。</string>
+    <string name="storage_uploaded">上传完成：%1$s；请刷新目录。</string>
+    <string name="storage_probe_failed">验证失败，请检查是否残留测试文件：%1$s</string>
+    <string name="storage_probe_passed">4 KiB 写入、读回比对及清理均已完成。</string>
+    <string-array name="nas_protocols"><item>SMB</item><item>WebDAV</item><item>SFTP</item></string-array>
+</resources>

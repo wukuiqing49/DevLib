@@ -15,10 +15,12 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.asRequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import retrofit2.awaitResponse
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+/** HTTP 上传适配；写请求不自动重放，取消会终止实际网络调用。 */
 class HttpUploader(
     private val context: Context
 ) : UploadClient {
@@ -69,16 +71,15 @@ class HttpUploader(
         }
     }
 
-    /**
-     * 构建 OkHttpClient�?
-     * - 若配置了用户名和密码，添�?Basic Auth�?
-     *   �?每次请求主动携带 Authorization 头，避免多一�?401 往返�?
-     *   �?同时注册 Authenticator 处理服务端仍返回 401 的极少数情况（如 Digest Auth 降级）�?
-     */
+    /** 配置认证与超时，禁止写请求自动重放或重定向泄漏凭据。 */
     private fun buildOkHttpClient(config: HttpConfig): OkHttpClient {
         val builder = OkHttpClient.Builder()
             .connectTimeout(config.connectTimeoutMs.toLong(), TimeUnit.MILLISECONDS)
             .readTimeout(config.readTimeoutMs.toLong(), TimeUnit.MILLISECONDS)
+            .writeTimeout(config.readTimeoutMs.toLong(), TimeUnit.MILLISECONDS)
+            .retryOnConnectionFailure(false)
+            .followRedirects(false)
+            .followSslRedirects(false)
 
         if (config.username.isNotBlank() && config.password.isNotBlank()) {
             val credential = Credentials.basic(config.username, config.password)
@@ -112,6 +113,7 @@ class HttpUploader(
             .build()
     }
 
+    /** 上传并关闭响应体；提交结果不明时返回失败，由宿主核对后决定是否重试。 */
     override suspend fun upload(
         task: UploadTask,
         profile: UploadServerProfile,
@@ -156,7 +158,7 @@ class HttpUploader(
                         .header("Idempotency-Key", task.transferId)
                         .apply { digestHeader?.let { header("Content-Digest", it) } }
                         .build()
-                    return@withContext buildOkHttpClient(config).newCall(request).execute().use { response ->
+                    return@withContext buildOkHttpClient(config).newCall(request).awaitUploadResponse().use { response ->
                         // 仅在显式启用服务端回执约定时，接受“同一提交已完成”的条件冲突响应。
                         val receiptMatches = requireReceipt &&
                             response.header("X-CaptionMeta-Receipt") == "committed" &&
@@ -187,7 +189,7 @@ class HttpUploader(
                 val fileFieldName = config.extraParams["__file_field_name__"] ?: "file"
                 val filePart = MultipartBody.Part.createFormData(fileFieldName, task.fileName, fileBody)
 
-                val partMap = config.extraParams.filterKeys { it !in setOf("__create_only_put__", "__idempotent_receipt__") }.mapValues { entry ->
+                val partMap = config.extraParams.filterKeys { it !in setOf("__create_only_put__", "__idempotent_receipt__", "__file_field_name__") }.mapValues { entry ->
                     entry.value.toRequestBody("text/plain".toMediaTypeOrNull())
                 }
 
@@ -196,11 +198,11 @@ class HttpUploader(
                     headers = config.headers,
                     parts   = partMap,
                     file    = filePart
-                ).execute()
+                ).awaitResponse()
 
                 if (response.isSuccessful) {
                     // 读取返回的响应报�?
-                    val bodyStr = response.body()?.string()
+                    val bodyStr = response.body()?.use { it.string() }
                     // 解析 JSON 中的 data.url 字段以获取静态资源路�?
                     val remoteUrl = runCatching {
                         val json = com.google.gson.Gson().fromJson(bodyStr, Map::class.java)
@@ -211,6 +213,7 @@ class HttpUploader(
                     Log.i(TAG, "HTTP upload success: url=${UploadLogSanitizer.redactedUrl(remoteUrl)}")
                     UploadResult.Success(remoteUrl)
                 } else {
+                    response.errorBody()?.close()
                     transferFailure(
                         "HTTP upload failed: ${response.code()} ${response.message()}",
                         retryable = response.code() >= 500
@@ -224,6 +227,7 @@ class HttpUploader(
         }
     }
 
+    /** 通过 HEAD 检查可达性，取消原样传播且不提交文件。 */
     override suspend fun testConnection(profile: UploadServerProfile): UploadResult {
         val config = profile.config as? HttpConfig
             ?: return invalidConfig("HTTP profile config is invalid")
@@ -240,7 +244,7 @@ class HttpUploader(
                         config.headers.forEach { (k, v) -> header(k, v) }
                     }
                     .build()
-                val response = client.newCall(request).execute()
+                val response = client.newCall(request).awaitUploadResponse()
                 response.use {
                     // 200 / 405 Method Not Allowed 均说明服务器可达
                     if (it.isSuccessful || it.code == 405) {
@@ -252,6 +256,7 @@ class HttpUploader(
                     }
                 }
             } catch (throwable: Throwable) {
+                if (throwable is kotlinx.coroutines.CancellationException) throw throwable
                 Log.e(TAG, "HTTP test connection failed: ${UploadLogSanitizer.throwable(throwable)}")
                 translateThrowable("HTTP", throwable)
             }

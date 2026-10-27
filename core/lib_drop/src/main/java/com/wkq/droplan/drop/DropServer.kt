@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicLong
 import kotlin.math.min
 
-/** 通过业务层适配 lib_html；协议库不依赖网页库。 */
+/** 由宿主提供静态接收页面资源，协议库不依赖独立网页模块。 */
 data class StaticAsset(val contentType: String, val length: Long?, val open: () -> InputStream)
 fun interface StaticAssetProvider { fun resolve(path: String): StaticAsset? }
 
@@ -73,6 +73,7 @@ class DropServer(
     /** 入口凭据只放 fragment；不得输出到日志、测试报告或外部剪贴服务。 */
     val entryUrl: String get() = "$baseUrl/#${engine.entryToken}"
 
+    /** 启动监听与超时清理；启动失败时保留原错误并附加资源清理错误。 */
     @Synchronized fun start() {
         check(!closed.get() && !started)
         try {
@@ -85,13 +86,32 @@ class DropServer(
                     if (now - state.lastWrite.get() > TimeUnit.SECONDS.toNanos(30)) client.close()
                 }
             }, 1, 1, TimeUnit.SECONDS)
-        } catch (error: Exception) { close(); throw error }
+        } catch (error: Exception) {
+            try { close() } catch (cleanup: Exception) { if (cleanup !== error) error.addSuppressed(cleanup) }
+            throw error
+        }
     }
 
+    /** 关闭引擎失败时仍停止监听、客户端和线程池，最后报告清理错误。 */
     override fun close() {
         if (!closed.compareAndSet(false, true)) return
-        engine.close(); http.stop(); clients.toList().forEach { it.close() }
-        timer.shutdownNow(); pool.shutdownNow(); active.clear()
+        var failure: Exception? = null
+        val cleanup = listOf<() -> Unit>(
+            { engine.close() }, { http.stop() },
+            { clients.toList().forEach { client ->
+                try { client.close() } catch (error: Exception) {
+                    if (failure == null) failure = error else if (failure !== error) failure!!.addSuppressed(error)
+                }
+            } },
+            { timer.shutdownNow(); Unit }, { pool.shutdownNow(); Unit },
+        )
+        cleanup.forEach { action ->
+            try { action() } catch (error: Exception) {
+                if (failure == null) failure = error else if (failure !== error) failure!!.addSuppressed(error)
+            }
+        }
+        active.clear(); clients.clear()
+        failure?.let { throw it }
     }
 
     private class Activity { val lastWrite = AtomicLong(System.nanoTime()) }

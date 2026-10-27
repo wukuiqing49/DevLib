@@ -1,0 +1,74 @@
+[
+  {
+    "mode": "values",
+    "foreground": "feature_res_on_surface",
+    "background": "feature_res_surface",
+    "contrast": 14.63
+  },
+  {
+    "mode": "values",
+    "foreground": "dev_on_surface_variant",
+    "background": "dev_surface_card",
+    "contrast": 6.36
+  },
+  {
+    "mode": "values",
+    "foreground": "dev_on_primary",
+    "background": "dev_primary",
+    "contrast": 6.39
+  },
+  {
+    "mode": "values",
+    "foreground": "dev_primary",
+    "background": "feature_res_surface",
+    "contrast": 5.96
+  },
+  {
+    "mode": "values",
+    "foreground": "dev_secondary",
+    "background": "dev_surface_card",
+    "contrast": 6.16
+  },
+  {
+    "mode": "values",
+    "foreground": "dev_error",
+    "background": "feature_res_surface",
+    "contrast": 6.1
+  },
+  {
+    "mode": "values-night",
+    "foreground": "feature_res_on_surface",
+    "background": "feature_res_surface",
+    "contrast": 15.13
+  },
+  {
+    "mode": "values-night",
+    "foreground": "dev_on_surface_variant",
+    "background": "dev_surface_card",
+    "contrast": 9.16
+  },
+  {
+    "mode": "values-night",
+    "foreground": "dev_on_primary",
+    "background": "dev_primary",
+    "contrast": 7.9
+  },
+  {
+    "mode": "values-night",
+    "foreground": "dev_primary",
+    "background": "feature_res_surface",
+    "contrast": 10.57
+  },
+  {
+    "mode": "values-night",
+    "foreground": "dev_secondary",
+    "background": "dev_surface_card",
+    "contrast": 9.42
+  },
+  {
+    "mode": "values-night",
+    "foreground": "dev_error",
+    "background": "feature_res_surface",
+    "contrast": 10.59
+  }
+]

@@ -20,6 +20,23 @@ import java.util.zip.ZipOutputStream
 
 class EncryptedArchiveOperationsTest {
 
+    /** 输入字节预算在读取 ZIP 目录前生效，拒绝后不创建输出目录。 */
+    @Test fun enforcesArchiveInputBudget() {
+        val root = Files.createTempDirectory("zip-input-budget").toFile()
+        try {
+            val source = root.resolve("source.txt").apply { writeText("source") }
+            val archive = root.resolve("input.zip")
+            ZipArchiveCreator.createEncrypted(ZipArchiveRequest(listOf(source), archive), "password".toCharArray())
+            val output = root.resolve("output")
+            val result = EncryptedArchiveExtractor.extract(
+                EncryptedArchiveExtractRequest(archive, output, "password".toCharArray()),
+                com.wkq.photo.core.operation.OperationBudget(maxInputBytes = 1))
+            assertEquals(OperationErrorCode.BUDGET_EXCEEDED, (result as OperationResult.Failure).code)
+            assertFalse(output.exists())
+        } finally { root.deleteRecursively() }
+    }
+
+
     @Test
     fun rejectsPasswordShorterThanExtractorContract() {
         val root = Files.createTempDirectory("zip-short-password-test").toFile()

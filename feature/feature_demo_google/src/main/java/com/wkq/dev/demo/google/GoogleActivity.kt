@@ -13,6 +13,8 @@ import com.wkq.dev.demo.google.databinding.DemoGoogleBinding
 import com.wkq.google.auth.DropGoogleAccount
 import com.wkq.google.auth.GoogleSignInCoordinator
 import com.wkq.google.billing.*
+import com.wkq.google.rate.*
+import com.wkq.util.IntentUtil
 import com.wkq.router.annotation.Route
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -36,10 +38,27 @@ class GoogleActivity : DemoActivity<DemoGoogleBinding, GoogleViewModel>() {
             b.query,
             b.purchase,
             b.restore,
+            b.rateCheck, b.rateRecord, b.rateSuppress, b.rateResume, b.rateStore, b.feedback,
         )
         b.result.inputs.visibility = View.GONE
         b.result.share.visibility = View.GONE
         b.result.open.visibility = View.GONE
+        b.rateCheck.setOnClickListener { viewModel.checkRate(applicationContext) }
+        b.rateRecord.setOnClickListener { recordRateAction() }
+        b.rateSuppress.setOnClickListener { viewModel.suppressRate(applicationContext, true) }
+        b.rateResume.setOnClickListener { viewModel.suppressRate(applicationContext, false) }
+        b.rateStore.setOnClickListener {
+            viewModel.report(getString(if (IntentUtil.openMarket(this)) R.string.google_rate_store_opened else R.string.google_rate_store_missing))
+        }
+        b.feedback.setOnClickListener {
+            val email = b.feedbackEmail.text.toString().trim()
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                viewModel.report(getString(R.string.google_rate_email_invalid))
+            } else {
+                val opened = IntentUtil.sendEmail(this, email, getString(R.string.google_rate_feedback_subject))
+                viewModel.report(getString(if (opened) R.string.google_rate_email_opened else R.string.google_rate_email_missing))
+            }
+        }
         b.signin.setOnClickListener { login(false) }
         b.firebase.setOnClickListener { login(true) }
         b.session.setOnClickListener {
@@ -124,6 +143,15 @@ class GoogleActivity : DemoActivity<DemoGoogleBinding, GoogleViewModel>() {
         }
     }
 
+    /** 显式模拟宿主关键操作完成，再按正式节流策略请求；不强制显示、不先收集星级。 */
+    private fun recordRateAction() {
+        viewModel.execute(applicationContext) {
+            GoogleRateManager.recordCompletedAction(applicationContext, "workbench-${java.util.UUID.randomUUID()}")
+            val result = withContext(Dispatchers.Main) { GoogleRateManager.requestIfEligible(this@GoogleActivity) }
+            DemoResult(viewModel.reviewResultText(applicationContext, result))
+        }
+    }
+
     /** 尝试从宿主资源初始化 Firebase，返回是否具备有效应用实例。 */
     private fun firebaseReady() = FirebaseApp.initializeApp(applicationContext) != null
 
@@ -202,6 +230,39 @@ class GoogleViewModel : DemoViewModel() {
     internal val billingStatus = recovery.state
     private var queriedId = ""
     private var queriedSubscription = false
+
+    /** 查询真实本地节流状态，纯诊断不调用 Play、不增加请求次数。 */
+    fun checkRate(context: Context) = execute(context, record = false) {
+        val state = GoogleRateManager.snapshot(context)
+        val decision = GoogleRateManager.evaluate(context)
+        DemoResult(context.getString(R.string.google_rate_state, state.completedActions, state.requestCount,
+            rateDecisionText(context, decision)))
+    }
+
+    /** 设置或恢复自动提示偏好，不影响独立手动商店及反馈入口。 */
+    fun suppressRate(context: Context, suppressed: Boolean) = execute(context, record = false) {
+        GoogleRateManager.setSuppressed(context, suppressed)
+        DemoResult(context.getString(if (suppressed) R.string.google_rate_suppressed else R.string.google_rate_resumed))
+    }
+
+    /** 结果只表达流程和节流，不把 Task 完成误报为已评分。 */
+    fun reviewResultText(context: Context, result: GoogleReviewResult): String = when (result.status) {
+        GoogleReviewStatus.FLOW_FINISHED -> context.getString(R.string.google_rate_finished)
+        GoogleReviewStatus.NOT_ELIGIBLE -> rateDecisionText(context, requireNotNull(result.decision))
+        GoogleReviewStatus.UNAVAILABLE -> context.getString(R.string.google_rate_unavailable)
+        GoogleReviewStatus.IN_PROGRESS -> context.getString(R.string.google_rate_in_progress)
+        GoogleReviewStatus.HOST_INACTIVE -> context.getString(R.string.google_rate_host_inactive)
+    }
+
+    /** 将库的领域枚举映射为宿主语言资源，避免展示英文内部标识。 */
+    private fun rateDecisionText(context: Context, decision: GoogleRateDecision) = context.getString(when (decision) {
+        GoogleRateDecision.ELIGIBLE -> R.string.google_rate_eligible
+        GoogleRateDecision.SUPPRESSED -> R.string.google_rate_suppressed
+        GoogleRateDecision.CLOCK_INVALID -> R.string.google_rate_clock_invalid
+        GoogleRateDecision.NO_COMPLETED_ACTION -> R.string.google_rate_no_action
+        GoogleRateDecision.TOO_EARLY -> R.string.google_rate_too_early
+        GoogleRateDecision.COOLDOWN -> R.string.google_rate_cooldown
+    })
 
     /** 判断当前商品 ID 和订阅类型是否与最近成功查询的配置一致。 */
     fun matches(id: String, subscription: Boolean) =

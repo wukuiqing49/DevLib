@@ -120,3 +120,10 @@ python -B .agents/scripts/tests/test_validate_android_workflows.py -v
 
 
 宿主必需语言由目标 project-profile.yml 的 android.requiredHostLocales 声明（DevLib 为 en），聚合 i18n 检查会验证整个语言目录存在；独立命令可重复传入 `--required-locale en`。string-array 同样检查缺译、条目数量及逐项占位符，技术协议值和数组顺序不得因翻译改变。该约束只扫描宿主模块，不要求改写迁入基础库资源。
+
+## Skill 维护补充（2026-10-27）
+
+- UI 的 Android 17 沉浸式与系统栏方法见 `skills/android-ui-workflow/references/system-bars-android17.md`；Base 复用、窗口恢复与设备排除仍按目标规则执行。
+- Figma 分页校验仅由任务卡明确需求触发；已获实现授权时分析完成后继续，局部改动不强制整页重建。
+- 国际化验收传入真实资源目录、`--strict-missing` 和目标必需语言；按参数索引比较占位符，限定符资源允许基础语言继承，夜间目录不能代替全天候语言覆盖。
+- 工具与目标工程分开定位；宿主共享编排留在 feature，core 只承载可独立接入能力。Play 关键词两阶段协议保留。

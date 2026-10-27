@@ -48,12 +48,12 @@ internal class TransferQueue(private val maxActive: Int) {
         }
     }
 
+    /** 撤销任务并在回调抛错时同样释放取消引用，不改写已结束历史。 */
     fun cancel(task: DownloadTask) {
         // 撤销访问只中止尚未结束的响应，不改写已发送、失败或过期的历史。
         if (task.state !in occupied && task.state != DownloadState.QUEUED) return
         task.state = DownloadState.CANCELLED
-        task.cancel?.invoke()
-        task.cancel = null
+        try { task.cancel?.invoke() } finally { task.cancel = null }
     }
 
     fun snapshot(task: DownloadTask, now: Long): DownloadSnapshot {

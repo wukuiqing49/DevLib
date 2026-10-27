@@ -2,6 +2,8 @@
 
 import com.wkq.roof.export.word.WordPageOrientation
 import com.wkq.roof.export.word.WordReportTheme
+import com.wkq.roof.export.checkOfficeActive
+import com.wkq.roof.export.commitOfficeOutput
 import java.io.File
 import com.wkq.roof.export.validXmlText
 import java.io.RandomAccessFile
@@ -9,7 +11,7 @@ import java.util.Locale
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 
-/** RoofQuote 离线报价单需要的最小 Word OpenXML 写入器。 */
+/** 轻量 Word OpenXML 写入器，支持文字、表格、图片及页面装饰。 */
 object SimpleDocxWriter {
 
     data class Document(
@@ -79,6 +81,7 @@ object SimpleDocxWriter {
         MUTED
     }
 
+    /** 写入隔离临时文件，校验后原子替换；失败或中断不删除旧文档。 */
     fun write(output: File, document: Document): File {
         require(document.blocks.isNotEmpty()) { "Word document must contain at least one block." }
         require(document.marginTwips in 360..2_880) { "Word document margin is out of range." }
@@ -131,7 +134,7 @@ object SimpleDocxWriter {
             check(temporary.isFile && temporary.length() > 0L)
             RandomAccessFile(temporary, "rw").use { it.fd.sync() }
             // 同目录替换失败时保留旧报告，不能先删除正式文件。
-            check(temporary.renameTo(output))
+            commitOfficeOutput(temporary, output)
         } finally {
             temporary.delete()
         }
@@ -475,15 +478,27 @@ object SimpleDocxWriter {
         return file.extension.lowercase(Locale.US).let { if (it == "jpeg") "jpg" else it }
     }
 
+    /** 写入单个 XML 条目，写入前检查中断。 */
     private fun ZipOutputStream.text(path: String, text: String) {
+        checkOfficeActive()
         putNextEntry(ZipEntry(path))
         write(text.toByteArray(Charsets.UTF_8))
         closeEntry()
     }
 
+    /** 分块写入媒体条目，避免大图片复制期间无法响应中断。 */
     private fun ZipOutputStream.file(path: String, file: File) {
+        checkOfficeActive()
         putNextEntry(ZipEntry(path))
-        file.inputStream().buffered().use { it.copyTo(this) }
+        file.inputStream().buffered().use { input ->
+            val buffer = ByteArray(64 * 1024)
+            while (true) {
+                checkOfficeActive()
+                val count = input.read(buffer)
+                if (count < 0) break
+                write(buffer, 0, count)
+            }
+        }
         closeEntry()
     }
 

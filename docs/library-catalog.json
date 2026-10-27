@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-27",
   "excludedSources": [
     "Starxen",
     "BeautySDK",
@@ -104,12 +104,6 @@
       ]
     },
     {
-      "module": "lib_transfer",
-      "category": "functional",
-      "sourceRepository": "NASFileManager",
-      "artifactType": "aar"
-    },
-    {
       "module": "lib_upload",
       "category": "functional",
       "sourceRepository": "PressIPTC",
@@ -125,6 +119,22 @@
       "module": "core_google",
       "category": "functional",
       "sourceRepository": "DropLAN",
+      "artifactType": "aar",
+      "additionalSourceRepositories": [
+        "SiteReport",
+        "PressIPTC"
+      ]
+    },
+    {
+      "module": "core_nas",
+      "category": "functional",
+      "sourceRepository": "NASFileManager",
+      "artifactType": "aar"
+    },
+    {
+      "module": "core_usb",
+      "category": "functional",
+      "sourceRepository": "NASFileManager",
       "artifactType": "aar"
     }
   ]

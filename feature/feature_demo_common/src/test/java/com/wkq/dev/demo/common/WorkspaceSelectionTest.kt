@@ -40,7 +40,7 @@ class WorkspaceSelectionTest {
     fun removedFileRejectsBatch() {
         val a = asset("a")
         assertTrue(a.file.delete())
-        resolveWorkspaceAssets(listOf("a"), "/files/lib_transfer") { a }
+        resolveWorkspaceAssets(listOf("a"), "/files/core_nas") { a }
     }
 
     /** 图片工具拒绝混入文档的整个批次，不能只过滤出图片。 */
@@ -54,7 +54,7 @@ class WorkspaceSelectionTest {
     @Test fun invalidSizeOrDuplicatesDoNotReadStore() {
         for (ids in listOf(emptyList(), listOf("a", "a"), (1..21).map { it.toString() })) {
             try {
-                resolveWorkspaceAssets(ids, "/files/lib_transfer") { fail("Unexpected lookup"); null }
+                resolveWorkspaceAssets(ids, "/files/core_nas") { fail("Unexpected lookup"); null }
                 fail("Invalid batch accepted")
             } catch (_: IllegalArgumentException) {
                 // 已在读取前拒绝非法批次。

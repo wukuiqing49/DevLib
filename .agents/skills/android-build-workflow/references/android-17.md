@@ -18,6 +18,8 @@
 5. 文件分享显式授予 content URI 临时权限；检查跨工作资料回环连接、WebView UA 缩减、TLS/证书透明度、后台音频及内存限制。仅在实际使用这些能力时扩展专项验证。
 6. 既有 Edge-to-edge、FileProvider、16KB native 页大小门禁继续适用；API 37 不代替这些检查。
 
+UI 系统栏专项（2026-10-27 补充核验）：普通边到边布局、全屏沉浸式、独立弹窗窗口及桌面标题栏的实现与恢复要求见 [Android 17 系统栏与沉浸式](../../android-ui-workflow/references/system-bars-android17.md)。该补充不代表重新核验本文全部工具链与其他平台行为。
+
 ## 验证与汇报
 
 - 执行构建静态校验、生成器测试、app assembleDebug/assembleDebugAndroidTest 和受影响 JVM 测试；release/R8、独立库产物按影响执行。

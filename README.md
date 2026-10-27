@@ -7,3 +7,7 @@ App 按工作台、工具、文件与任务、开发者四个入口组织，支�
 完整项目介绍、模块列表、构建运行、库接入和验证说明见 [项目 README](doc/README.md)。
 
 Android 17 / API 37 构建基线、Skill 配置及未验证边界见 [Android 17 兼容说明](doc/android17-compatibility.md)。
+
+NAS 与 SAF 存储库：`core_nas`、`core_usb`，包含各自独立的浏览、上传下载及读写验证页面；详见 [接入与测试](doc/nas-usb-migration.md)。
+
+逐库可靠性优化与边界：[优化记录](doc/library-optimization.md)。实际验证见固定测试报告。

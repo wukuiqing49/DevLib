@@ -3,52 +3,38 @@ package com.wkq.iptc.upload.http
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
-import android.util.Log
-import com.wkq.iptc.upload.UploadLogSanitizer
+import java.io.InterruptedIOException
 
-/**
- * 弱网自动重试拦截器，用于提升上传文件的稳定性。
- */
+/** 只重试无副作用的读取请求；POST/PUT 的提交结果未知时交给宿主核对，不自动重放。 */
 class RetryInterceptor(private val maxRetry: Int = 3) : Interceptor {
+    init { require(maxRetry in 1..10) { "maxRetry is the total attempt count, in 1..10" } }
+
+    /** 关闭重试响应并检查取消；中断保留线程标记，不当作弱网继续重试。 */
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
-        var response: Response? = null
-        var exception: IOException? = null
-        var tryCount = 0
-        
-        while (tryCount < maxRetry) {
-            try {
-                if (tryCount > 0) {
-                    Log.d("RetryInterceptor", "Retrying request (${tryCount + 1}/$maxRetry) to URL: ${UploadLogSanitizer.redactedUrl(request.url.toString())}")
-                    val backoffDelay = (1000L * tryCount * tryCount).coerceAtMost(5000L)
-                    try {
-                        Thread.sleep(backoffDelay)
-                    } catch (ie: InterruptedException) {
-                        Thread.currentThread().interrupt()
-                        throw IOException("Retry sleep interrupted", ie)
-                    }
-                }
-                
-                response?.close()
-                response = chain.proceed(request)
-                if (response.isSuccessful) {
-                    return response
-                }
-                
-                val code = response.code
-                if (code in 400..499) {
-                    // Client side errors (like 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found) should not be retried.
-                    return response
-                }
-            } catch (e: IOException) {
-                exception = e
-                response?.close()
-                response = null
+        val safe = request.method in setOf("GET", "HEAD", "OPTIONS") && request.body == null
+        val attempts = if (safe) maxRetry else 1
+        var failure: IOException? = null
+        repeat(attempts) { index ->
+            if (chain.call().isCanceled() || Thread.currentThread().isInterrupted) {
+                throw InterruptedIOException("Request cancelled")
             }
-            tryCount++
+            if (index > 0) {
+                try { Thread.sleep((1000L * index * index).coerceAtMost(5000L)) }
+                catch (error: InterruptedException) {
+                    Thread.currentThread().interrupt()
+                    throw InterruptedIOException("Retry interrupted").apply { initCause(error) }
+                }
+            }
+            try {
+                val response = chain.proceed(request)
+                if (response.code !in setOf(502, 503, 504) || index == attempts - 1) return response
+                response.close()
+            } catch (error: IOException) {
+                if (error is InterruptedIOException || chain.call().isCanceled() || index == attempts - 1) throw error
+                failure = error
+            }
         }
-        
-        if (response != null) return response
-        throw exception ?: IOException("Upload failed after $maxRetry retries under weak network conditions")
+        throw failure ?: IOException("Request attempts exhausted")
     }
 }

@@ -1,0 +1,29 @@
+agent structure validation passed (mode=config; Android build/tests not executed)
+agent structure validation passed (mode=project; Android build/tests not executed)
+build validation passed: 0 warning(s)
+WARN: samples\published-consumer: module build file exists but module is not included in settings.
+WARN: CoreUtils.init appears in multiple files: app\src\main\java\com\wkq\dev\DevLibApplication.kt, core\core_utils\src\main\java\com\wkq\util\AppLifecycleMonitor.kt, core\core_utils\src\main\java\com\wkq\util\CoreUtils.kt, core\core_utils\src\main\java\com\wkq\util\DeepLinkUtil.kt, core\core_utils\src\main\java\com\wkq\util\FileUtil.kt
+architecture validation passed: 2 warning(s)
+ui validation passed: 0 warning(s)
+i18n validation passed: 0 warning(s)
+Host validation modules: app, feature/feature_app, feature/feature_res, feature/feature_demo_common, feature/feature_demo_foundation, feature/feature_demo_files, feature/feature_demo_image, feature/feature_demo_document, feature/feature_demo_google
+
+== tool-structure ==
+tool-structure: ok
+
+== target-profile ==
+target-profile: ok
+
+== build ==
+build: ok
+
+== architecture ==
+architecture: ok
+
+== ui ==
+ui: ok
+
+== i18n ==
+i18n: ok
+
+workflow validation passed

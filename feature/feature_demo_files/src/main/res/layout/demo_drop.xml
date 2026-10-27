@@ -6,10 +6,10 @@
         <com.google.android.material.button.MaterialButton android:id="@+id/choose" style="@style/Demo.Button" android:text="@string/demo_choose" />
         <com.google.android.material.button.MaterialButton android:id="@+id/sample" style="@style/Demo.Button" android:text="@string/demo_sample" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_drop_execute" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/start" style="@style/Demo.Button" android:text="@string/demo_drop_start" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/start" style="@style/Demo.Button.Primary" android:text="@string/demo_drop_start" />
         <com.google.android.material.button.MaterialButton android:id="@+id/approve" style="@style/Demo.Button" android:text="@string/demo_drop_approve" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/reject" style="@style/Demo.Button" android:text="@string/demo_drop_reject" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/stop" style="@style/Demo.Button" android:text="@string/demo_drop_stop" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/reject" style="@style/Demo.Button.Danger" android:text="@string/demo_drop_reject" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/stop" style="@style/Demo.Button.Danger" android:text="@string/demo_drop_stop" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

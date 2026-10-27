@@ -61,3 +61,49 @@
 - RECEIVER-I18N：接收网页按浏览器 zh 选择中文，其余使用英文；7 项 Node 用例覆盖原协议流程、英文错误与未知语言回退；仍不执行真实网络传输。
 - STABLE-BUILD：Debug App、common/document/files/google JVM、App Release 签名门禁、本地库发布及不使用 project() 的消费者 compileDebugKotlin。正式签名缺失不得修改门禁或以 Debug 签名冒充正式构建。
 - 范围排除：基础库源码、设备/视觉、真实购买和外部服务；R8、原生 ABI/16KB 的设备结论不能由库 Release 编译代替。测试基线不推进未执行项。
+
+
+## 2026-10-27 NAS / USB 轻量库迁入
+
+- NAS-UNIT：core_nas 原有协议验证、相对路径及 MockWebServer 用例，本地 JVM/Robolectric；不访问真实 NAS。
+- USB-UNIT：core_usb 原有 SAF 提供方测试，使用本地 Robolectric 夹具；不操作真实盘。
+- STORAGE-LAB：宿主隔离读写测试的文件归属、冲突、内容不一致、取消、清理错误、内存边界与下载超限清理。
+- WORKSPACE-STORAGE：NAS/USB 路由、工作区输入选择及上传库退役协议提示，执行受影响宿主与 lib_upload 单元测试。
+- STORAGE-INTEGRATION：20 库本地发布、仅 Maven 坐标消费者编译、App Debug 构建及 APK 19 页面/路由校验。
+- STATIC-STORAGE：Agent 结构、九个宿主模块严格 i18n/UI/架构检查与变更源码中文注释审计。
+- 排除：按用户要求不执行 adb、真机、模拟器、外部服务器或真实 USB 测试。视觉、多窗口、字体放大、授权恢复、拔盘及 Android 17 权限运行期检查未执行。
+- 旧 lib_transfer 的持久队列、同步、历史数据库不迁移；不运行已移除库测试。测试不能代表后台传输或所有 NAS 固件通过。
+
+
+## 2026-10-27 Google 评分功能适配
+
+- GOOGLE-RATE-POLICY：使用时长、关键操作门槛、30 天冷却、时间回拨、零时间戳、关闭偏好及配置合法性，执行纯 JVM 测试。
+- GOOGLE-RATE-FLOW：本地 Robolectric + 官方 FakeReviewManager，检查事件去重、有界存储、失败节流、无资格不创建客户端、前后台切换、请求前取消和流程中取消防重入。
+- GOOGLE-RATE-HOST：复用现有 Base/ViewModel/Utils，增加评分条件诊断、完成事件模拟、开关、商店与独立反馈入口；回归 Google 宿主现有购买恢复测试。
+- GOOGLE-RATE-PUBLISH：发布受影响 core_google，独立 Maven 消费者编译评分状态公开类型；App Debug、APK 路由和新增 Review SDK 类型检查。
+- 原 SiteReport / PressIPTC 仓库只读，保留来源摘要；不迁入报告 ID 门槛、五星预筛选、品牌或邮件地址。
+- 按用户要求不执行 adb、真机或模拟器；不提交真实评分或发送真实邮件。字体缩放、系统栏、Play 实际展示及分发资格保留设备验收项。
+
+
+## 2026-10-27 全库可靠性优化
+
+- LIB-RELIABILITY：testLibraries，执行所有正式库已配置的本地 JVM/编译测试；新增订阅账号/永久权益/未知状态、HTTP 非重放/实际取消、USB 失败清理、NAS 中断、分享关闭、解压预算、中间 Bitmap 预算、PDF 溢出、Office 替换/中断、EXIF 事务与操作契约用例。
+- HOST-RELIABILITY：common/files/document/google 的 JVM 测试，包含错误分类和现有流程；App Debug 构建、19 页面 APK 目录检查。
+- PUBLISH-RELIABILITY：20 个库本地发布，独立 Maven 消费者 compileDebugKotlin，不用 project 依赖掩盖公开 API/传递依赖问题。
+- STATIC-RELIABILITY：Agent 结构、九个宿主严格 UI/i18n/build/architecture；宿主全文源码审计和功能库修改声明人工复核；基础库源码差异核对。
+- 回环 HTTP、Robolectric SAF、FakeReviewManager 和图片测试不代表真实服务器、USB 设备、购买或 UI 展示通过；按用户要求不执行 adb、真机、模拟器。
+- App 正式签名/R8、native ABI/16KB、阅读器视觉和 Android 17 运行期行为未验证；不推进这些用例基线。
+
+
+## 2026-10-27 Pixel 8 定向运行
+
+用户明确要求运行到 px8，本任务覆盖历史设备排除偏好。PX8-DEPLOY：Debug 构建、覆盖安装、冷启动；PX8-PDF-SMOKE：首页进入 PDF，内置示例图片生成并预览。仅操作 Pixel 8，不清数据，不做登录购买、真实 NAS/USB 或外部分享；Android 16 结果不能代表 Android 17 验收。
+
+
+## 2026-10-27 UI 与色彩统一
+
+- UI-THEME：语义色深浅主题、主次按钮、输入容器和结果卡片，严格资源/i18n/构建检查，12 组文本对比度。
+- UI-SOURCE：任务前快照对比，42 个 app/feature Kotlin/XML 文件审计，人工复核 Base 复用、中文 KDoc 与 Insets owner。
+- UI-BUILD：App Debug、公共层现有 27 个 JVM 用例、APK 目录路由校验；仅资源主题 bool 收尾后重跑 App 构建。
+- UI-PX8：延续用户明确真机授权，仅 Pixel 8；首页深浅、横屏工具列表、130% 字体、PDF 键盘与示例生成/预览、Google/NAS 表单。无真实交易/服务器/USB/分享。
+- 完成后恢复主题/字体/旋转偏好。API 37、平板、多窗口、三键导航、200% 字体、RTL/英文视觉、全 19 个业务闭环及 Release 不纳入已验收范围。

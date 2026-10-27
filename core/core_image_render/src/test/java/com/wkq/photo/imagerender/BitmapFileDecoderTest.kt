@@ -19,6 +19,20 @@ import java.nio.file.Files
 @Config(sdk = [28])
 class BitmapFileDecoderTest {
 
+    /** 最终缩放尺寸合规但中间采样位图超预算时，必须在解码前拒绝。 */
+    @Test fun budgetsIntermediateSampledBitmap() {
+        val root = Files.createTempDirectory("bitmap-sampled-budget").toFile()
+        try {
+            val source = root.resolve("source.jpg")
+            createOrientationFixture(source)
+            val result = BitmapFileDecoder.decodeOriented(ImageSource.FileSource(source),
+                BitmapDecodeOptions(100, 100), OperationBudget(maxTotalPixels = 7000))
+            assertTrue(result is OperationResult.Failure)
+            assertEquals(OperationErrorCode.BUDGET_EXCEEDED, (result as OperationResult.Failure).code)
+        } finally { root.deleteRecursively() }
+    }
+
+
     @Test
     fun supportsAllExifOrientationsAndDimensions() {
         val orientations = listOf(

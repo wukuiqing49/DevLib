@@ -1,6 +1,6 @@
 ---
 name: plan-google-play-listing-assets
-description: "分析 Android 项目并统一策划 Google Play Listing 的 Feature Graphic 封面、商店截图和 Preview Video：核验真实功能，先推导恰好 10 个 en-US 英文 Seed Keywords 且只向用户展示关键词，再读取 Keyword Planner/ASO 工具 CSV 或 XLSX，统一 ASO/SEO/GEO 定位，并输出素材总策略、三类 Brief、独立 Prompt 和合规检查。用于完整 Google Play 素材包、封面策划、截图组规划、预览视频脚本、关键词生成或回填、提示词文件生成及跨素材一致性验收；不虚构 App UI 或产品能力。"
+description: "依据 Android 项目真实功能策划 Google Play 封面、截图和预览视频，输出共享策略、Brief 与独立 Prompt。适用于商店素材和关键词研究交接；缺少研究数据时先输出 10 个 en-US Seed Keywords。"
 ---
 
 # Google Play 商店素材策划

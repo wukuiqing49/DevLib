@@ -3,15 +3,15 @@
     <LinearLayout style="@style/Demo.Page">
         <TextView style="@style/Demo.Label" android:text="@string/demo_router_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_router_input" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_router_path">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_router_path">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/path" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_router_path_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_router_value">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_router_value">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/value" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_router_value_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView style="@style/Demo.Heading" android:text="@string/demo_router_execute" />
         <com.google.android.material.button.MaterialButton android:id="@+id/inspect" style="@style/Demo.Button" android:text="@string/demo_router_inspect" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/navigate" style="@style/Demo.Button" android:text="@string/demo_router_navigate" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/navigate" style="@style/Demo.Button.Primary" android:text="@string/demo_router_navigate" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

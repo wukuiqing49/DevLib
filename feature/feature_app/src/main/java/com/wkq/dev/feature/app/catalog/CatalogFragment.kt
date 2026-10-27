@@ -74,8 +74,12 @@ class CatalogFragment : BaseVMFragment<FragmentCatalogBinding, CatalogViewModel>
         }
     private lateinit var adapter: BaseRecyclerViewAdapter<ItemDemoEntryBinding, WorkbenchRow>
 
-    /** 绑定基础列表适配器、搜索和导航，在视图 STARTED 期间订阅工作区状态；底部 Insets 交由宿主统一处理。 */
+    /** 复用 Base 列表及 MVVM 状态订阅，短窗口默认收起可滚动页头，底部和 IME Insets 仍由宿主统一处理。 */
     override fun initView() {
+        // 横屏/短窗口优先展示列表；页头仍可下拉展开，不删除搜索或分类入口。
+        if (resources.configuration.screenHeightDp < 480) {
+            binding.headerAppBar.setExpanded(false, false)
+        }
         // BaseTitleActivity 是 bottom inset owner，避免 Material 导航重复添加系统栏高度。
         androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(binding.navigation) { _, insets
             ->
@@ -353,7 +357,7 @@ class CatalogFragment : BaseVMFragment<FragmentCatalogBinding, CatalogViewModel>
                                     setOf(
                                         "core_image_render",
                                         "core_pdf",
-                                        "lib_transfer",
+                                        "core_nas",
                                         "lib_drop",
                                     )
                             },

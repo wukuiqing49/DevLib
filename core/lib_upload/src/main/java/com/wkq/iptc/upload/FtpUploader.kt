@@ -4,12 +4,12 @@ import android.content.Context
 import android.net.Uri
 import android.util.Log
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import org.apache.commons.net.ftp.FTP
 import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPReply
 import java.io.ByteArrayInputStream
 
+/** FTP 协议上传适配，在 IO 线程执行并保留取消信号及连接清理。 */
 class FtpUploader(
     private val context: Context
 ) : UploadClient {
@@ -20,6 +20,7 @@ class FtpUploader(
 
     override val protocol: UploadProtocolType = UploadProtocolType.FTP
 
+    /** 执行上传，协程取消时中断阻塞任务并阻止后续回退上传。 */
     override suspend fun upload(
         task: UploadTask,
         profile: UploadServerProfile,
@@ -28,7 +29,7 @@ class FtpUploader(
         AtomicUploadPolicy.validate(task, profile)?.let { return it }
         val config = profile.config as? FtpConfig
             ?: return invalidConfig("FTP profile config is invalid")
-        return withContext(Dispatchers.IO) {
+        return kotlinx.coroutines.runInterruptible(Dispatchers.IO) {
             runTransfer(
                 config = config,
                 sourceUri = task.recordUri,
@@ -40,10 +41,11 @@ class FtpUploader(
         }
     }
 
+    /** 在可取消 IO 任务中验证连接，始终释放协议连接。 */
     override suspend fun testConnection(profile: UploadServerProfile): UploadResult {
         val config = profile.config as? FtpConfig
             ?: return invalidConfig("FTP profile config is invalid")
-        return withContext(Dispatchers.IO) {
+        return kotlinx.coroutines.runInterruptible(Dispatchers.IO) {
             runTransfer(
                 config = config,
                 sourceUri = null,
@@ -55,6 +57,7 @@ class FtpUploader(
         }
     }
 
+    /** 管理单次 FTP 会话与临时上传，失败分类前优先传播取消。 */
     private fun runTransfer(
         config: FtpConfig,
         sourceUri: String?,
@@ -106,7 +109,11 @@ class FtpUploader(
                 // 閺屻儴顕楁潻婊咁伂 .part 閺傚洣娆㈠韫炊婢堆冪毈
                 val remotePartSize = runCatching {
                     client.listFiles(partName).firstOrNull()?.size ?: 0L
-                }.getOrElse { 0L }
+                }.getOrElse {
+                    if (it is kotlinx.coroutines.CancellationException) throw it
+                    if (Thread.currentThread().isInterrupted) throw java.util.concurrent.CancellationException("FTP operation interrupted").apply { initCause(it) }
+                    0L
+                }
                 // APPE 从远端末尾追加；本地进度可能滞后，不能从更早位置重复追加。
                 val actualOffset = if (resumeOffset > 0L && remotePartSize in 1..localSize) remotePartSize else 0L
                 
@@ -131,6 +138,8 @@ class FtpUploader(
                         }
                     } ?: false
                 }.getOrElse {
+                    if (it is kotlinx.coroutines.CancellationException) throw it
+                    if (Thread.currentThread().isInterrupted) throw java.util.concurrent.CancellationException("FTP operation interrupted").apply { initCause(it) }
                     Log.w(
                         TAG,
                         "FTP .part upload threw: ${it.javaClass.name}; " +
@@ -176,6 +185,8 @@ class FtpUploader(
                 UploadResult.Success(remotePath)
             }
         } catch (throwable: Throwable) {
+            if (throwable is kotlinx.coroutines.CancellationException) throw throwable
+            if (Thread.currentThread().isInterrupted) throw java.util.concurrent.CancellationException("FTP operation interrupted").apply { initCause(throwable) }
             Log.e(
                 TAG,
                 "runTransfer failed: validateOnly=$validateOnly, ${UploadLogSanitizer.endpoint(config)}, " +
@@ -221,6 +232,7 @@ class FtpUploader(
         }
     }
 
+    /** 用隔离探针检查远端可写性，中断不转成普通传输失败。 */
     private fun testWritable(client: FTPClient): UploadResult.Failure? {
         val fileName = "press_iptc_test_${System.currentTimeMillis()}.tmp"
         val bytes = "ok".toByteArray(Charsets.UTF_8)
@@ -238,6 +250,8 @@ class FtpUploader(
             runCatching { client.deleteFile(fileName) }
             null
         }.getOrElse {
+                    if (it is kotlinx.coroutines.CancellationException) throw it
+                    if (Thread.currentThread().isInterrupted) throw java.util.concurrent.CancellationException("FTP operation interrupted").apply { initCause(it) }
             Log.w(
                 TAG,
                 "FTP upload test failed: type=${it.javaClass.simpleName}, replyCode=${client.replyCode}"
@@ -252,6 +266,7 @@ class FtpUploader(
         }
     }
 
+    /** 完整上传回退仅用于协议失败，取消和中断必须继续传播。 */
     private fun uploadDirect(
         client: FTPClient,
         uri: Uri,
@@ -268,6 +283,8 @@ class FtpUploader(
                 client.storeFile(remotePath, progressInput)
             } ?: false
         }.getOrElse {
+                    if (it is kotlinx.coroutines.CancellationException) throw it
+                    if (Thread.currentThread().isInterrupted) throw java.util.concurrent.CancellationException("FTP operation interrupted").apply { initCause(it) }
             Log.w(
                 TAG,
                 "FTP direct upload threw: ${it.javaClass.name}; " +

@@ -1,13 +1,69 @@
 """覆盖跨语言复数与损坏资源的门禁回归。"""
 
 import tempfile
+import subprocess
+import sys
 import unittest
 from pathlib import Path
 
-from validate_i18n_resources import validate_res_dir
+from validate_i18n_resources import validate_res_dir, placeholders, resource_configuration
 
 
 class ResourceValidationTest(unittest.TestCase):
+    def test_missing_explicit_resource_directory_fails(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result = subprocess.run(
+                [sys.executable, '-B', str(Path(__file__).with_name('validate_i18n_resources.py')),
+                 '--res-dir', str(Path(directory)/'missing')],
+                capture_output=True, text=True,
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('resource directory not found', result.stdout)
+
+    def test_argument_identity_and_reordering(self):
+        self.assertNotEqual(placeholders('%s %d'), placeholders('%d %s'))
+        self.assertEqual(placeholders('%1$s %2$d'), placeholders('%2$d %1$s'))
+        self.assertEqual(placeholders('%s %d'), placeholders('%2$d %1$s'))
+        self.assertNotEqual(placeholders('%1$s'), placeholders('%2$s'))
+
+    def test_relative_date_and_literal_percent(self):
+        self.assertEqual(placeholders('%1$tY %<tm'), placeholders('%1$tm %1$tY'))
+        self.assertNotEqual(placeholders('%1$tY'), placeholders('%1$tm'))
+        self.assertEqual(placeholders('%% %n'), ())
+        self.assertEqual(placeholders('%%%s'), ('1:s',))
+        self.assertEqual(placeholders('%2$s %s %<s'), placeholders('%2$s %1$s %1$s'))
+
+    def test_resource_qualifiers(self):
+        self.assertEqual(resource_configuration(Path('values-car')), ('', ('car',)))
+        self.assertEqual(resource_configuration(Path('values-en-night')), ('en', ('night',)))
+        self.assertEqual(resource_configuration(Path('values-mcc310-en-rUS-night-v31')), ('en-US', ('mcc310', 'night', 'v31')))
+        self.assertEqual(resource_configuration(Path('values-b+zh+Hans+CN-night')), ('zh-Hans-CN', ('night',)))
+
+    def test_partial_overrides_inherit_but_night_only_is_not_full_coverage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            contents = {
+                'values': '<string name="a">A %1$s</string><string name="b">B</string>',
+                'values-en': '<string name="a">A %1$s</string><string name="b">B</string>',
+                'values-en-night': '<string name="a">Night %1$s</string>',
+                'values-en-rUS': '<string name="b">US B</string>',
+                'values-car': '<string name="b">Car B</string>',
+            }
+            for folder, content in contents.items():
+                (root/folder).mkdir()
+                (root/folder/'strings.xml').write_text(f'<resources>{content}</resources>', encoding='utf-8')
+            errors = []
+            validate_res_dir(root, errors, [], True, ['en'])
+            self.assertEqual(errors, [])
+            (root/'values-en-night/strings.xml').write_text('<resources><string name="a">%1$d</string></resources>', encoding='utf-8')
+            validate_res_dir(root, errors, [], True, ['en'])
+            self.assertTrue(any('placeholder mismatch' in e for e in errors))
+            (root/'values-en/strings.xml').unlink()
+            (root/'values-en').rmdir()
+            errors = []
+            validate_res_dir(root, errors, [], True, ['en'])
+            self.assertTrue(any('required locale en' in e for e in errors))
+
     def validate(self, localized, base=None):
         base = base or '<plurals name="count"><item quantity="one">%d item</item><item quantity="other">%d items</item></plurals>'
         with tempfile.TemporaryDirectory() as directory:

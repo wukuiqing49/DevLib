@@ -1,0 +1,35 @@
+<resources>
+    <string name="nas_title">NAS file manager</string>
+    <string name="nas_intro">Connect to SMB, WebDAV or SFTP, then browse. Shows up to 200 entries; tap files to download up to 8 MiB. Passwords are not saved. SFTP requires a trusted fingerprint; HTTPS is recommended for WebDAV.</string>
+    <string name="nas_root">Root URL including share directory</string>
+    <string name="nas_username">Username</string>
+    <string name="nas_password">Password (not saved)</string>
+    <string name="nas_fingerprint">SFTP SHA256 host fingerprint</string>
+    <string name="nas_invalid_connection">Check protocol and URL. Embedded credentials, query strings and fragments are not allowed.</string>
+    <string name="nas_discover">Discover LAN services</string>
+    <string name="nas_discovered">Found %1$d advertised services (no automatic connection)</string>
+    <string name="usb_title">USB / SAF file manager</string>
+    <string name="usb_intro">Authorize a directory through the system picker, including available USB storage. This is not a USB driver. Shows up to 200 entries; downloads are limited to 8 MiB. Reauthorize after removal or permission loss.</string>
+    <string name="usb_authorize">Choose and authorize directory</string>
+    <string name="usb_grant_persisted">Directory grant persisted; permissions are checked for each operation.</string>
+    <string name="usb_grant_temporary">Temporary directory permission granted.</string>
+    <string name="usb_grant_recheck">Directory restored; browse to check permission.</string>
+    <string name="storage_path">Relative directory (empty for root)</string>
+    <string name="storage_connect">Connect and browse</string>
+    <string name="storage_browse">Browse directory</string>
+    <string name="storage_up">Parent directory</string>
+    <string name="storage_directory">Directory</string>
+    <string name="storage_file">File · %1$d bytes (-1 means unknown)</string>
+    <string name="storage_filename">Upload destination filename</string>
+    <string name="storage_upload">Upload one selected file</string>
+    <string name="storage_upload_confirm">Create a file in the browsed directory without overwriting existing files. Interruptions may leave a partial file; inspect the destination. Continue?</string>
+    <string name="storage_probe">Verify directory read and write</string>
+    <string name="storage_probe_confirm">Create a unique 4 KiB file, read it back, verify it and delete it. Failure may leave the test file; inspect the reported path. Continue?</string>
+    <string name="storage_no_tree">Choose a readable directory first.</string>
+    <string name="storage_listed">Showing %1$d of %2$d entries. Browse the destination before uploading or testing.</string>
+    <string name="storage_downloaded">File downloaded to workspace.</string>
+    <string name="storage_uploaded">Uploaded: %1$s. Refresh the directory.</string>
+    <string name="storage_probe_failed">Verification failed. Check for a remaining test file: %1$s</string>
+    <string name="storage_probe_passed">4 KiB write, read-back comparison and cleanup completed.</string>
+    <string-array name="nas_protocols"><item>SMB</item><item>WebDAV</item><item>SFTP</item></string-array>
+</resources>

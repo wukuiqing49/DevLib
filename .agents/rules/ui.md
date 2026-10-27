@@ -19,6 +19,9 @@
 
 ## Edge-to-edge 与 Insets
 
+- 所有页面必须明确系统栏策略：普通页面使用边到边布局（内容延伸至系统栏下），需要专注内容的页面才使用隐藏系统栏的全屏沉浸式；透明系统栏不等于隐藏系统栏。
+- DevLib 按 Android 17 / targetSdk 37 实施，并兼容项目 minSdk；实现方法与验证矩阵见 UI Skill 的 `references/system-bars-android17.md`。先核对 Base 已有窗口处理，避免重复设置或新增另一套全局封装。
+
 - 普通页面默认 Edge-to-edge + WindowInsets，不默认隐藏状态栏或导航栏。
 - 顶部 Toolbar、Search、Header 明确 top inset owner；BottomNav、底部按钮、输入框明确 bottom inset owner。
 - 同一个 top/bottom system inset 只能由一个 owner 消费，禁止父子 Fragment 重复叠加。

@@ -95,19 +95,23 @@ sealed interface PdfOutputTarget {
     ) : PdfOutputTarget
 }
 
+/** 单页图片输出请求；边距必须留下实际绘制区域。 */
 data class PdfOperationRequest(
     val imageSources: List<ImageSource>,
     val outputTarget: PdfOutputTarget,
     val pageSize: PdfPageSize = PdfPageSize.A4,
     val landscape: Boolean = false,
     val marginPoints: Int = 24
-)
+) {
+    init { require(marginPoints >= 0 && marginPoints.toLong() * 2 < minOf(pageSize.portraitWidth, pageSize.portraitHeight)) }
+}
 
 data class PdfExportOutput(
     val target: PdfOutputTarget,
     val pageCount: Int
 )
 
+/** 网格输出请求，限制边距和间隔以避免布局整数溢出。 */
 data class PdfGridOperationRequest(
     val imageSources: List<ImageSource>,
     val outputTarget: PdfOutputTarget,
@@ -122,7 +126,8 @@ data class PdfGridOperationRequest(
 ) {
     init {
         require(columns in 1..6 && rows in 1..6)
-        require(gapPoints >= 0)
+        require(marginPoints in 0..MAX_PDF_PAGE_POINTS)
+        require(gapPoints in 0..MAX_PDF_PAGE_POINTS)
         require(header?.length ?: 0 <= 200)
         require(footer?.length ?: 0 <= 200)
     }
@@ -130,18 +135,20 @@ data class PdfGridOperationRequest(
 
 enum class PdfPageOrientation { PORTRAIT, LANDSCAPE }
 
+/** 页面尺寸和边距配置，禁止溢出的布局参数。 */
 data class PdfPageConfig(
     val size: PdfPageSize = PdfPageSize.A4,
     val customSize: PdfPageDimensions? = null,
     val orientation: PdfPageOrientation = PdfPageOrientation.PORTRAIT,
     val marginPoints: Int = 24,
 ) {
-    init { require(marginPoints >= 0) }
+    init { require(marginPoints in 0..MAX_PDF_PAGE_POINTS) }
 }
 
 sealed interface PdfDocumentLayout {
     data object SinglePerPage : PdfDocumentLayout
 
+    /** 网格布局限制行列和间隔，避免无效几何尺寸。 */
     data class Grid(
         val columns: Int = 2,
         val rows: Int = 2,
@@ -149,7 +156,7 @@ sealed interface PdfDocumentLayout {
     ) : PdfDocumentLayout {
         init {
             require(columns in 1..6 && rows in 1..6)
-            require(gapPoints >= 0)
+            require(gapPoints in 0..MAX_PDF_PAGE_POINTS)
         }
     }
 }
@@ -351,6 +358,7 @@ object PdfImageExporter {
         )
     }
 
+    /** 按网格布局逐图绘制，图片及页资源在失败时同样释放。 */
     fun executeGrid(
         request: PdfGridOperationRequest,
         options: PdfRenderOptions = PdfRenderOptions(),

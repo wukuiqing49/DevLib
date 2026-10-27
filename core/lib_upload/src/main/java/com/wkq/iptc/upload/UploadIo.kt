@@ -106,6 +106,7 @@ fun getUriLength(context: Context, uri: Uri): Long {
     return size
 }
 
+/** 不拥有外部线程；每次读取检查中断并按实际读取字节报告进度。 */
 class ProgressInputStream(
     private val delegate: java.io.InputStream,
     private val initialOffset: Long = 0L,
@@ -113,7 +114,9 @@ class ProgressInputStream(
 ) : java.io.InputStream() {
     private var bytesWritten = initialOffset
 
+    /** 读取单字节前响应线程中断。 */
     override fun read(): Int {
+        if (Thread.currentThread().isInterrupted) throw java.io.InterruptedIOException("Upload interrupted")
         val b = delegate.read()
         if (b != -1) {
             bytesWritten++
@@ -122,7 +125,9 @@ class ProgressInputStream(
         return b
     }
 
+    /** 批量读取前响应线程中断，防止取消后继续回退上传。 */
     override fun read(b: ByteArray, off: Int, len: Int): Int {
+        if (Thread.currentThread().isInterrupted) throw java.io.InterruptedIOException("Upload interrupted")
         val read = delegate.read(b, off, len)
         if (read != -1) {
             bytesWritten += read

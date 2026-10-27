@@ -48,7 +48,7 @@ class WorkspacePolicyTest {
 
     @Test
     fun genericFileToolsAcceptDocuments() {
-        assertTrue(WorkspacePolicy.accepts("/files/lib_transfer", "docx"))
+        assertTrue(WorkspacePolicy.accepts("/files/core_nas", "docx"))
         assertTrue(WorkspacePolicy.accepts("/files/core_archive", "zip"))
     }
 

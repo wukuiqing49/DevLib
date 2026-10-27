@@ -46,7 +46,8 @@ modules:
   - core/lib_drop
   - core/lib_metadata
   - core/lib_operations
-  - core/lib_transfer
+  - core/core_nas
+  - core/core_usb
   - core/lib_upload
   - core/lib_xpopup
   foundationLibraries:

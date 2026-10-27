@@ -3,11 +3,11 @@
     <LinearLayout style="@style/Demo.Page">
         <TextView style="@style/Demo.Label" android:text="@string/demo_network_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_network_input" />
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_network_url">
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_network_url">
             <com.google.android.material.textfield.TextInputEditText android:id="@+id/url" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_network_url_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView style="@style/Demo.Heading" android:text="@string/demo_network_execute" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/request" style="@style/Demo.Button" android:text="@string/demo_network_request" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/request" style="@style/Demo.Button.Primary" android:text="@string/demo_network_request" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

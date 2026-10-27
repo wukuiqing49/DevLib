@@ -20,6 +20,7 @@ import kotlin.math.min
 /** 文件图片解码与 EXIF 方向归一化。 */
 object BitmapFileDecoder {
 
+    /** 读取图片方向归一化后的尺寸，不分配完整像素。 */
     fun readOrientedDimensions(source: ImageSource): Pair<Int, Int> {
         val bounds = readBounds(source)
         val orientation = readOrientation(source)
@@ -30,6 +31,7 @@ object BitmapFileDecoder {
         }
     }
 
+    /** 兼容文件入口，返回的 Bitmap 由调用方释放。 */
     fun decodeOriented(
         file: File,
         maxWidth: Int = Int.MAX_VALUE,
@@ -42,6 +44,7 @@ object BitmapFileDecoder {
         ).getOrThrow()
     }
 
+    /** 按目标和实际采样预算解码；失败或取消时释放已分配图片。 */
     fun decodeOriented(
         source: ImageSource,
         options: BitmapDecodeOptions = BitmapDecodeOptions(),
@@ -65,6 +68,9 @@ object BitmapFileDecoder {
         context.checkTotalPixels(targetSize.first.toLong() * targetSize.second)
         context.report(OperationStage.DECODING, 0, 1)
         val sampleSize = calculateSampleSize(orientedWidth, orientedHeight, targetSize.first, targetSize.second)
+        val sampledWidth = (orientedWidth.toLong() + sampleSize - 1) / sampleSize
+        val sampledHeight = (orientedHeight.toLong() + sampleSize - 1) / sampleSize
+        context.checkTotalPixels(sampledWidth * sampledHeight)
         val bitmap = source.openFileDescriptor().use { descriptor ->
             BitmapFactory.decodeFileDescriptor(
                 descriptor.fileDescriptor,
@@ -77,34 +83,38 @@ object BitmapFileDecoder {
             )
         } ?: throw OperationException(OperationErrorCode.UNSUPPORTED_FORMAT, "Unable to decode image: ${source.displayName}")
 
-        context.checkActive()
-        var output = applyOrientation(bitmap, orientation)
-        if (output.width > targetSize.first || output.height > targetSize.second) {
-            val scaled = Bitmap.createScaledBitmap(output, targetSize.first, targetSize.second, true)
-            if (scaled !== output) output.recycle()
-            output = scaled
-        }
-        if (options.mutable && !output.isMutable) {
-            val mutableOutput = output.copy(Bitmap.Config.ARGB_8888, true)
-            output.recycle()
-            output = mutableOutput
-        }
-        context.report(OperationStage.COMPLETED, 1, 1)
-        OperationResult.Success(
-            value = output,
-            statistics = OperationStatistics(
-                durationMillis = context.elapsedMillis(),
-                inputCount = 1,
-                outputCount = 1,
-                inputBytes = (source as? ImageSource.FileSource)?.file?.length() ?: 0,
-                inputPixels = orientedWidth.toLong() * orientedHeight,
-                outputPixels = output.width.toLong() * output.height,
-                outputWidth = output.width,
-                outputHeight = output.height
+        var output = bitmap
+        try {
+            context.checkActive()
+            output = applyOrientation(output, orientation)
+            if (output.width > targetSize.first || output.height > targetSize.second) {
+                val scaled = Bitmap.createScaledBitmap(output, targetSize.first, targetSize.second, true)
+                if (scaled !== output) output.recycle()
+                output = scaled
+            }
+            if (options.mutable && !output.isMutable) {
+                val mutableOutput = checkNotNull(output.copy(Bitmap.Config.ARGB_8888, true)) { "Cannot create mutable bitmap" }
+                output.recycle()
+                output = mutableOutput
+            }
+            context.report(OperationStage.COMPLETED, 1, 1)
+            OperationResult.Success(
+                value = output,
+                statistics = OperationStatistics(
+                    durationMillis = context.elapsedMillis(), inputCount = 1, outputCount = 1,
+                    inputBytes = (source as? ImageSource.FileSource)?.file?.length() ?: 0,
+                    inputPixels = orientedWidth.toLong() * orientedHeight,
+                    outputPixels = output.width.toLong() * output.height,
+                    outputWidth = output.width, outputHeight = output.height
+                )
             )
-        )
+        } catch (error: Throwable) {
+            if (!output.isRecycled) output.recycle()
+            throw error
+        }
     }
 
+    /** 应用 EXIF 旋转与镜像，替换成功后释放原位图。 */
     private fun applyOrientation(bitmap: Bitmap, orientation: Orientation): Bitmap {
         if (!orientation.isFlipped && orientation.rotationDegrees == 0) return bitmap
         val matrix = Matrix().apply {

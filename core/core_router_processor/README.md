@@ -1,6 +1,6 @@
 # core_router_processor
 
-KSP 路由代码生成。来源：AndroidCoreRouters。类型：JVM JAR / Gradle plugin。
+KSP 路由代码生成。来源：AndroidCoreRouters。类型：JVM KSP 处理器 JAR。
 
 ## 接入
 

@@ -13,6 +13,14 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class QrCodeKitTest {
 
+    /** 已释放的位图必须在申请像素数组前拒绝。 */
+    @Test(expected = IllegalArgumentException::class) fun rejectsRecycledRecognitionBitmap() {
+        val bitmap = Bitmap.createBitmap(4, 4, Bitmap.Config.ARGB_8888)
+        bitmap.recycle()
+        QrCodeKit.recognizeAll(bitmap)
+    }
+
+
     @Test
     fun renderer_keeps_white_quiet_zone() {
         val bitmap = QRCodeGenerator.generate(

@@ -16,6 +16,7 @@ import com.wkq.photo.core.operation.OperationRunner
 import com.wkq.photo.core.operation.OperationStage
 import com.wkq.photo.core.operation.OperationStatistics
 
+/** 生成带样式且可回读验证的二维码，失败时释放临时位图。 */
 object QRCodeGenerator {
     fun generate(
         payload: QRPayload,
@@ -30,6 +31,7 @@ object QRCodeGenerator {
         onProgress = onProgress
     )
 
+    /** 预算校验后绘制并回读，取消或验证失败不返回未释放的图片。 */
     fun generate(
         request: QRCodeRequest,
         budget: OperationBudget = defaultBudget(request.sizePx),
@@ -71,33 +73,38 @@ object QRCodeGenerator {
             listOf(request.backgroundVeilAlpha, 0.9f, 0.94f).distinct()
         }
         var bitmap: Bitmap? = null
-        for (veilAlpha in veilCandidates) {
-            context.checkActive()
-            bitmap?.recycle()
-            bitmap = QRCodeRenderer.render(matrix, request.copy(backgroundVeilAlpha = veilAlpha), context)
-            if (!request.verifyScannable || recognizes(bitmap, request.content)) break
-        }
-        val output = checkNotNull(bitmap)
-        context.report(OperationStage.PROCESSING, 2, 2)
-        if (request.verifyScannable && !recognizes(output, request.content)) {
-            output.recycle()
-            throw OperationException(
-                OperationErrorCode.ENCODE_FAILED,
-                "QR style cannot be scanned; increase contrast or remove the image"
+        try {
+            for (veilAlpha in veilCandidates) {
+                context.checkActive()
+                bitmap?.recycle()
+                bitmap = QRCodeRenderer.render(matrix, request.copy(backgroundVeilAlpha = veilAlpha), context)
+                if (!request.verifyScannable || recognizes(bitmap, request.content)) break
+            }
+            val output = checkNotNull(bitmap)
+            context.report(OperationStage.PROCESSING, 2, 2)
+            if (request.verifyScannable && !recognizes(output, request.content)) {
+                output.recycle()
+                throw OperationException(
+                    OperationErrorCode.ENCODE_FAILED,
+                    "QR style cannot be scanned; increase contrast or remove the image"
+                )
+            }
+            context.report(OperationStage.COMPLETED, 1, 1)
+            OperationResult.Success(
+                value = output,
+                statistics = OperationStatistics(
+                    durationMillis = context.elapsedMillis(),
+                    inputCount = 1,
+                    outputCount = 1,
+                    outputPixels = request.sizePx.toLong() * request.sizePx,
+                    outputWidth = request.sizePx,
+                    outputHeight = request.sizePx
+                )
             )
+        } catch (error: Throwable) {
+            bitmap?.let { if (!it.isRecycled) it.recycle() }
+            throw error
         }
-        context.report(OperationStage.COMPLETED, 1, 1)
-        OperationResult.Success(
-            value = output,
-            statistics = OperationStatistics(
-                durationMillis = context.elapsedMillis(),
-                inputCount = 1,
-                outputCount = 1,
-                outputPixels = request.sizePx.toLong() * request.sizePx,
-                outputWidth = request.sizePx,
-                outputHeight = request.sizePx
-            )
-        )
     }
 
     private fun defaultBudget(sizePx: Int) = OperationBudget(

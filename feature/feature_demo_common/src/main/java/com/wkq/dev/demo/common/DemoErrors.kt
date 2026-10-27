@@ -19,6 +19,11 @@ enum class DemoErrorKind {
     TIMEOUT,
     CERTIFICATE,
     NETWORK,
+    BUDGET,
+    CONFLICT,
+    FORMAT,
+    CANCELLED,
+    IO,
     UNKNOWN,
 }
 
@@ -28,13 +33,25 @@ fun demoErrorKind(error: Throwable): DemoErrorKind {
     var current: Throwable? = error
     while (current != null && visited.add(current)) {
         when (current) {
+            is com.wkq.photo.core.operation.OperationException -> return when (current.code) {
+                com.wkq.photo.core.operation.OperationErrorCode.INVALID_INPUT -> DemoErrorKind.INPUT
+                com.wkq.photo.core.operation.OperationErrorCode.SOURCE_NOT_FOUND -> DemoErrorKind.NOT_FOUND
+                com.wkq.photo.core.operation.OperationErrorCode.BUDGET_EXCEEDED -> DemoErrorKind.BUDGET
+                com.wkq.photo.core.operation.OperationErrorCode.OUTPUT_CONFLICT -> DemoErrorKind.CONFLICT
+                com.wkq.photo.core.operation.OperationErrorCode.UNSUPPORTED_FORMAT,
+                com.wkq.photo.core.operation.OperationErrorCode.ENCODE_FAILED -> DemoErrorKind.FORMAT
+                com.wkq.photo.core.operation.OperationErrorCode.CANCELLED -> DemoErrorKind.CANCELLED
+                com.wkq.photo.core.operation.OperationErrorCode.IO_ERROR -> DemoErrorKind.IO
+                else -> DemoErrorKind.UNKNOWN
+            }
             is SocketTimeoutException,
             is TimeoutCancellationException -> return DemoErrorKind.TIMEOUT
             is SSLException -> return DemoErrorKind.CERTIFICATE
             is SecurityException -> return DemoErrorKind.PERMISSION
             is FileNotFoundException -> return DemoErrorKind.NOT_FOUND
             is IllegalArgumentException -> return DemoErrorKind.INPUT
-            is IOException -> return DemoErrorKind.NETWORK
+            is java.net.SocketException, is java.net.UnknownHostException -> return DemoErrorKind.NETWORK
+            is IOException -> return DemoErrorKind.IO
         }
         current = current.cause
     }

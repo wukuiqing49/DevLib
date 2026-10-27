@@ -26,7 +26,8 @@ object WorkspacePolicy {
             "PdfActivity" -> "/document/core_pdf"
             "ArchiveActivity" -> "/files/core_archive"
             "UploadActivity" -> "/files/lib_upload"
-            "TransferActivity" -> "/files/lib_transfer"
+            "NasActivity" -> "/files/core_nas"
+            "UsbActivity" -> "/files/core_usb"
             "DropActivity" -> "/files/lib_drop"
             else -> ""
         }
@@ -57,7 +58,8 @@ object WorkspacePolicy {
             "/document/core_pdf" -> isImage(extension)
             "/files/core_archive",
             "/files/lib_upload",
-            "/files/lib_transfer",
+            "/files/core_nas",
+            "/files/core_usb",
             "/files/lib_drop" -> true
             else -> false
         }

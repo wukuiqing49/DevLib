@@ -98,9 +98,17 @@ def verify(apk: Path | None) -> dict:
             if "core_google" in active:
                 for required in (b"Lcom/wkq/google/auth/GoogleSignInCoordinator;",
                                  b"Lcom/wkq/google/auth/DropGoogleAccount;",
-                                 b"Lcom/wkq/google/billing/GoogleBillingManager;"):
+                                 b"Lcom/wkq/google/billing/GoogleBillingManager;",
+                                 b"Lcom/wkq/google/rate/GoogleRateManager;",
+                                 b"Lcom/wkq/google/rate/GoogleRatePolicy;",
+                                 b"Lcom/google/android/play/core/review/ReviewManagerFactory;"):
                     assert required in dex, f"Unified Google SDK missing: {required!r}"
+            if "core_nas" in active:
+                assert b"Lcom/wkq/naslib/NasClient;" in dex, "NAS public package missing"
+            if "core_usb" in active:
+                assert b"Lcom/wkq/usb/UsbStorage;" in dex, "USB public package missing"
             for excluded_package in (
+                b"Lcom/wkq/nas/transfer/",
                 b"Lcom/starxen/", b"Lcom/beautysdk/", b"Lio/agora/",
                 b"Lcom/phototoolkit/engine/", b"Lcom/phototoolkit/raw/",
                 b"Lcom/wkq/iptc/camera/camera/", b"Lcom/wkq/nativepdf/",

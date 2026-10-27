@@ -1,6 +1,6 @@
 # DevLib 逐库分析
 
-当前范围：19 个模块，8 个基础模块、10 个功能库、1 个内部支撑库。已按用户确认范围移出 15 个功能模块；基础库保持原有实现。当前分类见 docs/library-catalog.json，移出来源见 docs/import-manifest.json 的 removedModules。
+当前范围：20 个模块，8 个基础模块、11 个功能库、1 个内部支撑库。已按用户确认范围移出 15 个功能模块；基础库保持原有实现。当前分类见 docs/library-catalog.json，移出来源见 docs/import-manifest.json 的 removedModules。
 
 lib_operations 为保留功能提供预算、取消、进度与输出契约，不单独展示业务页面。编译与运行验收分开，结果见 [最新报告](testing/TEST_REPORT.md)。
 
@@ -194,7 +194,7 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 
 接入边界：配对和授权主要保存在内存；不是云盘和长期后台下载器。宿主负责文件选择、网络权限、UI 和生命周期。
 
-建议：与 lib_html 组合做第一套端到端示例；验证热点、断网、IPv6、浏览器证书和大文件。
+建议：由宿主提供接收页面，工作台使用 demo_receiver；验证热点、断网、IPv6、浏览器证书和大文件。
 
 
 ### lib_metadata
@@ -223,28 +223,21 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 建议：作为图片子系统共同底座；若未来需要桌面复用，再分离平台日志等 Android 依赖。
 
 
-### lib_transfer
+### core_nas / core_usb
 
-来源：NASFileManager；产物：aar。
+来源：NASFileManager；两个独立 AAR，保留公开包名。core_nas 提供 SMB/WebDAV/SFTP；core_usb 提供 SAF 授权目录访问，不提供 USB 驱动。宿主负责权限、凭据、IO 与确认；不迁入后台队列。
 
-用途：文件管理及持久任务引擎：本地/SAF/SMB/WebDAV/SFTP、复制移动、冲突、恢复、同步、归档/回收及存储变化。
-
-公开入口：TransferClient、FileClient、V2Client、TransferRequest、StartupRecovery
-
-接入边界：Room + WorkManager，属于重型引擎；advancedAllowed 由宿主注入。无启动页时通知可没有点击动作。
-
-建议：复用价值高且测试最多；完善进程重启、撤销 SAF 权限、外置存储拔插、真实 NAS 和后台限制验证。
-
+独立页面支持浏览、下载（8 MiB 上限）、独占上传、4 KiB 隔离读写验证。真实设备未验收。
 
 ### lib_upload
 
 来源：PressIPTC；产物：aar。
 
-用途：上传客户端：FTP、FTPS、HTTP（SMB、SFTP、WebDAV 统一使用 lib_transfer），支持进度、连接检测、配置/凭据存储。
+用途：上传客户端：FTP、FTPS、HTTP（SMB、SFTP、WebDAV 统一使用 core_nas），支持进度、连接检测、配置/凭据存储。
 
 公开入口：UploadClient、UploadDispatcher、UploadServerProfile、UploadTask
 
-接入边界：有 ContentProvider 初始化配置存储；普通明文 FTP 和 FTPS 是不同模式。缺少本库既有 JVM 测试，不能用编译结果替代协议可靠性。
+接入边界：有 ContentProvider 初始化配置存储；普通明文 FTP 和 FTPS 是不同模式。已有协议策略及回环 HTTP 测试，不能替代真实 FTP/FTPS/HTTP 服务器可靠性验收。
 
 建议：优先补测试服务器与故障注入，覆盖取消、重试、原子上传、证书/主机指纹及日志脱敏。
 
@@ -254,6 +247,8 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 
 来源：DropLAN 当前启用源码；产物：aar；分类：SDK 功能库。
 
-统一 Credential Manager Google 登录、Firebase Authentication 和 Play Billing。保留 GoogleSignInCoordinator、DropGoogleAccount、GoogleBillingRuntime/Manager 及状态缓存；不依赖基础库，也不引入原页面、广告、Analytics 或 DevHub。商品、账号策略和服务端验证由宿主配置。Play 支持订阅与非消耗型一次性购买，不适用于消耗品。
+统一 Credential Manager Google 登录、Firebase Authentication、Play Billing 和评分提示。评分参考 SiteReport / PressIPTC，使用通用完成事件、可配置冷却和 Play 原生流程，不做高低星分流。保留 GoogleSignInCoordinator、DropGoogleAccount、GoogleBillingRuntime/Manager 及状态缓存；不依赖基础库，也不引入原页面、广告、Analytics 或 DevHub。商品、账号策略和服务端验证由宿主配置。Play 支持订阅与非消耗型一次性购买，不适用于消耗品。
 
 本地解析 token claims 只供显示，Firebase 验证后才构成 Firebase 会话；客户端购买状态不替代服务端验单。旧分散认证、Billing 和 Entitlement 库保持移出。Demo 提供独立配置、登录、报价选择、购买确认与恢复流程；不自动购买。详见 [接入说明](../core/core_google/README.md)。
+
+2026-10-27 已落地的接口与可靠性调整见 [逐库优化记录](library-optimization.md)。未知订阅状态不降级为未订阅；各库的取消、输出归属和事务边界以该记录与模块 README 为准。

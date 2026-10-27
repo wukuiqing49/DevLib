@@ -35,6 +35,7 @@ object EncryptedArchiveExtractor {
     private const val MAX_ENTRY_BYTES = 256L * 1024L * 1024L
     private const val MAX_TOTAL_BYTES = 1024L * 1024L * 1024L
 
+    /** 在隔离目录解压并完整验证路径、大小和取消状态，成功后一次发布。 */
     fun extract(
         request: EncryptedArchiveExtractRequest,
         budget: OperationBudget = OperationBudget.DEFAULT,
@@ -52,6 +53,9 @@ object EncryptedArchiveExtractor {
         )
         try {
             context.report(OperationStage.VALIDATING, 0, 1)
+            if (request.archive.length() > budget.maxInputBytes) {
+                throw OperationException(OperationErrorCode.BUDGET_EXCEEDED, "Archive input exceeds byte budget")
+            }
             val archive = ZipFile(request.archive, password)
             val headers = archive.fileHeaders.filterNot { it.isDirectory }
             if (headers.isEmpty()) {
@@ -84,10 +88,18 @@ object EncryptedArchiveExtractor {
             val root = staging.canonicalFile
             val outputs = mutableListOf<File>()
             var written = 0L
+            val seenPaths = hashSetOf<String>()
             headers.forEachIndexed { index, header ->
                 context.checkActive()
-                val normalizedName = header.fileName.replace('\\', '/').trimStart('/')
+                val normalizedName = header.fileName.replace('\\', '/')
+                if (normalizedName.startsWith('/') || normalizedName.contains(':') ||
+                    normalizedName.contains('\u0000') || normalizedName.split('/').any { it == "." || it == ".." }) {
+                    throw OperationException(OperationErrorCode.INVALID_INPUT, "Invalid archive entry path")
+                }
                 val target = File(root, normalizedName).canonicalFile
+                if (!seenPaths.add(target.path)) {
+                    throw OperationException(OperationErrorCode.OUTPUT_CONFLICT, "Duplicate archive entry path")
+                }
                 if (target.path != root.path && !target.path.startsWith(root.path + File.separator)) {
                     throw OperationException(OperationErrorCode.INVALID_INPUT, "Archive entry escapes output directory")
                 }
@@ -112,6 +124,7 @@ object EncryptedArchiveExtractor {
                 outputs += target
                 context.report(OperationStage.PROCESSING, index + 1, headers.size)
             }
+            context.checkActive()
             if (request.outputDirectory.exists()) {
                 if (!request.outputDirectory.isDirectory || request.outputDirectory.listFiles()?.isNotEmpty() == true) {
                     throw OperationException(OperationErrorCode.OUTPUT_CONFLICT, "Extraction directory is not empty")
