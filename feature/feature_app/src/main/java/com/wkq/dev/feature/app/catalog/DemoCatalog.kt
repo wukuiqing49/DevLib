@@ -39,15 +39,7 @@ object DemoCatalog {
                 R.string.catalog_external,
             ),
             DemoEntry(
-                "core_pdf",
-                "/document/core_pdf",
-                "document",
-                DocumentR.string.demo_pdf_title,
-                DocumentR.string.demo_pdf_intro,
-                R.string.catalog_local,
-            ),
-            DemoEntry(
-                "lib_document",
+                "core_document",
                 "/document/lib_document",
                 "document",
                 DocumentR.string.demo_office_title,

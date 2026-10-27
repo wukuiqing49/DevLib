@@ -1,0 +1,24 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+android {
+    namespace = 'com.wkq.photo.pdf'
+    compileSdk = libs.versions.compileSdk.get().toInteger()
+    defaultConfig {
+        minSdk = 26
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    kotlinOptions { jvmTarget = '17' }
+}
+dependencies {
+    api project(':core:lib_operations')
+    api project(':core:core_image_render')
+    implementation libs.androidx.core.ktx
+    implementation netLibs.gson
+    testImplementation photoLibs.junit
+    androidTestImplementation photoLibs.androidx.test.ext.junit
+}
+apply from: rootProject.file('gradle/library-publish.gradle')

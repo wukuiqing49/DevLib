@@ -35,14 +35,13 @@ modules:
   - core/core_base
   - core/core_image_render
   - core/core_network
-  - core/core_pdf
+  - core/core_document
   - core/core_qrcode
   - core/core_router_annotation
   - core/core_router_api
   - core/core_router_gradle_plugin
   - core/core_router_processor
   - core/core_utils
-  - core/lib_document
   - core/lib_drop
   - core/lib_metadata
   - core/lib_operations

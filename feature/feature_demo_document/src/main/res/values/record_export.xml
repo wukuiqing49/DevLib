@@ -1,0 +1,13 @@
+<resources>
+    <string name="record_time">记录时间</string>
+    <string name="record_numeric">将明细中的数字导出为数值（编号请关闭）</string>
+    <string name="record_attachments">已选图片附件：%1$d（JPEG／PNG，最多 20 张）</string>
+    <string name="record_add_images">选择记录图片</string>
+    <string name="record_clear_images">清空图片选择</string>
+    <string name="record_all">生成 PDF、Excel 和 Word</string>
+    <string name="record_pdf">仅导出 PDF</string>
+    <plurals name="record_success">
+        <item quantity="other">已生成 %1$d 个记录文件，可选择文件查看、分享或另存。</item>
+    </plurals>
+    <string name="record_image_pdf">图片排版转 PDF</string>
+</resources>

@@ -66,6 +66,6 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 
 ## 已确认的功能范围
 
-当前为 8 个基础模块、11 个功能库、1 个内部支撑库，共 20 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
+当前为 8 个基础模块、10 个功能库、1 个内部支撑库，共 19 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
 
 Google 登录、Firebase Auth、Play Billing 与通用评分提示统一使用 core_google；旧 Credentials/Firebase/Billing/Entitlement 分散库保持移出，不再并行维护。core_google 不包含广告、Analytics、DevHub 或宿主商品及 Pro 策略。

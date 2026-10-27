@@ -1,4 +1,22 @@
-# DevLib 当前测试计划：Demo 业务与接入优化
+# 当前增量计划：统一记录导出（2026-10-27）
+
+本轮将 PDF 与 Office 合并为 `core_document`，共 19 个模块、18 个能力入口。使用当前 Android 17 / API 37 工具链；下文早期工具链和模块数仅为历史记录。
+
+| ID | 范围与预期 | 方法 |
+| --- | --- | --- |
+| RECORD-CONTENT | 同一记录的字段、备注、明细、附件进入三格式；数字与文本保持类型 | 库 JVM、Office XML 检查；PDF 设备用例仅编译 |
+| RECORD-TEMPLATE | 区块排序/隐藏、列选择、样式、模板版本与水印交换；拒绝非法输入及路径 | RecordTemplateTest JVM |
+| RECORD-PROFILES | 公司、个人及多人签署共享布局，快照保存原资料和图片 | JVM 快照与 Office 内容检查；真实图片设备用例仅编译 |
+| RECORD-ATOMIC | 整批成功发布，失败/取消回滚，不覆盖历史文件 | RecordExporterTest JVM |
+| RECORD-HOST | Base 页面、模板管理、资料编辑、图片选择与 PDF 首页预览 | document/common JVM、App 构建、严格资源/架构/源码检查 |
+| RECORD-PUBLISH | 合并后 AAR 及新增模型依赖可由独立消费者接入 | 本地 Maven 发布、消费者 compileDebugKotlin |
+| RECORD-CATALOG | 合并旧入口，保留图片 PDF 二级路由与 SPI | 最终 APK 目录校验 |
+
+排除：adb/真机/模拟器、真实分享、Word/Excel/WPS/LibreOffice 人工打开与打印、API 26/37 运行期、日夜/大字体/旋转/进程死亡端到端、Release R8。设备用例构建不计为执行通过；不创建 CI，不推进未执行项基线。基础库源码保持不变。
+
+---
+
+# 历史测试计划：Demo 业务与接入优化
 
 日期：2026-10-26，Asia/Singapore。基于 be55dc3 的增量工作区；19 个库模块不变，基础库源码不动。用户明确不做真机测试。
 

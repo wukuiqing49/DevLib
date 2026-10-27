@@ -1,3 +1,19 @@
+# 2026-10-27 统一记录导出、资料与模板
+
+PDF 与 Office 合并到 `core_document`，同一记录可生成 PDF / XLSX / DOCX。补齐公司与个人资料、Logo/头像、多人签署与签名图、模板新建/复制/排序/筛选/交换、主题样式、文字/图片水印、PDF 首页预览和历史快照恢复。模板为结构化 JSON，不是任意 Office 文件解析器；签名图不等于证书数字签名。详见 [功能与接入边界](../record-export.md)。
+
+- 本地 JVM **56/56 通过，失败/错误/跳过均为 0**：文档库 24、文档页面模型 5、公共宿主 27。部分未变化任务复用 UP-TO-DATE，不宣称全部重新执行。
+- 最终 App Debug、文档库 AndroidTest APK、文档库 Release AAR 本地发布及独立 Maven 消费者 compileDebugKotlin 均成功；设备测试仅编译，未执行。
+- 严格聚合校验通过：build/UI/i18n 无警告；architecture 保留两项既有启发式提示。宿主 19 个任务文件、新引擎 9 个文件源码扫描均为 0 发现；历史迁入声明未冒充全面注释合规。
+- 最终 APK：19 个正式模块、18 个能力入口、5 个路由组。旧图片 PDF 路由作为二级页面保留；基础库源码不动。
+- 页面复用 DemoActivity/Base、DemoViewModel、BaseRecyclerViewAdapter、XPopup、既有图片加载及 Insets owner；XML/ViewBinding/MVVM，新增可见文案中英文资源齐全。纯引擎不额外引入页面 Base 或 ViewModel。
+- 未执行：adb/真机/模拟器、中文字体与分页视觉、实际 Word/Excel/WPS/LibreOffice 打开及打印、日夜/大字体/旋转/系统进程恢复、API 26/37 运行期与 Release R8。PDF 跨页表格不重复表头；Excel 图片水印打印位置仍需阅读器验收。
+- 源码未提交、未推送，CI 未改变，测试基线未推进。Windows Gradle JAR 占用通过停止旧 daemon、后续 no-daemon 构建解决，不修改业务或关闭验证。
+
+证据：[结果与源码指纹](evidence/2026-10-27-record-export/summary.json)、[命令](evidence/2026-10-27-record-export/commands.md)、[静态检查](evidence/2026-10-27-record-export/static-checks.txt)。以下报告均为历史，不代表本轮重新执行。
+
+---
+
 # 2026-10-27 页面、配色与窗口适配优化
 
 按项目 UI、架构、国际化、构建及功能测试 Skills，统一 19 个能力入口共享的宿主视觉体系。蓝色主操作、青色辅助信息、中性背景与独立结果卡片，明确主次/停止操作；43 处表单容器显式共享样式。修复深色返回图标、标题单位重复缩放风险、无产物时空操作区、横屏固定页头挤没列表及 IME 避让。基础库源码保持不变。

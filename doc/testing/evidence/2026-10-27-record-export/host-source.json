@@ -1,0 +1,25 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt",
+    "feature/feature_demo_document/src/main/AndroidManifest.xml",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/OfficeActivity.kt",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/RecordSettingsActivity.kt",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/RecordSettingsStore.kt",
+    "feature/feature_demo_document/src/main/java/com/wkq/dev/demo/document/RecordSettingsViewModel.kt",
+    "feature/feature_demo_document/src/main/res/layout/demo_office.xml",
+    "feature/feature_demo_document/src/main/res/layout/demo_record_settings.xml",
+    "feature/feature_demo_document/src/main/res/layout/item_office_cell.xml",
+    "feature/feature_demo_document/src/main/res/layout/item_template_block.xml",
+    "feature/feature_demo_document/src/main/res/values-en/demo_office.xml",
+    "feature/feature_demo_document/src/main/res/values-en/record_export.xml",
+    "feature/feature_demo_document/src/main/res/values-en/record_settings.xml",
+    "feature/feature_demo_document/src/main/res/values/demo_office.xml",
+    "feature/feature_demo_document/src/main/res/values/record_dimensions.xml",
+    "feature/feature_demo_document/src/main/res/values/record_export.xml",
+    "feature/feature_demo_document/src/main/res/values/record_settings.xml"
+  ],
+  "findings": []
+}

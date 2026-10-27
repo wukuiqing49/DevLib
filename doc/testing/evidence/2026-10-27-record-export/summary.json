@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-27",
+  "head": "ef9b1cc548fc565e80f9ba80c300704058404931",
+  "workingTree": "uncommitted",
+  "sourceFingerprint": "4bca9af1fa0cef6d4e7a14b82be47030beccc98c964ec524b8616cae95361cd3",
+  "apkSha256": "e47712e79ce9228a1966f37cf9c1f10e0fa6282bdd0bb977fd1dcc474765a122",
+  "junit": [
+    {
+      "module": "core/core_document",
+      "suite": "com.wkq.dev.document.RecordExporterTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_document",
+      "suite": "com.wkq.dev.document.RecordTemplateTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_document",
+      "suite": "com.wkq.photo.pdf.PdfImageExportRequestTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_document",
+      "suite": "com.wkq.roof.export.OfficeReliabilityTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "core/core_document",
+      "suite": "com.wkq.roof.export.OfficeWriterTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_document",
+      "suite": "com.wkq.dev.demo.document.DocumentTableTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.DemoExecutionTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature/feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.WorkspaceSelectionTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "tests": 56,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "deviceTests": "compiled, not executed",
+  "baseline": "not advanced",
+  "ci": "unchanged",
+  "consumer": "compileDebugKotlin passed; local Maven artifacts, no project dependency",
+  "build": "App Debug, core_document AndroidTest APK and local Release AAR publication passed",
+  "static": "strict workflow passed; architecture retains 2 historical warnings; host 19 files and new core 9 files: 0 findings"
+}

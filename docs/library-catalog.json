@@ -31,10 +31,13 @@
       "artifactType": "aar"
     },
     {
-      "module": "core_pdf",
+      "module": "core_document",
       "category": "functional",
       "sourceRepository": "PhotoKit",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "additionalSourceRepositories": [
+        "RoofQuote"
+      ]
     },
     {
       "module": "core_qrcode",
@@ -73,12 +76,6 @@
       "artifactType": "aar"
     },
     {
-      "module": "lib_document",
-      "category": "functional",
-      "sourceRepository": "RoofQuote",
-      "artifactType": "jvm"
-    },
-    {
       "module": "lib_drop",
       "category": "functional",
       "sourceRepository": "DropLAN",
@@ -99,7 +96,7 @@
       "demoCoveredBy": [
         "core_archive",
         "core_image_render",
-        "core_pdf",
+        "core_document",
         "core_qrcode"
       ]
     },

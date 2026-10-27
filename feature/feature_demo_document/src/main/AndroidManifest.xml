@@ -3,5 +3,6 @@
     <application>
         <activity android:name="com.wkq.dev.demo.document.PdfActivity" android:exported="false" />
         <activity android:name="com.wkq.dev.demo.document.OfficeActivity" android:exported="false" />
+        <activity android:name="com.wkq.dev.demo.document.RecordSettingsActivity" android:exported="false" />
     </application>
 </manifest>

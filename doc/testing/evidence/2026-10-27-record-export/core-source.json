@@ -1,0 +1,15 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/core_document/src/main/java/com/wkq/dev/document/ExportRecord.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordExporter.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordLayout.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordOfficeMapper.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordPdfWriter.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordSnapshot.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordTemplate.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordTemplateCodec.kt",
+    "core/core_document/src/main/java/com/wkq/dev/document/RecordWatermarkRenderer.kt"
+  ],
+  "findings": []
+}

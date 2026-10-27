@@ -1,6 +1,6 @@
 {
   "analyzedAt": "2026-10-27",
-  "scope": "当前20个模块：8个基础模块、11个功能库、1个内部支撑库。lib_transfer 由 core_nas/core_usb 替代，不迁入后台队列。",
+  "scope": "当前19个模块：8个基础模块、10个功能库、1个内部支撑库。lib_transfer 由 core_nas/core_usb 替代，不迁入后台队列。",
   "modules": [
     {
       "module": "core_base",
@@ -242,34 +242,17 @@
       "libraryTier": "functional"
     },
     {
-      "module": "lib_document",
+      "module": "core_document",
       "category": "文档导出",
-      "purpose": "轻量 OpenXML 写入：DOCX 段落/表格/主题与 XLSX 表格输出。",
-      "entry": "SimpleDocxWriter、SimpleXlsxWriter、WordReportTheme",
-      "boundary": "纯 Kotlin/JVM JAR；不是 Office 编辑器/渲染器，不包含原 RoofQuote 的计价与模板策略。",
-      "advice": "很适合直接复用；补 Word/Excel/LibreOffice 打开结果、中文字体和大表格样例。",
-      "dependencies": [],
-      "sourceFiles": 5,
-      "kind": "jvm",
-      "tests": 9,
-      "skipped": 0,
-      "enabledByDefault": true,
-      "libraryTier": "functional"
-    },
-    {
-      "module": "core_pdf",
-      "category": "文档导出",
-      "purpose": "把图片输出为 PDF：页面尺寸/方向、缩放、网格、页眉页脚、页码与 File/Uri/PFD 输出。",
-      "entry": "PdfImageExporter、PdfOperationRequest、PdfDocumentRequest",
-      "boundary": "基于 Android PdfDocument；公开 ImageSource 已通过 api 暴露，独立 Maven 消费编译通过。",
-      "advice": "优先补 API 可见性/单坐标消费；与报告 PDF 共存，不要把图集工具变成报告业务引擎。",
+      "purpose": "同一份记录生成 PDF、Excel、Word，兼容原图片 PDF 与 Office API。",
+      "entry": "ExportRecord、RecordExporter、PdfImageExporter、SimpleDocxWriter、SimpleXlsxWriter",
+      "boundary": "Android AAR；不包含产品模板、公式计算或 Office 阅读器。",
+      "advice": "验证真实阅读器、中文分页与图片附件；本轮不执行设备。",
       "dependencies": [
         ":core:lib_operations",
         ":core:core_image_render"
       ],
-      "sourceFiles": 1,
       "kind": "aar",
-      "tests": 6,
       "skipped": 0,
       "enabledByDefault": true,
       "libraryTier": "functional"

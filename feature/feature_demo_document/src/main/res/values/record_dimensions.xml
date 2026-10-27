@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="record_cell_width">160dp</dimen>
+    <dimen name="settings_image_height">96dp</dimen>
+</resources>

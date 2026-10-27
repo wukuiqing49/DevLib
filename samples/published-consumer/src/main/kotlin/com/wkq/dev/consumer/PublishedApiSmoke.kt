@@ -12,6 +12,8 @@ class PublishedApiSmoke(
  val retrofit: Retrofit,
 ) {
  val router = Router
+ val recordExporter = com.wkq.dev.document.RecordExporter
+ val record = com.wkq.dev.document.ExportRecord("Consumer record")
  val documentWriter = SimpleXlsxWriter
  val generatedRoutes = com.wkq.router.generated.RouterPaths_DevLibPublishedConsumer
  fun popup(context: android.content.Context) = XPopup.Builder(context)

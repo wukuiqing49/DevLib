@@ -56,6 +56,7 @@ object WorkspacePolicy {
             "/image/lib_metadata",
             "/image/core_qrcode",
             "/document/core_pdf" -> isImage(extension)
+            "/document/lib_document" -> extension.lowercase() in setOf("jpg", "jpeg", "png")
             "/files/core_archive",
             "/files/lib_upload",
             "/files/core_nas",

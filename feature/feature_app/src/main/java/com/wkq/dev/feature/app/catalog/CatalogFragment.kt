@@ -356,7 +356,7 @@ class CatalogFragment : BaseVMFragment<FragmentCatalogBinding, CatalogViewModel>
                                 it.module in
                                     setOf(
                                         "core_image_render",
-                                        "core_pdf",
+                                        "core_document",
                                         "core_nas",
                                         "lib_drop",
                                     )

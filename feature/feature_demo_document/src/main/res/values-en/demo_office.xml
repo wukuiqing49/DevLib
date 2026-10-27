@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="demo_office_title">Document workspace</string>
-    <string name="demo_office_intro">Edit text and tables, then export to Word or Excel. Results stay in the workspace for saving, sharing, or further editing.</string>
-    <string name="demo_office_input">Document content</string>
+    <string name="demo_office_title">Record export</string>
+    <string name="demo_office_intro">Create one record with a time, notes, details and images, then generate PDF, Excel and Word files. The first table row is the header; up to 30 rows and 8 columns. Keep identifiers as text.</string>
+    <string name="demo_office_input">Record content</string>
     <string name="demo_office_execute">Export document</string>
     <string name="demo_office_success">Completed. Check the result.</string>
     <string name="demo_office_title_value">DevLib report</string>
-    <string name="demo_office_body">Body or notes</string>
+    <string name="demo_office_body">Record notes</string>
     <string name="demo_office_body_value">Enter your text here</string>
     <string name="demo_office_rows">Table data (one row per line, comma-separated columns)</string>
     <string name="demo_office_rows_value">Item,Result\nExample,Passed</string>

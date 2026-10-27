@@ -1,0 +1,13 @@
+# 快照 JSON 依赖这些数据模型的字段名，不保留引擎实现。
+-keep class com.wkq.dev.document.ExportRecord { *; }
+-keep class com.wkq.dev.document.RecordField { *; }
+-keep class com.wkq.dev.document.RecordCell { *; }
+-keep class com.wkq.dev.document.RecordImage { *; }
+-keep class com.wkq.dev.document.RecordCompany { *; }
+-keep class com.wkq.dev.document.RecordPerson { *; }
+-keep class com.wkq.dev.document.RecordSignature { *; }
+-keep class com.wkq.dev.document.RecordTemplate { *; }
+-keep class com.wkq.dev.document.RecordStyle { *; }
+-keep class com.wkq.dev.document.RecordWatermark { *; }
+-keep enum com.wkq.dev.document.RecordBlock { *; }
+-keep enum com.wkq.dev.document.WatermarkKind { *; }

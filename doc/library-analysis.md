@@ -143,19 +143,17 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 
 模块依赖：api :core:lib_operations。
 
-### core_pdf
+### core_document
 
-来源：PhotoKit；产物：aar。
+来源：PhotoKit / RoofQuote；产物：Android AAR。原 core_pdf 与 lib_document 合并，公开包名保留。
 
-用途：把图片输出为 PDF：页面尺寸/方向、缩放、网格、页眉页脚、页码与 File/Uri/PFD 输出。
+用途：同一份记录的标题、时间、字段、备注、明细和图片生成 PDF、Excel、Word。入口为 ExportRecord / RecordExporter。
 
-公开入口：PdfImageExporter、PdfOperationRequest、PdfDocumentRequest
+PDF 使用真实文字和表格，长内容跨页；Excel 分基本信息和明细工作表，数字显式声明；Word 保持可编辑段落和表格。
 
-接入边界：基于 Android PdfDocument；公开 ImageSource 已通过 api 暴露，独立 Maven 消费编译通过。
+原图片 PDF 与轻量 OpenXML API 继续可用。整批临时生成后原子发布，线程中断取消。纯 JVM JAR 接入方式已改为 Android AAR。
 
-建议：优先补 API 可见性/单坐标消费；与报告 PDF 共存，不要把图集工具变成报告业务引擎。
-
-模块依赖：api :core:lib_operations；api :core:core_image_render。
+边界与验证见 [记录导出](record-export.md)，不将构建或 XML 结构检查等同真实阅读器/视觉验收。
 
 ### core_qrcode
 
@@ -170,19 +168,6 @@ lib_operations 为保留功能提供预算、取消、进度与输出契约，�
 建议：作为二维码能力统一入口；补摄像头授权、连续扫描和各样式识别率测试。
 
 模块依赖：api :core:lib_operations。
-
-### lib_document
-
-来源：RoofQuote；产物：jvm。
-
-用途：轻量 OpenXML 写入：DOCX 段落/表格/主题与 XLSX 表格输出。
-
-公开入口：SimpleDocxWriter、SimpleXlsxWriter、WordReportTheme
-
-接入边界：纯 Kotlin/JVM JAR；不是 Office 编辑器/渲染器，不包含原 RoofQuote 的计价与模板策略。
-
-建议：很适合直接复用；补 Word/Excel/LibreOffice 打开结果、中文字体和大表格样例。
-
 
 ### lib_drop
 

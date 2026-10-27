@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none" android:clipToPadding="false">
+    <LinearLayout style="@style/Demo.Page">
+        <TextView style="@style/Demo.Label" android:text="@string/settings_intro" />
+        <LinearLayout android:id="@+id/editor" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView style="@style/Demo.Heading" android:text="@string/settings_name" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/chooseTemplate" style="@style/Demo.Button" android:text="@string/settings_choose_template" />
+            <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/templateName" style="@style/Demo.Input" android:inputType="text" android:maxLength="100" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView style="@style/Demo.Label" android:text="@string/settings_template_hint" />
+            <com.google.android.material.button.MaterialButton style="@style/Demo.Button" android:id="@+id/toggleLayout" android:text="@string/settings_blocks" />
+            <LinearLayout android:id="@+id/groupLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/blocks" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:nestedScrollingEnabled="false" />
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_primary">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/primary" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_fill">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/fill" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_body_size">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/bodySize" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_title_size">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/titleSize" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_margin">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/margin" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_header">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/header" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_footer">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/footer" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_columns">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/columns" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_field_names">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/fieldNames" style="@style/Demo.Input" android:inputType="textMultiLine" android:maxLength="2000" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_image_columns">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/imageColumns" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/landscape" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_landscape" />
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/pageNumbers" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_page_numbers" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton style="@style/Demo.Button" android:id="@+id/toggleWatermark" android:text="@string/settings_watermark" />
+            <LinearLayout android:id="@+id/groupWatermark" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <Spinner android:id="@+id/watermarkKind" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/demo_touch_target" android:contentDescription="@string/settings_watermark" />
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_watermark_content">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/watermarkText" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_opacity">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/opacity" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_rotation">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/rotation" style="@style/Demo.Input" android:inputType="numberSigned" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_width">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/width" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_x">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/positionX" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_y">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/positionY" style="@style/Demo.Input" android:inputType="number" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/everyPage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_every_page" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/watermarkPick" style="@style/Demo.Button" android:text="@string/settings_watermark_pick" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/watermarkClear" style="@style/Demo.Button" android:text="@string/settings_clear_watermark" />
+                <ImageView android:id="@+id/watermarkPreview" android:layout_width="match_parent" android:layout_height="@dimen/settings_image_height" android:scaleType="fitCenter" android:contentDescription="@string/settings_watermark_pick" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton style="@style/Demo.Button" android:id="@+id/toggleCompany" android:text="@string/settings_block_company" />
+            <LinearLayout android:id="@+id/groupCompany" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_company_name">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/companyName" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_address">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/address" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_phone">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/companyPhone" style="@style/Demo.Input" android:inputType="phone" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_email">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/companyEmail" style="@style/Demo.Input" android:inputType="textEmailAddress" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_website">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/website" style="@style/Demo.Input" android:inputType="textUri" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_registration">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/registration" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/logoPick" style="@style/Demo.Button" android:text="@string/settings_logo" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/logoClear" style="@style/Demo.Button" android:text="@string/settings_clear_logo" />
+                <ImageView android:id="@+id/logoPreview" android:layout_width="match_parent" android:layout_height="@dimen/settings_image_height" android:scaleType="fitCenter" android:contentDescription="@string/settings_logo" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton style="@style/Demo.Button" android:id="@+id/togglePerson" android:text="@string/settings_block_person" />
+            <LinearLayout android:id="@+id/groupPerson" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_person_name">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/personName" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_role">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/personRole" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_organization">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/organization" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_phone">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/personPhone" style="@style/Demo.Input" android:inputType="phone" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_email">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/personEmail" style="@style/Demo.Input" android:inputType="textEmailAddress" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/avatarPick" style="@style/Demo.Button" android:text="@string/settings_avatar" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/avatarClear" style="@style/Demo.Button" android:text="@string/settings_clear_avatar" />
+                <ImageView android:id="@+id/avatarPreview" android:layout_width="match_parent" android:layout_height="@dimen/settings_image_height" android:scaleType="fitCenter" android:contentDescription="@string/settings_avatar" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton style="@style/Demo.Button" android:id="@+id/toggleSignatures" android:text="@string/settings_block_signatures" />
+            <LinearLayout android:id="@+id/groupSignatures" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <TextView style="@style/Demo.Label" android:text="@string/settings_signers_hint" />
+                <TextView android:id="@+id/signersCount" style="@style/Demo.Label" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/chooseSigner" style="@style/Demo.Button" android:text="@string/settings_choose_signer" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/newSigner" style="@style/Demo.Button" android:text="@string/settings_new_signer" />
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_signer">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/signer" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_role">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/signerRole" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_signed_at">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/signedAt" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/settings_statement">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/statement" style="@style/Demo.Input" android:inputType="text" android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton android:id="@+id/signaturePick" style="@style/Demo.Button" android:text="@string/settings_signature_image" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/signatureClear" style="@style/Demo.Button" android:text="@string/settings_clear_signature" />
+                <ImageView android:id="@+id/signaturePreview" android:layout_width="match_parent" android:layout_height="@dimen/settings_image_height" android:scaleType="fitCenter" android:contentDescription="@string/settings_signature_image" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/addSigner" style="@style/Demo.Button" android:text="@string/settings_add_signer" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/removeSigner" style="@style/Demo.Button" android:text="@string/settings_remove_signer" />
+                <TextView style="@style/Demo.Label" android:text="@string/settings_assets_hint" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/save" style="@style/Demo.Button" android:text="@string/settings_save" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/preview" style="@style/Demo.Button" android:text="@string/settings_preview" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/newTemplate" style="@style/Demo.Button" android:text="@string/settings_new_template" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/copyTemplate" style="@style/Demo.Button" android:text="@string/settings_copy" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/deleteTemplate" style="@style/Demo.Button" android:text="@string/settings_delete" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/importTemplate" style="@style/Demo.Button" android:text="@string/settings_import" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/exportTemplate" style="@style/Demo.Button" android:text="@string/settings_export" />
+        <include android:id="@+id/result" layout="@layout/demo_output" />
+    </LinearLayout>
+</ScrollView>

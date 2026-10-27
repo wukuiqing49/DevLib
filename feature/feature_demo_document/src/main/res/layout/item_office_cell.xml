@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Demo.TextInputLayout"
+    android:layout_width="@dimen/record_cell_width"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cell"
+        style="@style/Demo.Input"
+        android:inputType="textMultiLine"
+        android:maxLength="512"
+        android:saveEnabled="false" />
+</com.google.android.material.textfield.TextInputLayout>

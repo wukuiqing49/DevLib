@@ -1,0 +1,14 @@
+<resources>
+    <string name="record_time">Recorded at</string>
+    <string name="record_numeric">Export detail numbers as numeric cells (turn off for identifiers)</string>
+    <string name="record_attachments">Image attachments: %1$d (JPEG/PNG, up to 20)</string>
+    <string name="record_add_images">Choose record images</string>
+    <string name="record_clear_images">Clear image selection</string>
+    <string name="record_all">Generate PDF, Excel and Word</string>
+    <string name="record_pdf">Export PDF only</string>
+    <plurals name="record_success">
+        <item quantity="one">Generated %1$d record file. Choose a file to open, share or save.</item>
+        <item quantity="other">Generated %1$d record files. Choose a file to open, share or save.</item>
+    </plurals>
+    <string name="record_image_pdf">Images to PDF layout</string>
+</resources>

@@ -4,10 +4,13 @@
         <TextView style="@style/Demo.Label" android:text="@string/demo_office_intro" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_office_input" />
         <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/office_title_hint">
-            <com.google.android.material.textfield.TextInputEditText android:id="@+id/title" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_office_title_value" android:saveEnabled="true" />
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/title" android:maxLength="200" style="@style/Demo.Input" android:inputType="text" android:text="@string/demo_office_title_value" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/demo_office_body">
-            <com.google.android.material.textfield.TextInputEditText android:id="@+id/body" style="@style/Demo.Input" android:inputType="textMultiLine" android:text="@string/demo_office_body_value" android:saveEnabled="true" />
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/body" android:maxLength="8000" style="@style/Demo.Input" android:inputType="textMultiLine" android:text="@string/demo_office_body_value" android:saveEnabled="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Demo.TextInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/record_time">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/recordedAt" android:maxLength="200" style="@style/Demo.Input" android:inputType="text" android:saveEnabled="true" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView style="@style/Demo.Heading" android:text="@string/office_table" />
         <TextView android:id="@+id/tableStatus" style="@style/Demo.Label" />
@@ -15,9 +18,19 @@
         <com.google.android.material.button.MaterialButton android:id="@+id/addRow" style="@style/Demo.Button" android:text="@string/office_add_row" />
         <com.google.android.material.button.MaterialButton android:id="@+id/addColumn" style="@style/Demo.Button" android:text="@string/office_add_column" />
         <com.google.android.material.button.MaterialButton android:id="@+id/removeColumn" style="@style/Demo.Button.Danger" android:text="@string/office_remove_column" />
+        <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/numeric" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/record_numeric" />
+        <TextView android:id="@+id/attachments" style="@style/Demo.Label" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/addImages" style="@style/Demo.Button" android:text="@string/record_add_images" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/clearImages" style="@style/Demo.Button" android:text="@string/record_clear_images" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/recordSettings" style="@style/Demo.Button" android:text="@string/settings_manage" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/previewRecord" style="@style/Demo.Button" android:text="@string/settings_record_preview" />
+        <TextView style="@style/Demo.Label" android:text="@string/settings_preview_hint" />
         <TextView style="@style/Demo.Heading" android:text="@string/demo_office_execute" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/allFormats" style="@style/Demo.Button.Primary" android:text="@string/record_all" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/pdf" style="@style/Demo.Button" android:text="@string/record_pdf" />
         <com.google.android.material.button.MaterialButton android:id="@+id/word" style="@style/Demo.Button.Primary" android:text="@string/demo_office_word" />
         <com.google.android.material.button.MaterialButton android:id="@+id/excel" style="@style/Demo.Button.Primary" android:text="@string/demo_office_excel" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/imagePdf" style="@style/Demo.Button" android:text="@string/record_image_pdf" />
         <include android:id="@+id/result" layout="@layout/demo_output" />
     </LinearLayout>
 </ScrollView>

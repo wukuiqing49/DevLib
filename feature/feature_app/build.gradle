@@ -46,10 +46,9 @@ dependencies {
     implementation libs.androidx.recyclerview
     implementation libs.androidx.activity.ktx
     implementation libs.material
-    androidTestImplementation project(':core:core_pdf')
+    androidTestImplementation project(':core:core_document')
     androidTestImplementation project(':core:core_qrcode')
     androidTestImplementation project(':core:core_archive')
-    androidTestImplementation project(':core:lib_document')
     androidTestImplementation project(':core:lib_metadata')
     androidTestImplementation project(':core:lib_drop')
     androidTestImplementation photoLibs.androidx.test.ext.junit

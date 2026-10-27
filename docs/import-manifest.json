@@ -809,7 +809,7 @@
       }
     },
     {
-      "module": ":core:lib_document",
+      "module": ":core:core_document",
       "sourceRepository": "RoofQuote",
       "sourcePath": "core/core_export",
       "sourceCommit": "20d6bffce5610ee431a8fdc65965f9775edd3ae6",
@@ -873,7 +873,7 @@
       }
     },
     {
-      "module": ":core:core_pdf",
+      "module": ":core:core_document",
       "sourceRepository": "PhotoKit",
       "sourcePath": "core/core_pdf",
       "sourceCommit": "c6f03ee9ad103573bc64d1c8ca3e4e28be7822ab",
