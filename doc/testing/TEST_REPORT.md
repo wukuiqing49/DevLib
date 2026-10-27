@@ -1,3 +1,13 @@
+# 2026-10-27 工具箱图标包：Pixel 8 运行
+
+用户明确授权本轮设备部署，按 android-functional-test-workflow 执行。Pixel 8 实际 Android 16 / API 36；最新 App Debug（含工具箱自适应和单色主题图标）覆盖安装 Success，保留原数据。MainActivity 冷启动 Status ok，TotalTime 639ms；首页截图确认工作台正常显示，当前进程日志抽查未匹配 FATAL EXCEPTION / AndroidRuntime / Fatal signal。
+
+本轮仅安装启动冒烟，不代表 Android 17、Launcher 图标裁切/主题图标、文档导出或全部功能验收通过。首页仍显示“11 个功能库”的旧统计文案，本轮仅记录，不扩大设备部署任务修改业务代码。未推进全功能基线、未提交推送、未改变 CI。
+
+本地截图：`build/functional-test/px8-launcher/app.png`；APK：`app/build/outputs/apk/debug/app-debug.apk`；构建日志：`build/launcher-icon-build.log`。构建前轮已通过，本轮复用同一 APK，未重复构建。设备临时截图已删除。
+
+---
+
 # 2026-10-27 统一记录导出、资料与模板
 
 PDF 与 Office 合并到 `core_document`，同一记录可生成 PDF / XLSX / DOCX。补齐公司与个人资料、Logo/头像、多人签署与签名图、模板新建/复制/排序/筛选/交换、主题样式、文字/图片水印、PDF 首页预览和历史快照恢复。模板为结构化 JSON，不是任意 Office 文件解析器；签名图不等于证书数字签名。详见 [功能与接入边界](../record-export.md)。

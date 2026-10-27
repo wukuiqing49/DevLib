@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<title>开发模块库图标</title>
+<desc>深蓝底色，白色代码括号与四个蓝青模块，表达代码封装、组合和复用。</desc>
+<rect width="1024" height="1024" rx="224" fill="#102338"/>
+<path d="M306 300 L216 390 L216 634 L306 724 M718 300 L808 390 L808 634 L718 724" fill="none" stroke="#F3F8FF" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="360" y="344" width="136" height="136" rx="30" fill="#5B9EFF"/>
+<rect x="360" y="512" width="136" height="136" rx="30" fill="#3679DB"/>
+<rect x="528" y="512" width="136" height="136" rx="30" fill="#3AD1C2"/>
+<g transform="rotate(12 607 397)"><rect x="539" y="329" width="136" height="136" rx="30" fill="#8DE8D7"/></g>
+</svg>

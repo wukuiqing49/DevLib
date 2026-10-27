@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<title>开发工具箱</title><desc>浅薄荷绿底色，圆润的深绿工具箱，奶油色锁扣。无文字。</desc>
+<rect width="1024" height="1024" fill="#E2F1E6"/>
+<rect x="381" y="274" width="262" height="200" rx="62" fill="#28594E"/>
+<rect x="433" y="326" width="158" height="140" rx="20" fill="#E2F1E6"/>
+<rect x="226" y="405" width="572" height="348" rx="76" fill="#28695B"/>
+<path d="M302 395 H722 Q798 395 798 471 V510 Q798 540 768 540 H256 Q226 540 226 510 V471 Q226 395 302 395Z" fill="#57A88B"/>
+<path d="M226 532 Q226 554 256 554 H768 Q798 554 798 532 V556 H226Z" fill="#20594D"/>
+<rect x="468" y="496" width="88" height="116" rx="25" fill="#F8E5AA"/>
+<rect x="492" y="520" width="40" height="25" rx="9" fill="#FFF3D0"/>
+</svg>
