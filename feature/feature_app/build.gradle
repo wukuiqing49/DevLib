@@ -52,6 +52,7 @@ dependencies {
     androidTestImplementation project(':core:lib_metadata')
     androidTestImplementation project(':core:lib_drop')
     androidTestImplementation photoLibs.androidx.test.ext.junit
+    testImplementation photoLibs.junit
     androidTestImplementation photoLibs.androidx.test.runner
 }
 

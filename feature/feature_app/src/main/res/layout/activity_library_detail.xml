@@ -1,0 +1,21 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:clipToPadding="false" android:scrollbars="none">
+<LinearLayout style="@style/Demo.Page">
+<TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceHeadlineSmall" android:accessibilityHeading="true" />
+<TextView android:id="@+id/module" style="@style/Demo.Label" android:textIsSelectable="true" />
+<TextView android:id="@+id/requirement" style="@style/Demo.Label" android:textColor="@color/dev_secondary" />
+<TextView android:id="@+id/routerHeading" style="@style/Demo.Heading" android:text="@string/integration_router_modules" />
+<com.google.android.material.chip.ChipGroup android:id="@+id/routerModules" android:layout_width="match_parent" android:layout_height="wrap_content" app:singleSelection="true" app:selectionRequired="true" />
+<TextView style="@style/Demo.Heading" android:text="@string/integration_overview" />
+<TextView android:id="@+id/overview" style="@style/Demo.Label" />
+<TextView style="@style/Demo.Heading" android:text="@string/integration_setup" />
+<TextView android:id="@+id/setup" style="@style/Demo.Label" />
+<TextView style="@style/Demo.Heading" android:text="@string/integration_dependency" />
+<TextView style="@style/Demo.Label" android:text="@string/integration_source" />
+<TextView android:id="@+id/source" style="@style/Demo.Label" android:fontFamily="monospace" android:textIsSelectable="true" android:breakStrategy="simple" />
+<TextView style="@style/Demo.Label" android:text="@string/integration_published" />
+<TextView android:id="@+id/published" style="@style/Demo.Label" android:fontFamily="monospace" android:textIsSelectable="true" android:breakStrategy="simple" />
+<com.google.android.material.button.MaterialButton android:id="@+id/copy" style="@style/Demo.Button" android:text="@string/integration_copy" />
+<com.google.android.material.button.MaterialButton android:id="@+id/experience" style="@style/Demo.Button.Primary" android:text="@string/directory_experience" />
+<com.google.android.material.button.MaterialButton android:id="@+id/favorite" style="@style/Demo.Button" android:text="@string/directory_favorite" />
+<TextView style="@style/Demo.Label" android:text="@string/integration_footer" />
+</LinearLayout></androidx.core.widget.NestedScrollView>

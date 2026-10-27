@@ -1,3 +1,18 @@
+# 2026-10-27 三入口信息架构重整
+
+原四入口改为功能库、基础组件、工作区。CatalogFragment 仅负责导航，库目录和工作区使用独立子 Fragment/状态；10 个功能库完整展示，基础按 5 套体系覆盖 8 模块，Routers 四模块在独立接入详情内切换。常用与最近去重，目录缩短摘要；工作区文件缩略图与操作历史分开，文件/历史分别保存搜索和滚动状态。新增记录三格式的工作区流转入口。
+
+- **本次通过：36 项 JVM，失败/错误/跳过 0**：目录 4、公共层 27、文档模型 5。未变化任务允许 UP-TO-DATE；不宣称全部重新执行。
+- **本次通过：最终 App Debug 与 AndroidTest APK 构建**，55s，582 tasks（24 executed / 558 up-to-date）。instrumentation 仅构建、未执行。
+- **本次通过：严格聚合门禁、源码扫描与 APK 目录**。build/UI/i18n 0 警告；architecture 保留 2 项既有提示。29 个任务文件源码扫描 0 发现；18 库路由、19 模块、5 组初始化器保留。
+- **本次通过：Pixel 8 定向导航冒烟**。沿用用户本会话明确的部署授权，Android 16/API 36，覆盖安装成功保留数据，最终冷启动 711ms；三页切换、搜索返回保留、5 体系/8 模块、路由处理器详情及 KSP 指引、文件缩略图和独立历史页通过。当前进程日志抽查无崩溃关键字。首轮脚本受转场/IME/筛选条件影响的断言按稳定 UI 与实际输入重查，边界见命令记录。
+- BaseVMFragment、BaseVMTitleActivity、BaseViewModel、BaseRecyclerViewAdapter、XPopup、ImageLoaderUtil 复用；基础库源码未改。普通 Edge-to-edge 和 top/bottom/IME owner 沿用 Base；新增文案默认中文、zh-rCN 与 en 显式覆盖。
+- **未执行**：API 26/37、平板/多窗口、英文/RTL/大字体视觉、旋转及系统进程强杀恢复、真实导入/分享/账户/交易/服务器、Release/R8、全部库业务闭环。静态状态保存实现不等于这些运行场景通过。
+
+证据：[结果与源码/APK 指纹](evidence/2026-10-27-navigation/summary.json)、[截图](evidence/2026-10-27-navigation/overview.png)、[命令与阶段边界](evidence/2026-10-27-navigation/commands.md)。源码验证时未提交；完成后按用户授权提交推送。不修改 CI，不推进全功能基线。产品说明见 [开发者工作台](../developer-workbench.md)。以下均为历史报告。
+
+---
+
 # 2026-10-27 工具箱图标包：Pixel 8 运行
 
 用户明确授权本轮设备部署，按 android-functional-test-workflow 执行。Pixel 8 实际 Android 16 / API 36；最新 App Debug（含工具箱自适应和单色主题图标）覆盖安装 Success，保留原数据。MainActivity 冷启动 Status ok，TotalTime 639ms；首页截图确认工作台正常显示，当前进程日志抽查未匹配 FATAL EXCEPTION / AndroidRuntime / Fatal signal。

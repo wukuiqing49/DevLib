@@ -9,7 +9,7 @@
     <string name="workbench_assets_intro">导入素材、生成产物与前台操作记录。显示最近 300 个文件、100 条操作。NAS 与 SAF 操作在各自工具页面执行。</string>
     <string name="workbench_developer_intro">基础组件与功能库接入。体验实际流程，也能查看模块职责和配置边界。</string>
     <string name="workbench_import">导入素材</string>
-    <string name="workbench_search_assets">搜索文件或任务</string>
+    <string name="workbench_search_assets">搜索文件或操作记录</string>
     <string name="workbench_all_assets">全部文件</string>
     <string name="workbench_inputs">导入素材</string>
     <string name="workbench_outputs">生成产物</string>
@@ -49,7 +49,7 @@
     <string name="workbench_library_detail">%1$s\n\n模块：%2$s\n能力类型：%3$s\n接入条件：%4$s\n\n源码接入：%7$s\n发布坐标：com.wkq.dev:%5$s:&lt;version&gt;\n\n%6$s</string>
     <string name="workbench_foundation_boundary">基础库保持独立。组件体验用于了解封装行为，公开 API 与接入方式以模块 README 和源码为准。</string>
     <string name="workbench_function_boundary">处理编排由宿主负责，底层库不绑定本 App。账户、商品、服务端地址和商业策略由消费项目提供。</string>
-    <string name="workbench_summary">11 个功能库 · 8 个基础模块 · 独立能力，共享工作区</string>
+    <string name="workbench_summary">10 个功能库 · 8 个基础模块 · 独立能力，共享工作区</string>
     <string name="workbench_import_failed">导入失败，请检查文件大小与访问权限后重试。</string>
     <string name="workbench_importing">正在导入素材…</string>
     <string name="workbench_output_source">工具生成</string>

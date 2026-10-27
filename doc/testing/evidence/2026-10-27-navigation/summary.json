@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Asia/Singapore",
+  "headBeforeChanges": "8b61e05e431175604c4c9d414679740c91dd93ea",
+  "workingTreeAtValidation": "uncommitted",
+  "sourceFingerprint": "ff6eacde00014082993ba7a6c1e8f098ca1a6722a3efa2ad843cf6c74382f8dd",
+  "apkSha256": "e0f07fa952b033081b172f79e064701c534f46443b38a2a03233b6a39497f354",
+  "build": "App Debug and AndroidTest APK passed; final build 55s, 582 tasks (24 executed, 558 up-to-date)",
+  "junit": [
+    {
+      "module": "feature_app",
+      "suite": "com.wkq.dev.feature.app.catalog.DirectoryPolicyTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.DemoErrorsTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.DemoExecutionTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.WorkspacePolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature_demo_common",
+      "suite": "com.wkq.dev.demo.common.WorkspaceSelectionTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "feature_demo_document",
+      "suite": "com.wkq.dev.demo.document.DocumentTableTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "tests": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "static": "strict workflow passed; 2 historical architecture warnings; 29 source files, 0 findings",
+  "directory": {
+    "topLevelPages": 3,
+    "featureLibraries": 10,
+    "foundationSystems": 5,
+    "foundationModules": 8,
+    "catalogRoutes": 18,
+    "routeGroups": 5
+  },
+  "device": {
+    "model": "Pixel 8",
+    "android": 16,
+    "api": 36,
+    "authorization": "Explicit Pixel 8 deployment request in this session; scoped navigation smoke only",
+    "install": "replace install successful, data retained",
+    "coldStartMs": 711,
+    "checks": [
+      "three destinations open",
+      "library search retained after navigating to foundation and back",
+      "foundation shows 5 systems and 8 modules",
+      "routing detail switches to processor and shows ksp dependency",
+      "workspace files use thumbnails",
+      "workspace history is a separate section"
+    ],
+    "crashScan": "no FATAL EXCEPTION / AndroidRuntime / Fatal signal matched in current process sample"
+  },
+  "notRun": [
+    "API 26/37 runtime",
+    "English/RTL/large font/tablet visual coverage",
+    "system process-death end-to-end",
+    "actual sharing/import/remote services/purchases",
+    "release R8",
+    "all library business flows"
+  ],
+  "baseline": "not advanced",
+  "ci": "unchanged"
+}

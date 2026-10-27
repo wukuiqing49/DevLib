@@ -12,12 +12,17 @@ object WorkspaceActions {
             "/image/lib_metadata" to R.string.workspace_metadata,
             "/image/core_qrcode" to R.string.workspace_qr,
             "/document/core_pdf" to R.string.workspace_pdf,
+            "/document/lib_document" to com.wkq.dev.demo.common.R.string.workspace_record,
             "/files/core_archive" to R.string.workspace_archive,
             "/files/lib_upload" to R.string.workspace_upload,
             "/files/core_nas" to R.string.workspace_nas,
             "/files/core_usb" to R.string.workspace_usb,
             "/files/lib_drop" to R.string.workspace_drop,
         )
+
+    /** 判断至少一个已登记工具可接收全部素材，不因组合不支持而静默无响应。 */
+    fun hasCompatibleTool(assets: List<WorkspaceAsset>): Boolean = assets.isNotEmpty() && assets.size <= 20 &&
+        tools.keys.any { route -> assets.all { WorkspacePolicy.accepts(route, it.file.extension) } }
 
     /** 在 UI 线程展示兼容全部所选素材的工具列表，并携带资产 ID 跳转；超过 20 个时提示并停止。 */
     fun chooseTool(context: Context, assets: List<WorkspaceAsset>) {

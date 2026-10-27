@@ -1,3 +1,20 @@
+# 三入口信息架构重整（2026-10-27）
+
+| ID | 范围与预期 | 验证方法 |
+| --- | --- | --- |
+| NAV-DIRECTORY | 10 个功能库含 Google/统一文档；基础与功能不重叠；8 个基础模块组织成 5 套体系；路由子模块可搜索 | DirectoryPolicyTest JVM |
+| NAV-SHORTCUT | 常用优先、最近补充、去重并排除已移除及跨页路由 | DirectoryPolicyTest JVM |
+| NAV-PAGES | 三个顶层独立子页面，查询/分类不因切页清空；工作区文件与历史分开 | App/AndroidTest APK 构建，Pixel 8 定向冒烟 |
+| NAV-INTEGRATION | 独立接入详情、路由子模块切换、正确 runtime/KSP/plugin 指引 | 静态检查与 Pixel 8 页面抽查 |
+| NAV-WORKSPACE | 独立文件/历史适配器、图片缩略图、最多 20 项选择与兼容工具流转 | 公共层 JVM、文档模型 JVM、静态检查；真实导入分享不执行 |
+| NAV-CATALOG | 原 18 库路由与 5 组初始化器保留 | 最终 APK 目录门禁 |
+
+复用 BaseVMFragment、BaseVMTitleActivity、BaseViewModel、BaseRecyclerViewAdapter、XPopup、ImageLoaderUtil；不改基础库实现。使用架构/UI/国际化/构建/功能测试 Skills。沿用用户本会话明确的 Pixel 8 部署授权，仅覆盖安装和本地导航冒烟，不进行购买、真实服务器访问、分享、文件删除或清数据。
+
+API 26/37、平板、多窗口、全语言视觉、系统强杀恢复、Release/R8 与所有业务闭环未纳入本轮设备验收。不创建或调整 CI；完成验证后按用户明确要求提交并推送。以下计划为历史。
+
+---
+
 # Pixel 8 图标包部署（2026-10-27）
 
 用户明确要求运行到 Pixel 8，本轮覆盖默认设备排除，仅对该设备覆盖安装最新 Debug APK、冷启动、首页截图及当前进程崩溃日志抽查。不清数据、不卸载、不操作账户和外部服务。图标已本地构建及资源检查；Launcher 实际裁切、单色主题图标及全功能回归不属于此次运行验收。
