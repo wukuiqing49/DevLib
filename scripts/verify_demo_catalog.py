@@ -28,11 +28,11 @@ def artifact_type(build_text: str) -> str:
 
 def verify_artifacts(root: Path = ROOT) -> dict:
     modules = json.loads((root / "docs/library-catalog.json").read_text(encoding="utf-8"))["modules"]
-    active = {p.name for p in (root / "core").iterdir() if (p / "build.gradle").is_file()}
+    active = {p.parent.name for p in (root / "core").rglob("build.gradle") if "build" not in p.relative_to(root).parts}
     assert {m["module"] for m in modules} == active, "Library artifact catalog is stale"
     counts = {"aar": 0, "jvm": 0}
     for module in modules:
-        actual = artifact_type((root / "core" / module["module"] / "build.gradle").read_text(encoding="utf-8"))
+        actual = artifact_type((root / module.get("path", "core/" + module["module"]) / "build.gradle").read_text(encoding="utf-8"))
         assert module["artifactType"] == actual, f"Artifact mismatch: {module['module']} must be {actual}"
         counts[actual] += 1
     return counts
@@ -62,8 +62,8 @@ def verify(apk: Path | None) -> dict:
     catalog = ROOT / "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt"
     entries = catalog_entries(catalog.read_text(encoding="utf-8"))
     classification = json.loads((ROOT / "docs/library-catalog.json").read_text(encoding="utf-8"))
-    assert len([m for m in classification["modules"] if m["category"] == "foundation"]) == 8
-    active = {p.name for p in (ROOT / "core").iterdir() if p.is_dir() and (p / "build.gradle").is_file()}
+    assert len([m for m in classification["modules"] if m["category"] == "architecture"]) == 8
+    active = {p.parent.name for p in (ROOT / "core").rglob("build.gradle") if "build" not in p.relative_to(ROOT).parts}
     assert {m["module"] for m in classification["modules"]} == active, "Classification manifest is stale"
     assert not any(m["sourceRepository"] in classification["excludedSources"] for m in classification["modules"])
     expected = expected_demo_modules(classification["modules"])
@@ -74,6 +74,9 @@ def verify(apk: Path | None) -> dict:
     source_texts = {p: p.read_text(encoding="utf-8") for p in sources}
     groups = set()
     for module, route, domain in entries:
+        declared = next(m for m in classification["modules"] if m["module"] == module)
+        group = "architecture" if domain == "foundation" else "thirdparty" if domain == "google" else "functional"
+        assert declared["category"] == declared["directoryGroup"] == group, f"Demo grouping differs from module catalog: {module}"
         groups.add(domain)
         assert route.startswith(f"/{domain}/"), "Route groups must belong to their business domain"
         matches = [(p, text) for p, text in source_texts.items() if f'@Route(path = "{route}")' in text]

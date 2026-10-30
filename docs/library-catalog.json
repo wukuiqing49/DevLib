@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-30",
   "excludedSources": [
     "Starxen",
     "BeautySDK",
@@ -10,25 +10,33 @@
       "module": "core_archive",
       "category": "functional",
       "sourceRepository": "PhotoKit",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_archive"
     },
     {
       "module": "core_base",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreBase",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_base"
     },
     {
       "module": "core_image_render",
       "category": "functional",
       "sourceRepository": "PhotoKit",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_image_render"
     },
     {
       "module": "core_network",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreNetwork",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_network"
     },
     {
       "module": "core_document",
@@ -37,59 +45,77 @@
       "artifactType": "aar",
       "additionalSourceRepositories": [
         "RoofQuote"
-      ]
+      ],
+      "directoryGroup": "functional",
+      "path": "core/functional/core_document"
     },
     {
       "module": "core_qrcode",
       "category": "functional",
       "sourceRepository": "PhotoKit",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_qrcode"
     },
     {
       "module": "core_router_annotation",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreRouters",
-      "artifactType": "jvm"
+      "artifactType": "jvm",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_router_annotation"
     },
     {
       "module": "core_router_api",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreRouters",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_router_api"
     },
     {
       "module": "core_router_gradle_plugin",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreRouters",
-      "artifactType": "jvm"
+      "artifactType": "jvm",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_router_gradle_plugin"
     },
     {
       "module": "core_router_processor",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreRouters",
-      "artifactType": "jvm"
+      "artifactType": "jvm",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_router_processor"
     },
     {
       "module": "core_utils",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "AndroidCoreUtils",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/core_utils"
     },
     {
       "module": "lib_drop",
       "category": "functional",
       "sourceRepository": "DropLAN",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/lib_drop"
     },
     {
       "module": "lib_metadata",
       "category": "functional",
       "sourceRepository": "PressIPTC",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/lib_metadata"
     },
     {
       "module": "lib_operations",
-      "category": "functional",
+      "category": "internal",
       "sourceRepository": "PhotoKit",
       "artifactType": "aar",
       "role": "support",
@@ -98,41 +124,54 @@
         "core_image_render",
         "core_document",
         "core_qrcode"
-      ]
+      ],
+      "directoryGroup": "internal",
+      "path": "core/internal/lib_operations"
     },
     {
       "module": "lib_upload",
       "category": "functional",
       "sourceRepository": "PressIPTC",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/lib_upload"
     },
     {
       "module": "lib_xpopup",
-      "category": "foundation",
+      "category": "architecture",
       "sourceRepository": "XPopup",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "architecture",
+      "path": "core/architecture/lib_xpopup"
     },
     {
       "module": "core_google",
-      "category": "functional",
+      "category": "thirdparty",
       "sourceRepository": "DropLAN",
       "artifactType": "aar",
       "additionalSourceRepositories": [
         "SiteReport",
         "PressIPTC"
-      ]
+      ],
+      "directoryGroup": "thirdparty",
+      "path": "core/thirdparty/core_google"
     },
     {
       "module": "core_nas",
       "category": "functional",
       "sourceRepository": "NASFileManager",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_nas"
     },
     {
       "module": "core_usb",
       "category": "functional",
       "sourceRepository": "NASFileManager",
-      "artifactType": "aar"
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_usb"
     }
-  ]
+  ],
+  "schemaVersion": 2
 }

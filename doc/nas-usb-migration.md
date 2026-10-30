@@ -1,6 +1,6 @@
 # NAS / USB 独立库接入
 
-日期：2026-10-27。`lib_nas` → `core/core_nas`，`lib_usb` → `core/core_usb`。二者为功能库，不属于基础体系；Base、Utils、Network、Routers 和 XPopup 未改动。
+日期：2026-10-27。`lib_nas` → `core/functional/core_nas`，`lib_usb` → `core/functional/core_usb`。二者为功能库，不属于基础体系；Base、Utils、Network、Routers 和 XPopup 未改动。
 
 | 模块 | 公开包名 | Maven 坐标 |
 | --- | --- | --- |

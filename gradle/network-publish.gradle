@@ -1,0 +1,70 @@
+// 网络库发布扩展：普通构建不要求凭据，实际上传前才校验。
+def publishVersion = providers.gradleProperty('networkPublishVersion')
+        .orElse(providers.environmentVariable('NETWORK_PUBLISH_VERSION'))
+        .getOrElse(rootProject.ext.devlibVersion.toString())
+if (!(publishVersion ==~ /[A-Za-z0-9][A-Za-z0-9._-]*/)) {
+    throw new GradleException('networkPublishVersion 必须是有效的 Maven 版本号')
+}
+def githubRepository = providers.gradleProperty('networkGitHubRepository')
+        .orElse(providers.environmentVariable('NETWORK_GITHUB_REPOSITORY'))
+        .getOrElse('wukuiqing49/DevLib')
+if (!(githubRepository ==~ /[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+/)) {
+    throw new GradleException('networkGitHubRepository 必须为 owner/repository')
+}
+def githubUser = providers.gradleProperty('gpr.user').orElse(providers.environmentVariable('GITHUB_ACTOR'))
+def githubToken = providers.gradleProperty('gpr.key').orElse(providers.environmentVariable('GITHUB_TOKEN'))
+def mavenUrl = providers.gradleProperty('networkMavenUrl').orElse(providers.environmentVariable('NETWORK_MAVEN_URL'))
+def mavenUser = providers.gradleProperty('networkMavenUser').orElse(providers.environmentVariable('NETWORK_MAVEN_USER'))
+def mavenPassword = providers.gradleProperty('networkMavenPassword').orElse(providers.environmentVariable('NETWORK_MAVEN_PASSWORD'))
+
+publishing.repositories {
+    maven {
+        name = 'GitHubPackages'
+        url = uri("https://maven.pkg.github.com/${githubRepository}")
+        credentials {
+            username = githubUser.getOrElse('')
+            password = githubToken.getOrElse('')
+        }
+    }
+    if (mavenUrl.isPresent()) {
+        def target = uri(mavenUrl.get())
+        if (!(target.scheme in ['https', 'file']) || target.userInfo || target.query || target.fragment) {
+            throw new GradleException('networkMavenUrl 仅支持不携带凭据、查询参数的 HTTPS 或 file 仓库')
+        }
+        maven {
+            name = 'NetworkMaven'
+            url = target
+            if (mavenUser.isPresent() || mavenPassword.isPresent()) {
+                credentials {
+                    username = mavenUser.getOrElse('')
+                    password = mavenPassword.getOrElse('')
+                }
+            }
+        }
+    }
+}
+
+afterEvaluate {
+    publishing.publications.named('release', MavenPublication) {
+        version = publishVersion
+        pom {
+            name = 'DevLib core_network'
+            description = 'Retrofit、OkHttp、协程与统一网络结果；源自 AndroidCoreNetwork。'
+            url = "https://github.com/${githubRepository}"
+            scm { url = "https://github.com/${githubRepository}" }
+        }
+    }
+}
+
+tasks.withType(PublishToMavenRepository).configureEach {
+    doFirst {
+        if (repository.name == 'GitHubPackages' &&
+                (!githubUser.getOrElse('').trim() || !githubToken.getOrElse('').trim())) {
+            throw new GradleException('GitHub Packages 发布需要 gpr.user/gpr.key 或 GITHUB_ACTOR/GITHUB_TOKEN')
+        }
+        if (repository.name == 'NetworkMaven' &&
+                (mavenUser.getOrElse('').trim().isEmpty() != mavenPassword.getOrElse('').trim().isEmpty())) {
+            throw new GradleException('Maven 用户名和密码必须同时配置')
+        }
+    }
+}

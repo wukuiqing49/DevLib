@@ -28,7 +28,21 @@ def read_text(path: Path) -> str:
 
 
 def module_path_from_dir(root: Path, module_dir: Path) -> str:
+    """优先按 settings 中的目录映射解析逻辑模块，兼容按职责分组的源码目录。"""
+    for module, path in project_directory_mappings(root).items():
+        if path.resolve() == module_dir.resolve():
+            return module
     return ":" + module_dir.relative_to(root).as_posix().replace("/", ":")
+
+
+def project_directory_mappings(root: Path) -> dict[str, Path]:
+    """读取显式 projectDir 映射，未映射工程仍沿用标准目录约定。"""
+    settings = next((root / name for name in ("settings.gradle", "settings.gradle.kts") if (root / name).is_file()), None)
+    if settings is None:
+        return {}
+    text = re.sub(r"/\*[\s\S]*?\*/|(?m:^\s*//.*$)", "", read_text(settings))
+    pattern = r"project\(['\"](:[^'\"]+)['\"]\)\.projectDir\s*=\s*file\(['\"]([^'\"]+)['\"]\)"
+    return {module: root / path for module, path in re.findall(pattern, text)}
 
 
 def collect_modules(root: Path) -> dict[str, Path]:
@@ -44,7 +58,8 @@ def collect_modules(root: Path) -> dict[str, Path]:
 
 
 def module_dir_from_path(root: Path, module: str) -> Path:
-    return root / module.strip(":").replace(":", "/")
+    """将逻辑模块路径解析到实际源码目录。"""
+    return project_directory_mappings(root).get(module, root / module.strip(":").replace(":", "/"))
 
 
 def collect_settings_modules(root: Path) -> set[str]:

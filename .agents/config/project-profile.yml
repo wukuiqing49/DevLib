@@ -1,7 +1,7 @@
 schemaVersion: 1
 project:
   name: DevLib
-  description: Android 多模块独立功能库与开发者工作台，统一维护基础框架、文件传输、轻量图片、元数据与文档导出
+  description: Android 多模块开发库与工作台，按架构、独立功能、三方服务与内部支撑组织
   kind: development-library
   lifecycle: initialized
   phase: integration-validation
@@ -19,8 +19,8 @@ android:
   viewBinding: true
 modules:
   app: app
-  coreBase: core/core_base
-  coreUtils: core/core_utils
+  coreBase: core/architecture/core_base
+  coreUtils: core/architecture/core_utils
   featureApp: feature/feature_app
   featureRes: feature/feature_res
   demoCommon: feature/feature_demo_common
@@ -30,38 +30,45 @@ modules:
   demoDocument: feature/feature_demo_document
   demoGoogle: feature/feature_demo_google
   libraries:
-  - core/core_google
-  - core/core_archive
-  - core/core_base
-  - core/core_image_render
-  - core/core_network
-  - core/core_document
-  - core/core_qrcode
-  - core/core_router_annotation
-  - core/core_router_api
-  - core/core_router_gradle_plugin
-  - core/core_router_processor
-  - core/core_utils
-  - core/lib_drop
-  - core/lib_metadata
-  - core/lib_operations
-  - core/core_nas
-  - core/core_usb
-  - core/lib_upload
-  - core/lib_xpopup
+  - core/thirdparty/core_google
+  - core/functional/core_archive
+  - core/architecture/core_base
+  - core/functional/core_image_render
+  - core/architecture/core_network
+  - core/functional/core_document
+  - core/functional/core_qrcode
+  - core/architecture/core_router_annotation
+  - core/architecture/core_router_api
+  - core/architecture/core_router_gradle_plugin
+  - core/architecture/core_router_processor
+  - core/architecture/core_utils
+  - core/functional/lib_drop
+  - core/functional/lib_metadata
+  - core/internal/lib_operations
+  - core/functional/core_nas
+  - core/functional/core_usb
+  - core/functional/lib_upload
+  - core/architecture/lib_xpopup
   foundationLibraries:
-  - core/core_base
-  - core/core_network
-  - core/core_router_annotation
-  - core/core_router_api
-  - core/core_router_gradle_plugin
-  - core/core_router_processor
-  - core/core_utils
-  - core/lib_xpopup
+  - core/architecture/core_base
+  - core/architecture/core_network
+  - core/architecture/core_router_annotation
+  - core/architecture/core_router_api
+  - core/architecture/core_router_gradle_plugin
+  - core/architecture/core_router_processor
+  - core/architecture/core_utils
+  - core/architecture/lib_xpopup
 excludedSources:
 - Starxen
 - BeautySDK
 - DevHub
+libraryOrganization:
+  catalog: docs/library-catalog.json
+  architecture: core/architecture
+  functional: core/functional
+  thirdparty: core/thirdparty
+  internal: core/internal
+  navigation: [architecture, functional, thirdparty, workspace]
 sourceOfTruth:
   agentEntry: AGENTS.md
   capabilityIndex: .agents/INDEX.md
@@ -70,11 +77,15 @@ sourceOfTruth:
   moduleGraph: settings.gradle
   moduleBuildFiles: '**/build.gradle'
   importManifest: docs/import-manifest.json
+  libraryCatalog: docs/library-catalog.json
 executionPolicy:
   deviceCommands: excluded
   deviceReason: 用户明确要求不做真机测试；执行 adb 前先检查本项，后续明确授权可覆盖
   skillSource: project-local-first
 validation:
+  libraryLayout: python -B scripts/test_core_layout.py -v
+  demoCatalog: python -B scripts/verify_demo_catalog.py --catalog-only
+  demoTests: .\gradlew.bat :feature:feature_app:testDebugUnitTest
   androidWorkflows: python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma
   androidWorkflowTests: python -B .agents/scripts/tests/test_validate_android_workflows.py -v
   agentStructure: python -B .agents/scripts/validate_agent_structure.py --project-root
@@ -88,6 +99,7 @@ validation:
 agentFiles:
   rules:
   - droplan.md
+  - library-organization.md
   workflows:
   - audit-droplan.md
   prompts:
@@ -102,4 +114,4 @@ capabilities:
   extensionPolicy: 按实际需求新增技术方向，不声明未实现的能力
 examples:
   androidScaffold: .agents/config/project-scaffold.yml
-  status: 当前 DevLib 演示工程基线；独立库保留迁入 API 包名，由中央依赖快照和模块构建文件维护
+  status: 新工程生成示例；DevLib 现有源码目录以本档案和 settings 映射为准，公开包名保持兼容

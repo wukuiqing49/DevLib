@@ -4,7 +4,7 @@
 
 DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/`，开发者工作台 App 包名为 `com.wkq.dev`。库包含基础框架、文件传输、元数据、轻量图片与文档导出能力；迁入不等于设备或生产验收通过。
 `app/` 与 `feature/` 承载开发者工作台、能力体验和宿主适配，业务产品页面、商品 ID、计费门禁和账号体系由消费项目维护。
-项目事实见 `.agents/config/project-profile.yml`，来源见 `docs/import-manifest.json`，模块目录见 `README.md`。
+项目事实见 `.agents/config/project-profile.yml`，分类与源码路径见 `docs/library-catalog.json`，来源见 `docs/import-manifest.json`，接入目录见 `core/README.md`。本项目规范入口为 `.agents/` 与 `AGENTS.md`。
 
 ## 加载与适用范围
 
@@ -41,6 +41,7 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 | Android 功能回归 | `.agents/skills/android-functional-test-workflow/SKILL.md` |
 | Zeplin Android 还原 | `.agents/skills/zeplin-android-layer-implementation/SKILL.md` |
 | Google Play 素材 | `.agents/workflows/prepare-play-assets.md` |
+| 明确要求的 DevHub 基础统计接入 | `.agents/skills/devhub-basic-integration/SKILL.md` |
 | 逐项目 Google Play 数据分析与 ASO 文案优化 | `.agents/skills/google-play-aso/SKILL.md` |
 | 明确指定的 DropLAN 历史专项 | `.agents/workflows/audit-droplan.md` |
 
@@ -57,6 +58,8 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 
 ## 独立库边界
 
+- 库的归类、目录、逻辑模块映射和 Demo 同步遵循 `.agents/rules/library-organization.md`；修改模块或目录入口前必读。
+
 - core 不依赖 app/feature；每个正式库独立声明依赖、consumer rules、来源与接入说明。
 - 不引入 Starxen、BeautySDK 或 DevHub 来源模块；来源排除记录只用于历史追溯。
 - 基础库为 AndroidCoreBase、AndroidCoreUtils、AndroidCoreNetwork、AndroidCoreRouters（四个模块）及 XPopup；其他模块按功能能力或 SDK 适配分类，不能仅凭 core_ 前缀认定为基础库。
@@ -67,6 +70,6 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 
 ## 已确认的功能范围
 
-当前为 8 个基础模块、10 个功能库、1 个内部支撑库，共 19 个模块；事实清单见 docs/library-catalog.json。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
+当前为 8 个架构模块、9 个功能库、1 个三方服务库、1 个内部支撑库，共 19 个模块；事实清单见 docs/library-catalog.json。Demo 按架构、功能、三方、工作区四个入口组织，路由体系详情覆盖四个子模块。基础库保持原有实现。未经明确需求，不重新引入已移出的分散登录、支付权益库、拍照定位、原产品网页、报告模板、Nearby、证件照、人像、RAW 或模型配送能力。lib_operations 只作为内部支撑，不要求单独业务页面。
 
 Google 登录、Firebase Auth、Play Billing 与通用评分提示统一使用 core_google；旧 Credentials/Firebase/Billing/Entitlement 分散库保持移出，不再并行维护。core_google 不包含广告、Analytics、DevHub 或宿主商品及 Pro 策略。

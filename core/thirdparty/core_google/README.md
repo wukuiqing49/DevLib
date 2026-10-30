@@ -1,0 +1,159 @@
+# core_google
+
+Google 登录、Firebase Auth、Play Billing、原生支付/兑换/恢复与评分提示。
+
+## 定位与依赖
+
+- 分类：三方服务适配库；来源：DropLAN / SiteReport / PressIPTC。
+- 物理目录：`core/thirdparty/core_google`；Gradle 路径：`:core:core_google`。
+- Android AAR；模块声明 minSdk 26，compileSdk 37；JVM target 17。这是模块声明值，实际消费下限还受传递依赖与 Manifest 合并约束。
+- 本仓模块依赖：`api :core:core_base`；`implementation :core:lib_xpopup`
+
+## 主要入口与调用流程
+
+[GoogleSignInCoordinator](src/main/java/com/wkq/google/auth/GoogleSignInCoordinator.kt)、[DropGoogleAccount](src/main/java/com/wkq/google/auth/DropGoogleAccount.kt)、[GoogleBillingRuntime](src/main/java/com/wkq/google/billing/GoogleBillingRuntime.kt)、[GoogleBillingUi](src/main/java/com/wkq/google/billing/ui/GoogleBillingUi.kt)、[GoogleRateManager](src/main/java/com/wkq/google/rate/GoogleRateManager.kt)。
+
+宿主提供 OAuth/Firebase/Play 商品配置 → Application 初始化所需能力 → 用户明确操作后调用页面/引擎 → 观察真实购买状态。
+
+不含广告、Analytics、DevHub、商品 ID 或宿主 Pro 策略；官方兑换返回后重新核对订单，页面关闭不代表购买成功。
+
+## 详细接入
+
+Google SDK 功能适配库，登录与计费来自 DropLAN，评分策略参考 SiteReport / PressIPTC 并去除产品耦合，保留 `com.wkq.google` API 包名。分类为三方服务适配库，不是基础库。
+
+## 范围
+
+- `GoogleSignInCoordinator`：Credential Manager Google 登录与凭据清理。返回的本地 token claims 只供显示，必须交给 Firebase 或服务端验证。
+- `DropGoogleAccount`：通过 Firebase Authentication 验证 Google ID token，获取/退出/删除 Firebase 账号。
+- `GoogleBillingRuntime` / `GoogleBillingManager`：Play 商品查询、订阅与非消耗型一次性购买、订单确认补偿、恢复及离线状态缓存。
+- `GoogleRateManager` / `GoogleRatePolicy`：可配置的使用时长、关键操作与冷却策略，以及 Google Play 应用内评分请求。
+- `GoogleBillingGateway` 是状态查询接口；不包含商业后台、服务端验单或跨设备统一授权系统。当前一次性商品按永久解锁处理，不用于消耗型商品。
+
+不包含广告、Analytics、DevHub、原产品页面、商品 ID 或业务 Pro 门禁。原生页面复用 core_base 与 lib_xpopup，发布 POM 传递依赖；不依赖 app、feature 或 feature_res。旧 lib_auth_credentials、lib_auth_firebase、lib_billing_play、lib_entitlement 已移出，不再并行维护。
+
+## 接入
+
+源码依赖 `implementation project(':core:core_google')`，发布坐标 `com.wkq.dev:core-google:0.1.0-SNAPSHOT`。Android minSdk 26、JDK 17；依赖快照见 `gradle/catalogs/googleLibs.versions.toml`。
+
+普通 Google 登录：宿主配置自己的 Android OAuth 包名、签名与 Web Client ID，在 Activity 的生命周期协程中调用 `GoogleSignInCoordinator.signIn(activity, webClientId)`。不要记录或展示 ID token。
+
+Firebase 登录：宿主配置自己的 Firebase 项目，启用 Google 提供商。由宿主选择 google-services 插件与本地 google-services.json，或显式 FirebaseOptions 初始化默认 FirebaseApp。库不应用该插件，不附带配置文件。调用 `DropGoogleAccount.signIn(activity, webClientId)` 后通过 `currentUser` 获取会话。删除账号是破坏性操作，Demo 不提供该按钮。
+
+Play Billing：宿主提供商品 ID，显式初始化，不需要 Firebase 会话：
+
+```kotlin
+GoogleBillingRuntime.initialize(context, GoogleBillingRuntimeConfig(
+    billingInAppProductIds = yourNonConsumableProductIds,
+    billingSubscriptionIds = yourSubscriptionIds,
+    requireAppAccount = false
+))
+val products = GoogleBillingManager.queryProducts(yourSubscriptionIds, GoogleProductType.SUBS).getOrThrow()
+// 明确展示 Play 返回的价格、周期并取得用户操作后：
+GoogleBillingManager.launchPurchase(activity, selectedProduct.productId, selectedProduct.offerToken)
+// 页面生命周期内订阅购买结果，用完关闭；后续恢复实际购买状态。
+val registration = GoogleBillingManager.addPurchaseUpdatedListener { response, purchases -> /* 更新页面 */ }
+val entitlement = GoogleBillingManager.refreshEntitlement()
+registration.close()
+```
+
+`requireAppAccount` 默认 true；有自有账号时提供稳定 `billingAccountIdProvider` 与 `billingPurchaseAllowed`，不要把 Google/Firebase 账号和 Play 购买默认视为同一会话。回调可能在后台线程。离线缓存是客户端恢复策略，不能代替服务端验单。正式商品与订阅披露、退款/撤销同步、安全授权策略由宿主维护。
+
+## Demo 与验证
+
+`feature_demo_google` 路由 `/google/core_google`：输入 Web Client ID → 选择登录方式 → 查看/退出 Firebase 会话；输入一个商品 ID → 选择订阅或一次性类型 → 查询并选择报价 → 显式确认购买 → 恢复查询。
+
+未配置 Firebase 时给出接入提示；无可用报价时不能购买。不自动连接或购买，不输出 token。离开或旋转页面取消持有 Activity 的登录任务。演示使用 `requireAppAccount=false`，不代表消费项目必须采用同样策略。
+
+本仓库不执行真机登录、购买或删除账号测试。来源与原文件哈希见 `docs/import-manifest.json`；本地编译和 JVM 测试见 `doc/testing/TEST_REPORT.md`。
+
+## 评分提示与独立反馈
+
+来源：SiteReport 与 PressIPTC 的 rate 目录，来源提交和原文件摘要见 docs/import-manifest.json 中 core_google.ratingSources。采用 SiteReport 默认 1 天使用时长、1 次关键操作、30 天请求间隔；这些都是宿主可配置的本地策略，不是 Google Play 配额。
+
+```kotlin
+// 宿主尽早在自身生命周期协程初始化首次使用时间，不依赖登录或计费。
+GoogleRateManager.initialize(context)
+// 在真实关键操作完成后记录稳定操作 ID；最近 128 个 ID 哈希去重。
+GoogleRateManager.recordCompletedAction(context, operationId)
+// 页面恢复到前台且处于自然业务结束节点时调用；不放在“去评分”按钮后。
+val result = GoogleRateManager.requestIfEligible(activity, GoogleRatePolicy(
+    minDays = 1, daysBetweenPrompts = 30, minCompletedActions = 1
+))
+// 用户选择不再自动提示时设置；不会标记用户已评分。
+GoogleRateManager.setSuppressed(context, true)
+```
+
+`initialize`、状态读写和请求都是 suspend 方法；存储在 IO 串行提交，请求在主线程且要求宿主处于 RESUMED（普通 Activity 要有窗口焦点）。异步取回 ReviewInfo 后重新检查页面状态。取消会继续以协程取消传播；已打开的 Play 流程未完成前仍阻止重入，不强行关闭 SDK 窗口。
+
+请求前预留计数与冷却；API 失败也不立即重试。`FLOW_FINISHED` 只表示 Task 流程结束，不能判断卡片展示、星级或提交。首次使用从调用 initialize/snapshot/record 的时间开始，不自动推断安装日期。完成事件去重窗口为最近 128 项，超出窗口的旧 ID 再次上报可能重新计数；宿主仍负责真实业务事件。
+
+不迁入高星去商店、低星发邮件的分流弹窗，不提供 `isRated` / `markRated`。旧 google_rate_state 的“已评分”值不会自动迁移。用户主动点击商店评分与独立反馈，由宿主复用 core_utils.IntentUtil.openMarket / sendEmail；不会根据用户态度筛选请求，也不会在自动请求失败后强制跳转。库本身没有新增 Base/Utils 依赖。
+
+工作台第三段可检查条件、模拟一次关键操作并按正式策略请求、关闭/恢复提示、主动打开商店、输入邮箱发送独立反馈。演示不会绕过一天等待或 Play 配额，没有假造“评分成功”结果。
+
+参考：[官方接入](https://developer.android.com/guide/playcore/in-app-review/kotlin-java)、[请求时机](https://developer.android.com/guide/playcore/in-app-review)、[官方 FakeReviewManager 测试边界](https://developer.android.com/guide/playcore/in-app-review/test)。本地假管理器不显示 UI、不提交评分，仍需有 Play 分发资格的设备验收。
+
+## 可靠性与接入边界（2026-10-27）
+
+订阅查询只支持当前宿主计费账号；非空 userId 必须与 billingAccountIdProvider 一致，查询期间切换账号明确失败。永久购买不再计为订阅；未知或部分失败且无法确认订阅时抛出 IllegalStateException，宿主保留旧状态并提供重试。expireTimeMillis=0 仅表示未知，真实到期时间由可信服务端提供。旧方法签名保留。
+
+上传入参、商品配置、账号切换及登录/计费衔接继续由宿主维护；本轮没有新增服务端验单、消耗型商品或多阶段优惠报价。评分完成仍不代表已提交评价。
+
+
+## 原生支付页面：单库调用
+
+支付引擎、Activity、XPopup BottomSheet、官方兑换入口、多语言资源及付费状态均在 `core_google`，不需要单独 UI 模块。基础库源码没有修改。公开入口位于 `com.wkq.google.billing.ui`。
+
+在宿主 Application 恢复原有 `GoogleBillingRuntimeConfig`（商品 ID 必填；无自有账号时显式设置 `requireAppAccount = false`）。在 Activity/Fragment 创建时注册一次：
+
+```kotlin
+private val billingLauncher = registerForActivityResult(GoogleBillingContract()) { result ->
+    when {
+        !result.status.isKnown -> { /* 未确认，保留已有授权策略并稍后重试 */ }
+        result.status.isPro -> { /* 宿主映射自己的 Pro / 付费功能 */ }
+        else -> { /* 已核对，当前无配置商品的有效购买 */ }
+    }
+}
+
+// 用户点击时二选一；未传 page 时复用运行时 billingPlans，或直接展示 Play 商品。
+GoogleBillingUi.openActivity(billingLauncher)
+GoogleBillingUi.showBottomSheet(billingLauncher)
+// 也支持原有页面配置及宿主链接；全页沉浸式为显式选择。
+GoogleBillingUi.openActivity(billingLauncher, pageConfig,
+    GoogleBillingUiOptions(termsUrl = yourTermsUrl, privacyUrl = yourPrivacyUrl, immersive = true))
+```
+
+`GoogleBillingPageConfig` 仍负责套餐描述，不能覆盖真实 Play 价格、周期或自动续费披露；`fallbackPrice` 不用于购买。`purchaseButtonText` 保留兼容字段，原生按钮统一展示真实价格，避免自定义文案掩盖收费金额。套餐 ID 必须属于运行时配置；不能只传页面套餐而漏配运行时商品 ID。
+
+宿主也可订阅 `GoogleBillingStatus.state`，或调用挂起函数 `GoogleBillingStatus.refresh()`；结果不含订单令牌。`isKnown`、`isPro`、`hasPendingPurchase`、`isOffline` 应分别处理。账号切换后宿主必须重新初始化/刷新，库无法自动观察宿主 lambda 内的账号变化。初始化及账号退出会重置快照；缓存绑定账号与商品集合，已有旧缓存会失效并重新核对。离线状态 `checkedAtMillis = 0`，不伪装成新验单。
+
+兑换说明页跳转官方 Google Play，未安装 Play 时尝试 HTTPS 浏览器；返回重新查询购买，不以跳转、返回或礼品卡余额判断 Pro。`redemptionOpened` 只表示打开过入口。`purchaseAttempted` 只表示尝试启动收银台。关闭页面不等于购买成功。
+
+支持标准自动续订基础方案、非消耗型一次性购买、恢复与订阅管理。不销售未建模的试用、多阶段优惠、预付费方案或消耗品。无需自建后台即可使用 Play 客户端查询，但客户端快照不能提供防篡改授权、可靠退款推送或跨商店账号权益。
+
+资源包含英语、简繁中文、日语、韩语、德语、法语、西班牙语、巴西葡萄牙语、意大利语、俄语、阿拉伯语、印地语、印尼语。默认英语，阿拉伯语依宿主支持 RTL；宿主如使用 resConfigs/localeConfig，需保留所需语言。翻译未经过母语及法律审校。
+
+完整页继承 BaseVMActivity，采用 XML/ViewBinding/MVVM、Base 列表；Base 负责顶部/导航栏/横向/IME Insets。BottomSheet 使用独立透明承载 Activity 和 XPopup view mode，XPopup 单独消费安全区，不修改原宿主窗口。返回、旋转及进程重建保存非敏感流程状态；宿主 Application 负责重建计费配置。API 37 为构建基线，真机 Insets、旋转、大字体和 Play 交易仍需消费项目验收。
+
+工作台 Google 页面新增“打开支付页面/底部弹层”，使用输入商品 ID 显式配置，无模拟商品、无自动购买。验证证据见 `doc/testing/TEST_REPORT.md`。
+
+## 产物发布与本地检查
+
+标准 Maven 坐标：`com.wkq.dev:core-google:0.1.0-SNAPSHOT`。默认版本统一来自根 `devlibVersion`；网络库另支持发布版本覆盖。不要同时依赖同库源码模块与旧 Maven AAR/JAR。
+
+以下命令在 DevLib 根目录执行：
+
+```powershell
+.\gradlew.bat :core:core_google:assembleDebug :core:core_google:testDebugUnitTest
+.\gradlew.bat :core:core_google:publishReleasePublicationToDevLibLocalRepository
+```
+
+本地仓库位于根 `build/repo`。有本仓模块依赖时，先运行根 `publishLibrariesToLocalRepository` 发布完整依赖和插件 marker；不要只复制一个 AAR/JAR。消费工程添加对应文件 Maven 仓库，再按标准坐标接入。
+
+## 工作台与验证状态
+
+实际调用示例：[GoogleActivity](../../../feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt)。入口由工作台对应分类进入；演示适配不属于本库依赖。
+
+来源快照见 [import-manifest](../../../docs/import-manifest.json)；当前分类见 [library-catalog](../../../docs/library-catalog.json)；逐项验证及未验证边界见 [固定测试报告](../../../doc/testing/TEST_REPORT.md)。本页命令是复核入口，不代表本轮已重新执行。源码迁入、构建和 JVM 测试不等于真机、服务器、视觉或生产验收。
+
+[返回项目说明](../../../README.md) · [库目录](../../README.md)

@@ -2,6 +2,7 @@
 <LinearLayout style="@style/Demo.Page">
 <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceHeadlineSmall" android:accessibilityHeading="true" />
 <TextView android:id="@+id/module" style="@style/Demo.Label" android:textIsSelectable="true" />
+<TextView android:id="@+id/location" style="@style/Demo.Label" android:textIsSelectable="true" android:breakStrategy="simple" />
 <TextView android:id="@+id/requirement" style="@style/Demo.Label" android:textColor="@color/dev_secondary" />
 <TextView android:id="@+id/routerHeading" style="@style/Demo.Heading" android:text="@string/integration_router_modules" />
 <com.google.android.material.chip.ChipGroup android:id="@+id/routerModules" android:layout_width="match_parent" android:layout_height="wrap_content" app:singleSelection="true" app:selectionRequired="true" />

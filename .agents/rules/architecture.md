@@ -4,6 +4,8 @@
 
 - `core/` 和 `feature/` 是目录容器，不直接注册为 Gradle module。
 - 实际模块使用 `:core:<module>` 和 `:feature:<module>`。
+- DevLib 的 core 物理目录按 architecture、functional、thirdparty、internal 分类；settings 的显式 projectDir 映射保留逻辑模块路径，检查模块位置时以映射为准。
+- 本仓库分类与 Demo 同步细则见 `library-organization.md`；现有四类角色不得与来源或功能域混为一层。
 - `app` 只负责应用壳、全局初始化和顶层导航，不承载大量业务页面。
 - `core` 子模块不得依赖 `app` 或任何 `feature` 模块，包括 `feature_res`。独立库自有资源留在本库，宿主共享资源放在 feature_res；不得为复用宿主资源破坏库的独立接入。
 - feature 模块不得形成循环依赖；`feature_res` 不依赖功能模块。

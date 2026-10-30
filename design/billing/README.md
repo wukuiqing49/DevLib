@@ -31,4 +31,4 @@ python -B design/billing/validate_locales.py
 - `contrast.json`：颜色对比度计算结果。
 - `*.png`：主要状态截图。
 
-原生实现现已统一进入 core_google：Activity、XPopup BottomSheet、strings 与真实 Play 调用入口；详见 core/core_google/README.md。原型仍使用模拟数据，不能作为真实交易验证；原生验收以 doc/testing/TEST_REPORT.md 为准。未增加 CI。
+原生实现现已统一进入 core_google：Activity、XPopup BottomSheet、strings 与真实 Play 调用入口；详见 core/thirdparty/core_google/README.md。原型仍使用模拟数据，不能作为真实交易验证；原生验收以 doc/testing/TEST_REPORT.md 为准。未增加 CI。

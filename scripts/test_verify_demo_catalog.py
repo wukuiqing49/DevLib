@@ -1,9 +1,31 @@
 import unittest
+import json
+from pathlib import Path
+import tempfile
 
-from verify_demo_catalog import artifact_type, expected_demo_modules, catalog_entries, isolated_view_model
+from verify_demo_catalog import artifact_type, expected_demo_modules, catalog_entries, isolated_view_model, verify_artifacts
 
 
 class DemoCoveragePolicyTest(unittest.TestCase):
+    def test_grouped_catalog_rejects_unlisted_nested_library(self):
+        """分组目录中的新增库不得绕过清单检查，构建产物中的文件则不计为库。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            module = root / "core/functional/example"
+            module.mkdir(parents=True)
+            (module / "build.gradle").write_text("plugins { alias(libs.plugins.android.library) }", encoding="utf-8")
+            (root / "docs").mkdir()
+            (root / "docs/library-catalog.json").write_text(json.dumps({"modules": [{"module": "example", "path": "core/functional/example", "artifactType": "aar"}]}), encoding="utf-8")
+            generated = module / "build/generated"
+            generated.mkdir(parents=True)
+            (generated / "build.gradle").write_text("", encoding="utf-8")
+            self.assertEqual({"aar": 1, "jvm": 0}, verify_artifacts(root))
+            unexpected = root / "core/thirdparty/unlisted"
+            unexpected.mkdir(parents=True)
+            (unexpected / "build.gradle").write_text("plugins { alias(libs.plugins.android.library) }", encoding="utf-8")
+            with self.assertRaises(AssertionError):
+                verify_artifacts(root)
+
     def test_formatted_catalog_retains_all_entries(self):
         self.assertEqual([("core_pdf", "/document/core_pdf", "document")], catalog_entries('DemoEntry(\n "core_pdf",\n "/document/core_pdf",\n "document", title)'))
 

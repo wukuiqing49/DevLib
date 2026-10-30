@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="nav_libraries">Libraries</string>
-  <string name="nav_foundation">Foundation</string>
+  <string name="nav_libraries">Features</string>
+  <string name="nav_foundation">Core</string>
   <string name="nav_workspace">Workspace</string>
-  <string name="directory_intro">Choose a capability to try its workflow or review integration.</string>
-  <string name="foundation_intro">Explore the framework, utilities, networking, routing, and popups.</string>
+  <string name="directory_intro">Independent file, image, and document workflows. Google services have their own section.</string>
+  <string name="foundation_intro">Five systems across eight modules: Base, Utils, Network, Routers, and XPopup.</string>
   <string name="workspace_intro">Manage input files and results, and review past operations.</string>
   <string name="directory_shortcuts">Pinned and recent</string>
   <string name="directory_experience">Try</string>
@@ -13,7 +13,7 @@
   <string name="directory_unfavorite">Unpin library</string>
   <string name="directory_router">Routing system</string>
   <string name="directory_router_intro">Routing API, annotations, KSP processor, and Gradle plugin in one place.</string>
-  <string name="directory_summary">%1$d feature libraries · %2$d foundation modules</string>
+  <string name="directory_summary">%1$d feature libraries · %2$d architecture modules</string>
   <string name="directory_foundation_count">%1$d systems · %2$d modules</string>
   <string name="directory_meta">%1$s · %2$s</string>
   <string name="directory_result_count">%1$d matching entries</string>
@@ -39,7 +39,7 @@
   <string name="integration_document_note">Export one record as PDF, Excel, and Word with profiles, signature images, templates, and watermarks. Verify fonts, Office readers, and printing in the host.</string>
   <string name="integration_google_note">Google sign-in and Firebase Auth require host OAuth, package, and signing configuration. Billing requires Play products and test accounts. Review prompts are subject to Play quotas. No ads, analytics, or host Pro policy are included.</string>
   <string name="integration_network_note">The host supplies endpoints, certificates, and authentication. Do not embed real credentials. Request LAN permissions only for actual local access.</string>
-  <string name="integration_files_note">The host selects files and grants access. Configure servers, USB permissions, or peers for the selected workflow. Foreground history is not a reliable background queue.</string>
+  <string name="integration_files_note">The host selects files and grants access. Configure servers, SAF directory permissions, or peers for the selected workflow. Foreground history is not a reliable background queue.</string>
   <string name="integration_local_note">Try local examples on the capability page. See the module README and API for formats, size, permissions, and memory limits.</string>
   <string name="integration_router_processor">KSP processor: use ksp(project(\":core:core_router_processor\")) and configure a KSP plugin compatible with Kotlin.</string>
   <string name="integration_router_annotation">Routing annotations declare pages and services. Use with the routing API and KSP processor.</string>
@@ -56,14 +56,14 @@
   <string name="directory_archive">Archives</string>
   <string name="directory_upload">File upload</string>
   <string name="directory_nas">NAS files</string>
-  <string name="directory_usb">USB files</string>
+  <string name="directory_usb">External storage (SAF)</string>
   <string name="directory_drop">Local sharing</string>
   <string name="summary_base">Shared pages, UI state, lists, and events.</string>
   <string name="summary_utils">Files, URIs, devices, and utilities.</string>
   <string name="summary_network">Requests, responses, and network errors.</string>
   <string name="summary_router">Routes, annotations, KSP, and build integration.</string>
   <string name="summary_popup">Dialogs, bottom sheets, and image previews.</string>
-  <string name="summary_google">Sign-in, Firebase Auth, Play purchases, and reviews.</string>
+  <string name="summary_google">Sign-in, Firebase Auth, Play purchases, official redemption, and reviews.</string>
   <string name="summary_image">Watermarks, cropping, collages, and rendering.</string>
   <string name="summary_qr">Generate QR codes and decode them from images.</string>
   <string name="summary_metadata">Inspect EXIF, IPTC, and XMP; edit copies.</string>
@@ -73,4 +73,14 @@
   <string name="summary_nas">Manage files over SMB, WebDAV, or SFTP.</string>
   <string name="summary_usb">Access external storage with system-granted permissions.</string>
   <string name="summary_drop">Pair and share files on a local network.</string>
+  <string name="nav_thirdparty">Services</string>
+  <string name="directory_architecture_title">Architecture libraries</string>
+  <string name="directory_functional_title">Feature libraries</string>
+  <string name="directory_thirdparty_title">Third-party services</string>
+  <string name="thirdparty_intro">Google sign-in, Play billing, official redemption, and reviews. Configure your host before testing.</string>
+  <string name="integration_location">Category: %1$s\nSource: %2$s</string>
+  <plurals name="directory_library_count">
+    <item quantity="one">%1$d library</item>
+    <item quantity="other">%1$d libraries</item>
+  </plurals>
 </resources>

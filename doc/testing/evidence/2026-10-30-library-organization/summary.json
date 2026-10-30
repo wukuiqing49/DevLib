@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-30T06:32:02.980550+00:00",
+  "scope": "Agent、文档及四入口目录同步；不修改库引擎与基础库实现",
+  "gitHead": "1ac5ab5892e8ca16b8b532aa586fb358a86e507b",
+  "workingTree": "uncommitted; scoped hashes in source-files.json",
+  "moduleGroups": {
+    "architecture": 8,
+    "functional": 9,
+    "thirdparty": 1,
+    "internal": 1
+  },
+  "publicDirectoryEntries": 15,
+  "capabilityRoutes": 18,
+  "jvm": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pythonTests": {
+    "layout": 3,
+    "catalog": 11,
+    "agentStructure": 14,
+    "workflow": 6
+  },
+  "build": {
+    "tasks": [
+      ":app:assembleDebug",
+      ":feature:feature_app:testDebugUnitTest"
+    ],
+    "result": "passed",
+    "actionableTasks": 542
+  },
+  "apkSha256": "ad2deb327644f86ca723b21c2dfbaae074aa5e54c86fc19ff271770f345235c6",
+  "static": {
+    "strictHostI18n": "passed",
+    "ui": "passed",
+    "architecture": "passed with 2 existing warnings",
+    "sourceAudit": {
+      "files": 7,
+      "findings": 0
+    },
+    "apkCatalog": "passed"
+  },
+  "device": "excluded; no adb or device actions",
+  "notVerified": [
+    "API 26/37 runtime",
+    "rotation and process restoration",
+    "RTL, large fonts, small screens, tablets and multi-window visuals",
+    "real accounts, billing, redemption, servers",
+    "release and R8"
+  ],
+  "baseline": "not advanced; this is a scoped local regression",
+  "git": "not committed or pushed",
+  "ci": "unchanged"
+}

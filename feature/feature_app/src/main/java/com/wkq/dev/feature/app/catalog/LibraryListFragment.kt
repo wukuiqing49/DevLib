@@ -19,16 +19,18 @@ import com.wkq.router.api.Router
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
-/** 基础组件与功能目录复用同一种库语义；实例、状态与滚动独立，文件列表不复用此页面。 */
+/** 三类库目录各自持有状态与滚动位置，复用现有 Base 列表，不与工作区文件列表混用。 */
 class LibraryListFragment : BaseVMFragment<FragmentLibraryListBinding, CatalogViewModel>() {
-    private val foundation: Boolean get() = arguments?.getBoolean("foundation") == true
+    private val section: LibrarySection
+        get() = LibrarySection.fromKey(arguments?.getString("section"))
+            ?: if (arguments?.getBoolean("foundation") == true) LibrarySection.ARCHITECTURE else LibrarySection.FUNCTIONAL
     private lateinit var adapter: BaseRecyclerViewAdapter<ItemDemoEntryBinding, DemoEntry>
 
     /** 绑定紧凑库列表、分类和常用入口，沿用 Base 组件与宿主窗口适配。 */
     override fun initView() {
         if (resources.configuration.screenHeightDp < 480) binding.headerAppBar.setExpanded(false, false)
-        binding.heading.setText(if (foundation) R.string.nav_foundation else R.string.nav_libraries)
-        binding.subtitle.setText(if (foundation) R.string.foundation_intro else R.string.directory_intro)
+        binding.heading.setText(section.title)
+        binding.subtitle.setText(section.intro)
         binding.search.setText(viewModel.filter.value.query)
         binding.search.doAfterTextChanged { viewModel.search(it.toString()) }
         adapter = object : BaseRecyclerViewAdapter<ItemDemoEntryBinding, DemoEntry>(requireContext(), ItemDemoEntryBinding::inflate) {
@@ -47,8 +49,10 @@ class LibraryListFragment : BaseVMFragment<FragmentLibraryListBinding, CatalogVi
         binding.list.layoutManager = LinearLayoutManager(requireContext())
         binding.list.adapter = adapter
         val categories = linkedMapOf("" to R.string.catalog_all)
-        if (!foundation) categories.putAll(DemoCatalog.categories.filterKeys { it != "foundation" })
-        binding.filterScroll.isVisible = !foundation
+        val availableCategories = DirectoryPolicy.entries(section).map { it.category }.toSet()
+        if (section == LibrarySection.FUNCTIONAL) categories.putAll(DemoCatalog.categories.filterKeys { it in availableCategories })
+        if (viewModel.filter.value.category !in categories) viewModel.category("")
+        binding.filterScroll.isVisible = section == LibrarySection.FUNCTIONAL
         categories.forEach { (key, label) -> binding.categories.addView(Chip(requireContext()).apply {
             id = View.generateViewId(); tag = key; setText(label); isCheckable = true
             setOnClickListener { viewModel.category(key) }
@@ -59,17 +63,18 @@ class LibraryListFragment : BaseVMFragment<FragmentLibraryListBinding, CatalogVi
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 combine(viewModel.filter, viewModel.snapshot, viewModel.loadFailed) { filter, snapshot, failed -> Triple(filter, snapshot, failed) }
                     .collect { (filter, snapshot, failed) ->
-                        val entries = DirectoryPolicy.filter(foundation, filter.category, filter.query) { getString(DirectoryPresentation.title(it)) + " " + getString(it.title) + " " + getString(it.intro) }
+                        val entries = DirectoryPolicy.filter(section, filter.category, filter.query) { getString(DirectoryPresentation.title(it)) + " " + getString(it.title) + " " + getString(it.intro) }
                         if (adapter.getData() != entries) adapter.setData(entries)
                         for (i in 0 until binding.categories.childCount) (binding.categories.getChildAt(i) as Chip).apply { isChecked = tag == filter.category }
                         binding.count.text = if (filter.query.isBlank() && filter.category.isBlank()) {
-                            if (foundation) getString(R.string.directory_foundation_count, DirectoryPolicy.entries(true).size, DemoCatalog.entries.count { it.category == "foundation" })
-                            else getString(R.string.directory_summary, DirectoryPolicy.entries(false).size, DemoCatalog.entries.count { it.category == "foundation" })
+                            val count = DirectoryPolicy.entries(section).size
+                            if (section == LibrarySection.ARCHITECTURE) getString(R.string.directory_foundation_count, count, DemoCatalog.entries.count { it.section == section })
+                            else resources.getQuantityString(R.plurals.directory_library_count, count, count)
                         } else getString(R.string.directory_result_count, entries.size)
                         binding.empty.isVisible = entries.isEmpty()
                         binding.empty.setText(R.string.catalog_empty)
                         binding.retry.isVisible = failed
-                        val shortcuts = DirectoryPolicy.shortcuts(foundation, snapshot.favorites, snapshot.recent)
+                        val shortcuts = DirectoryPolicy.shortcuts(section, snapshot.favorites, snapshot.recent)
                         binding.shortcutsLabel.isVisible = false
                         binding.shortcutsScroll.isVisible = shortcuts.isNotEmpty() && filter.query.isBlank()
                         binding.shortcuts.removeAllViews()

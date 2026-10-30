@@ -16,12 +16,13 @@ description: "用于分析和实现 Android 项目架构与共享能力：模块
 - `.agents/rules/android.md`
 - `.agents/rules/architecture.md`
 - 涉及依赖时读取 `.agents/rules/build.md`
+- 目标为 DevLib 且存在 `.agents/rules/library-organization.md` 时读取该项目规则；从模块清单读取分类与物理目录，并检查 settings 的 projectDir 映射，不按前缀或来源推断归属。其他项目不套用 DevLib 分类或数量。
 
 ## 分析方法
 
 1. 读取 `settings.gradle`、版本目录、相关模块构建文件和相邻实现。
 2. 搜索现有共享模块、基础封装、公共组件和相同职责代码。
-3. 判断能力是功能专属、跨功能共享、平台配置还是第三方包装。
+3. 判断能力是功能专属、跨功能共享、平台配置还是第三方包装；区分架构职责、独立功能、三方服务适配与内部支撑，功能域路由不充当库分类。
 4. 按架构规则选择现有能力、WKQ 框架、AndroidX 或新增本地实现。
 5. 明确模块归属、依赖方向、公开类型和 `api/implementation` 边界。
 6. 实施最小修改并运行架构门禁与受影响模块编译。

@@ -14,4 +14,4 @@ App 已取消人像 Asset Pack、定位和 Nearby 等配套声明。最终 Manif
 
 独立消费工程同步移除被排除的坐标和公开类型。当前库保留迁入 API 包名，避免无意义改名。真实服务端、设备、发布 Native 与 ABI 验收不由构建成功替代。
 
-2026-10-26 已按实际 Gradle 插件纠正产物类型：lib_operations 是 Android AAR，合计 15 AAR / 4 JVM。目录脚本在构建前校验插件与 artifactType 的一致性，防止文档再次把偏通用 Kotlin 源码误当 JVM 库。
+历史记录（不代表当前数量）：2026-10-26 按实际 Gradle 插件纠正产物类型：lib_operations 是 Android AAR，合计 15 AAR / 4 JVM。目录脚本在构建前校验插件与 artifactType 的一致性，防止文档再次把偏通用 Kotlin 源码误当 JVM 库。

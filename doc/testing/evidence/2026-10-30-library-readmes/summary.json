@@ -1,0 +1,42 @@
+{
+  "scope": "documentation only",
+  "modules": 19,
+  "readmeFiles": 23,
+  "localLinksChecked": 289,
+  "brokenLinks": 0,
+  "documentedGradleTasksRegistered": 57,
+  "coreLayoutTests": 3,
+  "agentStructure": "passed",
+  "catalog": {
+    "aar": 16,
+    "jvm": 3
+  },
+  "androidCompilation": "not rerun",
+  "deviceTests": "not executed",
+  "remotePublication": "not executed",
+  "files": {
+    "README.md": "32b0217be68b0513cf31ed9263a69365f86b1d48be77ed0f4c6a2bb4aa060592",
+    "doc/README.md": "030c0f20c8125524dcf0fd012937f163ae5ba22dfcdd9f5604908a1af30d2f6d",
+    "core/README.md": "a26c94661a8302bfbc930df28c4988810a2ebd20b90003c4a8659663520468f5",
+    "samples/published-consumer/README.md": "78c7ce34fdc4914d115de23496a7b3bc4bf2515dc72f476424acb5b80fc2e625",
+    "core/functional/core_archive/README.md": "f48b0518e7c1d5398b8231cf8c6dbf9dff70292156036efad176b2752f20460d",
+    "core/architecture/core_base/README.md": "093f51e67d18508624f650cc118fa4f39e429d11642b8752734aa25c51d45668",
+    "core/functional/core_image_render/README.md": "8c5564535f2046426225e173d950e7dba0c687a8498b4a56a1f909368a686499",
+    "core/architecture/core_network/README.md": "ce9e90740e15ff923049156078e429a88d8b8fa0bd156bc9240a8bb09a61e042",
+    "core/functional/core_document/README.md": "578609dfca2f928e8cf2e5f428050a7c45982dbc2968540fd95e1e6a57f7ec6b",
+    "core/functional/core_qrcode/README.md": "d58b9ba9440c7de180c03e36cd10bd6186268712fbc08942303275c50e2e3be8",
+    "core/architecture/core_router_annotation/README.md": "f077b8c7170a6dc81beed19a3672b0ef6be75a07ec9d1fc4decefec476078c50",
+    "core/architecture/core_router_api/README.md": "338afdee3a287d2ffe762d71775e64197737142a31d9a5c35d8a7dd1e4505545",
+    "core/architecture/core_router_gradle_plugin/README.md": "0a74f62902756d738931c53533d4cfdc1af963db52ef54e420dbe5c61771962e",
+    "core/architecture/core_router_processor/README.md": "0962133bbfaabf95020781502a8a61dd9f3ecf40b981db42c2b147d1e736c1ff",
+    "core/architecture/core_utils/README.md": "fe5410afd529211ca29263a0cf258e83f1e23636816b968394c0fe83e73ccfc0",
+    "core/functional/lib_drop/README.md": "4bb5c74fa0b1bd3bc6f9b021295bd5ef78afb52713eef6f83f1e67b0b0e67750",
+    "core/functional/lib_metadata/README.md": "5434a5c931147e9431837bcfb55eba81dd1675d6f898b03537694b33dbcbc002",
+    "core/internal/lib_operations/README.md": "b540fa070e0fd86405dff4dddd87db1a24502208beb05c567a68154863693c04",
+    "core/functional/lib_upload/README.md": "99b8f7117e6232ca12a9d3c1d16e7c5b8739cee7d579fc100dffff461910bc20",
+    "core/architecture/lib_xpopup/README.md": "ab8a4e28530e687769bb5de5d3993baa565e5002bec43d9467d9c471af0e440d",
+    "core/thirdparty/core_google/README.md": "54c49fc9eef188e0a09bfdebd578290ffe3161b26a2090004a184658097c6d8b",
+    "core/functional/core_nas/README.md": "7ccbb75831622f32e083ab2a459d51ace33bcd51a23e9e02cecc66e4582b994d",
+    "core/functional/core_usb/README.md": "7c5e3e3ecd11c207d4fc43dc5e531ab2cff47d0e21196cfb38484ce03b8c5c72"
+  }
+}

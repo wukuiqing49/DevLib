@@ -1,4 +1,4 @@
-# DevLib 当前演示工程生成基线；core 中的独立库通过本地源码接入。
+# 新工程生成基线；DevLib 当前物理目录以 project-profile.yml 和 settings.gradle 为准，不用生成器覆盖现有库。
 projectName: DevLib
 packageName: com.wkq.dev
 applicationId: com.wkq.dev

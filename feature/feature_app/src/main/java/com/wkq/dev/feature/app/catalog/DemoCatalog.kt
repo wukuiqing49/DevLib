@@ -16,7 +16,18 @@ data class DemoEntry(
     @StringRes val title: Int,
     @StringRes val intro: Int,
     @StringRes val availability: Int,
-)
+) {
+    /** 按职责归类，与功能域路由分开，Google 服务不混入本地功能目录。 */
+    val section: LibrarySection
+        get() = when (category) {
+            "foundation" -> LibrarySection.ARCHITECTURE
+            "google" -> LibrarySection.THIRDPARTY
+            else -> LibrarySection.FUNCTIONAL
+        }
+
+    /** 展示真实源码目录，Gradle 逻辑模块路径继续保持兼容。 */
+    val sourcePath: String get() = "core/${section.directory}/$module"
+}
 
 /** 宿主工具目录，集中维护已保留库的入口和分类，不包含内部支撑库的独立页面。 */
 object DemoCatalog {

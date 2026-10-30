@@ -49,6 +49,7 @@ class LibraryDetailActivity : BaseVMTitleActivity<ActivityLibraryDetailBinding, 
                     val entry = DirectoryPolicy.find(module)
                     if (entry == null) { finish(); return@collect }
                     b.title.setText(entry.title); b.module.text = module; b.requirement.setText(entry.availability)
+                    b.location.text = getString(R.string.integration_location, getString(entry.section.title), entry.sourcePath)
                     b.overview.setText(entry.intro)
                     b.setup.setText(when {
                         module == "core_router_processor" -> R.string.integration_router_processor

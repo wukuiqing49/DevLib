@@ -1,3 +1,42 @@
+# 2026-10-30 全部库 README 与项目总览
+
+- 更新 19 个模块 README：按实际职责区分 8 架构、9 功能、1 三方、1 内部；补齐主要源码入口、调用流程、宿主责任、模块依赖、模块 SDK/JVM 声明、本地发布与检查命令、Demo 入口和验证边界。Google/文档导出的详细接入与既有可靠性说明保留。
+- 根 README 成为完整项目入口；doc/README 保留兼容入口并改为专题导航；core 索引链接到各库。修正路由插件发布任务与独立消费示例的分类用语，拆开 NAS/USB 职责，明确网络库远端发布配置不代表全部模块均已配置远端。
+- 文档静态检查通过：23 份 README、全部本地链接、UTF-8/代码围栏、19 模块覆盖；详细计数和 SHA-256 见证据。Gradle help 仅验证 57 个文档任务存在；目录映射测试 3/3、catalog 16 AAR/3 JVM、Agent 结构校验及 git diff --check 通过。
+- 文档任务按通用 execution 规则执行；无 Android 功能、页面、类或方法变更，Base/UI/国际化/Insets 与中文源码注释不适用；未重跑 Android 编译/单测，未做设备、外部链接实时、服务器或远端发布验收。保留历史构建结论，不将其当成本轮结果。未提交、未推送、未调整 CI。
+
+证据：[结果与文档指纹](evidence/2026-10-30-library-readmes/summary.json)、[复核命令](evidence/2026-10-30-library-readmes/commands.md)。以下保留历史报告。
+
+---
+
+# 2026-10-30 网络库发布配置
+
+- 使用项目 android-build-workflow；保留基础库源码、公开包名及标准坐标，仅扩展网络库构建配置。
+- 增加通用 HTTPS/file Maven、GitHub Packages 目标及根 JitPack 构建入口；普通构建无需发布凭据，实际上传前检查凭据。网络库版本可单独覆盖。
+- 本地通用 file Maven 发布成功：release AAR（含 classes.jar、Manifest、consumer rules）、20 个源码文件附件、POM 与 module metadata 均已检查；版本覆盖正确，Retrofit/OkHttp/Gson/协程 API 传递依赖保留。网络库 JVM 单测 6/6 通过。
+- Maven Local 安装入口通过，重定向至隔离临时仓库，未污染用户 Maven Local。
+- 构建门禁 0 警告、Agent 结构校验通过，JitPack YAML 可解析，Git 差异空白检查通过。GitHub Actions 未修改；JitPack 使用 bash 执行现有非 executable Wrapper。
+- 未执行远端 Maven/GitHub Packages 上传、JitPack 服务端构建、提交/push、adb 或设备验证；没有创建自动 CI。UI、Base 页面、国际化与沉浸式不适用于本次发布配置变更。保留已有 Gradle 弃用提示，不宣称 Maven Central 发布能力。
+
+证据：[产物与单测检查](evidence/2026-10-30-network-publishing/summary.json)。以下保留历史报告。
+
+---
+
+# 2026-10-30 库分类、Agent 与四入口 Demo 同步
+
+当前分类统一为架构 8、功能 9、三方服务 1、内部支撑 1，共 19 个模块。App 为架构、功能、三方、工作区四入口；架构默认首页，Google 不再混入功能列表。库目录 15 项，路由详情保留三个子入口，总计 18 个能力路由。接入页展示真实源码位置，保留既有 Gradle 路径、公开 API 和发布坐标。
+
+- **本次通过**：DirectoryPolicyTest 6/6，覆盖互斥分类、路由体系、跨页快捷入口、分类搜索、旧导航键与源码路径。
+- **本次通过**：目录映射 3、库目录 11、Agent 结构测试 14、工作流测试 6，共 34 项 Python 测试；项目配置与模块清单使用相同路径集合。
+- **本次通过**：App Debug 构建与目录单元测试，共 542 个任务；最终 APK 检查 19 个模块、18 个能力路由和 5 组路由初始化信息。
+- **本次通过**：严格宿主聚合检查（含 9 个 app/feature 模块）、UI 与国际化 0 警告；7 个任务 Kotlin 文件中文注释/Base/资源化审计 0 发现。架构检查保留独立消费示例和 Utils 初始化的两项既有提示。
+- **静态复核**：复用 BaseVMFragment、BaseVMTitleActivity、BaseViewModel、BaseRecyclerViewAdapter；保留 XML/ViewBinding/MVVM。系统栏、刘海与 IME 继续由 MainActivity/BaseTitleActivity 负责，底部导航不重复增加 Insets；普通目录不隐藏系统栏。新文案覆盖默认中文、zh-rCN、en。
+- **未执行/排除**：无 adb/设备操作；未验证 API 26/37 运行、小屏/横屏/平板/多窗口、RTL/大字体、旋转/进程重建、真实登录/支付/兑换/服务器及 Release/R8。静态状态恢复逻辑不代表设备恢复通过。
+
+证据：[结果与 APK 指纹](evidence/2026-10-30-library-organization/summary.json)、[源码指纹](evidence/2026-10-30-library-organization/source-files.json)、[源码审计](evidence/2026-10-30-library-organization/source-audit.json)、[命令](evidence/2026-10-30-library-organization/commands.md)。本轮未提交、未推送、未修改 CI，不推进设备或全功能基线。以下保留历史结果，不与本轮测试计数合并。
+
+---
+
 # 2026-10-30 Google 单库原生支付页面
 
 支付引擎、Activity、XPopup BottomSheet、兑换说明、恢复和公开付费状态统一进入 `core_google`，没有新增 UI 模块；工作台增加两个显式测试入口。基础库源码未改。既有运行时及页面配置继续使用，商品/账号/条款/业务 Pro 映射由宿主维护。

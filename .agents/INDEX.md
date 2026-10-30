@@ -17,7 +17,8 @@
 ## 配置
 
 - `config/project-profile.yml`：DevLib Android 多模块库与演示工程事实，当前为 `initialized / integration-validation`。
-- `config/project-scaffold.yml`：当前 DevLib 生成基线，名称 `DevLib`、包名 `com.wkq.dev`、Application 类 `DevLibApplication`。已迁入的 core 源码不通过重新生成覆盖。
+- `config/project-scaffold.yml`：新工程生成示例参数；不代表 DevLib 当前分组目录，已迁入源码禁止重新生成覆盖。现有项目位置以 project-profile 与 settings 的映射为准。
+- `../docs/library-catalog.json`：19 个模块的分类、物理路径、来源与产物类型；架构 8、功能 9、三方 1、内部 1。App 对外提供架构、功能、三方与工作区四个入口。
 - 根目录 `README.md` 是功能模块与接入目录；`docs/import-manifest.json` 记录来源和快照摘要；`doc/testing/TEST_REPORT.md` 记录实际验证。
 - `agentFiles` 注册的 DropLAN 历史产品专项文件不自动启用；通用库边界以当前 AGENTS.md 和模块构建配置为准。
 
@@ -25,6 +26,7 @@
 
 - `rules/android.md`：Android 通用修改边界、生命周期、性能、安全和兼容性。
 - `rules/architecture.md`：模块边界、共享能力和 WKQ 复用。
+- `rules/library-organization.md`：本仓库四类库的目录映射、Demo 分组、文档同步和来源追溯边界。
 - `rules/ui.md`：页面结构、滚动、文字、资源和 Insets。
 - `rules/i18n.md`：strings、多语言、占位符、plurals 和 raw HTML。
 - `rules/build.md`：Gradle、版本、依赖、签名、manifest、release 和 native。
@@ -49,6 +51,7 @@
 
 ## Skills
 
+- `skills/devhub-basic-integration/`：私有 JitPack token 引用、DevHub 初始化及安装/日活、手机基础信息和 Locale 国家语言；仅按目标项目明确请求接入，不包含复杂业务页面或支付权益。
 - `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
 

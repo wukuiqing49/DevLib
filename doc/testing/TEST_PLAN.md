@@ -1,3 +1,20 @@
+# 四类库组织与四入口同步（2026-10-30）
+
+按用户要求同步 .agents、AGENTS.md、当前文档与 Demo。选择直接受影响的目录、导航和接入详情；库引擎及基础库实现未改，本轮不重复执行其全部业务测试。目录迁移阶段已运行全部库构建与单元测试，结果单独记录，不能与本轮目录策略测试混计。
+
+| ID | 关联与预期 | 方法 |
+| --- | --- | --- |
+| ORG-AGENT | 分类规则、项目档案、工作流、Skill 引用无冲突，生成参数不覆盖现有工程 | Agent 结构检查、结构及工作流脚本测试 |
+| ORG-LAYOUT | 19 个模块映射一致，category / directoryGroup / path 对齐，core 依赖边界仍有效 | test_core_layout、test_verify_demo_catalog |
+| ORG-DIRECTORY | 架构五套体系、功能九库、三方 Google 互斥；路由子模块、快捷区及搜索仍正确 | DirectoryPolicyTest 六项 JVM 测试 |
+| ORG-INTEGRATION | 接入详情显示实际分类和源码路径，Gradle 依赖、路由及发布坐标保持兼容 | App Debug 构建、源码审查、APK 路由检查 |
+| ORG-I18N | 新导航、标题、统计及源码位置默认中文、zh-rCN、en 键与占位符一致 | 严格聚合国际化与 UI 检查、资源编译 |
+| ORG-ADAPT | 沿用 Base 的系统栏、IME 唯一 owner；子页独立状态，旧分类参数回退可读 | 源码与 XML 审查；真实交互未执行 |
+
+本轮按 executionPolicy 排除所有 adb、设备安装、截图及真实账号、购买和网络动作；不创建或修改 CI。未验证小屏/横屏/平板/分屏、RTL、大字体、旋转及进程重建的实际视觉与交互，不推进设备或全功能基线。旧三入口设备结果保留为历史。
+
+---
+
 # Google 单库原生支付页面（2026-10-30）
 
 本轮按用户要求把引擎、页面与状态统一到 core_google，不新增 UI 模块，不改基础库实现。现有 executionPolicy 排除 adb/设备操作；历史 Pixel 8 授权不用于本轮支付验证。无真实付费、兑换、账号及远端 CI 操作。

@@ -1,0 +1,13 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DirectoryPolicy.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibraryDetailActivity.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibraryListFragment.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibrarySection.kt",
+    "feature/feature_app/src/test/java/com/wkq/dev/feature/app/catalog/DirectoryPolicyTest.kt"
+  ],
+  "findings": []
+}

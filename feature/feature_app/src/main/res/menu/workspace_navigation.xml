@@ -1,5 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/nav_tools" android:title="@string/nav_libraries" android:icon="@drawable/ic_workspace_tools" />
 <item android:id="@+id/nav_foundation" android:title="@string/nav_foundation" android:icon="@drawable/ic_workspace_developer" />
+<item android:id="@+id/nav_tools" android:title="@string/nav_libraries" android:icon="@drawable/ic_workspace_tools" />
+<item android:id="@+id/nav_thirdparty" android:title="@string/nav_thirdparty" android:icon="@drawable/ic_workspace_services" />
 <item android:id="@+id/nav_assets" android:title="@string/nav_workspace" android:icon="@drawable/ic_workspace_assets" />
 </menu>

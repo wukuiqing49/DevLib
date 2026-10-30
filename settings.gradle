@@ -16,7 +16,6 @@ dependencyResolutionManagement {
         routerLibs { from(files('gradle/catalogs/routerLibs.versions.toml')) }
         dropLibs { from(files('gradle/catalogs/dropLibs.versions.toml')) }
         pressLibs { from(files('gradle/catalogs/pressLibs.versions.toml')) }
-        roofLibs { from(files('gradle/catalogs/roofLibs.versions.toml')) }
         nasLibs { from(files('gradle/catalogs/nasLibs.versions.toml')) }
         googleLibs { from(files('gradle/catalogs/googleLibs.versions.toml')) }
         photoLibs { from(files('gradle/catalogs/photoLibs.versions.toml')) }
@@ -65,3 +64,24 @@ include ':feature:feature_demo_document'
 
 include ':core:core_google'
 include ':feature:feature_demo_google'
+
+// 物理目录按职责分类；保留既有 Gradle 模块路径及发布坐标。
+project(':core:core_archive').projectDir = file('core/functional/core_archive')
+project(':core:core_base').projectDir = file('core/architecture/core_base')
+project(':core:core_image_render').projectDir = file('core/functional/core_image_render')
+project(':core:core_network').projectDir = file('core/architecture/core_network')
+project(':core:core_document').projectDir = file('core/functional/core_document')
+project(':core:core_qrcode').projectDir = file('core/functional/core_qrcode')
+project(':core:core_router_annotation').projectDir = file('core/architecture/core_router_annotation')
+project(':core:core_router_api').projectDir = file('core/architecture/core_router_api')
+project(':core:core_router_gradle_plugin').projectDir = file('core/architecture/core_router_gradle_plugin')
+project(':core:core_router_processor').projectDir = file('core/architecture/core_router_processor')
+project(':core:core_utils').projectDir = file('core/architecture/core_utils')
+project(':core:lib_drop').projectDir = file('core/functional/lib_drop')
+project(':core:lib_metadata').projectDir = file('core/functional/lib_metadata')
+project(':core:lib_operations').projectDir = file('core/internal/lib_operations')
+project(':core:lib_upload').projectDir = file('core/functional/lib_upload')
+project(':core:lib_xpopup').projectDir = file('core/architecture/lib_xpopup')
+project(':core:core_google').projectDir = file('core/thirdparty/core_google')
+project(':core:core_nas').projectDir = file('core/functional/core_nas')
+project(':core:core_usb').projectDir = file('core/functional/core_usb')

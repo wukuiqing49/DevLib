@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="nav_libraries">功能库</string>
-  <string name="nav_foundation">基础组件</string>
+  <string name="nav_libraries">功能</string>
+  <string name="nav_foundation">架构</string>
   <string name="nav_workspace">工作区</string>
-  <string name="directory_intro">按能力选择库，进入完整流程或查看接入方式。</string>
-  <string name="foundation_intro">框架、工具、网络、路由与弹窗，按体系查看组件。</string>
+  <string name="directory_intro">文件、图片与文档的独立业务流程；Google 服务请前往三方库。</string>
+  <string name="foundation_intro">Base、Utils、Network、Routers、XPopup，五套体系覆盖八个架构模块。</string>
   <string name="workspace_intro">管理素材与产物，查看已执行的操作。</string>
   <string name="directory_shortcuts">常用与最近</string>
   <string name="directory_experience">体验</string>
@@ -13,7 +13,7 @@
   <string name="directory_unfavorite">取消常用</string>
   <string name="directory_router">路由体系</string>
   <string name="directory_router_intro">统一查看路由 API、注解、KSP 处理器及 Gradle 插件。</string>
-  <string name="directory_summary">%1$d 个功能库 · %2$d 个基础模块</string>
+  <string name="directory_summary">%1$d 个功能库 · %2$d 个架构模块</string>
   <string name="directory_foundation_count">%1$d 套体系 · %2$d 个模块</string>
   <string name="directory_meta">%1$s · %2$s</string>
   <string name="directory_result_count">%1$d 个匹配入口</string>
@@ -39,7 +39,7 @@
   <string name="integration_document_note">一份记录生成 PDF、Excel、Word，支持资料、签名图、模板和水印。字体、Office 阅读器和打印效果需宿主验收。</string>
   <string name="integration_google_note">Google 登录与 Firebase Auth 需宿主配置 OAuth、包名和签名；Billing 需 Play 商品及测试账号；评分受 Play 配额约束。无广告、统计或宿主 Pro 策略。</string>
   <string name="integration_network_note">宿主配置地址、证书和认证信息，不在库内写入真实凭据；仅对实际局域网访问申请对应权限。</string>
-  <string name="integration_files_note">宿主选择文件并授予访问权限。服务器、USB 授权或对端连接按具体流程配置；前台操作记录不是可靠后台队列。</string>
+  <string name="integration_files_note">宿主选择文件并授予访问权限。服务器、SAF 目录授权或对端连接按具体流程配置；前台操作记录不是可靠后台队列。</string>
   <string name="integration_local_note">可使用页面示例体验本地能力；真实输入的格式、大小、权限和内存限制以模块 README 与公开 API 为准。</string>
   <string name="integration_router_processor">KSP 处理器：声明 ksp(project(\":core:core_router_processor\"))，并配置与当前 Kotlin 匹配的 KSP 插件。</string>
   <string name="integration_router_annotation">路由注解：提供页面和服务声明，配合路由 API 与 KSP 处理器使用。</string>
@@ -56,14 +56,14 @@
   <string name="directory_archive">压缩与解压</string>
   <string name="directory_upload">文件上传</string>
   <string name="directory_nas">NAS 文件管理</string>
-  <string name="directory_usb">USB 文件管理</string>
+  <string name="directory_usb">外部存储（SAF）</string>
   <string name="directory_drop">局域网分享</string>
   <string name="summary_base">页面、状态、列表与事件的公共基础封装。</string>
   <string name="summary_utils">文件、URI、设备与常用工具。</string>
   <string name="summary_network">网络请求、响应与错误处理。</string>
   <string name="summary_router">路由、注解、KSP 生成与构建接入。</string>
   <string name="summary_popup">弹窗、底部面板与图片预览组件。</string>
-  <string name="summary_google">登录、Firebase Auth、Play 购买与评分。</string>
+  <string name="summary_google">登录、Firebase Auth、Play 支付、官方兑换与评分。</string>
   <string name="summary_image">水印、裁剪、拼图与图片渲染。</string>
   <string name="summary_qr">生成二维码与识别图片中的二维码。</string>
   <string name="summary_metadata">查看照片 EXIF、IPTC 与 XMP，写入副本。</string>
@@ -73,4 +73,13 @@
   <string name="summary_nas">连接 SMB、WebDAV 或 SFTP 管理文件。</string>
   <string name="summary_usb">通过系统授权访问外接存储。</string>
   <string name="summary_drop">局域网配对与文件分享。</string>
+  <string name="nav_thirdparty">三方</string>
+  <string name="directory_architecture_title">架构库</string>
+  <string name="directory_functional_title">功能库</string>
+  <string name="directory_thirdparty_title">三方服务库</string>
+  <string name="thirdparty_intro">Google 登录、Play 支付、官方兑换与评分；使用前配置宿主账号、商品与签名。</string>
+  <string name="integration_location">所属分类：%1$s\n源码位置：%2$s</string>
+  <plurals name="directory_library_count">
+    <item quantity="other">%1$d 个独立库</item>
+  </plurals>
 </resources>

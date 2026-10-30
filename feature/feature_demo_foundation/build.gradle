@@ -17,7 +17,6 @@ dependencies {
     implementation project(':core:core_utils')
     implementation project(':core:core_router_api')
     implementation project(':core:core_network')
-    implementation project(':core:core_router_api')
     implementation libs.androidx.core.ktx
     implementation libs.androidx.activity.ktx
     implementation libs.androidx.lifecycle.runtime.ktx

@@ -1,6 +1,6 @@
 # DevLib 逐库分析
 
-当前范围：20 个模块，8 个基础模块、11 个功能库、1 个内部支撑库。已按用户确认范围移出 15 个功能模块；基础库保持原有实现。当前分类见 docs/library-catalog.json，移出来源见 docs/import-manifest.json 的 removedModules。
+当前范围：19 个模块，8 个架构模块、9 个功能库、1 个三方服务库、1 个内部支撑库。分类与源码路径见 docs/library-catalog.json；来源和移出历史见 docs/import-manifest.json。基础库实现保持原样。
 
 lib_operations 为保留功能提供预算、取消、进度与输出契约，不单独展示业务页面。编译与运行验收分开，结果见 [最新报告](testing/TEST_REPORT.md)。
 
@@ -230,10 +230,10 @@ PDF 使用真实文字和表格，长内容跨页；Excel 分基本信息和明�
 
 ### core_google
 
-来源：DropLAN 当前启用源码；产物：aar；分类：SDK 功能库。
+来源：DropLAN 当前启用源码；产物：aar；分类：三方服务库。
 
-统一 Credential Manager Google 登录、Firebase Authentication、Play Billing 和评分提示。评分参考 SiteReport / PressIPTC，使用通用完成事件、可配置冷却和 Play 原生流程，不做高低星分流。保留 GoogleSignInCoordinator、DropGoogleAccount、GoogleBillingRuntime/Manager 及状态缓存；不依赖基础库，也不引入原页面、广告、Analytics 或 DevHub。商品、账号策略和服务端验证由宿主配置。Play 支持订阅与非消耗型一次性购买，不适用于消耗品。
+统一 Credential Manager Google 登录、Firebase Authentication、Play Billing、官方兑换和评分提示。评分参考 SiteReport / PressIPTC，使用通用完成事件、可配置冷却和 Play 原生流程，不做高低星分流。保留 GoogleSignInCoordinator、DropGoogleAccount、GoogleBillingRuntime/Manager 及状态缓存；原生支付 Activity 与 BottomSheet 复用 Base/XPopup，不引入原产品页面、广告、Analytics 或 DevHub。商品、账号策略和服务端验证由宿主配置。Play 支持订阅与非消耗型一次性购买，不适用于消耗品。
 
-本地解析 token claims 只供显示，Firebase 验证后才构成 Firebase 会话；客户端购买状态不替代服务端验单。旧分散认证、Billing 和 Entitlement 库保持移出。Demo 提供独立配置、登录、报价选择、购买确认与恢复流程；不自动购买。详见 [接入说明](../core/core_google/README.md)。
+本地解析 token claims 只供显示，Firebase 验证后才构成 Firebase 会话；客户端购买状态不替代服务端验单。旧分散认证、Billing 和 Entitlement 库保持移出。Demo 提供独立配置、登录、报价选择、购买确认与恢复流程；不自动购买。详见 [接入说明](../core/thirdparty/core_google/README.md)。
 
 2026-10-27 已落地的接口与可靠性调整见 [逐库优化记录](library-optimization.md)。未知订阅状态不降级为未订阅；各库的取消、输出归属和事务边界以该记录与模块 README 为准。

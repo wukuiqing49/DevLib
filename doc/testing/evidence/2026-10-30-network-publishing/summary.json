@@ -1,0 +1,19 @@
+{
+  "coordinates": "com.wkq.dev:core-network:0.1.0-publication-check",
+  "dependencies": {
+    "kotlinx-coroutines-core": "compile",
+    "retrofit": "compile",
+    "okhttp": "compile",
+    "gson": "compile",
+    "viewbinding": "compile",
+    "kotlin-stdlib": "compile",
+    "kotlinx-coroutines-android": "runtime",
+    "converter-gson": "runtime"
+  },
+  "sourceFiles": 20,
+  "tests": 6,
+  "failures": 0,
+  "yaml": "parsed",
+  "remotePublication": "not executed",
+  "mavenLocalInstallation": "passed (isolated repository)"
+}

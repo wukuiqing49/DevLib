@@ -1,0 +1,5 @@
+# 仅安装网络库；不发布其余模块，也不配置 GitHub Actions。
+jdk:
+  - openjdk17
+install:
+  - bash ./gradlew :core:core_network:publishReleasePublicationToMavenLocal -PnetworkPublishVersion="$VERSION" -x test --no-daemon

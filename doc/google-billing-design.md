@@ -130,6 +130,6 @@ BottomSheet 先审查 XPopup 实际 Window 和 Insets owner；宿主处于隐藏
 
 ## 原生落地更新（2026-10-30，覆盖前述仅原型状态）
 
-按用户最新要求，原生支付 UI 和引擎统一放在 `core/core_google`，没有新增 core_google_ui 模块。实现 GoogleBillingUi.openActivity / showBottomSheet、GoogleBillingContract、GoogleBillingStatus，复用既有运行时及页面配置。采用 BaseVMActivity、BaseViewModel、BaseRecyclerViewAdapter、XPopup、XML/ViewBinding，14 个语言区域资源、日夜配色、官方兑换与恢复流程；不依赖 feature_res。
+按用户最新要求，原生支付 UI 和引擎统一放在 `core/thirdparty/core_google`，没有新增 core_google_ui 模块。实现 GoogleBillingUi.openActivity / showBottomSheet、GoogleBillingContract、GoogleBillingStatus，复用既有运行时及页面配置。采用 BaseVMActivity、BaseViewModel、BaseRecyclerViewAdapter、XPopup、XML/ViewBinding，14 个语言区域资源、日夜配色、官方兑换与恢复流程；不依赖 feature_res。
 
-HTML 继续作为设计参考，原型中的模拟价格和成功状态不参与原生支付。原生仅展示真实 Play 报价，购买前重查报价；兑换返回查询实际购买，待付款与未知不授予 Pro。宿主负责商品、条款、账号与权益映射。接入示例及不支持项见 core/core_google/README.md，实际验证见固定测试报告。
+HTML 继续作为设计参考，原型中的模拟价格和成功状态不参与原生支付。原生仅展示真实 Play 报价，购买前重查报价；兑换返回查询实际购买，待付款与未知不授予 Pro。宿主负责商品、条款、账号与权益映射。接入示例及不支持项见 core/thirdparty/core_google/README.md，实际验证见固定测试报告。
