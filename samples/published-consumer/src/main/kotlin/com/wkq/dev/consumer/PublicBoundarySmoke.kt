@@ -22,6 +22,14 @@ class PublicBoundarySmoke {
     fun utilities() = com.wkq.util.FileUtil
     fun firebaseUser(): com.google.firebase.auth.FirebaseUser? = com.wkq.google.auth.DropGoogleAccount.currentUser
     fun billingConfig() = com.wkq.google.billing.GoogleBillingRuntimeConfig()
+    /** 校验公开支付契约与页面配置通过单个 Google 库坐标可编译。 */
+    fun billingPage(launcher: androidx.activity.result.ActivityResultLauncher<com.wkq.google.billing.ui.GoogleBillingRequest>) {
+        com.wkq.google.billing.ui.GoogleBillingUi.openActivity(launcher)
+        com.wkq.google.billing.ui.GoogleBillingUi.showBottomSheet(launcher)
+    }
+    /** 状态流公开类型由库传递提供，消费方不额外引用引擎实现。 */
+    fun paidState(): kotlinx.coroutines.flow.StateFlow<com.wkq.google.billing.GooglePaidStatus> =
+        com.wkq.google.billing.GoogleBillingStatus.state
     fun pdf(file: File, output: File) = PdfOperationRequest(listOf(ImageSource.FileSource(file)), PdfOutputTarget.FileTarget(output))
     fun scanner(activity: QrLiveScanActivity) = activity.finish()
 }

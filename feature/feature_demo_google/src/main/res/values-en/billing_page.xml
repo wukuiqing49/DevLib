@@ -1,0 +1,7 @@
+<resources>
+    <string name="google_page_open">Open payment page</string>
+    <string name="google_sheet_open">Open payment bottom sheet</string>
+    <string name="google_page_unknown">Purchase status is unconfirmed. Restore purchases to check again later.</string>
+    <string name="google_page_pro">An active paid entitlement was found.</string>
+    <string name="google_page_free">Purchases checked. No active paid entitlement was found.</string>
+</resources>

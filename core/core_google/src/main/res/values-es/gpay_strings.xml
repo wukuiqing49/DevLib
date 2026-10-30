@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">Volver</string>
+    <string name="gpay_buy">Continuar · %1$s</string>
+    <string name="gpay_cancelled">Compra cancelada</string>
+    <string name="gpay_cancelled_body">No se ha realizado una compra nueva. Las ventajas existentes no cambian.</string>
+    <string name="gpay_checking">Comprobar compras</string>
+    <string name="gpay_checking_body">Volver a la aplicación no confirma el canje. Comprueba el registro de compras.</string>
+    <string name="gpay_choose">Elegir un plan</string>
+    <string name="gpay_close">Cerrar</string>
+    <string name="gpay_done">Listo</string>
+    <string name="gpay_empty">No hay productos disponibles</string>
+    <string name="gpay_empty_body">Restaura las compras existentes o vuelve a cargar los productos más tarde.</string>
+    <string name="gpay_error">Error de consulta</string>
+    <string name="gpay_error_body">Comprueba la conexión y reintenta. Se conservan los registros de compra existentes.</string>
+    <string name="gpay_failed">No se pueden comprobar las compras</string>
+    <string name="gpay_failed_body">Resultado sin confirmar. Reintenta más tarde; las ventajas existentes se conservan.</string>
+    <string name="gpay_lifetime">Compra única</string>
+    <string name="gpay_loading">Cargando productos</string>
+    <string name="gpay_loading_body">Obteniendo los precios actuales y los productos disponibles en Google Play.</string>
+    <string name="gpay_manage">Gestionar suscripción ↗</string>
+    <string name="gpay_missing">No se encontró una compra nueva</string>
+    <string name="gpay_missing_body">Comprueba la cuenta de Play y el código. El saldo de una tarjeta regalo no desbloquea ventajas por sí solo.</string>
+    <string name="gpay_month">Suscripción mensual</string>
+    <string name="gpay_offline">Registro de compra sin conexión</string>
+    <string name="gpay_offline_body">Se muestra un registro de compra anterior. Conéctate para comprobar el estado actual.</string>
+    <string name="gpay_once">pago único</string>
+    <string name="gpay_one_time">Un solo pago de %1$s. Sin renovación.</string>
+    <string name="gpay_pending">Pago pendiente</string>
+    <string name="gpay_pending_body">Completa el pago en Google Play. Las compras pendientes no desbloquean ventajas.</string>
+    <string name="gpay_privacy">Política de privacidad</string>
+    <string name="gpay_pro">Pro está activo</string>
+    <string name="gpay_redeem">Canjear código</string>
+    <string name="gpay_redeem_account">Usa la misma cuenta de Google Play con la que compraste.</string>
+    <string name="gpay_redeem_already">¿Ya lo canjeaste? Sincronizar compras</string>
+    <string name="gpay_redeem_gift">Las tarjetas regalo añaden saldo de Play; no activan Pro directamente. Las ventajas dependen de una compra válida.</string>
+    <string name="gpay_redeem_go">Canjear en Google Play ↗</string>
+    <string name="gpay_redeem_intro">Introduce el código en Google Play y vuelve para sincronizar las compras válidas.</string>
+    <string name="gpay_redeem_title">Canjear un código de Google Play</string>
+    <string name="gpay_restore">Restaurar compras</string>
+    <string name="gpay_retry">Reintentar</string>
+    <string name="gpay_secure">Pago seguro con Google Play</string>
+    <string name="gpay_select">Elige un plan</string>
+    <string name="gpay_success">Ventajas activadas</string>
+    <string name="gpay_terms">Términos del servicio</string>
+    <string name="gpay_year">Suscripción anual</string>
+    <string name="gpay_not_initialized">Inicializa GoogleBillingRuntime en la Application del anfitrión antes de abrir esta página.</string>
+    <string name="gpay_unavailable">No disponible</string>
+    <string name="gpay_updated">Se han comprobado las compras.</string>
+    <string name="gpay_purchase_failed">No se puede iniciar la compra. Reintenta.</string>
+    <string name="gpay_purchase_started">Completa la compra en Google Play.</string>
+    <string name="gpay_offer_changed">El precio o la oferta ha cambiado. Revisa los datos antes de comprar.</string>
+    <string name="gpay_partial">No se pudieron cargar algunos productos. Reintenta.</string>
+    <string name="gpay_external_failed">No se puede abrir la página. Comprueba el navegador o Google Play.</string>
+    <string name="gpay_sign_in">La aplicación anfitriona no permite esta compra. Inicia sesión o revisa su configuración.</string>
+    <string name="gpay_recovery">La confirmación de la compra está pendiente. Restaura las compras para volver a comprobar.</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s. Renovación automática; gestiona o cancela en Google Play.</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">cada %1$d día</item>
+        <item quantity="other">cada %1$d días</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">cada %1$d semana</item>
+        <item quantity="other">cada %1$d semanas</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">cada %1$d mes</item>
+        <item quantity="other">cada %1$d meses</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">cada %1$d año</item>
+        <item quantity="other">cada %1$d años</item>
+    </plurals>
+</resources>

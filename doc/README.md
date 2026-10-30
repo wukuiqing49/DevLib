@@ -18,7 +18,7 @@ Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当�
 
 | 模块 | 来源 | 用途 |
 | --- | --- | --- |
-| `core_google` | DropLAN | Google 登录、Firebase Auth、Play Billing 与评分提示统一 SDK 适配；[接入说明](../core/core_google/README.md)。 |
+| `core_google` | DropLAN | Google 登录、Firebase Auth、Play Billing、原生支付 Activity/BottomSheet、官方兑换与评分提示统一 SDK 适配；[接入说明](../core/core_google/README.md)。 |
 | `core_archive` | PhotoKit | ZIP 创建与带密码归档解压，包含压缩等级、加密选项、预算、取消及原子输出。 |
 | `core_image_render` | PhotoKit | Bitmap 渲染：批注/撤销历史、水印、设备样机、拍立得相框和签名提取。 |
 | `core_document` | PhotoKit / RoofQuote | 同一份记录导出 PDF、Excel、Word；保留原图片 PDF、DOCX/XLSX 写入 API。[接入说明](../core/core_document/README.md)。 |
@@ -33,7 +33,7 @@ Android 独立开发库与开发者能力工作台，包名 `com.wkq.dev`。当�
 
 原分散登录与支付权益库、拍照定位、主动崩溃、原产品网页、报告模板、Nearby、媒体管理、证件照、Native 图片引擎、RAW 和人像模型已移出。Starxen、BeautySDK、DevHub 不在当前范围。
 
-Google 登录、Firebase Auth 与 Play Billing 统一采用 `core_google`，旧分散模块不再维护。配置和商品由宿主提供，Demo 不自动发起登录或购买。
+Google 登录、Firebase Auth 与 Play Billing 统一采用 `core_google`，旧分散模块不再维护。配置和商品由宿主提供，Demo 不自动发起登录或购买。支付页面、状态流及多语言资源均在同一个 core_google 中，直接复用运行时配置；接入示例见库说明。
 
 ## 目录与使用
 

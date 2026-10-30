@@ -1,0 +1,78 @@
+{
+  "light": {
+    "ink/page": {
+      "foreground": "#192338",
+      "background": "#F5F7FC",
+      "ratio": 14.63,
+      "passesNormalText": true
+    },
+    "muted/page": {
+      "foreground": "#526078",
+      "background": "#F5F7FC",
+      "ratio": 5.93,
+      "passesNormalText": true
+    },
+    "muted/card": {
+      "foreground": "#526078",
+      "background": "#FFFFFF",
+      "ratio": 6.36,
+      "passesNormalText": true
+    },
+    "accent/page": {
+      "foreground": "#2458C6",
+      "background": "#F5F7FC",
+      "ratio": 5.96,
+      "passesNormalText": true
+    },
+    "accent/selected": {
+      "foreground": "#2458C6",
+      "background": "#DFE8FF",
+      "ratio": 5.21,
+      "passesNormalText": true
+    },
+    "button": {
+      "foreground": "#FFFFFF",
+      "background": "#2458C6",
+      "ratio": 6.39,
+      "passesNormalText": true
+    }
+  },
+  "dark": {
+    "ink/page": {
+      "foreground": "#E5ECF7",
+      "background": "#101722",
+      "ratio": 15.13,
+      "passesNormalText": true
+    },
+    "muted/page": {
+      "foreground": "#B9C6DA",
+      "background": "#101722",
+      "ratio": 10.41,
+      "passesNormalText": true
+    },
+    "muted/card": {
+      "foreground": "#B9C6DA",
+      "background": "#192331",
+      "ratio": 9.16,
+      "passesNormalText": true
+    },
+    "accent/page": {
+      "foreground": "#AFC6FF",
+      "background": "#101722",
+      "ratio": 10.57,
+      "passesNormalText": true
+    },
+    "accent/selected": {
+      "foreground": "#AFC6FF",
+      "background": "#233F70",
+      "ratio": 6.12,
+      "passesNormalText": true
+    },
+    "button": {
+      "foreground": "#0B2C65",
+      "background": "#AFC6FF",
+      "ratio": 7.9,
+      "passesNormalText": true
+    }
+  }
+}

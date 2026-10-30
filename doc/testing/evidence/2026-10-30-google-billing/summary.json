@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-30",
+  "head": "d7a48dde2d1eb4c641bc02f02a0117024c8742b7",
+  "workingTree": "uncommitted; no baseline advancement",
+  "tests": {
+    "core/core_google": {
+      "totals": {
+        "tests": 58,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.wkq.google.billing.GoogleBillingEntitlementCacheTest",
+          "tests": "11",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:18:48.196Z",
+          "time": "0.208"
+        },
+        {
+          "name": "com.wkq.google.billing.GoogleBillingEntitlementTest",
+          "tests": "4",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:18:48.412Z",
+          "time": "0.004"
+        },
+        {
+          "name": "com.wkq.google.billing.GoogleBillingPolicyTest",
+          "tests": "10",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:18:48.424Z",
+          "time": "0.113"
+        },
+        {
+          "name": "com.wkq.google.billing.GoogleSubscriptionPolicyTest",
+          "tests": "6",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:18:48.542Z",
+          "time": "0.007"
+        },
+        {
+          "name": "com.wkq.google.billing.ui.GoogleBillingActivityTest",
+          "tests": "3",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:18:49.760Z",
+          "time": "17.628"
+        },
+        {
+          "name": "com.wkq.google.billing.ui.GoogleBillingPagePolicyTest",
+          "tests": "5",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:19:07.395Z",
+          "time": "0.039"
+        },
+        {
+          "name": "com.wkq.google.rate.GoogleRateManagerTest",
+          "tests": "10",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:19:07.520Z",
+          "time": "8.991"
+        },
+        {
+          "name": "com.wkq.google.rate.GoogleRatePolicyTest",
+          "tests": "9",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:19:16.515Z",
+          "time": "0.007"
+        }
+      ]
+    },
+    "feature/feature_demo_google": {
+      "totals": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "name": "com.wkq.dev.demo.google.PurchaseStateRecoveryTest",
+          "tests": "6",
+          "failures": "0",
+          "errors": "0",
+          "skipped": "0",
+          "timestamp": "2026-10-30T03:19:38.090Z",
+          "time": "0.214"
+        }
+      ]
+    }
+  },
+  "sourceSha256": {
+    "core/core_google/build.gradle": "d977736119c3722249f619ec98113fc2c9d09e096ac3b20634c3f18beb140a27",
+    "core/core_google/consumer-rules.pro": "a32f70531931e1bcb2a4dc3be128d388902d8158b45a4544fce249774f165706",
+    "core/core_google/src/main/AndroidManifest.xml": "aa6f110095cec6b32dc7a731ec62eb78e168712d39eba973b52d2123231e9ba1",
+    "core/core_google/src/main/java/com/wkq/google/auth/DropGoogleAccount.kt": "bfc119e20591c6c370f37a53c02fb90e0826f482eb1dd645d48f733f22f129d0",
+    "core/core_google/src/main/java/com/wkq/google/auth/GoogleSignInCoordinator.kt": "bcddacd09b46d84241dbe1fe5d5db5f3951f5a7225e5e88df8f046e92087d750",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingEntitlement.kt": "1decabf9a004eab49ed1a7747b20b10318131d9926056dac3669f4753fa6b28d",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingEntitlementCache.kt": "9412de5856936045e50433af2dad2f97d0615e2413b6a7e0143189a075c40c7e",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingGateway.kt": "8210114d00519f14f929c099f0071e54084470ad0b00b981c480907e91ed0ecf",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingManager.kt": "241ef0d1817a54184f2c4398c9ff100332990ce075999308fafb4e28788378d7",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingModels.kt": "33704638e6fafeface5774856ff4859f50ac29a191b99e3ff9b70f1b677c63fd",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingRuntime.kt": "bded8244ff7d931da1bca847cda30e9a73a2a2a2c7d613dc8ae7b8d44372304d",
+    "core/core_google/src/main/java/com/wkq/google/billing/GooglePaidStatus.kt": "fdadc6777aeb69de5788f6236d16c560d60c5cb906b465ec75d832e01d8332ae",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleProductType.kt": "0d3bdf154bfbbf900f21678994eb1de545ee2aa317a5958746d34a3336514092",
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleSubscriptionPolicy.kt": "8cde28f6044f4ea7042ca60e916f05a1a0219aac2326c990d49be8e89ce2b4b0",
+    "core/core_google/src/main/java/com/wkq/google/billing/NoOpGoogleBillingGateway.kt": "91bc4118b8ce6278094c802db96b777ae583f862150d7963e20be18b45922e74",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingActivity.kt": "9db71da6526a1ff9bae690c1870478e40e1a96b946dc0eedf067aeb02fbd50c9",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingPagePolicy.kt": "087b9e620c5981130dd27e7a3bda35ac0153d650199c74f8ab1050bd2a2b0577",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingPlanConfig.kt": "820d44868cfa081024f5a60ecb107636b208db9c522874f2166fd941a4c523ed",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingUi.kt": "979fd994e97c93524fc4fa39aebbb3957594259df9fe2687b06e298cb02a35c8",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingViewModel.kt": "e397acdf5427fc32a5494fdae973ac7588866aa051be9d21ae8c5a0f479d6a22",
+    "core/core_google/src/main/java/com/wkq/google/model/GoogleAccountPayload.kt": "68bdb662547131d46e390e3e44195c7a1614a299ba7836558e7f92652a99c067",
+    "core/core_google/src/main/java/com/wkq/google/model/GoogleIdTokenClaims.kt": "5d761029ab87fec166be9866988c98eb020e53ec1da9f7b3c707bf5545c100a4",
+    "core/core_google/src/main/java/com/wkq/google/model/SubscriptionStatus.kt": "450820eef1586ead6c916fbf2a5e00a9996a1a1e9dc7e68a506d778f8aedd015",
+    "core/core_google/src/main/java/com/wkq/google/rate/GoogleRateManager.kt": "38292269dc95ada612e265af03258a6e83f0cac0bc76b649b8da391174d35fe5",
+    "core/core_google/src/main/java/com/wkq/google/rate/GoogleRatePolicy.kt": "79ffc4ca8e3f65b9c4bf5e5d78bc6662f4808f1c65d2665b7f3a549701dbf5b5",
+    "core/core_google/src/main/java/com/wkq/google/rate/RateAppController.kt": "408394c5482a8a4c7e6a4905de5f599fd36707f1a5bc60a8159b4e3b7f28a6e5",
+    "core/core_google/src/main/res/layout/gpay_host.xml": "8db6da1c2a9008369813218986b02f246d2093168a233f2b42c3c03ceb3fc393",
+    "core/core_google/src/main/res/layout/gpay_page.xml": "cf960d0b964ed86f989fc2de4643d795b01753fc4de9d90b28aaa78cf2193bc3",
+    "core/core_google/src/main/res/layout/gpay_plan.xml": "64244b805fa793a282fd43bb4460ae8416e09df3e849ccf9ce2502aae9576d92",
+    "core/core_google/src/main/res/values/gpay_colors.xml": "b4826546e263b35d5594607ab2b3321f5663d426afdcf8e0e4707c661015e91f",
+    "core/core_google/src/main/res/values/gpay_strings.xml": "3f0a76fe46d457f71bcbe50ba5326924b5f0ce94cb5239947ab3f4db0da80f7b",
+    "core/core_google/src/main/res/values/styles.xml": "74d2e9125aec949b0267130baff839cd9f253ba689b75eb5aca2a9744c66b150",
+    "core/core_google/src/main/res/values-ar/gpay_strings.xml": "51221ea9a7067b01ce8b9498e996119aacd645ad096ecfaae29063ac5c264543",
+    "core/core_google/src/main/res/values-de/gpay_strings.xml": "31694ebbd22f3e4f1f41d82b4ec5d015c5003a1288e873151665b06796469160",
+    "core/core_google/src/main/res/values-en/gpay_strings.xml": "3f0a76fe46d457f71bcbe50ba5326924b5f0ce94cb5239947ab3f4db0da80f7b",
+    "core/core_google/src/main/res/values-es/gpay_strings.xml": "797ac793dd9b935b73e5f4fccb279637d8fd75f2a95a9988cd2c04895779b929",
+    "core/core_google/src/main/res/values-fr/gpay_strings.xml": "ba48df0e998c4bf67991b6e0a4e10d0a595d523614b26959a2e9122db39fd552",
+    "core/core_google/src/main/res/values-hi/gpay_strings.xml": "dd219513f006b8971f6fe8c54fab760922eaa62526e6f3795373198be107b94a",
+    "core/core_google/src/main/res/values-id/gpay_strings.xml": "260bb5945c522fd22d5b99194d8e019c4126cbd4b3f53002530b2e4df8929639",
+    "core/core_google/src/main/res/values-it/gpay_strings.xml": "f63506cb41dff6dea9f0522d47568a5caeba7a7b3549457480ec040e6d261599",
+    "core/core_google/src/main/res/values-ja/gpay_strings.xml": "71591de97e707937e0c59eb5fdd4f2b0976c0397239486d62b21e055daeddcf4",
+    "core/core_google/src/main/res/values-ko/gpay_strings.xml": "e0753698ba3415323d5606d71421a82a6b8af619ecc12e9d4f2cf071126c36b3",
+    "core/core_google/src/main/res/values-night/gpay_colors.xml": "fcb17fcc362ec893916b8f67c6b725259adadf55b9d038df49707b09ac0e487a",
+    "core/core_google/src/main/res/values-pt-rBR/gpay_strings.xml": "953690322a863936a1a949e52e95d55834ab0b96342ed31d5759f704f233f5c3",
+    "core/core_google/src/main/res/values-ru/gpay_strings.xml": "d04791f5c9eee0f244c5b2e490adda52e7611321ce2dbfd6497a1d46ea512372",
+    "core/core_google/src/main/res/values-zh-rCN/gpay_strings.xml": "87d744c0412f33a7e12871369186106b8cb1e3fae97bad6370790d4f995c76bd",
+    "core/core_google/src/main/res/values-zh-rTW/gpay_strings.xml": "13a4d05c2721901dbd232813fce23bbb5ac6a507cb2fbbf4c7f45cc19eb14bb1",
+    "core/core_google/src/test/java/com/wkq/google/billing/GoogleBillingEntitlementCacheTest.kt": "fd125f0980ab1e66f0f2e796a7ca318126e3dfc171a1f85785bf182839ec0df8",
+    "core/core_google/src/test/java/com/wkq/google/billing/GoogleBillingEntitlementTest.kt": "0c6c765510bbe640a02bc01c54d5693e49ace4dc3e2b412054c5190530d8ba8a",
+    "core/core_google/src/test/java/com/wkq/google/billing/GoogleBillingPolicyTest.kt": "7c3887a53b4c2f5f1c966a31d4cf3b1cce66dd735ed02dcf2c696c7654628b7e",
+    "core/core_google/src/test/java/com/wkq/google/billing/GoogleSubscriptionPolicyTest.kt": "9614a15425bb919b55f2b9208f29e9b645ba392d3d063973daa73bfd94fd00c6",
+    "core/core_google/src/test/java/com/wkq/google/billing/ui/GoogleBillingActivityTest.kt": "46bed473ed855c0d5b681968a12e58240c913198fd415fc979f244bbd04a0a4c",
+    "core/core_google/src/test/java/com/wkq/google/billing/ui/GoogleBillingPagePolicyTest.kt": "08d23d5f2b5d49abf9465c7f7ac0276bc3eb562d35accc89e367e80d48ff34ba",
+    "core/core_google/src/test/java/com/wkq/google/rate/GoogleRateManagerTest.kt": "fac4da475da1eb149b72817493166a5cdb81295ad10925452b497041c9c2c6bb",
+    "core/core_google/src/test/java/com/wkq/google/rate/GoogleRatePolicyTest.kt": "49be06e642bd9fe7fd18eeed2205ff130b7966fda8fba0e5228420daa60fa33b",
+    "feature/feature_demo_google/src/main/AndroidManifest.xml": "c0cf3ad05210eb13139f242678ed27d28bf389ae1bd87ef8858d3f5bfb65f932",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt": "f9f4b41aced401fa2c43d8d181d0360602548178f4d0df8146d767c0e3d52594",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/PurchaseStateRecovery.kt": "127691c6c25405495032dd42ae0380afb8d8a0e1356f81af49e4df1de240973b",
+    "feature/feature_demo_google/src/main/res/layout/demo_google.xml": "98f05f1092e9ec1cfded7d25fc36b3b4403234ad07759c716a126d962ceebca6",
+    "feature/feature_demo_google/src/main/res/values/billing_page.xml": "3fac205792a206b618927ef425ed9c2bd744255ec6e2b018bf1a3cc1a00d9e9b",
+    "feature/feature_demo_google/src/main/res/values/google.xml": "ac083c034a7db5aa3c6548898475f7238464f2ed49da5b95bad70a2f5874cfbb",
+    "feature/feature_demo_google/src/main/res/values/google_rate.xml": "7ee16c21599f814213745c29c5127aa7bb632811eb7cdd06a37128c0ea8d1cdb",
+    "feature/feature_demo_google/src/main/res/values-en/billing_page.xml": "b9c2c26a074ce9e4d423f254528acf3dc2d6c1ce87b606cf31a4c390eabdb032",
+    "feature/feature_demo_google/src/main/res/values-en/google.xml": "4bda3b1f5c48ad9f7fa0eb0928ad6ec9fda7b390653c97f2fe9bd7a921cad72b",
+    "feature/feature_demo_google/src/main/res/values-en/google_rate.xml": "92d19667cc84f02a773dac235bde807dccfafc342bb02bf43d914da47338263d",
+    "feature/feature_demo_google/src/test/java/com/wkq/dev/demo/google/PurchaseStateRecoveryTest.kt": "5712f031e56218f33c5ee923639d59d37b8709270b560b0a19ff08851e2f46c3",
+    "samples/published-consumer/src/main/AndroidManifest.xml": "3c0ce337588febd1600d766e85766ca0caac1ac614f6678b6b94480134b2ef5a",
+    "samples/published-consumer/src/main/kotlin/com/wkq/dev/consumer/PublicBoundarySmoke.kt": "833561fe70b248233d42f16b87e08e7a1053aec81d278f83801c59336b447c4b",
+    "samples/published-consumer/src/main/kotlin/com/wkq/dev/consumer/PublishedApiSmoke.kt": "0b907012a4d2e7228dd59c1f973c7f202b984b25706569ab31f6bf25968d3165"
+  },
+  "sourceFingerprint": "fed5fa7681719eeb0fa604752e8725d87076e655ded988fae8cac161e4a684ca",
+  "apkSha256": "d968267e7581139f66f52c496d42f54135a11a917e006038a18985ccabe3b343",
+  "nativeLocales": 14,
+  "sourceAuditFiles": 7,
+  "sourceAuditFindings": 0,
+  "deviceTesting": "excluded; not run",
+  "realPlayTransactions": "not run",
+  "releaseR8": "not run",
+  "ciChanged": false,
+  "submitted": false,
+  "pushed": false
+}

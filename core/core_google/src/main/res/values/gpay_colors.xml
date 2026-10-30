@@ -1,0 +1,10 @@
+<resources>
+    <color name="gpay_background">#F5F7FC</color>
+    <color name="gpay_surface">#FFFFFF</color>
+    <color name="gpay_text">#192338</color>
+    <color name="gpay_muted">#526078</color>
+    <color name="gpay_accent">#2458C6</color>
+    <color name="gpay_on_accent">#FFFFFF</color>
+    <color name="gpay_selected">#DFE8FF</color>
+    <color name="gpay_outline">#D4DCE9</color>
+</resources>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">戻る</string>
+    <string name="gpay_buy">購入に進む · %1$s</string>
+    <string name="gpay_cancelled">購入をキャンセルしました</string>
+    <string name="gpay_cancelled_body">新しい購入は行われていません。既存の特典は変わりません。</string>
+    <string name="gpay_checking">購入記録を確認</string>
+    <string name="gpay_checking_body">アプリに戻っただけではコードの利用完了は確認できません。購入記録を確認してください。</string>
+    <string name="gpay_choose">プランを選択</string>
+    <string name="gpay_close">閉じる</string>
+    <string name="gpay_done">完了</string>
+    <string name="gpay_empty">利用可能な商品がありません</string>
+    <string name="gpay_empty_body">購入を復元するか、後でもう一度商品を取得してください。</string>
+    <string name="gpay_error">照会に失敗</string>
+    <string name="gpay_error_body">接続を確認して再試行してください。既存の購入記録は保持されます。</string>
+    <string name="gpay_failed">購入を確認できません</string>
+    <string name="gpay_failed_body">結果を確認できていません。後で再試行してください。既存の特典は削除されません。</string>
+    <string name="gpay_lifetime">買い切り</string>
+    <string name="gpay_loading">商品を読み込み中</string>
+    <string name="gpay_loading_body">Google Play から現在の価格と利用可能な商品を取得しています。</string>
+    <string name="gpay_manage">定期購入を管理 ↗</string>
+    <string name="gpay_missing">新しい購入が見つかりません</string>
+    <string name="gpay_missing_body">Play アカウントとコードをご確認ください。ギフトカード残高だけでは特典は有効になりません。</string>
+    <string name="gpay_month">月額プラン</string>
+    <string name="gpay_offline">オフラインの購入記録</string>
+    <string name="gpay_offline_body">以前の購入記録を表示しています。接続して現在の状態を確認してください。</string>
+    <string name="gpay_once">一括払い</string>
+    <string name="gpay_one_time">%1$s の一括払い。更新はありません。</string>
+    <string name="gpay_pending">お支払い待ち</string>
+    <string name="gpay_pending_body">Google Play でお支払いを完了してください。保留中の購入では特典は有効になりません。</string>
+    <string name="gpay_privacy">プライバシーポリシー</string>
+    <string name="gpay_pro">Pro が有効です</string>
+    <string name="gpay_redeem">コードを利用</string>
+    <string name="gpay_redeem_account">購入時と同じ Google Play アカウントをご利用ください。</string>
+    <string name="gpay_redeem_already">利用済みですか？購入を同期</string>
+    <string name="gpay_redeem_gift">ギフトカードは Play 残高を追加するもので、Pro を直接有効にはしません。特典は実際の有効な購入に基づきます。</string>
+    <string name="gpay_redeem_go">Google Play でコードを利用 ↗</string>
+    <string name="gpay_redeem_intro">Google Play でコードを入力し、戻って対象の購入特典を同期してください。</string>
+    <string name="gpay_redeem_title">Google Play コードを利用</string>
+    <string name="gpay_restore">購入を復元</string>
+    <string name="gpay_retry">再試行</string>
+    <string name="gpay_secure">Google Play による安全なお支払い</string>
+    <string name="gpay_select">プランを選択してください</string>
+    <string name="gpay_success">特典が有効になりました</string>
+    <string name="gpay_terms">利用規約</string>
+    <string name="gpay_year">年額プラン</string>
+    <string name="gpay_not_initialized">支払いページを開く前に、ホストの Application で GoogleBillingRuntime を初期化してください。</string>
+    <string name="gpay_unavailable">利用できません</string>
+    <string name="gpay_updated">購入記録を確認しました。</string>
+    <string name="gpay_purchase_failed">購入を開始できません。再試行してください。</string>
+    <string name="gpay_purchase_started">Google Play で購入を完了してください。</string>
+    <string name="gpay_offer_changed">価格またはオファーが変更されました。内容を確認してから購入してください。</string>
+    <string name="gpay_partial">一部の商品を読み込めませんでした。再試行してください。</string>
+    <string name="gpay_external_failed">ページを開けません。ブラウザまたは Google Play を確認してください。</string>
+    <string name="gpay_sign_in">ホストが購入を許可していません。ログインまたはホスト設定を確認してください。</string>
+    <string name="gpay_recovery">購入の承認処理が未完了です。購入を復元して再確認してください。</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s。自動更新されます。Google Play で管理・解約できます。</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">%1$d 日ごと</item>
+        <item quantity="other">%1$d 日ごと</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">%1$d 週間ごと</item>
+        <item quantity="other">%1$d 週間ごと</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">%1$d か月ごと</item>
+        <item quantity="other">%1$d か月ごと</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">%1$d 年ごと</item>
+        <item quantity="other">%1$d 年ごと</item>
+    </plurals>
+</resources>

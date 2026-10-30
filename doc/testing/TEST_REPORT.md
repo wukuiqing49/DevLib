@@ -1,3 +1,20 @@
+# 2026-10-30 Google 单库原生支付页面
+
+支付引擎、Activity、XPopup BottomSheet、兑换说明、恢复和公开付费状态统一进入 `core_google`，没有新增 UI 模块；工作台增加两个显式测试入口。基础库源码未改。既有运行时及页面配置继续使用，商品/账号/条款/业务 Pro 映射由宿主维护。
+
+- **本地 JVM/Robolectric 64/64 通过，失败/错误/跳过均为 0**：core_google 58、feature_demo_google 6。新增 8 项覆盖真实完整页/弹层 XML 膨胀、兑换说明切换、缺失结果未知、基础方案匹配、报价变化及待付款不授予 Pro。页面测试 SDK 为 35，不代表 API 37 设备测试。
+- **App Debug 与 AndroidTest APK 构建通过**；AndroidTest 仅打包，未执行。Release AAR 本地发布通过；POM 保留 Base/XPopup 传递依赖，公开 ActivityResult 和 StateFlow 类型具有 compile API 依赖。独立 published-consumer 调用两种入口和状态流编译通过。
+- **严格聚合静态检查、core_google 严格国际化及 UI 检查通过**。原生 14 个语言区域完整键覆盖；7 个明确选定任务文件源码审计 0 发现。引擎已有历史声明不在这 7 文件范围，不宣称整个库历史注释全部合规；Manager 本次修改的发布、缓存和报价转换做人工差异复核。
+- **最终 APK 目录门禁通过**：19 个正式模块、18 个能力入口、5 组路由。`lib_operations` 继续内部支撑。
+- BaseVMActivity、BaseViewModel、BaseRecyclerViewAdapter、XPopup，XML/ViewBinding/MVVM；完整页 Base Insets，弹层 XPopup 单独消费，按根窗口尺寸确定弹层大小；全页显式沉浸式、透明窗口结束恢复原宿主窗口。资源支持日夜、RTL 与可滚动长文案，但不宣称设备视觉通过。
+- 购买前重新查询报价，变化要求重新选择；未建模试用/多阶段优惠不销售。兑换只打开官方 Play，回到前台核对真实订单。未知及待付款不授予 Pro。缓存绑定商品集合，核对时间不因读取缓存伪装更新，账号退出重置状态流。
+- **未执行**：adb/真机/模拟器、真实购买/兑换/订阅替换/退款、API 26/37 运行、原生多语言/RTL/日夜/200% 字体/多窗口/旋转/系统强杀/TalkBack 的视觉交互验收、Release R8 安装。母语与计费法律文案未审校。无需自建后台不等于防篡改授权或可靠退款推送。
+- 构建保留已有 AGP DSL、Gradle 弃用及 SDK XML 工具版本警告；未为消除警告调整无关构建环境。没有新增 CI，未提交、未推送，未推进全功能测试基线。
+
+所用 Skills：项目架构、UI、国际化、构建、功能测试；设计参考沿用 Apple Design Skill。接入示例见 [core_google README](../../core/core_google/README.md#原生支付页面单库调用)。证据：[测试计数与源码/APK 指纹](evidence/2026-10-30-google-billing/summary.json)、[命令与边界](evidence/2026-10-30-google-billing/commands.md)、[静态检查](evidence/2026-10-30-google-billing/static-checks.txt)、[7 文件源码审计](evidence/2026-10-30-google-billing/source-audit.json)。以下为历史报告。
+
+---
+
 # 2026-10-27 三入口信息架构重整
 
 原四入口改为功能库、基础组件、工作区。CatalogFragment 仅负责导航，库目录和工作区使用独立子 Fragment/状态；10 个功能库完整展示，基础按 5 套体系覆盖 8 模块，Routers 四模块在独立接入详情内切换。常用与最近去重，目录缩短摘要；工作区文件缩略图与操作历史分开，文件/历史分别保存搜索和滚动状态。新增记录三格式的工作区流转入口。

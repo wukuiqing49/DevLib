@@ -13,6 +13,7 @@ import com.wkq.dev.demo.google.databinding.DemoGoogleBinding
 import com.wkq.google.auth.DropGoogleAccount
 import com.wkq.google.auth.GoogleSignInCoordinator
 import com.wkq.google.billing.*
+import com.wkq.google.billing.ui.*
 import com.wkq.google.rate.*
 import com.wkq.util.IntentUtil
 import com.wkq.router.annotation.Route
@@ -24,6 +25,13 @@ import kotlinx.coroutines.flow.asStateFlow
 @Route(path = "/google/core_google")
 class GoogleActivity : DemoActivity<DemoGoogleBinding, GoogleViewModel>() {
     private var observer: AutoCloseable? = null
+    private val billingPage = registerForActivityResult(GoogleBillingContract()) { result ->
+        viewModel.report(getString(when {
+            !result.status.isKnown -> R.string.google_page_unknown
+            result.status.isPro -> R.string.google_page_pro
+            else -> R.string.google_page_free
+        }))
+    }
 
     /** 绑定登录与计费操作，购买前核对查询配置并确认报价，订阅报价与购买恢复状态。 */
     override fun initView() {
@@ -85,6 +93,8 @@ class GoogleActivity : DemoActivity<DemoGoogleBinding, GoogleViewModel>() {
             )
         }
         b.restore.setOnClickListener { viewModel.restore(applicationContext) }
+        b.billingPage.setOnClickListener { openBillingPage(false) }
+        b.billingSheet.setOnClickListener { openBillingPage(true) }
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.billingStatus.collect { state ->
@@ -141,6 +151,22 @@ class GoogleActivity : DemoActivity<DemoGoogleBinding, GoogleViewModel>() {
                     )
             }
         }
+    }
+
+    /** 使用页面输入显式配置测试商品，再调用单库原生支付入口，不自动发起购买。 */
+    private fun openBillingPage(sheet: Boolean) {
+        val id = contentBinding.product.text.toString().trim()
+        if (id.isBlank() || id.contains(',')) {
+            viewModel.report(getString(R.string.google_product_missing))
+            return
+        }
+        val subscription = contentBinding.subscription.isChecked
+        GoogleBillingRuntime.initialize(applicationContext, GoogleBillingRuntimeConfig(
+            billingSubscriptionIds = if (subscription) listOf(id) else emptyList(),
+            billingInAppProductIds = if (subscription) emptyList() else listOf(id),
+            requireAppAccount = false,
+        ))
+        if (sheet) GoogleBillingUi.showBottomSheet(billingPage) else GoogleBillingUi.openActivity(billingPage)
     }
 
     /** 显式模拟宿主关键操作完成，再按正式节流策略请求；不强制显示、不先收集星级。 */

@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">वापस</string>
+    <string name="gpay_buy">खरीदारी जारी रखें · %1$s</string>
+    <string name="gpay_cancelled">खरीदारी रद्द</string>
+    <string name="gpay_cancelled_body">नई खरीदारी नहीं हुई। मौजूदा लाभ नहीं बदले हैं।</string>
+    <string name="gpay_checking">खरीदारियाँ जाँचें</string>
+    <string name="gpay_checking_body">ऐप पर लौटना रिडीम होने की पुष्टि नहीं है। खरीदारी रिकॉर्ड जाँचें।</string>
+    <string name="gpay_choose">प्लान चुनें</string>
+    <string name="gpay_close">बंद करें</string>
+    <string name="gpay_done">हो गया</string>
+    <string name="gpay_empty">कोई उत्पाद उपलब्ध नहीं</string>
+    <string name="gpay_empty_body">मौजूदा खरीदारियाँ बहाल करें या बाद में उत्पाद फिर लोड करें।</string>
+    <string name="gpay_error">जाँच विफल</string>
+    <string name="gpay_error_body">कनेक्शन जाँचकर फिर कोशिश करें। मौजूदा खरीदारी रिकॉर्ड सुरक्षित हैं।</string>
+    <string name="gpay_failed">खरीदारियाँ जाँची नहीं जा सकीं</string>
+    <string name="gpay_failed_body">नतीजे की पुष्टि नहीं हुई। बाद में कोशिश करें; मौजूदा लाभ हटेंगे नहीं।</string>
+    <string name="gpay_lifetime">एक बार की खरीदारी</string>
+    <string name="gpay_loading">उत्पाद लोड हो रहे हैं</string>
+    <string name="gpay_loading_body">Google Play से मौजूदा कीमतें और उपलब्ध उत्पाद प्राप्त हो रहे हैं।</string>
+    <string name="gpay_manage">सदस्यता प्रबंधित करें ↗</string>
+    <string name="gpay_missing">नई खरीदारी नहीं मिली</string>
+    <string name="gpay_missing_body">Play खाता और कोड जाँचें। केवल गिफ़्ट कार्ड बैलेंस से लाभ नहीं खुलते।</string>
+    <string name="gpay_month">मासिक सदस्यता</string>
+    <string name="gpay_offline">ऑफ़लाइन खरीदारी रिकॉर्ड</string>
+    <string name="gpay_offline_body">पिछला खरीदारी रिकॉर्ड दिख रहा है। मौजूदा स्थिति जाँचने के लिए कनेक्ट करें।</string>
+    <string name="gpay_once">एक बार भुगतान</string>
+    <string name="gpay_one_time">एक बार %1$s का भुगतान। नवीनीकरण नहीं।</string>
+    <string name="gpay_pending">भुगतान लंबित</string>
+    <string name="gpay_pending_body">Google Play में भुगतान पूरा करें। लंबित खरीदारी से लाभ नहीं खुलते।</string>
+    <string name="gpay_privacy">निजता नीति</string>
+    <string name="gpay_pro">Pro सक्रिय है</string>
+    <string name="gpay_redeem">कोड रिडीम करें</string>
+    <string name="gpay_redeem_account">खरीदारी के समय इस्तेमाल किया गया Google Play खाता चुनें।</string>
+    <string name="gpay_redeem_already">पहले ही रिडीम किया? खरीदारियाँ सिंक करें</string>
+    <string name="gpay_redeem_gift">गिफ़्ट कार्ड से Play बैलेंस बढ़ता है; Pro सीधे सक्रिय नहीं होता। लाभ मान्य खरीदारी पर निर्भर हैं।</string>
+    <string name="gpay_redeem_go">Google Play में रिडीम करें ↗</string>
+    <string name="gpay_redeem_intro">Google Play में कोड डालें और वापस आकर पात्र खरीदारी के लाभ सिंक करें।</string>
+    <string name="gpay_redeem_title">Google Play कोड रिडीम करें</string>
+    <string name="gpay_restore">खरीदारियाँ बहाल करें</string>
+    <string name="gpay_retry">फिर कोशिश करें</string>
+    <string name="gpay_secure">Google Play से सुरक्षित भुगतान</string>
+    <string name="gpay_select">प्लान चुनें</string>
+    <string name="gpay_success">भुगतान वाले लाभ सक्रिय हैं</string>
+    <string name="gpay_terms">सेवा की शर्तें</string>
+    <string name="gpay_year">वार्षिक सदस्यता</string>
+    <string name="gpay_not_initialized">यह पेज खोलने से पहले होस्ट Application में GoogleBillingRuntime शुरू करें।</string>
+    <string name="gpay_unavailable">उपलब्ध नहीं</string>
+    <string name="gpay_updated">खरीदारी रिकॉर्ड जाँच लिए गए हैं।</string>
+    <string name="gpay_purchase_failed">खरीदारी शुरू नहीं हो सकी। फिर कोशिश करें।</string>
+    <string name="gpay_purchase_started">Google Play में खरीदारी पूरी करें।</string>
+    <string name="gpay_offer_changed">कीमत या ऑफ़र बदल गया है। खरीदने से पहले नई जानकारी जाँचें।</string>
+    <string name="gpay_partial">कुछ उत्पाद लोड नहीं हुए। फिर कोशिश करें।</string>
+    <string name="gpay_external_failed">पेज नहीं खुल सका। ब्राउज़र या Google Play जाँचें।</string>
+    <string name="gpay_sign_in">होस्ट इस खरीदारी की अनुमति नहीं देता। साइन इन करें या उसकी सेटिंग जाँचें।</string>
+    <string name="gpay_recovery">खरीदारी की पुष्टि अभी बाकी है। दोबारा जाँचने के लिए खरीदारियाँ बहाल करें।</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s। अपने-आप नवीनीकरण होता है; Google Play में प्रबंधित या रद्द करें।</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">हर %1$d दिन</item>
+        <item quantity="other">हर %1$d दिन</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">हर %1$d सप्ताह</item>
+        <item quantity="other">हर %1$d सप्ताह</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">हर %1$d महीने</item>
+        <item quantity="other">हर %1$d महीने</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">हर %1$d वर्ष</item>
+        <item quantity="other">हर %1$d वर्ष</item>
+    </plurals>
+</resources>

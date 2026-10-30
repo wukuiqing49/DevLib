@@ -17,12 +17,24 @@ data class GoogleBillingRuntimeConfig(
     val retainLifetimeOffline: Boolean = false
 )
 
+/** 保存宿主显式传入的运行时配置；进程重建后必须由宿主再次初始化。 */
 object GoogleBillingRuntime {
     @Volatile private var config = GoogleBillingRuntimeConfig()
+    @Volatile var isInitialized: Boolean = false
+        private set
+
+    /** 仅使用 Application Context 初始化计费并重置对外快照，不发起购买。 */
     fun initialize(context: Context, config: GoogleBillingRuntimeConfig) {
         this.config = config
+        isInitialized = true
+        GoogleBillingStatus.reset()
         GoogleBillingManager.initialize(context.applicationContext)
     }
+    /** 为可选支付 UI 提供套餐描述的副本，不暴露宿主账号回调。 */
+    fun configuredPlans(): List<GoogleBillingPlanConfig> = config.billingPlans.toList()
+
+    /** 引擎读取当前配置，不替代初始化校验。 */
     internal fun currentConfig() = config
+    /** 兼容既有计费调用的内部配置入口。 */
     internal fun requireConfig() = config
 }

@@ -10,7 +10,7 @@ Google SDK 功能适配库，登录与计费来自 DropLAN，评分策略参考 
 - `GoogleRateManager` / `GoogleRatePolicy`：可配置的使用时长、关键操作与冷却策略，以及 Google Play 应用内评分请求。
 - `GoogleBillingGateway` 是状态查询接口；不包含商业后台、服务端验单或跨设备统一授权系统。当前一次性商品按永久解锁处理，不用于消耗型商品。
 
-不包含广告、Analytics、DevHub、原产品页面、商品 ID 或业务 Pro 门禁。不依赖其他 DevLib 模块。旧 lib_auth_credentials、lib_auth_firebase、lib_billing_play、lib_entitlement 已移出，不再并行维护。
+不包含广告、Analytics、DevHub、原产品页面、商品 ID 或业务 Pro 门禁。原生页面复用 core_base 与 lib_xpopup，发布 POM 传递依赖；不依赖 app、feature 或 feature_res。旧 lib_auth_credentials、lib_auth_firebase、lib_billing_play、lib_entitlement 已移出，不再并行维护。
 
 ## 接入
 
@@ -79,3 +79,41 @@ GoogleRateManager.setSuppressed(context, true)
 订阅查询只支持当前宿主计费账号；非空 userId 必须与 billingAccountIdProvider 一致，查询期间切换账号明确失败。永久购买不再计为订阅；未知或部分失败且无法确认订阅时抛出 IllegalStateException，宿主保留旧状态并提供重试。expireTimeMillis=0 仅表示未知，真实到期时间由可信服务端提供。旧方法签名保留。
 
 上传入参、商品配置、账号切换及登录/计费衔接继续由宿主维护；本轮没有新增服务端验单、消耗型商品或多阶段优惠报价。评分完成仍不代表已提交评价。
+
+
+## 原生支付页面：单库调用
+
+支付引擎、Activity、XPopup BottomSheet、官方兑换入口、多语言资源及付费状态均在 `core_google`，不需要单独 UI 模块。基础库源码没有修改。公开入口位于 `com.wkq.google.billing.ui`。
+
+在宿主 Application 恢复原有 `GoogleBillingRuntimeConfig`（商品 ID 必填；无自有账号时显式设置 `requireAppAccount = false`）。在 Activity/Fragment 创建时注册一次：
+
+```kotlin
+private val billingLauncher = registerForActivityResult(GoogleBillingContract()) { result ->
+    when {
+        !result.status.isKnown -> { /* 未确认，保留已有授权策略并稍后重试 */ }
+        result.status.isPro -> { /* 宿主映射自己的 Pro / 付费功能 */ }
+        else -> { /* 已核对，当前无配置商品的有效购买 */ }
+    }
+}
+
+// 用户点击时二选一；未传 page 时复用运行时 billingPlans，或直接展示 Play 商品。
+GoogleBillingUi.openActivity(billingLauncher)
+GoogleBillingUi.showBottomSheet(billingLauncher)
+// 也支持原有页面配置及宿主链接；全页沉浸式为显式选择。
+GoogleBillingUi.openActivity(billingLauncher, pageConfig,
+    GoogleBillingUiOptions(termsUrl = yourTermsUrl, privacyUrl = yourPrivacyUrl, immersive = true))
+```
+
+`GoogleBillingPageConfig` 仍负责套餐描述，不能覆盖真实 Play 价格、周期或自动续费披露；`fallbackPrice` 不用于购买。`purchaseButtonText` 保留兼容字段，原生按钮统一展示真实价格，避免自定义文案掩盖收费金额。套餐 ID 必须属于运行时配置；不能只传页面套餐而漏配运行时商品 ID。
+
+宿主也可订阅 `GoogleBillingStatus.state`，或调用挂起函数 `GoogleBillingStatus.refresh()`；结果不含订单令牌。`isKnown`、`isPro`、`hasPendingPurchase`、`isOffline` 应分别处理。账号切换后宿主必须重新初始化/刷新，库无法自动观察宿主 lambda 内的账号变化。初始化及账号退出会重置快照；缓存绑定账号与商品集合，已有旧缓存会失效并重新核对。离线状态 `checkedAtMillis = 0`，不伪装成新验单。
+
+兑换说明页跳转官方 Google Play，未安装 Play 时尝试 HTTPS 浏览器；返回重新查询购买，不以跳转、返回或礼品卡余额判断 Pro。`redemptionOpened` 只表示打开过入口。`purchaseAttempted` 只表示尝试启动收银台。关闭页面不等于购买成功。
+
+支持标准自动续订基础方案、非消耗型一次性购买、恢复与订阅管理。不销售未建模的试用、多阶段优惠、预付费方案或消耗品。无需自建后台即可使用 Play 客户端查询，但客户端快照不能提供防篡改授权、可靠退款推送或跨商店账号权益。
+
+资源包含英语、简繁中文、日语、韩语、德语、法语、西班牙语、巴西葡萄牙语、意大利语、俄语、阿拉伯语、印地语、印尼语。默认英语，阿拉伯语依宿主支持 RTL；宿主如使用 resConfigs/localeConfig，需保留所需语言。翻译未经过母语及法律审校。
+
+完整页继承 BaseVMActivity，采用 XML/ViewBinding/MVVM、Base 列表；Base 负责顶部/导航栏/横向/IME Insets。BottomSheet 使用独立透明承载 Activity 和 XPopup view mode，XPopup 单独消费安全区，不修改原宿主窗口。返回、旋转及进程重建保存非敏感流程状态；宿主 Application 负责重建计费配置。API 37 为构建基线，真机 Insets、旋转、大字体和 Play 交易仍需消费项目验收。
+
+工作台 Google 页面新增“打开支付页面/底部弹层”，使用输入商品 ID 显式配置，无模拟商品、无自动购买。验证证据见 `doc/testing/TEST_REPORT.md`。

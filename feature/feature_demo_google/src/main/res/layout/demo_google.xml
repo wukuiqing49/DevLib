@@ -14,6 +14,8 @@
 <Spinner android:id="@+id/offers" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" />
 <com.google.android.material.button.MaterialButton android:id="@+id/purchase" style="@style/Demo.Button.Primary" android:text="@string/google_purchase" />
 <com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Demo.Button" android:text="@string/google_restore" />
+<com.google.android.material.button.MaterialButton android:id="@+id/billingPage" style="@style/Demo.Button" android:text="@string/google_page_open" />
+<com.google.android.material.button.MaterialButton android:id="@+id/billingSheet" style="@style/Demo.Button" android:text="@string/google_sheet_open" />
 <TextView android:id="@+id/billingStatus" style="@style/Demo.Label" android:accessibilityLiveRegion="polite" />
 <TextView style="@style/Demo.Heading" android:text="@string/google_rate_heading" />
 <TextView style="@style/Demo.Label" android:text="@string/google_rate_intro" />

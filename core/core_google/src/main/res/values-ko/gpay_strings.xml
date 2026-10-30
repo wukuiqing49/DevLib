@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">뒤로</string>
+    <string name="gpay_buy">구매 계속 · %1$s</string>
+    <string name="gpay_cancelled">구매 취소됨</string>
+    <string name="gpay_cancelled_body">새 구매가 발생하지 않았습니다. 기존 혜택은 유지됩니다.</string>
+    <string name="gpay_checking">구매 기록 확인</string>
+    <string name="gpay_checking_body">앱으로 돌아왔다고 코드 사용이 확인되는 것은 아닙니다. 구매 기록을 확인하세요.</string>
+    <string name="gpay_choose">요금제 선택</string>
+    <string name="gpay_close">닫기</string>
+    <string name="gpay_done">완료</string>
+    <string name="gpay_empty">이용 가능한 상품 없음</string>
+    <string name="gpay_empty_body">기존 구매를 복원하거나 나중에 상품을 다시 불러오세요.</string>
+    <string name="gpay_error">조회 실패</string>
+    <string name="gpay_error_body">연결을 확인하고 다시 시도하세요. 기존 구매 기록은 유지됩니다.</string>
+    <string name="gpay_failed">구매 확인 불가</string>
+    <string name="gpay_failed_body">결과가 확인되지 않았습니다. 나중에 다시 시도하세요. 기존 혜택은 삭제되지 않습니다.</string>
+    <string name="gpay_lifetime">일회성 구매</string>
+    <string name="gpay_loading">상품 불러오는 중</string>
+    <string name="gpay_loading_body">Google Play에서 현재 가격과 이용 가능한 상품을 가져오고 있습니다.</string>
+    <string name="gpay_manage">구독 관리 ↗</string>
+    <string name="gpay_missing">새 구매를 찾을 수 없음</string>
+    <string name="gpay_missing_body">Play 계정과 코드를 확인하세요. 기프트 카드 잔액만으로는 혜택이 활성화되지 않습니다.</string>
+    <string name="gpay_month">월간 구독</string>
+    <string name="gpay_offline">오프라인 구매 기록</string>
+    <string name="gpay_offline_body">이전 구매 기록을 표시합니다. 연결 후 현재 상태를 확인하세요.</string>
+    <string name="gpay_once">한 번 결제</string>
+    <string name="gpay_one_time">%1$s 한 번 결제. 갱신되지 않습니다.</string>
+    <string name="gpay_pending">결제 대기 중</string>
+    <string name="gpay_pending_body">Google Play에서 결제를 완료하세요. 대기 중인 구매는 혜택을 활성화하지 않습니다.</string>
+    <string name="gpay_privacy">개인정보처리방침</string>
+    <string name="gpay_pro">Pro 활성화됨</string>
+    <string name="gpay_redeem">코드 사용</string>
+    <string name="gpay_redeem_account">구매할 때 사용한 Google Play 계정을 사용하세요.</string>
+    <string name="gpay_redeem_already">이미 사용했나요? 구매 동기화</string>
+    <string name="gpay_redeem_gift">기프트 카드는 Play 잔액을 충전하며 Pro를 직접 활성화하지 않습니다. 혜택은 실제 유효한 구매에 따라 적용됩니다.</string>
+    <string name="gpay_redeem_go">Google Play에서 코드 사용 ↗</string>
+    <string name="gpay_redeem_intro">Google Play에서 코드를 입력한 후 돌아와 해당 구매 혜택을 동기화하세요.</string>
+    <string name="gpay_redeem_title">Google Play 코드 사용</string>
+    <string name="gpay_restore">구매 복원</string>
+    <string name="gpay_retry">다시 시도</string>
+    <string name="gpay_secure">Google Play 보안 결제</string>
+    <string name="gpay_select">요금제를 선택하세요</string>
+    <string name="gpay_success">유료 혜택 활성화됨</string>
+    <string name="gpay_terms">서비스 약관</string>
+    <string name="gpay_year">연간 구독</string>
+    <string name="gpay_not_initialized">결제 페이지를 열기 전에 호스트 Application에서 GoogleBillingRuntime을 초기화하세요.</string>
+    <string name="gpay_unavailable">이용 불가</string>
+    <string name="gpay_updated">구매 기록을 확인했습니다.</string>
+    <string name="gpay_purchase_failed">구매를 시작할 수 없습니다. 다시 시도하세요.</string>
+    <string name="gpay_purchase_started">Google Play에서 구매를 완료하세요.</string>
+    <string name="gpay_offer_changed">가격이나 혜택이 변경되었습니다. 변경 내용을 확인한 후 구매하세요.</string>
+    <string name="gpay_partial">일부 상품을 불러오지 못했습니다. 다시 시도하세요.</string>
+    <string name="gpay_external_failed">페이지를 열 수 없습니다. 브라우저 또는 Google Play를 확인하세요.</string>
+    <string name="gpay_sign_in">호스트가 구매를 허용하지 않았습니다. 로그인하거나 호스트 설정을 확인하세요.</string>
+    <string name="gpay_recovery">구매 승인 처리가 완료되지 않았습니다. 구매를 복원하여 다시 확인하세요.</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s. 자동 갱신되며 Google Play에서 관리하거나 취소할 수 있습니다.</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">%1$d일마다</item>
+        <item quantity="other">%1$d일마다</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">%1$d주마다</item>
+        <item quantity="other">%1$d주마다</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">%1$d개월마다</item>
+        <item quantity="other">%1$d개월마다</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">%1$d년마다</item>
+        <item quantity="other">%1$d년마다</item>
+    </plurals>
+</resources>

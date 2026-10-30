@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">Kembali</string>
+    <string name="gpay_buy">Lanjutkan · %1$s</string>
+    <string name="gpay_cancelled">Pembelian dibatalkan</string>
+    <string name="gpay_cancelled_body">Tidak ada pembelian baru. Manfaat yang ada tidak berubah.</string>
+    <string name="gpay_checking">Periksa pembelian</string>
+    <string name="gpay_checking_body">Kembali ke aplikasi tidak memastikan penukaran berhasil. Periksa catatan pembelian.</string>
+    <string name="gpay_choose">Pilih paket</string>
+    <string name="gpay_close">Tutup</string>
+    <string name="gpay_done">Selesai</string>
+    <string name="gpay_empty">Tidak ada produk tersedia</string>
+    <string name="gpay_empty_body">Pulihkan pembelian yang ada atau muat produk lagi nanti.</string>
+    <string name="gpay_error">Pemeriksaan gagal</string>
+    <string name="gpay_error_body">Periksa koneksi lalu coba lagi. Catatan pembelian yang ada tetap disimpan.</string>
+    <string name="gpay_failed">Tidak dapat memeriksa pembelian</string>
+    <string name="gpay_failed_body">Hasil belum terkonfirmasi. Coba lagi nanti; manfaat yang ada tidak dihapus.</string>
+    <string name="gpay_lifetime">Pembelian satu kali</string>
+    <string name="gpay_loading">Memuat produk</string>
+    <string name="gpay_loading_body">Mengambil harga terkini dan produk yang tersedia dari Google Play.</string>
+    <string name="gpay_manage">Kelola langganan ↗</string>
+    <string name="gpay_missing">Tidak ditemukan pembelian baru</string>
+    <string name="gpay_missing_body">Periksa akun Play dan kode. Saldo kartu hadiah saja tidak membuka manfaat.</string>
+    <string name="gpay_month">Langganan bulanan</string>
+    <string name="gpay_offline">Catatan pembelian offline</string>
+    <string name="gpay_offline_body">Menampilkan catatan pembelian sebelumnya. Hubungkan untuk memeriksa status terkini.</string>
+    <string name="gpay_once">sekali bayar</string>
+    <string name="gpay_one_time">Bayar %1$s satu kali. Tanpa perpanjangan.</string>
+    <string name="gpay_pending">Pembayaran tertunda</string>
+    <string name="gpay_pending_body">Selesaikan pembayaran di Google Play. Pembelian tertunda tidak membuka manfaat.</string>
+    <string name="gpay_privacy">Kebijakan privasi</string>
+    <string name="gpay_pro">Pro aktif</string>
+    <string name="gpay_redeem">Tukarkan kode</string>
+    <string name="gpay_redeem_account">Gunakan akun Google Play yang sama dengan saat membeli.</string>
+    <string name="gpay_redeem_already">Sudah ditukar? Sinkronkan pembelian</string>
+    <string name="gpay_redeem_gift">Kartu hadiah menambah saldo Play, bukan langsung mengaktifkan Pro. Manfaat bergantung pada pembelian yang valid.</string>
+    <string name="gpay_redeem_go">Tukarkan di Google Play ↗</string>
+    <string name="gpay_redeem_intro">Masukkan kode di Google Play, lalu kembali untuk menyinkronkan pembelian yang memenuhi syarat.</string>
+    <string name="gpay_redeem_title">Tukarkan kode Google Play</string>
+    <string name="gpay_restore">Pulihkan pembelian</string>
+    <string name="gpay_retry">Coba lagi</string>
+    <string name="gpay_secure">Pembayaran aman melalui Google Play</string>
+    <string name="gpay_select">Pilih paket</string>
+    <string name="gpay_success">Manfaat berbayar aktif</string>
+    <string name="gpay_terms">Persyaratan layanan</string>
+    <string name="gpay_year">Langganan tahunan</string>
+    <string name="gpay_not_initialized">Inisialisasikan GoogleBillingRuntime di Application host sebelum membuka halaman ini.</string>
+    <string name="gpay_unavailable">Tidak tersedia</string>
+    <string name="gpay_updated">Catatan pembelian telah diperiksa.</string>
+    <string name="gpay_purchase_failed">Tidak dapat memulai pembelian. Coba lagi.</string>
+    <string name="gpay_purchase_started">Selesaikan pembelian di Google Play.</string>
+    <string name="gpay_offer_changed">Harga atau penawaran berubah. Periksa detail terbaru sebelum membeli.</string>
+    <string name="gpay_partial">Beberapa produk tidak dapat dimuat. Coba lagi.</string>
+    <string name="gpay_external_failed">Tidak dapat membuka halaman. Periksa browser atau Google Play.</string>
+    <string name="gpay_sign_in">Host tidak mengizinkan pembelian ini. Login atau periksa pengaturan host.</string>
+    <string name="gpay_recovery">Konfirmasi pembelian masih tertunda. Pulihkan pembelian untuk memeriksa lagi.</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s. Diperpanjang otomatis; kelola atau batalkan di Google Play.</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">setiap %1$d hari</item>
+        <item quantity="other">setiap %1$d hari</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">setiap %1$d minggu</item>
+        <item quantity="other">setiap %1$d minggu</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">setiap %1$d bulan</item>
+        <item quantity="other">setiap %1$d bulan</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">setiap %1$d tahun</item>
+        <item quantity="other">setiap %1$d tahun</item>
+    </plurals>
+</resources>

@@ -443,14 +443,24 @@ object GoogleBillingManager : GoogleBillingGateway {
         else GoogleBillingEntitlement()
     }
 
-    private fun entitlementCacheScope(): String = if (GoogleBillingRuntime.currentConfig().requireAppAccount)
-        legacyObfuscatedAccountId() else "installation:play"
+    /** 缓存同时绑定账号和商品集合，避免更换配置后沿用旧商品的 Pro。 */
+    private fun entitlementCacheScope(): String {
+        val config = GoogleBillingRuntime.currentConfig()
+        val account = if (config.requireAppAccount) legacyObfuscatedAccountId() else "installation:play"
+        if (account.isBlank()) return ""
+        val products = config.billingSubscriptionIds.sorted().joinToString("\u0000") + "\u0001" +
+            config.billingInAppProductIds.sorted().joinToString("\u0000")
+        val fingerprint = java.security.MessageDigest.getInstance("SHA-256").digest(products.toByteArray(Charsets.UTF_8))
+            .joinToString("") { "%02x".format(it) }
+        return "$account:$fingerprint"
+    }
 
     private fun CachedBillingEntitlement.usableNow(scope: String, now: Long): Boolean {
         val config = GoogleBillingRuntime.currentConfig()
         return usableFor(scope, now, config.offlineSubscriptionGraceMillis, config.retainLifetimeOffline)
     }
 
+    /** 串行核对当前配置和账号，发布可观察快照；失败时仅使用仍有效的离线记录。 */
     override suspend fun queryEntitlement(): GoogleBillingEntitlement = entitlementMutex.withLock {
         val context = appContext
         val account = entitlementCacheScope()
@@ -458,7 +468,7 @@ object GoogleBillingManager : GoogleBillingGateway {
         val cached = cachedEntitlement ?: context?.let { GoogleBillingEntitlementCache.read(it) }
         cachedEntitlement = cached
         if (!forceEntitlementRefresh && cached?.usableNow(account, now) == true && now - cached.checkedAt < 60_000L) {
-            return@withLock cached.entitlement
+            return@withLock GoogleBillingStatus.publish(cached.entitlement, cached.checkedAt)
         }
         forceEntitlementRefresh = false
         val result = try {
@@ -469,7 +479,7 @@ object GoogleBillingManager : GoogleBillingGateway {
             GoogleBillingEntitlement(errorMessage = error.message.orEmpty())
         }
         // 登录账号在异步查询期间改变时，不使用或保存前一账号结果。
-        if (account != entitlementCacheScope()) return@withLock GoogleBillingEntitlement()
+        if (account != entitlementCacheScope()) return@withLock GoogleBillingStatus.publish(GoogleBillingEntitlement())
         val completedAt = System.currentTimeMillis()
         if (result.isKnown && result.source == "google_play" && account.isNotBlank()) {
             val snapshot = CachedBillingEntitlement(account, completedAt, result)
@@ -485,9 +495,10 @@ object GoogleBillingManager : GoogleBillingGateway {
             }
         }
         // 查询期间可能跨过离线宽限边界，必须按返回时刻重新判断。
-        if (!result.isKnown && cached?.usableNow(account, completedAt) == true) {
+        val resolved = if (!result.isKnown && cached?.usableNow(account, completedAt) == true) {
             cached.entitlement.copy(source = "google_play_offline_cache")
         } else result
+        GoogleBillingStatus.publish(resolved)
     }
 
     private suspend fun queryFreshEntitlement(): GoogleBillingEntitlement {
@@ -639,9 +650,11 @@ object GoogleBillingManager : GoogleBillingGateway {
         return legacyObfuscatedAccountId()
     }
 
+    /** 退出账号时清除本地缓存与公开快照，不让页面沿用前一用户的结果。 */
     internal suspend fun clearEntitlementCache(context: Context) = entitlementMutex.withLock {
         cachedEntitlement = null
         forceEntitlementRefresh = true
+        GoogleBillingStatus.reset()
         GoogleBillingEntitlementCache.clear(context)
     }
 
@@ -716,6 +729,7 @@ object GoogleBillingManager : GoogleBillingGateway {
     }
 }
 
+/** 将 Play 明确可用的普通报价转换为 UI 模型，不将未支持的优惠阶段伪装为标准订阅。 */
 private fun ProductDetails.toGoogleProducts(): List<GoogleProduct> {
     if (productType == GoogleProductType.IN_APP) {
         val configuredOption = GoogleBillingRuntime.currentConfig().billingOneTimePurchaseOptionIds[productId]
@@ -741,18 +755,8 @@ private fun ProductDetails.toGoogleProducts(): List<GoogleProduct> {
         offer.offerId == null && offer.pricingPhases.pricingPhaseList.singleOrNull()?.recurrenceMode ==
             ProductDetails.RecurrenceMode.INFINITE_RECURRING
     }
-    if (offers.isEmpty()) {
-        return listOf(
-            GoogleProduct(
-                productId = productId,
-                productType = productType,
-                title = title,
-                description = description,
-                formattedPrice = formattedPrice(),
-                offerToken = ""
-            )
-        )
-    }
+    // 只暴露能够完整披露的普通自动续订报价，不回退到试用、预付费或未知阶段。
+    if (offers.isEmpty()) return emptyList()
 
     return offers.map { offer ->
         val basePlanId = offer.basePlanId

@@ -1,0 +1,7 @@
+<resources>
+    <string name="google_page_open">打开支付页面</string>
+    <string name="google_sheet_open">打开支付底部弹层</string>
+    <string name="google_page_unknown">购买状态未确认，请稍后恢复购买核对。</string>
+    <string name="google_page_pro">已核对到有效付费权益。</string>
+    <string name="google_page_free">核对完成，未发现有效付费权益。</string>
+</resources>

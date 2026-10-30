@@ -1,3 +1,24 @@
+# Google 单库原生支付页面（2026-10-30）
+
+本轮按用户要求把引擎、页面与状态统一到 core_google，不新增 UI 模块，不改基础库实现。现有 executionPolicy 排除 adb/设备操作；历史 Pixel 8 授权不用于本轮支付验证。无真实付费、兑换、账号及远端 CI 操作。
+
+| ID | 关联与选择原因 | 方法及预期 |
+| --- | --- | --- |
+| GPAY-QUOTE | core_google 新页面策略 | JVM：精确基础方案匹配、保留多报价、缺失报价不可购买、报价变化重新确认、未知/待付款不授予 Pro、快照保留核对时间 |
+| GPAY-PAGE | 新 Manifest、BaseVMActivity、XML、XPopup | Robolectric API 35：无配置完整页膨胀、BottomSheet 膨胀、兑换说明切换、缺失结果为未知 |
+| GPAY-ENGINE | 引擎快照发布及缓存边界变更 | 运行已有计费/评分测试；缓存绑定账号与商品集合，退出清空状态，历史缓存失效后重查 |
+| GPAY-DEMO | GoogleActivity 新调用入口及原恢复状态 | feature_demo_google JVM、App Debug 与 AndroidTest APK 构建；不执行设备端测试 |
+| GPAY-API | 公共 Contract、StateFlow、Base/XPopup 依赖 | Release AAR 本地发布、POM 检查、published-consumer 编译调用两种入口及 StateFlow |
+| GPAY-I18N | 新增所有原生文案、14 个语言区域 | core_google 严格资源校验、宿主聚合严格校验；翻译不视为母语/法律通过 |
+| GPAY-ADAPT | 新布局及独立透明承载窗口 | 源码检查：完整页 Base、底部 XPopup 唯一 Insets owner，弹层依实际根窗口大小；无设备视觉结论 |
+| GPAY-CATALOG | 原模块数和路由不应改变 | 最终 APK 门禁：19 个正式模块、18 个能力入口 |
+
+执行命令及结果记录在 TEST_REPORT.md 和 evidence/2026-10-30-google-billing。仅覆盖直接变更及消费者，未重跑无关 NAS/USB/文档业务。不推进全功能基线。
+
+未执行：真实 Play 购买/订阅替换/退款/待付款/兑换，API 26/37 运行，日夜/RTL/TalkBack/200% 大字体/横屏/多窗口/系统强杀原生视觉与交互，Release R8 安装。HTML 几何检查独立于原生验收。以下为历史计划。
+
+---
+
 # 三入口信息架构重整（2026-10-27）
 
 | ID | 范围与预期 | 验证方法 |

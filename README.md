@@ -13,3 +13,5 @@ NAS 与 SAF 存储库：`core_nas`、`core_usb`，包含各自独立的浏览、
 逐库可靠性优化与边界：[优化记录](doc/library-optimization.md)。实际验证见固定测试报告。
 
 统一记录导出：`core_document` 将一份记录生成 PDF、Excel、Word，见 [接入与边界](doc/record-export.md)。
+
+Google 单库支付页面：`core_google` 包含 Activity、BottomSheet、官方兑换、恢复及付费状态，见 [接入示例](core/core_google/README.md#原生支付页面单库调用)。

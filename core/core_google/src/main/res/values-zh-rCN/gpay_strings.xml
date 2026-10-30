@@ -1,0 +1,73 @@
+<resources>
+    <string name="gpay_back">返回</string>
+    <string name="gpay_buy">继续购买 · %1$s</string>
+    <string name="gpay_cancelled">购买已取消</string>
+    <string name="gpay_cancelled_body">未产生新的购买，原有付费权益不受影响。</string>
+    <string name="gpay_checking">核对购买记录</string>
+    <string name="gpay_checking_body">返回应用不代表兑换成功，请核对实际购买记录。</string>
+    <string name="gpay_choose">选择方案</string>
+    <string name="gpay_close">关闭</string>
+    <string name="gpay_done">完成</string>
+    <string name="gpay_empty">暂无商品</string>
+    <string name="gpay_empty_body">可恢复已有购买，或稍后重新获取商品。</string>
+    <string name="gpay_error">查询失败</string>
+    <string name="gpay_error_body">请检查网络后重试，已有购买记录会保留。</string>
+    <string name="gpay_failed">暂时无法核对</string>
+    <string name="gpay_failed_body">兑换结果尚未确认，请稍后重试，已有权益不会被清除。</string>
+    <string name="gpay_lifetime">一次性购买</string>
+    <string name="gpay_loading">正在获取商品</string>
+    <string name="gpay_loading_body">正在获取 Google Play 的实际价格与可用商品。</string>
+    <string name="gpay_manage">管理订阅 ↗</string>
+    <string name="gpay_missing">未查到新的购买</string>
+    <string name="gpay_missing_body">请核对 Play 账号及兑换码，礼品卡余额本身不解锁权益。</string>
+    <string name="gpay_month">月度订阅</string>
+    <string name="gpay_offline">离线付费记录</string>
+    <string name="gpay_offline_body">当前显示上次购买记录，联网后重新核对。</string>
+    <string name="gpay_once">一次付费</string>
+    <string name="gpay_one_time">一次性支付 %1$s，无需续订。</string>
+    <string name="gpay_pending">等待付款</string>
+    <string name="gpay_pending_body">请在 Google Play 完成付款，待付款订单不会解锁权益。</string>
+    <string name="gpay_privacy">隐私政策</string>
+    <string name="gpay_pro">Pro 已生效</string>
+    <string name="gpay_redeem">兑换码</string>
+    <string name="gpay_redeem_account">请使用购买时的 Google Play 账号。</string>
+    <string name="gpay_redeem_already">已经兑换？同步购买记录</string>
+    <string name="gpay_redeem_gift">礼品卡只增加 Play 余额，不会直接开通 Pro。权益以实际有效购买为准。</string>
+    <string name="gpay_redeem_go">前往 Google Play 兑换 ↗</string>
+    <string name="gpay_redeem_intro">在 Google Play 输入兑换码，返回后同步符合条件的购买权益。</string>
+    <string name="gpay_redeem_title">兑换 Google Play 兑换码</string>
+    <string name="gpay_restore">恢复购买</string>
+    <string name="gpay_retry">重试</string>
+    <string name="gpay_secure">通过 Google Play 安全付款</string>
+    <string name="gpay_select">请选择方案</string>
+    <string name="gpay_success">付费权益已生效</string>
+    <string name="gpay_terms">服务条款</string>
+    <string name="gpay_year">年度订阅</string>
+    <string name="gpay_not_initialized">请先在宿主 Application 初始化 GoogleBillingRuntime，再打开支付页。</string>
+    <string name="gpay_unavailable">暂不可用</string>
+    <string name="gpay_updated">购买记录已核对。</string>
+    <string name="gpay_purchase_failed">暂时无法发起购买，请重试。</string>
+    <string name="gpay_purchase_started">请在 Google Play 完成购买。</string>
+    <string name="gpay_offer_changed">报价已变化，请核对更新后的信息再购买。</string>
+    <string name="gpay_partial">部分商品加载失败，请重试。</string>
+    <string name="gpay_external_failed">无法打开页面，请检查浏览器或 Google Play 是否可用。</string>
+    <string name="gpay_sign_in">宿主暂不允许购买，请登录或检查宿主设置。</string>
+    <string name="gpay_recovery">订单确认尚未完成，可恢复购买重新核对。</string>
+    <string name="gpay_subscription_disclosure">%1$s · %2$s。自动续订，可在 Google Play 管理或取消。</string>
+    <plurals name="gpay_period_days">
+        <item quantity="one">每 %1$d 天</item>
+        <item quantity="other">每 %1$d 天</item>
+    </plurals>
+    <plurals name="gpay_period_weeks">
+        <item quantity="one">每 %1$d 周</item>
+        <item quantity="other">每 %1$d 周</item>
+    </plurals>
+    <plurals name="gpay_period_months">
+        <item quantity="one">每 %1$d 个月</item>
+        <item quantity="other">每 %1$d 个月</item>
+    </plurals>
+    <plurals name="gpay_period_years">
+        <item quantity="one">每 %1$d 年</item>
+        <item quantity="other">每 %1$d 年</item>
+    </plurals>
+</resources>

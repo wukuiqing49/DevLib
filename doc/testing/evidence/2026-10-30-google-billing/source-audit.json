@@ -1,0 +1,13 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/core_google/src/main/java/com/wkq/google/billing/GoogleBillingRuntime.kt",
+    "core/core_google/src/main/java/com/wkq/google/billing/GooglePaidStatus.kt",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingActivity.kt",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingPagePolicy.kt",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingUi.kt",
+    "core/core_google/src/main/java/com/wkq/google/billing/ui/GoogleBillingViewModel.kt",
+    "feature/feature_demo_google/src/main/java/com/wkq/dev/demo/google/GoogleActivity.kt"
+  ],
+  "findings": []
+}
