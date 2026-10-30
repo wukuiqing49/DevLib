@@ -50,6 +50,8 @@ python .agents/skills/android-project-scaffold-workflow/scripts/render_project_s
 
 ## 生成内容
 
+生成任务包含真实首页、导航或业务页面设计时，先使用项目内 `$apple-design` 确认页面流程和视觉层级，再使用 `$android-ui-workflow` 与 `$android-i18n-workflow` 落地。仅生成工程骨架或调整构建配置不强制设计审查；设计能力不改变生成标记保护、Base 复用和 Android 平台约束。
+
 - 根构建、settings、版本目录、Gradle properties、app convention 和 Wrapper。
 - `app`、`core/core_base`、`core/core_utils`、`feature/feature_app`、`feature/feature_res`。
 - 动态 Application、MainActivity、功能入口和 WKQ 真实使用点。

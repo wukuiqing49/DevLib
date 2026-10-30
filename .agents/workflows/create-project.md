@@ -17,6 +17,7 @@ Skills：
 - `$android-project-scaffold-workflow`
 - `$android-project-architecture-workflow`
 - `$android-build-workflow`
+- 涉及真实页面设计时加载项目内 `$apple-design`、`$android-ui-workflow` 和 `$android-i18n-workflow`；仅生成工程骨架不强制设计审查。
 
 配置：
 

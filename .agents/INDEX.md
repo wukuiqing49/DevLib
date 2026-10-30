@@ -51,6 +51,7 @@
 
 ## Skills
 
+- `skills/apple-design/`：项目内 Apple HIG 设计原则与跨平台审查，随附本地参考资料；页面设计、重构和视觉优化时与 Android UI Skill 配合。Android 保留原生组件、Base/XML、国际化与 Android 17 Insets，纯骨架/构建/引擎任务不强制加载。
 - `skills/devhub-basic-integration/`：私有 JitPack token 引用、DevHub 初始化及安装/日活、手机基础信息和 Locale 国家语言；仅按目标项目明确请求接入，不包含复杂业务页面或支付权益。
 - `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。

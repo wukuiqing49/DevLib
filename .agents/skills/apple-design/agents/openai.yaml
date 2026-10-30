@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple 设计原则与跨平台审查"
+  short_description: "参考 Apple HIG 优化页面设计，并按 Android 原生组件及项目规范落地"
+  default_prompt: "使用 $apple-design 分析并优化这个页面的布局、颜色、字体与交互，遵循目标平台和项目 UI 规范。"

@@ -10,7 +10,7 @@
 
 | 影响 | 继续加载 |
 | --- | --- |
-| Activity/Fragment、列表、弹窗或布局 | `.agents/workflows/implement-page.md`：UI、架构、国际化 Skills |
+| Activity/Fragment、列表、弹窗或布局 | `.agents/workflows/implement-page.md`：UI、架构、国际化；涉及页面设计/视觉审查时加载 apple-design |
 | 可见文案、语言目录、日期/数量/RTL | `.agents/workflows/localize-content.md` |
 | 模块、网络、文件、权限等共享能力 | `.agents/workflows/change-architecture.md` |
 | 依赖、Manifest、SDK、打包或发布 | `.agents/workflows/change-build.md` |

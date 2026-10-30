@@ -20,6 +20,8 @@ description: "用于实现和验证 Android XML UI：页面、列表、弹窗、
 
 ## 实现方法
 
+新增页面设计、页面重构、视觉优化或 UI 审查时，先加载项目内 `$apple-design`，按其平台适用性提取设计原则；Android 组件、尺寸、导航与实现遵循本项目规范。仅修正文案翻译或不影响视觉结构的局部行为时按实际影响选择，不强制整页重设计。
+
 1. 读取目标页面、相邻页面、Base 类型、已有组件和资源体系。
 2. 判断 Activity/Fragment、ViewModel、Adapter、列表、Tab 和弹窗职责。
 3. 明确普通边到边或全屏沉浸式策略、根布局、弹性内容区、固定视觉区及唯一 Insets owner；页面实现读取 [Android 17 系统栏与沉浸式](references/system-bars-android17.md)，检查 Base 已有实现与窗口状态恢复。
@@ -29,6 +31,7 @@ description: "用于实现和验证 Android XML UI：页面、列表、弹窗、
 
 ## 与其他能力协作
 
+- 布局、层级、颜色、字体、反馈和无障碍的设计审查交给 `$apple-design`；设计结果落实为现有 Android 组件与资源，不替代本 Skill 的 Base、国际化和 Android 17 适配验收。
 - 文案、plurals 和语言覆盖交给 `$android-i18n-workflow`。
 - 模块归属、Base 和公共组件复用交给 `$android-project-architecture-workflow`。
 - 新依赖、theme、manifest 和 targetSdk 行为交给 `$android-build-workflow`。
