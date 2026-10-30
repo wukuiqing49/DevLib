@@ -49,6 +49,7 @@
 
 ## Skills
 
+- `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
 
 - `skills/android-functional-test-workflow/`：跨项目的改动影响分析、增量/发布回归与固定测试报告，默认输出 `doc/testing/TEST_REPORT.md`。
