@@ -1,3 +1,23 @@
+# 全部库 API 37 与沉浸式（2026-10-31）
+
+用户要求全部库适配 API 37 并处理沉浸式。范围为 DevLib 的 16 个 Android 库、3 个 JVM 路由工具及工作台集成；不修改外部 DropLAN，不进行远端发布或设备操作。保留公开 API、各库 minSdk 与 JVM 工具模块边界，不为了升级 SDK 批量升级无关三方依赖。
+
+| ID | 关联与预期 | 方法 |
+| --- | --- | --- |
+| SDK37-LIBS | 所有 Android 库 compileSdk 37，工作台 targetSdk 37；JVM 工具保持可编译 | verifyLibrarySdk、assembleLibraries、App Debug 构建 |
+| SDK37-REGRESSION | 所有库已有 JVM 回归与新安全区用例无失败 | testLibraries；Gradle up-to-date 结果按未变输入复用，不称全部重新运行 |
+| SDK37-INSETS | 标题栏/刘海按最大值、重复分发不累加、键盘收起恢复基线、顶部固定高度恢复 | SystemBarInsetsTest 四项 Robolectric API 35 回归 |
+| SDK37-POPUP | 全屏 Auto 保留桌面标题栏，显式 EdgeToEdge 由宿主管理，原安全区/键盘策略不退化 | PopupInsetCalculatorTest 六项纯 JVM 回归 |
+| SDK37-STATIC | 中文注释、资源化、架构与构建门禁；现有缺口与新增问题区分 | Android 工作流严格聚合、完整文件扫描及改动声明人工审查 |
+| SDK37-RUNTIME | API 21/23/26、35/36/37，手势/三键、刘海、键盘、深浅色、横屏/分屏/桌面；全屏进入/退出、临时唤栏、权限弹窗/后台返回、重建 | 排除设备操作，全部保留未验证；API 35 沙箱不替代 API 37 实际画面 |
+| SDK37-CONSUMER | 发布新库并替换 DropLAN 旧 Maven，重新生成上传产物检查 Play 警告 | 本轮未执行远端发布及外部消费更新，不能宣称 Play 警告消失 |
+
+Base 继续负责普通页面；标题页由 CommonTitleBar 独占顶部安全区；BaseFullScreenActivity 管理自己的 Window 和全屏根安全区，媒体自定义铺满时由前景接管；XPopup 处理自己的 Dialog Window 与前景 Insets。无新业务页面或用户可见文案，沿用 XML/ViewBinding 与现有文案体系。
+
+不推进设备基线；工作区含此前未提交的 Skill 调整，源码工作区指纹单独保留。本轮不自动提交、推送或修改 CI。以下保留历史计划。
+
+---
+
 # 四类库组织与四入口同步（2026-10-30）
 
 按用户要求同步 .agents、AGENTS.md、当前文档与 Demo。选择直接受影响的目录、导航和接入详情；库引擎及基础库实现未改，本轮不重复执行其全部业务测试。目录迁移阶段已运行全部库构建与单元测试，结果单独记录，不能与本轮目录策略测试混计。

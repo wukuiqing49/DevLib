@@ -5,6 +5,19 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class PopupInsetCalculatorTest {
+    /** 全屏自动模式避让桌面窗口控件，但不因临时系统栏出现挤压媒体。 */
+    @Test
+    fun immersiveAutoKeepsDesktopCaptionAndRespectsExplicitEdgeToEdge() {
+        val caption = PopupInsets(top = 42)
+        for (mode in listOf(PopupInsetMode.Auto, PopupInsetMode.EdgeToEdge)) {
+            val result = PopupInsetCalculator.foregroundInsets(
+                mode, true, true, PopupInsets(top = 42, bottom = 48), PopupInsets(),
+                imeVisible = false, captionBar = caption
+            )
+            assertEquals(if (mode == PopupInsetMode.Auto) caption else PopupInsets(), result)
+        }
+    }
+
     @Test
     fun safeAreaUsesLargestSystemBarAndCutoutOnEverySide() {
         val result = PopupInsetCalculator.foregroundInsets(

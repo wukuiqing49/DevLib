@@ -58,7 +58,7 @@ implementation project(':core:core_network')
 implementation project(':core:core_document')
 ```
 
-独立项目使用发布产物；标准坐标为 `com.wkq.dev:<模块名下划线替换为连字符>:<版本>`，当前统一默认 `0.1.0-SNAPSHOT`，事实源为根 [build.gradle](build.gradle) 的 `devlibVersion`。不要同时引入同库源码与旧 AAR/JAR，也不要只复制缺失传递依赖的孤立 AAR。
+独立项目使用发布产物；标准坐标为 `com.wkq.dev:<模块名下划线替换为连字符>:<版本>`，Base、Utils、XPopup 分别使用 `1.3.1`、`1.1.2`、`3.3.2`（模块 `version.properties`）；其他库默认 `0.1.0-SNAPSHOT`（根 [build.gradle](build.gradle) 的 `devlibVersion`）。不要同时引入同库源码与旧 AAR/JAR，也不要只复制缺失传递依赖的孤立 AAR。
 
 ```powershell
 # 在本仓根目录发布完整依赖和路由插件 marker，输出 build/repo
@@ -123,3 +123,9 @@ python -B scripts/verify_demo_catalog.py --catalog-only
 - [协作规范](AGENTS.md)：修改源码、基础复用、中文注释、国际化与适配要求。
 
 各模块保留其原有许可及归属；来源记录不替代许可审查，分发前按模块及传递依赖核对许可要求。
+
+## Agent 开发协作
+
+规范入口为 [AGENTS.md](AGENTS.md)，能力导航见 [.agents/INDEX.md](.agents/INDEX.md)，使用方法见 [.agents/README.md](.agents/README.md)。实际目录为 `.agents/`，不维护同内容的 `.agent/` 或 `Agent.md` 副本。
+
+直接描述需求即可，无需手动指定 Skill 名称。Agent 根据任务选择需求澄清、Android 架构与开发、UI 设计、工程评审、用户路径和验收方法；页面任务遵循本产品设计基线，纯网络引擎不强制启动设计流程。构建和本地测试结果不等于设备、视觉或远端发布验收。

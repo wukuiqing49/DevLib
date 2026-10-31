@@ -6,6 +6,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.WeakHashMap
 
+/** 集中管理窗口安全区，以初始布局为基线，支持普通与全屏页面。 */
 object SystemBarInsets {
 
     private val initialStates = WeakHashMap<View, InitialViewState>()
@@ -88,6 +89,7 @@ object SystemBarInsets {
         view.requestApplyInsetsWhenAttached()
     }
 
+    /** 为普通页面叠加系统栏、桌面标题栏与刘海安全区，不消费子布局的 Insets。 */
     fun applySystemBarsInset(
         view: View,
         includeTop: Boolean = true,
@@ -100,7 +102,8 @@ object SystemBarInsets {
         ViewCompat.setOnApplyWindowInsetsListener(view) { target, insets ->
             val topInset = if (includeTop) {
                 insets.getInsets(
-                    WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.displayCutout()
+                    WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.captionBar() or
+                    WindowInsetsCompat.Type.displayCutout()
                 ).top
             } else {
                 0
@@ -129,6 +132,7 @@ object SystemBarInsets {
         view.requestApplyInsetsWhenAttached()
     }
 
+    /** 为顶部容器避让状态栏、桌面标题栏及刘海，固定高度时同步扩展容器。 */
     fun applyTopInset(
         view: View,
         resizeHeight: Boolean = true
@@ -138,7 +142,8 @@ object SystemBarInsets {
         val initialHeight = initialState.height
         ViewCompat.setOnApplyWindowInsetsListener(view) { target, insets ->
             val topInset = insets.getInsets(
-                WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.displayCutout()
+                WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.captionBar() or
+                    WindowInsetsCompat.Type.displayCutout()
             ).top
             if (resizeHeight && initialHeight != null && initialHeight > 0) {
                 target.updateHeight(initialHeight + topInset)
@@ -146,6 +151,33 @@ object SystemBarInsets {
             target.applyPadding(
                 initial = initial,
                 addedTop = topInset
+            )
+            insets
+        }
+        view.requestApplyInsetsWhenAttached()
+    }
+
+    /**
+     * 全屏内容仅避让刘海和无法隐藏的桌面标题栏；临时唤出的系统栏不挤压画面。
+     * 输入页可显式选择避让键盘，媒体背景可由页面覆盖此策略自行铺满。
+     */
+    fun applyImmersiveInsets(view: View, includeIme: Boolean = false) {
+        val initial = view.initialState().padding
+        ViewCompat.setOnApplyWindowInsetsListener(view) { target, insets ->
+            val safe = insets.getInsets(
+                WindowInsetsCompat.Type.displayCutout() or WindowInsetsCompat.Type.captionBar()
+            )
+            val imeBottom = if (includeIme) {
+                insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+            } else {
+                0
+            }
+            target.applyPadding(
+                initial = initial,
+                addedLeft = safe.left,
+                addedTop = safe.top,
+                addedRight = safe.right,
+                addedBottom = maxOf(safe.bottom, imeBottom)
             )
             insets
         }

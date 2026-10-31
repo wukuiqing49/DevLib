@@ -26,9 +26,23 @@ tasks.register('clean', Delete) { delete rootProject.layout.buildDirectory }
 gradle.projectsEvaluated {
  def libraries = subprojects.findAll { it.path.startsWith(':core:') &&
      (it.plugins.hasPlugin('com.android.library') || it.plugins.hasPlugin('org.jetbrains.kotlin.jvm')) }
+ // 全部 Android 库共享 API 37 基线；JVM 路由工具不参与 Android SDK 校验。
+ def sdkVerification = tasks.register('verifyLibrarySdk') {
+  group = 'verification'
+  description = 'Verify every Android library uses the shared compileSdk baseline.'
+  doLast {
+   libraries.findAll { it.plugins.hasPlugin('com.android.library') }.each { library ->
+    def actual = library.extensions.getByName('android').compileSdk
+    if (actual != rootProject.ext.compileSdkVersion) {
+     throw new GradleException("${library.path}: compileSdk ${actual}, expected ${rootProject.ext.compileSdkVersion}")
+    }
+   }
+  }
+ }
  tasks.register('assembleLibraries') {
   group = 'build'
   description = 'Build all standalone Android and JVM libraries.'
+  dependsOn sdkVerification
   dependsOn libraries.collect { it.tasks.named(it.plugins.hasPlugin('com.android.library') ? 'assembleDebug' : 'jar') }
  }
  tasks.register('testLibraries') {

@@ -213,12 +213,17 @@ class FullScreenDialog(context: Context) : Dialog(context, R.style._XPopup_Trans
 
     private var backInvokedCallback: OnBackInvokedCallback? = null
 
+    /** 每次显示时恢复弹窗系统栏及尺寸，并注册当前窗口的返回回调。 */
     override fun onStart() {
         super.onStart()
         getWindow()?.setLayout(
             WindowManager.LayoutParams.MATCH_PARENT,
             WindowManager.LayoutParams.MATCH_PARENT
         )
+        if (contentView != null) {
+            setStatusBarLightMode()
+            setNavBarLightMode()
+        }
         protectionLayout?.let(ViewCompat::requestApplyInsets)
         contentView?.let(ViewCompat::requestApplyInsets)
         if (Build.VERSION.SDK_INT >= 33 && backInvokedCallback == null) {
@@ -249,11 +254,13 @@ class FullScreenDialog(context: Context) : Dialog(context, R.style._XPopup_Trans
         return this
     }
 
+    /** 仅在弹窗获得焦点时恢复自身系统栏策略，避免退出时干扰宿主。 */
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
+        if (!hasFocus || contentView == null) return
         setStatusBarLightMode()
         setNavBarLightMode()
-        if (hasFocus && contentView != null && contentView!!.hasMoveUp && contentView!!.popupStatus == PopupStatus.Show) {
+        if (contentView != null && contentView!!.hasMoveUp && contentView!!.popupStatus == PopupStatus.Show) {
             contentView!!.focusAndProcessBackPress()
             KeyboardUtils.showSoftInput(contentView)
         }

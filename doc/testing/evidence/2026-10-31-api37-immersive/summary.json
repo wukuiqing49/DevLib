@@ -1,0 +1,384 @@
+{
+  "date": "2026-10-31",
+  "head": "1f75a2491c3e36c8ab5a4a5016dcc2616f18cbfd",
+  "gradle": {
+    "command": ".\\gradlew.bat assembleLibraries testLibraries :app:assembleDebug --no-daemon --console=plain",
+    "exitCode": 0,
+    "result": "836 actionable tasks: 29 executed, 807 up-to-date",
+    "deviceCommands": "excluded"
+  },
+  "modules": [
+    {
+      "module": "core_archive",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_archive/build/outputs/aar/core_archive-debug.aar"
+      ],
+      "tests": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_archive:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_base",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/architecture/core_base/build/outputs/aar/core_base-debug.aar"
+      ],
+      "tests": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_base:testDebugUnitTest",
+      "taskState": "executed"
+    },
+    {
+      "module": "core_image_render",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_image_render/build/outputs/aar/core_image_render-debug.aar"
+      ],
+      "tests": {
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_image_render:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_network",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/architecture/core_network/build/outputs/aar/core_network-debug.aar"
+      ],
+      "tests": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_network:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_document",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_document/build/outputs/aar/core_document-debug.aar"
+      ],
+      "tests": {
+        "tests": 24,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_document:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_qrcode",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_qrcode/build/outputs/aar/core_qrcode-debug.aar"
+      ],
+      "tests": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_qrcode:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_router_annotation",
+      "type": "jvm",
+      "compileSdk": null,
+      "artifacts": [
+        "core/architecture/core_router_annotation/build/libs/core_router_annotation-0.1.0-SNAPSHOT-sources.jar",
+        "core/architecture/core_router_annotation/build/libs/core_router_annotation-0.1.0-SNAPSHOT.jar"
+      ],
+      "tests": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_router_annotation:test",
+      "taskState": "Classes UP-TO-DATE"
+    },
+    {
+      "module": "core_router_api",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/architecture/core_router_api/build/outputs/aar/core_router_api-debug.aar"
+      ],
+      "tests": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_router_api:testDebugUnitTest",
+      "taskState": "NO-SOURCE"
+    },
+    {
+      "module": "core_router_gradle_plugin",
+      "type": "jvm",
+      "compileSdk": null,
+      "artifacts": [
+        "core/architecture/core_router_gradle_plugin/build/libs/core_router_gradle_plugin-0.1.0-SNAPSHOT-sources.jar",
+        "core/architecture/core_router_gradle_plugin/build/libs/core_router_gradle_plugin-0.1.0-SNAPSHOT.jar"
+      ],
+      "tests": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_router_gradle_plugin:test",
+      "taskState": "Classes UP-TO-DATE"
+    },
+    {
+      "module": "core_router_processor",
+      "type": "jvm",
+      "compileSdk": null,
+      "artifacts": [
+        "core/architecture/core_router_processor/build/libs/core_router_processor-0.1.0-SNAPSHOT-sources.jar",
+        "core/architecture/core_router_processor/build/libs/core_router_processor-0.1.0-SNAPSHOT.jar"
+      ],
+      "tests": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_router_processor:test",
+      "taskState": "Classes UP-TO-DATE"
+    },
+    {
+      "module": "core_utils",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/architecture/core_utils/build/outputs/aar/core_utils-debug.aar"
+      ],
+      "tests": {
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_utils:testDebugUnitTest",
+      "taskState": "executed"
+    },
+    {
+      "module": "lib_drop",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/lib_drop/build/outputs/aar/lib_drop-debug.aar"
+      ],
+      "tests": {
+        "tests": 29,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:lib_drop:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "lib_metadata",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/lib_metadata/build/outputs/aar/lib_metadata-debug.aar"
+      ],
+      "tests": {
+        "tests": 94,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "testTask": ":core:lib_metadata:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "lib_operations",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/internal/lib_operations/build/outputs/aar/lib_operations-debug.aar"
+      ],
+      "tests": {
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:lib_operations:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "lib_upload",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/lib_upload/build/outputs/aar/lib_upload-debug.aar"
+      ],
+      "tests": {
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:lib_upload:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "lib_xpopup",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/architecture/lib_xpopup/build/outputs/aar/lib_xpopup-debug.aar"
+      ],
+      "tests": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:lib_xpopup:testDebugUnitTest",
+      "taskState": "executed"
+    },
+    {
+      "module": "core_google",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/thirdparty/core_google/build/outputs/aar/core_google-debug.aar"
+      ],
+      "tests": {
+        "tests": 58,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_google:testDebugUnitTest",
+      "taskState": "executed"
+    },
+    {
+      "module": "core_nas",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_nas/build/outputs/aar/core_nas-debug.aar"
+      ],
+      "tests": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_nas:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    },
+    {
+      "module": "core_usb",
+      "type": "aar",
+      "compileSdk": 37,
+      "artifacts": [
+        "core/functional/core_usb/build/outputs/aar/core_usb-debug.aar"
+      ],
+      "tests": {
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testTask": ":core:core_usb:testDebugUnitTest",
+      "taskState": "UP-TO-DATE"
+    }
+  ],
+  "tests": {
+    "tests": 338,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "sourceFingerprints": {
+    "build.gradle": "3c9325a0762e4c04a3a2815e262d8195d1a411e457fa59be93ad9246a4df707d",
+    "core/README.md": "3ff288d6927e7ba4a40ce9dd1528fd65de3ca82a487d869a7d22d5bb3a880a4f",
+    "core/architecture/core_base/README.md": "3a2264a837934296e20530c7fb788ae2b1ce21aeec932d49fbf49d67c7a5c47f",
+    "core/architecture/core_base/build.gradle": "1bdcc93a2e924e57725a39618f7506758cccd0a532693c62857e5c8d3a5017b2",
+    "core/architecture/core_base/src/main/java/com/wkq/base/activity/BaseFullScreenActivity.kt": "6a190180515f7fc2e9581e881190bb14e4ce97410db3a9c5bcaaaad6991c3f41",
+    "core/architecture/core_base/src/main/java/com/wkq/base/insets/SystemBarInsets.kt": "8fd1d6cec62ce3bac97550333b503eecbdbec517f1b7322a3b7380ca235c747b",
+    "core/architecture/core_base/src/test/java/com/wkq/base/insets/SystemBarInsetsTest.kt": "e1f7a87d6c76ac627e137fcfb6b587fd90df0c6fc2243084de56e375eeb7636f",
+    "core/architecture/core_utils/src/main/java/com/wkq/util/InsetsUtil.kt": "0eeb8fd3bd13d5ba184ea370ef70c3f1a06cc80a45c5149d3b825d2bdaf83059",
+    "core/architecture/lib_xpopup/README.md": "e681d40ae9a6a7ee39fb39b213e241e0086a4224b2f6b6f6c357aa06afecb733",
+    "core/architecture/lib_xpopup/build.gradle": "a754b0413fb13ac17ab82ca36636e9db67fd7d774855ad7f8452fe1e43bed27d",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt": "73ba2d4260f6e81175909a803b587b7cc1e818c37b275e38e6c50b24dab3b10b",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt": "6fa64d2e3f3b7325644373a749e97a2a7dd44e021b3ec9bd1cea54c05fd6a758",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/PopupInsetCalculator.kt": "fa62ca6bde2452bfadf12cfd25296755e92793c04fe170e21594a76b9412595e",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt": "acb1e61c1e923ba7a26f19dc0ad6d2b174782c9435e57336e889108f5224abcd",
+    "core/architecture/lib_xpopup/src/test/kotlin/com/lxj/xpopup/core/PopupInsetCalculatorTest.kt": "314e3a4d0b83a6070567daafc4bcc3dfb778a47939d962130a15ec494632b9d4",
+    "gradle/catalogs/dropLibs.versions.toml": "04649023e989d007b637eea3f0d6255492a9f46ee4338181ca39e3b08a8d4882",
+    "gradle/catalogs/photoLibs.versions.toml": "c399df7e3fd4b996dcf5723d06eda51eb17ad870466d8e944b30e624c7fed4b8",
+    "gradle/libs.versions.toml": "f312e8b3ba8f2c738ccaaad3ef94cf4da7ef066a780091bd55adee9d4e48da24"
+  },
+  "sourceFingerprint": "cbc6de012b67646798d288c85d0155e5fac50718ad759245e6b299a4a052e640",
+  "review": {
+    "newSourceFindings": 0,
+    "existingWholeFileFindings": 121,
+    "workflow": "passed",
+    "architectureExistingWarnings": 2,
+    "layoutTests": 3,
+    "newRegressionTests": 5,
+    "api37DeviceVisual": "excluded/unverified",
+    "externalConsumerUpdate": "not executed"
+  },
+  "regressionSuites": [
+    {
+      "name": "com.wkq.base.insets.SystemBarInsetsTest",
+      "tests": "4",
+      "cases": [
+        "immersiveImeIsOptIn",
+        "regularPageAvoidsCaptionWithoutAccumulation",
+        "topContainerResizesOnceForCaption",
+        "immersivePageKeepsCutoutAndCaptionWithoutTransientBars"
+      ],
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "com.lxj.xpopup.core.PopupInsetCalculatorTest",
+      "tests": "6",
+      "cases": [
+        "repeatedDispatchUsesInitialPaddingWithoutAccumulationAndKeepsPhysicalRtlSides",
+        "immersiveAutoKeepsDesktopCaptionAndRespectsExplicitEdgeToEdge",
+        "autoKeepsLegacyImmersiveTypesAndProtectsForcedEdgeToEdgeHosts",
+        "safeAreaUsesLargestSystemBarAndCutoutOnEverySide",
+        "imeTemporarilyRemovesBottomSafePaddingAndRestoresItWhenHidden",
+        "edgeToEdgeNeverAddsAutomaticPadding"
+      ],
+      "failures": "0",
+      "errors": "0"
+    }
+  ]
+}

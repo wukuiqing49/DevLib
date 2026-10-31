@@ -1,0 +1,205 @@
+{
+  "command": "testLibraries --no-daemon --max-workers=1 --init-script <本地强制 Test 重跑脚本>",
+  "result": "BUILD SUCCESSFUL in 4m 20s; 327 tasks, 17 executed, 310 up-to-date",
+  "testTaskPolicy": "全部 Test: outputs.upToDateWhen=false、outputs.cacheIf=false、maxParallelForks=1；编译可复用",
+  "totals": {
+    "tests": 338,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "modules": [
+    {
+      "task": ":core:core_archive:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_base:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_image_render:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_network:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_document:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 24,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_qrcode:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_router_annotation:test",
+      "state": "NO-SOURCE",
+      "results": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_router_api:testDebugUnitTest",
+      "state": "NO-SOURCE",
+      "results": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_router_gradle_plugin:test",
+      "state": "executed",
+      "results": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_router_processor:test",
+      "state": "executed",
+      "results": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_utils:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:lib_drop:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 29,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:lib_metadata:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 94,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "task": ":core:lib_operations:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:lib_upload:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:lib_xpopup:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_google:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 58,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_nas:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "task": ":core:core_usb:testDebugUnitTest",
+      "state": "executed",
+      "results": {
+        "tests": 12,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "initialAttempt": "--rerun-tasks 全量重编译遇到 daemon 意外退出，降低并发后强制全部 Test 重跑成功",
+  "deviceTests": "excluded"
+}

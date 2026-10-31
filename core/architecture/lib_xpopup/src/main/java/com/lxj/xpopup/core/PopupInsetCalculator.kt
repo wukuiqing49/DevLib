@@ -11,21 +11,26 @@ internal data class PopupInsets(
     val bottom: Int = 0
 )
 
+/** 弹窗前景的安全区计算，不修改铺满窗口的背景及触摸层。 */
 internal object PopupInsetCalculator {
+    /** 按模式计算前景间距，全屏 Auto 模式仍需避让无法隐藏的桌面标题栏。 */
     fun foregroundInsets(
         mode: PopupInsetMode,
         keepsImmersiveContent: Boolean,
         hostIsEdgeToEdge: Boolean,
         systemBars: PopupInsets,
         displayCutout: PopupInsets,
-        imeVisible: Boolean
+        imeVisible: Boolean,
+        captionBar: PopupInsets = PopupInsets()
     ): PopupInsets {
         val applySafeArea = when (mode) {
             PopupInsetMode.SafeArea -> true
             PopupInsetMode.EdgeToEdge -> false
             PopupInsetMode.Auto -> !keepsImmersiveContent && hostIsEdgeToEdge
         }
-        if (!applySafeArea) return PopupInsets()
+        if (!applySafeArea) {
+            return if (mode == PopupInsetMode.Auto && hostIsEdgeToEdge) captionBar else PopupInsets()
+        }
 
         return PopupInsets(
             left = max(systemBars.left, displayCutout.left),

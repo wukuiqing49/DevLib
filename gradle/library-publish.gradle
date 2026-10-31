@@ -1,7 +1,19 @@
 // 每个库独立发布，POM 保留 project 依赖；只配置本地文件仓库。
 apply plugin: 'maven-publish'
 group = 'com.wkq.dev'
-version = rootProject.ext.devlibVersion
+// 已独立发版的库沿用模块版本；其他库保留仓库默认版本。
+def moduleVersionFile = file('version.properties')
+if (moduleVersionFile.exists()) {
+ def moduleVersionProperties = new Properties()
+ moduleVersionFile.withInputStream { moduleVersionProperties.load(it) }
+ def moduleVersion = moduleVersionProperties.getProperty('VERSION_NAME', '').trim()
+ if (!(moduleVersion ==~ /[0-9]+\.[0-9]+\.[0-9]+(?:-[A-Za-z0-9._-]+)?/)) {
+  throw new GradleException("${project.path} 的 version.properties 必须提供有效的 VERSION_NAME")
+ }
+ version = moduleVersion
+} else {
+ version = rootProject.ext.devlibVersion
+}
 
 def configurePom = { publication ->
  publication.groupId = project.group.toString()

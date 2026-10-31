@@ -19,7 +19,7 @@ fun Activity.enableEdgeToEdge(
     lightStatusBars: Boolean? = null,
     lightNavigationBars: Boolean? = null
 ) {
-    WindowCompat.setDecorFitsSystemWindows(window, false)
+    WindowCompat.enableEdgeToEdge(window)
     WindowInsetsControllerCompat(window, window.decorView).apply {
         lightStatusBars?.let { isAppearanceLightStatusBars = it }
         lightNavigationBars?.let { isAppearanceLightNavigationBars = it }
@@ -27,7 +27,7 @@ fun Activity.enableEdgeToEdge(
 }
 
 /**
- * 将系统栏 Insets 叠加到当前 View padding。
+ * 将系统栏（含桌面标题栏）及刘海安全区叠加到当前 View padding。
  *
  * 此方法会设置 View 的 WindowInsets listener；同一 View 如有自定义 listener，应由调用方自行合并逻辑。
  */
@@ -39,7 +39,9 @@ fun View.applySystemBarsPadding(
 ) {
     val initial = Insets.of(paddingLeft, paddingTop, paddingRight, paddingBottom)
     ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
-        val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        val bars = insets.getInsets(
+            WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()
+        )
         view.updatePadding(
             left = initial.left + if (applyLeft) bars.left else 0,
             top = initial.top + if (applyTop) bars.top else 0,

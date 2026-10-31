@@ -27,7 +27,7 @@ implementation project(':core:core_utils')
 
 ## 产物发布与本地检查
 
-标准 Maven 坐标：`com.wkq.dev:core-utils:0.1.0-SNAPSHOT`。默认版本统一来自根 `devlibVersion`；网络库另支持发布版本覆盖。不要同时依赖同库源码模块与旧 Maven AAR/JAR。
+标准 Maven 坐标：`com.wkq.dev:core-utils:1.1.2`。本库版本来自模块 `version.properties` 的 `VERSION_NAME`；发布配置同步项目版本、POM 与 Gradle 元数据。不要同时依赖同库源码模块与旧 Maven AAR/JAR。
 
 以下命令在 DevLib 根目录执行：
 
@@ -45,3 +45,10 @@ implementation project(':core:core_utils')
 来源快照见 [import-manifest](../../../docs/import-manifest.json)；当前分类见 [library-catalog](../../../docs/library-catalog.json)；逐项验证及未验证边界见 [固定测试报告](../../../doc/testing/TEST_REPORT.md)。本页命令是复核入口，不代表本轮已重新执行。源码迁入、构建和 JVM 测试不等于真机、服务器、视觉或生产验收。
 
 [返回项目说明](../../../README.md) · [库目录](../../README.md)
+
+## 1.1.2 更新说明
+
+- 沿原仓库最新标签版本 `1.1.1` 将补丁号加 1；InsetsUtil 沿用 AndroidX 兼容边到边入口。
+- 保留公开包名及 API；使用 DevLib 坐标 `com.wkq.dev:core-utils:1.1.2`，不代表原仓库 `com.github...` 坐标或标签已发布。
+- 发布前核对 AAR、sources、POM 与 module metadata；构建和本地发布不代表设备、视觉或远端发布验收。
+- 协作规范见根 [AGENTS.md](../../../AGENTS.md) 与 [.agents 使用说明](../../../.agents/README.md)，无需手动输入 Skill 名称。

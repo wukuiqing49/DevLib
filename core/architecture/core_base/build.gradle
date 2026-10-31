@@ -25,6 +25,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+
     buildFeatures {
         viewBinding = true
     }
@@ -52,6 +56,7 @@ dependencies {
     implementation(baseLibs.smartrefresh.header.classics)
     
     testImplementation integrationLibs.junit
+    testImplementation integrationLibs.robolectric
 }
 
 

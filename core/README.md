@@ -17,6 +17,14 @@
 
 目录迁移保持库实现不变。后续 App 已同步为架构、功能、三方、工作区四入口，详见 [分类与页面对照](../doc/library-organization.md)；下方为目录迁移阶段的验证记录。
 
+## API 37 兼容基线
+
+全部 16 个 Android 库使用 compileSdk 37；3 个 JVM 路由工具沿用 JVM 工具链，不设置 Android SDK。工作台 targetSdk 37，消费 App 仍须自行设置 targetSdk 并处理运行时权限。`verifyLibrarySdk` 校验所有 Android 库与根 SDK 配置一致，`assembleLibraries` 自动执行此门禁。
+
+普通页面沿用 Base 边到边布局，全屏媒体页使用 BaseFullScreenActivity；XPopup 负责自己的 Dialog Window。Insets、桌面标题栏、键盘和全屏恢复说明见 [Base](architecture/core_base/README.md#api-37-与窗口策略) 与 [XPopup](architecture/lib_xpopup/README.md#api-37-与沉浸式)。网络能力的权限由宿主负责，不能把 compileSdk 升级当作全部 Android 17 行为已验证。
+
+本仓源码修改不会自动更新 DropLAN 或其他项目正在使用的旧 Maven AAR；需要发布并更新消费依赖后再验证 Play 产物。
+
 ## 目录迁移验证（2026-10-30）
 
 - 844 个原 Git 跟踪文件均已迁入且未被忽略规则排除；架构库文件内容保持不变。
@@ -26,3 +34,13 @@
 - Agent 结构、配置及构建静态检查通过；架构检查保留独立消费示例和 Utils 初始化的两项既有提示。
 - 元数据测试文件整文件注释审计发现 8 个未改动方法的既有缺口；本次调整的类和方法已补中文说明，不将整文件审计标为通过。
 - 无页面、文案或窗口行为变更，Base/UI/国际化/沉浸式实现沿用现状；未进行设备或视觉验收，未提交、推送或调整 CI。
+
+## 独立补丁版本
+
+| 模块 | 原仓库最新标签 | 本仓本轮版本 |
+| --- | --- | --- |
+| core_base | v1.3.0 | 1.3.1 |
+| core_utils | v1.1.1 | 1.1.2 |
+| lib_xpopup | v3.3.1 | 3.3.2 |
+
+版本存储于对应模块 version.properties，通用发布脚本同步到项目和 Maven 元数据；其他库继续使用根 devlibVersion。本表描述 DevLib 产物配置，原仓库、标签及远端产物未自动更新。消费示例随版本同步，禁止手工替换 AAR 而丢失传递依赖。

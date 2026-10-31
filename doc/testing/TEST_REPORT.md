@@ -1,3 +1,35 @@
+# 2026-10-31 全部库强制重测补充
+
+按用户要求补测未修改的库。19 个模块中，17 个有测试的模块实际重新执行，无测试任务使用 up-to-date/缓存；core_router_annotation、core_router_api 为 NO-SOURCE，不计通过。JUnit 共 338 项，337 通过、1 跳过、0 失败/错误。编译等前置任务允许缓存；最终 Gradle 327 任务、17 执行、310 up-to-date。
+
+首次 --rerun-tasks 全量重编译遇到 daemon 意外退出，降低并发后对所有 Test 禁用 up-to-date 与缓存并重跑成功，未修改产品源码或项目并发配置。设备操作仍排除，不等于 API 37 真机/视觉验收。证据：[逐模块强制重测](evidence/2026-10-31-api37-immersive/full-retest.json)。下方保留此前增量构建报告。
+
+---
+
+# 2026-10-31 全部库 API 37 与沉浸式
+
+本轮源码实现与本地工程验证完成，设备/视觉及消费项目产物验收未完成。范围为 DevLib 的全部 19 个模块：16 个 Android 库统一 compileSdk 37（修复 XPopup 硬编码 36），3 个 JVM 路由工具保持原工具链；App targetSdk 37。新增 verifyLibrarySdk 门禁并接入 assembleLibraries，不改变 minSdk 声明、公开包名或发布版本。
+
+| 用例 | 状态 | 当前证据与边界 |
+| --- | --- | --- |
+| SDK37-LIBS | 本次通过 | 全部库构建、SDK 一致性门禁、Demo Debug 构建通过；836 个任务，29 执行、807 up-to-date；19 模块产物均存在 |
+| SDK37-REGRESSION | 本次通过 | 所有库 testLibraries 成功；JUnit 共 338 项，337 通过、1 跳过、0 失败/错误，包含未变输入的 Gradle up-to-date 结果；NO-SOURCE 不计通过 |
+| SDK37-INSETS | 本次通过 | 新增四项 API 35 Robolectric：桌面标题栏、刘海、重复分发、键盘恢复、固定工具栏高度、全屏 IME 可选策略 |
+| SDK37-POPUP | 本次通过 | XPopup 六项纯 JVM 回归通过，含新增全屏 Auto 桌面标题栏与显式 EdgeToEdge 策略；原五项均重跑 |
+| SDK37-STATIC | 本次通过 | 严格聚合门禁、Agent 结构及目录映射三项测试通过；构建/UI/国际化零门禁警告，架构保留两个既有提示；git diff --check 通过 |
+| SDK37-RUNTIME | 排除 | 按 executionPolicy 不执行 adb、设备及截图。API 21/23/26、35/36/37，手势/三键、低版本、横屏/分屏/桌面、深浅色、字体、真实键盘、全屏进入/退出/焦点与重建仍未验证 |
+| SDK37-CONSUMER | 未执行 | 未发布新库、未修改 DropLAN 旧 Maven 依赖、未构建上传 Play 产物；不能据此判断 1.0.4 警告已消失 |
+
+实现复用：普通 Base 页面及 CommonTitleBar 保持唯一 Insets owner；SystemBarInsets 纳入桌面标题栏并新增全屏安全区策略；BaseFullScreenActivity 返回前台/恢复焦点时重置自身全屏；XPopup 独立窗口仅获焦时更新系统栏，Auto 全屏前景保护桌面标题栏；Utils 使用现有 AndroidX Core 1.18 的兼容边到边入口并纳入刘海。显式 EdgeToEdge 与自定义全屏背景由宿主保护操作控件，未强制把普通页面隐藏系统导航。
+
+工程自查：新/修改声明已补中文说明，未新增可见文案；XML/ViewBinding/MVVM 与既有资源继续复用。整文件扫描和 HEAD 对比无新增发现，仍有 121 项未改动声明的历史注释等缺口，未批量重写。聚合静态检查覆盖工作台与 8 个 feature，不能替代全部库人工或视觉验收。保留既有 AGP/Gradle、Kotlin 注解与低版本兼容弃用提示，不宣称零编译警告。中间文件占用已通过停止守护进程并使用 --no-daemon 重测解决。
+
+所用 Skills：android-build-workflow、android-project-architecture-workflow、android-ui-workflow、engineering-review、android-functional-test-workflow、acceptance-review。没有新增业务页面或视觉重设计，ui-design 设计交接不适用；没有新增或修改用户可见文案，未变动语言资源。单智能体自查，未创建独立评审智能体。未执行 release/R8、远端发布、提交/push 或 CI 修改；保留既有未提交的 Skills 优化。
+
+证据：[逐模块产物、测试与工作区指纹](evidence/2026-10-31-api37-immersive/summary.json)、[命令与复核说明](evidence/2026-10-31-api37-immersive/commands.md)、[测试计划](TEST_PLAN.md)。未推进设备或全部功能通过基线。以下保留历史报告。
+
+---
+
 # 2026-10-30 全部库 README 与项目总览
 
 - 更新 19 个模块 README：按实际职责区分 8 架构、9 功能、1 三方、1 内部；补齐主要源码入口、调用流程、宿主责任、模块依赖、模块 SDK/JVM 声明、本地发布与检查命令、Demo 入口和验证边界。Google/文档导出的详细接入与既有可靠性说明保留。
@@ -311,3 +343,13 @@ git diff --check
 构建与 JVM 测试通过不能证明上述运行能力已通过。TEST_BASELINE 不推进，因本轮源码尚未提交且没有建立可靠工作区指纹。未提交、未推送、没有创建或调整 CI。
 
 配置与实现说明：[Android 17 兼容说明](../android17-compatibility.md)。
+
+## 2026-10-31 独立库补丁版本升级
+
+- 原仓库远端标签已通过 git ls-remote --tags --refs 核对：Base v1.3.0、Utils v1.1.1、XPopup v3.3.1；DevLib 对应模块 VERSION_NAME 升为 1.3.1、1.1.2、3.3.2。原仓库不修改、不打标签。
+- 通用发布脚本优先读取模块 version.properties，未声明独立版本的库继续使用根 devlibVersion；撤回误加的 Network 0.1.1，Network/Routers 本轮不升级。
+- 执行 `gradlew.bat publishLibrariesToLocalRepository :core:core_base:testDebugUnitTest :core:core_utils:testDebugUnitTest :core:lib_xpopup:testDebugUnitTest --max-workers=1 --console=plain`：BUILD SUCCESSFUL，1m55s，543 tasks（422 executed / 121 up-to-date）。三库单测任务 UP-TO-DATE，复用历史通过结果，不算本轮重跑。
+- 本地 Maven 三库 AAR、sources JAR、POM 及 Gradle module metadata 存在且版本正确；Base POM 依赖 lib-xpopup 3.3.2。证据见 [publication-check.json](evidence/2026-10-31-library-patch/publication-check.json)。
+- 执行 `gradlew.bat -p samples/published-consumer compileDebugKotlin --max-workers=1 --console=plain`：BUILD SUCCESSFUL，13s，9 tasks（2 executed / 7 up-to-date）；独立消费工程使用新版 Base/Utils 与传递 XPopup，KSP 及 Kotlin 编译通过。
+- Agent 结构校验、构建静态校验及 git diff --check 通过。同步模块/根 README、消费示例与 .agents 使用说明。
+- 未执行设备、视觉、真实网络服务或远端 Maven/JitPack 发布；没有更新原仓库、打 tag、提交或推送。新版本是 DevLib com.wkq.dev 坐标的本地已验证配置，不冒充旧 com.github 坐标上线。

@@ -116,12 +116,16 @@ object XPopupUtils {
         return (dipValue * scale + 0.5f).toInt()
     }
 
+    /** 返回当前窗口顶部安全高度，包含桌面标题栏与刘海；保留既有状态栏高度语义。 */
     @JvmStatic
     fun getStatusBarHeight(window: Window?): Int {
         if (window != null) {
             val windowInsets = ViewCompat.getRootWindowInsets(window.getDecorView())
             if (windowInsets != null) {
-                return windowInsets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.statusBars()).top
+                return windowInsets.getInsetsIgnoringVisibility(
+                    WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.captionBar() or
+                        WindowInsetsCompat.Type.displayCutout()
+                ).top
             }
         }
         // Insets are window-specific and can change during multi-window or navigation-mode changes.

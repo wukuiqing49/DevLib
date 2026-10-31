@@ -17,6 +17,15 @@ Activity、Fragment、ViewModel、Adapter、标题栏、页面状态与弹窗基
 
 具体业务、主题、权限解释和国际化资源由宿主提供；保留已有基础实现，不把库内历史 VipManager 当成统一付费授权。
 
+## API 37 与窗口策略
+
+- 普通 BaseActivity 保留系统导航，沿用 AndroidX Edge-to-edge 和 SystemBarInsets；顶部安全区包含状态栏、桌面标题栏与刘海。
+- BaseTitleActivity 的顶部 owner 仍是 CommonTitleBar，根布局不重复叠加顶部间距；其他三边由原 Base 策略负责。
+- BaseFullScreenActivity 隐藏系统栏，允许边缘滑动临时显示；返回前台或弹窗关闭重新获得焦点时恢复当前窗口的全屏策略。
+- 全屏默认仅避让刘海及无法隐藏的桌面标题栏，不为临时系统栏挤压内容；输入场景覆盖 shouldApplyImeInset() 返回 true，键盘与底部安全区取最大值。
+- 背景需完全铺满的页面可覆盖 applyDefaultSystemBarsInsets()，自行将安全区应用到可操作前景，保证唯一 owner。窗口属于各自 Activity，离开全屏 Activity 不修改其他页面窗口。
+- API 35 Robolectric 回归不等于 API 37 设备验收，实际系统栏、低版本、旋转、键盘及大屏行为仍需宿主验证。
+
 ## 接入
 
 消费模块 `dependencies` 中添加：
@@ -27,7 +36,7 @@ implementation project(':core:core_base')
 
 ## 产物发布与本地检查
 
-标准 Maven 坐标：`com.wkq.dev:core-base:0.1.0-SNAPSHOT`。默认版本统一来自根 `devlibVersion`；网络库另支持发布版本覆盖。不要同时依赖同库源码模块与旧 Maven AAR/JAR。
+标准 Maven 坐标：`com.wkq.dev:core-base:1.3.1`。本库版本来自模块 `version.properties` 的 `VERSION_NAME`；发布配置同步项目版本、POM 与 Gradle 元数据。不要同时依赖同库源码模块与旧 Maven AAR/JAR。
 
 以下命令在 DevLib 根目录执行：
 
@@ -45,3 +54,10 @@ implementation project(':core:core_base')
 来源快照见 [import-manifest](../../../docs/import-manifest.json)；当前分类见 [library-catalog](../../../docs/library-catalog.json)；逐项验证及未验证边界见 [固定测试报告](../../../doc/testing/TEST_REPORT.md)。本页命令是复核入口，不代表本轮已重新执行。源码迁入、构建和 JVM 测试不等于真机、服务器、视觉或生产验收。
 
 [返回项目说明](../../../README.md) · [库目录](../../README.md)
+
+## 1.3.1 更新说明
+
+- 沿原仓库最新标签版本 `1.3.0` 将补丁号加 1；全屏窗口焦点恢复，系统栏、桌面标题栏及键盘安全区处理。
+- 保留公开包名及 API；使用 DevLib 坐标 `com.wkq.dev:core-base:1.3.1`，不代表原仓库 `com.github...` 坐标或标签已发布。
+- 发布前核对 AAR、sources、POM 与 module metadata；构建和本地发布不代表设备、视觉或远端发布验收。
+- 协作规范见根 [AGENTS.md](../../../AGENTS.md) 与 [.agents 使用说明](../../../.agents/README.md)，无需手动输入 Skill 名称。

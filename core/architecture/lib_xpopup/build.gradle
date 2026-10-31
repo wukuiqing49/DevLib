@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = 'com.lxj.xpopup'
-    compileSdk 36
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
         minSdk 21

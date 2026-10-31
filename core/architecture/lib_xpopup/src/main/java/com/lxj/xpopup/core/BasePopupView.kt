@@ -245,9 +245,11 @@ abstract class BasePopupView(context: Context) : FrameLayout(context), DefaultLi
         return super.onApplyWindowInsets(insets)
     }
 
+    /** 根据本窗口安全区更新前景间距，全屏 Auto 模式保留桌面标题栏避让。 */
     internal fun applySystemWindowInsets(insets: WindowInsetsCompat) {
         val systemBars = insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.systemBars())
         val displayCutout = insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.displayCutout())
+        val captionBar = insets.getInsets(WindowInsetsCompat.Type.captionBar())
         val systemInsets = PopupInsetCalculator.foregroundInsets(
             mode = popupInfo.popupInsetMode,
             keepsImmersiveContent = this is FullScreenPopupView || this is DrawerPopupView,
@@ -264,7 +266,8 @@ abstract class BasePopupView(context: Context) : FrameLayout(context), DefaultLi
                 displayCutout.right,
                 displayCutout.bottom
             ),
-            imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime()),
+            captionBar = PopupInsets(captionBar.left, captionBar.top, captionBar.right, captionBar.bottom)
         )
         val target = popupInsetTarget ?: return
         if (appliedInsetTarget !== target) {
