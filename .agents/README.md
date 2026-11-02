@@ -14,6 +14,24 @@
 
 完整导航见 [INDEX.md](INDEX.md)。当前执行者默认按需切换视角，不自动创建多个智能体。
 
+## 在其他项目复用
+
+1. 先读取目标项目已有规范、源码与构建配置，确认实际技术栈和需要的能力。
+2. 合并需要的 Skills，并保留其引用的 scripts、references、assets；同时合并对应工作流和规则。不要覆盖目标项目已有文件，也不要只复制一个脱离引用资源的 SKILL.md。
+3. 按目标工程改写 `AGENTS.md` 与 `config/project-profile.yml`：包名、模块路径、SDK、语言、Base、UI 基线和设备执行策略均使用目标项目事实。DevLib 的库清单、迁入记录、历史专项和产品约束不直接套用。
+4. 如果目标项目已有 `CLAUDE.md` 或 `GEMINI.md`，可在其中加入“开始任务前读取 AGENTS.md，并按任务加载 .agents/ 中对应工作流与 Skill”的入口说明，统一维护规则正文。实际是否加载应通过该工具的任务反馈确认。
+5. 根据目标需求验证结构与功能：`python -B .agents/scripts/validate_agent_structure.py --project-root <目标目录>`；Android 项目再执行受影响模块的真实构建与测试。结构通过不代表功能验证通过。
+
+第一次使用可以直接描述：
+
+```text
+读取本项目规范和真实工程，检查接入的 Skills 是否适用。
+修正项目档案中的路径与技术栈，列出可复用的 Base 和公共组件，
+再按本次需求选择工作流并执行验证。
+```
+
+Skills 提供开发方法，库提供运行时能力，两者按需组合。普通项目沿用现有简单导航；有跨业务模块解耦、统一拦截或服务发现需求的大型项目再评估路由体系。其他技术栈以目标项目规则为准，不套用 Android XML/MVVM 约定。
+
 ## 网络库维护
 
 源码位于 `core/architecture/core_network`，版本与发布入口见 [网络库说明](../core/architecture/core_network/README.md) 及 [发布指南](../core/architecture/core_network/docs/core_network_publish.md)。网络库当前沿用根 `devlibVersion`，发布覆盖遵循指南优先级。本轮不升级网络库或路由库。修改版本时同步 README、发布指南和消费示例，核对生成 POM、Gradle 元数据及本地 Maven 产物。
