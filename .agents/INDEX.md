@@ -22,12 +22,15 @@
 - 根目录 `README.md` 是功能模块与接入目录；`docs/import-manifest.json` 记录来源和快照摘要；`doc/testing/TEST_REPORT.md` 记录实际验证。
 - `agentFiles` 注册的 DropLAN 历史产品专项文件不自动启用；通用库边界以当前 AGENTS.md 和模块构建配置为准。
 
+- `config/ui-baseline.md`：DevLib 工作台真实主题、资源与组件索引，区分代码现状与待验证视觉效果，不适用于消费产品品牌。
+
 ## Rules
 
 - `rules/android.md`：Android 通用修改边界、生命周期、性能、安全和兼容性。
 - `rules/architecture.md`：模块边界、共享能力和 WKQ 复用。
 - `rules/library-organization.md`：本仓库四类库的目录映射、Demo 分组、文档同步和来源追溯边界。
 - `rules/ui.md`：页面结构、滚动、文字、资源和 Insets。
+- `rules/ui-style.md`：工作台视觉方向与组件一致性，消费项目按自身产品调整。
 - `rules/i18n.md`：strings、多语言、占位符、plurals 和 raw HTML。
 - `rules/build.md`：Gradle、版本、依赖、签名、manifest、release 和 native。
 - `rules/figma.md`：Figma 阶段门禁、图层映射、屏幕适配和验收。
@@ -51,7 +54,15 @@
 
 ## Skills
 
-- `skills/apple-design/`：项目内 Apple HIG 设计原则与跨平台审查，随附本地参考资料；页面设计、重构和视觉优化时与 Android UI Skill 配合。Android 保留原生组件、Base/XML、国际化与 Android 17 Insets，纯骨架/构建/引擎任务不强制加载。
+- `skills/senior-android-engineer/`：依据需求文档与真实源码设计 Android 项目或跨模块方案，衔接架构、UI、开发、工程评审与验收；局部修改不强制加载。
+
+- `skills/engineering-review/`：资深开发方案与代码评审，检查复用、状态、并发、兼容及验证缺口；复用领域规则，按授权范围修复。
+- `skills/acceptance-review/`：原始需求到实现与证据的对应验收；整合功能、旅程及视觉结果，保留证据来源与未验证原因。
+- `skills/clarify-requirements/`：将模糊诉求转为目标、范围、假设和可观察验收条件；按已有授权交接实现，明确的小改动不强制加载。
+- `skills/review-user-journey/`：依据实际产物审查用户操作或开发者接入路径；区分自查、独立审查和真实用户验证，详细视觉方法复用已有设计能力。
+- `skills/ui-design/`：UI 设计师，负责层级、路径、布局、状态与功能入口保全，按需使用 HIG 参考。
+- `skills/android-interaction-design/`：在同一设计交接中补充容器、导航、弹层、返回恢复和反馈；结合基础组件选型，导航政策由架构规则统一维护。
+- `skills/ui-style-review/`：风格与一致性审查，消费同一交接及实际画面，不重新规划业务。
 - `skills/devhub-basic-integration/`：私有 JitPack token 引用、DevHub 初始化及安装/日活、手机基础信息和 Locale 国家语言；仅按目标项目明确请求接入，不包含复杂业务页面或支付权益。
 - `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
@@ -132,3 +143,9 @@ python -B .agents/scripts/tests/test_validate_android_workflows.py -v
 - Figma 分页校验仅由任务卡明确需求触发；已获实现授权时分析完成后继续，局部改动不强制整页重建。
 - 国际化验收传入真实资源目录、`--strict-missing` 和目标必需语言；按参数索引比较占位符，限定符资源允许基础语言继承，夜间目录不能代替全天候语言覆盖。
 - 工具与目标工程分开定位；宿主共享编排留在 feature，core 只承载可独立接入能力。Play 关键词两阶段协议保留。
+
+## UI 能力行为验证
+
+维护设计能力时参考 `skills/ui-design/references/evaluation-cases.md`，记录分支选择、交接和证据边界。真实任务的前后对比与结构检查、人工推演分开报告。
+
+架构校验回归使用 `scripts/tests/test_validate_architecture.py`；Figma 等 Skill 元数据使用 `scripts/tests/test_validate_agent_structure.py` 检查结构，阶段行为由用户请求与工作流决定，不以固定暂停文案作门禁。

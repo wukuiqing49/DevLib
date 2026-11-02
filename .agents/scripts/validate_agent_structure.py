@@ -206,10 +206,6 @@ def validate_skills(root: Path, errors: list[str]) -> set[str]:
                     errors.append(f"{openai_path.relative_to(root)} missing interface.{key}")
             if f"${name}" not in str(interface.get("default_prompt", "")):
                 errors.append(f"default_prompt does not mention ${name}: {openai_path.relative_to(root)}")
-            if name == "android-figma-workflow":
-                prompt = str(interface.get("default_prompt", ""))
-                if "等待确认" not in prompt or "不实现代码" not in prompt:
-                    errors.append("android-figma-workflow default_prompt must stop after analysis")
 
         for raw in SCRIPT_REF_RE.findall(text):
             target = root / raw if raw.startswith(".agents/") else skill_dir / "scripts" / raw

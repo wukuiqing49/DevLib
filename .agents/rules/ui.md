@@ -1,5 +1,7 @@
 # Android UI 规则
 
+本文件维护平台实现约束。产品视觉方向由目标项目风格规则维护；DevLib 工作台使用 ui-style.md。ui-design 负责方案，ui-style-review 检查一致性，仅复用 Base 与资源不代表设计完成。
+
 ## 组件与页面结构
 
 - 优先复用项目已有 Base、组件、样式、颜色、字号、间距、drawable、Adapter 和弹窗封装。
@@ -8,6 +10,7 @@
 - Tab 页面默认使用 `MagicIndicator + ViewPager2 + FragmentStateAdapter + 子 Fragment`；已有同类封装时优先复用。
 - 父 Fragment 负责 Tab、页面切换和公共状态；子 Fragment 负责各自列表、加载和空态。
 - Dialog、Popup、BottomSheet、Drawer、图片预览和全屏弹窗优先检查项目封装与 XPopup。
+- 交互方案先核实已有 Base、Adapter、弹窗与导航能力，再映射具体组件；导航选型遵循 architecture.md。页面形态依据任务、内容和窗口选择，不按字段/步骤数量强制组件。
 
 ## 布局与滚动
 

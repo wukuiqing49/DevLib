@@ -27,6 +27,7 @@ description: "用于创建或调整 Android 工程脚手架：从配置生成 ap
 - 在 `--force` 更新时通过 marker 的 SHA-256 基线保留所有本地修改，并额外保留显式用户配置。
 - 不覆盖没有生成标记的已有 Android 工程；已有工程由 Workflow 按最小补丁合并。
 - 模块边界和依赖归属由架构规则决定；Gradle、签名和发布约束由构建规则决定。
+- 导航方案消费目标架构规则及已完成的选型。读取生成器实际配置能力，未支持的接入明确为后续增量工作，不添加无效配置键或声称生成器已完成接入。现有 DevLib 工程的路由不作为新项目默认模板。
 
 ## 生成
 
@@ -50,7 +51,7 @@ python .agents/skills/android-project-scaffold-workflow/scripts/render_project_s
 
 ## 生成内容
 
-生成任务包含真实首页、导航或业务页面设计时，先使用项目内 `$apple-design` 确认页面流程和视觉层级，再使用 `$android-ui-workflow` 与 `$android-i18n-workflow` 落地。仅生成工程骨架或调整构建配置不强制设计审查；设计能力不改变生成标记保护、Base 复用和 Android 平台约束。
+生成任务包含真实首页、导航或业务页面设计时，先使用项目内 `$ui-design` 确认页面流程和视觉层级，再使用 `$android-ui-workflow` 与 `$android-i18n-workflow` 落地。仅生成工程骨架或调整构建配置不强制设计审查；设计能力不改变生成标记保护、Base 复用和 Android 平台约束。
 
 - 根构建、settings、版本目录、Gradle properties、app convention 和 Wrapper。
 - `app`、`core/core_base`、`core/core_utils`、`feature/feature_app`、`feature/feature_res`。

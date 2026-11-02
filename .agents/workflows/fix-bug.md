@@ -25,3 +25,4 @@
 4. 检查是否需要同步修改 Gradle、Manifest、ProGuard/R8 或资源。
 5. 运行复现路径、静态门禁和受影响模块测试/编译。
 6. 汇报根因、修改文件、验证方式和剩余风险。
+   复杂修复按 develop-feature 使用 $engineering-review 检查根因与消费者影响，使用 $acceptance-review 核对复现条件、预期行为与回归证据；局部机械修复仅做相应核对。

@@ -18,6 +18,8 @@ description: "用于把 Figma 文件、Frame 或 node 转成可验证的 Android
 
 本 Skill 与系统 `$figma` 配合，负责 Android 侧规范化、映射、产物和门禁，不替代 Android UI、架构、i18n 或构建 Skills。
 
+按用户任务选择阶段：仅分析时交付任务卡后结束；已明确要求实现且必要输入完整时继续实现，无需重复确认。只有影响后续工作的真实缺口才暂停相关步骤，其余独立工作继续。默认提示不扩大或缩减用户授权。
+
 ## Reference 路由
 
 - 分析主模板：[figma-process.md](references/figma-process.md)

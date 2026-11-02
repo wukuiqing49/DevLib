@@ -133,5 +133,35 @@ class ProjectLifecycleTest(unittest.TestCase):
         self.assertTrue(any("unknown project lifecycle" in error for error in self.validate()))
 
 
+class SkillInvocationTest(unittest.TestCase):
+    """验证提示可按用户意图分支，同时保留接口结构约束。"""
+
+    def setUp(self):
+        """建立最小 Figma Skill，不依赖实际项目配置。"""
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.skill = self.root / ".agents/skills/android-figma-workflow"
+        (self.skill / "agents").mkdir(parents=True)
+        (self.skill / "SKILL.md").write_text(
+            '---\nname: android-figma-workflow\ndescription: Figma workflow\n---\n', encoding="utf-8")
+
+    def validate_prompt(self, prompt):
+        """写入元数据并执行真实 Skill 配置校验。"""
+        interface = {"display_name": "Figma", "short_description": "Android mapping", "default_prompt": prompt}
+        (self.skill / "agents/openai.yaml").write_text(yaml.safe_dump({"interface": interface}), encoding="utf-8")
+        errors = []
+        validator.validate_skills(self.root, errors)
+        return errors
+
+    def test_authorized_implementation_prompt_is_valid(self):
+        """实现型提示无需包含强制等待或禁止实现措辞。"""
+        self.assertEqual([], self.validate_prompt("使用 $android-figma-workflow 按用户需求分析或继续实现。"))
+
+    def test_missing_skill_reference_is_still_rejected(self):
+        """去除行为措辞硬编码不会放宽必要的调用标识约束。"""
+        self.assertTrue(self.validate_prompt("按用户需求分析或实现。"))
+
+
 if __name__ == "__main__":
     unittest.main()

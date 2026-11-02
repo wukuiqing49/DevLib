@@ -100,6 +100,7 @@ agentFiles:
   rules:
   - droplan.md
   - library-organization.md
+  - ui-style.md
   workflows:
   - audit-droplan.md
   prompts:

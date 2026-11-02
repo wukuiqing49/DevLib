@@ -23,17 +23,28 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 - 新增及修改的类、接口、具名对象和方法/函数必须有中文 KDoc/JavaDoc；名称保持规范英文，不改公开 API。既有基础库和未改动声明不因补注释而批量重写。
 - 完成时说明所用 Skills、Base/组件复用、文案与适配检查，以及未验证项。脚本通过不等于人工审查、设备或视觉验收完成。
 - 页面必须按 UI 规则落实 Android 17 下的边到边布局与适用场景的全屏沉浸式，明确系统栏、键盘、刘海及窗口状态恢复；复用现有 Base，兼容项目 minSdk。
-- 新建工程涉及真实页面设计，以及页面重构、视觉优化和 UI 审查时，加载项目内 `.agents/skills/apple-design/SKILL.md` 并结合 Android UI 工作流；只采用适用的设计原则，Android 原生组件与本项目规则优先。仅生成骨架、纯构建/引擎或只做翻译时不强制加载。
+- 新建工程涉及真实页面设计，以及页面重构、视觉优化和 UI 审查时，加载项目内 `.agents/skills/ui-design/SKILL.md` 并结合 Android UI 工作流；按设计稿还原、已有页面改进或从零设计选择方法，并交付设计说明与视觉证据；Android 原生组件与本项目规则优先。仅生成骨架、纯构建/引擎或只做翻译时不强制加载。
+
+- UI 设计由 ui-design 主导；风格按目标项目规范，DevLib 使用 `.agents/rules/ui-style.md` 并用 ui-style-review 核对。Android 实现消费同一交接，重构保留功能原入口与新入口；Apple 原则作为适用审查参考，不替代 Android 约定。不将源码现状当作用户认可标准。
+- 页面交互未定、多步骤流程、导航/弹层变化、UX 重构或设计稿平台交互映射时，按页面工作流使用 android-interaction-design，先核实基础组件并将结论合入同一设计交接。导航与路由选型统一遵循 `.agents/rules/architecture.md`。
 
 ## 任务路由
 
 | 任务 | 工作流或入口 |
 | --- | --- |
 | 开发库工具、文档、通用 Bug 修复 | `.agents/rules/execution.md` |
+| 依据文档设计 Android 项目、跨模块方案或明确资深开发／架构角色 | `.agents/skills/senior-android-engineer/SKILL.md` |
+| 模糊需求、开放式优化的目标与验收澄清 | `.agents/skills/clarify-requirements/SKILL.md` |
+| 用户操作或开发者接入流程的体验审查 | `.agents/skills/review-user-journey/SKILL.md` |
+| 技术方案、复杂变更及代码评审 | `.agents/skills/engineering-review/SKILL.md` |
+| 功能交付、复杂修复及需求验收 | `.agents/skills/acceptance-review/SKILL.md` |
 | 根据项目代码与资源创建官网 | `.agents/skills/project-official-website/SKILL.md` |
 | Android 工程生成 | `.agents/workflows/create-project.md` |
 | Android 模块与共享能力 | `.agents/workflows/change-architecture.md` |
 | Android 功能开发与优化（统一入口） | `.agents/workflows/develop-feature.md` |
+| UI 设计与方案 | `.agents/skills/ui-design/SKILL.md` |
+| Android 交互、导航、弹层及返回恢复设计 | `.agents/skills/android-interaction-design/SKILL.md` |
+| UI 风格约束与审查 | `.agents/rules/ui-style.md` + `.agents/skills/ui-style-review/SKILL.md` |
 | Android 页面 | `.agents/workflows/implement-page.md` |
 | Android 国际化 | `.agents/workflows/localize-content.md` |
 | Android 构建与发布 | `.agents/workflows/change-build.md` |
