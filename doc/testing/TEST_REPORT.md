@@ -353,3 +353,25 @@ git diff --check
 - 执行 `gradlew.bat -p samples/published-consumer compileDebugKotlin --max-workers=1 --console=plain`：BUILD SUCCESSFUL，13s，9 tasks（2 executed / 7 up-to-date）；独立消费工程使用新版 Base/Utils 与传递 XPopup，KSP 及 Kotlin 编译通过。
 - Agent 结构校验、构建静态校验及 git diff --check 通过。同步模块/根 README、消费示例与 .agents 使用说明。
 - 未执行设备、视觉、真实网络服务或远端 Maven/JitPack 发布；没有更新原仓库、打 tag、提交或推送。新版本是 DevLib com.wkq.dev 坐标的本地已验证配置，不冒充旧 com.github 坐标上线。
+
+
+## 2026-11-02 LocationKit 源码迁入
+
+- 用户明确要求在 DevLib 后续维护 LocationKit。来源提交 `5ed25dea327c3360ba8e559ba84aa0981df9c296`，原 lib_location / lib_address 迁为 `:core:core_location` / `:core:core_location_address`，包名 com.wkq.location / com.wkq.address 保留。未修改原仓库或迁入原 App、Base、APK、LibAAR；DevHub 仍为直接使用外部 SDK 的 README 说明，没有恢复包装模块。
+- LOC-MIGRATE 本次通过（源码/构建证据）：清单为 21 库（18 AAR / 3 JVM）；GeoNames 资源 16,089,088 字节与上游哈希一致，193,843 行，SQLite quick_check=ok。两个 Release AAR 与 POM 生成成功，坐标 com.wkq.dev:core-location / core-location-address:0.1.0-SNAPSHOT；未远端发布。
+- LOC-SESSION 本次通过：5 项 Robolectric 测试，覆盖默认位置超时失败、停止及晚到事件、单次回调释放、旧会话替换、无权限失败。LOC-GEODB 本次通过：2 项测试，真实数据库复制/查询/重开及无覆盖空结果。
+- LOC-HOST 本次通过：feature_app 6 项、feature_demo_common 27 项 JVM 测试，合计本轮受影响测试 40 项全部通过、无跳过。Debug App 构建成功，APK 验证 20 个独立能力路由与 6 个 SPI 初始化器，包括新增 location；目录测试 3 项、Demo 校验测试 11 项通过。
+- 最终 Gradle 命令：`:app:assembleDebug :core:core_location:testDebugUnitTest :core:core_location_address:testDebugUnitTest :core:core_location:assembleRelease :core:core_location_address:assembleRelease :feature:feature_app:testDebugUnitTest :core:core_location:generatePomFileForReleasePublication :core:core_location_address:generatePomFileForReleasePublication --max-workers=1 --console=plain`，BUILD SUCCESSFUL。另执行 feature_demo_common:testDebugUnitTest，任务实际执行通过。
+- 中间验证曾因 Demo 调用方法写错、Windows classes.jar 锁定及旧目录数量断言失败；已改用现有 execute API、停止占用产物的 Gradle daemon、同步数量及模块覆盖断言，修正后最终检查通过。不将中间失败算作当前通过。
+- LOC-STATIC 本次通过：`validate_android_workflows.py --skip-figma --strict-i18n` 的 profile/build/architecture/ui/i18n 均通过；Agent 结构通过；23 个新增/受影响 Kotlin 文件源码审计 0 findings；git diff --check 通过。架构静态检查不代表完整依赖运行图或设备行为。
+- 工程/交互/风格自查：复用 DemoActivity/BaseVMTitleActivity、DemoViewModel/BaseViewModel、现有 XML/ViewBinding、语义样式和单一 Insets owner；定位显式授权与单次请求，停止/离开取消，地址输入有范围校验与错误恢复，结果通过 SavedStateHandle 恢复，不新增基础封装。新增库本身不依赖 Router；宿主沿用现有 Router。默认/zh-rCN/en 文案及库通知资源通过严格检查。详情见 [迁移交接](../locationkit-migration.md)。
+- LOC-DEVICE 未执行/排除：无 adb/真机、真实 GPS 或传感器精度、后台 Service 与撤权、API 26/37 运行及实际视觉证据；本轮仅源码、静态、JVM、资源、构建与 APK 集成通过，不能称生产或视觉验收完成。未提交、推送、改 CI 或更新消费项目旧 AAR；测试自动基线不推进。
+- 可迁移证据：[summary.json](evidence/2026-11-02-locationkit/summary.json)。原有用户 Network 文档、gradle.properties 和既有 UI 证据目录保留。
+
+## 2026-11-02 LocationKit API 37 兼容补充
+
+- 延用工程 compileSdk/targetSdk 37、minSdk 26；核心包名和 API 不变。位置结果交付前重查权限，撤权后停止并返回失败，不转发排队坐标。
+- SensorService 复用 AndroidX ServiceCompat，API 29+ 显式 location 类型，API 26–28 使用兼容路径；缺少定位授权或系统拒绝前台提升时停止并记录不含位置的日志。宿主仍须从允许的场景启动，并处理 startForegroundService 调用本身的异常。
+- 本轮两个库共 10 项 Robolectric 测试通过：定位 6、服务 2（API 26/35）、地址 2。撤权后结果与服务无权限启动为新增行为回归。Robolectric 未运行 API 37。
+- 定位库 lintDebug 与工作台 assembleDebug 通过；API 37 编译使用实际项目 SDK。已有 TrackMapView 的 UseKtx 建议不影响兼容性。Agent 结构、APK 路由验证及本轮 4 文件源码审计通过。构建日志位于忽略目录 .ai-work/location-api37-final.log。
+- 使用项目架构、构建和功能回归 Skills；库不需要页面 Base/ViewModel，现有 Demo 继续复用 Base。未改 UI/文案和 CI，不引入后台权限或新基础封装。API 37 设备、真实 GPS、后台限制与视觉验收仍未执行；不将编译通过等同于设备适配完成。

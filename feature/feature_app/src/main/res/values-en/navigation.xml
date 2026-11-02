@@ -83,4 +83,7 @@
     <item quantity="one">%1$d library</item>
     <item quantity="other">%1$d libraries</item>
   </plurals>
+  <string name="catalog_location">Location</string>
+  <string name="catalog_location_permission">Location permission required</string>
+  <string name="integration_location_note">Use the local source module. Only the coordinate library requests location access; offline places use a separate optional database. Do not also include old Location or LocationAddress AARs. Background services require host configuration.</string>
 </resources>

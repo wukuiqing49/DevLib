@@ -5,13 +5,13 @@
 | 目录 | 职责 | 模块 |
 | --- | --- | --- |
 | architecture | 架构底座，8 个模块、5 套体系 | [core_base](architecture/core_base/README.md)、[core_utils](architecture/core_utils/README.md)、[core_network](architecture/core_network/README.md)、[core_router_annotation](architecture/core_router_annotation/README.md)、[core_router_api](architecture/core_router_api/README.md)、[core_router_processor](architecture/core_router_processor/README.md)、[core_router_gradle_plugin](architecture/core_router_gradle_plugin/README.md)、[lib_xpopup](architecture/lib_xpopup/README.md) |
-| functional | 独立功能，9 个模块 | [core_archive](functional/core_archive/README.md)、[core_document](functional/core_document/README.md)、[core_image_render](functional/core_image_render/README.md)、[core_qrcode](functional/core_qrcode/README.md)、[core_nas](functional/core_nas/README.md)、[core_usb](functional/core_usb/README.md)、[lib_drop](functional/lib_drop/README.md)、[lib_metadata](functional/lib_metadata/README.md)、[lib_upload](functional/lib_upload/README.md) |
+| functional | 独立功能，11 个模块 | [core_archive](functional/core_archive/README.md)、[core_document](functional/core_document/README.md)、[core_image_render](functional/core_image_render/README.md)、[core_qrcode](functional/core_qrcode/README.md)、[core_nas](functional/core_nas/README.md)、[core_usb](functional/core_usb/README.md)、[lib_drop](functional/lib_drop/README.md)、[lib_metadata](functional/lib_metadata/README.md)、[lib_upload](functional/lib_upload/README.md)、[core_location](functional/core_location/README.md)、[core_location_address](functional/core_location_address/README.md) |
 | thirdparty | 第三方平台服务适配 | [core_google](thirdparty/core_google/README.md) |
 | internal | 功能库共用的内部契约 | [lib_operations](internal/lib_operations/README.md) |
 
 分类依据是库的职责，而不是来源项目或是否使用第三方依赖。XPopup 属于现有架构底座；NAS 等协议封装仍属于功能库。`core_usb` 提供 Android SAF 存储访问，不是 USB 驱动。
 
-19 个模块的名称、公开包名、发布坐标保持原样；Gradle 逻辑引用仍为 `:core:<module>`，例如 `implementation project(':core:core_document')`。settings.gradle 通过显式 projectDir 映射到分组目录，分类目录本身不是模块。
+21 个模块的名称、公开包名、发布坐标保持原样；Gradle 逻辑引用仍为 `:core:<module>`，例如 `implementation project(':core:core_document')`。settings.gradle 通过显式 projectDir 映射到分组目录，分类目录本身不是模块。
 
 新增库时同步维护根 settings.gradle、docs/library-catalog.json 的 category / directoryGroup / path、项目档案和演示接入。来源快照与历史测试证据保留当时路径，不作为当前目录入口。新工程生成器的通用模板不受本仓库物理分组影响。
 
@@ -19,7 +19,7 @@
 
 ## API 37 兼容基线
 
-全部 16 个 Android 库使用 compileSdk 37；3 个 JVM 路由工具沿用 JVM 工具链，不设置 Android SDK。工作台 targetSdk 37，消费 App 仍须自行设置 targetSdk 并处理运行时权限。`verifyLibrarySdk` 校验所有 Android 库与根 SDK 配置一致，`assembleLibraries` 自动执行此门禁。
+全部 18 个 Android 库使用 compileSdk 37；3 个 JVM 路由工具沿用 JVM 工具链，不设置 Android SDK。工作台 targetSdk 37，消费 App 仍须自行设置 targetSdk 并处理运行时权限。`verifyLibrarySdk` 校验所有 Android 库与根 SDK 配置一致，`assembleLibraries` 自动执行此门禁。
 
 普通页面沿用 Base 边到边布局，全屏媒体页使用 BaseFullScreenActivity；XPopup 负责自己的 Dialog Window。Insets、桌面标题栏、键盘和全屏恢复说明见 [Base](architecture/core_base/README.md#api-37-与窗口策略) 与 [XPopup](architecture/lib_xpopup/README.md#api-37-与沉浸式)。网络能力的权限由宿主负责，不能把 compileSdk 升级当作全部 Android 17 行为已验证。
 

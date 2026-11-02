@@ -1,0 +1,20 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
+android {
+    namespace = 'com.wkq.location'
+    compileSdk = libs.versions.compileSdk.get().toInteger()
+    defaultConfig { minSdk = 26; consumerProguardFiles 'consumer-rules.pro' }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    kotlinOptions { jvmTarget = '17' }
+    testOptions { unitTests.includeAndroidResources = true }
+}
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation googleLibs.coroutines.core
+    testImplementation googleLibs.junit
+    testImplementation nasLibs.robolectric
+}
+apply from: rootProject.file('gradle/library-publish.gradle')

@@ -85,3 +85,10 @@ project(':core:lib_xpopup').projectDir = file('core/architecture/lib_xpopup')
 project(':core:core_google').projectDir = file('core/thirdparty/core_google')
 project(':core:core_nas').projectDir = file('core/functional/core_nas')
 project(':core:core_usb').projectDir = file('core/functional/core_usb')
+
+include ':core:core_location'
+include ':core:core_location_address'
+project(':core:core_location').projectDir = file('core/functional/core_location')
+project(':core:core_location_address').projectDir = file('core/functional/core_location_address')
+
+include ':feature:feature_demo_location'

@@ -5,11 +5,12 @@ import org.junit.Test
 
 /** 验证三类库的互斥边界、迁移后的源码位置和独立快捷入口。 */
 class DirectoryPolicyTest {
-    /** 功能目录保留九个库，Google 独立归类，移出的旧模块不回流。 */
+    /** 功能目录保留十一个库，Google 独立归类，移出的旧模块不回流。 */
     @Test fun functionalLibrariesAreCompleteAndUnique() {
         val modules = DirectoryPolicy.entries(LibrarySection.FUNCTIONAL).map { it.module }
-        assertEquals(9, modules.size); assertEquals(modules.size, modules.toSet().size)
+        assertEquals(11, modules.size); assertEquals(modules.size, modules.toSet().size)
         assertFalse("core_google" in modules); assertTrue("core_document" in modules)
+        assertTrue(modules.containsAll(listOf("core_location", "core_location_address")))
         assertFalse("core_pdf" in modules); assertFalse("lib_document" in modules)
     }
     /** 八个基础模块归为五套体系，路由子模块不重复占用顶层入口。 */
@@ -39,7 +40,7 @@ class DirectoryPolicyTest {
     /** 三类入口不重叠且覆盖公共模块，内部支撑不占业务入口。 */
     @Test fun sectionsAreDisjointAndCoverEveryPublicLibrary() {
         val entries = LibrarySection.entries.flatMap { DirectoryPolicy.entries(it) }
-        assertEquals(15, entries.size)
+        assertEquals(17, entries.size)
         assertEquals(entries.size, entries.map { it.module }.toSet().size)
         assertEquals(listOf("core_google"), DirectoryPolicy.entries(LibrarySection.THIRDPARTY).map { it.module })
         assertNull(DirectoryPolicy.find("lib_operations"))

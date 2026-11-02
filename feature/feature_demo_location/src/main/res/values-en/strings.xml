@@ -1,0 +1,20 @@
+<resources>
+    <string name="location_title">Coordinates</string>
+    <string name="location_intro">Use system GPS, network, and cached locations. Start one foreground request manually; leaving stops it. Default coordinates are never shown as real locations.</string>
+    <string name="location_start">Get location once</string>
+    <string name="location_stop">Stop location</string>
+    <string name="location_permission_reason">Location permission is needed to get your current position. Approximate access is supported. This demo does not request background access.</string>
+    <string name="location_denied">Location permission was not granted. Retry or change access in app settings.</string>
+    <string name="location_waiting">Getting a location; waiting up to 10 seconds…</string>
+    <string name="location_result">Latitude: %1$.6f\nLongitude: %2$.6f\nAccuracy: %3$.1f m</string>
+    <string name="location_failed">No real location was received. Check location services and permissions, then retry.</string>
+    <string name="location_stopped">Location stopped. You can start another request.</string>
+    <string name="address_title">Offline place lookup</string>
+    <string name="address_intro">Find nearby place names in the bundled GeoNames database. Results are approximate, not street addresses or location accuracy. The first query copies the database.</string>
+    <string name="address_latitude">Latitude (-90 to 90)</string>
+    <string name="address_longitude">Longitude (-180 to 180)</string>
+    <string name="address_query">Find nearby place</string>
+    <string name="address_invalid">Enter valid latitude and longitude values.</string>
+    <string name="address_empty">No nearby place found. Check the coordinates; the database may not cover this area.</string>
+    <string name="address_result">Nearby place: %1$s\nDistance: %2$.2f km (approximate)</string>
+</resources>

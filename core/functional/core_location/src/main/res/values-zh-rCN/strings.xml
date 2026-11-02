@@ -1,0 +1,8 @@
+<resources>
+    <string name="location_permission_missing">需要定位权限。</string>
+    <string name="location_service_unavailable">定位服务不可用。</string>
+    <string name="location_timeout">定位超时，未获取真实位置。</string>
+    <string name="location_success">定位成功。</string>
+    <string name="location_service_title">定位采集</string>
+    <string name="location_service_running">正在采集位置与传感器信息。</string>
+</resources>

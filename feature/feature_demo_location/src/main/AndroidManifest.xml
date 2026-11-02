@@ -1,0 +1,4 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"><application>
+<activity android:name="com.wkq.dev.demo.location.LocationActivity" android:exported="false" />
+<activity android:name="com.wkq.dev.demo.location.AddressActivity" android:exported="false" />
+</application></manifest>

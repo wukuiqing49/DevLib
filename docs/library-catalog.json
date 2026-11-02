@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-02",
   "excludedSources": [
     "Starxen",
     "BeautySDK",
@@ -171,6 +171,22 @@
       "artifactType": "aar",
       "directoryGroup": "functional",
       "path": "core/functional/core_usb"
+    },
+    {
+      "module": "core_location",
+      "category": "functional",
+      "sourceRepository": "LocationKit",
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_location"
+    },
+    {
+      "module": "core_location_address",
+      "category": "functional",
+      "sourceRepository": "LocationKit",
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_location_address"
     }
   ],
   "schemaVersion": 2

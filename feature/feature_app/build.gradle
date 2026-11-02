@@ -28,6 +28,7 @@ android {
 }
 
 dependencies {
+    implementation project(':feature:feature_demo_location')
     implementation project(':core:core_router_api')
     implementation project(':feature:feature_demo_document')
     implementation project(':feature:feature_demo_image')

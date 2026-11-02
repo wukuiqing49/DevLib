@@ -82,4 +82,7 @@
   <plurals name="directory_library_count">
     <item quantity="other">%1$d 个独立库</item>
   </plurals>
+  <string name="catalog_location">定位与地名</string>
+  <string name="catalog_location_permission">需要定位授权</string>
+  <string name="integration_location_note">使用本地源码模块。经纬度定位需宿主授权，离线地名库独立按需接入；不要同时引用旧 Location 或 LocationAddress AAR。后台服务需宿主另行配置。</string>
 </resources>

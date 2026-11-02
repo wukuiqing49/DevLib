@@ -206,3 +206,13 @@ API 26/37、平板、多窗口、全语言视觉、系统强杀恢复、Release/
 - UI-BUILD：App Debug、公共层现有 27 个 JVM 用例、APK 目录路由校验；仅资源主题 bool 收尾后重跑 App 构建。
 - UI-PX8：延续用户明确真机授权，仅 Pixel 8；首页深浅、横屏工具列表、130% 字体、PDF 键盘与示例生成/预览、Google/NAS 表单。无真实交易/服务器/USB/分享。
 - 完成后恢复主题/字体/旋转偏好。API 37、平板、多窗口、三键导航、200% 字体、RTL/英文视觉、全 19 个业务闭环及 Release 不纳入已验收范围。
+
+
+## 2026-11-02 LocationKit 迁入增量验证
+
+- LOC-MIGRATE：两个独立功能库源码、包名、原数据库、来源提交及 Gradle 映射完整；不带原 Base/App/二次 AAR。
+- LOC-SESSION：超时默认位置失败、停止后无回调、单次释放、替换旧请求、无权限失败；Robolectric。
+- LOC-GEODB：真实预置库可复制/重开/查询，无覆盖不合成地址；SQLite quick_check。
+- LOC-HOST：两项功能目录、独立路由、接入说明、原分组不回流；App 构建、目录/Workspace JVM 回归及 APK 检查。
+- LOC-STATIC：受影响源码中文注释、严格 UI/i18n、模块清单、Agent 结构与构建门禁。
+- LOC-DEVICE：真实 GPS/网络/近似权限、传感器、前台服务、撤权及 API 26/37 与视觉；按 executionPolicy 排除设备命令，本轮未执行。

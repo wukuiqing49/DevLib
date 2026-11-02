@@ -56,6 +56,7 @@ class LibraryDetailActivity : BaseVMTitleActivity<ActivityLibraryDetailBinding, 
                         module == "core_router_annotation" -> R.string.integration_router_annotation
                         module == "core_router_gradle_plugin" -> R.string.workbench_plugin_setup
                         module == "core_router_api" -> R.string.integration_router_note
+                        module == "core_location" || module == "core_location_address" -> R.string.integration_location_note
                         module == "core_google" -> R.string.integration_google_note
                         module == "core_document" -> R.string.integration_document_note
                         module == "core_network" -> R.string.integration_network_note

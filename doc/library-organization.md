@@ -1,15 +1,15 @@
 # 库分类、规范与 Demo 对照
 
-当前为 19 个模块，按职责组织；目录前缀和来源项目不代表分类。
+当前为 21 个模块，按职责组织；目录前缀和来源项目不代表分类。
 
 | 分类 | 源码目录 | 数量 | App 入口 |
 | --- | --- | --- | --- |
 | 架构库 | core/architecture | 8 个模块、5 套体系 | 架构，默认首页；路由子模块在体系详情中切换 |
-| 功能库 | core/functional | 9 | 功能，分文件与连接、图片、文档 |
+| 功能库 | core/functional | 11 | 功能，分文件与连接、图片、文档 |
 | 三方服务库 | core/thirdparty | 1 | 三方：Google 登录、Firebase Auth、Play 支付、官方兑换与评分 |
 | 内部支撑 | core/internal | 1 | 不单列；lib_operations 由真实功能流程覆盖 |
 
-App 有 15 个库目录入口、18 个能力路由；三个额外路由来自 Routers 的注解、处理器和构建插件。工作区是宿主功能，不作为独立 core 库统计。图片 PDF 与统一记录导出同属 core_document，不重新拆库。
+App 有 17 个库目录入口、20 个能力路由；三个额外路由来自 Routers 的注解、处理器和构建插件。工作区是宿主功能，不作为独立 core 库统计。图片 PDF 与统一记录导出同属 core_document，不重新拆库。
 
 ## 事实与维护入口
 
@@ -28,3 +28,7 @@ App 有 15 个库目录入口、18 个能力路由；三个额外路由来自 Ro
 复用 BaseVMFragment、BaseVMTitleActivity、BaseViewModel 和 BaseRecyclerViewAdapter，普通页面保留 Edge-to-edge。MainActivity/BaseTitleActivity 负责系统栏、刘海与 IME 避让，BottomNavigation 不重复消费 Insets；不新增全屏策略。标题和统计提供默认中文、zh-rCN、en，独立 Google 页面保持已有语言资源。
 
 构建和静态检查不等于旋转、进程恢复、长文案、RTL、大字体、平板或 Android 17 设备视觉通过。实际验证见 [测试报告](testing/TEST_REPORT.md)。
+
+## LocationKit 源码迁入（2026-11-02）
+
+core_location 与可选 core_location_address 来自 LocationKit 的 lib_location / lib_address，后续在本仓维护。功能目录新增定位与地名分类、两个独立页面与路由，不复制原 App 或 Base。公开包名保留，原仓库保持不变；这是用户明确授权的新来源，不恢复旧 SiteReport 定位模块。

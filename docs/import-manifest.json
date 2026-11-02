@@ -1021,6 +1021,55 @@
         "src/main/java/com/wkq/usb/UsbStorage.kt": "3f6ee498c6cefeb8de4ad404f276dfef3356deb204c0303dab33f5faba69cc15",
         "src/test/java/com/wkq/usb/UsbStorageTest.kt": "c8eeb011303ecc497ab442d8644b1191a64a82120e055828f9a771953302e34e"
       }
+    },
+    {
+      "module": ":core:core_location",
+      "sourceRepository": "LocationKit",
+      "sourceUrl": "https://github.com/wukuiqing49/LocationKit",
+      "sourcePath": "lib_location",
+      "sourceCommit": "5ed25dea327c3360ba8e559ba84aa0981df9c296",
+      "importDate": "2026-11-02",
+      "importedFiles": {
+        ".gitignore": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4",
+        "build.gradle": "8e4da7863c14f5d1e4ddcceb5f7ceab5d9a23f413b8e0a154877cb8a8817810c",
+        "consumer-rules.pro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proguard-rules.pro": "48c84bd2ac064ce2665b62a6e7c0e87f3b4fe259708a76e16625c2b43e1bc078",
+        "src/main/AndroidManifest.xml": "75c246fb5423d0e8887fc7dfa1f415cc0e551533cc98a26c8a8a415cad7b621d",
+        "src/main/java/com/wkq/location/LocationKit.kt": "f539e563b293885e21f739f8816bd88f3c108c3327d7e7d55a7cfde414225fa6",
+        "src/main/java/com/wkq/location/LocationSensorFusionManager.kt": "a390af55aaa8b96bd2c70479cf80913614fc441d9c486955db8159a091abdadc",
+        "src/main/java/com/wkq/location/address/LocationBroadcast.kt": "9359ac9d3474cc13c59affa070c456a1c05d46f3d8d2cb2611b3931a83e60165",
+        "src/main/java/com/wkq/location/address/LocationConfig.kt": "4901f56a2c6b3e3afa45682b351c2b5a097b18a1d7cd3b80f64f0fcefe83685f",
+        "src/main/java/com/wkq/location/address/LocationResult.kt": "b60ee3347942fc7de79e28ec1613bb453b6e5bbd5e3d953e17935a3869ad4dd5",
+        "src/main/java/com/wkq/location/address/LocationType.kt": "538dd1ea9b5a45a415f16a68db39c5532325c2939e7adde2e83fa281a6546de8",
+        "src/main/java/com/wkq/location/sensor/KalmanFilter.kt": "609bf84121844f89fa06e3f6a426bff8121e8068941729501a5e3dfab1de2e95",
+        "src/main/java/com/wkq/location/sensor/LocationCallback.kt": "afbe04eb849404a80c4f88ef30c53371cc708d814d7bf852af19eda50ff0f30c",
+        "src/main/java/com/wkq/location/sensor/PDRTracker.kt": "996d13530b99b84a8e2509dbd31d50480f4a39efe5c77496bfb27d464df1cc29",
+        "src/main/java/com/wkq/location/sensor/SensorCheckUtils.kt": "244878d84c9521fbeb25bcae5149f087fcf2be06c76a8e9df2b54c7b9ba58d7b",
+        "src/main/java/com/wkq/location/sensor/SensorHelper.kt": "0f084fb784074ed5acc47eefb48bce7a97a770184813963dbf23b90684d3d91f",
+        "src/main/java/com/wkq/location/sensor/SensorPointInfo.kt": "7bb3c9390c7eccf9b8acf7c90efe5943e0ded1d7a5027a444864ca89e3719366",
+        "src/main/java/com/wkq/location/sensor/SensorService.kt": "aae9be150be30f8a876ff05ed09ebe154146c2eff7ffbc25f3882f9b1144d69a",
+        "src/main/java/com/wkq/location/sensor/SensorStatus.kt": "a1881969e21eb285320cf41d255d70a518d6afbea92512fa966da4f1552895e8",
+        "src/main/java/com/wkq/location/sensor/TrackMapView.kt": "2e357343ed379646c47b8441044c5782d24c400a87d7b545545f3e192b2281aa"
+      },
+      "selection": "Library sources/assets only; no original Base, app, APK, LibAAR or Gradle wrapper. DevLib build/host integration and documented lifecycle fixes maintained locally."
+    },
+    {
+      "module": ":core:core_location_address",
+      "sourceRepository": "LocationKit",
+      "sourceUrl": "https://github.com/wukuiqing49/LocationKit",
+      "sourcePath": "lib_address",
+      "sourceCommit": "5ed25dea327c3360ba8e559ba84aa0981df9c296",
+      "importDate": "2026-11-02",
+      "importedFiles": {
+        ".gitignore": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4",
+        "build.gradle": "9acb1b3416927371667b75b2bbd63cc14de0fc02f0ac7dd391f578509a4d4442",
+        "consumer-rules.pro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "proguard-rules.pro": "48c84bd2ac064ce2665b62a6e7c0e87f3b4fe259708a76e16625c2b43e1bc078",
+        "src/main/AndroidManifest.xml": "28b1700b6a37f2d3ae037dbada7741cdbbedea29caf51d706cae22dca0b0d2ce",
+        "src/main/assets/location.db": "f70dab4fd45ea26c767843fc5975d287dc49c89573388bebaf6793c90771d5f0",
+        "src/main/java/com/wkq/address/GeoDbHelper.kt": "08c0bf470154a4bb347e27f960c6943b58b081251db17f6e69744b69c5287750"
+      },
+      "selection": "Library sources/assets only; no original Base, app, APK, LibAAR or Gradle wrapper. DevLib build/host integration and documented lifecycle fixes maintained locally."
     }
   ],
   "billingCopies": [

@@ -1,0 +1,51 @@
+{
+  "sourceRepository": "https://github.com/wukuiqing49/LocationKit",
+  "sourceCommit": "5ed25dea327c3360ba8e559ba84aa0981df9c296",
+  "modules": [
+    ":core:core_location",
+    ":core:core_location_address"
+  ],
+  "tests": {
+    "core_location": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "core_location_address": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "feature_app": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "feature_demo_common": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "database": {
+    "bytes": 16089088,
+    "rows": 193843,
+    "quickCheck": "ok",
+    "sha256": "f70dab4fd45ea26c767843fc5975d287dc49c89573388bebaf6793c90771d5f0"
+  },
+  "build": "Debug App and both release AARs succeeded; POM generated, not published",
+  "apkCatalog": {
+    "modules": 21,
+    "pages": 20,
+    "routeGroups": 6
+  },
+  "staticValidation": "structure, layout, source audit (23 files), strict UI and i18n passed",
+  "device": "not run",
+  "visual": "not verified",
+  "remoteRepository": "unchanged",
+  "baselineAdvanced": false
+}

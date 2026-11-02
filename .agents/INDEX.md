@@ -18,7 +18,7 @@
 
 - `config/project-profile.yml`：DevLib Android 多模块库与演示工程事实，当前为 `initialized / integration-validation`。
 - `config/project-scaffold.yml`：新工程生成示例参数；不代表 DevLib 当前分组目录，已迁入源码禁止重新生成覆盖。现有项目位置以 project-profile 与 settings 的映射为准。
-- `../docs/library-catalog.json`：19 个模块的分类、物理路径、来源与产物类型；架构 8、功能 9、三方 1、内部 1。App 对外提供架构、功能、三方与工作区四个入口。
+- `../docs/library-catalog.json`：21 个模块的分类、物理路径、来源与产物类型；架构 8、功能 11、三方 1、内部 1。App 对外提供架构、功能、三方与工作区四个入口。
 - 根目录 `README.md` 是功能模块与接入目录；`docs/import-manifest.json` 记录来源和快照摘要；`doc/testing/TEST_REPORT.md` 记录实际验证。
 - `agentFiles` 注册的 DropLAN 历史产品专项文件不自动启用；通用库边界以当前 AGENTS.md 和模块构建配置为准。
 

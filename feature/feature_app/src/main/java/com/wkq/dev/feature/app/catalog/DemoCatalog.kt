@@ -6,6 +6,7 @@ import com.wkq.dev.demo.files.R as FilesR
 import com.wkq.dev.demo.foundation.R as FoundationR
 import com.wkq.dev.demo.google.R as GoogleR
 import com.wkq.dev.demo.image.R as ImageR
+import com.wkq.dev.demo.location.R as LocationR
 import com.wkq.dev.feature.app.R
 
 /** 登记工具所属模块、路由、分类以及标题、说明和接入条件的字符串资源 ID。 */
@@ -36,11 +37,20 @@ object DemoCatalog {
             "google" to R.string.catalog_google,
             "foundation" to R.string.catalog_foundation,
             "files" to R.string.catalog_files,
+            "location" to R.string.catalog_location,
             "image" to R.string.catalog_image,
             "document" to R.string.catalog_document,
         )
     val entries =
         listOf(
+            DemoEntry(
+                "core_location", "/location/core_location", "location",
+                LocationR.string.location_title, LocationR.string.location_intro, R.string.catalog_location_permission,
+            ),
+            DemoEntry(
+                "core_location_address", "/location/core_location_address", "location",
+                LocationR.string.address_title, LocationR.string.address_intro, R.string.catalog_local,
+            ),
             DemoEntry(
                 "core_google",
                 "/google/core_google",

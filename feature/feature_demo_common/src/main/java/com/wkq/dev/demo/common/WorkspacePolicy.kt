@@ -11,6 +11,8 @@ object WorkspacePolicy {
     fun routeForActivity(name: String): String =
         when (name) {
             "OfficeActivity" -> "/document/lib_document"
+            "LocationActivity" -> "/location/core_location"
+            "AddressActivity" -> "/location/core_location_address"
             "GoogleActivity" -> "/google/core_google"
             "BaseActivity" -> "/foundation/core_base"
             "UtilsActivity" -> "/foundation/core_utils"

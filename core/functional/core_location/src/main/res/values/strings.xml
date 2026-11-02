@@ -1,0 +1,8 @@
+<resources>
+    <string name="location_permission_missing">Location permission is required.</string>
+    <string name="location_service_unavailable">Location services are unavailable.</string>
+    <string name="location_timeout">No real location was received before the timeout.</string>
+    <string name="location_success">Location acquired.</string>
+    <string name="location_service_title">Location collection</string>
+    <string name="location_service_running">Location and sensor collection is running.</string>
+</resources>

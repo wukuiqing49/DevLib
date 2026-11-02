@@ -25,7 +25,7 @@ class CoreLayoutTest(unittest.TestCase):
             self.assertEqual(expected, architecture.module_dir_from_path(ROOT, ":core:" + module["module"]))
             self.assertEqual(module["directoryGroup"], expected.parent.name)
             self.assertEqual(module["category"], module["directoryGroup"])
-        self.assertEqual(19, len([m for m in collected if m.startswith(":core:")]))
+        self.assertEqual(21, len([m for m in collected if m.startswith(":core:")]))
 
     def test_mapped_module_still_enforces_dependency_boundary(self):
         """目录映射不得让 core 对 feature 的违规依赖逃过检查。"""

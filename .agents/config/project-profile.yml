@@ -29,7 +29,10 @@ modules:
   demoImage: feature/feature_demo_image
   demoDocument: feature/feature_demo_document
   demoGoogle: feature/feature_demo_google
+  demoLocation: feature/feature_demo_location
   libraries:
+  - core/functional/core_location
+  - core/functional/core_location_address
   - core/thirdparty/core_google
   - core/functional/core_archive
   - core/architecture/core_base
