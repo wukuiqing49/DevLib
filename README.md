@@ -8,6 +8,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 | 查找基础库或独立功能 | [库目录](#库目录) |
 | 在其他工程接入库 | [快速接入](#快速接入) |
 | 接入安装、日活与设备统计 | [DevHub 基础统计](#devhub-基础统计) |
+| 制作与发布产品推广视频 | [推广视频使用指南](doc/promo-video-publisher.md) |
 | 运行 Demo、编译或查看验证结果 | [工作台与构建](#工作台与构建) |
 
 ## Skill 能力与使用
@@ -23,6 +24,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 | 国际化与构建 | `android-i18n-workflow`、`android-build-workflow` | 文案与多语言检查、依赖配置、系统兼容与打包验证 |
 | 评审与验收 | `engineering-review`、`review-user-journey`、`android-functional-test-workflow`、`acceptance-review` | 代码审查、流程检查、回归报告与验收结论 |
 | 统计与推广 | `devhub-basic-integration`、`google-play-aso`、`plan-google-play-listing-assets`、`project-official-website` | 基础统计接入、商店分析与素材方案、产品官网 |
+| 推广视频与引流 | `promo-video-publisher` | 项目卖点与关键词分析、真机/桌面实录、英文封面/简介/话题/字幕、平台发布核验 |
 
 **使用示例：**
 

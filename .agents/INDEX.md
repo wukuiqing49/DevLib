@@ -51,6 +51,7 @@
 - `workflows/figma-process.md`：Figma 分析阶段。
 - `workflows/figma-code.md`：Figma 实现阶段。
 - `workflows/prepare-play-assets.md`：准备 Google Play 商店素材。
+- `workflows/publish-promo-video.md`：跨项目分析卖点与搜索关键词，制作英文推广素材并按授权录制、发布和回读核验。
 
 ## Skills
 
@@ -66,6 +67,7 @@
 - `skills/devhub-basic-integration/`：私有 JitPack token 引用、DevHub 初始化及安装/日活、手机基础信息和 Locale 国家语言；仅按目标项目明确请求接入，不包含复杂业务页面或支付权益。
 - `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
+- `skills/promo-video-publisher/`：项目分析、实时关键词研究、镜头规划、英文封面/简介/话题/字幕，以及手机或网页发布核验；完整使用说明见 [推广视频指南](../doc/promo-video-publisher.md)。
 
 - `skills/android-functional-test-workflow/`：跨项目的改动影响分析、增量/发布回归与固定测试报告，默认输出 `doc/testing/TEST_REPORT.md`。
 - `skills/android-project-scaffold-workflow/`：完整项目生成器、模板和生成测试。
@@ -88,6 +90,7 @@
 - `prompts/fix-bug.md`
 - `prompts/figma-page.md`
 - `prompts/prepare-play-assets.md`
+- `prompts/publish-promo-video.md`
 
 ## 验证
 

@@ -106,8 +106,10 @@ agentFiles:
   - ui-style.md
   workflows:
   - audit-droplan.md
+  - publish-promo-video.md
   prompts:
   - audit-droplan.md
+  - publish-promo-video.md
 capabilities:
   available:
   - android-workflows
@@ -115,6 +117,7 @@ capabilities:
   - figma-android
   - zeplin-android
   - google-play-assets
+  - promo-video-publisher
   extensionPolicy: 按实际需求新增技术方向，不声明未实现的能力
 examples:
   androidScaffold: .agents/config/project-scaffold.yml

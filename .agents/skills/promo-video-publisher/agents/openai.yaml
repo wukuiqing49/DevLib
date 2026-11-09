@@ -1,0 +1,4 @@
+interface:
+  display_name: "推广视频制作与发布"
+  short_description: "跨项目分析卖点与搜索关键词，制作英文推广素材、字幕并连接手机发布核验"
+  default_prompt: "使用 $promo-video-publisher 分析当前项目与搜索关键词，制作英文推广视频、封面、简介、话题和字幕，并按我的授权连接手机发布。"

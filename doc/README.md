@@ -12,6 +12,7 @@
 - [LocationKit 源码迁入与维护](locationkit-migration.md)：定位、离线地名、Demo 与验证边界。
 - [DevHub 私有 SDK 功能与配置](devhub-integration.md)：基础统计、下载 token、App Key 与初始化示例。
 - [Skill 使用与跨项目接入](../.agents/README.md)、[完整能力索引](../.agents/INDEX.md)。
+- [推广视频制作与发布](promo-video-publisher.md)：项目分析、英文关键词、封面/简介/话题/字幕、手机发布及跨项目移植。
 - [网络库 Maven/GitHub Packages/JitPack 发布](../core/architecture/core_network/docs/core_network_publish.md)。
 - [Android 17 兼容基线](android17-compatibility.md)。
 
