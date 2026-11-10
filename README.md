@@ -24,7 +24,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 | 国际化与构建 | `android-i18n-workflow`、`android-build-workflow` | 文案与多语言检查、依赖配置、系统兼容与打包验证 |
 | 评审与验收 | `engineering-review`、`review-user-journey`、`android-functional-test-workflow`、`acceptance-review` | 代码审查、流程检查、回归报告与验收结论 |
 | 统计与推广 | `devhub-basic-integration`、`google-play-aso`、`plan-google-play-listing-assets`、`project-official-website` | 基础统计接入、商店分析与素材方案、产品官网 |
-| 推广视频与引流 | `promo-video-publisher` | 项目卖点与关键词分析、真机/桌面实录、英文封面/简介/话题/字幕、平台发布核验 |
+| 推广视频与引流 | `promo-video-publisher` | 项目卖点与关键词分析、实录与英文素材、TikTok/YouTube/Instagram 项目关联、下载路径与来源追踪规划、发布核验 |
 
 **使用示例：**
 
