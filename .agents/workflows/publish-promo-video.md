@@ -1,20 +1,19 @@
-# 制作与发布推广视频
+# Create and publish promotional videos
 
-## 加载
+## 加载 / Load
 
-- `.agents/rules/execution.md`
-- `.agents/config/project-profile.yml`，核对目标与设备执行策略；外部项目读取其自身规范和实际事实。
-- `$promo-video-publisher`：使用项目内 `.agents/skills/promo-video-publisher/SKILL.md` 及按阶段选择的 references。
-- 使用说明：`doc/promo-video-publisher.md`。
+- Read `.agents/rules/execution.md` and the target project's applicable execution policy.
+- Use the repository-local [promo-video-publisher](../skills/promo-video-publisher/SKILL.md).
+- Read only references needed for the chosen mode. See the [usage guide](../../doc/promo-video-publisher.md).
 
-## 流程
+## 流程 / Execute
 
-1. 明确实际目标项目、平台、语言、素材、设备、转化目标与策划/制作/草稿/发布范围；复用本次已有信息及授权。
-2. 分析项目真实功能、运行版本和成功证据，完成卖点、英文关键词研究和镜头计划。按目标平台规划产品身份、实际 CTA、商店/官网路径及来源追踪；仅关联分析按 Skill 策略参考执行，不强制制作或发布。已有成片任务只补必要核对，不强制重录。
-3. 按需求录制真实操作，制作平台独立封面、英文简介、首条作者下载评论、相关话题和同步字幕/说明。TikTok、YouTube、Instagram 默认简介与评论两处均含准确产品名和真实下载 URL，检查成片及引流路径。
-4. 按目标设备策略及本次明确授权连接手机或操作网页；先核对账号和完整草稿再提交。仅要求迁移 Skill 或制作素材时不发布。
-5. 重新打开帖子核验全文、封面、可见性、字幕及分享链接，沿实际 CTA 验证到正确商店/网站的路径；要求覆盖手机和电脑时分别检查。视频发布、封面生效、下载路径及统计接入分别记录，注明处理中与未验证项；重试前核查现有帖子，避免重复发布。
-   本次授权涵盖双处发布时，新帖确认发布后及时补首条作者下载评论，旧帖先查已有评论并复用，不再逐条询问。分别重读简介与评论全文，确认外部可见性、置顶结果和链接能力；一处成功不代替另一处。保留账户原介绍，不用评论绕过外链限制；无置顶权限或达到编辑/评论限制后记录待办，不重复提交。仅分析、制作或限定上传范围时不发评论。
-6. 全部生成资源（分析、关键词、脚本、原始录屏、成片、封面、文案、字幕、制作脚本、验证与发布证据及 PUBLISHING_STATUS.md）统一写入目标项目 docs/promo/<活动>/；无项目时使用当前工作目录下的同一路径。仅本次明确指定其他位置时覆盖，临时缓存中的必要文件交付前归档。按证据汇报，不承诺曝光或转化。
+1. Identify product, audience, primary action, supplied assets, platforms/accounts and mode. Reuse current campaign facts, decisions and authorization.
+2. Follow the skill's mode routing. A focused edit does not require a full campaign; an existing recording does not require rerecording.
+3. Produce English marketing material by default, with an explicit user language preference taking precedence. Use verified product evidence. For silent recordings, default to concise timed explanations; personal narration is not required.
+4. Use the skill's timeline and production reference when editing. Verify the actual delivery file, including timed text and cover.
+5. Prepare descriptions and author comments according to the publishing reference. Apply the relevant platform reference and existing authorization. Respect the target project's device policy; creating or editing this skill does not authorize device operations or publishing.
+6. Record independent delivery results and the next action using the status template. Verify destinations according to the actual clickable, copyable or search route.
+7. Archive generated resources in the target project's `docs/promo/<campaign>/` unless explicitly directed elsewhere. Report verified outcomes and limitations in the user's language.
 
-Google Play 商店上架素材使用对应素材工作流；已有 ASO 事实可作为输入，但不能将商店关键词结果当作 TikTok/YouTube 搜索量。产品功能开发才另按开发工作流执行。
+Google Play store-listing work uses its own workflow. Product engineering, analytics integration and paid advertising are separate scopes.

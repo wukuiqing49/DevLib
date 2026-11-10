@@ -1,49 +1,54 @@
-# 真实推广素材制作
+# Real recordings and media production
 
-先用简短表格确定功能、用户收益、操作和结果证据。跑通核心路径再录制，区分正常功能、仅能展示的入口及失败路径。缺陷记入制作记录，不能把失败剪成成功。不同片段拼接不能假装是同一次连续任务。
+## Source and capability check
 
-对原照片、文档和其他用户文件优先用副本。演示署名、身份与版权文本明确为演示，不伪造认证或改变原始权利；画面避免无关通知、凭据及个人信息。
+Identify supplied media, duration, frame size/orientation, audio tracks, existing text and the intended delivery. Inspect representative frames and every action needed for claims and timing; sample more densely around transitions. Audio-track presence does not establish that narration exists. If playback, transcription or rendering is unavailable, state the exact gap and continue independent work without inventing observations.
 
-## 设备与界面操作
+Use tools available in the environment; do not require one operating system or media service. A reliable local media pipeline may be used when available. AI image generation is optional for appropriate artwork, never a substitute for real product UI in a requested recording. Preserve user originals and use copies for edits.
 
-- 发现并锁定实际目标设备；多台 Android 设备时每条 ADB 命令指定 serial。不要固化手机型号、serial 或上次账号。
-- 优先当前 UI 树的文字、语义或 ID，找不到时实际查看截图。第三方控件和坐标易变，不复制旧任务坐标。
-- 页面切换后等加载并重新观察，再进行下一步；Next 的位置可能在下一页变成 Post。抓取失败时不能沿用旧节点盲点。
-- 输入前确认输入框聚焦，输入后回读全文。多行、标点和 shell 特殊字符采用可靠粘贴或转义，不能将正文直接拼进 shell。
-- 记录临时修改的方向、语言等设备设置并按需要恢复。结束本次录屏和媒体进程，不结束其他任务的进程。
+Record only the requested real workflow. Distinguish failed operations, visible entry points and completed outcomes; edits must not turn failure into success or pretend separate sessions were one continuous transaction. Protect private evidence, notifications, credentials and signatures; use demo data where appropriate. Do not modify product code, clear data or upgrade the app simply to obtain footage.
 
-## 剪辑与导出
+## Device interaction
 
-### 英文字幕与说明
+Honor the requested recording or publishing device. Discover connected devices and identify the target; for Android, specify the serial on every ADB operation when multiple devices are present. Do not assume other device families support ADB.
 
-有口播：按真实音轨转写、翻译并人工式校对专有名词、数字和功能承诺，生成带时间码的 SRT/VTT；对齐实际音频，不只按脚本文字平均分段。无口播：按镜头动作生成英文说明字卡，标记为讲解文字，不能声称是语音转写。
+Use current UI structure or a fresh screenshot for actions. After transitions, wait for the current screen and observe again. A failed UI dump does not validate old coordinates. Check field focus and use reliable text entry; read back full text, including punctuation and line breaks. IME composition or autocorrection can alter English, so verify the resulting text rather than assuming a successful command inserted it correctly.
 
-通常一到两行，短句优先；字体和背景对比要在手机上可读。依据当前平台 UI 预留安全区，不把固定像素边距套到所有尺寸。检查字幕不遮住输入、按钮、成功结果或关键示例。
+Record temporary orientation, language and input-method changes and restore them after use when appropriate. End only media processes started for this task.
 
-默认准备干净母版和需要时的字幕烧录版；支持字幕轨的平台可上传 SRT/VTT。若客户端不能导入字幕，使用已核验的烧录版；平台自动字幕必须校对，无法关闭重复字幕时重新选择合适版本。逐段检查开头、转场、结果与片尾的文本和同步。
+## Text and optional audio
 
-适配目标版式并保留关键 UI 可读性，字幕避开平台按钮和正文区。可以缩短等待和输入，但保留理解操作与结果所需时间。开场字卡不要过长。
+- Speech captions: transcribe the actual narration, translate when required and check names, numbers and claims. Align captions to speech.
+- Explanatory overlays: for narration-free recordings, add concise English explanations at meaningful actions or results. The user does not need to speak or record English. These are authored explanations, not a speech transcript.
+- AI narration: only when the user chooses it. Use an available authorized voice service; do not impersonate the user. Align captions to the generated audio after checking pronunciation and timing. If the capability is unavailable, deliver the script and clearly mark narration unfinished.
+- Existing text: reuse accurate, readable material. Do not add duplicate overlays. Respect an explicit request for raw footage or no text and record that choice.
 
-按当前目标检查容器、编码、尺寸、帧率、时长和音轨要求；不把某次的 1080×1920、30fps 或 60 秒当作平台统一上限。音乐需适用于本次商业推广用途，无配音或音乐时如实说明。
+Explain meaningful steps rather than every tap. Use short sentences, normally one or two lines, with enough dwell time to read. The number of cards depends on the content; do not impose a fixed count. Do not write claims from a product description and assign them arbitrarily across footage.
 
-导出后检查媒体参数和整文件解码，并实际查看开头、核心结果、片尾及封面帧；编码成功不代表文字、叙事或画面正确。
+## One editing timeline
 
-## 归档
+Copy [the timeline template](../assets/timeline-template.json) when cuts or timed text are needed. It is an editable example, not an executable renderer or proof that the sample timing is correct. Replace example material with observed sources.
 
-所有生成资源使用目标项目 docs/promo/<活动>/ 作为统一根目录；按实际产物建立子目录，不创建无用空目录：
+All times are seconds. Source times refer to the original media; output times refer to the finished video. Each segment names a source and a source interval, output interval, playback rate and observed action. A text cue has a stable ID, kind, output interval, language, text, associated segment and style. Use the same final timeline for captions, explanatory overlays and exports.
 
-```text
-docs/promo/<活动>/
-  videos/                 成片和必要发布版本
-  raw/                    本次原始录屏
-  covers/                 平台封面
-  copy/                   各平台标题、简介、标签、行动引导
-  subtitles/              字幕文件
-  sources/                必需源素材
-  scripts/                本次可复现制作脚本
-  verification/           媒体检查和验证结果
-  published/              必要核验证据
-  PUBLISHING_STATUS.md    状态、链接、剩余事项
-```
+For simple cuts, output duration equals source duration divided by playback rate. If footage is trimmed, reordered or retimed, update output intervals and cue associations before export. Keep fades, freezes or other nontrivial effects explicit in the chosen editor's configuration rather than silently violating the timing model.
 
-有重复价值时保存制作脚本，不要求每个项目安装同一媒体工具链。不将无关个人素材打包。
+Validate positive durations, source bounds, valid references, chronological placement and cue intervals within the final duration and their associated footage. Intentional overlapping layers must be explicit. Check timing against actual playback; valid numbers alone do not establish synchronization.
+
+Export speech captions as SRT/VTT when useful. Explanatory text may also have a timed text export, clearly labeled as explanation. SRT alone does not preserve layout, fonts or background panels: retain the style configuration and reproducible renderer/editor settings for burned-in overlays.
+
+## Layout, editing and export
+
+Keep text readable on a phone and clear of platform controls, product buttons, evidence annotations and report results. Establish safe areas from the target layout and current platform preview, not one universal pixel margin. If space is insufficient, scale the complete recording into a layout with a text area, then verify that the product UI remains legible. Do not crop away essential operations.
+
+Shorten waiting or repetitive input where useful, but preserve context and success evidence. Do not lengthen the opening merely to display a cover. Where a platform only accepts a cover frame, prepare and verify a suitable frame if needed, retaining the original.
+
+Keep a clean edited master and the intended delivery version. Use a verified burned-in version when the chosen client cannot import captions. Check automatic captions for errors or duplication. Verify music rights for the intended promotional use; audio is not mandatory for silent demonstrations.
+
+Check current destination requirements when necessary: container, codecs, dimensions, aspect ratio, frame rate, duration and audio. Do not treat a prior project's export settings as universal platform limits.
+
+## Verification and archive
+
+Check media metadata, decode the entire export, and visually inspect every text cue plus the opening, key results, transitions and ending. Check spelling, contrast, timing, clipping, duplicate captions and CTA accuracy. A successful encode is not visual acceptance.
+
+Save sources or source references, timeline, text exports, needed render configuration, clean master, delivery versions and evidence in the campaign directory. Use subfolders such as raw, videos, covers, copy, subtitles, sources, scripts, verification and published only as needed. Name delivery files clearly enough to distinguish platform and revision. Do not automatically commit large media or configure Git LFS; follow the repository and requested delivery scope.

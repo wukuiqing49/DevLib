@@ -1,64 +1,47 @@
 ---
 name: promo-video-publisher
-description: 基于任意项目的真实功能与搜索关键词，制作推广视频、英文封面、简介与字幕，规划 TikTok、YouTube、Instagram 的项目关联和下载路径，按授权发布并核验。适用于产品宣传、短视频引流和已有成片推广；仅分析或制作时不操作线上账号。
+description: Create English promotional videos, covers, captions and timed explanations from real product evidence or existing recordings, and publish and verify them when authorized. Use for apps, websites, desktop software, developer tools and services, including focused edits and existing-post updates.
 ---
 
-# 推广视频制作与发布
+# Promotional Video Publisher
 
-把“用户痛点 → 真实操作 → 可见结果 → 下载或访问行动”做成可发布的推广内容。不绑定项目、设备、操作系统或平台，不继承上次任务的账号、素材和授权。
+Turn a real user problem into a visible product result and a clear next action. Support mobile and desktop recordings, existing videos, screenshots and supplied media without tying the workflow to a particular product, device or platform.
 
-## 确定本次范围
+## Scope and language
 
-从当前会话、项目资料与可用界面确定产品、目标用户、核心卖点、平台、语言、素材来源、演示环境、转化目标及任务阶段（策划、制作、草稿或发布）。已有答案直接使用，只补问影响结果的缺项。
+Infer the product, audience, market, material, target accounts, primary action and task mode from the conversation and available evidence. Ask only for missing information that affects execution. Continue the same campaign using its saved state and existing authorization; for a new campaign, verify the target and scope instead of carrying over unrelated accounts or permissions.
 
-- 只要求分析、封面或 Skill 时，不操作线上账号。只要求发布已有成片时，不强行重新录制。
-- 明确要求上传或发布时，沿用本次会话已有授权；“上传草稿”不等于公开发布。范围明确后不反复询问。
-- 发布授权不包含购买推广、私信、修改账号资料、删除旧帖或跨账号发布。必要时单独确认具体动作，不把权限扩大写入 Skill。
+Write promotional copy, on-screen text and reusable artifacts in clear, natural English by default. Communicate with the user in their language. An explicit language request overrides the default. Preserve official product names and UI terms; adapt phrasing to the target audience without unsupported claims.
 
-## 产品与引流
+| Mode | Required work |
+| --- | --- |
+| Analyze | Inspect evidence and provide a scoped strategy; no account mutations. |
+| Create | Produce the requested assets and verify them locally. |
+| Edit | Change the requested cover, text, subtitles or other asset; inspect only relevant dependencies. |
+| Draft | Prepare the specified platform draft; do not publish it publicly. |
+| Publish/update | Prepare or reuse verified assets, execute authorized account actions, then read back results. |
+| Review results | Analyze available measurements and limitations; monitoring and experiments require their own scope. |
 
-完整制作任务先读取 [references/strategy.md](references/strategy.md)，输出项目卖点分析、带来源的关键词研究和镜头计划，再制作。默认营销文案使用英文，沟通沿用用户语言；用户另有语言要求时优先。已有成片发布任务也要核对产品与文案是否一致，但不强制重录。
+For a focused edit, do not automatically restart keyword research, create more videos, change other platforms or publish. For existing recordings, preserve useful material and do not require rerecording.
 
-仅分析“视频如何关联项目、引流下载或统计来源”时，读取该策略参考的项目关联部分，按实际目标平台输出路径和待配置项，无需录制或执行发布。普通内容推广不以接入平台 SDK 为前提；付费投放和安装归因按需要另行设计。
+## Authorization
 
-读取当前产品代码、文档、界面或用户素材，建立简短的“功能—用户收益—演示证据”清单。区分入口展示、配置展示和实际成功。未验证的功能不写成演示成功，未配置的服务不伪造结果。
+Use authorization already established in the current conversation. Publishing does not itself authorize paid promotion, private messages, profile changes, account switching, deleting/hiding posts or replacement uploads. Prepare a concrete proposed result before requesting any genuinely missing authorization. A request to edit this skill does not authorize online changes.
 
-为每个平台明确一个主要行动：下载、访问、试用、注册或查看教程。核对真实产品名、商店标题、开发者或域名。检查账号实际可用的链接入口；只有已配置且可访问时，才写 link in bio/profile。无可点击外链时使用准确名称搜索或其他已验证路径。平台规则可能变化，涉及具体链接、时长、封面或商业内容限制时，查当前官方说明并结合实际客户端，不复用旧结论。
+The default content package for TikTok, YouTube and Instagram includes both a video description and an early author comment with product identity and the real destination URL. Prepare both; execute comment posting only within the session's authorized scope. Preserve the user's established request for both placements without asking again per platform. Detailed execution and exceptions belong in [publishing](references/publishing.md).
 
-区分账户介绍与单条内容：开发者或多产品账户保留原有定位，项目介绍和下载信息放在对应视频中；修改主页链接仍须符合本次授权及用户最新偏好。分别核查网址能否保存、能否点击、评论能否发布和能否置顶，不能把“首条评论”当作“已置顶”。用户要求评论引流时按发布参考执行，不假设评论能绕过正文的外链限制。
+## Workflow
 
-TikTok、YouTube、Instagram 的默认宣传交付均包含两份下载信息：**视频简介/说明 + 首条作者评论**，两处都写准确产品名、真实下载 URL 和必要的商店搜索指引，不能只填一处。新帖确认发布后及时补作者评论；已有帖子先查现有作者下载评论并复用，无法占据时间顺序第一条时如实记录。两处文案默认都准备，实际发布沿用本次会话授权；本次已要求三平台双处发布时不再逐条询问，仅分析/制作或明确限定上传范围时不发评论。用户可在具体任务中覆盖此默认要求。
+1. Establish the task mode and evidence. Confirm real product identity, supported systems, destination and the installed/demo version when relevant. Distinguish visible entry points from successfully demonstrated outcomes.
+2. For strategy or full production, read [strategy](references/strategy.md). Choose one main user benefit and action. For a narrow edit, reuse still-applicable campaign facts.
+3. For recordings, editing, text overlays or exports, read [production](references/production.md). Narration-free recordings default to concise English explanations at meaningful moments; the user need not speak or record English. AI narration is optional and requires a user choice.
+4. For drafts, publishing, existing-post edits or delivery verification, read [publishing](references/publishing.md) and only the relevant platform reference linked there. Confirm the actual upload version, copy, cover and text treatment before submitting.
+5. Record evidence and remaining work using the [status template](assets/publishing-status-template.md). Resume from confirmed state; a submission or thumbnail alone is not proof of public availability.
 
-短片按“痛点或结果开场 → 关键动作 → 成功证据 → 清晰行动”组织。用户要覆盖全部核心功能时，安排完整介绍或主片加专题，不把所有设置页面塞进短片；数量、时长按本次任务决定。
+## Delivery
 
-## 制作和归档
+Store generated campaign resources under the target project's `docs/promo/<campaign>/`, or that path in the current workspace for projectless work, unless the user specifies another location. Keep package-relative references. Preserve user originals; archive necessary temporary outputs, not unrelated files. Create only the directories and documents the requested mode needs.
 
-按用户指定的真机、桌面、浏览器或已有视频工作。要求实录时不生成或重绘产品 UI。素材来源以本次要求为准；明确使用已有相册照片时，不临时拍照替代。
+Use the [timeline template](assets/timeline-template.json) for editing that needs timed text or cuts. The production reference defines its fields and export semantics. Preserve a clean master and the actual delivery version; distinguish speech captions, explanatory overlays and optional narration.
 
-录制、输入、剪辑和媒体核验按需读取 [references/production.md](references/production.md)。不为录片擅自修改产品代码、清空数据或升级安装包。
-
-完整推广制作默认包含英文屏幕说明；存在语音时制作校对过的英文字幕及 SRT/VTT 文件，无语音时制作与动作同步的英文讲解字卡，不虚构语音转写。生成用于平台的字幕烧录版时同时保留干净母版，避免与平台自动字幕重复。
-
-本流程生成资源统一写入目标项目 `docs/promo/<日期或活动名>/`：项目分析、关键词研究、镜头脚本、原始录屏、成片、封面、英文标题/简介/话题、字幕、制作脚本、验证结果、发布截图和状态记录。无项目时写入本次工作目录的 `docs/promo/`。只有用户本次明确指定其他路径时才覆盖；不要沿用历史的 doc、build、.ai-work 或个人 Videos 输出路径。临时缓存可以使用工具临时目录，结束前将续做所需文件归档到上述 docs 目录，并使用包内相对引用；无需移动用户提供的原始素材或已存在的无关文件。
-
-封面表达一个利益点，使用真实品牌与画面。适配平台实际方式；只支持选帧时可另建包含封面帧的发布版本，保留原片并核验选帧，不固定要求每条视频首秒插图。英文或其他目标语言文案自然具体，标签贴合主题；不要把产品中的 caption/metadata 与平台发布简介混淆。
-
-## 发布和验收
-
-实际发布或修复遗漏时读取 [references/publishing.md](references/publishing.md)。先准备完整文案与封面，再进入发布流程，避免发布后才发现正文未填。
-
-手机端处理 YouTube 已发布视频时，优先用 YT Studio App 编辑标题和详细说明，用 YouTube App 补作者下载评论及核验播放页；具体入口、封面能力和异常处理见发布参考。用户指定其他方式时按其要求执行。
-
-发布方式服从用户指定。要求手机发布时主动发现已连接设备、确认目标设备与账号、传输正确成片并刷新媒体库，通过可用设备工具完成上传、文案、话题、封面与字幕配置。没有设备或受支持的控制通道时报告具体缺项，不把“自动连接”写成可以绕过系统授权、登录或验证码。准备工作继续完成，不擅自改用网页发布。
-
-每个平台分别维护状态：素材就绪 → 草稿已填 → 已提交 → 平台处理中 → 已核验。看到主页缩略图、点击 Post 或上传进度结束，均不能单独证明公开发布成功。
-
-发布前核对账号、准确文件、全文、封面、受众、可见性和适用内容声明。发布后重新打开帖子，展开长正文核验，并尽量取得真实分享链接。重复点击或重新上传前，先核查已有帖子和草稿。
-
-## 完成记录
-
-在 `PUBLISHING_STATUS.md` 记录各平台账号、文件、公开范围、正文来源、实际状态、验证链接、证据路径和剩余事项。同时记录关联产品、实际 CTA 入口与目标地址、来源参数及归因能力状态。视频发布、封面生效、下载路径可用和统计接入分别记录；处理中、未补入、未核验分别说明，不统称发布成功。
-
-三平台分别记录简介中的下载信息与首条作者下载评论是否已保存、评论全文、发布后重读结果、置顶状态和网址可点击性。一处受限不能用另一处成功代替完成；保存待用文案并标明缺项。仅本人可见时不宣称已验证对所有访客可见；权限、编辑次数或审核限制出现后停止重复提交。
-
-最终简要给出平台结果、链接、未完成原因和归档位置。发布完成不等于获得流量；效果分析只引用真实数据，不承诺播放量或转化。
+Report what was produced or saved, actual verification, links or artifact paths, and specific unfinished items. Separate publication, cover, text treatment, author comment, destination reachability and measurement integration. Never claim exposure, conversion or public visibility from insufficient evidence.

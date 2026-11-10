@@ -1,91 +1,58 @@
-# 发布与异常恢复
+# Publishing, recovery and verification
 
-## 完整草稿
+## Load only the relevant platform
 
-### 自动连接与传输
+- [YouTube and Shorts](platforms/youtube.md)
+- [TikTok](platforms/tiktok.md)
+- [Instagram and Reels](platforms/instagram.md)
 
-先检查当前工具和设备连接。Android 可用 adb devices -l 发现设备；仅在用户目标可唯一识别时自动选择，否则只问设备这一缺项。设备 unauthorized/offline 时说明需要的解锁或系统授权，不能绕过。iPhone 或其他设备使用实际可用的受支持控制通道，不假设 ADB 通用。保持用户指定的手机发布方式。
+For other platforms, discover the actual fields and capabilities using current official sources and the visible client. Platform references are operational prompts, not permanent guarantees. Record the date, source and relevant account/client observation when verifying a changeable capability.
 
-传输已核验的发布文件，核对文件大小、必要时校验哈希，刷新媒体库并在选择器预览。将本地平台文案作为唯一输入源，输入后回读；封面单独上传或按能力选帧，字幕导入或使用烧录版。不要因为某个字段不在当前页就跳过它。
+## Prepare the actual delivery
 
-确认当前登录账号和频道。各平台分别准备标题、完整简介、首条作者下载评论、标签、封面、视频路径和主要 CTA。TikTok、YouTube、Instagram 的简介与评论均准备真实下载 URL；检查是否继承其他产品的默认简介。
+Use the authorized account, device and task mode. Confirm product identity and the exact existing post before editing. Identify the video through its path, duration, preview and revision; use a checksum when ambiguity warrants it. Transfer the verified file and refresh the media index as needed.
 
-用文件名、时长、缩略图及必要预览共同确定视频。图库可能同时有原片、下载副本、剪辑与截图，不仅凭排列位置选择。
+Prepare complete platform-appropriate copy, cover and text treatment before submission. Check whether the actual uploaded video contains the intended overlays or needs a supported caption track. Existing footage receives the same check; an explicit no-text preference is a valid recorded choice. A subtitle file on disk, a cover or a description does not prove text appears in the video.
 
-最终发布页检查全文（含多行及特殊字符）、封面是否保存、可见性、受众、语言和适用内容声明。按真实关系区分自有产品推广与第三方付费合作；商业内容声明不等于付费投流，也不顺带开启广告授权。只把可执行的实际路径写成引流入口。
+Check audience, visibility, language and applicable promotional-content declarations based on the real relationship. Do not enable paid promotion or advertising permissions incidentally. A draft request must remain a draft.
 
-保存必要证据后再发布。本次公开发布已获授权且范围一致时，不重复询问。
+## Description and author comment
 
-## 提交与回读
+For TikTok, YouTube and Instagram, prepare both a description and an early author comment unless the user overrides that default. Both identify the product and contain the real destination URL for the primary action. Use download, visit, documentation or other wording appropriate to the product. Add an accurate search route when a clickable link is unavailable.
 
-发布后回桌面、重载、超时或 UI 抓取失败时，先检查目标账号已有帖子或草稿；不重复点击旧坐标，也不直接重传。重新打开目标视频，展开全文核验标题、简介、封面与 CTA。
+Post comments only within the authorized scope. Reuse an explicit request for both placements across the named platforms without asking again. After a new post is confirmed, promptly add the prepared author comment; for an existing post, inspect and reuse or edit its author comment before creating another. Existing viewer comments mean the author comment may not be chronologically first; never delete others' comments or claim a fixed ranking.
 
-取得分享链接后确认指向新帖子，记录稳定链接；拿不到时说明未取得，不构造帖子 ID。已提交、处理中、设置为公开、确认对外可访问分别记录；仅登录账号可播放不保证外部可看，必要且有可用渠道时进一步验证公开页。
+Treat URL storage, clickability, comment visibility and pinning as separate capabilities. Pin only when requested and available; check existing pins before replacing them. Preserve the prepared copy if comments are disabled, URLs are rejected or length limits prevent completion. Complete independent authorized items and record the exact missing placement.
 
-处理或审核中，在当前任务内做少量且间隔合理的复查，同时完成归档。相同提示连续出现数次后停止无效点击，报告等待平台处理；用户要求稍后检查时才安排后续检查。不得为获取链接而重复发布。
+If a destination URL must be shortened to its canonical form, verify the product and record any lost attribution parameters. Do not replace it with an unverified short link. “See description” and “link in bio” do not substitute for the requested URL in the author comment.
 
-## 控制失败的判断范围
+## Submit and read back
 
-区分设备未连接、界面读取失败、具体命令被执行策略拒绝，以及平台编辑/账号权限限制。单条命令返回 `blocked by policy` 只证明该操作在执行前被拒，不能据此认定所有 ADB 操作或整个手机控制通道不可用，也不能推断具体命中了哪条规则。
+Immediately before submission, verify account, file, full text, cover, captions/overlays, audience and visibility. Existing in-scope authorization is sufficient; do not ask for redundant permission.
 
-出现策略拒绝时记录原操作、错误及已确认可用的能力；不反复提交同一被拒命令，不通过包装命令、更换工具或其他入口规避拒绝。只有确认其他操作符合策略且属于本次授权时才继续独立工作；无法确认时报告具体阻塞。换用 YT Studio 是正常的客户端分工，不代表策略已解除或操作必然获准。
+After submission, reopen the target post and inspect the full description, cover and text display. Reopen the comment area and inspect the full author comment separately. Obtain a stable share URL where possible and verify that it points to the intended post; never fabricate an ID.
 
-## TikTok
+Distinguish submitted, processing, published to the current account and verified externally accessible. An owner-visible post or comment does not prove visitor visibility. Check an external view when available and relevant; otherwise record that limit. Do not turn a platform preview into a claim of complete playback verification.
 
-图库、编辑、发布详情可能都有 Next，每一步重新确认；避免误点快捷 Story。Post 前必须看到已填简介与所选封面。
+## Verify the destination
 
-处理期间可能没有 Edit post，Copy link 可能提示 Post is being processed。先等待处理并复查，不立刻断言账号永久无法编辑。
+Follow the actual CTA:
+- Clickable route: follow the link through redirects to the correct product page.
+- Copyable URL: copy it into a browser and verify the destination, while labeling the original placement as nonclickable.
+- Search route: use the stated store/site and exact terms, then verify the resulting product identity.
 
-简介遗漏时优先编辑现有帖、保存后回读。仍不能编辑且需要替换时先准备完整新草稿，仅在本次授权涵盖重新发布时提交。隐藏或删除旧帖需要相应授权；新版本核验完成后再按要求处置旧版，优先可恢复的仅自己可见。没有授权时给出具体替换方案，不擅自删除或隐藏。
+Respect the user's choice not to use profile links. Keep the profile's developer or multi-product identity; only change profile fields when authorized. A working destination does not prove attribution, installation or conversion. Validate desktop and mobile separately when requested; otherwise identify the verified environment.
 
-检查当前账号是否有网站入口。没有时用准确商店名或其他可执行搜索指引，不写不存在的 link in bio；不擅自切换账号类型或修改资料。
+## Recovery and resumption
 
-## YouTube / Shorts
+Use [the status template](../assets/publishing-status-template.md) to preserve confirmed state. On continuation, read it, confirm the account/post and inspect the current remote state before mutating it. Do not repeat completed publication or comments based solely on an interrupted tool call.
 
-### 手机端客户端分工
+After timeouts, UI read failures or navigation changes, inspect posts and drafts before retrying. During processing, perform a small number of spaced checks while finishing independent work; stop ineffective retries after repeated unchanged results. Schedule later monitoring only when requested.
 
-用户要求手机操作时，优先使用已安装的 **YouTube Studio（YT Studio）App** 管理已发布视频的标题和详细说明：核对登录频道，从“内容”找到目标视频，进入编辑，保存后重新打开编辑页核对全文。YT Studio App 与浏览器中的 `studio.youtube.com` 是不同入口，不默认改用网页，也不把浏览器的额外验证当作手机 App 的必经步骤。App 未安装、未登录或字段不可用时如实记录，按本次授权与实际可用入口处理，不擅自安装或切换账号。
+For a policy rejection, report the rejected operation and known capabilities. Do not evade it by wrapping commands, changing tools or using another entrance. Continue only independent authorized operations that are permitted. A single rejection does not establish that every device operation is unavailable.
 
-**YouTube App** 用于打开原视频、检查已有作者下载评论、按授权补充或编辑评论，以及展开说明、核验播放页和实际封面。YT Studio 与 YouTube App 都要核对是否为同一频道、同一视频；通过已知视频 ID、分享链接、标题及画面交叉确认，避免误改其他产品。两处保存结果分别记录，不能把说明保存成功视作评论也已完成。
+For a missing field, use an appropriate available client consistent with the requested device. Do not assume browser login and native-app login share a session. State the specific missing capability without repeatedly requesting unrelated authentication.
 
-先确认实际视频类型。Shorts 封面选帧、独立缩略图上传及新视频上传入口以当前官方说明和客户端实际能力为准，不假定 YT Studio 手机端覆盖全部操作。已有封面正确时保留；需要调整时按已验证入口处理。标题、缩略图与描述可能分处不同页面，上传页无描述入口时在可用编辑入口补齐、保存并重新打开核验。
+When existing video text is missing, first check whether the platform supports adding captions or text to that post. Do not assume the video file is replaceable. If a new upload is necessary, prepare the reviewed revision first and obtain any missing replacement authorization. Hiding or deleting the original requires its own scope. A skill edit never triggers a repost.
 
-[官方 Android 视频编辑说明](https://support.google.com/youtubecreatorstudio/answer/57404?co=GENIE.Platform%3DAndroid&hl=en)列出 YT Studio App 和 YouTube App 的编辑路径；实际执行时结合当前客户端确认可用字段。
-
-特别检查上传默认值是否带入另一产品的简介，展开全文确认产品名、地址、标签及承诺。按真实内容选择是否面向儿童，不沿用所有软件演示的同一设置。封面可能需要选视频帧，以实际界面为准。
-
-Shorts 正文、评论、频道主页和关联视频的链接能力不同，涉及限制时查当前官方说明，再选择真实可用的转化路径，不机械粘贴 URL。
-
-## Instagram / Reels
-
-确认实际 Instagram 账号，不从其他平台推断用户名或登录状态。跨平台复用时优先使用有权发布的干净母版，核对音乐授权，避免把其他平台下载的水印版当作唯一原片。
-
-按当前发布入口核对 Reel/Story/普通帖子类型、视频预览、英文文案、封面与主页裁切、字幕、可见范围及适用声明。封面上传成功不代表最终展示成功，保存后重新打开目标帖子和主页检查。
-
-核查主页实际下载入口；Story 链接等额外入口仅在本次范围内配置。账号简介、主页链接、账号类型修改与付费推广需对应授权，公开发布授权本身不包含这些动作。只有主页链接已配置并验证后才启用对应引导文案。
-
-## 下载路径验收
-
-### 视频说明与作者评论
-
-先区分四个问题：能否保存网址文本、网址是否可点击、作者能否发布评论、该账号能否置顶。置顶只改变显示顺序，不改变网址权限；“第一个发布”也不保证后续排序第一。不要把正文不可点击误写为禁止填写，也不要把评论当成可点击外链的通用替代方案。
-
-- 项目介绍优先对应单条视频，账户介绍沿用账户本身定位。用户要求不使用主页入口时，不再以完成推广为由添加主页链接或催促频道身份验证。
-- 三平台默认都准备“视频简介/说明 + 首条作者评论”，两处均含真实下载 URL 与准确产品名。实际评论发布需本次会话授权涵盖；已要求双处发布时直接执行，不重复确认。仅分析或制作 Skill 不操作线上账号。新视频确认发布后及时发送一条作者下载评论；已有视频先查现有评论并复用/编辑，不为抢第一条删除别人评论或重复发布。已有观众评论时记录为作者下载评论，不伪称时间顺序第一。
-- 两处文案都给准确产品名、商店名和开发者，并写真实 URL。无可点击入口时明确复制到浏览器并保留商店搜索指引，按实际文本长度选择官方商店原始链接或带来源参数的链接；若移除参数须记录无法区分该入口来源，不用未验证短链替代。链接被拒绝、字符长度不足或评论关闭时保留完整待用稿并记录缺项，不静默省略 URL 或宣称已完成。
-- 发布一次后关闭并重开评论区，展开全文核对；按可用渠道验证外部访客可见性。只有看到本人的新评论不能证明对外审核完成。
-- 存在置顶入口且本次要求置顶时再执行，保留明确成功标识或重新进入后核验。已有其他置顶时先核对替换是否在授权内；没有入口、频道资格不足、出现审核/频率提示时记录原因，不反复提交或自动更换账号类型。
-
-YouTube 的普通长视频与 Shorts 分开判断：[官方链接位置说明](https://support.google.com/youtube/answer/13748639?hl=en)目前明确 Shorts 简介和评论中的普通网址不可点击；普通长视频说明/评论另有规则，不能用 `watch?v=` 地址将同一条 Short 当成长视频。按[官方评论说明](https://support.google.com/youtube/answer/6000964?hl=en)，可以置顶自己的评论，但需要高级功能权限；手机号验证不等于全部高级功能已解锁。执行时重新查询规则与实际提示。
-
-TikTok 以当前普通视频及评论菜单确认，不从 LIVE、广告或 TikTok One 的网页锚点推断普通视频能力。可保存 URL、评论成功和可点击跳转分别验收；无置顶入口只记普通作者评论，不承诺固定第一位。搜索不到明确官方通用规则时说明证据缺口，以当前账号观察限定结论，不引用第三方传闻作平台政策。
-
-Instagram 同样检查 Reel caption 和首条作者下载评论两处全文；账户介绍或主页链接不代替任一处。普通评论 URL 能否点击、作者评论能否置顶均检查当前客户端和官方说明，不从 Story 链接能力推断。三平台分别验收“两处已填/缺项、评论可见性、置顶、链接可点击性”，一处受限时继续完成另一处并保留明确待办。
-
-从帖子实际 CTA 出发，经主页或关联内容点击到最终商店/网站，核对产品名、应用 ID、系统支持、重定向和来源参数保留情况。手机与电脑的入口、可点击性、播放及封面可能不同；用户要求覆盖两端时分别检查，否则记录已验证端和未验证端。仅看到简介中的地址不算下载路径已验证，也不为验收擅自安装应用或购买服务。
-
-将帖子公开可访问、封面生效、下载路径可用、来源统计已接入分别记录。登录、地区、账号能力或统计权限不足时标明具体缺项；不能验证点击或安装数据时不报告转化成功。
-
-## 其他平台
-
-沿用完整草稿、提交、独立回读和状态记录流程，按实际客户端发现入口、封面能力、文本限制、链接能力及声明。不要照搬 TikTok/YouTube 的控件、受众或规则。
+Record completed items, exact blockers, pending copy/assets and the next action. Do not use success in one placement or platform to mark all delivery complete.

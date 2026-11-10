@@ -1,74 +1,48 @@
-# 从项目到推广方案
+# Product evidence and promotional strategy
 
-## 1. 分析项目，决定录哪些内容
+## Evidence and scope
 
-读取 README、产品文档、商店页面、主要功能入口和相关实现，再在实际运行版本确认。源码中存在不等于当前安装版本可用；标记版本差异。无需遍历所有代码，围绕能提供演示证据的核心路径检查。
+Inspect relevant product documentation, source, supplied assets, store/site pages and the actual demo when available. Do not traverse the entire repository for a small campaign. Source code does not prove that the recorded version supports a feature.
 
-形成简短分析表：目标用户、任务/痛点、已验证功能、可见结果、差异点、录制成本或限制。按用户收益、结果是否容易看懂、差异性、当前稳定程度选择主卖点；不要只挑最容易点击的页面。
+Map audience, task, pain point, verified capability, visible outcome and limitations. Choose a primary benefit that is useful, understandable on screen and supported by evidence. Do not optimize merely for the easiest screen to record. When complete feature coverage is requested, map each feature to a clip or explain the missing coverage.
 
-把功能清单转换为使用场景，例如“现场生成可交付报告”，而非“有三个设置页”。主片集中讲一个主要场景；完整功能覆盖通过镜头覆盖表与必要专题实现。用户明确要求全部核心功能时注明每项在哪条视频、哪段镜头出现；未覆盖项必须说明。
+## Discovery and English copy
 
-## 2. 搜索研究，建立英文关键词
+For a full campaign or explicit search-optimization task, research current audience phrasing using accessible platform suggestions, relevant results, official trend tools and other attributable sources. Record query, source URL, date, known market/language, observed intent and fit. Do not fabricate tool access, search volume, popularity or rankings. Reuse relevant dated research for a narrow edit and revisit only changed or uncertain facts.
 
-从真实能力和用户任务提取英文种子词，覆盖产品类别、问题、动作、目标用户和平台/系统。不能把品牌词作为唯一发现入口。
+Select one main phrase and a few related terms. Place them naturally in the title, opening sentence, on-screen text and relevant hashtags. Preserve product and UI terms. Use short, concrete English sentences with a clear benefit; avoid literal translation, keyword stuffing and guaranteed results. Search evidence can inform wording but cannot substantiate product capabilities.
 
-针对本次目标市场实时搜索：优先实际平台搜索建议、相关视频结果、官方趋势或关键词工具，再结合一般网页搜索与官方商店同类产品表达。使用可访问的渠道，不伪装访问了不可用的数据工具。平台规则只采用当前官方来源；搜索结果和竞品文案用于观察表达，不能当作本产品的功能证据。
+## Product identity and action
 
-将发现整理到 KEYWORD_RESEARCH.md：查询词、来源链接、检索日期、目标地区/语言（已知时）、观察到的用户意图、与本产品匹配情况及采用位置。没有可靠数据时只写定性判断，不编造搜索量、竞争度、热度或排名。“搜索结果出现”不等于高搜索量。
+Verify the product name, owner/developer, supported systems and final destination. Viewing a mobile-product video on a computer does not establish desktop-product support.
 
-选一个主关键词和少量相关词。优先功能真实匹配、意图明确且能在视频中证明的词。将其自然分配到标题、简介首句、开场说明、字幕和相关话题中，避免逐字重复或关键词堆砌。
-
-## 3. 项目关联、下载路径与来源追踪
-
-把关联项目落实为“用户看懂是什么产品 → 找到入口 → 到达正确商店或网站 → 完成目标动作”。普通视频推广不要求绑定源码仓库或先接入平台 SDK；付费广告、深度链接和安装归因属于不同能力，不因发布视频自动接入。
-
-核对产品名、开发者品牌、商店应用 ID/包名、官网及实际支持系统。视频、封面、简介和落地页保持产品身份一致；不要把桌面浏览视频或查看导出文件说成产品支持桌面端。开发者账号推广多个产品时，每条视频明确产品名；单产品优先直达对应页面，多产品才按需要推荐清晰的产品入口页，不强制建站。
-
-按目标平台记录当前账号、主 CTA、入口位置、实际目标地址、配置/验证状态和证据。以下是需要检查的入口，不表示每个账号都具备该能力：
-
-| 平台 | 关联与入口核对 |
+| Product or campaign | Possible primary action |
 | --- | --- |
-| TikTok | 个人简介、可用的网站入口、帖子文案及封面；没有网站入口时验证准确商店名称的搜索路径，不假设正文 URL 可点击 |
-| YouTube / Shorts | 频道主页链接、长视频简介，以及 Shorts 实际可用的频道或关联视频路径；分别核查链接能力，不将粘贴 URL 当作可点击入口 |
-| Instagram / Reels | 主页链接、简介、Reel 文案与封面，按需要核查 Story 链接入口；正文外链能力以当前账号和官方说明为准 |
+| Mobile app | Download from the verified store listing |
+| Website or online tool | Visit or try the verified website |
+| Desktop software | Download the appropriate operating-system build |
+| Developer library | Read documentation or view the repository |
+| Service | View service details or use an existing booking/demo page |
+| Educational content | Watch the relevant tutorial or read the guide |
 
-每条内容保留一个主要行动。只有入口已配置且实际可达，才使用 “Download via the link in our bio/profile”；尚未配置时把它标为待启用文案并给出配置方案。用户只要求分析或发布时，不顺带改账号名称、简介、链接或账号类型；已有明确账号配置授权则按其范围执行。
+Choose one action per video. Use its real destination in the description and author-comment package defined by the publishing reference; do not force app-store language onto other products.
 
-账户介绍与具体项目分开：多产品开发者账户保持原有身份与介绍，项目卖点和目标地址属于对应视频，不因主页可点击就默认把账户介绍替换成单一产品。TikTok、YouTube、Instagram 默认同时准备视频简介与首条作者下载评论，两处均含准确产品名、真实 URL 与必要的搜索指引；实际发布按本次授权范围执行。记录两处保存情况以及评论“已发布、外部可见、已置顶、URL 可点击”各自状态。Shorts 普通网址转到评论仍不会变成可点击链接；不能承诺通过评论解决全部外链限制。详细执行见发布参考。
+Keep developer or multi-product profiles focused on their existing identity. Put product-specific claims in the corresponding content. A profile link is only an option when available, authorized and verified. Do not introduce “link in bio” before it works, create a website unnecessarily, switch account types or install an analytics SDK as a prerequisite to ordinary promotion.
 
-下载路径和统计分开规划：
+## Story and cover
 
-- 为渠道和入口制定稳定命名，例如 source 为 instagram/tiktok/youtube、medium 为 organic_social、campaign 为活动标识；只在目标支持时使用对应 UTM、商店 referrer 或其他参数，正确编码并验证目标应用和跳转。不要将参数名当作平台统一接口。
-- 区分播放、主页访问、链接点击、安装及首次核心动作；分别注明数据来源、是否已接入和当前可观察范围。仅加链接参数不会自动产生完整转化报表。
-- Android 安装来源按需要检查 Google Play Install Referrer 或现有归因方案；应用内动作需要对应事件。普通推广不强制接入 SDK，也不凭空承诺逐用户或逐视频归因。多个视频共用主页链接时，通常只能得到该入口的汇总来源，不能据此精确分配到每条视频。
-- 付费应用推广另核查广告账号、应用登记、商店目标及事件配置；不因分析建议而购买广告、变更账号类型或修改产品代码。涉及具体 API/参数和平台能力时查询当前官方文档。
+Plan an opening problem or visible result, meaningful actions, a successful outcome and a clear next step. A searchable how-to and a result-led clip are choices based on the audience, not rigid platform categories. Do not show every settings page or use slogans as a substitute for explaining operations.
 
-小任务把关联方案合入 PROJECT_ANALYSIS.md；完整活动可单列 CONVERSION_PLAN.md，记录上述路径、参数、可测指标和待办，避免重复维护同一事实。
+For new material, use a short storyboard with intended actions, expected evidence, copy and source assets. For existing video, derive the editing timeline from observed frames and audio. Allow enough time to understand results.
 
-## 4. 镜头与字幕脚本
+Use real brand assets and product imagery for the cover. Explore brief copy alternatives when helpful, then choose the strongest accurate benefit without requiring approval for routine design choices. Inspect small-size legibility and platform cropping. Do not imply an unshown result was demonstrated. Adapt copy and cropping per platform instead of duplicating everything mechanically.
 
-产出 STORYBOARD.md，每段写明时间预算、用户收益、录制动作、预期画面/成功证据、英文屏幕文案或口播、素材来源、对应关键词。总时长根据内容及平台当前能力决定。
+## Attribution and review
 
-开头尽快让用户看到结果或明确问题；中段呈现实现结果的关键步骤；结尾给一个可执行 CTA。让标题承诺、开场、演示结果和 CTA 一致。搜索型内容可用具体 how-to 任务，推荐流内容可先呈现痛点或成果，两者依据本次查询与受众选择，不把它们当成固定平台分类。
+Validate the actual CTA path. Use source/campaign parameters only when supported by the destination; encode them correctly and verify redirects and identity. A parameter does not prove analytics integration.
 
-无语音也能通过英文动作说明理解视频。字幕/字卡显示时间应足够读完，关键成功结果不要一闪而过。不要把营销口号充当整条视频的讲解。
+Distinguish views, profile visits, clicks, installs/signups and meaningful product actions. Record available data sources and measurement windows. Shared profile links do not establish per-video attribution. Integration work, advertising purchases and automated monitoring need their own requested scope.
 
-## 5. 英文封面与文案
+Compare performance only when data is available and analysis is requested. Explain metric definitions and uncertainty; do not invent uplift percentages. Suggest changing one interpretable factor for the next creative, without automatically publishing duplicate experiments.
 
-封面默认提出两个简短文案方向并选出更符合主卖点的一版完成设计，无需为普通设计选择反复询问。采用真实产品截图、品牌颜色和清晰层级，重点突出一项收益或任务。适配手机小缩略图，检查裁切和遮挡；不要堆砌功能列表或承诺未演示的结果。必要时提供平台独立裁切。
-
-为每个平台生成可直接粘贴的完整文案：
-
-- 标题或开场句：自然包含主关键词，明确任务或收益。
-- 简介：首句讲用户问题和价值，随后说明实际展示内容，最后给准确的下载/访问引导。
-- 首条作者评论：三平台分别准备简短英文稿，含准确产品名、真实下载 URL 和必要的商店搜索指引，与本视频简介指向同一产品；不以“见简介”或“link in bio”替代评论中的地址。
-- 话题：选少量相关的类别、具体任务、目标人群或品牌标签；数量依内容与当前平台限制决定。不默认加 #fyp、#viral 等泛词，不宣称标签保证推荐。
-- 字幕：与实际语音或动作同步，术语、品牌名和界面结果准确。
-
-TikTok caption、YouTube description 与 Instagram Reel caption 分别写，不机械复制。标签不是曝光的独立保证；内容匹配、开场可理解性、观看体验和清晰行动都需要处理。不同标题/封面方案只作为备选保存，不未经授权同时重复发布做实验。
-
-## 6. 产物与后续改进
-
-完整任务按需保存 PROJECT_ANALYSIS.md、KEYWORD_RESEARCH.md、STORYBOARD.md、各平台文案、封面、成片、字幕和发布记录。小任务可合并分析文件，避免文档多于实际内容。
-
-有数据且用户要求分析效果时，对比可获得的曝光、观看时长/完播、点击和转化，并区分平台定义与采样时间。没有数据时不给推测的提升百分比。建议下一条内容优先改变一个可解释因素；后续监测、定时任务和自动重发需要本次明确要求。
+Keep small analyses concise. A full campaign may use PROJECT_ANALYSIS.md, KEYWORD_RESEARCH.md and a storyboard; combine them where separate files add no value.

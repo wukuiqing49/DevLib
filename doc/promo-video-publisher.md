@@ -1,147 +1,53 @@
-# 推广视频制作与发布指南
+# Promotional Video Publisher guide
 
-`promo-video-publisher` 根据目标项目的真实能力，完成“项目分析 → 搜索研究 → 镜头脚本 → 实录剪辑 → 英文包装 → 发布核验”。适用于 Android、桌面、网页及已有成片，支持 TikTok、YouTube、Instagram 和按实际界面适配的其他平台，也可单独分析视频如何关联产品与下载来源。
+Create evidence-based promotional material for mobile apps, websites, desktop software, developer tools and services. English is the default for marketing copy and reusable artifacts; user communication follows the user's language.
 
-## 入口与文件职责
+## Entry points
 
-| 入口 | 用途 |
+| Resource | Responsibility |
 | --- | --- |
-| [AGENTS.md](../AGENTS.md) | 根据任务路由到推广视频工作流 |
-| [工作流](../.agents/workflows/publish-promo-video.md) | 组合项目规范、执行策略与阶段交接 |
-| [Skill](../.agents/skills/promo-video-publisher/SKILL.md) | 跨项目通用方法；不依赖个人技能目录 |
-| [策略参考](../.agents/skills/promo-video-publisher/references/strategy.md) | 卖点、关键词、脚本、英文包装与效果分析 |
-| [制作参考](../.agents/skills/promo-video-publisher/references/production.md) | 实录、媒体导出、字幕和素材归档 |
-| [发布参考](../.agents/skills/promo-video-publisher/references/publishing.md) | 手机连接、平台发布、回读和异常恢复 |
-| [任务模板](../.agents/prompts/publish-promo-video.md) | 可选输入，已有信息无需重复填写 |
+| [Skill](../.agents/skills/promo-video-publisher/SKILL.md) | Scope, language, authorization, mode routing and delivery |
+| [Workflow](../.agents/workflows/publish-promo-video.md) | Repository entry and execution policy |
+| [Request prompt](../.agents/prompts/publish-promo-video.md) | Optional inputs; reuse information already provided |
+| [Strategy](../.agents/skills/promo-video-publisher/references/strategy.md) | Product evidence, audience, search research, story and CTA |
+| [Production](../.agents/skills/promo-video-publisher/references/production.md) | Real recordings, editing, text, export and verification |
+| [Publishing](../.agents/skills/promo-video-publisher/references/publishing.md) | Account actions, two placements, recovery and destination checks |
+| [Timeline](../.agents/skills/promo-video-publisher/assets/timeline-template.json) | Shared source/output timing and text styles |
+| [Status record](../.agents/skills/promo-video-publisher/assets/publishing-status-template.md) | Evidence, pending work and safe resumption |
 
-Claude 与 Gemini 沿用根目录桥接文件读取 AGENTS.md，统一使用这条路由，不重复维护平台规则。仓库统一使用 `.agents/`，不另建 `.agent/` 或 `Agent.md` 副本。
+Platform references for [YouTube](../.agents/skills/promo-video-publisher/references/platforms/youtube.md), [TikTok](../.agents/skills/promo-video-publisher/references/platforms/tiktok.md) and [Instagram](../.agents/skills/promo-video-publisher/references/platforms/instagram.md) load only when relevant. Current account capabilities must be verified during execution.
 
-## 使用示例
+## Examples
 
-仅分析与制作方案：
+Analyze only:
+> Use promo-video-publisher to analyze this product and propose an English video concept, search phrases and a verified destination. Do not publish.
 
-```text
-分析当前项目适合宣传哪些场景，研究英文搜索关键词，
-给出镜头脚本、封面设计、英文简介、话题和字幕方案。
-本次只准备方案，不发布。
-```
+Create from a silent recording:
+> Turn this existing recording into an English promotional video with concise timed explanations and a cover. I do not want to record narration. Keep the original and deliver a clean master and a version with text.
 
-从真实操作到发布：
+Focused edit:
+> Update only the English ending card and cover using this campaign's saved assets. Keep the existing timing unless the text needs more reading time.
 
-```text
-使用 promo-video-publisher 分析当前项目及英文搜索关键词，
-连接我指定的手机，使用相册已有素材实录核心功能，不重新拍照。
-制作英文封面、简介、话题和同步字幕，公开发布到 TikTok 和 YouTube，
-发布后核验正文、封面和链接，资源保存到当前项目 docs/promo。
-```
+Publish:
+> Publish the verified campaign video to these accounts using my specified phone. Include the prepared description and author comment with the product name and destination URL, then verify both.
 
-发布已有视频：
+Resume an existing campaign:
+> Read the saved publishing status and finish the outstanding authorized items. Inspect the existing posts before making changes.
 
-```text
-使用 promo-video-publisher 发布我指定路径下的成片。
-先依据当前项目和搜索关键词完善英文标题、简介、话题及封面，
-通过指定手机上传到本次确认的账号，不需要重新录制。
-```
+## Delivery behavior
 
-仅分析三平台如何关联项目：
+The default description/comment package applies to TikTok, YouTube and Instagram; its exact execution and exceptions are maintained in the publishing reference. The action may be downloading an app, visiting a website, reading documentation or another verified product-specific route. Profile identity remains distinct from a single product.
 
-```text
-分析现有视频在 TikTok、YouTube Shorts 和 Instagram Reels 上
-如何关联当前产品，规划账号品牌、可用下载入口、英文 CTA 和渠道来源标记。
-区分已配置、待配置和未验证项，说明手机与电脑的验证范围。
-本次只输出方案，不修改账号或发布视频，也不接入 SDK。
-```
+Silent recordings use authored explanations rather than invented speech transcripts. AI narration is optional. The timeline template uses source and output timestamps so captions can follow cuts and speed changes; it is not a renderer. SRT/VTT carries timed text, while layout and style remain in the render/editor configuration.
 
-提供目标项目、阶段、平台、素材和设备即可开始；缺少会影响执行的信息时才补问。公开发布需在当前任务中有明确授权，安装或调用 Skill 不自动授权发布。
+A campaign archive normally lives under `docs/promo/<campaign>/`. Create only needed artifacts and preserve original sources. A completed upload is distinct from public visibility, correct cover/text display, a saved comment, a reachable destination and analytics integration.
 
-## 输入与产出
+## DevLib integration
 
-| 阶段 | 实际处理 | 产出 |
-| --- | --- | --- |
-| 项目分析 | 文档、源码、运行版本与可见成功证据 | 卖点、目标用户、功能覆盖与限制 |
-| 关键词 | 实时平台/网页搜索及可用官方数据，记录日期和来源 | 英文主词、相关词、意图与使用位置 |
-| 项目关联 | 核对品牌、目标商店/官网、账号入口与可测指标 | 各平台 CTA 路径、来源命名、配置状态与待办 |
-| 策划录制 | 围绕用户任务组织镜头并验证功能 | 时间轴、实录和成功结果 |
-| 英文包装 | 平台独立文案与真实素材封面 | 标题、简介、话题、封面、CTA |
-| 字幕 | 有语音则转写校对，无语音则同步动作说明 | 适用的 SRT/VTT、干净母版及需要的烧录版 |
-| 发布验收 | 核对设备、账号、全文、封面、范围及声明 | 发布状态、真实链接与截图证据 |
+The reusable skill does not inherit DevLib's product, package name, device or permissions. Read the target project's execution policy. DevLib's default exclusion of device commands remains in force unless the user's current request authorizes the relevant operation. Editing or copying the skill alone does not authorize device control, posting or account changes.
 
-没有可靠搜索量时只做定性关键词选择，不编造热度。商店 ASO、官网资料可复用为产品事实；它们不自动证明社交平台的搜索需求。话题只选择与功能及用户相关的内容，不保证曝光；下载引导必须指向真实可用入口。
+Claude and Gemini continue using the root AGENTS.md bridge and the same repository-local workflow. The personal skill is a distribution copy; keep it synchronized when updating this package without overwriting unrelated personal files.
 
-## 执行条件与能力边界
+## Validation
 
-### 项目关联与转化
-
-以“视频 → 账号/频道实际入口 → 正确商店或官网 → 目标动作”连接产品。统一产品身份，明确实际支持系统；开发者品牌账号可推广多个产品，但每条视频和目标链接应清楚对应当前产品。普通内容推广无需先接入平台 SDK，具体平台能力按当前官方说明和目标账号核查。
-
-TikTok 检查可用的网站入口，YouTube 区分频道、长视频和 Shorts 的链接路径，Instagram 检查主页及按需使用的 Story 入口。未配置可用入口时不使用 link in bio/profile；账号简介、链接、类型修改及付费广告需要对应授权。仅分析或修改 Skill 时不操作线上账号。
-
-账户介绍保留开发者或多产品账户定位，不默认改成单产品主页。TikTok、YouTube、Instagram 的默认宣传交付均包含**视频简介/说明 + 首条作者下载评论**，两处都写准确产品名、真实下载 URL 和必要的商店搜索指引，不以“见简介”或“link in bio”替代评论中的地址。文案默认都准备；实际发布按本次授权执行，已有双处发布授权不再逐条询问，仅分析/制作或明确限定上传范围时不发评论。
-
-新帖确认发布后及时补一条作者下载评论，旧帖先查已有作者评论并复用。已有观众评论时如实记录，不能抢占时间顺序第一；不重复发送或删除别人的评论。分别记录两处保存结果、网址可点击性、评论外部可见性及置顶；第一条评论不等于固定排在第一位。一处受限不代表整项完成，保留待用文案和缺项。
-
-YouTube Shorts 简介和评论中的普通网址均不可点击，置顶不能绕过限制；同一 Short 的 watch 页面地址不改变内容类型。置顶要求高级功能，手机号验证不等于已具备；以当前官方说明和账号提示核验。TikTok 普通视频不能套用 LIVE、广告或 TikTok One 网页锚点能力，当前菜单无置顶时记录普通评论。规则与执行细节集中维护于[发布参考](../.agents/skills/promo-video-publisher/references/publishing.md)。
-
-渠道参数不等于完整归因。分别记录播放、点击、安装和首次核心动作的数据能力；Android 安装来源按需要核查 Install Referrer 或现有方案，共用主页链接不能据此精确归因每条视频。关联方案合入 PROJECT_ANALYSIS.md，完整活动可单列 CONVERSION_PLAN.md。
-
-验收分别记录帖子、封面、下载路径与统计状态；用户要求手机/电脑覆盖时分别验证，未验证端明确标注。应用仅支持 Android 时，不把电脑可看视频或导出报告写成提供桌面版。
-
-关联方案可按下表填写；入口是否可用必须依据当前账号核验，不能从其他账号或平台推断：
-
-| 平台 | 产品与入口 | 最终目标 | 来源标记 | 实际状态 |
-| --- | --- | --- | --- | --- |
-| TikTok | 产品名、简介与可用网站入口，或已验证搜索路径 | 当前产品商店页/官网 | 渠道及入口命名，按目标支持的方式编码 | 待配置/已配置/已验证及证据 |
-| YouTube / Shorts | 频道链接、长视频简介或 Shorts 可用的关联路径 | 当前产品商店页/官网 | 区分频道入口与具体内容入口 | 分别记录各入口和验证端 |
-| Instagram / Reels | 产品名、主页链接及按需使用的 Story 入口 | 当前产品商店页/官网 | 区分主页与 Story 等入口 | 未配置时不启用主页下载引导 |
-
-来源标记可以采用 source=`instagram`、medium=`organic_social`、campaign=`<活动标识>` 等命名方案，但应映射到目标实际支持的参数，不直接假设所有商店接受同一套 URL。先验证跳转，再确认统计端能读取对应来源；不把播放量当作下载量。
-
-### 工具与设备
-
-需要可用的搜索渠道、媒体处理工具及相应设备/网页控制能力；工具按执行环境发现，不固定某台电脑路径或手机 serial。Android 可通过 ADB 发现设备；多设备须明确目标，离线或未授权时由用户完成系统连接授权。其他系统使用其受支持通道。手机发布要求不能擅自替换成网页发布。
-
-DevLib 当前设备命令默认排除，见项目档案 executionPolicy。仅移植、查看或制作方案不会触发 ADB；后续用户明确要求手机录制/发布可按该次授权覆盖相应范围。此策略不随 Skill 复制成其他项目的默认策略。
-
-只显示应用入口不代表该功能已成功；源码存在不代表安装版本支持。平台“正在处理”不代表已对外可见；主页出现视频不代表简介与封面正确。发布后必须重新打开目标帖子并展开正文核验。发生超时、回桌面或找不到编辑入口时先检查已有帖子和处理状态，不直接重复上传。替换发布、隐藏或删除旧版按本次具体授权处理。
-
-## 资源归档和续做
-
-全部生成资源统一写入**目标项目**的 `docs/promo/<日期或活动名>/`，包括分析文档与媒体文件；无项目时使用当前工作目录的 `docs/promo/`。仅用户本次明确指定其他目录时覆盖，不沿用旧任务的 `doc/`、`build/`、`.ai-work/` 或个人 Videos 路径。临时缓存中续做所需文件在交付前归档，包内使用相对引用；用户提供的原素材保留原位，不迁移无关历史文件。外部产品素材不写回 DevLib。按任务规模保留：
-
-```text
-PROJECT_ANALYSIS.md       产品事实、覆盖与限制
-CONVERSION_PLAN.md       可选：三平台产品关联、CTA、来源参数、指标与待办
-KEYWORD_RESEARCH.md       查询、日期、来源、意图与选词
-STORYBOARD.md             镜头、时间、动作与英文说明
-raw/                     本次原始录屏
-videos/                  成片与必要发布版本
-covers/                  各平台封面
-copy/                    完整标题、简介、三平台首条作者评论、话题和下载引导
-subtitles/               适用的字幕时间轴文件
-scripts/                 可复现制作脚本
-verification/            媒体检查与验证结果
-published/               发布回读证据
-PUBLISHING_STATUS.md     账号、关联产品、发布/封面/下载路径/统计状态、证据与待办
-```
-
-小任务可合并分析文件，无用目录不创建。状态区分已准备、草稿已填、已提交、平台处理中和已核验；保存记录后可在新会话从实际状态继续，先确认账号和已有帖子，避免重发。用户要求后续监测或定时任务时再安排，不因一次发布自动创建持续任务。
-
-评论引流任务另存完整评论文案和重读证据，记录置顶限制及外部可见性；未做访客验证就不能宣称所有人可见。停止于明确权限、次数或审核限制，不重复发相同评论。
-
-## 迁移到其他项目
-
-1. 完整复制 `.agents/skills/promo-video-publisher/`，包含 agents 元数据和三个 references，不依赖全局安装位置。
-2. 在目标已有 Agent 入口中加入推广视频任务路由，读取该 Skill。目标用 `.agent/` 时可放入其对应 skills 目录并同步修改入口路径，不额外建立竞争的规范目录。
-3. 需要同样工作流时合并工作流和任务模板，按目标规则修改加载路径；DevLib 的 agentFiles 注册机制仅在目标采用该机制时合并，不覆盖整个项目档案。
-4. 保留目标技术栈、设备策略、品牌及账号约定，重新读取真实项目事实；不复制 DevLib 模块清单或历史发布授权。
-5. 做 Skill 结构与本地引用检查。DevLib 使用下述验证命令，其他项目采用其可用校验方式。
-
-## 本次接入验证
-
-```powershell
-python -B .agents/scripts/validate_agent_structure.py --project-root .
-python -X utf8 <skill-creator目录>/scripts/quick_validate.py .agents/skills/promo-video-publisher
-git diff --check
-```
-
-结构验证只确认入口、注册、元数据和引用关系。本次为能力移植与文档接入，不连接手机、制作真实成片或操作线上账号；后续实际任务仍需相应工具与授权。
+Run the skill-creator quick validator, the repository Agent structure validator, and check relative links, template syntax and personal/repository copy consistency. These checks do not prove video quality or successful platform publishing. Verify those against actual media and account evidence during the corresponding task.

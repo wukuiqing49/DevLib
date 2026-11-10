@@ -1,20 +1,20 @@
-# 推广视频任务
+# Promotional video request
 
-执行：`.agents/workflows/publish-promo-video.md`
+Use `.agents/workflows/publish-promo-video.md`. Fill only information not already available in the conversation.
 
-- 目标项目或产品：
-- 范围：仅分析 / 制作素材 / 上传草稿 / 公开发布
-- 平台及目标账号：
-- 录制设备或已有视频路径：
-- 可用素材及限制：例如只用相册现有照片、不拍照
-- 目标用户、市场与语言：默认营销文案英文
-- 重点功能或使用场景：
-- 下载/访问目标：
-- 项目关联：产品名、开发者品牌、实际支持系统；主页/频道入口及是否授权配置
-- 内容与账户边界：保留原账户介绍；TikTok、YouTube、Instagram 默认在视频简介与首条作者评论两处都写准确产品名和真实下载 URL
-- 作者评论：本次是否涵盖发布及置顶（已有授权直接复用）；新帖发布后及时补首条作者评论，旧帖先查重复；分别验证两处文案、评论可见、置顶结果和 URL 可点击性
-- 来源追踪需求：仅渠道区分 / 安装来源 / 核心动作；现有统计能力与所需验证端（手机/电脑）
-- 字幕或口播偏好：
-- 资源统一目录：目标项目 docs/promo/<活动>/（含分析、录屏、成片、封面、文案、字幕和发布记录）
+- Product or project:
+- Mode: analyze / create / edit / draft / publish or update / review results
+- Requested deliverables or precise edit:
+- Audience, market and language (promotional content defaults to English):
+- Supplied recording/media and observed product version:
+- Key user task or benefit:
+- Platforms, accounts and existing post links:
+- Required device or publishing method:
+- Primary action and verified destination:
+- Text preference: timed explanations for silent recordings by default; speech captions when narrated; AI narration only if selected
+- Existing authorization for posting, author comments, pinning or account changes:
+- Source and privacy constraints:
+- Measurement needs and requested mobile/desktop verification:
+- Campaign directory or existing status record:
 
-已在会话中提供的信息直接复用，无需重复填写。
+Default TikTok, YouTube and Instagram content packages include a description and an early author comment, each naming the product and real target URL. Use the skill's scope and publishing rules to determine which actions are authorized. Do not require the user to fill this entire form or repeat an established decision.
