@@ -12,7 +12,7 @@ For other platforms, discover the actual fields and capabilities using current o
 
 Use the authorized account, device and task mode. Confirm product identity and the exact existing post before editing. Identify the video through its path, duration, preview and revision; use a checksum when ambiguity warrants it. Transfer the verified file and refresh the media index as needed.
 
-Prepare complete platform-appropriate copy, cover and text treatment before submission. Check whether the actual uploaded video contains the intended overlays or needs a supported caption track. Existing footage receives the same check; an explicit no-text preference is a valid recorded choice. A subtitle file on disk, a cover or a description does not prove text appears in the video.
+Prepare complete platform-appropriate copy, cover, text and audio before submission. Check whether the actual uploaded video contains the intended overlays or needs a supported caption track. Existing footage receives the same check; an explicit no-text preference is a valid recorded choice. A subtitle file on disk, a cover or a description does not prove text appears in the video. Follow [music](music.md) for track rights, local versus in-app application, and audible playback; carry an established music request across the requested platforms.
 
 Check audience, visibility, language and applicable promotional-content declarations based on the real relationship. Do not enable paid promotion or advertising permissions incidentally. A draft request must remain a draft.
 
@@ -28,9 +28,9 @@ If a destination URL must be shortened to its canonical form, verify the product
 
 ## Submit and read back
 
-Immediately before submission, verify account, file, full text, cover, captions/overlays, audience and visibility. Existing in-scope authorization is sufficient; do not ask for redundant permission.
+Immediately before submission, verify account, file, full text, cover, captions/overlays, music or explicit silent choice, audience and visibility. Existing in-scope authorization is sufficient; do not ask for redundant permission.
 
-After submission, reopen the target post and inspect the full description, cover and text display. Reopen the comment area and inspect the full author comment separately. Obtain a stable share URL where possible and verify that it points to the intended post; never fabricate an ID.
+After submission, reopen the target post and inspect the full description, cover, text display and audible music. Reopen the comment area and inspect the full author comment separately. Obtain a stable share URL where possible and verify that it points to the intended post; never fabricate an ID.
 
 Distinguish submitted, processing, published to the current account and verified externally accessible. An owner-visible post or comment does not prove visitor visibility. Check an external view when available and relevant; otherwise record that limit. Do not turn a platform preview into a claim of complete playback verification.
 
@@ -48,6 +48,8 @@ Respect the user's choice not to use profile links. Keep the profile's developer
 Use [the status template](../assets/publishing-status-template.md) to preserve confirmed state. On continuation, read it, confirm the account/post and inspect the current remote state before mutating it. Do not repeat completed publication or comments based solely on an interrupted tool call.
 
 After timeouts, UI read failures or navigation changes, inspect posts and drafts before retrying. During processing, perform a small number of spaced checks while finishing independent work; stop ineffective retries after repeated unchanged results. Schedule later monitoring only when requested.
+
+If another task or person changes the device's foreground, stop input and confirm the intended app, account and fresh page before resuming. Do not continue a queued sequence of taps or text entry against an unexpected application; coordinate access when contention persists.
 
 For a policy rejection, report the rejected operation and known capabilities. Do not evade it by wrapping commands, changing tools or using another entrance. Continue only independent authorized operations that are permitted. A single rejection does not establish that every device operation is unavailable.
 

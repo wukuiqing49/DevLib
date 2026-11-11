@@ -1,6 +1,6 @@
 ---
 name: promo-video-publisher
-description: Create English promotional videos, covers, captions and timed explanations from real product evidence or existing recordings, and publish and verify them when authorized. Use for apps, websites, desktop software, developer tools and services, including focused edits and existing-post updates.
+description: Create English promotional videos with suitable licensed background music, covers, captions and timed explanations from real product evidence or existing recordings, and publish and verify them when authorized. Use for apps, websites, desktop software, developer tools and services, including focused edits and existing-post updates.
 ---
 
 # Promotional Video Publisher
@@ -34,8 +34,8 @@ The default content package for TikTok, YouTube and Instagram includes both a vi
 
 1. Establish the task mode and evidence. Confirm real product identity, supported systems, destination and the installed/demo version when relevant. Distinguish visible entry points from successfully demonstrated outcomes.
 2. For strategy or full production, read [strategy](references/strategy.md). Choose one main user benefit and action. For a narrow edit, reuse still-applicable campaign facts.
-3. For recordings, editing, text overlays or exports, read [production](references/production.md). Narration-free recordings default to concise English explanations at meaningful moments; the user need not speak or record English. AI narration is optional and requires a user choice.
-4. For drafts, publishing, existing-post edits or delivery verification, read [publishing](references/publishing.md) and only the relevant platform reference linked there. Confirm the actual upload version, copy, cover and text treatment before submitting.
+3. For recordings, editing, text overlays or exports, read [production](references/production.md). New promotional videos default to suitable background music and concise English explanations at meaningful moments. Read [music](references/music.md) to select, license, mix and verify the actual track; preserve an explicit silent preference or purposeful source audio. The user need not record narration. AI narration is optional and requires a user choice.
+4. For drafts, publishing, existing-post edits or delivery verification, read [publishing](references/publishing.md) and only the relevant platform reference linked there. Confirm the actual upload version, copy, cover, text and audio before submitting. Apply an established music preference across requested platforms; record unsupported existing-post edits without silently replacing uploads.
 5. Record evidence and remaining work using the [status template](assets/publishing-status-template.md). Resume from confirmed state; a submission or thumbnail alone is not proof of public availability.
 
 ## Delivery
@@ -44,4 +44,4 @@ Store generated campaign resources under the target project's `docs/promo/<campa
 
 Use the [timeline template](assets/timeline-template.json) for editing that needs timed text or cuts. The production reference defines its fields and export semantics. Preserve a clean master and the actual delivery version; distinguish speech captions, explanatory overlays and optional narration.
 
-Report what was produced or saved, actual verification, links or artifact paths, and specific unfinished items. Separate publication, cover, text treatment, author comment, destination reachability and measurement integration. Never claim exposure, conversion or public visibility from insufficient evidence.
+Report what was produced or saved, actual verification, links or artifact paths, and specific unfinished items. Separate publication, cover, text treatment, music and audible playback, author comment, destination reachability and measurement integration. Never claim exposure, conversion or public visibility from insufficient evidence.

@@ -62,6 +62,11 @@
   "verification": {
     "timing_checked": false,
     "layout_checked": false,
-    "export_decoded": false
+    "export_decoded": false,
+    "audio_listened": false
+  },
+  "audio": {
+    "music": [],
+    "note": "For each selected track record id, title, creator, source_path_or_platform_id, source_url, license_url, rights_checked_at, permitted_platforms, attribution, application (embedded or in_app), source_start, output_start, output_end, gain_db and fades. Keep selection and applied/listened states distinct; remove this note after recording actual decisions."
   }
 }

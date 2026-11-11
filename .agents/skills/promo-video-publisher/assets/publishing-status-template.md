@@ -25,6 +25,9 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 - Cover source / selected frame:
 - Text treatment: speech captions / explanatory overlays / explicit no-text choice:
 - Text language / timing and layout evidence / uploaded track or burned-in file:
+- Music title / creator / track ID or source URL / license and checked date / attribution:
+- Audio application: embedded file revision or in-app selection; source offset / output interval / gain / fades / ducking:
+- Music decision: applied / provisional selection / explicit silent preference / blocked, with reason:
 - Author comment source / ID where available:
 - Destination / parameters / available measurement:
 
@@ -40,6 +43,8 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 | Comment visitor visibility / chronological position | Not checked | | |
 | Pinning, if requested | Not checked | | |
 | Cover and text display | Not checked | | |
+| Music rights / required attribution | Not checked | | |
+| Applied audio / audible platform playback | Not checked | | |
 | CTA reachability / URL clickability | Not checked | | |
 | Requested mobile / desktop coverage | Not checked | | |
 | Measurement integration, if in scope | Not checked | | |

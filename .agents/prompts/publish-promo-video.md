@@ -11,7 +11,7 @@ Use `.agents/workflows/publish-promo-video.md`. Fill only information not alread
 - Platforms, accounts and existing post links:
 - Required device or publishing method:
 - Primary action and verified destination:
-- Text preference: timed explanations for silent recordings by default; speech captions when narrated; AI narration only if selected
+- Text/audio preference: timed explanations and suitable licensed background music by default; honor a silent choice; speech captions when narrated; AI narration only if selected
 - Existing authorization for posting, author comments, pinning or account changes:
 - Source and privacy constraints:
 - Measurement needs and requested mobile/desktop verification:

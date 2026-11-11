@@ -16,12 +16,13 @@ Use current UI structure or a fresh screenshot for actions. After transitions, w
 
 Record temporary orientation, language and input-method changes and restore them after use when appropriate. End only media processes started for this task.
 
-## Text and optional audio
+## Text and audio
 
 - Speech captions: transcribe the actual narration, translate when required and check names, numbers and claims. Align captions to speech.
 - Explanatory overlays: for narration-free recordings, add concise English explanations at meaningful actions or results. The user does not need to speak or record English. These are authored explanations, not a speech transcript.
 - AI narration: only when the user chooses it. Use an available authorized voice service; do not impersonate the user. Align captions to the generated audio after checking pronunciation and timing. If the capability is unavailable, deliver the script and clearly mark narration unfinished.
 - Existing text: reuse accurate, readable material. Do not add duplicate overlays. Respect an explicit request for raw footage or no text and record that choice.
+- Background music: default to a suitable licensed track for new promotional videos. Use [music](music.md) for selection, intended rights, source offsets, mixing, listening and platform verification. Narration-free does not mean music-free; honor an explicit silent preference and preserve meaningful source audio.
 
 Explain meaningful steps rather than every tap. Use short sentences, normally one or two lines, with enough dwell time to read. The number of cards depends on the content; do not impose a fixed count. Do not write claims from a product description and assign them arbitrarily across footage.
 
@@ -43,7 +44,7 @@ Keep text readable on a phone and clear of platform controls, product buttons, e
 
 Shorten waiting or repetitive input where useful, but preserve context and success evidence. Do not lengthen the opening merely to display a cover. Where a platform only accepts a cover frame, prepare and verify a suitable frame if needed, retaining the original.
 
-Keep a clean edited master and the intended delivery version. Use a verified burned-in version when the chosen client cannot import captions. Check automatic captions for errors or duplication. Verify music rights for the intended promotional use; audio is not mandatory for silent demonstrations.
+Keep a clean edited master and the intended delivery version, plus a music-free version when using platform-specific music. Use a verified burned-in version when the chosen client cannot import captions. Check automatic captions for errors or duplication. Follow the music reference for audio rights and actual listening; record any explicit silent choice or unfinished music placement.
 
 Check current destination requirements when necessary: container, codecs, dimensions, aspect ratio, frame rate, duration and audio. Do not treat a prior project's export settings as universal platform limits.
 
