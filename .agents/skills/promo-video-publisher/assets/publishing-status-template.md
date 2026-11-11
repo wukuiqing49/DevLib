@@ -14,6 +14,14 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 - Timeline / clean master / delivery files:
 - Last checked (date, time and timezone):
 
+## Music selection — when in scope
+
+For multiple videos, complete one row per video before applying music. Reuse existing campaign analysis. Distinguish observations, library metadata and actual listening; mark unheard choices provisional. Shared music needs a fit rationale for each video.
+
+| Video / source revision | Observed content, duration, pace, text and source sound | Intended feeling | Track / creator / ID and excerpt | Fit rationale / alternative considered | Visual evidence / actual audition or limitation |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
 ## Platform record — duplicate for each target
 
 - Platform / content type / account / channel:
@@ -26,6 +34,8 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 - Text treatment: speech captions / explanatory overlays / explicit no-text choice:
 - Text language / timing and layout evidence / uploaded track or burned-in file:
 - Music title / creator / track ID or source URL / license and checked date / attribution:
+- Current desired track / currently confirmed applied track / superseded track history:
+- Existing-post audio: current source and prior music / replacement versus blending behavior / evidence or unresolved limitation:
 - Audio application: embedded file revision or in-app selection; source offset / output interval / gain / fades / ducking:
 - Music decision: applied / provisional selection / explicit silent preference / blocked, with reason:
 - Author comment source / ID where available:
@@ -44,7 +54,8 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 | Pinning, if requested | Not checked | | |
 | Cover and text display | Not checked | | |
 | Music rights / required attribution | Not checked | | |
-| Applied audio / audible platform playback | Not checked | | |
+| Current track applied / saved / processing | Not checked | | |
+| Final audible platform playback / mix review | Not checked | | |
 | CTA reachability / URL clickability | Not checked | | |
 | Requested mobile / desktop coverage | Not checked | | |
 | Measurement integration, if in scope | Not checked | | |
