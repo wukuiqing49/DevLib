@@ -16,7 +16,7 @@ Create evidence-based promotional material for mobile apps, websites, desktop so
 | [Timeline](../.agents/skills/promo-video-publisher/assets/timeline-template.json) | Shared source/output timing and text styles |
 | [Status record](../.agents/skills/promo-video-publisher/assets/publishing-status-template.md) | Evidence, pending work and safe resumption |
 
-Platform references for [YouTube](../.agents/skills/promo-video-publisher/references/platforms/youtube.md), [TikTok](../.agents/skills/promo-video-publisher/references/platforms/tiktok.md) and [Instagram](../.agents/skills/promo-video-publisher/references/platforms/instagram.md) load only when relevant. Current account capabilities must be verified during execution.
+Platform references for [YouTube](../.agents/skills/promo-video-publisher/references/platforms/youtube.md), [TikTok](../.agents/skills/promo-video-publisher/references/platforms/tiktok.md), [Instagram](../.agents/skills/promo-video-publisher/references/platforms/instagram.md) and [Threads](../.agents/skills/promo-video-publisher/references/platforms/threads.md) load only when relevant. Current account capabilities must be verified during execution.
 
 ## Examples
 
@@ -37,7 +37,7 @@ Resume an existing campaign:
 
 ## Delivery behavior
 
-The default description/comment package applies to TikTok, YouTube and Instagram; its exact execution and exceptions are maintained in the publishing reference. The action may be downloading an app, visiting a website, reading documentation or another verified product-specific route. Profile identity remains distinct from a single product.
+The default description/comment package applies to TikTok, YouTube, Instagram and Threads; its exact execution and exceptions are maintained in the publishing reference. Threads uses a post body and an author reply under that post, with client-specific cover, music and link checks. The action may be downloading an app, visiting a website, reading documentation or another verified product-specific route. Profile identity remains distinct from a single product.
 
 Narration-free recordings use authored explanations rather than invented speech transcripts, with suitable licensed background music by default. Preserve an explicit silent choice and meaningful source audio. Select and listen to an actual track, record its source and rights, and verify audible playback separately for each platform. Platform-library music is not automatically licensed for cross-platform reuse. AI narration is optional. The timeline template uses source and output timestamps so captions can follow cuts and speed changes; it is not a renderer. SRT/VTT carries timed text, while layout and style remain in the render/editor configuration.
 

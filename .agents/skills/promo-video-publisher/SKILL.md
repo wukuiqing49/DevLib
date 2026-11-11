@@ -28,7 +28,7 @@ For a focused edit, do not automatically restart keyword research, create more v
 
 Use authorization already established in the current conversation. Publishing does not itself authorize paid promotion, private messages, profile changes, account switching, deleting/hiding posts or replacement uploads. Prepare a concrete proposed result before requesting any genuinely missing authorization. A request to edit this skill does not authorize online changes.
 
-The default content package for TikTok, YouTube and Instagram includes both a video description and an early author comment with product identity and the real destination URL. Prepare both; execute comment posting only within the session's authorized scope. Preserve the user's established request for both placements without asking again per platform. Detailed execution and exceptions belong in [publishing](references/publishing.md).
+The default content package for TikTok, YouTube, Instagram and Threads includes both a description/post body and an early author comment/reply with product identity and the real destination URL. Prepare both; execute comment/reply posting only within the session's authorized scope. Preserve the user's established request for both placements without asking again per platform. Detailed execution and exceptions belong in [publishing](references/publishing.md).
 
 ## Workflow
 

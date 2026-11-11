@@ -5,6 +5,7 @@
 - [YouTube and Shorts](platforms/youtube.md)
 - [TikTok](platforms/tiktok.md)
 - [Instagram and Reels](platforms/instagram.md)
+- [Threads](platforms/threads.md)
 
 For other platforms, discover the actual fields and capabilities using current official sources and the visible client. Platform references are operational prompts, not permanent guarantees. Record the date, source and relevant account/client observation when verifying a changeable capability.
 
@@ -18,7 +19,7 @@ Check audience, visibility, language and applicable promotional-content declarat
 
 ## Description and author comment
 
-For TikTok, YouTube and Instagram, prepare both a description and an early author comment unless the user overrides that default. Both identify the product and contain the real destination URL for the primary action. Use download, visit, documentation or other wording appropriate to the product. Add an accurate search route when a clickable link is unavailable.
+For TikTok, YouTube, Instagram and Threads, prepare both a description/post body and an early author comment/reply unless the user overrides that default. Both identify the product and contain the real destination URL for the primary action. Use download, visit, documentation or other wording appropriate to the product. Add an accurate search route when a clickable link is unavailable. On Threads the second placement is a reply to the confirmed original post, not a separate top-level promotional post.
 
 Post comments only within the authorized scope. Reuse an explicit request for both placements across the named platforms without asking again. After a new post is confirmed, promptly add the prepared author comment; for an existing post, inspect and reuse or edit its author comment before creating another. Existing viewer comments mean the author comment may not be chronologically first; never delete others' comments or claim a fixed ranking.
 

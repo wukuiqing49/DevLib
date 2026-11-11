@@ -17,4 +17,4 @@ Use `.agents/workflows/publish-promo-video.md`. Fill only information not alread
 - Measurement needs and requested mobile/desktop verification:
 - Campaign directory or existing status record:
 
-Default TikTok, YouTube and Instagram content packages include a description and an early author comment, each naming the product and real target URL. Use the skill's scope and publishing rules to determine which actions are authorized. Do not require the user to fill this entire form or repeat an established decision.
+Default TikTok, YouTube, Instagram and Threads content packages include a description/post body and an early author comment/reply, each naming the product and real target URL. On Threads, the author reply belongs under the original post. Use the skill's scope and publishing rules to determine which actions are authorized. Do not require the user to fill this entire form or repeat an established decision.
