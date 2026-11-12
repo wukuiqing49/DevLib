@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-12",
+  "scope": "user-authorized minimum SDK upgrade and window modernization",
+  "minSdk": 23,
+  "androidxCore": "1.18.0",
+  "aarStyles": [
+    {
+      "entry": "res/values/values.xml",
+      "name": "_XPopup_TransparentDialog",
+      "parent": "Theme.AppCompat.Dialog",
+      "items": [
+        "android:windowNoTitle",
+        "android:windowFrame",
+        "android:windowBackground",
+        "android:windowContentOverlay",
+        "android:backgroundDimEnabled",
+        "android:windowIsFloating",
+        "android:windowIsTranslucent",
+        "android:colorBackground",
+        "android:colorBackgroundCacheHint",
+        "android:windowAnimationStyle"
+      ]
+    }
+  ],
+  "compiledWindowEntry": "WindowCompat.enableEdgeToEdge; no direct cutout assignment",
+  "largeScreenRestrictions": [],
+  "aarNativeLibraries": [],
+  "build": "success; 652 tasks, 38 executed, 614 up-to-date",
+  "tests": {
+    "core_base": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lib_xpopup": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "testExecution": "XPopup 10 rerun; Base 16 passed on same production inputs in prior invocation, final task up-to-date",
+  "newWindowTests": "API 23/28/35 and old target 34 on API 35",
+  "static": "strict workflow passed; UI/i18n zero warnings; architecture 33 warnings and build two outdated theme-color suggestions",
+  "sourceAudit": "eight unchanged historical method documentation gaps; changed declarations and new test have Chinese KDoc",
+  "sha256": {
+    "README.md": "ee14796d4358490508cefe41c668688995012d46c99a9b91ec4f11caae584eea",
+    "app/src/main/res/values/themes.xml": "07c8f17c4397c9dff887da882a26a2639e0f50a955bab6c139c34eba84837282",
+    "core/architecture/lib_xpopup/README.md": "5729a606e51940fb102ec0631afd5bdc12536d78f2b7f24cffd0faebfb0b3ccb",
+    "core/architecture/lib_xpopup/build.gradle": "59e14c64402f8b825f6ff5f50c22185a5d235ab20dae850180361a20909b2776",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt": "5ac1581cce7546bfcbb5ff6d11139b273f3a3bc6c95be5c5023201c33f010c4b",
+    "core/architecture/lib_xpopup/src/main/res/values/styles.xml": "eabcb416c7b8baa649f936b00b2fad55e5c979e77daaccaeb58a161734715f28",
+    "core/architecture/lib_xpopup/src/test/kotlin/com/lxj/xpopup/core/FullScreenDialogWindowTest.kt": "30cfbe10c6bce490d27c7e42d49ce0ec519bd3d2d8908a74e65956c3cb978364",
+    "gradle/catalogs/integrationLibs.versions.toml": "4c7d79797eed885e2f8c06c5ee357a096f3edb6b1ac7bff758280989a7dd3f2d",
+    "app/build/outputs/apk/debug/app-debug.apk": "c13e009b4365b956ef45da7a592f72bc85d3f4afb2b9873e7078cc94bfbab573",
+    "core/architecture/lib_xpopup/build/outputs/aar/lib_xpopup-release.aar": "ef6def4a3030fa38e332f585a96b9facb455bad76852c4dedb79cfbd606de18e"
+  },
+  "notVerified": [
+    "device/visual tests excluded",
+    "API 36/37 runtime not verified",
+    "signed App Release/R8 and external consumer projects not executed",
+    "Play upload/scanning not executed; AndroidX/AppCompat compatibility references remain"
+  ],
+  "baselineAdvanced": false
+}

@@ -6,7 +6,7 @@
 
 - 分类：架构基础库；来源：XPopup。
 - 物理目录：`core/architecture/lib_xpopup`；Gradle 路径：`:core:lib_xpopup`。
-- Android AAR；模块声明 minSdk 21，compileSdk 37；JVM target 1.8。这是模块声明值，实际消费下限还受传递依赖与 Manifest 合并约束。
+- Android AAR；模块声明 minSdk 23，compileSdk 37；JVM target 1.8。AndroidX Core 采用 1.18.0，实际消费下限还受其他传递依赖与 Manifest 合并约束。
 - 本仓模块依赖：无其他 core 模块依赖。
 
 ## 主要入口与调用流程
@@ -22,8 +22,15 @@
 - 独立 Dialog 使用兼容窗口控制器管理系统栏；再次显示或恢复焦点时重建自身策略，失去焦点时不改写状态。
 - 默认 Auto 策略的全屏/抽屉前景避让桌面标题栏；SafeArea 模式按系统栏与刘海最大值避让，键盘移动仍由原键盘处理器负责。
 - 显式 EdgeToEdge 模式保持不自动加间距，由宿主保护关闭按钮、刘海和桌面窗口控件，背景与触摸层可铺满。
-- minSdk 21 声明及低版本兼容路径保留，未为新入口强制提升 AndroidX Core 到要求更高 minSdk 的版本。实际宿主下限仍取决于全部传递依赖。
+- 按用户授权将 minSdk 从 21 提升到 23，以使用 AndroidX Core 1.18.0 的现代窗口兼容入口；消费宿主需支持 API 23+，不再支持 API 21/22。
 - 普通页面不要为“沉浸式”隐藏导航；仅媒体预览等全屏内容使用隐藏策略。运行及视觉验证边界见测试报告。
+
+### Android 15+ 主题与 Play 提示
+
+- `_XPopup_TransparentDialog` 不再声明已弃用的 `statusBarColor` / `navigationBarColor`；移除 Legacy 与分版本主题，统一调用 `WindowCompat.enableEdgeToEdge(window)`。
+- API 23+ 及 Android 15+ 上的旧 target 宿主均由 AndroidX 设置透明系统栏、刘海与对比度，不再手写版本分支；API 35+ 继续处理平台强制边到边。
+- 系统栏背景继续由已有 `ProtectionLayout` / `ColorProtection` 绘制；前景安全区、键盘、桌面标题栏及焦点恢复沿用现有处理，不重复叠加 Insets。
+- AndroidX、AppCompat 或其他 SDK 内部仍可能包含兼容旧系统的 API/属性。以上调整不代表最终 APK/AAB 中完全没有废弃引用，也不保证 Play 提示消失；须核对上传产物和控制台具体调用列表。
 
 ## 接入
 

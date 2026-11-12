@@ -146,7 +146,7 @@ samples/published-consumer/  发布产物独立消费示例
 core 不依赖 app/feature。宿主负责账号、商品、凭据、服务器、权限解释、后台生命周期与付费策略。各库职责和限制见模块 README，例如 `core_usb` 通过 SAF 访问授权目录，不提供 USB 文件系统驱动。
 
 
-根工具链：JDK 17、Gradle 9.3.1、AGP 9.1.1、Kotlin 2.2.10；工作台 minSdk 26、compileSdk/targetSdk 37。各库的声明下限和 JVM target 见自己的 README 与 build.gradle，**不能把 App 配置当成所有库配置**：例如 XPopup 保留 compileSdk 36 / minSdk 21 / JVM target 1.8。实际消费下限还需考虑传递依赖。
+根工具链：JDK 17、Gradle 9.3.1、AGP 9.1.1、Kotlin 2.2.10；工作台 minSdk 26、compileSdk/targetSdk 37。各库的声明下限和 JVM target 见自己的 README 与 build.gradle，**不能把 App 配置当成所有库配置**：例如 XPopup 使用 compileSdk 37 / minSdk 23 / JVM target 1.8。实际消费下限还需考虑传递依赖。
 
 ```powershell
 .\gradlew.bat :app:assembleDebug

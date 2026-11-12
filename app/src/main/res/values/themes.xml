@@ -33,7 +33,6 @@
         <!-- 初始图标明暗跟随资源主题，运行期继续交由 Base 的 WindowInsetsController 统一处理。 -->
         <item name="android:windowLightStatusBar">@bool/dev_light_system_bars</item>
         <item name="android:windowLightNavigationBar">@bool/dev_light_system_bars</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- 系统栏透明与低版本兼容统一由 Base 的 enableEdgeToEdge 配置。 -->
     </style>
 </resources>

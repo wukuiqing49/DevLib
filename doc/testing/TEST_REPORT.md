@@ -1,3 +1,31 @@
+# 2026-11-12 Play 窗口兼容与最低版本升级
+
+用户授权必要的最低版本升级后，最终采用统一现代窗口入口；先前保留 Legacy 主题的中间方案已被替换。当前 DevLib 源码、本地构建和自动测试完成，设备/视觉及 Play 产物验收未完成。
+
+| 用例 | 结果与证据 |
+| --- | --- |
+| WINDOW-THEME | 本次通过：XPopup minSdk 21 → 23、AndroidX Core 1.16.0 → 1.18.0；统一 WindowCompat.enableEdgeToEdge，移除手写 cutout/对比度分支与 Legacy/分版本主题，工作台及 XPopup 主题均移除本仓显式废弃系统栏颜色项。公开 API、包名和版本不变，宿主须支持 API 23+。 |
+| WINDOW-INSETS | 本次通过：XPopup 10 项、Base 16 项，零失败/错误/跳过。新增 4 项窗口初始化用例覆盖 API 23/28/35、API 35 上 target 34 宿主的透明系统栏及刘海/对比度；现有安全区和键盘回归继续使用。XPopup 最终 Test 重新执行；Base 在同一生产输入的前次调用已通过，最终任务 up-to-date，未称强制重跑。 |
+| WINDOW-BUILD | 本次通过：App Debug、XPopup Release AAR、发布 POM 生成成功，652 任务、38 执行、614 up-to-date。检查 AAR minSdk 23、Core 1.18.0 POM、唯一透明主题无本仓显式颜色项，编译类调用 enableEdgeToEdge 且没有直接 cutout 赋值。Release AAR 不含 .so，无 native 改动。 |
+| WINDOW-LARGE | 本次静态通过：main Manifest 与当前 Debug 合并清单无固定方向、禁止缩放、宽高比限制，源码未发现动态方向锁定。未把无限制等同于实际大屏布局验收通过。 |
+| WINDOW-RUNTIME | 排除：未执行 adb、安装、设备截图或视觉检查；API 23/28/35 沙箱不等于实际系统画面、导航模式、旋转、分屏或 API 36/37 运行通过。 |
+| WINDOW-PLAY | 未执行：本地无 keystore.properties，App 要求正式签名，未绕过要求运行签名 Release/R8；未更新外部消费应用、上传或复核 Play 提示。AndroidX/AppCompat 仍有兼容 API/属性，不能保证产物没有废弃引用。 |
+
+验证命令：
+
+```powershell
+.\gradlew.bat :core:lib_xpopup:testDebugUnitTest :core:core_base:testDebugUnitTest :app:assembleDebug :core:lib_xpopup:assembleRelease :core:lib_xpopup:generatePomFileForReleasePublication --max-workers=2 --console=plain
+python -B .agents/scripts/validate_android_workflows.py --project-root . --skip-figma --strict-i18n
+```
+
+严格工作流及 Agent 结构通过；UI/国际化零警告，架构脚本另有 33 条提示，构建脚本有两项要求保留主题旧颜色属性的建议，未为消除建议恢复废弃配置。整文件源码审计退出码 1，八个未修改历史方法缺少中文注释；本次修改声明与新测试已有中文 KDoc。新增测试首次因使用 Application 而非 XPopup 要求的 Activity Context 失败，改为可销毁的真实测试 Activity 后重新执行全部 XPopup 测试通过；失败尝试不作为通过证据。
+
+实现继续复用 Base、ProtectionLayout、安全区、IME 与焦点恢复，不另建框架；无新增可见文案，无翻译或视觉重设计，设计交接不适用。所用 Skills：android-ui-workflow、android-build-workflow、android-project-architecture-workflow、android-functional-test-workflow、engineering-review、acceptance-review。单智能体工程自查，未提交、推送、远端发布或调整 CI；未推进设备或全功能基线。
+
+证据：[最终产物、测试、依赖与源码指纹](evidence/2026-11-12-window-modernization/summary.json)。本地日志：`build/edge-to-edge-validation.log`、`build/edge-to-edge-static.log`、`build/edge-to-edge-source-audit.json`。先前中间状态证据已标记 superseded，不代表最终源码。以下保留历史报告。
+
+---
+
 # 2026-10-31 全部库强制重测补充
 
 按用户要求补测未修改的库。19 个模块中，17 个有测试的模块实际重新执行，无测试任务使用 up-to-date/缓存；core_router_annotation、core_router_api 为 NO-SOURCE，不计通过。JUnit 共 338 项，337 通过、1 跳过、0 失败/错误。编译等前置任务允许缓存；最终 Gradle 327 任务、17 执行、310 up-to-date。

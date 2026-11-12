@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-12",
+  "build": "success; 644 tasks, 73 executed, 571 up-to-date",
+  "tests": {
+    "core_base": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lib_xpopup": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "largeScreenRestrictions": [],
+  "aarStyles": [
+    {
+      "entry": "res/values/values.xml",
+      "name": "_XPopup_TransparentDialog",
+      "parent": "_XPopup_TransparentDialogLegacy",
+      "items": []
+    },
+    {
+      "entry": "res/values/values.xml",
+      "name": "_XPopup_TransparentDialogBase",
+      "parent": "Theme.AppCompat.Dialog",
+      "items": [
+        "android:windowNoTitle",
+        "android:windowFrame",
+        "android:windowBackground",
+        "android:windowContentOverlay",
+        "android:backgroundDimEnabled",
+        "android:windowIsFloating",
+        "android:windowIsTranslucent",
+        "android:colorBackground",
+        "android:colorBackgroundCacheHint",
+        "android:windowAnimationStyle"
+      ]
+    },
+    {
+      "entry": "res/values/values.xml",
+      "name": "_XPopup_TransparentDialogLegacy",
+      "parent": "_XPopup_TransparentDialogBase",
+      "items": [
+        "android:statusBarColor",
+        "android:navigationBarColor"
+      ]
+    },
+    {
+      "entry": "res/values-v35/values-v35.xml",
+      "name": "_XPopup_TransparentDialog",
+      "parent": "_XPopup_TransparentDialogBase",
+      "items": []
+    }
+  ],
+  "aarNativeLibraries": [],
+  "publishedCoreDependency": "1.16.0",
+  "sourceAudit": "modified class and onCreate have Chinese KDoc; eight unchanged historical method doc findings remain",
+  "staticWorkflow": "passed; UI/i18n zero warnings, architecture 33 warnings, build two theme-color suggestions; whole-file source audit exit 1 for eight unchanged historical documentation gaps",
+  "sha256": {
+    "app/src/main/res/values/themes.xml": "07c8f17c4397c9dff887da882a26a2639e0f50a955bab6c139c34eba84837282",
+    "core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt": "41cc642507f70665ae6ba272c6ff281d37e4fd659db6fbe8e27a369defb0030c",
+    "core/architecture/lib_xpopup/src/main/res/values/styles.xml": "4c92f6e845d05583dd6684bf561bb6922ca2a0e56a6b62d0f6612f800055e275",
+    "core/architecture/lib_xpopup/src/main/res/values-v35/styles.xml": "96c1479cf58090d6ad4e4362798da39f55c73830bcf95d239aed94b2fbcd7a26",
+    "app/build/outputs/apk/debug/app-debug.apk": "54db66983dc4f63ccaf9bdc9f586d8076918a7c017ac274c0dcc5bb9ea735fad",
+    "core/architecture/lib_xpopup/build/outputs/aar/lib_xpopup-release.aar": "ac3da5bcdfb8de9eb8fc0457bfa00036d517fbeb374a8d94580628a22b6fa44c"
+  },
+  "notVerified": [
+    "device and visual tests excluded",
+    "signed App Release/R8 not executed; release signing required and not configured locally",
+    "Play upload/scanning and external consumer updates not executed",
+    "AndroidX/AppCompat internal deprecated compatibility references not eliminated"
+  ],
+  "baselineAdvanced": false,
+  "supersededBy": "../2026-11-12-window-modernization/summary.json",
+  "status": "historical intermediate state before user authorized minSdk upgrade"
+}

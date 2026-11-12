@@ -25,11 +25,13 @@ import com.lxj.xpopup.util.XPermission
 import com.lxj.xpopup.util.XPopupUtils.context2Activity
 
 /**
- * 弹窗的宿主
+ * XPopup 独立窗口宿主，统一管理边到边、系统栏保护层与弹窗生命周期。
+ * 通过 AndroidX 统一配置 API 23+ 的透明系统栏、刘海与对比度，不依赖旧主题着色属性。
  */
 class FullScreenDialog(context: Context) : Dialog(context, R.style._XPopup_TransparentDialog) {
     private val hostActivity = context2Activity(context)
 
+    /** 创建独立弹窗窗口，由 AndroidX 兼容系统栏透明与刘海模式，再安装前景及背景保护层。 */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (getWindow() == null || contentView == null || contentView!!.popupInfo == null) return
@@ -59,19 +61,8 @@ class FullScreenDialog(context: Context) : Dialog(context, R.style._XPopup_Trans
             WindowManager.LayoutParams.MATCH_PARENT,
             WindowManager.LayoutParams.MATCH_PARENT
         )
-        WindowCompat.setDecorFitsSystemWindows(getWindow()!!, false)
-        if (Build.VERSION.SDK_INT >= 30) {
-            getWindow()!!.attributes.layoutInDisplayCutoutMode =
-                WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_ALWAYS
-        } else if (Build.VERSION.SDK_INT >= 28) {
-            getWindow()!!.attributes.layoutInDisplayCutoutMode =
-                WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
-        }
+        WindowCompat.enableEdgeToEdge(getWindow()!!)
         getWindow()!!.setBackgroundDrawable(null)
-
-        if (Build.VERSION.SDK_INT >= 29) {
-            getWindow()!!.isNavigationBarContrastEnforced = false
-        }
 
         if (!contentView!!.popupInfo!!.isRequestFocus) { //不获取焦点
             var flag = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE

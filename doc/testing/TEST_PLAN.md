@@ -1,3 +1,18 @@
+# Play 窗口兼容提示优化（2026-11-12）
+
+范围为当前 DevLib 工作台与 XPopup，核对边到边、废弃系统栏颜色项及大屏方向/尺寸限制；不是外部应用 1.0.6 的产物验收。复用 Base Insets、XPopup ProtectionLayout 和焦点恢复；用户已授权 XPopup minSdk 从 21 升到 23，Core 升到 1.18.0，公开 API 保持不变。
+
+| ID | 关联与预期 | 方法 |
+| --- | --- | --- |
+| WINDOW-THEME | 工作台由 Base 配置透明栏；XPopup 统一由 WindowCompat.enableEdgeToEdge 配置，无 Legacy 或废弃主题颜色项，API 35 旧 target 宿主仍透明 | 源码与编译类审查、API 23/28/35 Robolectric 窗口测试、Release AAR 主题/minSdk 检查、独立 POM Core 1.18.0 核对 |
+| WINDOW-INSETS | Base 与 XPopup 的刘海、标题栏、重复分发及 IME 计算不退化 | 两模块 testDebugUnitTest；其中 API 35 Robolectric 不等同设备验收 |
+| WINDOW-BUILD | 工作台资源集成与独立库 Release 产物可生成 | app assembleDebug、lib_xpopup assembleRelease、generatePomFileForReleasePublication |
+| WINDOW-LARGE | 源码与本次 Debug 合并清单无固定方向、禁止缩放或宽高比限制 | Manifest 扫描及动态方向设置源码搜索 |
+| WINDOW-RUNTIME | API 23/26/35/36/37、手势/三键、深浅色、键盘、横屏、平板、分屏、全屏开关、旋转与旧 target 宿主窗口行为 | API 23/28/35 窗口初始化为 Robolectric 自动验证；设备操作按执行策略排除，真实画面与 API 36/37 运行保留未验证 |
+| WINDOW-PLAY | 签名 Release/R8、外部消费更新与 Play 提示复核 | 本轮未执行，不宣称控制台提示消失 |
+
+---
+
 # 全部库 API 37 与沉浸式（2026-10-31）
 
 用户要求全部库适配 API 37 并处理沉浸式。范围为 DevLib 的 16 个 Android 库、3 个 JVM 路由工具及工作台集成；不修改外部 DropLAN，不进行远端发布或设备操作。保留公开 API、各库 minSdk 与 JVM 工具模块边界，不为了升级 SDK 批量升级无关三方依赖。
