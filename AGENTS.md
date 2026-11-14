@@ -55,6 +55,7 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 | Zeplin Android 还原 | `.agents/skills/zeplin-android-layer-implementation/SKILL.md` |
 | Google Play 素材 | `.agents/workflows/prepare-play-assets.md` |
 | 明确要求的 DevHub 基础统计接入 | `.agents/skills/devhub-basic-integration/SKILL.md` |
+| DevHub 推送配置、通知小图标、内置网页与 JS 交互 | `.agents/skills/devhub-push-web-integration/SKILL.md` |
 | 逐项目 Google Play 数据分析与 ASO 文案优化 | `.agents/skills/google-play-aso/SKILL.md` |
 | 明确指定的 DropLAN 历史专项 | `.agents/workflows/audit-droplan.md` |
 
