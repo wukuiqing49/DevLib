@@ -1,6 +1,6 @@
 # 配置、发送与诊断
 
-以下协议核对于 2026-11-14，先核对目标 DevHub `docs/push-integration.md`、存在时的 `docs/push-center.md`、服务端 push/users 服务与 SDK 源码；旧项目推送页和新版全局推送中心不能混用操作路径。官方行为参考 [FCM 接收消息](https://firebase.google.com/docs/cloud-messaging/android/receive-messages)、[HTTP v1](https://firebase.google.com/docs/cloud-messaging/send/v1-api)、[通知创建](https://developer.android.com/develop/ui/views/notifications/build-notification)。版本变更需重新核对。
+本文历史核对日期为 2026-11-14，但未附可复核的版本快照，不能据此视为当前已验证。执行前先核对目标 DevHub `docs/push-integration.md`、存在时的 `docs/push-center.md`、服务端 push/users 服务与 SDK 源码；旧项目推送页和新版全局推送中心不能混用操作路径。官方行为参考 [FCM 接收消息](https://firebase.google.com/docs/cloud-messaging/android/receive-messages)、[HTTP v1](https://firebase.google.com/docs/cloud-messaging/send/v1-api)、[通知创建](https://developer.android.com/develop/ui/views/notifications/build-notification)。版本变更需重新核对。
 
 ## 配置顺序
 
@@ -61,3 +61,19 @@ notification + data 中 data 全为字符串，版本1的点击字段：
 | unknown/网络结果不明 | 先核对原任务与设备，禁止盲目重发 |
 
 保存配置、配置格式正确、发送权限有效、手机实际收到是四个不同结果。CMS 不显示密钥/Token，服务端错误脱敏；本地测试使用 mock 时必须说明。
+
+## 版本追溯记录
+
+接入或复测时在目标项目现有报告中追加下表；读取真实源码/部署信息后填写，不用日期代替版本证据。无法取得时标记未知及受影响项目，不宣称接口已验证。
+
+| 对象 | 应记录的证据 |
+| --- | --- |
+| Android 宿主 | 仓库标识、commit、相关未提交差异、构建变体与 applicationId |
+| DevHub SDK | 实际解析依赖版本/不可变 commit、updatePushRegistration 签名、权限枚举来源 |
+| API Worker | 源码 commit、部署版本/环境、push/users 路径和协议定义 |
+| CMS Pages | 源码 commit、实际部署版本、页面清洗与 CSP 配置来源 |
+| 数据库 | 当前迁移状态及待执行项；文中的历史编号仅供定位 |
+| Web 桥 | 宿主及 H5 客户端版本、动作契约、精确 origin 白名单 |
+| 验证记录 | 本轮日期、脱敏目标设备、requestId、各阶段证据及未验证项 |
+
+本地源码与线上版本不一致时，先标明差异并按实际部署版本核对；不根据本地接口自动修改线上配置。记录配置名称和来源，不保存私钥、Token、用户身份或真实凭据。

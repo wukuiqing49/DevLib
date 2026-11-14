@@ -69,6 +69,7 @@
 - `skills/google-play-aso/`：默认核对 Skill 所属项目代码和发行包，使用内置 Python 数据引擎，逐 App 输出数据分析与 ASO 优化方案；支持 .agents/.agent，不依赖外部工具工程或网页，不复制凭据。
 - `skills/project-official-website/`：从实际项目代码、文档和真实资源提取产品事实，创建官网并执行本地验证；包含事实/文件归属记录、静态校验脚本和回归用例，不自动部署或创建 CI。
 - `skills/promo-video-publisher/`：项目分析、实时关键词研究、镜头规划、英文素材、TikTok/YouTube/Instagram 项目关联与下载路径、来源追踪规划，以及手机或网页发布核验；完整使用说明见 [推广视频指南](../doc/promo-video-publisher.md)。
+- `skills/ai-video-generation/`：跨平台通用 AI 视频生成流水线，负责分镜规划、角色与产品一致性控制、结构化提示词工程、预算授权与任务追踪、质检决策、按需尾帧提取以及多镜头规范化拼接交付。
 
 - `skills/android-functional-test-workflow/`：跨项目的改动影响分析、增量/发布回归与固定测试报告，默认输出 `doc/testing/TEST_REPORT.md`。
 - `skills/android-project-scaffold-workflow/`：完整项目生成器、模板和生成测试。

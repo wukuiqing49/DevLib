@@ -14,6 +14,8 @@ description: 为 Android 宿主配置 DevHub 与 FCM 推送、通知图标和点
 - 核对 minSdk、Firebase BOM、SDK/API 版本及版本目录。依赖支持推送登记的正式版或不可变提交，不复制其他 App 的版本、App ID、包名、Google Client ID、Topic 或域名。
 - 配置和发送读 [配置与诊断](references/configuration.md)；WebView、沉浸式、H5/原生协议读 [内置页面与 JS](references/web-js.md)。引用的源码路径相对找到的目标仓库，不依赖某台电脑的绝对路径。
 
+版本相关 API、迁移编号和示例协议必须按 [版本追溯记录](references/configuration.md#版本追溯记录) 关联实际源码与部署版本；历史核对日期不代表本轮已验证。
+
 ## Android 接入
 
 1. 沿用现有 Firebase 项目配置、Application 和 FirebaseMessagingService。启动主动读取当前 Token，也处理 onNewToken；登录/切换身份和退出分别沿用 identifyGoogle / clearIdentity。定向推送查询当前设备关联，不能用历史安装关系代替。
@@ -34,3 +36,5 @@ description: 为 Android 宿主配置 DevHub 与 FCM 推送、通知图标和点
 报告列出实际修改文件、配置名称、源码/构建来源、脱敏证据、失败/受阻及未测项；有固定测试报告的项目合并现有记录，历史通过不冒充本轮通过。资源编译不等于视觉通过，mock 不等于线上联调，FCM accepted 不等于送达，打开会员页不等于付款成功。
 
 凭据不进入 APK、H5、Skill、Git 或日志。执行配置、部署、发送和 Git 提交均按用户当前授权；安装/同步 Skill 不自动授权部署或创建 CI。保持自动发现，不增加无依据的审批步骤。
+
+维护和接入验收使用 [行为案例](references/evaluation-cases.md)，按影响选择场景，区分静态检查、mock 和真实设备/服务端证据。

@@ -40,6 +40,7 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 | 功能交付、复杂修复及需求验收 | `.agents/skills/acceptance-review/SKILL.md` |
 | 根据项目代码与资源创建官网 | `.agents/skills/project-official-website/SKILL.md` |
 | 项目推广视频、英文封面/简介/话题/字幕、手机录制与平台发布 | `.agents/workflows/publish-promo-video.md` |
+| AI 视频分镜生成、角色/场景一致性、预算管理与剪辑拼接 | `.agents/skills/ai-video-generation/SKILL.md` |
 | Android 工程生成 | `.agents/workflows/create-project.md` |
 | Android 模块与共享能力 | `.agents/workflows/change-architecture.md` |
 | Android 功能开发与优化（统一入口） | `.agents/workflows/develop-feature.md` |
