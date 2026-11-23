@@ -95,6 +95,6 @@ LogReport.show(activity) 打开模块自带的独立页面，包含用途说明�
 
 本地发布：./gradlew.bat :core:core_log_report:publishReleasePublicationToDevLibLocalRepository。产物在 build/repo；该命令不上传远端。
 
-JitPack：根 jitpack.yml 同时安装日志库、Base、XPopup 和原有网络库，通过 `-PdevlibJitpackVersion="$VERSION"` 统一发布版本与传递依赖。远端构建成功后使用 `com.github.wukuiqing49.DevLib:core-log-report:<固定tag或提交号>`。普通本地发布仍使用上文 com.wkq.dev 坐标；已有 Base 源码的宿主还须排除 JitPack 坐标下的 core-base。当前配置仅在本地验证，尚未推送或证明远端版本可下载。
+JitPack：根 jitpack.yml 同时安装日志库、Base、XPopup 和原有网络库，通过 `-PdevlibJitpackVersion="$VERSION"` 统一发布版本与传递依赖。远端构建成功后使用 `com.github.wukuiqing49.DevLib:core-log-report:<固定tag或提交号>`。普通本地发布仍使用上文 com.wkq.dev 坐标；已有 Base 源码的宿主还须排除 JitPack 坐标下的 core-base。2026-11-23 已推送并完成 JitPack 远端构建，固定版本 ab3007e14b（来源 ab3007e14b9ff666684ab6bd8d928595b3039e14）。构建 API 返回 ok，模块 AAR/POM/metadata 已发布；LensDock 实际在线消费后 APK 构建和 475 项 JVM 测试通过。入口：https://jitpack.io/#wukuiqing49/DevLib/ab3007e14b 。真机验证不在此次发布结论内。
 日志桥接：ALog.reportSink = { tag, message -> LogReport.event("logcat", "$tag: $message") }，由宿主配置；Utils 不反向依赖本库。业务完成状态仍由宿主按真实结果调用 operation/event。
 工作台入口：功能 → 文件 → 日志上报。安装不自动开启采集。原生符号工具在本库 scripts/，README 中 LensDock 原始命令为来源示例，使用时替换成当前目录与实际符号路径。
