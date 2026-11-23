@@ -46,7 +46,7 @@ publishing.repositories {
 
 afterEvaluate {
     publishing.publications.named('release', MavenPublication) {
-        version = publishVersion
+        version = providers.gradleProperty('devlibJitpackVersion').getOrElse(publishVersion)
         pom {
             name = 'DevLib core_network'
             description = 'Retrofit、OkHttp、协程与统一网络结果；源自 AndroidCoreNetwork。'
