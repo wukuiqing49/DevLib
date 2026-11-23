@@ -34,6 +34,8 @@ class ResourceValidationTest(unittest.TestCase):
         self.assertEqual(placeholders('%2$s %s %<s'), placeholders('%2$s %1$s %1$s'))
 
     def test_resource_qualifiers(self):
+        self.assertEqual(resource_configuration(Path('values-in')), ('id', ()))
+        self.assertEqual(resource_configuration(Path('values-in-rID-night')), ('id-ID', ('night',)))
         self.assertEqual(resource_configuration(Path('values-car')), ('', ('car',)))
         self.assertEqual(resource_configuration(Path('values-en-night')), ('en', ('night',)))
         self.assertEqual(resource_configuration(Path('values-mcc310-en-rUS-night-v31')), ('en-US', ('mcc310', 'night', 'v31')))

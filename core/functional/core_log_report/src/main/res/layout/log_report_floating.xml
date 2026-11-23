@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/log_report_floating" android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="center_vertical" android:minHeight="48dp"
+    android:paddingStart="12dp" android:paddingEnd="12dp" android:paddingTop="10dp" android:paddingBottom="10dp"
+    android:background="@drawable/log_report_floating_background" android:elevation="8dp"
+    android:foreground="?android:attr/selectableItemBackground" android:clipToOutline="true" android:clickable="true" android:focusable="true" android:importantForAccessibility="yes">
+    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_marginEnd="8dp"
+        android:src="@drawable/log_report_floating_icon" android:importantForAccessibility="no" />
+    <TextView android:id="@+id/log_report_floating_status" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textColor="@color/log_report_floating_text" android:textSize="13sp" android:maxLines="2"
+        android:ellipsize="end" android:importantForAccessibility="no" />
+</LinearLayout>

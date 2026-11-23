@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/log_report_page_background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:gravity="center_vertical" android:paddingHorizontal="8dp">
+        <ImageButton android:id="@+id/report_back" android:layout_width="48dp" android:layout_height="48dp" android:padding="12dp" android:src="@drawable/ic_log_report_arrow_back" app:tint="@color/log_report_page_text" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/log_report_back"/>
+        <TextView style="@style/LogReportHeading" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/log_report_detail_title"/>
+    </LinearLayout>
+    <ScrollView android:id="@+id/report_detail_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:scrollbars="none">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <TextView android:id="@+id/report_detail_time" style="@style/LogReportHeading" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/report_detail_state" style="@style/LogReportBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+            <TextView android:id="@+id/report_detail_id" style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textIsSelectable="true"/>
+            <TextView android:id="@+id/report_attachment_size" style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+            <TextView style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/log_report_preview"/>
+            <ProgressBar android:id="@+id/report_detail_progress" android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp"/>
+            <TextView android:id="@+id/report_detail_error" style="@style/LogReportBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:accessibilityLiveRegion="polite"/>
+            <Button android:id="@+id/report_prepare_again" style="@style/LogReportAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/log_report_prepare_again" android:visibility="gone"/>
+            <Button android:id="@+id/report_share" style="@style/LogReportPrimaryAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/log_report_share"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:id="@+id/report_email" style="@style/LogReportAction" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/log_report_email"/>
+                <Button android:id="@+id/report_save" style="@style/LogReportAction" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/log_report_save"/>
+            </LinearLayout>
+            <TextView style="@style/LogReportHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/log_report_summary_title"/>
+            <TextView android:id="@+id/report_summary" style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:fontFamily="monospace" android:textSize="12sp" android:maxLines="12" android:ellipsize="end" android:textIsSelectable="true"/>
+            <Button android:id="@+id/report_summary_more" style="@style/LogReportAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/log_report_summary_more"/>
+            <Button android:id="@+id/report_delete" style="@style/LogReportAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/log_report_delete"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

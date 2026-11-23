@@ -6,5 +6,5 @@
         <activity android:name="com.wkq.dev.demo.files.NasActivity" android:exported="false" />
         <activity android:name="com.wkq.dev.demo.files.DropActivity" android:exported="false" />
         <activity android:name="com.wkq.dev.demo.files.UsbActivity" android:exported="false" />
-    </application>
+    <activity android:name="com.wkq.dev.demo.files.LogReportDemoActivity" android:exported="false" /></application>
 </manifest>

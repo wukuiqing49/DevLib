@@ -1,0 +1,10 @@
+<resources>
+    <color name="log_report_page_background">#F5F5F3</color>
+    <color name="log_report_page_surface">#FFFFFF</color>
+    <color name="log_report_page_text">#202326</color>
+    <color name="log_report_page_secondary">#60676E</color>
+    <color name="log_report_page_outline">#E3E5E2</color>
+    <color name="log_report_page_accent">#3568B0</color>
+    <color name="log_report_page_notice">#E8EFF8</color>
+    <color name="log_report_page_on_accent">#FFFFFF</color>
+</resources>

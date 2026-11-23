@@ -1,0 +1,5 @@
+<resources>
+    <string name="demo_log_report_title">日志上报</string>
+    <string name="demo_log_report_intro">用户主动开启本地收集，复现问题后结束并导出或分享。不会自动上传服务器。</string>
+    <string name="demo_log_report_open">打开日志管理</string>
+</resources>

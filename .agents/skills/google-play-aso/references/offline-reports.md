@@ -1,6 +1,6 @@
 # 离线报表
 
-用户提供导出 CSV 时使用内置 import_reports.py，只需 Python 标准库，不需要 Google SDK 或认证。
+用户提供符合下列字段的 Play Console 导出 CSV 时使用内置 import_reports.py，只需 Python 标准库，不需要 Google SDK 或认证。Google Ads Keyword Planner 导出不适用此导入器，应按其实际编码、分隔符及报表头单独读取并保留来源口径；项目已有资料见项目根目录 `doc/aso/README.md`（存在时读取）。
 
 ```powershell
 python -X utf8 -B .agents/skills/google-play-aso/scripts/import_reports.py --app com.example.product --kind installs --csv <用户提供的CSV> --days 30 --end-date 2026-10-30

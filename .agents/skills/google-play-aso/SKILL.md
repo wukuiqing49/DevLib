@@ -9,6 +9,8 @@ description: 分析本 Skill 所在项目的真实代码与资源，使用内置
 
 ## 工作流程
 
+项目内已有关键词资料时，先读取目标项目根目录的 `doc/aso/README.md`（存在时）及对应来源说明，复用已有材料。Google Ads Keyword Planner 报表可用于关键词与简介研究，但不是 Play Console 搜索词报表，不能传给 `import_reports.py --kind search`。只使用目标项目自己的资料，路径不存在则按正常取证流程继续，不跨项目借用数据。
+
 1. **定位所属项目。** 默认以当前 Skill 路径向上找到 `.agents` 或 `.agent`，其父目录就是目标项目，不使用任意终端 cwd。用户指定其他项目时使用 `--project`。多个项目逐个执行，不扫描整台电脑或账号内全部 App。
 2. **核实真实能力。** 先运行 [统一入口](scripts/run_connector.py) 的 `inspect`，再读取所属项目的 AGENTS、档案、README、实际页面入口、业务实现和资源。静态索引不代替代码分析；区分已实现、演示、计划和未验收能力，记录源码位置、提交与工作区状态。
 3. **确认发行身份。** `inspect` 的 applicationId 只是候选。结合 Gradle 变量、flavor、suffix 和发行变体确认最终包名；不能使用 namespace 或模块目录猜测。明确包名后直接用 `--app`，或写入所属项目的非秘密配置供后续使用。仅在无法确定映射时询问缺失项；内部库不是独立上架 App。

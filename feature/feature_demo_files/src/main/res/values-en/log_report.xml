@@ -1,0 +1,5 @@
+<resources>
+    <string name="demo_log_report_title">Log reports</string>
+    <string name="demo_log_report_intro">Start local collection explicitly, reproduce an issue, then stop and export or share. No automatic server upload.</string>
+    <string name="demo_log_report_open">Open log reports</string>
+</resources>

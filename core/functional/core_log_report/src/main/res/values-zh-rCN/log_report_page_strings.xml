@@ -1,0 +1,33 @@
+<resources>
+    <string name="log_report_intro_title">复现问题，保留排查线索</string>
+    <string name="log_report_intro_body">在本机记录页面、操作和可获取的异常线索，便于排查功能失效、卡顿或崩溃。</string>
+    <string name="log_report_steps">1. 打开日志收集开关。\n2. 返回 App，重新操作到问题出现。\n3. 关闭收集，从历史记录中选择文件发送。</string>
+    <string name="log_report_privacy_note">记录保存在本机，由你选择是否发送。不会主动采集照片或输入内容，发送前仍请检查报告。</string>
+    <string name="log_report_collect_switch">日志收集模式</string>
+    <string name="log_report_off">收集已关闭</string>
+    <string name="log_report_off_hint">需要排查问题时打开开关，下方历史记录可随时查看和发送。</string>
+    <string name="log_report_on_hint">返回 App 复现问题，点击悬浮提示可回到这里结束收集。</string>
+    <string name="log_report_loading_history">正在读取本机记录…</string>
+    <string name="log_report_history_error">暂时无法读取记录，请重试。已有文件不会被删除。</string>
+    <string name="log_report_reload">重新读取记录</string>
+    <string name="log_report_state_finished">正常结束</string>
+    <string name="log_report_state_interrupted">异常中断</string>
+    <string name="log_report_state_crashed">已捕获崩溃</string>
+    <string name="log_report_record_meta">%1$s · %2$s</string>
+    <string name="log_report_record_open">查看 %1$s 的记录，%2$s</string>
+    <string name="log_report_detail_title">日志详情</string>
+    <string name="log_report_back">返回</string>
+    <string name="log_report_summary_title">排查摘要</string>
+    <string name="log_report_summary_more">展开完整摘要</string>
+    <string name="log_report_summary_less">收起摘要</string>
+    <string name="log_report_report_id">报告编号：%1$s</string>
+    <string name="log_report_attachment_size">附件大小：%1$s</string>
+    <string name="log_report_build_error">附件整理失败，原始记录仍保留。请检查剩余空间后重试。</string>
+    <string name="log_report_prepare_again">重试整理附件</string>
+    <string name="log_report_delete_title">删除这份记录？</string>
+    <string name="log_report_delete_message">这份本机记录及其缓存附件将被删除。</string>
+    <string name="log_report_missing">这份记录已不存在，请返回历史记录。</string>
+    <string name="log_report_retention_note">历史原始记录由你手动删除。空间不足时，请先清理不再需要的记录。</string>
+    <string name="log_report_delete_error">删除未完成，请返回历史记录核对或重试。</string>
+    <string name="log_report_recording">正在收集日志</string>
+</resources>

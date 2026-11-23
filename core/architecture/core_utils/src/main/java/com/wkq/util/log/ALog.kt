@@ -21,6 +21,9 @@ import java.util.concurrent.atomic.AtomicBoolean
  */
 object ALog {
 
+    /** 宿主可订阅应用日志；回调失败不影响原日志行为。 */
+    @Volatile var reportSink: ((String, String) -> Unit)? = null
+
     private const val TAG = "ALog"
     private const val SYNC_TIMEOUT_SECONDS = 2L
 
@@ -145,7 +148,9 @@ object ALog {
         log(Log.ERROR, tag, "$msg\n${Log.getStackTraceString(throwable)}")
     }
 
+    /** 转发给宿主诊断订阅，再按既有配置输出日志；订阅异常不影响业务。 */
     private fun log(priority: Int, tag: String, msg: String) {
+        runCatching { reportSink?.invoke(tag, msg) }
         if (useTagFilter && !enableTags.contains(tag)) return
 
         val line = buildLogLine(msg)

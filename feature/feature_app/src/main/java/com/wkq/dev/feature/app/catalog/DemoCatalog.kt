@@ -43,6 +43,8 @@ object DemoCatalog {
         )
     val entries =
         listOf(
+            DemoEntry("core_log_report", "/files/core_log_report", "files",
+                FilesR.string.demo_log_report_title, FilesR.string.demo_log_report_intro, R.string.catalog_local),
             DemoEntry(
                 "core_location", "/location/core_location", "location",
                 LocationR.string.location_title, LocationR.string.location_intro, R.string.catalog_location_permission,

@@ -222,13 +222,17 @@ def validate_wkq_api(modules: dict[str, Path], warnings: list[str]) -> None:
 
 
 def validate_runtime_boundaries(root: Path, modules: dict[str, Path], errors: list[str], warnings: list[str]) -> None:
-    for manifest in root.glob("**/src/main/AndroidManifest.xml"):
+    for module, path in modules.items():
+        manifest = path / "src/main/AndroidManifest.xml"
+        if not manifest.is_file():
+            continue
         text = read_text(manifest)
-        module = module_path_from_dir(root, manifest.parents[2])
         if "FileProvider" in text and module != ":app":
             errors.append(f"ERROR: {manifest}: FileProvider should be owned by app module.")
     core_utils_init = []
-    for source in list(root.glob("**/src/main/**/*.kt")) + list(root.glob("**/src/main/**/*.java")):
+    sources = [source for path in modules.values() for pattern in ("**/*.kt", "**/*.java")
+               for source in (path / "src/main").glob(pattern)]
+    for source in sources:
         text = read_text(source)
         if "CoreUtils.init" in text:
             core_utils_init.append(source)

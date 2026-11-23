@@ -1,0 +1,14 @@
+{
+  "core/functional/core_log_report": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "feature/feature_app": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

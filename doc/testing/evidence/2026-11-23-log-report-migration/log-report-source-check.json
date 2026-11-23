@@ -1,0 +1,8 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "app/src/main/java/com/wkq/dev/DevLibApplication.kt",
+    "feature/feature_demo_files/src/main/java/com/wkq/dev/demo/files/LogReportDemoActivity.kt"
+  ],
+  "findings": []
+}

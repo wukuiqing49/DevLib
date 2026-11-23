@@ -112,7 +112,8 @@ def resource_configuration(path: Path) -> tuple[str, tuple[str, ...]]:
             return part[2:].replace('+', '-'), tuple(parts[:i] + parts[i+1:])
         if re.fullmatch(r'[a-z]{2,3}', part) and part not in {'car', 'desk', 'land', 'port', 'night', 'watch', 'round', 'small', 'large', 'long', 'notlong', 'normal', 'television', 'appliance', 'vrheadset', 'notnight', 'notround'}:
             end = i + 1
-            locale = part
+            # Android 保留旧 ISO 资源代码，运行时与语言目录使用 BCP 47 标识。
+            locale = {'in': 'id', 'iw': 'he', 'ji': 'yi'}.get(part, part)
             if end < len(parts) and re.fullmatch(r'r(?:[A-Z]{2}|\d{3})', parts[end]):
                 locale += '-' + parts[end][1:]
                 end += 1

@@ -13,6 +13,7 @@ description: "依据 Android 项目真实功能策划 Google Play 封面、截�
 - `.agents/rules/execution.md`（存在时读取）
 - `.agents/rules/play-assets.md`（存在时读取）
 - Manifest、Gradle、导航、页面、ViewModel、Repository、资源和产品文档
+- 目标项目已有的关键词资料索引 `doc/aso/README.md`（存在时）及所选报表来源说明。有资料时先评估市场、周期和口径，不重复要求用户提供已有文件。Google Ads 数据仅为搜索需求线索，不替代 Play 数据或产品事实门禁；需要工作区输入时复制原件并核对来源摘要。
 
 只追踪与待宣传能力相关的可达源码链路。排除构建产物、生成代码、缓存、prebuilt 和无关测试夹具。
 每次调用都以当前项目为唯一产品事实源，重新核验产品类别、功能、卖点、页面、关键词和素材。不得复用其他项目或上一次运行的产品结论；固定内容仅限 Google Play 规则、流程协议、文件结构和校验格式。

@@ -40,7 +40,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 
 ## 库目录
 
-当前 **21 个模块：架构基础 8、独立功能 11、三方服务 1、内部支撑 1**。模块放在 `core/`，逻辑路径为 `:core:<模块名>`；目录映射见 [settings.gradle](settings.gradle)，机器可读清单见 [library-catalog.json](docs/library-catalog.json)。
+当前 **22 个模块：架构基础 8、独立功能 12、三方服务 1、内部支撑 1**。模块放在 `core/`，逻辑路径为 `:core:<模块名>`；目录映射见 [settings.gradle](settings.gradle)，机器可读清单见 [library-catalog.json](docs/library-catalog.json)。
 
 ### 架构基础：8 个模块、5 套体系
 
@@ -55,7 +55,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 | [core_utils](core/architecture/core_utils/README.md) | 文件、Uri、选择器、图片加载、存储、设备与系统工具。 | AndroidCoreUtils |
 | [lib_xpopup](core/architecture/lib_xpopup/README.md) | 公共弹窗、底部弹层、抽屉与图片查看组件。 | XPopup |
 
-### 独立功能：11 个库
+### 独立功能：12 个库
 
 | 模块与说明 | 能力 | 来源 |
 | --- | --- | --- |
@@ -114,7 +114,7 @@ implementation 'com.wkq.dev:core-network:0.1.0-SNAPSHOT'
 
 ## DevHub 基础统计
 
-DevHub 在独立私有仓库维护，消费项目直接接入 SDK。它提供安装、日活、手机厂商与型号、Android/App 版本以及 Locale 国家与语言统计；不计入上面的 21 个源码模块。
+DevHub 在独立私有仓库维护，消费项目直接接入 SDK。它提供安装、日活、手机厂商与型号、Android/App 版本以及 Locale 国家与语言统计；不计入上面的 22 个源码模块。
 
 | 配置项 | 接入要求 |
 | --- | --- |
@@ -167,3 +167,5 @@ python -B scripts/verify_demo_catalog.py --catalog-only
 - [测试计划](doc/testing/TEST_PLAN.md)、[测试报告](doc/testing/TEST_REPORT.md)：已执行结果与未验证范围。
 
 模块范围以事实清单为准，来源项目名不表示迁入整个产品。各模块保留原有许可与归属，分发前需核对模块及传递依赖的许可。源码迁入、构建通过和 Git 推送均不代表设备验收或远端产物发布完成。
+
+日志诊断库：[core_log_report](core/functional/core_log_report/README.md)，源自 LensDock，支持本地收集和报告分享。

@@ -1,0 +1,33 @@
+<resources>
+    <string name="log_report_intro_title">Record the steps that caused a problem</string>
+    <string name="log_report_intro_body">Collect page visits, operations and available error evidence on this phone. Review the report before sharing it.</string>
+    <string name="log_report_steps">1. Turn on collection.\n2. Return to the app and reproduce the problem.\n3. Turn it off, then choose a saved report to send.</string>
+    <string name="log_report_privacy_note">Reports stay on this phone until you choose to share. Collection does not intentionally capture photos or text you enter. Check report contents before sending.</string>
+    <string name="log_report_collect_switch">Log collection mode</string>
+    <string name="log_report_off">Collection is off</string>
+    <string name="log_report_off_hint">Turn it on when you need to reproduce a problem. Saved reports remain available below.</string>
+    <string name="log_report_on_hint">Return to the app to reproduce the problem. The floating indicator brings you back here.</string>
+    <string name="log_report_loading_history">Reading saved reports…</string>
+    <string name="log_report_history_error">Could not read saved reports. Retry without deleting your files.</string>
+    <string name="log_report_reload">Reload records</string>
+    <string name="log_report_state_finished">Finished</string>
+    <string name="log_report_state_interrupted">Interrupted</string>
+    <string name="log_report_state_crashed">Crash captured</string>
+    <string name="log_report_record_meta">%1$s · %2$s</string>
+    <string name="log_report_record_open">Open report from %1$s, %2$s</string>
+    <string name="log_report_detail_title">Report details</string>
+    <string name="log_report_back">Back</string>
+    <string name="log_report_summary_title">Diagnostic summary</string>
+    <string name="log_report_summary_more">Show full summary</string>
+    <string name="log_report_summary_less">Collapse summary</string>
+    <string name="log_report_report_id">Report ID: %1$s</string>
+    <string name="log_report_attachment_size">Attachment size: %1$s</string>
+    <string name="log_report_build_error">Could not prepare the attachment. Your saved record is retained. Free storage if needed, then retry.</string>
+    <string name="log_report_prepare_again">Retry preparing attachment</string>
+    <string name="log_report_delete_title">Delete this report?</string>
+    <string name="log_report_delete_message">The saved record and its cached attachment will be removed from this phone.</string>
+    <string name="log_report_missing">This report is no longer available. Return to saved reports.</string>
+    <string name="log_report_retention_note">Saved records remain until you delete them. If storage is full, delete reports you no longer need before starting another collection.</string>
+    <string name="log_report_delete_error">Deletion did not complete. Return to saved reports to check or retry.</string>
+    <string name="log_report_recording">Collecting logs</string>
+</resources>

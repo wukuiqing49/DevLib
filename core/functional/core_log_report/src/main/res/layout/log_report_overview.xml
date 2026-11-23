@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingTop="16dp">
+    <TextView style="@style/LogReportHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/log_report_intro_title"/>
+    <TextView style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/log_report_intro_body"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="vertical" android:padding="16dp" android:background="@drawable/log_report_page_card">
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/report_collect_switch" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/log_report_collect_switch" android:textSize="16sp" android:textColor="@color/log_report_page_text" android:showText="false"/>
+        <TextView android:id="@+id/report_status" style="@style/LogReportBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:accessibilityLiveRegion="polite"/>
+        <TextView android:id="@+id/report_status_hint" style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        <Button android:id="@+id/report_retry" style="@style/LogReportAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/log_report_retry" android:visibility="gone"/>
+    </LinearLayout>
+    <TextView style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/log_report_steps"/>
+    <TextView style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/log_report_privacy_note"/>
+    <TextView android:id="@+id/report_recovery_notice" style="@style/LogReportBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:padding="12dp" android:background="@drawable/log_report_page_notice" android:text="@string/log_report_interrupted" android:visibility="gone"/>
+    <TextView style="@style/LogReportHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/log_report_history"/>
+    <TextView android:id="@+id/report_empty" style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:paddingVertical="12dp" android:text="@string/log_report_empty"/>
+    <Button android:id="@+id/report_reload" style="@style/LogReportAction" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/log_report_reload" android:visibility="gone"/>
+    <TextView style="@style/LogReportSecondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="12dp" android:text="@string/log_report_retention_note"/>
+</LinearLayout>

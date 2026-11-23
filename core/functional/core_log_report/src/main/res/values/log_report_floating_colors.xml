@@ -1,0 +1,5 @@
+<resources>
+    <color name="log_report_floating_surface">#FFFFFF</color>
+    <color name="log_report_floating_text">#202326</color>
+    <color name="log_report_floating_accent">#3568B0</color>
+</resources>

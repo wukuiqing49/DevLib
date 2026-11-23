@@ -1,0 +1,90 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+    "feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibraryDetailActivity.kt",
+    "feature/feature_demo_common/src/main/java/com/wkq/dev/demo/common/WorkspacePolicy.kt"
+  ],
+  "findings": [
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 172,
+      "rule": "DOC001",
+      "symbol": "buildLogLine",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 179,
+      "rule": "DOC001",
+      "symbol": "getCallerInfo",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 189,
+      "rule": "DOC001",
+      "symbol": "writeAsync",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 195,
+      "rule": "DOC001",
+      "symbol": "writeLine",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 207,
+      "rule": "DOC001",
+      "symbol": "levelName",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 218,
+      "rule": "DOC001",
+      "symbol": "rotateLogFileIfNeeded",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 246,
+      "rule": "DOC001",
+      "symbol": "cleanOldLogs",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 325,
+      "rule": "DOC001",
+      "symbol": "flushInternal",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 332,
+      "rule": "DOC001",
+      "symbol": "closeInternal",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    },
+    {
+      "path": "core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt",
+      "line": 341,
+      "rule": "DOC001",
+      "symbol": "runSync",
+      "message": "类型/方法缺少紧邻的中文 KDoc/JavaDoc",
+      "excepted": false
+    }
+  ]
+}

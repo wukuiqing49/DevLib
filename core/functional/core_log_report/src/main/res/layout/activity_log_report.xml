@@ -1,0 +1,7 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/log_report_page_background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:gravity="center_vertical" android:paddingHorizontal="8dp">
+        <ImageButton android:id="@+id/report_back" android:layout_width="48dp" android:layout_height="48dp" android:padding="12dp" android:src="@drawable/ic_log_report_arrow_back" app:tint="@color/log_report_page_text" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/log_report_back"/>
+        <TextView style="@style/LogReportHeading" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:paddingVertical="12dp" android:text="@string/log_report_title"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/report_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingBottom="20dp" android:clipToPadding="false" android:scrollbars="none"/>
+</LinearLayout>

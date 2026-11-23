@@ -92,3 +92,6 @@ project(':core:core_location').projectDir = file('core/functional/core_location'
 project(':core:core_location_address').projectDir = file('core/functional/core_location_address')
 
 include ':feature:feature_demo_location'
+
+include ':core:core_log_report'
+project(':core:core_log_report').projectDir = file('core/functional/core_log_report')

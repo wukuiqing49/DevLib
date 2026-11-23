@@ -32,3 +32,5 @@ dependencies {
     ksp project(':core:core_router_processor')
 }
 ksp { arg("moduleName", "DevDemoFiles") }
+
+dependencies { implementation project(':core:core_log_report') }

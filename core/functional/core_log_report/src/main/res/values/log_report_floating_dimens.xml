@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="log_report_floating_gap">12dp</dimen>
+    <dimen name="log_report_floating_max_text_width">200dp</dimen>
+    <dimen name="log_report_floating_inner_width">52dp</dimen>
+</resources>

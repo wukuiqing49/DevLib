@@ -85,4 +85,5 @@
   <string name="catalog_location">定位与地名</string>
   <string name="catalog_location_permission">需要定位授权</string>
   <string name="integration_location_note">使用本地源码模块。经纬度定位需宿主授权，离线地名库独立按需接入；不要同时引用旧 Location 或 LocationAddress AAR。后台服务需宿主另行配置。</string>
+  <string name="integration_log_report_note">Application 中安装 LogReport，入口打开管理页，用户主动开启采集。ALog.reportSink 由宿主桥接，不自动上传服务器；已有 Base 源码的宿主须排除 Maven core-base。</string>
 </resources>
