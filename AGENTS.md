@@ -50,6 +50,7 @@ DevLib 是 Android 多模块独立功能库主仓库，模块统一放在 `core/
 | Android 页面 | `.agents/workflows/implement-page.md` |
 | Android 国际化 | `.agents/workflows/localize-content.md` |
 | Android 构建与发布 | `.agents/workflows/change-build.md` |
+| Android R8 Keep Rules 与 DEX 优化 | `.agents/skills/android-r8-keep-rules-workflow/SKILL.md` |
 | Android Bug 修复 | `.agents/workflows/fix-bug.md` |
 | Figma 分析 / 实现 | `.agents/workflows/figma-process.md` / `.agents/workflows/figma-code.md` |
 | Android 功能回归 | `.agents/skills/android-functional-test-workflow/SKILL.md` |

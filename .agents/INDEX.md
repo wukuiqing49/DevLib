@@ -77,6 +77,7 @@
 - `skills/android-ui-workflow/`：XML UI 实现和 UI 静态门禁。
 - `skills/android-i18n-workflow/`：国际化资源处理和 i18n 门禁。
 - `skills/android-build-workflow/`：Gradle/发布修改和构建门禁。
+- `skills/android-r8-keep-rules-workflow/`：R8 Keep Rules 与 consumer-rules.pro 静态审计、收敛治理及 Google Play DEX 优化门槛核查。
 - `skills/android-figma-workflow/`：Figma 拉取、规范化、映射、模板和验收门禁。
 - `skills/plan-google-play-listing-assets/`：共享产品事实、Seed Keywords 和定位，统一策划 Feature Graphic、商店截图与 Preview Video，并导出独立 Prompt 文件。
 - `skills/zeplin-android-layer-implementation/`：读取 Zeplin 图层、资源和设计 Token，并实现 Android XML + ViewBinding 页面。
