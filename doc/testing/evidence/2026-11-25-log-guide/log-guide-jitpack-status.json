@@ -1,0 +1,15 @@
+{
+  "version" : "log-v0.1.1",
+  "status" : "ok",
+  "message" : "",
+  "time" : 1795580624579,
+  "commit" : "e4b3e0e4c0f6a3f170283789e204b418ffec1510",
+  "ci" : false,
+  "buildUrl" : "",
+  "modules" : [ "core-base", "core-guide", "core-log-report", "core-network", "lib-xpopup" ],
+  "image" : "latest",
+  "jdk" : 17,
+  "commitWhen" : 1795580464000,
+  "isTag" : true,
+  "private" : false
+}

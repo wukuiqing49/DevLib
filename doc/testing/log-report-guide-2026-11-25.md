@@ -30,4 +30,10 @@ OPPO API 30 实际打开日志管理页后，自动出现「先开启记录」�
 
 ## LensDock 实际入口
 
-LensDock「我的 → 日志上报」原本直接调用 LogReport.show；因此本轮在库内同一真实 Activity 接入教程，消费项目更新版本即生效，既有埋点、初始化及相机快照保留。新 JitPack 标签为 `log-v0.1.1`，日志与引导模块使用相同发布标签，避免直接/传递引用版本分歧。远程发布及 LensDock 构建结果完成后另补。
+LensDock「我的 → 日志上报」原本直接调用 LogReport.show；因此本轮在库内同一真实 Activity 接入教程，消费项目更新版本即生效，既有埋点、初始化及相机快照保留。新 JitPack 标签为 `log-v0.1.1`，日志与引导模块使用相同发布标签，避免直接/传递引用版本分歧。
+
+该标签已推送，来源 `e4b3e0e4c0f6a3f170283789e204b418ffec1510`。JitPack 状态 ok，包含 core-log-report、core-guide 及既有依赖链；远程 AAR、POM 已实际下载。LensDock 首次等待远程构建期间下载超时，产物完成后重新验证，不降低 TLS、不切回本地 Maven。
+
+LensDock 更新日志与引导版本后，远程解析、重复类检查和 Debug APK 构建通过（1m17s），APK DEX 包含 LogReportGuides、LogReportActivity、FeatureGuide。未安装 LensDock 或执行其完整真机采集/分享链路，不把 DevLib 首屏截图当作宿主实机验收。当前任务不推进全设备基线。
+
+源码、JUnit、lint、本地发布与 JitPack 关键证据见 `evidence/2026-11-25-log-guide/`，上游实际首屏见 `evidence/2026-11-25-log-guide-oppo/log-guide-first.png`；宿主构建证据由 LensDock 对应日期报告保存。

@@ -1,0 +1,214 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:lib_xpopup:preBuild UP-TO-DATE
+> Task :core:lib_xpopup:preReleaseBuild UP-TO-DATE
+> Task :core:lib_xpopup:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:lib_xpopup:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:lib_xpopup:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:lib_xpopup:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:lib_xpopup:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_xpopup:generateReleaseResources UP-TO-DATE
+> Task :core:lib_xpopup:packageReleaseResources UP-TO-DATE
+> Task :core:lib_xpopup:processReleaseNavigationResources UP-TO-DATE
+> Task :core:lib_xpopup:parseReleaseLocalResources UP-TO-DATE
+> Task :core:lib_xpopup:generateReleaseRFile UP-TO-DATE
+> Task :core:lib_xpopup:compileReleaseKotlin UP-TO-DATE
+> Task :core:lib_xpopup:extractReleaseAnnotations UP-TO-DATE
+> Task :core:lib_xpopup:generateReleaseAssets UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseAssets UP-TO-DATE
+> Task :core:lib_xpopup:javaPreCompileRelease UP-TO-DATE
+> Task :core:lib_xpopup:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:lib_xpopup:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:prepareLintJarForPublish UP-TO-DATE
+> Task :core:lib_xpopup:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:lib_xpopup:processReleaseManifest UP-TO-DATE
+> Task :core:lib_xpopup:processReleaseJavaRes UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:lib_xpopup:syncReleaseLibJars UP-TO-DATE
+> Task :core:lib_xpopup:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:lib_xpopup:bundleReleaseAar UP-TO-DATE
+> Task :core:lib_xpopup:sourceReleaseJar UP-TO-DATE
+> Task :core:lib_xpopup:generateMetadataFileForReleasePublication
+> Task :core:lib_xpopup:generatePomFileForReleasePublication
+> Task :core:lib_xpopup:publishReleasePublicationToMavenLocal
+> Task :core:core_base:preBuild UP-TO-DATE
+> Task :core:core_base:preReleaseBuild UP-TO-DATE
+> Task :core:core_base:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_base:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_base:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_base:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_base:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_base:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_base:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_base:generateReleaseResources UP-TO-DATE
+> Task :core:core_base:packageReleaseResources UP-TO-DATE
+> Task :core:core_base:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_base:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_base:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_base:generateReleaseRFile UP-TO-DATE
+> Task :core:lib_xpopup:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :core:core_base:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_base:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_base:generateReleaseAssets UP-TO-DATE
+> Task :core:core_base:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_base:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_base:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_base:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_base:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_base:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_base:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_base:processReleaseManifest UP-TO-DATE
+> Task :core:core_base:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_base:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_base:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_base:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_base:bundleReleaseAar UP-TO-DATE
+> Task :core:core_base:sourceReleaseJar UP-TO-DATE
+> Task :core:core_base:generateMetadataFileForReleasePublication
+> Task :core:core_base:generatePomFileForReleasePublication
+> Task :core:core_base:publishReleasePublicationToMavenLocal
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preReleaseBuild UP-TO-DATE
+> Task :core:core_guide:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:preBuild UP-TO-DATE
+> Task :core:core_log_report:preReleaseBuild UP-TO-DATE
+> Task :core:core_log_report:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_log_report:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_log_report:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_log_report:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_base:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseResources UP-TO-DATE
+> Task :core:core_guide:packageReleaseResources UP-TO-DATE
+> Task :core:core_guide:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseRFile UP-TO-DATE
+> Task :core:core_guide:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_guide:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :core:core_log_report:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_log_report:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_log_report:generateReleaseResources UP-TO-DATE
+> Task :core:core_log_report:packageReleaseResources UP-TO-DATE
+> Task :core:core_log_report:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_log_report:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_log_report:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_log_report:generateReleaseRFile UP-TO-DATE
+> Task :core:core_log_report:generateReleaseAssets UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_log_report:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_log_report:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_log_report:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_log_report:processReleaseManifest UP-TO-DATE
+> Task :core:core_log_report:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:sourceReleaseJar UP-TO-DATE
+> Task :core:core_log_report:generatePomFileForReleasePublication
+> Task :core:core_network:preBuild UP-TO-DATE
+> Task :core:core_network:preReleaseBuild UP-TO-DATE
+> Task :core:core_network:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_network:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_network:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_network:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_network:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_network:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_network:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_network:generateReleaseResources UP-TO-DATE
+> Task :core:core_network:packageReleaseResources UP-TO-DATE
+> Task :core:core_network:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_network:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_network:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_network:generateReleaseRFile UP-TO-DATE
+> Task :core:core_network:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_network:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_network:generateReleaseAssets UP-TO-DATE
+> Task :core:core_network:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_network:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_network:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:core_network:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_network:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_network:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_network:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_network:processReleaseManifest UP-TO-DATE
+> Task :core:core_network:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_network:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_network:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_network:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_network:bundleReleaseAar UP-TO-DATE
+> Task :core:core_network:sourceReleaseJar UP-TO-DATE
+> Task :core:core_network:generateMetadataFileForReleasePublication
+> Task :core:core_network:generatePomFileForReleasePublication
+> Task :core:core_network:publishReleasePublicationToMavenLocal
+> Task :core:core_guide:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_guide:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_guide:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_guide:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_guide:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_guide:generateReleaseAssets UP-TO-DATE
+> Task :core:core_guide:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_guide:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_guide:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_guide:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_guide:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_guide:processReleaseManifest UP-TO-DATE
+> Task :core:core_guide:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_guide:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_guide:bundleReleaseAar UP-TO-DATE
+> Task :core:core_guide:sourceReleaseJar UP-TO-DATE
+> Task :core:core_guide:generateMetadataFileForReleasePublication
+> Task :core:core_guide:generatePomFileForReleasePublication
+> Task :core:core_guide:publishReleasePublicationToMavenLocal
+
+> Task :core:core_log_report:compileReleaseKotlin
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:59 'static fun getLayoutDirection(p0: @NonNull() View): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:98 'static field LAYOUT_DIRECTION_RTL: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReport.kt:73:58 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:20:9 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:25:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:26:15 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:28:92 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:32:47 'val id: Long' is deprecated. Deprecated in Java.
+
+> Task :core:core_log_report:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_log_report:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_log_report:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_log_report:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_log_report:bundleReleaseAar UP-TO-DATE
+> Task :core:core_log_report:generateMetadataFileForReleasePublication
+> Task :core:core_log_report:publishReleasePublicationToMavenLocal
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 53s
+149 actionable tasks: 16 executed, 133 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
