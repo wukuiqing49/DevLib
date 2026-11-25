@@ -50,7 +50,7 @@
 
 ## JitPack
 
-根 `jitpack.yml` 使用 JDK 17，仅把网络库 release 安装到 Maven Local，版本取 JitPack 的 `VERSION`。JitPack 在拉取指定提交/tag 后自行执行构建，不需要新增 GitHub Actions。
+根 `jitpack.yml` 使用 JDK 17，把网络库及日志库的完整依赖链（日志库、Base、XPopup）release 安装到 Maven Local，统一通过 `devlibJitpackVersion` 取 JitPack 的 `VERSION`。普通 Maven 发布仍使用 `networkPublishVersion`。JitPack 在拉取指定提交/tag 后自行执行构建，不需要新增 GitHub Actions。
 
 JitPack 使用它自己的 `com.github...` 服务坐标，不等同于上述标准 Maven 坐标。推送配置并在 JitPack 构建成功后，以该版本页面实际列出的 artifact 坐标接入，不能把尚未验证的坐标当成已上线产物。远端必须能提供 SDK 37 和当前工具链；本地成功不代表 JitPack 镜像已满足这些条件。
 

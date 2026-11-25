@@ -1,0 +1,32 @@
+[
+  {
+    "file": "polished-motion-0.png",
+    "seconds": 0.547,
+    "targetCropHash": "e5898da7451a4b2874a5433b4684a18bcbef1222b5daeffc76106bea41bdc789"
+  },
+  {
+    "file": "polished-motion-1.png",
+    "seconds": 1.234,
+    "targetCropHash": "bb81f4acf5066742b3603400a5c426fdfa837c711a89429873a7aafa1b36092c"
+  },
+  {
+    "file": "polished-motion-2.png",
+    "seconds": 1.938,
+    "targetCropHash": "7cdc1164023843827dd7b884651ca000c7aed1568376f83fe7446f10451c1914"
+  },
+  {
+    "file": "polished-motion-3.png",
+    "seconds": 2.688,
+    "targetCropHash": "7cdc1164023843827dd7b884651ca000c7aed1568376f83fe7446f10451c1914"
+  },
+  {
+    "file": "polished-motion-4.png",
+    "seconds": 3.453,
+    "targetCropHash": "7cdc1164023843827dd7b884651ca000c7aed1568376f83fe7446f10451c1914"
+  },
+  {
+    "file": "polished-motion-5.png",
+    "seconds": 4.188,
+    "targetCropHash": "7cdc1164023843827dd7b884651ca000c7aed1568376f83fe7446f10451c1914"
+  }
+]

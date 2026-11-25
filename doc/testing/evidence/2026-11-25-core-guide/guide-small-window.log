@@ -1,0 +1,81 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preDebugBuild UP-TO-DATE
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugResources UP-TO-DATE
+> Task :core:core_guide:packageDebugResources UP-TO-DATE
+> Task :core:core_guide:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugRFile UP-TO-DATE
+> Task :core:core_guide:compileDebugKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_guide:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_guide:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_guide:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_guide:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_guide:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :core:core_guide:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_guide:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_guide:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:mergeDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_guide:processDebugManifest UP-TO-DATE
+> Task :core:core_guide:processDebugUnitTestManifest UP-TO-DATE
+> Task :core:core_guide:processDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestAssets UP-TO-DATE
+> Task :core:core_guide:generateDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugUnitTestAssets UP-TO-DATE
+> Task :core:core_guide:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestConfig UP-TO-DATE
+> Task :core:core_guide:processDebugJavaRes UP-TO-DATE
+> Task :core:core_guide:compileDebugUnitTestKotlin
+> Task :core:core_guide:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:core_guide:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :core:core_guide:testDebugUnitTest
+
+FeatureGuideTest > largeActionsUseScrollableCardFallback[26] FAILED
+    java.lang.AssertionError at FeatureGuideTest.kt:261
+
+FeatureGuideTest > largeActionsUseScrollableCardFallback FAILED
+    java.lang.AssertionError at FeatureGuideTest.kt:261
+
+
+> Task :core:core_guide:testDebugUnitTest FAILED
+2 tests completed, 2 failed
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':core:core_guide:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///C:/work/AI/DevLib/core/functional/core_guide/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 59s
+32 actionable tasks: 2 executed, 30 up-to-date

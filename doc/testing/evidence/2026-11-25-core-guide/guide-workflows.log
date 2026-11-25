@@ -1,0 +1,67 @@
+agent structure validation passed (mode=config; Android build/tests not executed)
+agent structure validation passed (mode=project; Android build/tests not executed)
+WARN: theme: targetSdk 37 should document theme system bar item: statusBarColor.
+WARN: theme: targetSdk 37 should document theme system bar item: navigationBarColor.
+build validation passed: 2 warning(s)
+WARN: .ai-work\locationkit-source: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\LibAAR\AAR_Address: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\LibAAR\AAR_Location: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\LibAAR\AAR_XPopup: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\app: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\lib_address: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\lib_base: module build file exists but module is not included in settings.
+WARN: .ai-work\locationkit-source\lib_location: module build file exists but module is not included in settings.
+WARN: .ai-work\removed-core-devhub: module build file exists but module is not included in settings.
+WARN: samples\guide-consumer: module build file exists but module is not included in settings.
+WARN: samples\published-consumer: module build file exists but module is not included in settings.
+WARN: app\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_base\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_network\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_router_annotation\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_router_api\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_router_gradle_plugin\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_router_processor\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\core_utils\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\architecture\lib_xpopup\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_archive\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_document\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_guide\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_image_render\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_location\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_location_address\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_log_report\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_nas\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_qrcode\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\core_usb\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\lib_drop\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\lib_metadata\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\functional\lib_upload\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\internal\lib_operations\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: core\thirdparty\core_google\build.gradle: module graph check is incomplete: accessors/conditional/external dependencies require Gradle verification.
+WARN: CoreUtils.init appears in multiple files: app\src\main\java\com\wkq\dev\DevLibApplication.kt, core\architecture\core_utils\src\main\java\com\wkq\util\AppLifecycleMonitor.kt, core\architecture\core_utils\src\main\java\com\wkq\util\CoreUtils.kt, core\architecture\core_utils\src\main\java\com\wkq\util\DeepLinkUtil.kt, core\architecture\core_utils\src\main\java\com\wkq\util\FileUtil.kt
+architecture static validation passed: 36 warning(s); Gradle-resolved graph NOT verified
+WARN: feature\feature_demo_files\src\main\res\layout\demo_log_report.xml: Scrollable view should usually set android:scrollbars="none".
+ui validation passed: 1 warning(s)
+ERROR: feature\feature_demo_files\src\main\res\values-zh-rCN: missing 93 localized key(s): string-array/demo_upload_protocols, string-array/nas_protocols, string/demo_archive_compress, string/demo_archive_execute, string/demo_archive_extract, string/demo_archive_input, string/demo_archive_intro, string/demo_archive_password, string/demo_archive_password_value, string/demo_archive_success
+i18n validation failed: 1 error(s), 0 warning(s)
+Host validation modules: app, feature/feature_app, feature/feature_res, feature/feature_demo_common, feature/feature_demo_foundation, feature/feature_demo_files, feature/feature_demo_image, feature/feature_demo_document, feature/feature_demo_google, feature/feature_demo_location
+
+== tool-structure ==
+tool-structure: ok
+
+== target-profile ==
+target-profile: ok
+
+== build ==
+build: ok
+
+== architecture ==
+architecture: ok
+
+== ui ==
+ui: ok
+
+== i18n ==
+i18n: failed (1)
+
+workflow validation failed: 1 step(s)

@@ -1,0 +1,1111 @@
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preDebugBuild UP-TO-DATE
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsDebug
+> Task :core:core_guide:generateDebugResources
+> Task :core:core_guide:packageDebugResources
+> Task :core:core_guide:processDebugNavigationResources
+> Task :core:core_guide:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebug
+> Task :core:core_guide:mapDebugSourceSetPaths
+> Task :core:core_guide:writeDebugAarMetadata
+> Task :core:core_guide:parseDebugLocalResources
+> Task :core:core_guide:checkDebugUnitTestAarMetadata
+> Task :core:core_guide:compileDebugLibraryResources
+> Task :core:core_guide:dataBindingGenBaseClassesDebug
+> Task :core:core_guide:mapDebugUnitTestSourceSetPaths
+> Task :core:core_guide:generateDebugUnitTestResources
+> Task :core:core_guide:generateDebugRFile
+> Task :core:core_guide:mergeDebugUnitTestResources
+> Task :core:core_guide:extractDeepLinksDebug
+> Task :core:core_guide:generateDebugUnitTestAssets UP-TO-DATE
+> Task :core:core_guide:generateDebugAssets UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebugUnitTest
+> Task :core:core_guide:mergeDebugAssets
+> Task :core:core_guide:mergeDebugUnitTestAssets
+> Task :core:core_guide:preReleaseBuild UP-TO-DATE
+> Task :core:core_guide:checkReleaseAarMetadata
+> Task :core:core_guide:processDebugManifest
+> Task :core:core_guide:mergeReleaseJniLibFolders
+> Task :core:core_guide:processDebugUnitTestManifest
+> Task :core:core_guide:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_guide:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_guide:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:core_guide:extractDeepLinksForAarRelease
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsRelease
+> Task :core:core_guide:generateReleaseResources
+> Task :core:core_guide:packageReleaseResources
+> Task :core:core_guide:processReleaseNavigationResources
+> Task :core:core_guide:generateReleaseAssets UP-TO-DATE
+> Task :core:core_guide:mergeReleaseAssets
+> Task :core:core_guide:parseReleaseLocalResources
+> Task :core:core_guide:javaPreCompileRelease
+> Task :core:core_guide:dataBindingGenBaseClassesRelease
+> Task :core:core_guide:generateReleaseRFile
+> Task :core:core_guide:prepareLintJarForPublish
+> Task :core:core_guide:prepareReleaseArtProfile
+> Task :core:core_guide:processReleaseManifest
+> Task :core:core_guide:writeReleaseAarMetadata
+> Task :core:core_guide:mapReleaseSourceSetPaths
+> Task :core:core_guide:processDebugUnitTestResources
+> Task :core:core_guide:mergeReleaseResources
+> Task :core:core_guide:packageDebugUnitTestForUnitTest
+> Task :core:core_guide:generateDebugUnitTestConfig
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :core:core_router_annotation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:verifyReleaseResources
+> Task :core:core_router_annotation:processResources NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_annotation:compileKotlin
+> Task :core:core_guide:compileDebugKotlin
+> Task :core:core_guide:compileReleaseKotlin
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :core:core_guide:compileDebugJavaWithJavac
+> Task :core:core_guide:processDebugJavaRes
+> Task :core:core_guide:bundleLibRuntimeToJarDebug
+> Task :core:core_guide:bundleLibCompileToJarDebug
+> Task :core:core_guide:extractReleaseAnnotations
+> Task :core:core_guide:compileReleaseJavaWithJavac
+> Task :core:core_guide:mergeReleaseGeneratedProguardFiles
+> Task :core:core_guide:mergeReleaseConsumerProguardFiles
+> Task :core:core_guide:processReleaseJavaRes
+> Task :core:core_router_annotation:compileJava NO-SOURCE
+> Task :core:core_router_annotation:classes UP-TO-DATE
+> Task :core:core_router_annotation:jar UP-TO-DATE
+> Task :app:generateDebugResources
+> Task :core:core_archive:preBuild UP-TO-DATE
+> Task :core:core_archive:preDebugBuild UP-TO-DATE
+> Task :core:core_archive:generateDebugResources
+> Task :core:core_archive:packageDebugResources
+> Task :core:core_base:preBuild UP-TO-DATE
+> Task :core:core_base:preDebugBuild UP-TO-DATE
+> Task :core:core_base:generateDebugResources
+> Task :core:core_guide:mergeReleaseJavaResource
+> Task :core:core_base:packageDebugResources
+> Task :core:core_guide:syncReleaseLibJars
+> Task :core:core_guide:bundleReleaseAar
+> Task :core:core_guide:assembleRelease
+> Task :core:core_document:preBuild UP-TO-DATE
+> Task :core:core_document:preDebugBuild UP-TO-DATE
+> Task :core:core_document:generateDebugResources
+> Task :core:core_document:packageDebugResources
+> Task :core:core_google:preBuild UP-TO-DATE
+> Task :core:core_google:preDebugBuild UP-TO-DATE
+> Task :core:core_google:generateDebugResources
+> Task :core:core_google:packageDebugResources
+> Task :core:core_image_render:preBuild UP-TO-DATE
+> Task :core:core_image_render:preDebugBuild UP-TO-DATE
+> Task :core:core_image_render:generateDebugResources
+> Task :core:core_image_render:packageDebugResources
+> Task :core:core_location:preBuild UP-TO-DATE
+> Task :core:core_location:preDebugBuild UP-TO-DATE
+> Task :core:core_location:generateDebugResources
+> Task :core:core_location:packageDebugResources
+> Task :core:core_location_address:preBuild UP-TO-DATE
+> Task :core:core_location_address:preDebugBuild UP-TO-DATE
+> Task :core:core_location_address:generateDebugResources
+> Task :core:core_location_address:packageDebugResources
+> Task :core:core_log_report:preBuild UP-TO-DATE
+> Task :core:core_log_report:preDebugBuild UP-TO-DATE
+> Task :core:core_log_report:generateDebugResources
+> Task :core:core_log_report:packageDebugResources
+> Task :core:core_nas:preBuild UP-TO-DATE
+> Task :core:core_nas:preDebugBuild UP-TO-DATE
+> Task :core:core_nas:generateDebugResources
+> Task :core:core_nas:packageDebugResources
+> Task :core:core_network:preBuild UP-TO-DATE
+> Task :core:core_network:preDebugBuild UP-TO-DATE
+> Task :core:core_network:generateDebugResources
+> Task :core:core_network:packageDebugResources
+> Task :core:core_qrcode:preBuild UP-TO-DATE
+> Task :core:core_qrcode:preDebugBuild UP-TO-DATE
+> Task :core:core_qrcode:generateDebugResources
+> Task :core:core_qrcode:packageDebugResources
+> Task :core:core_router_api:preBuild UP-TO-DATE
+> Task :core:core_router_api:preDebugBuild UP-TO-DATE
+> Task :core:core_router_api:generateDebugResources
+> Task :core:core_router_api:packageDebugResources
+> Task :core:core_usb:preBuild UP-TO-DATE
+> Task :core:core_usb:preDebugBuild UP-TO-DATE
+> Task :core:core_usb:generateDebugResources
+> Task :core:core_usb:packageDebugResources
+> Task :core:core_utils:preBuild UP-TO-DATE
+> Task :core:core_utils:preDebugBuild UP-TO-DATE
+> Task :core:core_utils:generateDebugResources
+> Task :core:core_utils:packageDebugResources
+> Task :core:lib_drop:preBuild UP-TO-DATE
+> Task :core:lib_drop:preDebugBuild UP-TO-DATE
+> Task :core:lib_drop:generateDebugResources
+> Task :core:lib_drop:packageDebugResources
+> Task :core:lib_metadata:preBuild UP-TO-DATE
+> Task :core:lib_metadata:preDebugBuild UP-TO-DATE
+> Task :core:lib_metadata:generateDebugResources
+> Task :core:lib_metadata:packageDebugResources
+> Task :core:lib_operations:preBuild UP-TO-DATE
+> Task :core:lib_operations:preDebugBuild UP-TO-DATE
+> Task :core:lib_operations:generateDebugResources
+> Task :core:lib_operations:packageDebugResources
+> Task :core:lib_upload:preBuild UP-TO-DATE
+> Task :core:lib_upload:preDebugBuild UP-TO-DATE
+> Task :core:lib_upload:generateDebugResources
+> Task :core:lib_upload:packageDebugResources
+> Task :core:lib_xpopup:preBuild UP-TO-DATE
+> Task :core:lib_xpopup:preDebugBuild UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugResources
+> Task :core:lib_xpopup:packageDebugResources
+> Task :feature:feature_app:preBuild UP-TO-DATE
+> Task :feature:feature_app:preDebugBuild UP-TO-DATE
+> Task :feature:feature_app:generateDebugResources
+> Task :feature:feature_app:packageDebugResources
+> Task :feature:feature_demo_common:preBuild UP-TO-DATE
+> Task :feature:feature_demo_common:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_common:generateDebugResources
+> Task :feature:feature_demo_common:packageDebugResources
+> Task :feature:feature_demo_document:preBuild UP-TO-DATE
+> Task :feature:feature_demo_document:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_document:generateDebugResources
+> Task :core:core_guide:compileDebugUnitTestKotlin
+> Task :feature:feature_demo_document:packageDebugResources
+> Task :core:core_guide:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:core_guide:processDebugUnitTestJavaRes
+> Task :core:core_guide:testDebugUnitTest
+> Task :feature:feature_demo_files:preBuild UP-TO-DATE
+> Task :feature:feature_demo_files:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_files:generateDebugResources
+> Task :feature:feature_demo_files:packageDebugResources
+> Task :feature:feature_demo_foundation:preBuild UP-TO-DATE
+> Task :feature:feature_demo_foundation:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_foundation:generateDebugResources
+> Task :feature:feature_demo_foundation:packageDebugResources
+> Task :feature:feature_demo_google:preBuild UP-TO-DATE
+> Task :feature:feature_demo_google:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_google:generateDebugResources
+> Task :feature:feature_demo_google:packageDebugResources
+> Task :feature:feature_demo_image:preBuild UP-TO-DATE
+> Task :feature:feature_demo_image:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_image:generateDebugResources
+> Task :feature:feature_demo_image:packageDebugResources
+> Task :feature:feature_demo_location:preBuild UP-TO-DATE
+> Task :feature:feature_demo_location:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_location:generateDebugResources
+> Task :feature:feature_demo_location:packageDebugResources
+> Task :feature:feature_res:preBuild UP-TO-DATE
+> Task :feature:feature_res:preDebugBuild UP-TO-DATE
+> Task :feature:feature_res:generateDebugResources
+> Task :feature:feature_res:packageDebugResources
+> Task :app:packageDebugResources
+> Task :core:core_archive:processDebugNavigationResources
+> Task :core:core_base:processDebugNavigationResources
+> Task :core:core_document:processDebugNavigationResources
+> Task :core:core_google:processDebugNavigationResources
+> Task :core:core_image_render:processDebugNavigationResources
+> Task :core:core_location:processDebugNavigationResources
+> Task :core:core_location_address:processDebugNavigationResources
+> Task :core:core_log_report:processDebugNavigationResources
+> Task :core:core_nas:processDebugNavigationResources
+> Task :core:core_network:processDebugNavigationResources
+> Task :core:core_qrcode:processDebugNavigationResources
+> Task :core:core_router_api:processDebugNavigationResources
+> Task :core:core_usb:processDebugNavigationResources
+> Task :core:core_utils:processDebugNavigationResources
+> Task :core:lib_drop:processDebugNavigationResources
+> Task :core:lib_metadata:processDebugNavigationResources
+> Task :core:lib_operations:processDebugNavigationResources
+> Task :core:lib_upload:processDebugNavigationResources
+> Task :core:lib_xpopup:processDebugNavigationResources
+> Task :feature:feature_app:processDebugNavigationResources
+> Task :feature:feature_demo_common:processDebugNavigationResources
+> Task :feature:feature_demo_document:processDebugNavigationResources
+> Task :feature:feature_demo_files:processDebugNavigationResources
+> Task :feature:feature_demo_foundation:processDebugNavigationResources
+> Task :feature:feature_demo_google:processDebugNavigationResources
+> Task :feature:feature_demo_image:processDebugNavigationResources
+> Task :feature:feature_demo_location:processDebugNavigationResources
+> Task :feature:feature_res:processDebugNavigationResources
+> Task :app:processDebugNavigationResources
+> Task :app:parseDebugLocalResources
+> Task :core:core_archive:parseDebugLocalResources
+> Task :app:mergeDebugResources
+> Task :core:core_base:dataBindingMergeDependencyArtifactsDebug
+> Task :core:core_archive:generateDebugRFile
+> Task :core:core_base:parseDebugLocalResources
+> Task :core:core_document:parseDebugLocalResources
+> Task :core:lib_xpopup:parseDebugLocalResources
+> Task :core:core_google:parseDebugLocalResources
+> Task :core:core_base:generateDebugRFile
+> Task :core:lib_xpopup:generateDebugRFile
+> Task :core:core_document:generateDebugRFile
+> Task :core:core_google:generateDebugRFile
+> Task :core:core_base:dataBindingGenBaseClassesDebug
+> Task :core:core_image_render:parseDebugLocalResources
+> Task :core:core_location:parseDebugLocalResources
+> Task :core:core_image_render:generateDebugRFile
+> Task :core:core_location:generateDebugRFile
+> Task :core:core_location_address:parseDebugLocalResources
+> Task :core:core_log_report:dataBindingMergeDependencyArtifactsDebug
+> Task :core:core_location_address:generateDebugRFile
+> Task :core:core_nas:parseDebugLocalResources
+> Task :core:core_log_report:parseDebugLocalResources
+> Task :core:core_network:parseDebugLocalResources
+> Task :core:core_nas:generateDebugRFile
+> Task :core:core_log_report:dataBindingGenBaseClassesDebug
+> Task :core:core_log_report:generateDebugRFile
+> Task :core:core_network:generateDebugRFile
+> Task :core:core_qrcode:parseDebugLocalResources
+> Task :core:core_router_api:parseDebugLocalResources
+> Task :core:core_qrcode:generateDebugRFile
+> Task :core:core_router_api:generateDebugRFile
+> Task :core:core_usb:parseDebugLocalResources
+> Task :core:core_utils:dataBindingMergeDependencyArtifactsDebug
+> Task :core:core_usb:generateDebugRFile
+> Task :core:core_utils:parseDebugLocalResources
+> Task :core:lib_drop:parseDebugLocalResources
+> Task :core:core_utils:dataBindingGenBaseClassesDebug
+> Task :core:core_utils:generateDebugRFile
+> Task :core:lib_drop:generateDebugRFile
+> Task :core:lib_metadata:parseDebugLocalResources
+> Task :core:lib_operations:parseDebugLocalResources
+> Task :core:lib_upload:parseDebugLocalResources
+> Task :core:lib_metadata:generateDebugRFile
+> Task :core:lib_operations:generateDebugRFile
+> Task :core:lib_upload:generateDebugRFile
+> Task :feature:feature_app:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_app:parseDebugLocalResources
+> Task :feature:feature_demo_common:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_common:parseDebugLocalResources
+> Task :feature:feature_res:parseDebugLocalResources
+> Task :feature:feature_demo_document:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_res:generateDebugRFile
+> Task :feature:feature_demo_common:generateDebugRFile
+> Task :feature:feature_demo_common:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_document:parseDebugLocalResources
+> Task :feature:feature_demo_files:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_document:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_document:generateDebugRFile
+> Task :feature:feature_demo_files:parseDebugLocalResources
+> Task :core:core_network:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_files:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_files:generateDebugRFile
+> Task :core:core_network:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_foundation:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_foundation:parseDebugLocalResources
+> Task :core:core_google:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_foundation:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_foundation:generateDebugRFile
+> Task :core:core_google:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_google:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_google:parseDebugLocalResources
+> Task :feature:feature_demo_image:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_google:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_google:generateDebugRFile
+> Task :feature:feature_demo_image:parseDebugLocalResources
+> Task :feature:feature_demo_location:dataBindingMergeDependencyArtifactsDebug
+> Task :feature:feature_demo_image:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_image:generateDebugRFile
+> Task :feature:feature_demo_location:parseDebugLocalResources
+> Task :feature:feature_app:generateDebugRFile
+> Task :app:generateDebugBuildConfig
+> Task :feature:feature_demo_location:dataBindingGenBaseClassesDebug
+> Task :feature:feature_demo_location:generateDebugRFile
+> Task :app:generateDebugRFile
+> Task :feature:feature_app:dataBindingGenBaseClassesDebug
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :core:core_base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_xpopup:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_xpopup:javaPreCompileDebug
+> Task :core:core_log_report:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_base:javaPreCompileDebug
+> Task :core:core_router_api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_log_report:javaPreCompileDebug
+> Task :core:core_utils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_api:javaPreCompileDebug
+> Task :core:core_utils:javaPreCompileDebug
+> Task :feature:feature_app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_image_render:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_operations:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_api:compileDebugKotlin
+> Task :core:core_router_api:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_router_api:bundleLibCompileToJarDebug
+> Task :core:lib_operations:javaPreCompileDebug
+> Task :core:lib_operations:compileDebugKotlin
+> Task :core:core_image_render:javaPreCompileDebug
+> Task :core:lib_operations:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature:feature_demo_common:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_res:javaPreCompileDebug
+> Task :core:lib_operations:bundleLibCompileToJarDebug
+> Task :feature:feature_res:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature:feature_res:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_common:javaPreCompileDebug
+> Task :core:core_document:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_document:javaPreCompileDebug
+> Task :feature:feature_demo_document:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_processor:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_processor:compileKotlin
+> Task :core:core_router_processor:compileJava NO-SOURCE
+> Task :core:core_router_processor:processResources UP-TO-DATE
+> Task :core:core_router_processor:classes UP-TO-DATE
+> Task :core:core_router_processor:jar UP-TO-DATE
+> Task :feature:feature_demo_document:javaPreCompileDebug
+> Task :core:core_archive:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_image_render:compileDebugKotlin
+> Task :core:core_image_render:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_image_render:bundleLibCompileToJarDebug
+> Task :core:core_archive:compileDebugKotlin
+> Task :core:core_archive:javaPreCompileDebug
+> Task :core:core_archive:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_archive:bundleLibCompileToJarDebug
+> Task :core:core_nas:checkKotlinGradlePluginConfigurationErrors SKIPPED
+
+> Task :core:core_utils:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/core/architecture/core_utils/src/main/java/com/wkq/util/KeyboardUtil.kt:18:60 'static field SHOW_IMPLICIT: Int' is deprecated. Deprecated in Java.
+
+> Task :core:core_utils:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_utils:bundleLibCompileToJarDebug
+> Task :core:core_nas:javaPreCompileDebug
+> Task :core:core_usb:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_usb:compileDebugKotlin
+> Task :core:core_usb:javaPreCompileDebug
+> Task :core:core_usb:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_usb:bundleLibCompileToJarDebug
+> Task :core:lib_drop:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_nas:compileDebugKotlin
+> Task :core:core_nas:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_nas:bundleLibCompileToJarDebug
+> Task :core:lib_drop:javaPreCompileDebug
+> Task :core:lib_upload:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_document:compileDebugKotlin
+> Task :core:core_document:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_document:bundleLibCompileToJarDebug
+> Task :core:lib_upload:javaPreCompileDebug
+> Task :feature:feature_demo_files:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_files:javaPreCompileDebug
+> Task :core:core_network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_upload:compileDebugKotlin
+> Task :core:lib_upload:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_upload:bundleLibCompileToJarDebug
+> Task :core:core_network:javaPreCompileDebug
+> Task :feature:feature_demo_foundation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_foundation:javaPreCompileDebug
+> Task :core:core_google:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_google:javaPreCompileDebug
+> Task :feature:feature_demo_google:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_google:javaPreCompileDebug
+> Task :core:core_qrcode:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_drop:compileDebugKotlin
+> Task :core:lib_drop:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_drop:bundleLibCompileToJarDebug
+> Task :core:lib_xpopup:compileDebugKotlin
+> Task :core:core_qrcode:javaPreCompileDebug
+> Task :core:lib_metadata:checkKotlinGradlePluginConfigurationErrors SKIPPED
+
+> Task :core:lib_xpopup:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/animator/BlurAnimator.kt:32:35 'fun setColorFilter(p0: Int, p1: PorterDuff.Mode): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:123:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:161:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:250:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:153:25 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:238:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:349:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:370:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:383:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:386:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:395:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:405:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:423:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:435:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:451:97 'static field SOFT_INPUT_ADJUST_RESIZE: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:490:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:515:92 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:522:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:542:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:621:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:635:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:659:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:665:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:668:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:677:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:686:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:695:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:704:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:714:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:751:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:762:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:822:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:899:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:943:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:951:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:964:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1005:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1010:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1021:45 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:57:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:63:33 The corresponding parameter in the supertype 'OnCloseListener' is named 'y'. This may cause problems when calling this function with named arguments.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:64:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:81:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:85:25 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:102:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:114:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:126:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:144:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:153:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:174:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:87:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:124:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:208:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleHorizontalAttachPopupView.kt:53:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:75:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:85:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:101:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:35:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:48:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:72:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:80:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:96:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:122:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:138:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:166:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:172:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt:37:59 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt:44:66 'static field TYPE_SYSTEM_ALERT: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/HorizontalAttachPopupView.kt:34:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/PositionPopupView.kt:66:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:57:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:60:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:88:36 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:82:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:85:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:98:98 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:188:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:189:72 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:190:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:191:28 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:196:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:205:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:206:72 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:207:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:207:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:208:80 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:211:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:66:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:69:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:81:98 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:118:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:119:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:119:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:125:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:126:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:126:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:92:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:93:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:96:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:97:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:114:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:115:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:116:49 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:117:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:118:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:119:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:53:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:71:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:111:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/InputConfirmPopupView.kt:50:32 'fun setBackgroundDrawable(p0: Drawable!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:367:18 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:513:22 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:520:18 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:79:56 'static field SHOW_IMPLICIT: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:80:41 'static fun getWindowInsetsController(p0: @NonNull() View): @Nullable() WindowInsetsControllerCompat?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:88:17 'fun toggleSoftInput(p0: Int, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:95:41 'static fun getWindowInsetsController(p0: @NonNull() View): @Nullable() WindowInsetsControllerCompat?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:266:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:299:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:318:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:427:52 'static field ACTION_MEDIA_SCANNER_SCAN_FILE: String' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:608:40 'fun isDrawingCacheEnabled(): Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:609:40 'fun willNotCacheDrawing(): Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:610:14 'fun setDrawingCacheEnabled(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:611:14 'fun setWillNotCacheDrawing(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:612:33 'fun getDrawingCache(): Bitmap!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:620:18 'fun buildDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:621:33 'fun getDrawingCache(): Bitmap!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:648:14 'fun destroyDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:649:14 'fun setWillNotCacheDrawing(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:650:14 'fun setDrawingCacheEnabled(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:667:71 'field locale: Locale!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/BubbleLayout.kt:485:32 'fun saveLayer(p0: RectF?, p1: Paint?, p2: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/BubbleLayout.kt:811:49 'fun <T : Parcelable!> getParcelable(p0: String?): T?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PhotoViewContainer.kt:155:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PhotoViewContainer.kt:167:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:272:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:292:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:315:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:334:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PositionPopupContainer.kt:129:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PositionPopupContainer.kt:141:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:161:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:190:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:230:20 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/VerticalRecyclerView.kt:28:42 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+
+> Task :core:lib_xpopup:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_xpopup:bundleLibCompileToJarDebug
+> Task :core:core_network:compileDebugKotlin
+> Task :core:core_network:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_network:bundleLibCompileToJarDebug
+> Task :core:lib_metadata:javaPreCompileDebug
+> Task :feature:feature_demo_image:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_image:javaPreCompileDebug
+> Task :core:core_location:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_qrcode:compileDebugKotlin
+> Task :core:core_qrcode:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_qrcode:bundleLibCompileToJarDebug
+> Task :core:core_location:javaPreCompileDebug
+> Task :core:core_location_address:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_location_address:compileDebugKotlin
+> Task :core:core_location_address:javaPreCompileDebug
+> Task :core:core_location_address:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_location_address:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_location:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_location:javaPreCompileDebug
+> Task :feature:feature_app:javaPreCompileDebug
+> Task :app:javaPreCompileDebug
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :core:core_archive:generateDebugAssets UP-TO-DATE
+> Task :core:core_archive:mergeDebugAssets
+> Task :core:core_base:generateDebugAssets UP-TO-DATE
+> Task :core:core_base:mergeDebugAssets
+> Task :core:core_document:generateDebugAssets UP-TO-DATE
+> Task :core:core_document:mergeDebugAssets
+> Task :core:core_google:generateDebugAssets UP-TO-DATE
+> Task :core:core_google:mergeDebugAssets
+> Task :core:core_image_render:generateDebugAssets UP-TO-DATE
+> Task :core:core_image_render:mergeDebugAssets
+> Task :core:core_location:generateDebugAssets UP-TO-DATE
+> Task :core:core_location:mergeDebugAssets
+> Task :core:core_location_address:generateDebugAssets UP-TO-DATE
+> Task :core:core_location_address:mergeDebugAssets
+> Task :core:core_log_report:generateDebugAssets UP-TO-DATE
+> Task :core:core_log_report:mergeDebugAssets
+> Task :core:core_nas:generateDebugAssets UP-TO-DATE
+> Task :core:core_nas:mergeDebugAssets
+> Task :core:core_network:generateDebugAssets UP-TO-DATE
+> Task :core:core_network:mergeDebugAssets
+> Task :core:core_qrcode:generateDebugAssets UP-TO-DATE
+> Task :core:core_qrcode:mergeDebugAssets
+> Task :core:core_router_api:generateDebugAssets UP-TO-DATE
+> Task :core:core_router_api:mergeDebugAssets
+> Task :core:core_usb:generateDebugAssets UP-TO-DATE
+> Task :core:core_usb:mergeDebugAssets
+> Task :core:core_utils:generateDebugAssets UP-TO-DATE
+> Task :core:core_utils:mergeDebugAssets
+> Task :core:lib_drop:generateDebugAssets UP-TO-DATE
+> Task :core:lib_drop:mergeDebugAssets
+> Task :core:lib_metadata:generateDebugAssets UP-TO-DATE
+> Task :core:lib_metadata:mergeDebugAssets
+> Task :core:lib_operations:generateDebugAssets UP-TO-DATE
+> Task :core:lib_operations:mergeDebugAssets
+> Task :core:lib_upload:generateDebugAssets UP-TO-DATE
+> Task :core:lib_upload:mergeDebugAssets
+> Task :core:lib_xpopup:generateDebugAssets UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugAssets
+> Task :feature:feature_app:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_app:mergeDebugAssets
+> Task :feature:feature_demo_common:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_common:mergeDebugAssets
+> Task :feature:feature_demo_document:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_document:mergeDebugAssets
+> Task :feature:feature_demo_files:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_files:mergeDebugAssets
+> Task :feature:feature_demo_foundation:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_foundation:mergeDebugAssets
+> Task :feature:feature_demo_google:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_google:mergeDebugAssets
+> Task :feature:feature_demo_image:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_image:mergeDebugAssets
+> Task :feature:feature_demo_location:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_location:mergeDebugAssets
+> Task :feature:feature_res:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_res:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :core:core_location:compileDebugKotlin
+> Task :core:core_location:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_location:bundleLibCompileToJarDebug
+> Task :core:core_router_api:bundleLibRuntimeToJarDebug
+> Task :app:compressDebugAssets
+> Task :core:core_utils:bundleLibRuntimeToJarDebug
+> Task :core:lib_xpopup:bundleLibRuntimeToJarDebug
+> Task :feature:feature_res:bundleLibRuntimeToJarDebug
+> Task :core:core_location:bundleLibRuntimeToJarDebug
+> Task :core:core_location_address:bundleLibRuntimeToJarDebug
+> Task :core:core_document:bundleLibRuntimeToJarDebug
+> Task :core:core_image_render:bundleLibRuntimeToJarDebug
+> Task :core:core_qrcode:bundleLibRuntimeToJarDebug
+> Task :core:lib_drop:bundleLibRuntimeToJarDebug
+> Task :core:lib_upload:bundleLibRuntimeToJarDebug
+> Task :core:lib_metadata:kspDebugKotlin
+> Task :core:core_nas:bundleLibRuntimeToJarDebug
+> Task :core:core_usb:bundleLibRuntimeToJarDebug
+> Task :core:core_archive:bundleLibRuntimeToJarDebug
+> Task :core:core_network:bundleLibRuntimeToJarDebug
+> Task :core:lib_operations:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :core:core_archive:writeDebugAarMetadata
+> Task :core:core_base:writeDebugAarMetadata
+> Task :core:core_document:writeDebugAarMetadata
+> Task :core:core_google:writeDebugAarMetadata
+> Task :core:core_image_render:writeDebugAarMetadata
+> Task :core:core_location:writeDebugAarMetadata
+> Task :core:core_location_address:writeDebugAarMetadata
+> Task :core:core_log_report:writeDebugAarMetadata
+> Task :core:core_nas:writeDebugAarMetadata
+> Task :core:core_network:writeDebugAarMetadata
+> Task :core:core_qrcode:writeDebugAarMetadata
+> Task :core:core_router_api:writeDebugAarMetadata
+> Task :core:core_usb:writeDebugAarMetadata
+> Task :core:core_utils:writeDebugAarMetadata
+> Task :core:lib_drop:writeDebugAarMetadata
+> Task :core:lib_metadata:writeDebugAarMetadata
+> Task :core:lib_operations:writeDebugAarMetadata
+> Task :core:lib_upload:writeDebugAarMetadata
+> Task :core:lib_xpopup:writeDebugAarMetadata
+> Task :feature:feature_app:writeDebugAarMetadata
+> Task :feature:feature_demo_common:writeDebugAarMetadata
+> Task :feature:feature_demo_document:writeDebugAarMetadata
+
+> Task :core:core_base:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/core/architecture/core_base/src/main/java/com/wkq/base/widget/MultiSpanTextView.kt:33:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/core/architecture/core_base/src/main/java/com/wkq/base/widget/VerifyCodeInputView.kt:354:65 'static field SHOW_IMPLICIT: Int' is deprecated. Deprecated in Java.
+
+> Task :feature:feature_demo_files:writeDebugAarMetadata
+> Task :feature:feature_demo_foundation:writeDebugAarMetadata
+> Task :core:core_base:compileDebugJavaWithJavac
+> Task :feature:feature_demo_google:writeDebugAarMetadata
+> Task :core:core_base:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_image:writeDebugAarMetadata
+> Task :core:core_base:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_common:compileDebugKotlin
+> Task :feature:feature_demo_common:compileDebugJavaWithJavac
+> Task :feature:feature_demo_common:bundleLibCompileToJarDebug
+
+> Task :core:core_log_report:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:59 'static fun getLayoutDirection(p0: @NonNull() View): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:98 'static field LAYOUT_DIRECTION_RTL: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReport.kt:73:58 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:20:9 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:25:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:26:15 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:28:92 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:32:47 'val id: Long' is deprecated. Deprecated in Java.
+
+> Task :core:core_log_report:compileDebugJavaWithJavac
+> Task :core:core_log_report:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_document:kspDebugKotlin
+
+> Task :core:lib_metadata:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/core/functional/lib_metadata/src/main/java/com/wkq/util/exif/MetadataScrubber.kt:216:47 'static field TAG_LIGHT_SOURCE: Int' is deprecated. Deprecated in Java.
+
+> Task :feature:feature_demo_files:kspDebugKotlin
+> Task :core:core_google:compileDebugKotlin
+> Task :feature:feature_demo_foundation:kspDebugKotlin
+> Task :core:core_google:compileDebugJavaWithJavac
+> Task :core:core_google:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_google:kspDebugKotlin
+> Task :feature:feature_demo_foundation:compileDebugKotlin
+> Task :feature:feature_demo_document:compileDebugKotlin
+> Task :feature:feature_demo_foundation:compileDebugJavaWithJavac
+> Task :feature:feature_demo_files:compileDebugKotlin
+> Task :feature:feature_demo_google:compileDebugKotlin
+> Task :feature:feature_demo_document:compileDebugJavaWithJavac
+> Task :feature:feature_demo_document:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_files:compileDebugJavaWithJavac
+> Task :feature:feature_demo_files:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_foundation:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_google:compileDebugJavaWithJavac
+> Task :core:lib_metadata:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature:feature_demo_google:bundleLibCompileToJarDebug
+> Task :core:lib_metadata:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_document:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_files:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_location:kspDebugKotlin
+> Task :feature:feature_demo_image:kspDebugKotlin
+> Task :feature:feature_demo_foundation:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_google:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_common:bundleLibRuntimeToJarDebug
+> Task :core:core_log_report:bundleLibRuntimeToJarDebug
+> Task :core:core_google:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_location:compileDebugKotlin
+> Task :feature:feature_demo_location:compileDebugJavaWithJavac
+> Task :feature:feature_demo_location:bundleLibCompileToJarDebug
+> Task :feature:feature_demo_location:bundleLibRuntimeToJarDebug
+> Task :core:lib_metadata:bundleLibRuntimeToJarDebug
+> Task :feature:feature_demo_location:writeDebugAarMetadata
+> Task :feature:feature_res:writeDebugAarMetadata
+> Task :feature:feature_demo_image:compileDebugKotlin
+> Task :app:checkDebugAarMetadata
+> Task :feature:feature_demo_image:compileDebugJavaWithJavac
+> Task :feature:feature_demo_image:bundleLibCompileToJarDebug
+> Task :app:mapDebugSourceSetPaths
+> Task :feature:feature_demo_image:bundleLibRuntimeToJarDebug
+> Task :app:compileDebugNavigationResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :core:core_archive:extractDeepLinksDebug
+> Task :core:core_base:extractDeepLinksDebug
+> Task :core:core_archive:processDebugManifest
+> Task :core:core_document:extractDeepLinksDebug
+> Task :core:core_base:processDebugManifest
+> Task :core:core_google:extractDeepLinksDebug
+> Task :core:core_document:processDebugManifest
+> Task :core:core_image_render:extractDeepLinksDebug
+> Task :core:core_google:processDebugManifest
+> Task :core:core_location:extractDeepLinksDebug
+> Task :core:core_image_render:processDebugManifest
+> Task :core:core_location_address:extractDeepLinksDebug
+> Task :core:core_location:processDebugManifest
+> Task :core:core_log_report:extractDeepLinksDebug
+> Task :core:core_location_address:processDebugManifest
+> Task :core:core_nas:extractDeepLinksDebug
+> Task :core:core_log_report:processDebugManifest
+> Task :core:core_network:extractDeepLinksDebug
+> Task :core:core_nas:processDebugManifest
+> Task :core:core_qrcode:extractDeepLinksDebug
+> Task :core:core_network:processDebugManifest
+> Task :core:core_router_api:extractDeepLinksDebug
+> Task :core:core_qrcode:processDebugManifest
+> Task :core:core_router_api:processDebugManifest
+> Task :core:core_usb:extractDeepLinksDebug
+> Task :core:core_utils:extractDeepLinksDebug
+> Task :core:core_usb:processDebugManifest
+> Task :core:lib_drop:extractDeepLinksDebug
+> Task :core:core_utils:processDebugManifest
+> Task :core:lib_metadata:extractDeepLinksDebug
+> Task :core:lib_drop:processDebugManifest
+> Task :core:lib_operations:extractDeepLinksDebug
+> Task :core:lib_metadata:processDebugManifest
+> Task :core:lib_upload:extractDeepLinksDebug
+> Task :core:lib_operations:processDebugManifest
+> Task :core:lib_upload:processDebugManifest
+> Task :core:lib_xpopup:extractDeepLinksDebug
+> Task :feature:feature_app:extractDeepLinksDebug
+> Task :core:lib_xpopup:processDebugManifest
+> Task :feature:feature_demo_common:extractDeepLinksDebug
+> Task :feature:feature_app:processDebugManifest
+> Task :feature:feature_demo_common:processDebugManifest
+> Task :feature:feature_demo_document:extractDeepLinksDebug
+> Task :feature:feature_demo_files:extractDeepLinksDebug
+> Task :feature:feature_demo_document:processDebugManifest
+> Task :feature:feature_demo_files:processDebugManifest
+> Task :feature:feature_demo_foundation:extractDeepLinksDebug
+> Task :feature:feature_demo_foundation:processDebugManifest
+> Task :feature:feature_demo_google:extractDeepLinksDebug
+> Task :feature:feature_demo_image:extractDeepLinksDebug
+> Task :feature:feature_demo_google:processDebugManifest
+> Task :feature:feature_demo_location:extractDeepLinksDebug
+> Task :feature:feature_demo_image:processDebugManifest
+> Task :feature:feature_res:extractDeepLinksDebug
+> Task :feature:feature_demo_location:processDebugManifest
+> Task :core:core_archive:mapDebugSourceSetPaths
+> Task :feature:feature_res:processDebugManifest
+> Task :core:core_archive:compileDebugLibraryResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :core:core_base:mapDebugSourceSetPaths
+> Task :app:processDebugManifestForPackage
+> Task :core:core_document:mapDebugSourceSetPaths
+> Task :core:core_document:compileDebugLibraryResources
+> Task :core:core_base:compileDebugLibraryResources
+> Task :core:core_google:mapDebugSourceSetPaths
+> Task :core:core_google:compileDebugLibraryResources
+> Task :core:core_image_render:mapDebugSourceSetPaths
+> Task :core:core_image_render:compileDebugLibraryResources
+> Task :core:core_location:mapDebugSourceSetPaths
+> Task :core:core_location:compileDebugLibraryResources
+> Task :core:core_location_address:mapDebugSourceSetPaths
+> Task :core:core_location_address:compileDebugLibraryResources
+> Task :core:core_log_report:mapDebugSourceSetPaths
+> Task :core:core_nas:mapDebugSourceSetPaths
+> Task :core:core_log_report:compileDebugLibraryResources
+> Task :core:core_nas:compileDebugLibraryResources
+> Task :core:core_network:mapDebugSourceSetPaths
+> Task :core:core_network:compileDebugLibraryResources
+> Task :core:core_qrcode:mapDebugSourceSetPaths
+> Task :core:core_qrcode:compileDebugLibraryResources
+> Task :core:core_router_api:mapDebugSourceSetPaths
+> Task :core:core_router_api:compileDebugLibraryResources
+> Task :core:core_usb:mapDebugSourceSetPaths
+> Task :core:core_usb:compileDebugLibraryResources
+> Task :core:core_utils:mapDebugSourceSetPaths
+> Task :core:core_utils:compileDebugLibraryResources
+> Task :core:lib_drop:mapDebugSourceSetPaths
+> Task :core:lib_drop:compileDebugLibraryResources
+> Task :core:lib_metadata:mapDebugSourceSetPaths
+> Task :core:lib_metadata:compileDebugLibraryResources
+> Task :core:lib_operations:mapDebugSourceSetPaths
+> Task :core:lib_operations:compileDebugLibraryResources
+> Task :core:lib_upload:mapDebugSourceSetPaths
+> Task :core:lib_upload:compileDebugLibraryResources
+> Task :core:lib_xpopup:mapDebugSourceSetPaths
+> Task :feature:feature_app:mapDebugSourceSetPaths
+> Task :core:lib_xpopup:compileDebugLibraryResources
+> Task :feature:feature_demo_common:mapDebugSourceSetPaths
+> Task :feature:feature_app:compileDebugLibraryResources
+> Task :feature:feature_demo_document:mapDebugSourceSetPaths
+> Task :feature:feature_demo_common:compileDebugLibraryResources
+> Task :feature:feature_demo_files:mapDebugSourceSetPaths
+> Task :feature:feature_demo_document:compileDebugLibraryResources
+> Task :feature:feature_demo_foundation:mapDebugSourceSetPaths
+> Task :feature:feature_demo_files:compileDebugLibraryResources
+> Task :feature:feature_demo_google:mapDebugSourceSetPaths
+> Task :feature:feature_demo_foundation:compileDebugLibraryResources
+> Task :feature:feature_demo_google:compileDebugLibraryResources
+> Task :feature:feature_demo_image:mapDebugSourceSetPaths
+> Task :feature:feature_demo_location:mapDebugSourceSetPaths
+> Task :feature:feature_demo_image:compileDebugLibraryResources
+> Task :feature:feature_demo_location:compileDebugLibraryResources
+> Task :feature:feature_res:mapDebugSourceSetPaths
+> Task :feature:feature_res:compileDebugLibraryResources
+> Task :core:core_archive:processDebugJavaRes
+> Task :core:core_base:processDebugJavaRes
+> Task :core:core_document:processDebugJavaRes
+> Task :core:core_google:processDebugJavaRes
+> Task :core:core_image_render:processDebugJavaRes
+> Task :core:core_location:processDebugJavaRes
+> Task :core:core_location_address:processDebugJavaRes
+> Task :core:core_log_report:processDebugJavaRes
+> Task :core:core_nas:processDebugJavaRes
+
+> Task :feature:feature_app:compileDebugKotlin
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/CatalogFragment.kt:32:80 'fun bundleOf(vararg pairs: Pair<String, Any?>): Bundle' is deprecated. This method does not provide type safety at compile time. Use the platform `Bundle` class directly instead.
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt:17:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt:18:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/DemoCatalog.kt:19:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibrarySection.kt:10:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/feature/feature_app/src/main/java/com/wkq/dev/feature/app/catalog/LibrarySection.kt:11:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+
+> Task :core:core_network:processDebugJavaRes
+> Task :feature:feature_app:compileDebugJavaWithJavac
+> Task :feature:feature_app:bundleLibCompileToJarDebug
+> Task :feature:feature_app:bundleLibRuntimeToJarDebug
+> Task :core:core_qrcode:processDebugJavaRes
+> Task :core:core_router_api:processDebugJavaRes
+> Task :core:core_usb:processDebugJavaRes
+> Task :core:core_utils:processDebugJavaRes
+> Task :core:lib_drop:processDebugJavaRes
+> Task :core:lib_metadata:processDebugJavaRes
+> Task :core:lib_operations:processDebugJavaRes
+> Task :core:lib_upload:processDebugJavaRes
+> Task :core:lib_xpopup:processDebugJavaRes
+> Task :feature:feature_app:processDebugJavaRes
+> Task :feature:feature_demo_common:processDebugJavaRes
+> Task :feature:feature_demo_document:processDebugJavaRes
+> Task :feature:feature_demo_files:processDebugJavaRes
+> Task :feature:feature_demo_foundation:processDebugJavaRes
+> Task :feature:feature_demo_google:processDebugJavaRes
+> Task :feature:feature_demo_image:processDebugJavaRes
+> Task :feature:feature_demo_location:processDebugJavaRes
+> Task :feature:feature_res:processDebugJavaRes NO-SOURCE
+> Task :app:processDebugResources
+> Task :app:compileDebugKotlin
+> Task :app:checkDebugDuplicateClasses
+> Task :app:compileDebugJavaWithJavac
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :feature:feature_app:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_location:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_document:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_image:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_files:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_foundation:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :feature:feature_demo_google:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_common:bundleLibRuntimeToDirDebug
+> Task :core:core_router_api:bundleLibRuntimeToDirDebug
+> Task :core:core_log_report:bundleLibRuntimeToDirDebug
+> Task :core:core_google:bundleLibRuntimeToDirDebug
+> Task :core:core_base:bundleLibRuntimeToDirDebug
+> Task :core:core_utils:bundleLibRuntimeToDirDebug
+> Task :feature:feature_res:bundleLibRuntimeToDirDebug
+> Task :core:core_location:bundleLibRuntimeToDirDebug
+> Task :core:lib_xpopup:bundleLibRuntimeToDirDebug
+> Task :core:core_location_address:bundleLibRuntimeToDirDebug
+> Task :core:core_document:bundleLibRuntimeToDirDebug
+> Task :core:core_image_render:bundleLibRuntimeToDirDebug
+> Task :core:core_qrcode:bundleLibRuntimeToDirDebug
+> Task :core:lib_metadata:bundleLibRuntimeToDirDebug
+> Task :core:lib_drop:bundleLibRuntimeToDirDebug
+> Task :core:lib_upload:bundleLibRuntimeToDirDebug
+> Task :core:core_nas:bundleLibRuntimeToDirDebug
+> Task :core:core_usb:bundleLibRuntimeToDirDebug
+> Task :core:core_archive:bundleLibRuntimeToDirDebug
+> Task :core:core_guide:bundleLibRuntimeToDirDebug
+> Task :core:core_network:bundleLibRuntimeToDirDebug
+> Task :core:lib_operations:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :core:core_archive:mergeDebugJniLibFolders
+> Task :core:core_archive:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_archive:copyDebugJniLibsProjectOnly
+> Task :app:mergeProjectDexDebug
+> Task :core:core_base:mergeDebugJniLibFolders
+> Task :core:core_base:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_base:copyDebugJniLibsProjectOnly
+> Task :core:core_document:mergeDebugJniLibFolders
+> Task :core:core_document:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_document:copyDebugJniLibsProjectOnly
+> Task :core:core_google:mergeDebugJniLibFolders
+> Task :core:core_google:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_google:copyDebugJniLibsProjectOnly
+> Task :core:core_guide:mergeDebugJniLibFolders
+> Task :core:core_guide:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_guide:copyDebugJniLibsProjectOnly
+> Task :core:core_image_render:mergeDebugJniLibFolders
+> Task :core:core_image_render:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_image_render:copyDebugJniLibsProjectOnly
+> Task :core:core_location:mergeDebugJniLibFolders
+> Task :core:core_location:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_location:copyDebugJniLibsProjectOnly
+> Task :core:core_location_address:mergeDebugJniLibFolders
+> Task :core:core_location_address:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_location_address:copyDebugJniLibsProjectOnly
+> Task :core:core_log_report:mergeDebugJniLibFolders
+> Task :core:core_log_report:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_log_report:copyDebugJniLibsProjectOnly
+> Task :core:core_nas:mergeDebugJniLibFolders
+> Task :core:core_nas:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_nas:copyDebugJniLibsProjectOnly
+> Task :core:core_network:mergeDebugJniLibFolders
+> Task :core:core_network:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_network:copyDebugJniLibsProjectOnly
+> Task :core:core_qrcode:mergeDebugJniLibFolders
+> Task :core:core_qrcode:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_qrcode:copyDebugJniLibsProjectOnly
+> Task :app:mergeLibDexDebug
+> Task :core:core_router_api:mergeDebugJniLibFolders
+> Task :core:core_router_api:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_router_api:copyDebugJniLibsProjectOnly
+> Task :core:core_usb:mergeDebugJniLibFolders
+> Task :core:core_usb:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_usb:copyDebugJniLibsProjectOnly
+> Task :core:core_utils:mergeDebugJniLibFolders
+> Task :core:core_utils:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_utils:copyDebugJniLibsProjectOnly
+> Task :core:lib_drop:mergeDebugJniLibFolders
+> Task :core:lib_drop:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_drop:copyDebugJniLibsProjectOnly
+> Task :app:mergeExtDexDebug
+> Task :core:lib_metadata:mergeDebugJniLibFolders
+> Task :core:lib_operations:mergeDebugJniLibFolders
+> Task :core:lib_operations:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_operations:copyDebugJniLibsProjectOnly
+> Task :core:lib_upload:mergeDebugJniLibFolders
+> Task :core:lib_upload:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_upload:copyDebugJniLibsProjectOnly
+> Task :core:lib_xpopup:mergeDebugJniLibFolders
+> Task :core:lib_xpopup:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_xpopup:copyDebugJniLibsProjectOnly
+> Task :feature:feature_app:mergeDebugJniLibFolders
+> Task :feature:feature_app:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_app:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_common:mergeDebugJniLibFolders
+> Task :feature:feature_demo_common:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_common:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_document:mergeDebugJniLibFolders
+> Task :feature:feature_demo_document:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_document:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_files:mergeDebugJniLibFolders
+> Task :feature:feature_demo_files:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_files:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_foundation:mergeDebugJniLibFolders
+> Task :feature:feature_demo_foundation:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_foundation:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_google:mergeDebugJniLibFolders
+> Task :feature:feature_demo_google:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_google:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_image:mergeDebugJniLibFolders
+> Task :feature:feature_demo_image:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_image:copyDebugJniLibsProjectOnly
+> Task :feature:feature_demo_location:mergeDebugJniLibFolders
+> Task :feature:feature_demo_location:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_location:copyDebugJniLibsProjectOnly
+> Task :feature:feature_res:mergeDebugJniLibFolders
+> Task :feature:feature_res:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_res:copyDebugJniLibsProjectOnly
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :feature:feature_app:preDebugUnitTestBuild UP-TO-DATE
+> Task :feature:feature_app:javaPreCompileDebugUnitTest
+> Task :core:core_guide:sourceReleaseJar
+> Task :core:core_guide:generateMetadataFileForReleasePublication
+> Task :core:core_guide:generatePomFileForReleasePublication
+> Task :feature:feature_app:generateDebugUnitTestStubRFile
+> Task :core:core_guide:publishReleasePublicationToDevLibLocalRepository
+> Task :core:lib_metadata:mergeDebugNativeLibs
+> Task :feature:feature_app:compileDebugUnitTestKotlin
+> Task :feature:feature_app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :feature:feature_app:processDebugUnitTestJavaRes
+> Task :core:lib_metadata:copyDebugJniLibsProjectOnly
+
+> Task :feature:feature_app:testDebugUnitTest FAILED
+
+DirectoryPolicyTest > functionalLibrariesAreCompleteAndUnique FAILED
+    java.lang.AssertionError at DirectoryPolicyTest.kt:11
+
+DirectoryPolicyTest > sectionsAreDisjointAndCoverEveryPublicLibrary FAILED
+    java.lang.AssertionError at DirectoryPolicyTest.kt:43
+
+6 tests completed, 2 failed
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':feature:feature_app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///C:/work/AI/DevLib/feature/feature_app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+
+BUILD FAILED in 3m 29s
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+689 actionable tasks: 686 executed, 3 up-to-date

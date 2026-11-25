@@ -1,0 +1,3 @@
+WARN: theme: targetSdk 37 should document theme system bar item: statusBarColor.
+WARN: theme: targetSdk 37 should document theme system bar item: navigationBarColor.
+build validation passed: 2 warning(s)

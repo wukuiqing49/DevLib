@@ -12,7 +12,7 @@ Create evidence-based promotional material for mobile apps, websites, desktop so
 | [Strategy](../.agents/skills/promo-video-publisher/references/strategy.md) | Product evidence, audience, search research, story and CTA |
 | [Production](../.agents/skills/promo-video-publisher/references/production.md) | Real recordings, editing, text, export and verification |
 | [Music](../.agents/skills/promo-video-publisher/references/music.md) | Track selection, promotional rights, mixing and audible delivery |
-| [Publishing](../.agents/skills/promo-video-publisher/references/publishing.md) | Account actions, two placements, recovery and destination checks |
+| [Publishing](../.agents/skills/promo-video-publisher/references/publishing.md) | Account actions, identity and CTA routes, recovery and destination checks |
 | [Timeline](../.agents/skills/promo-video-publisher/assets/timeline-template.json) | Shared source/output timing and text styles |
 | [Status record](../.agents/skills/promo-video-publisher/assets/publishing-status-template.md) | Evidence, pending work and safe resumption |
 
@@ -37,7 +37,7 @@ Resume an existing campaign:
 
 ## Delivery behavior
 
-The default description/comment package applies to TikTok, YouTube, Instagram and Threads; its exact execution and exceptions are maintained in the publishing reference. Threads uses a post body and an author reply under that post, with client-specific cover, music and link checks. The action may be downloading an app, visiting a website, reading documentation or another verified product-specific route. Profile identity remains distinct from a single product.
+Lead with the official product name and verified developer/publisher, then the destination URL. Choose a clickable, copyable or accurate search route from the actual platform/content/account capabilities before writing copy. A comment/reply is optional unless requested, required for credits or useful to the route; preserve explicit requests for both placements. Threads replies belong under the confirmed original post. Verify saved text, expansion/discoverability, owner and visitor visibility, clickability and final product identity separately. Respect the user's developer-profile identity and profile-link preferences; do not promise that changing account type unlocks external links.
 
 Narration-free recordings use authored explanations rather than invented speech transcripts, with suitable licensed background music by default. Preserve an explicit silent choice and meaningful source audio. Select and listen to an actual track, record its source and rights, and verify audible playback separately for each platform. Platform-library music is not automatically licensed for cross-platform reuse. AI narration is optional. The timeline template uses source and output timestamps so captions can follow cuts and speed changes; it is not a renderer. SRT/VTT carries timed text, while layout and style remain in the render/editor configuration.
 

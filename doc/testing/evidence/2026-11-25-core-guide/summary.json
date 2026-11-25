@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-25",
+  "module": ":core:core_guide",
+  "compileSdk": 37,
+  "demoTargetSdk": 37,
+  "minSdk": 26,
+  "tests": {
+    "guide": {
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "host": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "deviceTesting": "not run; project policy",
+  "remotePublication": "not performed",
+  "allProjectI18n": "existing 93 missing zh-CN keys; new guide resources passed",
+  "releaseAar": {
+    "path": "core/functional/core_guide/build/outputs/aar/core_guide-release.aar",
+    "sha256": "9f8026345eda9ce4e0d07592bb455c0cc3cbefa05cd87a3f456566ba9f65f998"
+  },
+  "demoApk": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "sha256": "4fbae153089282e2d21d1f1d04387db2aa1f5cfed80960a033ae3b5af201bcc5"
+  },
+  "consumer": "passed; SHA-256 matches latest published AAR; cached toolchain offline rebuild"
+}

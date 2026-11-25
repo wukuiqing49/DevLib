@@ -4,7 +4,8 @@ Use this template for the requested scope only. Remove unused sections. Do not m
 
 ## Campaign
 
-- Product / owner / supported systems:
+- Official product name / verified developer or publisher / supported systems:
+- Excluded platforms / prohibited cross-posting:
 - Mode and requested scope:
 - Audience / market / content language:
 - Primary action / verified destination:
@@ -39,7 +40,13 @@ For multiple videos, complete one row per video before applying music. Reuse exi
 - Audio application: embedded file revision or in-app selection; source offset / output interval / gain / fades / ducking:
 - Music decision: applied / provisional selection / explicit silent preference / blocked, with reason:
 - Author comment source / ID where available:
-- Destination / parameters / available measurement:
+- QR payload / final-frame and compressed-frame decode evidence / same-phone limitation:
+- Real store identity / official badge source / availability checked date:
+- Like requested / current state / action and readback evidence:
+- Primary CTA route / exact search terms or clickable placement / capability source and checked date:
+- Developer identity verification source / profile-link preference:
+- Author comment: requested / credits / useful supplement / not needed, with reason:
+- Destination / parameters retained or removed and attribution impact / available measurement:
 
 | Item | State | Evidence and checked time | Remaining action |
 | --- | --- | --- | --- |
@@ -51,12 +58,18 @@ For multiple videos, complete one row per video before applying music. Reuse exi
 | Description full-text readback | Not checked | | |
 | Author comment full-text readback | Not checked | | |
 | Comment visitor visibility / chronological position | Not checked | | |
+| Like, if requested | Not checked | | |
+| QR final-video decode / destination, if used | Not checked | | |
+| Official store presentation / applicable AI disclosure | Not checked | | |
 | Pinning, if requested | Not checked | | |
 | Cover and text display | Not checked | | |
 | Music rights / required attribution | Not checked | | |
 | Current track applied / saved / processing | Not checked | | |
 | Final audible platform playback / mix review | Not checked | | |
-| CTA reachability / URL clickability | Not checked | | |
+| Product + developer identity in saved CTA | Not checked | | |
+| CTA discoverability before / after expansion | Not checked | | |
+| URL saved intact / original-placement clickability | Not checked | | |
+| Selected click / copy / search route reaches correct product + developer | Not checked | | |
 | Requested mobile / desktop coverage | Not checked | | |
 | Measurement integration, if in scope | Not checked | | |
 

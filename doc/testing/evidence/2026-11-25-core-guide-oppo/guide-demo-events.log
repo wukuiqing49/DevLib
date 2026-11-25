@@ -1,0 +1,20 @@
+--------- beginning of crash
+--------- beginning of system
+--------- beginning of main
+11-25 10:54:49.537 20568 20568 I GuideDemo: step=intro index=1
+11-25 11:04:14.067 21306 21306 I GuideDemo: step=start index=0
+11-25 11:04:37.881 21306 21306 I GuideDemo: step=intro index=1
+11-25 11:04:40.688 21306 21306 I GuideDemo: step=start index=0
+11-25 11:04:45.519 21306 21306 I GuideDemo: step=intro index=1
+11-25 11:04:48.407 21306 21306 I GuideDemo: finished=COMPLETED
+11-25 11:04:51.177 21306 21306 I GuideDemo: step=start index=0
+11-25 11:05:47.234 21306 21306 I GuideDemo: finished=SKIPPED
+11-25 11:05:49.975 21306 21306 I GuideDemo: step=start index=0
+11-25 11:05:53.557 21306 21306 I GuideDemo: finished=BACK
+11-25 11:05:56.394 21306 21306 I GuideDemo: step=start index=0
+11-25 11:06:10.917 21306 21306 I GuideDemo: finished=BACK
+11-25 11:06:17.655 21306 21306 I GuideDemo: fullscreen finished=BACK
+11-25 11:08:16.419 21306 21306 I GuideDemo: dialog finished=COMPLETED
+11-25 11:08:20.125 21306 21306 I GuideDemo: step=start index=0
+11-25 11:10:38.154 21306 21306 I GuideDemo: finished=BACK
+11-25 11:10:41.024 21306 21306 I GuideDemo: step=start index=0

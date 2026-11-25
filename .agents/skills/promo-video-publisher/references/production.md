@@ -48,6 +48,10 @@ Keep a clean edited master and the intended delivery version, plus a music-free 
 
 Check current destination requirements when necessary: container, codecs, dimensions, aspect ratio, frame rate, duration and audio. Do not treat a prior project's export settings as universal platform limits.
 
+## Download conversion assets
+
+When store presentation or QR conversion is requested, follow [publishing](publishing.md#qr-and-store-presentation) for identity, official badge selection and final-video QR decoding. Preserve the original recording/AI master and create a distinct delivery revision; do not obscure essential product evidence with conversion overlays.
+
 ## Verification and archive
 
 Check media metadata, decode the entire export, and visually inspect every text cue plus the opening, key results, transitions and ending. Check spelling, contrast, timing, clipping, duplicate captions and CTA accuracy. A successful encode is not visual acceptance.

@@ -1,0 +1,11 @@
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:172 DOC001 ERROR buildLogLine: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:179 DOC001 ERROR getCallerInfo: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:189 DOC001 ERROR writeAsync: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:195 DOC001 ERROR writeLine: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:207 DOC001 ERROR levelName: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:218 DOC001 ERROR rotateLogFileIfNeeded: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:246 DOC001 ERROR cleanOldLogs: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:325 DOC001 ERROR flushInternal: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:332 DOC001 ERROR closeInternal: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+core/architecture/core_utils/src/main/java/com/wkq/util/log/ALog.kt:341 DOC001 ERROR runSync: ����/����ȱ�ٽ��ڵ����� KDoc/JavaDoc
+Source audit: 3 files, 10 findings; manual semantic/adaptation review still required.
