@@ -1,0 +1,368 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:lib_xpopup:preBuild UP-TO-DATE
+> Task :core:lib_xpopup:preReleaseBuild UP-TO-DATE
+> Task :core:lib_xpopup:checkReleaseAarMetadata
+> Task :core:lib_xpopup:mergeReleaseJniLibFolders
+> Task :core:lib_xpopup:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:lib_xpopup:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:lib_xpopup:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:lib_xpopup:extractDeepLinksForAarRelease
+> Task :core:lib_xpopup:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_xpopup:generateReleaseResources
+> Task :core:lib_xpopup:packageReleaseResources
+> Task :core:lib_xpopup:processReleaseNavigationResources
+> Task :core:lib_xpopup:generateReleaseAssets UP-TO-DATE
+> Task :core:lib_xpopup:mergeReleaseAssets
+> Task :core:lib_xpopup:javaPreCompileRelease
+> Task :core:lib_xpopup:prepareLintJarForPublish
+> Task :core:lib_xpopup:prepareReleaseArtProfile
+> Task :core:lib_xpopup:writeReleaseAarMetadata
+> Task :core:lib_xpopup:parseReleaseLocalResources
+> Task :core:lib_xpopup:processReleaseManifest
+> Task :core:lib_xpopup:sourceReleaseJar
+> Task :core:lib_xpopup:generatePomFileForReleasePublication
+> Task :core:core_base:preBuild UP-TO-DATE
+> Task :core:core_base:preReleaseBuild UP-TO-DATE
+> Task :core:lib_xpopup:generateReleaseRFile
+> Task :core:core_base:checkReleaseAarMetadata
+> Task :core:core_base:mergeReleaseJniLibFolders
+> Task :core:core_base:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_base:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_base:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:core_base:extractDeepLinksForAarRelease
+> Task :core:core_base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_base:dataBindingMergeDependencyArtifactsRelease
+> Task :core:core_base:generateReleaseResources
+> Task :core:core_base:packageReleaseResources
+> Task :core:core_base:processReleaseNavigationResources
+> Task :core:core_base:generateReleaseAssets UP-TO-DATE
+> Task :core:core_base:mergeReleaseAssets
+> Task :core:core_base:javaPreCompileRelease
+> Task :core:core_base:prepareLintJarForPublish
+> Task :core:core_base:prepareReleaseArtProfile
+> Task :core:core_base:parseReleaseLocalResources
+> Task :core:core_base:dataBindingGenBaseClassesRelease
+> Task :core:core_base:generateReleaseRFile
+> Task :core:core_base:writeReleaseAarMetadata
+> Task :core:core_base:processReleaseManifest
+> Task :core:core_base:sourceReleaseJar
+> Task :core:core_base:generatePomFileForReleasePublication
+> Task :core:core_log_report:preBuild UP-TO-DATE
+> Task :core:core_log_report:preReleaseBuild UP-TO-DATE
+> Task :core:core_log_report:checkReleaseAarMetadata
+> Task :core:core_log_report:mergeReleaseJniLibFolders
+> Task :core:core_log_report:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_log_report:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_log_report:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:core_log_report:extractDeepLinksForAarRelease
+> Task :core:core_log_report:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_log_report:dataBindingMergeDependencyArtifactsRelease
+> Task :core:core_log_report:generateReleaseResources
+> Task :core:core_log_report:packageReleaseResources
+> Task :core:core_log_report:processReleaseNavigationResources
+> Task :core:core_log_report:generateReleaseAssets UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseAssets
+> Task :core:core_log_report:javaPreCompileRelease
+> Task :core:core_log_report:parseReleaseLocalResources
+> Task :core:core_log_report:prepareLintJarForPublish
+> Task :core:core_log_report:dataBindingGenBaseClassesRelease
+> Task :core:core_log_report:prepareReleaseArtProfile
+> Task :core:core_log_report:generateReleaseRFile
+> Task :core:core_log_report:writeReleaseAarMetadata
+> Task :core:core_log_report:processReleaseManifest
+> Task :core:core_log_report:sourceReleaseJar
+> Task :core:core_log_report:generatePomFileForReleasePublication
+> Task :core:core_network:preBuild UP-TO-DATE
+> Task :core:core_network:preReleaseBuild UP-TO-DATE
+> Task :core:core_network:checkReleaseAarMetadata
+> Task :core:core_network:mergeReleaseJniLibFolders
+> Task :core:core_network:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_network:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_network:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:core_network:extractDeepLinksForAarRelease
+> Task :core:core_network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_network:dataBindingMergeDependencyArtifactsRelease
+> Task :core:core_network:generateReleaseResources
+> Task :core:core_network:packageReleaseResources
+> Task :core:core_network:processReleaseNavigationResources
+> Task :core:core_network:generateReleaseAssets UP-TO-DATE
+> Task :core:core_network:mergeReleaseAssets
+> Task :core:core_network:parseReleaseLocalResources
+> Task :core:core_network:dataBindingGenBaseClassesRelease
+> Task :core:core_network:javaPreCompileRelease
+> Task :core:core_network:generateReleaseRFile
+> Task :core:core_network:prepareLintJarForPublish
+> Task :core:core_network:prepareReleaseArtProfile
+> Task :core:core_network:writeReleaseAarMetadata
+> Task :core:core_network:processReleaseManifest
+> Task :core:core_network:sourceReleaseJar
+> Task :core:core_network:generatePomFileForReleasePublication
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preReleaseBuild UP-TO-DATE
+> Task :core:core_guide:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_guide:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_guide:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_guide:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseResources UP-TO-DATE
+> Task :core:core_guide:packageReleaseResources UP-TO-DATE
+> Task :core:core_guide:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseRFile UP-TO-DATE
+> Task :core:core_guide:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_guide:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_guide:generateReleaseAssets UP-TO-DATE
+> Task :core:core_guide:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_guide:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_guide:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_guide:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_guide:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_guide:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_guide:processReleaseManifest UP-TO-DATE
+> Task :core:core_guide:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_guide:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_guide:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:bundleReleaseAar UP-TO-DATE
+> Task :core:core_guide:sourceReleaseJar UP-TO-DATE
+> Task :core:core_guide:generateMetadataFileForReleasePublication
+> Task :core:core_guide:generatePomFileForReleasePublication
+> Task :core:core_guide:publishReleasePublicationToMavenLocal
+> Task :core:core_network:compileReleaseKotlin
+> Task :core:core_network:extractReleaseAnnotations
+> Task :core:core_network:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:core_network:mergeReleaseGeneratedProguardFiles
+> Task :core:core_network:mergeReleaseConsumerProguardFiles
+> Task :core:core_network:processReleaseJavaRes
+> Task :core:core_network:mergeReleaseJavaResource
+> Task :core:core_network:syncReleaseLibJars
+> Task :core:core_network:bundleReleaseAar
+> Task :core:core_network:generateMetadataFileForReleasePublication
+> Task :core:core_network:publishReleasePublicationToMavenLocal
+> Task :core:lib_xpopup:compileReleaseKotlin
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/animator/BlurAnimator.kt:32:35 'fun setColorFilter(p0: Int, p1: PorterDuff.Mode): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:123:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:161:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/AttachPopupView.kt:250:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:153:25 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:238:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:349:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:370:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:383:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:386:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:395:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:405:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:423:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:435:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:451:97 'static field SOFT_INPUT_ADJUST_RESIZE: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:490:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:515:92 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:522:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:542:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:621:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:635:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:659:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:665:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:668:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:677:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:686:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:695:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:704:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:714:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:751:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:762:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:822:17 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:899:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:943:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:951:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:964:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1005:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1010:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BasePopupView.kt:1021:45 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:57:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:63:33 The corresponding parameter in the supertype 'OnCloseListener' is named 'y'. This may cause problems when calling this function with named arguments.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:64:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:81:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:85:25 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:102:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:114:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:126:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:144:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:153:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BottomPopupView.kt:174:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:87:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:124:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleAttachPopupView.kt:208:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/BubbleHorizontalAttachPopupView.kt:53:25 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:75:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:85:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/CenterPopupView.kt:101:17 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:35:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:48:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:72:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:80:21 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:96:21 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:122:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:138:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:166:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/DrawerPopupView.kt:172:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt:37:59 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/FullScreenDialog.kt:44:66 'static field TYPE_SYSTEM_ALERT: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/HorizontalAttachPopupView.kt:34:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/core/PositionPopupView.kt:66:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:57:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:60:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/AttachListPopupView.kt:88:36 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:82:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:85:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:98:98 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:188:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:189:72 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:190:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:191:28 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:196:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:205:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:206:72 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:207:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:207:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:208:80 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/BottomListPopupView.kt:211:32 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:66:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:69:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:81:98 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:118:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:119:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:119:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:125:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:126:9 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'View?'. This will become an error in language version 2.3. See https://youtrack.jetbrains.com/issue/KT-71718.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/CenterListPopupView.kt:126:84 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:92:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:93:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:96:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:97:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:114:48 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:115:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:116:49 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:117:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:118:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/ConfirmPopupView.kt:119:76 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:53:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:71:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/FullScreenPopupView.kt:111:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/impl/InputConfirmPopupView.kt:50:32 'fun setBackgroundDrawable(p0: Drawable!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:367:18 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:513:22 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/photoview/PhotoViewAttacher.kt:520:18 'var isZoomEnabled: Boolean' is deprecated.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:79:56 'static field SHOW_IMPLICIT: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:80:41 'static fun getWindowInsetsController(p0: @NonNull() View): @Nullable() WindowInsetsControllerCompat?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:88:17 'fun toggleSoftInput(p0: Int, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/KeyboardUtils.kt:95:41 'static fun getWindowInsetsController(p0: @NonNull() View): @Nullable() WindowInsetsControllerCompat?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:266:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:299:13 Condition is always 'false'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:318:13 Condition is always 'true'.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:427:52 'static field ACTION_MEDIA_SCANNER_SCAN_FILE: String' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:608:40 'fun isDrawingCacheEnabled(): Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:609:40 'fun willNotCacheDrawing(): Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:610:14 'fun setDrawingCacheEnabled(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:611:14 'fun setWillNotCacheDrawing(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:612:33 'fun getDrawingCache(): Bitmap!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:620:18 'fun buildDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:621:33 'fun getDrawingCache(): Bitmap!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:648:14 'fun destroyDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:649:14 'fun setWillNotCacheDrawing(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:650:14 'fun setDrawingCacheEnabled(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/util/XPopupUtils.kt:667:71 'field locale: Locale!' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/BubbleLayout.kt:485:32 'fun saveLayer(p0: RectF?, p1: Paint?, p2: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/BubbleLayout.kt:811:49 'fun <T : Parcelable!> getParcelable(p0: String?): T?' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PhotoViewContainer.kt:155:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PhotoViewContainer.kt:167:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:272:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:292:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:315:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PopupDrawerLayout.kt:334:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PositionPopupContainer.kt:129:28 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/PositionPopupContainer.kt:141:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:161:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:190:24 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/SmartDragLayout.kt:230:20 'static fun postInvalidateOnAnimation(p0: @NonNull() View): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/architecture/lib_xpopup/src/main/java/com/lxj/xpopup/widget/VerticalRecyclerView.kt:28:42 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+
+> Task :core:lib_xpopup:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:lib_xpopup:mergeReleaseGeneratedProguardFiles
+> Task :core:lib_xpopup:mergeReleaseConsumerProguardFiles
+> Task :core:lib_xpopup:processReleaseJavaRes
+> Task :core:lib_xpopup:mergeReleaseJavaResource
+> Task :core:lib_xpopup:bundleLibCompileToJarRelease
+
+> Task :core:core_base:compileReleaseKotlin
+w: file:///C:/work/AI/DevLib/core/architecture/core_base/src/main/java/com/wkq/base/widget/MultiSpanTextView.kt:33:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/work/AI/DevLib/core/architecture/core_base/src/main/java/com/wkq/base/widget/VerifyCodeInputView.kt:354:65 'static field SHOW_IMPLICIT: Int' is deprecated. Deprecated in Java.
+
+> Task :core:core_base:extractReleaseAnnotations
+> Task :core:lib_xpopup:extractReleaseAnnotations
+> Task :core:core_base:compileReleaseJavaWithJavac
+> Task :core:core_base:mergeReleaseGeneratedProguardFiles
+> Task :core:core_base:mergeReleaseConsumerProguardFiles
+> Task :core:core_base:processReleaseJavaRes
+> Task :core:core_base:mergeReleaseJavaResource
+> Task :core:core_base:bundleLibCompileToJarRelease
+> Task :core:core_base:syncReleaseLibJars
+> Task :core:core_base:bundleReleaseAar
+> Task :core:core_base:generateMetadataFileForReleasePublication
+> Task :core:core_base:publishReleasePublicationToMavenLocal
+> Task :core:lib_xpopup:syncReleaseLibJars
+> Task :core:lib_xpopup:bundleReleaseAar
+> Task :core:lib_xpopup:generateMetadataFileForReleasePublication
+> Task :core:lib_xpopup:publishReleasePublicationToMavenLocal
+
+> Task :core:core_log_report:compileReleaseKotlin
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:59 'static fun getLayoutDirection(p0: @NonNull() View): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:98 'static field LAYOUT_DIRECTION_RTL: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReport.kt:73:58 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:20:9 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:25:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:26:15 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:28:92 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:32:47 'val id: Long' is deprecated. Deprecated in Java.
+
+> Task :core:core_log_report:extractReleaseAnnotations
+> Task :core:core_log_report:compileReleaseJavaWithJavac
+> Task :core:core_log_report:mergeReleaseGeneratedProguardFiles
+> Task :core:core_log_report:mergeReleaseConsumerProguardFiles
+> Task :core:core_log_report:processReleaseJavaRes
+> Task :core:core_log_report:mergeReleaseJavaResource
+> Task :core:core_log_report:syncReleaseLibJars
+> Task :core:core_log_report:bundleReleaseAar
+> Task :core:core_log_report:generateMetadataFileForReleasePublication
+> Task :core:core_log_report:publishReleasePublicationToMavenLocal
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 7s
+148 actionable tasks: 121 executed, 27 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

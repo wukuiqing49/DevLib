@@ -1,0 +1,15 @@
+{
+  "version" : "guide-v0.1.0",
+  "status" : "ok",
+  "message" : "Not found",
+  "time" : 1795578490670,
+  "commit" : "00e66abb4665be232c232a0874073b9c77e5a959",
+  "ci" : false,
+  "buildUrl" : "",
+  "modules" : [ "core-base", "core-guide", "core-log-report", "core-network", "lib-xpopup" ],
+  "image" : "latest",
+  "jdk" : 17,
+  "commitWhen" : 1795578394000,
+  "isTag" : true,
+  "private" : false
+}

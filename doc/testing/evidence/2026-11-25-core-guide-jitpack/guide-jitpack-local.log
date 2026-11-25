@@ -1,0 +1,96 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preReleaseBuild UP-TO-DATE
+> Task :core:core_guide:checkReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_guide:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_guide:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_guide:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseResources UP-TO-DATE
+> Task :core:core_guide:packageReleaseResources UP-TO-DATE
+> Task :core:core_guide:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseRFile UP-TO-DATE
+> Task :core:core_guide:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_guide:extractReleaseAnnotations UP-TO-DATE
+> Task :core:core_guide:generateReleaseAssets UP-TO-DATE
+> Task :core:core_guide:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_guide:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_guide:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_guide:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_guide:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_guide:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_guide:processReleaseManifest UP-TO-DATE
+> Task :core:core_guide:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_guide:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_guide:syncReleaseLibJars UP-TO-DATE
+> Task :core:core_guide:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:bundleReleaseAar UP-TO-DATE
+> Task :core:core_guide:sourceReleaseJar UP-TO-DATE
+> Task :core:core_guide:generateMetadataFileForReleasePublication
+> Task :core:core_guide:generatePomFileForReleasePublication
+> Task :core:core_guide:publishReleasePublicationToMavenLocal
+> Task :core:core_guide:preDebugBuild UP-TO-DATE
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugResources UP-TO-DATE
+> Task :core:core_guide:packageDebugResources UP-TO-DATE
+> Task :core:core_guide:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugRFile UP-TO-DATE
+> Task :core:core_guide:compileDebugKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_guide:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_guide:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_guide:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_guide:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_guide:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :core:core_guide:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_guide:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_guide:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:mergeDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_guide:processDebugManifest UP-TO-DATE
+> Task :core:core_guide:processDebugUnitTestManifest UP-TO-DATE
+> Task :core:core_guide:processDebugUnitTestResources UP-TO-DATE
+> Task :core:core_guide:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :core:core_guide:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:core_guide:generateDebugUnitTestAssets UP-TO-DATE
+> Task :core:core_guide:generateDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugUnitTestAssets UP-TO-DATE
+> Task :core:core_guide:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestConfig UP-TO-DATE
+> Task :core:core_guide:processDebugJavaRes UP-TO-DATE
+> Task :core:core_guide:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :core:core_guide:testDebugUnitTest UP-TO-DATE
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 25s
+62 actionable tasks: 3 executed, 59 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

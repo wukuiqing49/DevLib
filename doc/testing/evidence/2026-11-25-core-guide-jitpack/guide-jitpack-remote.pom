@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- do_not_remove: published-with-gradle-metadata -->
+<modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.wukuiqing49.DevLib</groupId>
+  <artifactId>core-guide</artifactId>
+  <version>guide-v0.1.0</version>
+  <packaging>aar</packaging>
+  <name>core_guide</name>
+  <description>DevLib reusable module: core_guide</description>
+  <url>https://github.com/wukuiqing49/DevLib</url>
+  <inceptionYear>2026</inceptionYear>
+  <developers>
+    <developer>
+      <id>wukuiqing49</id>
+      <name>吴</name>
+      <email>wukuiqing@gmail.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git://github.com/wukuiqing49/DevLib.git</connection>
+    <developerConnection>scm:git://github.com/wukuiqing49/DevLib.git</developerConnection>
+    <url>git://github.com/wukuiqing49/DevLib.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>androidx.lifecycle</groupId>
+      <artifactId>lifecycle-runtime-ktx</artifactId>
+      <version>2.10.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.activity</groupId>
+      <artifactId>activity-ktx</artifactId>
+      <version>1.13.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.databinding</groupId>
+      <artifactId>viewbinding</artifactId>
+      <version>9.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>2.2.10</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.core</groupId>
+      <artifactId>core-ktx</artifactId>
+      <version>1.18.0</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
