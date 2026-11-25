@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wkq.logreport.LogReportGuidePolicyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-25T04:14:04.049Z" hostname="WIN-MMJSWULHUCA" time="0.009">
+  <properties/>
+  <testcase name="emptyHistoryNeedsStableIndex" classname="com.wkq.logreport.LogReportGuidePolicyTest" time="0.003"/>
+  <testcase name="idleHistoryUsesSavedItem" classname="com.wkq.logreport.LogReportGuidePolicyTest" time="0.002"/>
+  <testcase name="transientAndFailedStatesSuppressOverview" classname="com.wkq.logreport.LogReportGuidePolicyTest" time="0.001"/>
+  <testcase name="sharingRequiresAvailableAttachment" classname="com.wkq.logreport.LogReportGuidePolicyTest" time="0.002"/>
+  <testcase name="recordingTakesPriorityOverHistory" classname="com.wkq.logreport.LogReportGuidePolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

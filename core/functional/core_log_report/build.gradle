@@ -10,7 +10,7 @@ android {
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = '17' }
 }
-dependencies { api project(':core:core_base'); implementation utilLibs.androidx.core.ktx; implementation utilLibs.androidx.fragment.ktx }
+dependencies { api project(':core:core_base'); implementation project(':core:core_guide'); implementation utilLibs.androidx.core.ktx; implementation utilLibs.androidx.fragment.ktx }
 
 dependencies { testImplementation integrationLibs.junit }
 

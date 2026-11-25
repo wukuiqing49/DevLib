@@ -1,0 +1,1199 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+
+> Task :core:core_base:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_base:preBuild UP-TO-DATE
+> Task :core:core_base:preDebugBuild UP-TO-DATE
+> Task :core:core_base:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_base:generateDebugResources UP-TO-DATE
+> Task :core:core_base:packageDebugResources UP-TO-DATE
+> Task :core:core_base:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_base:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_xpopup:preBuild UP-TO-DATE
+> Task :core:lib_xpopup:preDebugBuild UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugResources UP-TO-DATE
+> Task :core:lib_xpopup:packageDebugResources UP-TO-DATE
+> Task :core:lib_xpopup:processDebugNavigationResources UP-TO-DATE
+> Task :core:lib_xpopup:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugRFile UP-TO-DATE
+> Task :core:core_base:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_base:generateDebugRFile UP-TO-DATE
+> Task :core:lib_xpopup:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_xpopup:compileDebugKotlin UP-TO-DATE
+> Task :core:lib_xpopup:javaPreCompileDebug UP-TO-DATE
+> Task :core:lib_xpopup:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_xpopup:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_base:compileDebugKotlin UP-TO-DATE
+> Task :core:core_base:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_base:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_base:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_base:processDebugJavaRes UP-TO-DATE
+> Task :core:core_guide:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_guide:preBuild UP-TO-DATE
+> Task :core:core_guide:preDebugBuild UP-TO-DATE
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugResources UP-TO-DATE
+> Task :core:core_guide:packageDebugResources UP-TO-DATE
+> Task :core:core_guide:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugRFile UP-TO-DATE
+> Task :core:core_guide:compileDebugKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_guide:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_guide:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_guide:processDebugJavaRes UP-TO-DATE
+> Task :core:core_base:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_guide:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_log_report:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_log_report:preBuild UP-TO-DATE
+> Task :core:core_log_report:preDebugBuild UP-TO-DATE
+> Task :core:core_log_report:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_log_report:generateDebugResources UP-TO-DATE
+> Task :core:core_log_report:packageDebugResources UP-TO-DATE
+> Task :core:core_log_report:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_log_report:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_log_report:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_log_report:generateDebugRFile UP-TO-DATE
+> Task :core:core_log_report:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_log_report:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_log_report:generateDebugUnitTestStubRFile UP-TO-DATE
+> Task :core:core_log_report:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :core:lib_xpopup:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:lib_xpopup:processDebugJavaRes UP-TO-DATE
+> Task :core:lib_xpopup:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_base:checkDebugAarMetadata UP-TO-DATE
+> Task :core:core_base:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_base:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_base:stripDebugDebugSymbols NO-SOURCE
+> Task :core:core_base:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_base:extractDebugAnnotations UP-TO-DATE
+> Task :core:core_base:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :core:core_base:generateDebugAssets UP-TO-DATE
+> Task :core:core_base:mergeDebugAssets UP-TO-DATE
+> Task :core:core_base:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_base:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :core:core_base:prepareDebugArtProfile UP-TO-DATE
+> Task :core:core_base:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_base:processDebugManifest UP-TO-DATE
+> Task :core:core_base:mergeDebugJavaResource UP-TO-DATE
+> Task :core:core_base:syncDebugLibJars UP-TO-DATE
+> Task :core:core_base:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_base:bundleDebugLocalLintAar UP-TO-DATE
+> Task :core:lib_xpopup:checkDebugAarMetadata UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_xpopup:stripDebugDebugSymbols NO-SOURCE
+> Task :core:lib_xpopup:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:lib_xpopup:extractDebugAnnotations UP-TO-DATE
+> Task :core:lib_xpopup:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugAssets UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugAssets UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:prepareDebugArtProfile UP-TO-DATE
+> Task :core:lib_xpopup:prepareLintJarForPublish UP-TO-DATE
+> Task :core:lib_xpopup:processDebugManifest UP-TO-DATE
+> Task :core:lib_xpopup:mergeDebugJavaResource UP-TO-DATE
+> Task :core:lib_xpopup:syncDebugLibJars UP-TO-DATE
+> Task :core:lib_xpopup:bundleDebugLocalLintAar UP-TO-DATE
+> Task :core:core_base:createFullJarDebug UP-TO-DATE
+> Task :core:core_base:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:core_base:writeDebugLintModelMetadata UP-TO-DATE
+> Task :core:lib_xpopup:createFullJarDebug UP-TO-DATE
+> Task :core:lib_xpopup:writeDebugLintModelMetadata UP-TO-DATE
+> Task :core:core_base:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :core:core_base:extractProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:extractProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugLintModel UP-TO-DATE
+> Task :core:core_base:generateDebugLintModel UP-TO-DATE
+> Task :core:core_base:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_base:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :core:lib_xpopup:lintAnalyzeDebug UP-TO-DATE
+> Task :core:core_base:lintAnalyzeDebug UP-TO-DATE
+> Task :core:core_base:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :core:core_base:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :core:core_guide:checkDebugAarMetadata UP-TO-DATE
+> Task :core:core_guide:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_guide:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_guide:stripDebugDebugSymbols NO-SOURCE
+> Task :core:core_guide:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_guide:extractDebugAnnotations UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :core:core_guide:generateDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugAssets UP-TO-DATE
+> Task :core:core_guide:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_guide:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :core:core_guide:prepareDebugArtProfile UP-TO-DATE
+> Task :core:core_guide:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_guide:processDebugManifest UP-TO-DATE
+> Task :core:core_guide:mergeDebugJavaResource UP-TO-DATE
+> Task :core:core_guide:syncDebugLibJars UP-TO-DATE
+> Task :core:core_guide:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_guide:bundleDebugLocalLintAar UP-TO-DATE
+> Task :core:core_guide:createFullJarDebug UP-TO-DATE
+> Task :core:core_guide:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:core_guide:writeDebugLintModelMetadata UP-TO-DATE
+> Task :core:core_guide:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :core:core_guide:extractProguardFiles UP-TO-DATE
+> Task :core:core_guide:generateDebugLintModel UP-TO-DATE
+> Task :core:core_guide:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:core_guide:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :core:core_guide:lintAnalyzeDebug UP-TO-DATE
+> Task :core:core_guide:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :core:core_guide:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :core:core_log_report:checkDebugAarMetadata UP-TO-DATE
+> Task :core:core_log_report:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_log_report:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_log_report:stripDebugDebugSymbols NO-SOURCE
+> Task :core:core_log_report:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_log_report:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :core:core_log_report:generateDebugAssets UP-TO-DATE
+> Task :core:core_log_report:mergeDebugAssets UP-TO-DATE
+> Task :core:core_log_report:prepareDebugArtProfile UP-TO-DATE
+> Task :core:core_log_report:prepareLintJarForPublish UP-TO-DATE
+> Task :core:core_log_report:processDebugManifest UP-TO-DATE
+> Task :core:core_log_report:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_log_report:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:core_log_report:writeDebugLintModelMetadata UP-TO-DATE
+> Task :core:core_log_report:extractProguardFiles UP-TO-DATE
+> Task :core:lib_xpopup:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :core:lib_xpopup:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:lib_xpopup:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :core:lib_xpopup:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :core:lib_xpopup:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :core:core_router_annotation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_annotation:compileKotlin UP-TO-DATE
+> Task :core:core_router_annotation:compileJava NO-SOURCE
+> Task :core:core_router_annotation:processResources NO-SOURCE
+> Task :core:core_router_annotation:classes UP-TO-DATE
+> Task :core:core_router_annotation:jar UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :core:core_archive:preBuild UP-TO-DATE
+> Task :core:core_archive:preDebugBuild UP-TO-DATE
+> Task :core:core_archive:generateDebugResources UP-TO-DATE
+> Task :core:core_archive:packageDebugResources UP-TO-DATE
+> Task :core:core_document:preBuild UP-TO-DATE
+> Task :core:core_document:preDebugBuild UP-TO-DATE
+> Task :core:core_document:generateDebugResources UP-TO-DATE
+> Task :core:core_document:packageDebugResources UP-TO-DATE
+> Task :core:core_google:preBuild UP-TO-DATE
+> Task :core:core_google:preDebugBuild UP-TO-DATE
+> Task :core:core_google:generateDebugResources UP-TO-DATE
+> Task :core:core_google:packageDebugResources UP-TO-DATE
+> Task :core:core_image_render:preBuild UP-TO-DATE
+> Task :core:core_image_render:preDebugBuild UP-TO-DATE
+> Task :core:core_image_render:generateDebugResources UP-TO-DATE
+> Task :core:core_image_render:packageDebugResources UP-TO-DATE
+> Task :core:core_location:preBuild UP-TO-DATE
+> Task :core:core_location:preDebugBuild UP-TO-DATE
+> Task :core:core_location:generateDebugResources UP-TO-DATE
+> Task :core:core_location:packageDebugResources UP-TO-DATE
+> Task :core:core_location_address:preBuild UP-TO-DATE
+> Task :core:core_location_address:preDebugBuild UP-TO-DATE
+> Task :core:core_location_address:generateDebugResources UP-TO-DATE
+> Task :core:core_location_address:packageDebugResources UP-TO-DATE
+> Task :core:core_nas:preBuild UP-TO-DATE
+> Task :core:core_nas:preDebugBuild UP-TO-DATE
+> Task :core:core_nas:generateDebugResources UP-TO-DATE
+> Task :core:core_nas:packageDebugResources UP-TO-DATE
+> Task :core:core_network:preBuild UP-TO-DATE
+> Task :core:core_network:preDebugBuild UP-TO-DATE
+> Task :core:core_network:generateDebugResources UP-TO-DATE
+> Task :core:core_network:packageDebugResources UP-TO-DATE
+> Task :core:core_qrcode:preBuild UP-TO-DATE
+> Task :core:core_qrcode:preDebugBuild UP-TO-DATE
+> Task :core:core_qrcode:generateDebugResources UP-TO-DATE
+> Task :core:core_qrcode:packageDebugResources UP-TO-DATE
+> Task :core:core_router_api:preBuild UP-TO-DATE
+> Task :core:core_router_api:preDebugBuild UP-TO-DATE
+> Task :core:core_router_api:generateDebugResources UP-TO-DATE
+> Task :core:core_router_api:packageDebugResources UP-TO-DATE
+> Task :core:core_usb:preBuild UP-TO-DATE
+> Task :core:core_usb:preDebugBuild UP-TO-DATE
+> Task :core:core_usb:generateDebugResources UP-TO-DATE
+> Task :core:core_usb:packageDebugResources UP-TO-DATE
+> Task :core:core_utils:preBuild UP-TO-DATE
+> Task :core:core_utils:preDebugBuild UP-TO-DATE
+> Task :core:core_utils:generateDebugResources UP-TO-DATE
+> Task :core:core_utils:packageDebugResources UP-TO-DATE
+> Task :core:lib_drop:preBuild UP-TO-DATE
+> Task :core:lib_drop:preDebugBuild UP-TO-DATE
+> Task :core:lib_drop:generateDebugResources UP-TO-DATE
+> Task :core:lib_drop:packageDebugResources UP-TO-DATE
+> Task :core:lib_metadata:preBuild UP-TO-DATE
+> Task :core:lib_metadata:preDebugBuild UP-TO-DATE
+> Task :core:lib_metadata:generateDebugResources UP-TO-DATE
+> Task :core:lib_metadata:packageDebugResources UP-TO-DATE
+> Task :core:lib_operations:preBuild UP-TO-DATE
+> Task :core:lib_operations:preDebugBuild UP-TO-DATE
+> Task :core:lib_operations:generateDebugResources UP-TO-DATE
+> Task :core:lib_operations:packageDebugResources UP-TO-DATE
+> Task :core:lib_upload:preBuild UP-TO-DATE
+> Task :core:lib_upload:preDebugBuild UP-TO-DATE
+> Task :core:lib_upload:generateDebugResources UP-TO-DATE
+> Task :core:lib_upload:packageDebugResources UP-TO-DATE
+> Task :feature:feature_app:preBuild UP-TO-DATE
+> Task :feature:feature_app:preDebugBuild UP-TO-DATE
+> Task :feature:feature_app:generateDebugResources UP-TO-DATE
+> Task :feature:feature_app:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_common:preBuild UP-TO-DATE
+> Task :feature:feature_demo_common:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_common:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_common:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_document:preBuild UP-TO-DATE
+> Task :feature:feature_demo_document:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_document:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_document:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_files:preBuild UP-TO-DATE
+> Task :feature:feature_demo_files:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_files:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_files:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_foundation:preBuild UP-TO-DATE
+> Task :feature:feature_demo_foundation:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_foundation:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_foundation:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_google:preBuild UP-TO-DATE
+> Task :feature:feature_demo_google:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_google:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_google:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_image:preBuild UP-TO-DATE
+> Task :feature:feature_demo_image:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_image:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_image:packageDebugResources UP-TO-DATE
+> Task :feature:feature_demo_location:preBuild UP-TO-DATE
+> Task :feature:feature_demo_location:preDebugBuild UP-TO-DATE
+> Task :feature:feature_demo_location:generateDebugResources UP-TO-DATE
+> Task :feature:feature_demo_location:packageDebugResources UP-TO-DATE
+> Task :feature:feature_res:preBuild UP-TO-DATE
+> Task :feature:feature_res:preDebugBuild UP-TO-DATE
+> Task :feature:feature_res:generateDebugResources UP-TO-DATE
+> Task :feature:feature_res:packageDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :core:core_archive:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_document:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_google:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_image_render:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_location:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_location_address:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_nas:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_network:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_qrcode:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_router_api:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_usb:processDebugNavigationResources UP-TO-DATE
+> Task :core:core_utils:processDebugNavigationResources UP-TO-DATE
+> Task :core:lib_drop:processDebugNavigationResources UP-TO-DATE
+> Task :core:lib_metadata:processDebugNavigationResources UP-TO-DATE
+> Task :core:lib_operations:processDebugNavigationResources UP-TO-DATE
+> Task :core:lib_upload:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_app:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_common:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_document:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_files:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_foundation:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_google:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_image:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_demo_location:processDebugNavigationResources UP-TO-DATE
+> Task :feature:feature_res:processDebugNavigationResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_archive:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_archive:generateDebugRFile UP-TO-DATE
+> Task :core:core_document:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_document:generateDebugRFile UP-TO-DATE
+> Task :core:core_google:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_google:generateDebugRFile UP-TO-DATE
+> Task :core:core_image_render:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_image_render:generateDebugRFile UP-TO-DATE
+> Task :core:core_location:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_location:generateDebugRFile UP-TO-DATE
+> Task :core:core_location_address:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_location_address:generateDebugRFile UP-TO-DATE
+> Task :core:core_nas:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_nas:generateDebugRFile UP-TO-DATE
+> Task :core:core_network:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_network:generateDebugRFile UP-TO-DATE
+> Task :core:core_qrcode:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_qrcode:generateDebugRFile UP-TO-DATE
+> Task :core:core_router_api:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_router_api:generateDebugRFile UP-TO-DATE
+> Task :core:core_usb:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_usb:generateDebugRFile UP-TO-DATE
+> Task :core:core_utils:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_utils:parseDebugLocalResources UP-TO-DATE
+> Task :core:core_utils:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :core:core_utils:generateDebugRFile UP-TO-DATE
+> Task :core:lib_drop:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_drop:generateDebugRFile UP-TO-DATE
+> Task :core:lib_metadata:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_metadata:generateDebugRFile UP-TO-DATE
+> Task :core:lib_operations:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_operations:generateDebugRFile UP-TO-DATE
+> Task :core:lib_upload:parseDebugLocalResources UP-TO-DATE
+> Task :core:lib_upload:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_app:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_common:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_common:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_res:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_res:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_demo_common:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_common:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_demo_document:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_document:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_document:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_document:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_demo_files:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_files:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_files:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_files:generateDebugRFile UP-TO-DATE
+> Task :core:core_network:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_network:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_foundation:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:generateDebugRFile UP-TO-DATE
+> Task :core:core_google:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :core:core_google:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_google:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_google:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_google:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_google:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_demo_image:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_image:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_image:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_image:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_demo_location:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :feature:feature_demo_location:parseDebugLocalResources UP-TO-DATE
+> Task :feature:feature_demo_location:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_demo_location:generateDebugRFile UP-TO-DATE
+> Task :feature:feature_app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :feature:feature_app:generateDebugRFile UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :core:core_router_api:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_api:compileDebugKotlin UP-TO-DATE
+> Task :core:core_router_api:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_router_api:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_router_api:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_utils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_utils:compileDebugKotlin UP-TO-DATE
+> Task :core:core_utils:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_utils:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_utils:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_image_render:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_operations:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_operations:compileDebugKotlin UP-TO-DATE
+> Task :core:lib_operations:javaPreCompileDebug UP-TO-DATE
+> Task :core:lib_operations:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_operations:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_image_render:compileDebugKotlin UP-TO-DATE
+> Task :core:core_image_render:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_image_render:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_image_render:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_common:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_res:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_res:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature:feature_res:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_common:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_common:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_common:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_common:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_document:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_document:compileDebugKotlin UP-TO-DATE
+> Task :core:core_document:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_document:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_document:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_document:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_processor:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_router_processor:compileKotlin UP-TO-DATE
+> Task :core:core_router_processor:compileJava NO-SOURCE
+> Task :core:core_router_processor:processResources UP-TO-DATE
+> Task :core:core_router_processor:classes UP-TO-DATE
+> Task :core:core_router_processor:jar UP-TO-DATE
+> Task :feature:feature_demo_document:kspDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_document:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_document:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_document:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_document:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_archive:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_archive:compileDebugKotlin UP-TO-DATE
+> Task :core:core_archive:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_archive:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_archive:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_nas:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_nas:compileDebugKotlin UP-TO-DATE
+> Task :core:core_nas:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_nas:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_nas:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_usb:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_usb:compileDebugKotlin UP-TO-DATE
+> Task :core:core_usb:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_usb:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_usb:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:lib_drop:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_drop:compileDebugKotlin UP-TO-DATE
+> Task :core:lib_drop:javaPreCompileDebug UP-TO-DATE
+> Task :core:lib_drop:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_drop:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:lib_upload:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_upload:compileDebugKotlin UP-TO-DATE
+> Task :core:lib_upload:javaPreCompileDebug UP-TO-DATE
+> Task :core:lib_upload:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_upload:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_files:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_files:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_network:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_network:compileDebugKotlin UP-TO-DATE
+> Task :core:core_network:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_network:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_network:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_foundation:kspDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_foundation:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_foundation:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_foundation:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_google:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_google:compileDebugKotlin UP-TO-DATE
+> Task :core:core_google:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_google:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_google:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_google:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_google:kspDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_google:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_google:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_google:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_google:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_qrcode:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_qrcode:compileDebugKotlin UP-TO-DATE
+> Task :core:core_qrcode:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_qrcode:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_qrcode:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:lib_metadata:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:lib_metadata:kspDebugKotlin UP-TO-DATE
+> Task :core:lib_metadata:compileDebugKotlin UP-TO-DATE
+> Task :core:lib_metadata:javaPreCompileDebug UP-TO-DATE
+> Task :core:lib_metadata:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:lib_metadata:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_image:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_image:kspDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_image:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_image:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_image:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_image:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_location:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_location:compileDebugKotlin UP-TO-DATE
+> Task :core:core_location:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_location:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_location:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :core:core_location_address:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:core_location_address:compileDebugKotlin UP-TO-DATE
+> Task :core:core_location_address:javaPreCompileDebug UP-TO-DATE
+> Task :core:core_location_address:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:core_location_address:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_location:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :feature:feature_demo_location:kspDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_location:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_demo_location:javaPreCompileDebug UP-TO-DATE
+> Task :feature:feature_demo_location:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_location:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_app:javaPreCompileDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :core:core_archive:generateDebugAssets UP-TO-DATE
+> Task :core:core_archive:mergeDebugAssets UP-TO-DATE
+> Task :core:core_document:generateDebugAssets UP-TO-DATE
+> Task :core:core_document:mergeDebugAssets UP-TO-DATE
+> Task :core:core_google:generateDebugAssets UP-TO-DATE
+> Task :core:core_google:mergeDebugAssets UP-TO-DATE
+> Task :core:core_image_render:generateDebugAssets UP-TO-DATE
+> Task :core:core_image_render:mergeDebugAssets UP-TO-DATE
+> Task :core:core_location:generateDebugAssets UP-TO-DATE
+> Task :core:core_location:mergeDebugAssets UP-TO-DATE
+> Task :core:core_location_address:generateDebugAssets UP-TO-DATE
+> Task :core:core_location_address:mergeDebugAssets UP-TO-DATE
+> Task :core:core_nas:generateDebugAssets UP-TO-DATE
+> Task :core:core_nas:mergeDebugAssets UP-TO-DATE
+> Task :core:core_network:generateDebugAssets UP-TO-DATE
+> Task :core:core_network:mergeDebugAssets UP-TO-DATE
+> Task :core:core_qrcode:generateDebugAssets UP-TO-DATE
+> Task :core:core_qrcode:mergeDebugAssets UP-TO-DATE
+> Task :core:core_router_api:generateDebugAssets UP-TO-DATE
+> Task :core:core_router_api:mergeDebugAssets UP-TO-DATE
+> Task :core:core_usb:generateDebugAssets UP-TO-DATE
+> Task :core:core_usb:mergeDebugAssets UP-TO-DATE
+> Task :core:core_utils:generateDebugAssets UP-TO-DATE
+> Task :core:core_utils:mergeDebugAssets UP-TO-DATE
+> Task :core:lib_drop:generateDebugAssets UP-TO-DATE
+> Task :core:lib_drop:mergeDebugAssets UP-TO-DATE
+> Task :core:lib_metadata:generateDebugAssets UP-TO-DATE
+> Task :core:lib_metadata:mergeDebugAssets UP-TO-DATE
+> Task :core:lib_operations:generateDebugAssets UP-TO-DATE
+> Task :core:lib_operations:mergeDebugAssets UP-TO-DATE
+> Task :core:lib_upload:generateDebugAssets UP-TO-DATE
+> Task :core:lib_upload:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_app:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_app:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_common:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_common:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_document:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_document:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_files:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_files:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_foundation:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_foundation:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_google:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_google:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_image:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_image:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_location:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_location:mergeDebugAssets UP-TO-DATE
+> Task :feature:feature_res:generateDebugAssets UP-TO-DATE
+> Task :feature:feature_res:mergeDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :feature:feature_demo_location:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_document:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_image:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_google:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_common:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_router_api:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_google:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_utils:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_res:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_location:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_location_address:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_document:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_image_render:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:lib_metadata:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_qrcode:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:lib_drop:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:lib_upload:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_nas:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_usb:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_archive:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:core_network:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :core:lib_operations:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :core:core_archive:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_document:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_google:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_image_render:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_location:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_location_address:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_nas:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_network:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_qrcode:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_router_api:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_usb:writeDebugAarMetadata UP-TO-DATE
+> Task :core:core_utils:writeDebugAarMetadata UP-TO-DATE
+> Task :core:lib_drop:writeDebugAarMetadata UP-TO-DATE
+> Task :core:lib_metadata:writeDebugAarMetadata UP-TO-DATE
+> Task :core:lib_operations:writeDebugAarMetadata UP-TO-DATE
+> Task :core:lib_upload:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_app:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_common:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_document:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_files:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_foundation:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_google:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_image:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_demo_location:writeDebugAarMetadata UP-TO-DATE
+> Task :feature:feature_res:writeDebugAarMetadata UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_archive:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_archive:processDebugManifest UP-TO-DATE
+> Task :core:core_base:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_document:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_document:processDebugManifest UP-TO-DATE
+> Task :core:core_google:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_google:processDebugManifest UP-TO-DATE
+> Task :core:core_guide:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_image_render:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_image_render:processDebugManifest UP-TO-DATE
+> Task :core:core_location:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_location:processDebugManifest UP-TO-DATE
+> Task :core:core_location_address:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_location_address:processDebugManifest UP-TO-DATE
+> Task :core:core_log_report:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_nas:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_nas:processDebugManifest UP-TO-DATE
+> Task :core:core_network:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_network:processDebugManifest UP-TO-DATE
+> Task :core:core_qrcode:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_qrcode:processDebugManifest UP-TO-DATE
+> Task :core:core_router_api:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_router_api:processDebugManifest UP-TO-DATE
+> Task :core:core_usb:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_usb:processDebugManifest UP-TO-DATE
+> Task :core:core_utils:extractDeepLinksDebug UP-TO-DATE
+> Task :core:core_utils:processDebugManifest UP-TO-DATE
+> Task :core:lib_drop:extractDeepLinksDebug UP-TO-DATE
+> Task :core:lib_drop:processDebugManifest UP-TO-DATE
+> Task :core:lib_metadata:extractDeepLinksDebug UP-TO-DATE
+> Task :core:lib_metadata:processDebugManifest UP-TO-DATE
+> Task :core:lib_operations:extractDeepLinksDebug UP-TO-DATE
+> Task :core:lib_operations:processDebugManifest UP-TO-DATE
+> Task :core:lib_upload:extractDeepLinksDebug UP-TO-DATE
+> Task :core:lib_upload:processDebugManifest UP-TO-DATE
+> Task :core:lib_xpopup:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_app:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_app:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_common:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_common:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_document:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_document:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_files:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_files:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_foundation:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_google:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_google:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_image:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_image:processDebugManifest UP-TO-DATE
+> Task :feature:feature_demo_location:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_demo_location:processDebugManifest UP-TO-DATE
+> Task :feature:feature_res:extractDeepLinksDebug UP-TO-DATE
+> Task :feature:feature_res:processDebugManifest UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :core:core_archive:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_archive:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_base:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_base:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_document:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_document:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_google:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_google:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_guide:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_guide:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_image_render:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_image_render:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_location:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_location:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_location_address:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_location_address:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_log_report:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_log_report:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_nas:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_nas:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_network:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_network:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_qrcode:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_qrcode:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_router_api:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_router_api:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_usb:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_usb:compileDebugLibraryResources UP-TO-DATE
+> Task :core:core_utils:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:core_utils:compileDebugLibraryResources UP-TO-DATE
+> Task :core:lib_drop:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:lib_drop:compileDebugLibraryResources UP-TO-DATE
+> Task :core:lib_metadata:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:lib_metadata:compileDebugLibraryResources UP-TO-DATE
+> Task :core:lib_operations:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:lib_operations:compileDebugLibraryResources UP-TO-DATE
+> Task :core:lib_upload:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:lib_upload:compileDebugLibraryResources UP-TO-DATE
+> Task :core:lib_xpopup:mapDebugSourceSetPaths UP-TO-DATE
+> Task :core:lib_xpopup:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_app:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_common:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_common:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_document:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_document:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_files:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_files:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_foundation:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_foundation:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_google:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_google:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_image:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_image:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_demo_location:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_demo_location:compileDebugLibraryResources UP-TO-DATE
+> Task :feature:feature_res:mapDebugSourceSetPaths UP-TO-DATE
+> Task :feature:feature_res:compileDebugLibraryResources UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :core:core_archive:processDebugJavaRes UP-TO-DATE
+> Task :core:core_document:processDebugJavaRes UP-TO-DATE
+> Task :core:core_google:processDebugJavaRes UP-TO-DATE
+> Task :core:core_image_render:processDebugJavaRes UP-TO-DATE
+> Task :core:core_location:processDebugJavaRes UP-TO-DATE
+> Task :core:core_location_address:processDebugJavaRes UP-TO-DATE
+> Task :core:core_nas:processDebugJavaRes UP-TO-DATE
+> Task :core:core_network:processDebugJavaRes UP-TO-DATE
+> Task :core:core_qrcode:processDebugJavaRes UP-TO-DATE
+> Task :core:core_router_api:processDebugJavaRes UP-TO-DATE
+> Task :core:core_usb:processDebugJavaRes UP-TO-DATE
+> Task :core:core_utils:processDebugJavaRes UP-TO-DATE
+> Task :core:lib_drop:processDebugJavaRes UP-TO-DATE
+> Task :core:lib_metadata:processDebugJavaRes UP-TO-DATE
+> Task :core:lib_operations:processDebugJavaRes UP-TO-DATE
+> Task :core:lib_upload:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_common:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_document:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_foundation:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_google:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_image:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_location:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_res:processDebugJavaRes NO-SOURCE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :feature:feature_demo_location:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_demo_document:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_demo_image:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_demo_foundation:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_demo_google:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_demo_common:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_router_api:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_google:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_base:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_utils:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:lib_xpopup:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :feature:feature_res:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_guide:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_location:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_location_address:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_document:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_image_render:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:lib_metadata:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_qrcode:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:lib_drop:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:lib_upload:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_nas:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_usb:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_archive:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:core_network:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :core:lib_operations:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_archive:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_archive:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_archive:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_base:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_document:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_document:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_document:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_google:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_google:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_google:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_guide:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_image_render:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_image_render:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_image_render:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_location:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_location:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_location:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_location_address:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_location_address:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_location_address:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_log_report:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_nas:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_nas:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_nas:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_network:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_network:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_network:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_qrcode:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_qrcode:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_qrcode:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_router_api:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_router_api:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_router_api:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_usb:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_usb:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_usb:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:core_utils:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:core_utils:mergeDebugNativeLibs NO-SOURCE
+> Task :core:core_utils:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:lib_drop:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:lib_drop:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_drop:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:lib_metadata:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:lib_metadata:mergeDebugNativeLibs UP-TO-DATE
+> Task :core:lib_metadata:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:lib_operations:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:lib_operations:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_operations:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:lib_upload:mergeDebugJniLibFolders UP-TO-DATE
+> Task :core:lib_upload:mergeDebugNativeLibs NO-SOURCE
+> Task :core:lib_upload:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :core:lib_xpopup:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_app:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_app:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_common:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_common:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_common:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_document:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_document:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_document:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_files:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_files:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_files:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_foundation:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_foundation:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_foundation:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_google:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_google:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_google:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_image:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_image:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_image:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_demo_location:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_demo_location:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_demo_location:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :feature:feature_res:mergeDebugJniLibFolders UP-TO-DATE
+> Task :feature:feature_res:mergeDebugNativeLibs NO-SOURCE
+> Task :feature:feature_res:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :core:core_base:preReleaseBuild UP-TO-DATE
+> Task :core:core_base:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_guide:preReleaseBuild UP-TO-DATE
+> Task :core:core_guide:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:preReleaseBuild UP-TO-DATE
+> Task :core:lib_xpopup:preReleaseBuild UP-TO-DATE
+> Task :core:lib_xpopup:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:core_log_report:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:core_log_report:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :core:core_log_report:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :core:core_base:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_base:generateReleaseResources UP-TO-DATE
+> Task :core:core_log_report:checkReleaseAarMetadata
+> Task :core:core_base:packageReleaseResources UP-TO-DATE
+> Task :core:core_base:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_base:parseReleaseLocalResources UP-TO-DATE
+> Task :core:lib_xpopup:generateReleaseResources UP-TO-DATE
+> Task :core:lib_xpopup:packageReleaseResources UP-TO-DATE
+> Task :core:lib_xpopup:processReleaseNavigationResources UP-TO-DATE
+> Task :core:lib_xpopup:parseReleaseLocalResources UP-TO-DATE
+> Task :core:lib_xpopup:generateReleaseRFile UP-TO-DATE
+> Task :core:core_base:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_base:generateReleaseRFile UP-TO-DATE
+> Task :core:lib_xpopup:compileReleaseKotlin UP-TO-DATE
+> Task :core:lib_xpopup:javaPreCompileRelease UP-TO-DATE
+> Task :core:lib_xpopup:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:lib_xpopup:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :core:core_base:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_base:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_base:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_base:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :core:core_guide:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseResources UP-TO-DATE
+> Task :core:core_guide:packageReleaseResources UP-TO-DATE
+> Task :core:core_guide:processReleaseNavigationResources UP-TO-DATE
+> Task :core:core_guide:parseReleaseLocalResources UP-TO-DATE
+> Task :core:core_guide:dataBindingGenBaseClassesRelease UP-TO-DATE
+> Task :core:core_guide:generateReleaseRFile UP-TO-DATE
+> Task :core:core_guide:compileReleaseKotlin UP-TO-DATE
+> Task :core:core_guide:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_guide:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :core:core_log_report:dataBindingMergeDependencyArtifactsRelease UP-TO-DATE
+> Task :core:core_log_report:generateReleaseResources
+> Task :core:core_guide:bundleLibCompileToJarRelease
+> Task :core:core_log_report:packageReleaseResources
+> Task :core:core_log_report:processReleaseNavigationResources
+> Task :core:core_log_report:generateReleaseAssets UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseAssets UP-TO-DATE
+> Task :core:core_log_report:javaPreCompileRelease UP-TO-DATE
+> Task :core:core_log_report:prepareReleaseArtProfile UP-TO-DATE
+> Task :core:core_log_report:processReleaseManifest UP-TO-DATE
+> Task :core:core_log_report:writeReleaseAarMetadata UP-TO-DATE
+> Task :core:core_log_report:generatePomFileForReleasePublication
+> Task :core:core_log_report:parseReleaseLocalResources
+> Task :core:core_log_report:dataBindingGenBaseClassesRelease
+> Task :core:core_log_report:generateReleaseRFile
+> Task :core:core_log_report:sourceReleaseJar
+
+> Task :core:core_log_report:compileDebugKotlin
+e: Daemon compilation failed: null
+java.lang.Exception
+	at org.jetbrains.kotlin.daemon.common.CompileService$CallResult$Error.get(CompileService.kt:69)
+	at org.jetbrains.kotlin.daemon.common.CompileService$CallResult$Error.get(CompileService.kt:65)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.compileWithDaemon(GradleKotlinCompilerWork.kt:240)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.compileWithDaemonOrFallbackImpl(GradleKotlinCompilerWork.kt:159)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:111)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:102)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:176)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:30)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$withLocksAcquired$0(DefaultWorkerLeaseService.java:269)
+	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:42)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:259)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.file.NoSuchFileException: C:\Users\Administrator\AppData\Local\Temp\kotlin-backups17957011029465733443\2.backup -> C:\work\AI\DevLib\core\functional\core_log_report\build\tmp\kotlin-classes\debug\META-INF\core_log_report_debug.kotlin_module
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.jetbrains.kotlin.incremental.RecoverableCompilationTransaction.revertChanges(CompilationTransaction.kt:231)
+	at org.jetbrains.kotlin.incremental.RecoverableCompilationTransaction.close(CompilationTransaction.kt:256)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:740)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:124)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:679)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:93)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1806)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	... 3 more
+
+Failed to compile with Kotlin daemon: java.lang.Exception
+	at org.jetbrains.kotlin.daemon.common.CompileService$CallResult$Error.get(CompileService.kt:69)
+	at org.jetbrains.kotlin.daemon.common.CompileService$CallResult$Error.get(CompileService.kt:65)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.compileWithDaemon(GradleKotlinCompilerWork.kt:240)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.compileWithDaemonOrFallbackImpl(GradleKotlinCompilerWork.kt:159)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:111)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:102)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:176)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:30)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$withLocksAcquired$0(DefaultWorkerLeaseService.java:269)
+	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:42)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:259)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.nio.file.NoSuchFileException: C:\Users\Administrator\AppData\Local\Temp\kotlin-backups17957011029465733443\2.backup -> C:\work\AI\DevLib\core\functional\core_log_report\build\tmp\kotlin-classes\debug\META-INF\core_log_report_debug.kotlin_module
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.jetbrains.kotlin.incremental.RecoverableCompilationTransaction.revertChanges(CompilationTransaction.kt:231)
+	at org.jetbrains.kotlin.incremental.RecoverableCompilationTransaction.close(CompilationTransaction.kt:256)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:740)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:124)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:679)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:93)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1806)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	... 3 more
+Using fallback strategy: Compile without Kotlin daemon
+Try ./gradlew --stop if this issue persists
+If it does not look related to your configuration, please file an issue with logs to https://kotl.in/issue
+
+> Task :core:core_log_report:compileReleaseKotlin
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:59 'static fun getLayoutDirection(p0: @NonNull() View): Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/FloatingReportIndicator.kt:105:98 'static field LAYOUT_DIRECTION_RTL: Int' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReport.kt:73:58 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:20:9 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:25:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/ReportSaveFragment.kt:26:15 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:28:92 'val id: Long' is deprecated. Deprecated in Java.
+w: file:///C:/work/AI/DevLib/core/functional/core_log_report/src/main/java/com/wkq/logreport/StallEvidence.kt:32:47 'val id: Long' is deprecated. Deprecated in Java.
+
+> Task :core:core_log_report:extractReleaseAnnotations
+> Task :core:core_log_report:compileReleaseJavaWithJavac
+> Task :core:core_log_report:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :core:core_log_report:processReleaseJavaRes UP-TO-DATE
+> Task :core:core_log_report:mergeReleaseJavaResource UP-TO-DATE
+> Task :core:core_log_report:syncReleaseLibJars
+> Task :core:core_log_report:bundleReleaseAar
+> Task :core:core_log_report:generateMetadataFileForReleasePublication
+> Task :core:core_log_report:publishReleasePublicationToDevLibLocalRepository
+
+> Task :core:core_log_report:compileDebugKotlin
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\FloatingReportIndicator.kt:105:59: warning: 'static fun getLayoutDirection(p0: @NonNull() View): Int' is deprecated. Deprecated in Java.
+exception:             if (rightEdge == null) rightEdge = ViewCompat.getLayoutDirection(root) != ViewCompat.LAYOUT_DIRECTION_RTL
+exception:                                                           ^^^^^^^^^^^^^^^^^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\FloatingReportIndicator.kt:105:98: warning: 'static field LAYOUT_DIRECTION_RTL: Int' is deprecated. Deprecated in Java.
+exception:             if (rightEdge == null) rightEdge = ViewCompat.getLayoutDirection(root) != ViewCompat.LAYOUT_DIRECTION_RTL
+exception:                                                                                                  ^^^^^^^^^^^^^^^^^^^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\LogReport.kt:73:58: warning: 'val id: Long' is deprecated. Deprecated in Java.
+exception:                     val crashText = "threadId=" + thread.id + "\n" + stack(failure)
+exception:                                                          ^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\ReportSaveFragment.kt:20:9: warning: 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+exception:         startActivityForResult(Intent(Intent.ACTION_CREATE_DOCUMENT).setType("application/zip").addCategory(Intent.CATEGORY_OPENABLE).putExtra(Intent.EXTRA_TITLE, file.name), 710)
+exception:         ^^^^^^^^^^^^^^^^^^^^^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\ReportSaveFragment.kt:25:18: warning: this declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+exception:     override fun onActivityResult(request: Int, result: Int, data: Intent?) {
+exception:                  ^^^^^^^^^^^^^^^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\ReportSaveFragment.kt:26:15: warning: 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+exception:         super.onActivityResult(request, result, data)
+exception:               ^^^^^^^^^^^^^^^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\StallEvidence.kt:28:92: warning: 'val id: Long' is deprecated. Deprecated in Java.
+exception:             .thenBy { if (it.key.state == Thread.State.BLOCKED) 0 else 1 }.thenBy { it.key.id }).take(24)
+exception:                                                                                            ^^
+exception: core\functional\core_log_report\src\main\java\com\wkq\logreport\StallEvidence.kt:32:47: warning: 'val id: Long' is deprecated. Deprecated in Java.
+exception:                 appendLine("threadId=${thread.id} main=${thread === main} state=${thread.state}")
+exception:                                               ^^
+
+> Task :core:core_log_report:compileDebugJavaWithJavac UP-TO-DATE
+> Task :core:core_log_report:processDebugJavaRes UP-TO-DATE
+> Task :core:core_log_report:bundleLibRuntimeToJarDebug
+> Task :core:core_log_report:bundleLibCompileToJarDebug
+> Task :core:core_log_report:extractDebugAnnotations
+> Task :core:core_log_report:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :core:core_log_report:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :core:core_log_report:mergeDebugJavaResource UP-TO-DATE
+> Task :core:core_log_report:syncDebugLibJars
+> Task :core:core_log_report:bundleDebugLocalLintAar
+> Task :core:core_log_report:createFullJarDebug
+> Task :core:core_log_report:compileDebugUnitTestKotlin
+> Task :core:core_log_report:generateDebugAndroidTestLintModel
+> Task :core:core_log_report:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:core_log_report:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :core:core_log_report:testDebugUnitTest
+> Task :core:core_log_report:generateDebugLintReportModel
+> Task :core:core_log_report:generateDebugUnitTestLintModel
+> Task :core:core_log_report:lintAnalyzeDebugAndroidTest
+> Task :core:core_log_report:bundleLibRuntimeToDirDebug
+> Task :feature:feature_demo_files:kspDebugKotlin
+> Task :feature:feature_demo_files:compileDebugKotlin
+> Task :feature:feature_demo_files:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_demo_files:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_app:compileDebugKotlin UP-TO-DATE
+> Task :feature:feature_app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :feature:feature_app:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :feature:feature_app:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_demo_files:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :feature:feature_app:processDebugJavaRes UP-TO-DATE
+> Task :feature:feature_demo_files:processDebugJavaRes UP-TO-DATE
+> Task :app:compileDebugKotlin
+> Task :feature:feature_app:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :feature:feature_demo_files:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleDebug
+> Task :core:core_log_report:lintAnalyzeDebugUnitTest
+> Task :core:core_log_report:lintAnalyzeDebug
+
+> Task :core:core_log_report:lintReportDebug
+Wrote HTML report to file:///C:/work/AI/DevLib/core/functional/core_log_report/build/reports/lint-results-debug.html
+
+> Task :core:core_log_report:lintDebug
+
+[Incubating] Problems report is available at: file:///C:/work/AI/DevLib/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 15s
+791 actionable tasks: 40 executed, 751 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

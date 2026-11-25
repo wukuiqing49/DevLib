@@ -1,0 +1,115 @@
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\res\layout\log_report_floating.xml:6: Warning: Attribute clipToOutline is only used in API level 31 and higher (current min is 26) [UnusedAttribute]
+    android:foreground="?android:attr/selectableItemBackground" android:clipToOutline="true" android:clickable="true" android:focusable="true" android:importantForAccessibility="yes">
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\java\com\wkq\logreport\LogReport.kt:39: Warning: Do not place Android context classes in static fields (static reference to FloatingReportIndicator which has field owner pointing to Activity); this is a memory leak [StaticFieldLeak]
+    private val floating = FloatingReportIndicator({ show(it) }, { event("capture_gap", "floating_indicator_unavailable") })
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\res\layout\activity_log_report.xml:1: Warning: Possible overdraw: Root element paints background @color/log_report_page_background with a theme that also paints a background (inferred theme is @android:style/Theme.Holo) [Overdraw]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/log_report_page_background">
+                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\res\layout\activity_log_report_detail.xml:1: Warning: Possible overdraw: Root element paints background @color/log_report_page_background with a theme that also paints a background (inferred theme is @android:style/Theme.Holo) [Overdraw]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/log_report_page_background">
+                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\res\layout\item_log_report.xml:2: Warning: This LinearLayout layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+    <LinearLayout android:id="@+id/report_row" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:minHeight="80dp" android:gravity="center_vertical" android:padding="16dp" android:background="@drawable/log_report_page_card" android:foreground="?attr/selectableItemBackground" android:clickable="true" android:focusable="true">
+     ~~~~~~~~~~~~
+
+   Explanation for issues of type "UselessParent":
+   A layout with children that has no siblings, is not a scrollview or a root
+   layout, and does not have a background, can be removed and have its
+   children moved directly into the parent for a flatter and more efficient
+   layout hierarchy.
+
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\java\com\wkq\logreport\FloatingReportIndicator.kt:107: Warning: Custom view `LinearLayout` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+            views.root.setOnTouchListener { view, event -> touch(view, event) }
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\java\com\wkq\logreport\FloatingReportIndicator.kt:107: Warning: onTouch lambda should call View#performClick when a click is detected [ClickableViewAccessibility]
+            views.root.setOnTouchListener { view, event -> touch(view, event) }
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+C:\work\AI\DevLib\core\functional\core_log_report\src\main\java\com\wkq\logreport\FloatingReportIndicator.kt:99: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                gravity = Gravity.TOP or Gravity.LEFT
+                                                 ~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+0 errors, 8 warnings

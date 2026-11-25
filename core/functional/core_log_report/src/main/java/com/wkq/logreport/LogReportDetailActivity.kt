@@ -18,6 +18,7 @@ class LogReportDetailActivity : BaseActivity<ActivityLogReportDetailBinding>() {
     private val model by viewModels<LogReportDetailViewModel>()
     private var expanded = false
     private var attachment: ReportAttachment? = null
+    private lateinit var guides: LogReportGuides
 
     /** 重建仅恢复摘要展开状态，附件由ViewModel和持久报告ID恢复。 */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +31,8 @@ class LogReportDetailActivity : BaseActivity<ActivityLogReportDetailBinding>() {
 
     /** 所有对外动作由用户点击触发；删除使用明确确认。 */
     override fun initView() {
+        guides = LogReportGuides(this)
+        binding.reportHelp.setOnClickListener { model.state.value?.let { guides.detail(it, true) } }
         binding.reportBack.setOnClickListener { finish() }
         binding.reportShare.setOnClickListener { share(false) }
         binding.reportEmail.setOnClickListener { share(true) }
@@ -72,6 +75,8 @@ class LogReportDetailActivity : BaseActivity<ActivityLogReportDetailBinding>() {
             binding.reportSummaryMore.isVisible = state.attachment != null
             binding.reportAttachmentSize.isVisible = state.attachment != null
             state.attachment?.let { binding.reportAttachmentSize.text = getString(R.string.log_report_attachment_size, Formatter.formatFileSize(this, it.sizeBytes)) }
+            binding.reportHelp.isEnabled = LogReportGuidePolicy.detail(state)
+            guides.detail(state)
         }
         model.load(intent.getStringExtra(REPORT_ID).orEmpty())
     }
@@ -92,4 +97,13 @@ class LogReportDetailActivity : BaseActivity<ActivityLogReportDetailBinding>() {
 
     /** 配置变化后维持用户的摘要展开选择，不改变采集开关。 */
     override fun onSaveInstanceState(outState: Bundle) { super.onSaveInstanceState(outState); outState.putBoolean("summary_expanded", expanded) }
+
+    /** 附件准备完成且页面恢复前台后才允许展示分享说明。 */
+    override fun onResume() {
+        super.onResume()
+        guides.resume { model.state.value?.let { guides.detail(it) } }
+    }
+
+    /** 打开分享器或另存窗口前移除提示，不把退出教程标记为发送成功。 */
+    override fun onPause() { guides.pause(); super.onPause() }
 }

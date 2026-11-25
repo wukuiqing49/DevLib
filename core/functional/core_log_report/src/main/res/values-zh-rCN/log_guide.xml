@@ -1,0 +1,15 @@
+<resources>
+    <string name="log_guide_help">日志操作说明</string>
+    <string name="log_guide_start_title">先开启记录</string>
+    <string name="log_guide_start_body">复现问题前，手动打开这里。日志先保存在本机，只有你选择分享才会交给其他应用。查看引导不会开启记录。</string>
+    <string name="log_guide_reproduce_title">返回，复现问题</string>
+    <string name="log_guide_reproduce_body">离开本页后仍会继续记录。重新操作一次出现问题的功能，再回到这里停止记录。</string>
+    <string name="log_guide_stop_title">停止并生成报告</string>
+    <string name="log_guide_stop_body">复现问题后，关闭这个开关。等待整理完成，再从下方的历史报告中打开新记录。</string>
+    <string name="log_guide_history_title">查看已保存的报告</string>
+    <string name="log_guide_history_body">点开这条记录，查看摘要并准备报告附件。离开页面后，报告仍会保留在这里。</string>
+    <string name="log_guide_share_title">检查后再分享</string>
+    <string name="log_guide_share_body">先检查下方报告内容，再选择分享。这里会打开系统分享面板，你还需要选择接收方并完成发送。</string>
+    <string name="log_guide_save_title">也可以留存一份</string>
+    <string name="log_guide_save_body">选择位置保存报告文件。邮件和分享由你决定；关闭引导不会发送报告。</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wkq.logreport.SystemTraceSummaryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-25T04:14:04.428Z" hostname="WIN-MMJSWULHUCA" time="0.024">
+  <properties/>
+  <testcase name="capsStackAndAcceptsAbsentTrace" classname="com.wkq.logreport.SystemTraceSummaryTest" time="0.023"/>
+  <testcase name="keepsFramesAndDropsHeaders" classname="com.wkq.logreport.SystemTraceSummaryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

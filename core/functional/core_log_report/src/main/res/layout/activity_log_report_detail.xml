@@ -2,6 +2,7 @@
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:gravity="center_vertical" android:paddingHorizontal="8dp">
         <ImageButton android:id="@+id/report_back" android:layout_width="48dp" android:layout_height="48dp" android:padding="12dp" android:src="@drawable/ic_log_report_arrow_back" app:tint="@color/log_report_page_text" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/log_report_back"/>
         <TextView style="@style/LogReportHeading" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/log_report_detail_title"/>
+        <ImageButton android:id="@+id/report_help" android:layout_width="48dp" android:layout_height="48dp" android:padding="12dp" android:src="@drawable/ic_log_report_help" app:tint="@color/log_report_page_text" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/log_guide_help"/>
     </LinearLayout>
     <ScrollView android:id="@+id/report_detail_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:scrollbars="none">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">

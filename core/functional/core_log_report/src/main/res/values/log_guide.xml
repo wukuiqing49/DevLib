@@ -1,0 +1,15 @@
+<resources>
+    <string name="log_guide_help">How to use log reporting</string>
+    <string name="log_guide_start_title">Start with recording</string>
+    <string name="log_guide_start_body">Turn this on before reproducing a problem. Logs stay on this device until you choose to share a report. This guide does not turn recording on.</string>
+    <string name="log_guide_reproduce_title">Go back and reproduce</string>
+    <string name="log_guide_reproduce_body">Recording continues when you leave this page. Repeat the action that caused the problem, then return here to stop recording.</string>
+    <string name="log_guide_stop_title">Stop and prepare a report</string>
+    <string name="log_guide_stop_body">Turn this off after reproducing the problem. Wait for preparation to finish, then open the new item in Saved reports.</string>
+    <string name="log_guide_history_title">Open your saved report</string>
+    <string name="log_guide_history_body">Open this item to review its summary and prepare an attachment. Reports stay available here after you leave.</string>
+    <string name="log_guide_share_title">Review, then share</string>
+    <string name="log_guide_share_body">Review the report below before sharing. This button opens the system share sheet; you still need to choose a recipient and finish sending.</string>
+    <string name="log_guide_save_title">Keep a copy</string>
+    <string name="log_guide_save_body">Save the report to a location you choose. Email and sharing are optional; closing this guide does not send anything.</string>
+</resources>

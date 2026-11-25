@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wkq.logreport.ReportOperationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-25T04:14:04.166Z" hostname="WIN-MMJSWULHUCA" time="0.033">
+  <properties/>
+  <testcase name="keepsIdentityElapsedAndExactlyOneTerminal" classname="com.wkq.logreport.ReportOperationTest" time="0.007"/>
+  <testcase name="errorStackStaysWithOperationAndExcludesMessage" classname="com.wkq.logreport.ReportOperationTest" time="0.004"/>
+  <testcase name="concurrentFinishIsUniqueAndOtherOperationIndependent" classname="com.wkq.logreport.ReportOperationTest" time="0.019"/>
+  <testcase name="recorderFailureDoesNotEscapeIntoBusiness" classname="com.wkq.logreport.ReportOperationTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

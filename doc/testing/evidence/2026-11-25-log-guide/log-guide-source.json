@@ -1,0 +1,9 @@
+{
+  "scope": "whole selected files; not changed-line or compiler analysis",
+  "files": [
+    "core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReportActivity.kt",
+    "core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReportDetailActivity.kt",
+    "core/functional/core_log_report/src/main/java/com/wkq/logreport/LogReportGuides.kt"
+  ],
+  "findings": []
+}
