@@ -1,0 +1,9 @@
+<resources>
+    <string name="guide_next">Next</string>
+    <string name="guide_previous">Previous</string>
+    <string name="guide_skip">Skip</string>
+    <string name="guide_done">Done</string>
+    <string name="guide_step">Step %1$d of %2$d</string>
+    <string name="guide_target_action">Activate highlighted control</string>
+    <string name="guide_step_compact">%1$d / %2$d</string>
+</resources>

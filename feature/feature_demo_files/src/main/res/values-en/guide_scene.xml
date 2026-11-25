@@ -1,0 +1,27 @@
+<resources>
+    <string name="demo_guide_page_intro">Try a light tip on a real control.</string>
+    <string name="demo_guide_preview">INTERACTIVE PREVIEW</string>
+    <string name="demo_guide_preview_title">One target. One tip.</string>
+    <string name="demo_guide_preview_detail">A short explanation, close to the control.</string>
+    <string name="demo_guide_try">Try it</string>
+    <string name="demo_guide_scenarios">Demo scenarios</string>
+    <string name="demo_guide_scene_count">6</string>
+    <string name="demo_guide_note">Tips do not change system settings. Skip anytime.</string>
+    <string name="demo_guide_running">Showing a tip. You can leave at any time.</string>
+    <string name="demo_guide_finished">Guide closed. Choose any scenario to try again.</string>
+    <string name="demo_guide_steps_name">Step-by-step guide</string>
+    <string name="demo_guide_steps_detail">Next, previous and skip</string>
+    <string name="demo_guide_long_name">Long text</string>
+    <string name="demo_guide_long_detail">Line wrapping and scrolling</string>
+    <string name="demo_guide_colors_name">Contrast style</string>
+    <string name="demo_guide_colors_detail">Panel colors and target emphasis</string>
+    <string name="demo_guide_fullscreen_name">Immersive mode</string>
+    <string name="demo_guide_fullscreen_detail">Hide and restore system bars</string>
+    <string name="demo_guide_motion_name">Without animation</string>
+    <string name="demo_guide_motion_detail">Show tips quietly</string>
+    <string name="demo_guide_dialog_name">Inside a dialog</string>
+    <string name="demo_guide_dialog_detail">Position tips in a separate window</string>
+    <string name="demo_guide_dialog_close">Close</string>
+    <string name="demo_guide_dialog_intro">This tip belongs to the dialog window.</string>
+    <string name="demo_guide_dialog_note">Closing this dialog leaves the demo page intact.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <color name="guide_demo_background">#F7F8FA</color>
+    <color name="guide_demo_surface">#FFFFFF</color>
+    <color name="guide_demo_title">#20252C</color>
+    <color name="guide_demo_body">#677483</color>
+    <color name="guide_demo_muted">#657486</color>
+    <color name="guide_demo_line">#E7EBF0</color>
+    <color name="guide_demo_icon_surface">#F3F5F8</color>
+</resources>

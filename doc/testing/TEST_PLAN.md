@@ -231,3 +231,19 @@ API 26/37、平板、多窗口、全语言视觉、系统强杀恢复、Release/
 - LOC-HOST：两项功能目录、独立路由、接入说明、原分组不回流；App 构建、目录/Workspace JVM 回归及 APK 检查。
 - LOC-STATIC：受影响源码中文注释、严格 UI/i18n、模块清单、Agent 结构与构建门禁。
 - LOC-DEVICE：真实 GPS/网络/近似权限、传感器、前台服务、撤权及 API 26/37 与视觉；按 executionPolicy 排除设备命令，本轮未执行。
+
+
+## 2026-11-25 core_guide 增量验证
+
+- GUIDE-SESSION / GUIDE-GEOMETRY：生命周期、替换重入、返回、等待超时、目标消失、文字/颜色/点击/动画及小容器滚动；API 26/35 Robolectric + JVM。
+- GUIDE-HOST / GUIDE-CATALOG：目录、模块计数、路由与 APK 集成回归。
+- GUIDE-BUILD / GUIDE-PUBLISH / GUIDE-CONSUMER：AAR、工作台 APK、lint、本地 Maven 和独立消费验证。
+- GUIDE-SOURCE / GUIDE-I18N-NEW / GUIDE-AGENT：注释、资源、EN/简中和 Agent 配置；完整国际化既有缺口另列。
+- GUIDE-DEVICE / GUIDE-VISUAL：API 26/35/36/37、全屏、IME、刘海、导航、RTL、大字体、宽窗口和读屏按项目策略排除，未执行。
+
+
+## 2026-11-25 core_guide V3 页面及浮层重做
+
+- 演示页与浮层一起重做；42 项库测试、lint、Debug APK、Release AAR、本地发布及独立消费者编译通过。
+- 用户明确授权 OPPO 测试，已在 PCAM00 / API 30 操作分步、长文、样式、全屏恢复、关闭动画及 Dialog；API 35/37 真机、完整设备矩阵及用户最终视觉认可仍未验证。
+- 当前记录与截图见 [V3 验证记录](core-guide-v3-2026-11-25.md)。历史未执行设备的表述仅适用于原轮次；本轮未提交或远端发布，不推进全工程基线。

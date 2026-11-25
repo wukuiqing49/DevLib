@@ -1,0 +1,27 @@
+<resources>
+    <string name="demo_guide_page_intro">在真实控件上，试试一条轻提示。</string>
+    <string name="demo_guide_preview">交互预览</string>
+    <string name="demo_guide_preview_title">一个目标，一条提示</string>
+    <string name="demo_guide_preview_detail">说明跟随控件，而不是占满屏幕</string>
+    <string name="demo_guide_try">试一下</string>
+    <string name="demo_guide_scenarios">演示场景</string>
+    <string name="demo_guide_scene_count">6 种</string>
+    <string name="demo_guide_note">提示不会修改系统设置。随时可以跳过。</string>
+    <string name="demo_guide_running">正在展示提示，可以随时退出。</string>
+    <string name="demo_guide_finished">引导已结束，点选场景可再次体验。</string>
+    <string name="demo_guide_steps_name">分步引导</string>
+    <string name="demo_guide_steps_detail">前进、返回与跳过</string>
+    <string name="demo_guide_long_name">长文本</string>
+    <string name="demo_guide_long_detail">中英文换行与滚动</string>
+    <string name="demo_guide_colors_name">反差样式</string>
+    <string name="demo_guide_colors_detail">面板配色与目标强调</string>
+    <string name="demo_guide_fullscreen_name">全屏模式</string>
+    <string name="demo_guide_fullscreen_detail">系统栏隐藏和恢复</string>
+    <string name="demo_guide_motion_name">关闭动画</string>
+    <string name="demo_guide_motion_detail">安静地显示提示</string>
+    <string name="demo_guide_dialog_name">弹窗内引导</string>
+    <string name="demo_guide_dialog_detail">独立窗口中的定位</string>
+    <string name="demo_guide_dialog_close">关闭</string>
+    <string name="demo_guide_dialog_intro">这条提示属于当前弹窗窗口。</string>
+    <string name="demo_guide_dialog_note">关闭弹窗后，仍可继续体验其他场景。</string>
+</resources>

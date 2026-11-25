@@ -1,0 +1,5 @@
+<resources>
+    <!-- 仅声明通用主题语义，不依赖 Material/AppCompat；宿主存在同名属性时自动合并。 -->
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorSurface" format="color" />
+</resources>

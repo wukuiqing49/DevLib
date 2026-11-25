@@ -1,0 +1,39 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/guide_demo_background" android:fillViewport="true" android:clipToPadding="false" android:scrollbars="none">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical">
+<TextView android:id="@+id/intro" style="@style/GuideDemo.Detail" android:textSize="13sp" android:text="@string/demo_guide_page_intro"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="24dp" android:padding="20dp" android:orientation="vertical" android:background="@drawable/guide_demo_panel">
+<TextView style="@style/GuideDemo.Detail" android:text="@string/demo_guide_preview"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal" android:gravity="center_vertical">
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_preview_title"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="6dp" android:text="@string/demo_guide_preview_detail"/></LinearLayout>
+<com.google.android.material.button.MaterialButton android:id="@+id/target" style="@style/Demo.Button.Primary" android:layout_width="wrap_content" android:layout_marginStart="12dp" android:layout_marginTop="0dp" android:minWidth="72dp" android:text="@string/demo_guide_try"/>
+</LinearLayout></LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp"><TextView style="@style/GuideDemo.Detail" android:layout_width="0dp" android:layout_weight="1" android:text="@string/demo_guide_scenarios"/><TextView style="@style/GuideDemo.Detail" android:layout_width="wrap_content" android:text="@string/demo_guide_scene_count"/></LinearLayout>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/guide_demo_panel" android:clipToOutline="true">
+<LinearLayout android:id="@+id/start" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_steps"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_steps_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_steps_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout><View style="@style/GuideDemo.Separator"/><LinearLayout android:id="@+id/longText" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_text"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_long_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_long_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout><View style="@style/GuideDemo.Separator"/><LinearLayout android:id="@+id/colors" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_contrast"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_colors_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_colors_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout><View style="@style/GuideDemo.Separator"/><LinearLayout android:id="@+id/fullscreen" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_fullscreen"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_fullscreen_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_fullscreen_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout><View style="@style/GuideDemo.Separator"/><LinearLayout android:id="@+id/noMotion" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_motion"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_motion_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_motion_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout><View style="@style/GuideDemo.Separator"/><LinearLayout android:id="@+id/dialog" style="@style/GuideDemo.Row">
+<ImageView style="@style/GuideDemo.Icon" android:src="@drawable/guide_demo_dialog"/>
+<LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical"><TextView style="@style/GuideDemo.Title" android:text="@string/demo_guide_dialog_name"/><TextView style="@style/GuideDemo.Detail" android:layout_marginTop="4dp" android:text="@string/demo_guide_dialog_detail"/></LinearLayout>
+<ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/guide_demo_chevron" android:importantForAccessibility="no"/>
+</LinearLayout>
+</LinearLayout><TextView android:id="@+id/event" style="@style/GuideDemo.Detail" android:layout_marginTop="16dp" android:text="@string/demo_guide_note"/>
+<include android:id="@+id/result" layout="@layout/demo_output" android:visibility="gone"/>
+</LinearLayout></ScrollView>

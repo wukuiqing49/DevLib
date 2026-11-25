@@ -1,0 +1,14 @@
+<resources>
+    <color name="guide_scrim">#33000000</color>
+    <color name="guide_surface">#FFFFFF</color>
+    <color name="guide_title">#1B1B1F</color>
+    <color name="guide_body">#45464F</color>
+    <color name="guide_primary">#3568B0</color>
+    <color name="guide_on_primary">#FFFFFF</color>
+    <color name="guide_tip_dark_surface">#252B34</color>
+    <color name="guide_tip_dark_title">#F6F8FB</color>
+    <color name="guide_tip_dark_body">#C1C8D3</color>
+    <color name="guide_tip_light_surface">#F7F9FC</color>
+    <color name="guide_tip_light_title">#222A35</color>
+    <color name="guide_tip_light_body">#586579</color>
+</resources>

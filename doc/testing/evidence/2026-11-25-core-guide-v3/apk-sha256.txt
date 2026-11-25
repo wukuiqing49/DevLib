@@ -1,0 +1,4 @@
+
+Algorithm : SHA256
+Hash      : 4FFDF5B464810AD21E6DD074ED175258D4260CEC4160FFB559F3E4CDEEBFA15A
+Path      : C:\work\AI\DevLib\app\build\outputs\apk\debug\app-debug.apk

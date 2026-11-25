@@ -1,0 +1,3 @@
+<resources>
+    <string name="integration_guide_note">Attach FeatureGuide to the actual Activity or Dialog window and pass a lifecycle owner. The host controls system bars and fullscreen. No permissions, Base or XPopup dependency are required.</string>
+</resources>

@@ -5,7 +5,7 @@
 | 目录 | 职责 | 模块 |
 | --- | --- | --- |
 | architecture | 架构底座，8 个模块、5 套体系 | [core_base](architecture/core_base/README.md)、[core_utils](architecture/core_utils/README.md)、[core_network](architecture/core_network/README.md)、[core_router_annotation](architecture/core_router_annotation/README.md)、[core_router_api](architecture/core_router_api/README.md)、[core_router_processor](architecture/core_router_processor/README.md)、[core_router_gradle_plugin](architecture/core_router_gradle_plugin/README.md)、[lib_xpopup](architecture/lib_xpopup/README.md) |
-| functional | 独立功能，12 个模块 | [core_archive](functional/core_archive/README.md)、[core_document](functional/core_document/README.md)、[core_image_render](functional/core_image_render/README.md)、[core_qrcode](functional/core_qrcode/README.md)、[core_nas](functional/core_nas/README.md)、[core_usb](functional/core_usb/README.md)、[lib_drop](functional/lib_drop/README.md)、[lib_metadata](functional/lib_metadata/README.md)、[lib_upload](functional/lib_upload/README.md)、[core_location](functional/core_location/README.md)、[core_location_address](functional/core_location_address/README.md)、[core_log_report](functional/core_log_report/README.md) |
+| functional | 独立功能，13 个模块 | [core_archive](functional/core_archive/README.md)、[core_document](functional/core_document/README.md)、[core_image_render](functional/core_image_render/README.md)、[core_qrcode](functional/core_qrcode/README.md)、[core_nas](functional/core_nas/README.md)、[core_usb](functional/core_usb/README.md)、[lib_drop](functional/lib_drop/README.md)、[lib_metadata](functional/lib_metadata/README.md)、[lib_upload](functional/lib_upload/README.md)、[core_location](functional/core_location/README.md)、[core_location_address](functional/core_location_address/README.md)、[core_log_report](functional/core_log_report/README.md) |
 | thirdparty | 第三方平台服务适配 | [core_google](thirdparty/core_google/README.md) |
 | internal | 功能库共用的内部契约 | [lib_operations](internal/lib_operations/README.md) |
 
@@ -46,3 +46,5 @@
 版本存储于对应模块 version.properties，通用发布脚本同步到项目和 Maven 元数据；其他库继续使用根 devlibVersion。本表描述 DevLib 产物配置，原仓库、标签及远端产物未自动更新。消费示例随版本同步，禁止手工替换 AAR 而丢失传递依赖。
 
 - [core_log_report](functional/core_log_report/README.md)：主动开启的本地诊断收集、卡顿/崩溃线索、历史与 ZIP 分享；不自动上传服务器。
+
+- [core_guide](functional/core_guide/README.md)：独立 View 功能引导、高亮、长文排版、主题与动画；支持边到边及全屏宿主，不改变系统栏。

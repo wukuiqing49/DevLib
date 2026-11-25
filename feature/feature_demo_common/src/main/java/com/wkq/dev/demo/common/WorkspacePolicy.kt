@@ -26,6 +26,7 @@ object WorkspacePolicy {
             "MetadataActivity" -> "/image/lib_metadata"
             "QrActivity" -> "/image/core_qrcode"
             "PdfActivity" -> "/document/core_pdf"
+            "GuideDemoActivity" -> "/files/core_guide"
             "LogReportDemoActivity" -> "/files/core_log_report"
             "ArchiveActivity" -> "/files/core_archive"
             "UploadActivity" -> "/files/lib_upload"

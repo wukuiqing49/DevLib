@@ -34,3 +34,5 @@ dependencies {
 ksp { arg("moduleName", "DevDemoFiles") }
 
 dependencies { implementation project(':core:core_log_report') }
+
+dependencies { implementation project(':core:core_guide') }

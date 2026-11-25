@@ -1,0 +1,4 @@
+<resources>
+    <string name="sample_title">Create an item</string>
+    <string name="sample_message">Use this control to create an item.\nYou can skip this introduction.</string>
+</resources>

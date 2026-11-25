@@ -1,5 +1,5 @@
-# 安装网络库与日志库的完整依赖链；不发布工作台和无关模块。
+# 安装引导库、网络库与日志库的完整依赖链；不发布工作台和无关模块。
 jdk:
   - openjdk17
 install:
-  - bash ./gradlew :core:lib_xpopup:publishReleasePublicationToMavenLocal :core:core_base:publishReleasePublicationToMavenLocal :core:core_log_report:publishReleasePublicationToMavenLocal :core:core_network:publishReleasePublicationToMavenLocal -PdevlibJitpackVersion="$VERSION" -x test --no-daemon
+  - bash ./gradlew :core:lib_xpopup:publishReleasePublicationToMavenLocal :core:core_base:publishReleasePublicationToMavenLocal :core:core_log_report:publishReleasePublicationToMavenLocal :core:core_network:publishReleasePublicationToMavenLocal :core:core_guide:publishReleasePublicationToMavenLocal -PdevlibJitpackVersion="$VERSION" -x test --no-daemon

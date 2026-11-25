@@ -1,0 +1,15 @@
+<resources>
+    <string name="demo_guide_title">功能引导</string>
+    <string name="demo_guide_intro">高亮真实控件，支持文字自动换行、主题颜色与可选动画。引导保留宿主窗口和系统栏策略。</string>
+    <string name="demo_guide_start">查看分步引导</string>
+    <string name="demo_guide_fullscreen">体验全屏沉浸式</string>
+    <string name="demo_guide_long">体验长文字排版</string>
+    <string name="demo_guide_colors">体验自定义颜色和扩散动画</string>
+    <string name="demo_guide_no_motion">关闭动画查看</string>
+    <string name="demo_guide_dialog">体验独立弹窗窗口</string>
+    <string name="demo_guide_target_title">从这里开始</string>
+    <string name="demo_guide_target_message">跟随提示了解操作。\n你可以随时跳过，之后再查看。</string>
+    <string name="demo_guide_second_title">随时结束</string>
+    <string name="demo_guide_second_message">点按跳过或使用系统返回，结束本次引导。</string>
+    <string name="demo_guide_long_message">这段较长的介绍用于检查自动换行和手动分段。提示卡片按当前窗口大小测量，避让可见系统栏、刘海和键盘。\n\n字体放大或窗口缩小时，正文可以滚动，操作按钮保持可达。可以旋转或调整窗口大小，检查高亮是否跟随目标。\n\n连续英文标识也需要换行：ExampleIdentifierWithoutSpaces0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ。\n\n引导不会改变全屏模式和系统栏图标颜色，这些继续由宿主应用管理。\n\n随时可以跳过或返回，再次查看时会重新定位真实控件。</string>
+</resources>

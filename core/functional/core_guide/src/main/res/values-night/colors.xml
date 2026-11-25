@@ -1,0 +1,7 @@
+<resources>
+    <color name="guide_surface">#202326</color>
+    <color name="guide_title">#F2F2F2</color>
+    <color name="guide_body">#C7C9CD</color>
+    <color name="guide_primary">#8AAFE3</color>
+    <color name="guide_on_primary">#10233D</color>
+</resources>

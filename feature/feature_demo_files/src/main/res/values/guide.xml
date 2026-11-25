@@ -1,0 +1,15 @@
+<resources>
+    <string name="demo_guide_title">Feature guide</string>
+    <string name="demo_guide_intro">Highlight real controls with automatic text wrapping, theme colors and optional motion. The guide preserves the host window and system bars.</string>
+    <string name="demo_guide_start">Show step-by-step guide</string>
+    <string name="demo_guide_fullscreen">Try immersive fullscreen</string>
+    <string name="demo_guide_long">Try long text</string>
+    <string name="demo_guide_colors">Try custom colors and ripple</string>
+    <string name="demo_guide_no_motion">Show without animation</string>
+    <string name="demo_guide_dialog">Try a separate dialog window</string>
+    <string name="demo_guide_target_title">Start here</string>
+    <string name="demo_guide_target_message">Follow each tip to explore the controls.\nSkip anytime and come back later.</string>
+    <string name="demo_guide_second_title">Leave anytime</string>
+    <string name="demo_guide_second_message">Skip or use system Back to leave this guide.</string>
+    <string name="demo_guide_long_message">This longer introduction checks automatic line wrapping and explicit paragraph breaks. The card is measured against the current window, including visible system bars, display cutouts and the keyboard.\n\nWith larger fonts or a smaller window, the description can scroll while the action buttons remain available. Rotate or resize the window to check that the highlight follows its target.\n\nA deliberately long identifier also needs to wrap: ExampleIdentifierWithoutSpaces0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.\n\nThe guide never changes fullscreen mode or system bar icon colors. Those remain the responsibility of the host application.\n\nYou can skip or return at any point. Reopening the guide resolves the actual target again.</string>
+</resources>

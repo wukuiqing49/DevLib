@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wkq.guide.FeatureGuideTest" tests="38" skipped="0" failures="0" errors="0" timestamp="2026-11-25T03:26:29.338Z" hostname="WIN-MMJSWULHUCA" time="26.244">
+  <properties/>
+  <testcase name="explicitTargetTapInvokesRealClickOnce[26]" classname="com.wkq.guide.FeatureGuideTest" time="4.445"/>
+  <testcase name="disappearingTargetEndsWithUnavailable[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.322"/>
+  <testcase name="historySeparatesVersionsAndBusinessSuccess[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.372"/>
+  <testcase name="sequenceSupportsPreviousAndSkip[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.387"/>
+  <testcase name="visibleTargetReportsStepExactlyOnce[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.236"/>
+  <testcase name="largeActionsUseScrollableCardFallback[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.31"/>
+  <testcase name="customPrimaryChoosesReadableForeground[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.314"/>
+  <testcase name="replacementCallbackCanStartAnotherSession[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.219"/>
+  <testcase name="replacesPreviousSession[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.132"/>
+  <testcase name="backClosesGuide[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.113"/>
+  <testcase name="leavesHostWindowAndPaddingUntouched[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.096"/>
+  <testcase name="closingAnimatedSessionReleasesOnce[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.117"/>
+  <testcase name="missingTargetTimesOut[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.162"/>
+  <testcase name="compactNavigationKeepsPrimaryAndPreviousOnOneRow[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.173"/>
+  <testcase name="completingAndRepeatedDismissOnlyEmitOnce[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.151"/>
+  <testcase name="longTextWrapsWithinCardWidth[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.367"/>
+  <testcase name="lifecycleDestroyRestoresAccessibility[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.135"/>
+  <testcase name="navigationMirrorsInRtl[26]" classname="com.wkq.guide.FeatureGuideTest" time="0.218"/>
+  <testcase name="explicitTargetTapInvokesRealClickOnce" classname="com.wkq.guide.FeatureGuideTest" time="9.079"/>
+  <testcase name="disappearingTargetEndsWithUnavailable" classname="com.wkq.guide.FeatureGuideTest" time="0.318"/>
+  <testcase name="historySeparatesVersionsAndBusinessSuccess" classname="com.wkq.guide.FeatureGuideTest" time="0.187"/>
+  <testcase name="sequenceSupportsPreviousAndSkip" classname="com.wkq.guide.FeatureGuideTest" time="0.49"/>
+  <testcase name="visibleTargetReportsStepExactlyOnce" classname="com.wkq.guide.FeatureGuideTest" time="0.348"/>
+  <testcase name="largeActionsUseScrollableCardFallback" classname="com.wkq.guide.FeatureGuideTest" time="0.215"/>
+  <testcase name="customPrimaryChoosesReadableForeground" classname="com.wkq.guide.FeatureGuideTest" time="0.085"/>
+  <testcase name="replacementCallbackCanStartAnotherSession" classname="com.wkq.guide.FeatureGuideTest" time="0.084"/>
+  <testcase name="replacesPreviousSession" classname="com.wkq.guide.FeatureGuideTest" time="0.093"/>
+  <testcase name="backClosesGuide" classname="com.wkq.guide.FeatureGuideTest" time="0.148"/>
+  <testcase name="leavesHostWindowAndPaddingUntouched" classname="com.wkq.guide.FeatureGuideTest" time="0.065"/>
+  <testcase name="closingAnimatedSessionReleasesOnce" classname="com.wkq.guide.FeatureGuideTest" time="0.087"/>
+  <testcase name="missingTargetTimesOut" classname="com.wkq.guide.FeatureGuideTest" time="0.078"/>
+  <testcase name="compactNavigationKeepsPrimaryAndPreviousOnOneRow" classname="com.wkq.guide.FeatureGuideTest" time="0.078"/>
+  <testcase name="completingAndRepeatedDismissOnlyEmitOnce" classname="com.wkq.guide.FeatureGuideTest" time="0.08"/>
+  <testcase name="longTextWrapsWithinCardWidth" classname="com.wkq.guide.FeatureGuideTest" time="0.157"/>
+  <testcase name="lifecycleDestroyRestoresAccessibility" classname="com.wkq.guide.FeatureGuideTest" time="0.067"/>
+  <testcase name="navigationMirrorsInRtl" classname="com.wkq.guide.FeatureGuideTest" time="0.09"/>
+  <testcase name="longNavigationLabelsStackWithoutTruncation[26]" classname="com.wkq.guide.FeatureGuideTest" time="2.405"/>
+  <testcase name="longNavigationLabelsStackWithoutTruncation" classname="com.wkq.guide.FeatureGuideTest" time="3.127"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

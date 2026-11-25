@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="sans-serif-medium" android:textDirection="locale" />
+        <TextView android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:textSize="12sp" android:textDirection="locale" />
+    </LinearLayout>
+    <!-- wrap_content 保留短说明的自然高度，weight 只在长内容时压缩滚动区域。 -->
+    <ScrollView android:id="@+id/scroll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_weight="1" tools:ignore="InefficientWeight" android:scrollbars="none" android:clipToPadding="false">
+        <TextView android:id="@+id/message" android:layout_width="match_parent" android:layout_height="wrap_content" android:textDirection="locale" android:breakStrategy="high_quality" />
+    </ScrollView>
+    <android.widget.Button android:id="@+id/target" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:minHeight="48dp" android:text="@string/guide_target_action" />
+    <LinearLayout android:id="@+id/actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+        <android.widget.Button android:id="@+id/skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:minHeight="48dp" android:text="@string/guide_skip" />
+        <android.widget.Button android:id="@+id/previous" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:minHeight="48dp" android:text="@string/guide_previous" />
+        <Space android:id="@+id/actionSpacer" android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+        <android.widget.Button android:id="@+id/next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="72dp" android:minHeight="48dp" android:text="@string/guide_next" />
+    </LinearLayout>
+</LinearLayout>

@@ -403,3 +403,17 @@ git diff --check
 - 本轮两个库共 10 项 Robolectric 测试通过：定位 6、服务 2（API 26/35）、地址 2。撤权后结果与服务无权限启动为新增行为回归。Robolectric 未运行 API 37。
 - 定位库 lintDebug 与工作台 assembleDebug 通过；API 37 编译使用实际项目 SDK。已有 TrackMapView 的 UseKtx 建议不影响兼容性。Agent 结构、APK 路由验证及本轮 4 文件源码审计通过。构建日志位于忽略目录 .ai-work/location-api37-final.log。
 - 使用项目架构、构建和功能回归 Skills；库不需要页面 Base/ViewModel，现有 Demo 继续复用 Base。未改 UI/文案和 CI，不引入后台权限或新基础封装。API 37 设备、真实 GPS、后台限制与视觉验收仍未执行；不将编译通过等同于设备适配完成。
+
+
+## 2026-11-25 core_guide 通用操作引导库
+
+- 库 36 项（含 API 26/35 Robolectric）与宿主目录 6 项 JVM 通过；Release AAR、Debug APK、lintDebug、本地发布和独立消费编译完成。
+- 模块布局 3 项、目录工具 11 项通过；APK 校验 23 模块/19 独立入口/6 路由组。新增资源严格 EN/简中检查通过，完整国际化仍有原演示模块 93 个简中缺译。
+- 未运行 adb、设备或视觉验收，API 37 运行兼容不以编译证明。详情和本轮证据见 [core_guide 实现与验证](core-guide-2026-11-25.md)。
+
+
+## 2026-11-25 core_guide V3 页面及浮层重做
+
+- 演示页与浮层一起重做；42 项库测试、lint、Debug APK、Release AAR、本地发布及独立消费者编译通过。
+- 用户明确授权 OPPO 测试，已在 PCAM00 / API 30 操作分步、长文、样式、全屏恢复、关闭动画及 Dialog；API 35/37 真机、完整设备矩阵及用户最终视觉认可仍未验证。
+- 当前记录与截图见 [V3 验证记录](core-guide-v3-2026-11-25.md)。历史未执行设备的表述仅适用于原轮次；本轮未提交或远端发布，不推进全工程基线。

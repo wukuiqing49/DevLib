@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.library' version '9.1.1'
+    id 'org.jetbrains.kotlin.android' version '2.2.10'
+}
+android {
+    namespace = 'com.wkq.guide.consumer'
+    compileSdk = 37
+    defaultConfig { minSdk = 26 }
+    compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
+    kotlinOptions { jvmTarget = '17' }
+}
+def guideRemote = providers.gradleProperty('guideRemote').isPresent()
+def guideVersion = providers.gradleProperty('guideVersion').getOrElse(guideRemote ? 'guide-v0.1.0' : '0.1.0')
+dependencies {
+    implementation "${guideRemote ? 'com.github.wukuiqing49.DevLib' : 'com.wkq.dev'}:core-guide:${guideVersion}"
+}
+
+// 校验消费的确实是最新本地 AAR，而非旧 SNAPSHOT 缓存。
+tasks.register('verifyGuideArtifact') {
+    doLast {
+        if (guideRemote) {
+            def artifacts = configurations.debugRuntimeClasspath.resolvedConfiguration.resolvedArtifacts
+            def guide = artifacts.find { it.moduleVersion.id.group == 'com.github.wukuiqing49.DevLib' && it.name == 'core-guide' }
+            if (guide == null || guide.moduleVersion.id.version != guideVersion || !guide.file.exists()) {
+                throw new GradleException('Consumer did not resolve the requested remote core-guide AAR')
+            }
+            def unexpected = artifacts.findAll { it.moduleVersion.id.group.startsWith('com.wkq') ||
+                (it.moduleVersion.id.group == 'com.github.wukuiqing49.DevLib' && it.name != 'core-guide') }
+            if (!unexpected.isEmpty()) throw new GradleException("Unexpected host dependency: ${unexpected*.moduleVersion}")
+            def digest = java.security.MessageDigest.getInstance('SHA-256').digest(guide.file.bytes).encodeHex().toString()
+            println "Verified JitPack AAR: ${guide.moduleVersion.id}; SHA-256=${digest}; no local Maven repository or host dependencies"
+            return
+        }
+        def artifact = configurations.debugRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.find {
+            it.moduleVersion.id.group == 'com.wkq.dev' && it.name == 'core-guide'
+        }
+        def repository = file("../../build/repo/com/wkq/dev/core-guide/${guideVersion}")
+        def expected = new File(repository, "core-guide-${guideVersion}.aar")
+        def digest = { file -> java.security.MessageDigest.getInstance('SHA-256').digest(file.bytes).encodeHex().toString() }
+        if (artifact == null || digest(artifact.file) != digest(expected)) {
+            throw new GradleException('Consumer resolved a different core-guide artifact')
+        }
+        println "Verified latest local AAR: ${expected.name}; SHA-256=${digest(expected)}"
+    }
+}

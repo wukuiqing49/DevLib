@@ -1,0 +1,15 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement {
+    repositories {
+        if (!providers.gradleProperty('guideRemote').isPresent()) {
+            maven { url = uri('../../build/repo') }
+        }
+        maven {
+            url = uri('https://jitpack.io')
+            content { includeGroup('com.github.wukuiqing49.DevLib') }
+        }
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = 'GuidePublishedConsumer'

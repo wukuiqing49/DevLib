@@ -1,0 +1,9 @@
+<resources>
+    <string name="guide_next">下一步</string>
+    <string name="guide_previous">上一步</string>
+    <string name="guide_skip">跳过</string>
+    <string name="guide_done">完成</string>
+    <string name="guide_step">第 %1$d 步，共 %2$d 步</string>
+    <string name="guide_target_action">操作高亮控件</string>
+    <string name="guide_step_compact">%1$d / %2$d</string>
+</resources>

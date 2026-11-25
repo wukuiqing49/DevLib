@@ -1,0 +1,3 @@
+<resources>
+    <string name="integration_guide_note">将 FeatureGuide 附着到实际 Activity 或 Dialog 窗口，并传入生命周期。宿主控制系统栏与全屏，不需要权限，不依赖 Base 或 XPopup。</string>
+</resources>

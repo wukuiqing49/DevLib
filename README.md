@@ -40,7 +40,7 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 
 ## 库目录
 
-当前 **22 个模块：架构基础 8、独立功能 12、三方服务 1、内部支撑 1**。模块放在 `core/`，逻辑路径为 `:core:<模块名>`；目录映射见 [settings.gradle](settings.gradle)，机器可读清单见 [library-catalog.json](docs/library-catalog.json)。
+当前 **23 个模块：架构基础 8、独立功能 13、三方服务 1、内部支撑 1**。模块放在 `core/`，逻辑路径为 `:core:<模块名>`；目录映射见 [settings.gradle](settings.gradle)，机器可读清单见 [library-catalog.json](docs/library-catalog.json)。
 
 ### 架构基础：8 个模块、5 套体系
 
@@ -55,10 +55,12 @@ Android / JVM 独立功能库、开发者工作台与项目级 Skills。按需�
 | [core_utils](core/architecture/core_utils/README.md) | 文件、Uri、选择器、图片加载、存储、设备与系统工具。 | AndroidCoreUtils |
 | [lib_xpopup](core/architecture/lib_xpopup/README.md) | 公共弹窗、底部弹层、抽屉与图片查看组件。 | XPopup |
 
-### 独立功能：12 个库
+### 独立功能：13 个库
 
 | 模块与说明 | 能力 | 来源 |
 | --- | --- | --- |
+| [core_log_report](core/functional/core_log_report/README.md) | 主动开启本地日志与卡顿/崩溃诊断、报告导出和分享。 | LensDock |
+| [core_guide](core/functional/core_guide/README.md) | View 高亮、分步引导、长文排版、主题与动画；继承宿主边到边/全屏模式。 | DevLib |
 | [core_archive](core/functional/core_archive/README.md) | ZIP 创建、加密归档与受预算限制的解压。 | PhotoKit |
 | [core_image_render](core/functional/core_image_render/README.md) | 水印、标注、样机、相框和签名提取等轻量 Bitmap 渲染。 | PhotoKit |
 | [core_document](core/functional/core_document/README.md) | 以同一份记录生成 PDF、Excel、Word，包含资料、签名、模板、水印及历史快照。 | PhotoKit / RoofQuote |
@@ -114,7 +116,7 @@ implementation 'com.wkq.dev:core-network:0.1.0-SNAPSHOT'
 
 ## DevHub 基础统计
 
-DevHub 在独立私有仓库维护，消费项目直接接入 SDK。它提供安装、日活、手机厂商与型号、Android/App 版本以及 Locale 国家与语言统计；不计入上面的 22 个源码模块。
+DevHub 在独立私有仓库维护，消费项目直接接入 SDK。它提供安装、日活、手机厂商与型号、Android/App 版本以及 Locale 国家与语言统计；不计入上面的 23 个源码模块。
 
 | 配置项 | 接入要求 |
 | --- | --- |

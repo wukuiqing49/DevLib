@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-25",
   "excludedSources": [
     "Starxen",
     "BeautySDK",
@@ -195,6 +195,14 @@
       "artifactType": "aar",
       "directoryGroup": "functional",
       "path": "core/functional/core_log_report"
+    },
+    {
+      "module": "core_guide",
+      "category": "functional",
+      "sourceRepository": "DevLib",
+      "artifactType": "aar",
+      "directoryGroup": "functional",
+      "path": "core/functional/core_guide"
     }
   ],
   "schemaVersion": 2

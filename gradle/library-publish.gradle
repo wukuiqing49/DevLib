@@ -17,7 +17,7 @@ if (moduleVersionFile.exists()) {
 
 // JitPack 仅改写本轮发布链的坐标，普通本地发布继续使用原版本。
 def jitpackVersion = providers.gradleProperty('devlibJitpackVersion').orNull
-if (jitpackVersion != null && project.name in ['core_network', 'core_log_report', 'core_base', 'lib_xpopup']) {
+if (jitpackVersion != null && project.name in ['core_network', 'core_log_report', 'core_base', 'lib_xpopup', 'core_guide']) {
  if (!(jitpackVersion ==~ /[A-Za-z0-9][A-Za-z0-9._-]*/)) {
   throw new GradleException('devlibJitpackVersion 必须是有效的 tag 或提交版本')
  }
